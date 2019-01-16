@@ -9663,6 +9663,25 @@
     ],
     "timestamp": "Sep/29/2021 13:13"
   },
+  "CF48465757": {
+    "contest_id": 961,
+    "language": "GNU C++14",
+    "path": "codeforces/961/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Lecture Sleep",
+    "problem_url": "https://codeforces.com/contest/961/problem/B",
+    "submission_id": "CF48465757",
+    "submission_url": "https://codeforces.com/contest/961/submission/48465757",
+    "tags": [
+      "data structures",
+      "dp",
+      "implementation",
+      "two pointers",
+      "*1200"
+    ],
+    "timestamp": "Jan/16/2019 22:39"
+  },
   "CF52446598": {
     "contest_id": 281,
     "language": "GNU C++14",

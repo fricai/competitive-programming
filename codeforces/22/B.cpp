@@ -3,9 +3,6 @@
 using namespace std;
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-
 	int n, m, ans = 0; cin >> n >> m;
 	bool grid[n][m], dp[n][m][n][m]; // (x)
 	REP(i, 0, n) {

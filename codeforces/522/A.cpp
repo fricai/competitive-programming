@@ -18,9 +18,6 @@ void dfs(int u, int s) {
 }
 
 signed main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-
 	int n; cin >> n;
 	map<string, int> name;
 	name["Polycarp"] = 0;

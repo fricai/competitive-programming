@@ -6,46 +6,62 @@
 using namespace std;
 
 
-signed main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
+int n, t, block_size;
 
-	// Input
-	int n, t;
-	cin >> n >> t;
+struct query { int l, r, idx; };
 
-	vector<long long> A(n); long long mx = 0;
-	REP(i, 0, n) cin >> A[i], mx = max(mx, A[i]);
+vector<long long> A;
+vector<query> Q;
+vector<long long> ans;
 
-	struct query { int l, r, idx; };
-	vector<query> Q(t);
-	REP(i, 0, t) cin >> Q[i].l >> Q[i].r, Q[i].idx = i, --Q[i].l, --Q[i].r;
+vector<long long> K;
+long long track = 0;
+void add(int s) {
+	auto &k = K[A[s]];
+	track -= k * k * A[s];
+	++k;
+	track += k * k * A[s];
+}
 
-	// Sort Queries
-	int block_size = sqrt(n + .0);
+void remove(int s) {
+	auto &k = K[A[s]];
+	track -= k * k * A[s];
+	--k;
+	track += k * k * A[s];
+}
+
+void mo() {
+	ans.resize(t);
 	sort(Q.begin(), Q.end(), [&](query &a, query &b){
 		int x = a.l/block_size, y = b.l/block_size;
 		if (x != y) return x < y;
 		return ((x & 1) ? a.r < b.r : a.r > b.r);
 	});
 
-	// Mo
-	vector<long long> ans(t), K(mx + 1, 0);
-	int cur_l = 0, cur_r = -1;
-	long long track = 0;
+	int cur_l = 0;
+	int cur_r = -1;
 	for (auto &q : Q) {
-		auto change = [&](int s, bool b) {
-			auto &k = K[A[s]];
-			track -= 1LL * k * k * A[s];
-			k += 1 - 2 * b;
-			track += 1LL * k * k * A[s];
-		};
-		while (cur_l > q.l) change(--cur_l, 0);
-		while (cur_r < q.r) change(++cur_r, 0);
-		while (cur_l < q.l) change(cur_l++, 1);
-		while (cur_r > q.r) change(cur_r--, 1);
+		while (cur_l > q.l) add(--cur_l);
+		while (cur_r < q.r) add(++cur_r);
+		while (cur_l < q.l) remove(cur_l++);
+		while (cur_r > q.r) remove(cur_r--);
 		ans[q.idx] = track;
 	}
+}
 
+signed main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+
+	cin >> n >> t;
+	A.resize(n); Q.resize(t);
+
+	long long mx = 0;
+	REP(i, 0, n) cin >> A[i], mx = max(mx, A[i]);
+	K.resize(mx + 1, 0); block_size = sqrt(n + .0);
+
+	REP(i, 0, t) cin >> Q[i].l >> Q[i].r, Q[i].idx = i, --Q[i].l, --Q[i].r;
+
+	mo();
 	REP(i, 0, t) cout << ans[i] << '\n';
 }

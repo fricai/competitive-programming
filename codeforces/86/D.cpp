@@ -14,7 +14,7 @@ signed main() {
 	int n, t;
 	cin >> n >> t;
 
-	vector<int> A(n); int mx = 0;
+	vector<long long> A(n); long long mx = 0;
 	REP(i, 0, n) cin >> A[i], mx = max(mx, A[i]);
 
 	struct query { int l, r, idx; };
@@ -30,8 +30,7 @@ signed main() {
 	});
 
 	// Mo
-	vector<long long> ans(t);
-	vector<int> K(mx + 1, 0);
+	vector<long long> ans(t), K(mx + 1, 0);
 	int cur_l = 0, cur_r = -1;
 	long long track = 0;
 	for (auto &q : Q) {

@@ -9663,6 +9663,25 @@
     ],
     "timestamp": "Sep/29/2021 13:13"
   },
+  "CF55463615": {
+    "contest_id": 1182,
+    "language": "GNU C++14",
+    "path": "codeforces/1182/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Product Oriented Recurrence",
+    "problem_url": "https://codeforces.com/contest/1182/problem/E",
+    "submission_id": "CF55463615",
+    "submission_url": "https://codeforces.com/contest/1182/submission/55463615",
+    "tags": [
+      "dp",
+      "math",
+      "matrices",
+      "number theory",
+      "*2300"
+    ],
+    "timestamp": "Jun/11/2019 21:23"
+  },
   "CF55464476": {
     "contest_id": 1182,
     "language": "GNU C++14",

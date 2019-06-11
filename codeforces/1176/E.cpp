@@ -29,12 +29,18 @@ signed main() {
 
 		dfs(0, 0);
 
-		bool flag = 0;
-		if (k > n/2) k = n - k, flag = 1;
-		cout << k << '\n';
-		REP(i, 0, n)
-			if (ans[i] != flag) cout << i + 1 << ' ';
-		cout << '\n';
+		if (k <= n/2) {
+			cout << k << '\n';
+			REP(i, 0, n)
+				if (ans[i])
+					cout << i + 1 << ' ';
+			cout << '\n';
+		}	else {
+			cout << n - k << '\n';
+			REP(i, 0, n)
+				if (!ans[i]) cout << i + 1 << ' ';
+			cout << '\n';
+		}
 
 		adj.clear(); vis.clear(); ans.clear(); k = 0;
 	}

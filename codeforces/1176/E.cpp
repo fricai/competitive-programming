@@ -1,63 +1,41 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#define REP(i, a, b) for (auto i = (a); i < (b); ++i)
 using namespace std;
- 
+
 vector<vector<int>> adj;
-vector<int> a1, a2;
-vector<bool> explored;
- 
+vector<bool> ans, vis;
+int k = 0;
+
 void dfs(int v, bool b) {
-    explored[v] = true;
-    if (b) {
-        a1.push_back(v);
-    } else {
-        a2.push_back(v);
-    }
-    for (auto i : adj[v]) {
-        if (!explored[i]) {
-            dfs(i, !b);
-        }
-    }
+	if (vis[v]) return;
+	vis[v] = 1; ans[v] = b; k += b;
+	for (auto &u : adj[v]) dfs(u, !b);
 }
- 
-void solve() {
-    int n, m; cin >> n >> m;
-    adj.clear();
-    adj.resize(n, {});
-    a1.clear();
-    a2.clear();
-    a1.reserve(n);
-    a2.reserve(n);
-    
-    explored.resize(n);
-    fill(explored.begin(), explored.end(), false);
-    
-    for (int i = 0; i < m; i++) {
-        int u, v; cin >> u >> v;
-        u--; v--;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
-    
-    dfs(0, true);
-    if (a1.size() <= n / 2) {
-        cout << a1.size() << "\n";
-        for (auto i : a1) {
-            cout << i + 1 << " ";
-        }
-    } else {
-        cout << a2.size() << "\n";
-        for (auto i : a2) {
-            cout << i + 1 << " ";
-        }
-    }
-    cout << endl;
-}
- 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    int t; cin >> t;
-    while (t--) {
-        solve();
-    }
+
+signed main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+
+	int t; cin >> t;
+	while(t--) {
+		int n, m; cin >> n >> m;
+		adj.resize(n); vis.resize(n, 0); ans.resize(n, 0);
+		while(m--) {
+			int u, v; cin >> u >> v; --u, --v;
+			adj[u].push_back(v);
+			adj[v].push_back(u);
+		}
+
+		dfs(0, 0);
+
+		bool flag = 0;
+		if (k > n/2) k = n - k, flag = 1;
+		cout << k << '\n';
+		REP(i, 0, n)
+			if (ans[i] != flag) cout << i + 1 << ' ';
+		cout << '\n';
+
+		adj.clear(); vis.clear(); ans.clear(); k = 0;
+	}
 }

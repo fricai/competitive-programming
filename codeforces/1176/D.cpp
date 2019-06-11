@@ -6,9 +6,6 @@
 using namespace std;
 
 signed main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-
 	int bmax = 2750131, nmax = 2e5;
 	vector<int> pr(nmax), lp(bmax + 1, 0);
 
@@ -31,7 +28,7 @@ signed main() {
 
 	REP(it, b.rbegin(), b.rend()) {
 		int i = *it;
-		if (lp[i] == i) {
+		if (lp[i] == i) { // it prime
 			int pos = lower_bound(pr.begin(), pr.end(), i) - pr.begin();
 			a.push_back(pos); b.erase(b.find(pos));
 		} else {

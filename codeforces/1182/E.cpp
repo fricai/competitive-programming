@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cassert>
 #define REP(i, a, b) for (auto i = (a); i < (b); ++i)
 using namespace std;
 
@@ -44,12 +45,15 @@ long long binpow(long long a, long long b) {
 }
 
 signed main() {
-	long long n, f[3], r[3], c;
-	cin >> n; REP(i, 0, 3) cin >> f[i]; cin >> c;
+	long long n, f1, f2, f3, c; cin >> n >> f1 >> f2 >> f3 >> c;
 	compute(n - 3);
-	REP(i, 0, 3) r[i] = res[0][2 - i];
-	long long ans = binpow(c, r[0] + 2 * r[1] + 3 * r[2] - n);
-	REP(i, 0, 3)
-		ans = ans * binpow(f[i], r[i]) % mod;
+	long long r1, r2, r3;
+	r1 = res[0][2];
+	r2 = res[0][1];
+	r3 = res[0][0];
+	long long ans = binpow(c, r1 + 2 * r2 + 3 * r3 - n); ans %= mod;
+	ans *= binpow(f1, r1); ans %= mod;
+	ans *= binpow(f2, r2); ans %= mod;
+	ans *= binpow(f3, r3); ans %= mod;
 	cout << ans;
 }

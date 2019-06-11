@@ -9,7 +9,11 @@ int k = 0;
 
 void dfs(int v, bool b) {
 	if (vis[v]) return;
-	vis[v] = 1; ans[v] = b; k += b;
+	vis[v] = 1;
+	if (b) {
+		ans[v] = 1;
+		++k;
+	}
 	for (auto &u : adj[v]) dfs(u, !b);
 }
 

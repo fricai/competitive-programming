@@ -9663,6 +9663,23 @@
     ],
     "timestamp": "Sep/29/2021 13:13"
   },
+  "CF55883180": {
+    "contest_id": 1180,
+    "language": "GNU C++14",
+    "path": "codeforces/1180/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Nick and Array",
+    "problem_url": "https://codeforces.com/contest/1180/problem/B",
+    "submission_id": "CF55883180",
+    "submission_url": "https://codeforces.com/contest/1180/submission/55883180",
+    "tags": [
+      "greedy",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Jun/21/2019 22:59"
+  },
   "CF55894387": {
     "contest_id": 1180,
     "language": "GNU C++14",

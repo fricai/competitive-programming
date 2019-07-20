@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC6467435": {
+    "contest_id": "abc134",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc134/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Sequence Decomposing",
+    "problem_url": "https://atcoder.jp/contests/abc134/tasks/abc134_e",
+    "submission_id": "AC6467435",
+    "submission_url": "https://atcoder.jp/contests/abc134/submissions/6467435",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jul/20/2019 18:26"
+  },
   "AC6560907": {
     "contest_id": "abc135",
     "language": "Python3 (3.4.3)",

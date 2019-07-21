@@ -9663,6 +9663,23 @@
     ],
     "timestamp": "Sep/29/2021 13:13"
   },
+  "CF57464753": {
+    "contest_id": 1194,
+    "language": "Python 3",
+    "path": "codeforces/1194/C.py",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "From S To T",
+    "problem_url": "https://codeforces.com/contest/1194/problem/C",
+    "submission_id": "CF57464753",
+    "submission_url": "https://codeforces.com/contest/1194/submission/57464753",
+    "tags": [
+      "implementation",
+      "strings",
+      "*1300"
+    ],
+    "timestamp": "Jul/21/2019 20:36"
+  },
   "CF57649412": {
     "contest_id": 1196,
     "language": "Python 3",

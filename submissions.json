@@ -9663,6 +9663,22 @@
     ],
     "timestamp": "Sep/29/2021 13:13"
   },
+  "CF57668637": {
+    "contest_id": 1196,
+    "language": "Python 3",
+    "path": "codeforces/1196/C.py",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Robot Breakout",
+    "problem_url": "https://codeforces.com/contest/1196/problem/C",
+    "submission_id": "CF57668637",
+    "submission_url": "https://codeforces.com/contest/1196/submission/57668637",
+    "tags": [
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Jul/24/2019 20:49"
+  },
   "CF57676425": {
     "contest_id": 1196,
     "language": "Python 3",

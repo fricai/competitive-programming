@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC6569339": {
+    "contest_id": "abc135",
+    "language": "Python3 (3.4.3)",
+    "path": "atcoder/abc135/C.py",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "City Savers",
+    "problem_url": "https://atcoder.jp/contests/abc135/tasks/abc135_c",
+    "submission_id": "AC6569339",
+    "submission_url": "https://atcoder.jp/contests/abc135/submissions/6569339",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jul/27/2019 17:48"
+  },
   "AC6802711": {
     "contest_id": "abc137",
     "language": "Python3 (3.4.3)",

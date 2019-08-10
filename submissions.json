@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC6806062": {
+    "contest_id": "abc137",
+    "language": "Python3 (3.4.3)",
+    "path": "atcoder/abc137/B.py",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "One Clue",
+    "problem_url": "https://atcoder.jp/contests/abc137/tasks/abc137_b",
+    "submission_id": "AC6806062",
+    "submission_url": "https://atcoder.jp/contests/abc137/submissions/6806062",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Aug/10/2019 17:35"
+  },
   "AC6809653": {
     "contest_id": "abc137",
     "language": "C++14 (GCC 5.4.1)",

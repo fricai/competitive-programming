@@ -3,11 +3,8 @@
 #include <vector>
 #define REP(i, a, b) for (auto i = (a); i < (b); ++i)
 using namespace std;
- 
-signed main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
 
+signed main() {
 	int n; cin >> n;
 	long long a[n];
 	REP(i, 0, n) cin >> a[i];

@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC7002962": {
+    "contest_id": "abc138",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc138/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Ki",
+    "problem_url": "https://atcoder.jp/contests/abc138/tasks/abc138_d",
+    "submission_id": "AC7002962",
+    "submission_url": "https://atcoder.jp/contests/abc138/submissions/7002962",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Aug/18/2019 18:30"
+  },
   "AC7008396": {
     "contest_id": "abc138",
     "language": "C++14 (GCC 5.4.1)",

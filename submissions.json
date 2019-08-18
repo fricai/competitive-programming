@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC7008396": {
+    "contest_id": "abc138",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc138/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Strings of Impurity",
+    "problem_url": "https://atcoder.jp/contests/abc138/tasks/abc138_e",
+    "submission_id": "AC7008396",
+    "submission_url": "https://atcoder.jp/contests/abc138/submissions/7008396",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Aug/18/2019 19:03"
+  },
   "AC7008756": {
     "contest_id": "abc138",
     "language": "C++14 (GCC 5.4.1)",

@@ -4,10 +4,11 @@
 #define REP(i, a, b) for (auto i = (a); i < (b); ++i)
 using namespace std;
 
+#define int long long
 signed main() {
-	string ss; cin >> ss;
-	string ts; cin >> ts;
-	int n = ss.size(), m = ts.size();
+	string ss; getline(cin, ss, '\n');
+	string ts; getline(cin, ts, '\n');
+	long long n = ss.size(), m = ts.size();
 
 	int s[n], t[m];
 	REP(i, 0, m) t[i] = ts[i] - 'a';
@@ -15,11 +16,13 @@ signed main() {
 	vector<int> freq[27];
 	REP(i, 0, n) freq[s[i]].push_back(i);
 	
-	REP(i, 0, m) 
-		if (freq[t[i]].empty()) {
-			cout << -1;
-			return 0;
-		}
+	bool flag = 0;
+	REP(i, 0, m) flag |= freq[t[i]].empty();
+
+	if (flag) {
+		cout << -1;
+		return 0;
+	}
 
 	int prev = -1;
 	long long ans = 0;
@@ -32,7 +35,6 @@ signed main() {
 			prev = freq[t[i]][0];
 		}
 	}
-	ans *= n;
-	ans += prev + 1;
-	cout << ans;
+
+	cout << ans * n + prev + 1LL;
 }

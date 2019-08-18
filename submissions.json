@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC6997239": {
+    "contest_id": "abc138",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc138/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Red or Not",
+    "problem_url": "https://atcoder.jp/contests/abc138/tasks/abc138_a",
+    "submission_id": "AC6997239",
+    "submission_url": "https://atcoder.jp/contests/abc138/submissions/6997239",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Aug/18/2019 18:02"
+  },
   "AC6997642": {
     "contest_id": "abc138",
     "language": "PyPy3 (2.4.0)",

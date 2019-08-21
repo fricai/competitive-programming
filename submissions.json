@@ -9663,6 +9663,23 @@
     ],
     "timestamp": "Sep/29/2021 13:13"
   },
+  "CF59232730": {
+    "contest_id": 1204,
+    "language": "PyPy 3",
+    "path": "codeforces/1204/B.py",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Mislove Has Lost an Array",
+    "problem_url": "https://codeforces.com/contest/1204/problem/B",
+    "submission_id": "CF59232730",
+    "submission_url": "https://codeforces.com/contest/1204/submission/59232730",
+    "tags": [
+      "greedy",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Aug/21/2019 21:39"
+  },
   "CF59361403": {
     "contest_id": 1207,
     "language": "PyPy 3",

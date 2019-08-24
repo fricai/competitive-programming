@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC7108407": {
+    "contest_id": "jsc2019-qual",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/jsc2019-qual/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Takahashi Calendar",
+    "problem_url": "https://atcoder.jp/contests/jsc2019-qual/tasks/jsc2019_qual_a",
+    "submission_id": "AC7108407",
+    "submission_url": "https://atcoder.jp/contests/jsc2019-qual/submissions/7108407",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Aug/24/2019 17:35"
+  },
   "AC7110368": {
     "contest_id": "jsc2019-qual",
     "language": "C++14 (GCC 5.4.1)",

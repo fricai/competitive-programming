@@ -9663,6 +9663,22 @@
     ],
     "timestamp": "Sep/29/2021 13:13"
   },
+  "CF59809484": {
+    "contest_id": 1170,
+    "language": "Kotlin",
+    "path": "codeforces/1170/B.kt",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Bad Days",
+    "problem_url": "https://codeforces.com/contest/1170/problem/B",
+    "submission_id": "CF59809484",
+    "submission_url": "https://codeforces.com/contest/1170/submission/59809484",
+    "tags": [
+      "*special problem",
+      "implementation"
+    ],
+    "timestamp": "Aug/31/2019 18:38"
+  },
   "CF59812445": {
     "contest_id": 1212,
     "language": "Kotlin",

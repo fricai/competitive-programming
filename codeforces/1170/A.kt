@@ -1,11 +1,10 @@
-import java.util.Scanner
-
 fun main(args: Array<String>) {
-    val read = Scanner(System.`in`)
-    val q = read.nextInt()
+    val q = Integer.valueOf(readLine())
     for (i in 1..q) {
-        val x = read.nextInt()
-        val y = read.nextInt()
+        val d = " "
+        val str = readLine()!!.split(d)
+        val x = Integer.valueOf(str[0])
+        val y = Integer.valueOf(str[1])
         val a = minOf(x - 1, y - 1)
         val b = x - a
         val c = y - a

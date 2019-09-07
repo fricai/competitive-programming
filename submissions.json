@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC7386384": {
+    "contest_id": "abc140",
+    "language": "Python3 (3.4.3)",
+    "path": "atcoder/abc140/C.py",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Maximal Value",
+    "problem_url": "https://atcoder.jp/contests/abc140/tasks/abc140_c",
+    "submission_id": "AC7386384",
+    "submission_url": "https://atcoder.jp/contests/abc140/submissions/7386384",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Sep/07/2019 17:40"
+  },
   "AC7515648": {
     "contest_id": "abc141",
     "language": "Python3 (3.4.3)",

@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC7383692": {
+    "contest_id": "abc140",
+    "language": "Python3 (3.4.3)",
+    "path": "atcoder/abc140/B.py",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Buffet",
+    "problem_url": "https://atcoder.jp/contests/abc140/tasks/abc140_b",
+    "submission_id": "AC7383692",
+    "submission_url": "https://atcoder.jp/contests/abc140/submissions/7383692",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Sep/07/2019 17:34"
+  },
   "AC7386384": {
     "contest_id": "abc140",
     "language": "Python3 (3.4.3)",

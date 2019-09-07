@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC7380235": {
+    "contest_id": "abc140",
+    "language": "Python3 (3.4.3)",
+    "path": "atcoder/abc140/A.py",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Password",
+    "problem_url": "https://atcoder.jp/contests/abc140/tasks/abc140_a",
+    "submission_id": "AC7380235",
+    "submission_url": "https://atcoder.jp/contests/abc140/submissions/7380235",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Sep/07/2019 17:31"
+  },
   "AC7383692": {
     "contest_id": "abc140",
     "language": "Python3 (3.4.3)",

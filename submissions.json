@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC7515648": {
+    "contest_id": "abc141",
+    "language": "Python3 (3.4.3)",
+    "path": "atcoder/abc141/A.py",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Weather Prediction",
+    "problem_url": "https://atcoder.jp/contests/abc141/tasks/abc141_a",
+    "submission_id": "AC7515648",
+    "submission_url": "https://atcoder.jp/contests/abc141/submissions/7515648",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Sep/15/2019 17:32"
+  },
   "AC7525735": {
     "contest_id": "abc141",
     "language": "Python3 (3.4.3)",

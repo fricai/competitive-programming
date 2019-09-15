@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC7527336": {
+    "contest_id": "abc141",
+    "language": "Python3 (3.4.3)",
+    "path": "atcoder/abc141/C.py",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Attack Survival",
+    "problem_url": "https://atcoder.jp/contests/abc141/tasks/abc141_c",
+    "submission_id": "AC7527336",
+    "submission_url": "https://atcoder.jp/contests/abc141/submissions/7527336",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Sep/15/2019 17:51"
+  },
   "AC7530603": {
     "contest_id": "abc141",
     "language": "C++14 (GCC 5.4.1)",

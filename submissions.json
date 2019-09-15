@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC7530603": {
+    "contest_id": "abc141",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc141/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Who Says a Pun?",
+    "problem_url": "https://atcoder.jp/contests/abc141/tasks/abc141_e",
+    "submission_id": "AC7530603",
+    "submission_url": "https://atcoder.jp/contests/abc141/submissions/7530603",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Sep/15/2019 18:01"
+  },
   "AC7536700": {
     "contest_id": "abc141",
     "language": "C++14 (GCC 5.4.1)",

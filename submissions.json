@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC7525735": {
+    "contest_id": "abc141",
+    "language": "Python3 (3.4.3)",
+    "path": "atcoder/abc141/B.py",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Tap Dance",
+    "problem_url": "https://atcoder.jp/contests/abc141/tasks/abc141_b",
+    "submission_id": "AC7525735",
+    "submission_url": "https://atcoder.jp/contests/abc141/submissions/7525735",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Sep/15/2019 17:47"
+  },
   "AC7527336": {
     "contest_id": "abc141",
     "language": "Python3 (3.4.3)",

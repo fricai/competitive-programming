@@ -21113,6 +21113,22 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF61995587": {
+    "contest_id": 1241,
+    "language": "Python 3",
+    "path": "codeforces/1241/A.py",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "CME",
+    "problem_url": "https://codeforces.com/contest/1241/problem/A",
+    "submission_id": "CF61995587",
+    "submission_url": "https://codeforces.com/contest/1241/submission/61995587",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "Oct/06/2019 20:44"
+  },
   "CF62124641": {
     "contest_id": 1238,
     "language": "PyPy 3",

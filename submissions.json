@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC8064063": {
+    "contest_id": "abc143",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc143/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Travel by Car",
+    "problem_url": "https://atcoder.jp/contests/abc143/tasks/abc143_e",
+    "submission_id": "AC8064063",
+    "submission_url": "https://atcoder.jp/contests/abc143/submissions/8064063",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Oct/20/2019 20:31"
+  },
   "AC8148353": {
     "contest_id": "abc144",
     "language": "C++14 (GCC 5.4.1)",

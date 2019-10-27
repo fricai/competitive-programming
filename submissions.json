@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC8182877": {
+    "contest_id": "abc144",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc144/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Fork in the Road",
+    "problem_url": "https://atcoder.jp/contests/abc144/tasks/abc144_f",
+    "submission_id": "AC8182877",
+    "submission_url": "https://atcoder.jp/contests/abc144/submissions/8182877",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Oct/27/2019 23:04"
+  },
   "AC8182890": {
     "contest_id": "abc144",
     "language": "C++14 (GCC 5.4.1)",

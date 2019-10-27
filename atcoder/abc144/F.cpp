@@ -40,12 +40,12 @@ signed main() {
 		if (deg[i] == 1) continue;
 
 		int mxpos; double mx = -1;
-		REP(j, i + 1, n)
-			if (adj[i][j])
-				if (mx < E[j][0]) {
-					mxpos = j;
-					mx = E[j][0];
-				}
+		REP(j, i + 1, n) {
+			if (adj[i][j] && mx < E[j][0]) {
+				mxpos = j;
+				mx = E[j][0];
+			}
+		}
 
 		--deg[i]; adj[i][mxpos] = 0;
 		solve(1);

@@ -4,7 +4,7 @@
 using namespace std;
 
 const int inf = 1e9;
-const int N = 600;
+const int N = 601;
 bool adj[N][N];
 int deg[N];
 double E[N][2];
@@ -22,12 +22,14 @@ signed main() {
 	}
 
 	auto solve = [&](bool b) {
-		REP(k, 1, n) {
-			int i = n - k - 1;
-			E[i][b] = 1;
-			REP(j, i + 1, n - 1)
+		E[n - 1][b] = 0;
+		for (int i = n - 2; i >= 0; --i) {
+			E[i][b] = 0;
+			for (int j = i + 1; j < n - 1; ++j)
 				if (adj[i][j])
-					E[i][b] += E[j][b] / deg[i];
+					E[i][b] += E[j][b];
+			E[i][b] /= deg[i];
+			E[i][b] += 1;
 		}
 	};
 
@@ -38,12 +40,13 @@ signed main() {
 		if (deg[i] == 1) continue;
 
 		int mxpos; double mx = -1;
-		REP(j, i + 1, n) {
-			if (adj[i][j] && mx < E[j][0]) {
-				mxpos = j;
-				mx = E[j][0];
-			}
-		}
+
+		REP(j, i + 1, n)
+			if (adj[i][j])
+				if (mx < E[j][0]) {
+					mxpos = j;
+					mx = E[j][0];
+				}
 
 		--deg[i]; adj[i][mxpos] = 0;
 		solve(1);

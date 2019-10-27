@@ -24,12 +24,10 @@ signed main() {
 	auto solve = [&](bool b) {
 		REP(k, 1, n) {
 			int i = n - k - 1;
-			E[i][b] = 0;
+			E[i][b] = 1;
 			REP(j, i + 1, n - 1)
 				if (adj[i][j])
-					E[i][b] += E[j][b];
-			E[i][b] /= deg[i];
-			++E[i][b];
+					E[i][b] += E[j][b] / deg[i];
 		}
 	};
 

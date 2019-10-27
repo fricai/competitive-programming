@@ -23,6 +23,7 @@ signed main() {
 
 	auto solve = [&](bool b) {
 		E[n - 1][b] = 0;
+		REP(i, 0, n) E[i][b] = 0;
 		for (int i = n - 2; i >= 0; --i) {
 			E[i][b] = 0;
 			for (int j = i + 1; j < n - 1; ++j)

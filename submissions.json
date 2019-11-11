@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC8396142": {
+    "contest_id": "nikkei2019-2-qual",
+    "language": "Python3 (3.4.3)",
+    "path": "atcoder/nikkei2019-2-qual/A.py",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Sum of Two Integers",
+    "problem_url": "https://atcoder.jp/contests/nikkei2019-2-qual/tasks/nikkei2019_2_qual_a",
+    "submission_id": "AC8396142",
+    "submission_url": "https://atcoder.jp/contests/nikkei2019-2-qual/submissions/8396142",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Nov/11/2019 16:25"
+  },
   "AC8849145": {
     "contest_id": "abc147",
     "language": "C++14 (GCC 5.4.1)",

@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC8858286": {
+    "contest_id": "abc147",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc147/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Xor Sum 4",
+    "problem_url": "https://atcoder.jp/contests/abc147/tasks/abc147_d",
+    "submission_id": "AC8858286",
+    "submission_url": "https://atcoder.jp/contests/abc147/submissions/8858286",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/08/2019 18:05"
+  },
   "AC9054608": {
     "contest_id": "abc148",
     "language": "C++14 (GCC 5.4.1)",

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <stack>
+#include <queue>
 #define REP(i, a, b) for (auto i = (a); i < (b); ++i)
 using namespace std;
 
@@ -24,21 +24,21 @@ signed main() {
 		}
 
 		int cnt[2];
-		auto dfs = [&](bool b) {
+		auto bfs = [&](bool b) {
 			vis[a[!b]] = true; cnt[b] = 0;
-			stack<int> s; s.push(a[b]);
-			while (!s.empty()) {
-				int u = s.top(); s.pop();
+			queue<int> q; q.push(a[b]);
+			while (!q.empty()) {
+				int u = q.front(); q.pop();
 				if (vis[u]) continue;
 				vis[u] = true;
-				for (int v : g[u]) s.push(v);
+				for (int v : g[u]) if (!vis[v]) q.push(v);
 			}
 			REP(i, 0, n) {
 				if (!vis[i]) ++cnt[b];
 				else vis[i] = false;
 			}
 		};
-		dfs(0); dfs(1);
+		bfs(0); bfs(1);
 		
 		cout << 1LL * cnt[0] * cnt[1] << '\n';
 		REP(i, 0, n) g[i].clear();

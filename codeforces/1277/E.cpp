@@ -8,12 +8,6 @@ const int N = 1 << 18;
 vector<int> g[N];
 bool vis[N];
 
-void dfs(int u) {
-	if (vis[u]) return;
-	vis[u] = true;
-	for (int v : g[u]) dfs(v);
-}
-
 signed main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -30,15 +24,21 @@ signed main() {
 		}
 
 		int cnt[2];
-		auto stuff = [&](bool b) {
+		auto dfs = [&](bool b) {
 			vis[a[!b]] = true; cnt[b] = 0;
-			dfs(a[b]);
+			stack<int> s; s.push(a[b]);
+			while (!s.empty()) {
+				int u = s.top(); s.pop();
+				if (vis[u]) continue;
+				vis[u] = true;
+				for (int v : g[u]) s.push(v);
+			}
 			REP(i, 0, n) {
 				if (!vis[i]) ++cnt[b];
 				else vis[i] = false;
 			}
 		};
-		stuff(0); stuff(1);
+		dfs(0); dfs(1);
 		
 		cout << 1LL * cnt[0] * cnt[1] << '\n';
 		REP(i, 0, n) g[i].clear();

@@ -31,7 +31,7 @@ signed main() {
 				int u = q.front(); q.pop();
 				if (vis[u]) continue;
 				vis[u] = true;
-				for (int v : g[u]) if (!vis[v]) q.push(v);
+				for (int v : g[u]) q.push(v);
 			}
 			REP(i, 0, n) {
 				if (!vis[i]) ++cnt[b];

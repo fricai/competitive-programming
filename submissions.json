@@ -21113,6 +21113,24 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF66939436": {
+    "contest_id": 1271,
+    "language": "GNU C++17",
+    "path": "codeforces/1271/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Suits",
+    "problem_url": "https://codeforces.com/contest/1271/problem/A",
+    "submission_id": "CF66939436",
+    "submission_url": "https://codeforces.com/contest/1271/submission/66939436",
+    "tags": [
+      "brute force",
+      "greedy",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Dec/15/2019 14:49"
+  },
   "CF67530134": {
     "contest_id": 1282,
     "language": "PyPy 3",

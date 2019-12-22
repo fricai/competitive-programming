@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC9057440": {
+    "contest_id": "abc148",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc148/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Strings with the Same Length",
+    "problem_url": "https://atcoder.jp/contests/abc148/tasks/abc148_b",
+    "submission_id": "AC9057440",
+    "submission_url": "https://atcoder.jp/contests/abc148/submissions/9057440",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Dec/22/2019 17:32"
+  },
   "AC9059769": {
     "contest_id": "abc148",
     "language": "C++14 (GCC 5.4.1)",

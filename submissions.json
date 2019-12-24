@@ -21113,6 +21113,23 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF67530134": {
+    "contest_id": 1282,
+    "language": "PyPy 3",
+    "path": "codeforces/1282/A.py",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Temporarily unavailable",
+    "problem_url": "https://codeforces.com/contest/1282/problem/A",
+    "submission_id": "CF67530134",
+    "submission_url": "https://codeforces.com/contest/1282/submission/67530134",
+    "tags": [
+      "implementation",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Dec/24/2019 20:18"
+  },
   "CF68386151": {
     "contest_id": 343,
     "language": "GNU C++17",

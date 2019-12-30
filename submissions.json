@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC9243975": {
+    "contest_id": "abc149",
+    "language": "Python3 (3.4.3)",
+    "path": "atcoder/abc149/A.py",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Strings",
+    "problem_url": "https://atcoder.jp/contests/abc149/tasks/abc149_a",
+    "submission_id": "AC9243975",
+    "submission_url": "https://atcoder.jp/contests/abc149/submissions/9243975",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Dec/30/2019 18:32"
+  },
   "AC9394897": {
     "contest_id": "abc150",
     "language": "Python3 (3.4.3)",

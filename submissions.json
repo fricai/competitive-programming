@@ -21113,6 +21113,23 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF68388681": {
+    "contest_id": 813,
+    "language": "GNU C++17",
+    "path": "codeforces/813/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Army Creation",
+    "problem_url": "https://codeforces.com/contest/813/problem/E",
+    "submission_id": "CF68388681",
+    "submission_url": "https://codeforces.com/contest/813/submission/68388681",
+    "tags": [
+      "binary search",
+      "data structures",
+      "*2200"
+    ],
+    "timestamp": "Jan/08/2020 12:57"
+  },
   "CF68400648": {
     "contest_id": 52,
     "language": "GNU C++17",

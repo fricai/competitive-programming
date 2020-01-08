@@ -15,10 +15,9 @@ struct node {
 	}
 	node operator+(node a) {
 		node res;
-		rep(i, 0, S) res[i] = f[i] + a[i];
+		rep(i, 0, S) res.f[i] = f[i] + a.f[i];
 		return res;
 	}
-	int& operator[](int a) { return f[a]; }
 };
 
 int n;
@@ -79,7 +78,7 @@ void upd(int lo, int hi, int val, int v = 1, int l = 0, int r = n - 1) {
 
 char get(int p, int v = 1, int l = 0, int r = n - 1) {
 	if (l == r) {
-		rep(c, 0, S) if (t[v][c]) return c + 'a';
+		rep(c, 0, S) if (t[v].f[c]) return c + 'a';
 	}
 	push(v, l, r);
 	int m = (l + r) >> 1;
@@ -90,21 +89,21 @@ char get(int p, int v = 1, int l = 0, int r = n - 1) {
 void opt(int l, int r) {
 	node x = freq(l, r);
 	int odd = 0;
-	rep(c, 0, S) odd += x[c] & 1;
+	rep(c, 0, S) odd += x.f[c] & 1;
 	if (odd > 1) return;
 	int prev = l;
 	rep(c, 0, S) {
-		int y = x[c] >> 1;
+		int y = x.f[c] >> 1;
 		upd(prev, prev + y - 1, c);
 		prev += y;
 	}
 	if ((r - l + 1) & 1)
 		rep(c, 0, S)
-			if (x[c] & 1)
+			if (x.f[c] & 1)
 				upd((l + r) >> 1, (l + r) >> 1, c);
 	int nxt = r;
 	rep(c, 0, S) {
-		int y = x[c] >> 1;
+		int y = x.f[c] >> 1;
 		upd(nxt - y + 1, nxt, c);
 		nxt -= y;
 	}

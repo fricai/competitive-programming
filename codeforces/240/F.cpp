@@ -77,13 +77,14 @@ void upd(int lo, int hi, int val, int v = 1, int l = 0, int r = n - 1) {
 	}
 }
 
-string get(int v = 1, int l = 0, int r = n - 1) {
-	if (l == r)
-		rep(c, 0, S) if (t[v][c])
-			return string(1, c + 'a');
+char get(int p, int v = 1, int l = 0, int r = n - 1) {
+	if (l == r) {
+		rep(c, 0, S) if (t[v][c]) return c + 'a';
+	}
 	push(v, l, r);
 	int m = (l + r) >> 1;
-	return get(v << 1, l, m) + get(v << 1|1, m + 1, r);
+	if (p <= m) return get(p, v << 1, l, m);
+	else return get(p, v << 1|1, m + 1, r);
 }
 
 void opt(int l, int r) {
@@ -117,5 +118,5 @@ signed main() {
 		int i, j; cin >> i >> j; --i, --j;
 		opt(i, j);
 	}
-	cout << get();
+	rep(i, 0, n) cout << get(i);
 }

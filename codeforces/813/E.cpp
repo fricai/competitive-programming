@@ -45,7 +45,7 @@ signed main() {
 	rep(i, 0, n) {
 		auto &x = p[a[i + 1]];
 		int y = x.size() - k;
-		t[i + 1] = t[i]->insert(y < 0 ? 0 : x[y]);
+		t[i + 1] = t[i]->insert((y < 0 ? 0 : x[y]));
 		x.push_back(i + 1);
 	}
 

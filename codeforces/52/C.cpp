@@ -6,8 +6,7 @@ using namespace std;
 using ll = long long;
 const int N = 1 << 18;
 const int inf = 1e9;
-int n, a[N];
-ll u[N << 1], t[N << 1];
+int n, a[N], u[N << 1]; ll t[N << 1];
 
 void build(int v = 1, int l = 0, int r = n - 1) {
 	u[v] = inf;

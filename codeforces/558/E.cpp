@@ -104,9 +104,6 @@ void opt(int l, int r, bool k) {
 }
 
 signed main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-
 	rep(i, 0, N << 1) u[i] = -1;
 	int q; cin >> n >> q;
 	build();

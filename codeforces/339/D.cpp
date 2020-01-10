@@ -16,8 +16,8 @@ signed main() {
 	int b, q; cin >> b >> q;
 	int n = 1 << b;
 	rep(i, 0, n) cin >> t[i + n];
-	for (int m = n, x = 1; m; m >>= 1, x ^= 1)
-		for (int i = m - 1; i >= (m >> 1); --i)
+	for (int s = b, x = 1; s; --s, x ^= 1)
+		for (int i = (1 << s) - 1; i >= (1 << (s - 1)); --i)
 			t[i] = f(t[i << 1], t[i << 1|1], x);
 	while (q--) {
 		int p; cin >> p; --p;

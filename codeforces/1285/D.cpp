@@ -30,5 +30,6 @@ signed main() {
 	cin >> n;
 	rep(i, 0, n) cin >> a[i];
 	sort(a, a + n);
+	n = unique(a, a + n) - a;
 	cout << solve();
 }

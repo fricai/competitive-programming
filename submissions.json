@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC9401450": {
+    "contest_id": "abc150",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc150/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Semi Common Multiple",
+    "problem_url": "https://atcoder.jp/contests/abc150/tasks/abc150_d",
+    "submission_id": "AC9401450",
+    "submission_url": "https://atcoder.jp/contests/abc150/submissions/9401450",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jan/10/2020 18:44"
+  },
   "AC9420125": {
     "contest_id": "dwacon6th-prelims",
     "language": "C++14 (GCC 5.4.1)",

@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC9420125": {
+    "contest_id": "dwacon6th-prelims",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/dwacon6th-prelims/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Falling Asleep",
+    "problem_url": "https://atcoder.jp/contests/dwacon6th-prelims/tasks/dwacon6th_prelims_a",
+    "submission_id": "AC9420125",
+    "submission_url": "https://atcoder.jp/contests/dwacon6th-prelims/submissions/9420125",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Jan/11/2020 16:34"
+  },
   "AC9440281": {
     "contest_id": "abc151",
     "language": "C++14 (GCC 5.4.1)",

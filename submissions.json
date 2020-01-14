@@ -18574,6 +18574,23 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF68765765": {
+    "contest_id": 1027,
+    "language": "GNU C++14",
+    "path": "codeforces/1027/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Palindromic Twist",
+    "problem_url": "https://codeforces.com/contest/1027/problem/A",
+    "submission_id": "CF68765765",
+    "submission_url": "https://codeforces.com/contest/1027/submission/68765765",
+    "tags": [
+      "implementation",
+      "strings",
+      "*1000"
+    ],
+    "timestamp": "Jan/14/2020 15:20"
+  },
   "CF68826403": {
     "contest_id": 1288,
     "language": "GNU C++14",

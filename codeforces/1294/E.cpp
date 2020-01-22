@@ -196,9 +196,11 @@ signed main() {
     auto& c = g[j];
     auto& p = f[j];
     rep(i, 0, n) s[i] = 0;
-    rep(i, 0, n)
-      trav(x, p[i * m + j])
-				s[(n - i + x) % n]++;
+    rep(i, 0, n) {
+      int v = i * m + j;
+      trav(x, p[v]) s[(n - i + x) % n]++;
+    }
+
     int cur = n;
     rep(i, 0, n) ckmin(cur, n - s[i] + i);
     ans += cur;

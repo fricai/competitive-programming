@@ -195,13 +195,13 @@ void dfs(int u, int p, int &a) {
 
 int lca(int u, int v) {
 	if (d[u] < d[v]) swap(u, v);
-	per(b, 0, B)
-		if (d[v] <= d[u] - (1 << b))
-			u = a[u][b];
+	for (int i = B - 1; i >= 0; --i)
+		if (d[u] - (1 << i) >= d[v])
+			u = a[u][i];
 	if (u == v) return u;
-	per(b, 0, B)
-		if (a[u][b] != a[v][b])
-			u = a[u][b], v = a[v][b];
+	for (int i = B - 1; i >= 0; --i)
+		if (a[u][i] != -1 && a[u][i] != a[v][i])
+			u = a[u][i], v = a[v][i];
 	return a[u][0];
 }
 
@@ -214,10 +214,12 @@ signed main() {
 	}
 
 	int x = 0, y = 0;
+	rep(i, 0, n) a[i][0] = -1;
 	d[0] = 0; dfs(0, -1, x);
 	d[x] = 0; dfs(x, -1, y);
 	rep(b, 1, B)
 		rep(u, 0, n)
+			if (a[u][b - 1] != -1)
 				a[u][b] = a[a[u][b - 1]][b - 1];
 	int mx = 0, z;
 	rep(u, 0, n) {

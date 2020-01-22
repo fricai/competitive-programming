@@ -198,7 +198,7 @@ signed main() {
     rep(i, 0, n) s[i] = 0;
     rep(i, 0, n)
       trav(x, p[i * m + j])
-				++s[(n - i + x) % n];
+				s[(n - i + x) % n]++;
     int cur = n;
     rep(i, 0, n) ckmin(cur, n - s[i] + i);
     ans += cur;

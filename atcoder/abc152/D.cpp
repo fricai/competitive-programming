@@ -188,8 +188,7 @@ signed main() {
     rep(i, 1, n + 1)
         ++cnt[lead(i)][i % 10];
     int ans = 0;
-    rep(i, 0, 10)
-        rep(j, 0, 10)
-            ans += cnt[i][j] * cnt[j][i];
+    rep(i, 1, n + 1)
+        ans += cnt[i % 10][lead(i)];
     pr(ans);
 }

@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC9691519": {
+    "contest_id": "abc128",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc128/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Switches",
+    "problem_url": "https://atcoder.jp/contests/abc128/tasks/abc128_c",
+    "submission_id": "AC9691519",
+    "submission_url": "https://atcoder.jp/contests/abc128/submissions/9691519",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jan/24/2020 02:40"
+  },
   "AC9771918": {
     "contest_id": "abc153",
     "language": "C++14 (GCC 5.4.1)",

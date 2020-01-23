@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC9691317": {
+    "contest_id": "abc132",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc132/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Divide the Problems",
+    "problem_url": "https://atcoder.jp/contests/abc132/tasks/abc132_c",
+    "submission_id": "AC9691317",
+    "submission_url": "https://atcoder.jp/contests/abc132/submissions/9691317",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jan/24/2020 01:18"
+  },
   "AC9691358": {
     "contest_id": "abc132",
     "language": "C++14 (GCC 5.4.1)",

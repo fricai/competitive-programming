@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC9691385": {
+    "contest_id": "abc131",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc131/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Megalomania",
+    "problem_url": "https://atcoder.jp/contests/abc131/tasks/abc131_d",
+    "submission_id": "AC9691385",
+    "submission_url": "https://atcoder.jp/contests/abc131/submissions/9691385",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jan/24/2020 01:58"
+  },
   "AC9691425": {
     "contest_id": "abc130",
     "language": "C++14 (GCC 5.4.1)",

@@ -178,19 +178,13 @@ IO io = IO(true);
 
 signed main() {
     int n; ll k; re(n, k);
-    ll p[n + 1] = {0};
+    vector<ll> v(1, 0);
+    ll p = 0, ans = 0;
     rep(i, 0, n) {
         int a; re(a);
-        p[i + 1] = p[i] + a;
-    }
-    
-    ll ans = 0;
-    int l = 0, r = 0;
-    while (l < n) {
-        while (r < n && p[r + 1] - p[l] < k) ++r;
-        if (r < n && k <= p[r + 1] - p[l])
-            ans += n - r;
-        ++l;
+        p += a;
+        ans += lb(all(v), p - k + 1) - begin(v);
+        v.pb(p);
     }
     pr(ans);
 }

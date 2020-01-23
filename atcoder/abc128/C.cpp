@@ -184,7 +184,7 @@ bool p[N];
 bool check(int u, int mask) {
     bool cnt = 0;
     trav(x, g[u])
-        if ((mask >> (x - 1)) & 1)
+        if ((mask >> x) & 1)
             cnt ^= 1;
     return cnt == p[u];
 }
@@ -194,7 +194,8 @@ signed main() {
     rep(i, 0, m) {
         int k; re(k);
         g[i].rsz(k);
-        re(g[i]);
+        trav(x, g[i]) re(x);
+        trav(x, g[i]) --x;
     }
     rep(i, 0, m) re(p[i]);
     int ans = 0;

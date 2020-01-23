@@ -179,10 +179,13 @@ IO io = IO(true);
 signed main() {
     ll n, k; re(n, k);
     ld ans = 0;
-    rep(x, 1LL, n + 1) {
-        ll t = 1;
-        while (t * x < k) t <<= 1;
-        ans += (ld) 1 / t;
-    }
+    rep(x, 1LL, n + 1)
+        if (k <= x)
+            ans += 1;
+        else {
+            ll t = 1;
+            while (t * x < k) t <<= 1;
+            ans += (ld) 1 / t;
+        }
     pr(ans / n);
 }

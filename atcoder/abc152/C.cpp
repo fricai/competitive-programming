@@ -181,7 +181,8 @@ signed main() {
     int x = 0, mi = n + 1;
     rep(i, 0, n) {
         int a; re(a);
-        if (ckmin(mi, a)) ++x;
+        if (a <= mi) ++x;
+        ckmin(mi, a);
     }
     pr(x);
 }

@@ -178,13 +178,14 @@ IO io = IO(true);
 
 signed main() {
     int n; ll k; re(n, k);
-    vector<ll> v(1, 0);
+    Tree<ll> s;
     ll p = 0, ans = 0;
+    s.insert(p);
     rep(i, 0, n) {
         int a; re(a);
         p += a;
-        ans += lb(all(v), p - k + 1) - begin(v);
-        v.pb(p);
+        ans += s.ook(p - k + 1);
+        s.insert(p);
     }
     pr(ans);
 }

@@ -176,19 +176,23 @@ using namespace input;
 using namespace output;
 IO io = IO(true);
 
+constexpr int N = 1 << 17;
 constexpr ll mod = 1e9 + 7;
+ll dp[N];
+
+ll f(int n) {
+    if (n == 0) return 1;
+    if (dp[n] == -1)
+        dp[n] = (f(n - 1) + f(n - 2)) % mod;
+    return dp[n];
+}
 
 signed main() {
     int n, m; re(n, m);
-    int dp[n + 1] = {1};
-    rep(i, 0, n) dp[i + 1] = -1;
+    rep(i, 0, n + 1) dp[i] = -1;
     rep(i, 0, m) {
         int a; re(a);
         dp[a] = 0;
     }
-    if (dp[1]) dp[1] = dp[0];
-    rep(i, 1, n)
-        if (dp[i + 1] == -1)
-            dp[i + 1] = (dp[i] + dp[i - 1]) % mod;
-    pr(dp[n]);
+    pr(f(n));
 }

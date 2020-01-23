@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC9691202": {
+    "contest_id": "abc152",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc152/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Handstand 2",
+    "problem_url": "https://atcoder.jp/contests/abc152/tasks/abc152_d",
+    "submission_id": "AC9691202",
+    "submission_url": "https://atcoder.jp/contests/abc152/submissions/9691202",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jan/24/2020 00:38"
+  },
   "AC9691317": {
     "contest_id": "abc132",
     "language": "C++14 (GCC 5.4.1)",

@@ -189,25 +189,25 @@ signed main() {
                 g[x + 1][y + 1] = 1;
         }
     }
-    rep(y, 1, h + 1) {
-        l[0][y] = 0;
-        rep(x, 1, w + 1)
-            l[x][y] = (g[x][y] ? x : l[x - 1][y]);
-        r[w + 1][y] = w + 1;
-        per(x, 1, w + 1)
-            r[x][y] = (g[x][y] ? x : r[x + 1][y]);
+    rep(y, 0, h) {
+        l[0][y + 1] = 0;
+        rep(x, 0, w)
+            l[x + 1][y + 1] = (g[x + 1][y + 1] ? x + 1 : l[x][y + 1]);
+        r[w + 1][y + 1] = w + 1;
+        per(x, 0, w)
+            r[x + 1][y + 1] = (g[x + 1][y + 1] ? x + 1 : r[x + 2][y + 1]);
     }
-    rep(x, 1, w + 1) {
-        u[x][0] = 0;
-        rep(y, 1, h + 1)
-            u[x][y] = (g[x][y] ? y : u[x][y - 1]);
-        d[x][h + 1] = h + 1;
-        per(y, 1, h + 1)
-            d[x][y] = (g[x][y] ? y : d[x][y + 1]);
+    rep(x, 0, w) {
+        u[x + 1][0] = 0;
+        rep(y, 0, h)
+            u[x + 1][y + 1] = (g[x + 1][y + 1] ? y + 1 : u[x + 1][y]);
+        d[x + 1][h + 1] = h + 1;
+        per(y, 0, h)
+            d[x + 1][y + 1] = (g[x + 1][y + 1] ? y + 1 : d[x + 1][y + 2]);
     }
     int ans = 0;
-    rep(x, 1, w + 1)
-        rep(y, 1, h + 1)
-            ckmax(ans, d[x][y] - u[x][y] + r[x][y] - l[x][y] - 4 + 1);
+    rep(x, 0, w)
+        rep(y, 0, h)
+            ckmax(ans, d[x + 1][y + 1] - u[x + 1][y + 1] + r[x + 1][y + 1] - l[x + 1][y + 1] - 3);
     pr(ans);
 }

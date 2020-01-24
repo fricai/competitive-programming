@@ -18643,6 +18643,24 @@
     ],
     "timestamp": "Jan/24/2020 11:38"
   },
+  "CF69455561": {
+    "contest_id": 1293,
+    "language": "GNU C++14",
+    "path": "codeforces/1293/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Aroma's Search",
+    "problem_url": "https://codeforces.com/contest/1293/problem/D",
+    "submission_id": "CF69455561",
+    "submission_url": "https://codeforces.com/contest/1293/submission/69455561",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "implementation",
+      "*1700"
+    ],
+    "timestamp": "Jan/24/2020 13:57"
+  },
   "CF69461213": {
     "contest_id": 1270,
     "language": "GNU C++14",

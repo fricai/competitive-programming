@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC9772259": {
+    "contest_id": "abc153",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc153/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Crested Ibis vs Monster",
+    "problem_url": "https://atcoder.jp/contests/abc153/tasks/abc153_e",
+    "submission_id": "AC9772259",
+    "submission_url": "https://atcoder.jp/contests/abc153/submissions/9772259",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jan/26/2020 21:23"
+  },
   "AC9772741": {
     "contest_id": "abc153",
     "language": "C++14 (GCC 5.4.1)",

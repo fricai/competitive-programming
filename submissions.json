@@ -5086,5 +5086,21 @@
       "*600"
     ],
     "timestamp": "Sep/26/2021 19:22"
+  },
+  "AC9779333": {
+    "contest_id": "abc127",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc127/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Integer Cards",
+    "problem_url": "https://atcoder.jp/contests/abc127/tasks/abc127_d",
+    "submission_id": "AC9779333",
+    "submission_url": "https://atcoder.jp/contests/abc127/submissions/9779333",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jan/27/2020 11:24"
   }
 }

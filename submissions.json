@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC9778063": {
+    "contest_id": "abc133",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder/abc133/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Remainder Minimization 2019",
+    "problem_url": "https://atcoder.jp/contests/abc133/tasks/abc133_c",
+    "submission_id": "AC9778063",
+    "submission_url": "https://atcoder.jp/contests/abc133/submissions/9778063",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jan/27/2020 10:00"
+  },
   "AC9778087": {
     "contest_id": "abc142",
     "language": "C++14 (GCC 5.4.1)",

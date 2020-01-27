@@ -15286,6 +15286,25 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF69599908": {
+    "contest_id": 569,
+    "language": "GNU C++14",
+    "path": "codeforces/569/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Primes or Palindromes?",
+    "problem_url": "https://codeforces.com/contest/569/problem/C",
+    "submission_id": "CF69599908",
+    "submission_url": "https://codeforces.com/contest/569/submission/69599908",
+    "tags": [
+      "binary search",
+      "brute force",
+      "math",
+      "number theory",
+      "*1600"
+    ],
+    "timestamp": "Jan/27/2020 12:28"
+  },
   "CF69603754": {
     "contest_id": 1228,
     "language": "GNU C++14",

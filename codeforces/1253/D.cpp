@@ -241,13 +241,14 @@ const int N = 1 << 18;
 
 vi g[N];
 bool vis[N];
-int cmp[N], hsh[N], mx[N];
+int cmp[N], hsh[N], mx[N], mi[N];
 
 void dfs(int u, const int &c) {
     if (vis[u]) return;
     vis[u] = true;
     cmp[u] = c;
     ckmax(mx[c], u);
+    ckmin(mi[c], u);
     trav(v, g[u]) dfs(v, c);
 }
 
@@ -260,21 +261,25 @@ signed main() {
     }
 
     int c = 0;
-    rep(u, 0, n)
-        if (!vis[u])
+    rep(u, 0, n) {
+        if (!vis[u]) {
+            mi[c] = mx[c] = u;
             dfs(u, c++);
+        }
+    }
     rep(i, 0, c) hsh[i] = i;
     
     int i = 0, ans = 0;
-    rep(i, 0, n) {
-        rep(u, i, mx[hsh[cmp[i]]]) {
+    while (i < n) {
+        rep(u, i + 1, mx[hsh[cmp[i]]] + 1) {
             if (hsh[cmp[u]] != hsh[cmp[i]]) {
                 ckmax(mx[hsh[cmp[i]]], mx[hsh[cmp[u]]]);
+                ckmin(mi[hsh[cmp[i]]], mi[hsh[cmp[u]]]);
                 hsh[cmp[u]] = hsh[cmp[i]];
                 ++ans;
             }
         }
-        i = mx[hsh[cmp[i]]];
+        i = mx[hsh[cmp[i]]] + 1;
     }
     pr(ans);
 }

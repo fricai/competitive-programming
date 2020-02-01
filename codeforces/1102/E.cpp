@@ -246,9 +246,9 @@ signed main() {
 	int n; re(n);
 	vi __a(n); re(__a);
 	vi a(__a);
-	sort(all(__a));
+	sort(all(__a)); __a.erase(unique(all(__a)), end(__a));
 	rep(i, 0, n) a[i] = lb(all(__a), a[i]) - begin(__a);
-	vi lst(n);
+	vi lst(*max_element(all(a)) + 1);
 	rep(i, 0, n) lst[a[i]] = i;
 	
 	int c = -1;

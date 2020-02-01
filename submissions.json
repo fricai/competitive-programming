@@ -15286,6 +15286,24 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF69953614": {
+    "contest_id": 850,
+    "language": "GNU C++17",
+    "path": "codeforces/850/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Five Dimensional Points",
+    "problem_url": "https://codeforces.com/contest/850/problem/A",
+    "submission_id": "CF69953614",
+    "submission_url": "https://codeforces.com/contest/850/submission/69953614",
+    "tags": [
+      "brute force",
+      "geometry",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Feb/01/2020 15:04"
+  },
   "CF69955326": {
     "contest_id": 1163,
     "language": "GNU C++17",

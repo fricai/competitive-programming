@@ -13747,6 +13747,28 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF69991251": {
+    "contest_id": 633,
+    "language": "GNU C++14",
+    "path": "codeforces/633/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Spy Syndrome 2",
+    "problem_url": "https://codeforces.com/contest/633/problem/C",
+    "submission_id": "CF69991251",
+    "submission_url": "https://codeforces.com/contest/633/submission/69991251",
+    "tags": [
+      "data structures",
+      "dp",
+      "hashing",
+      "implementation",
+      "sortings",
+      "string suffix structures",
+      "strings",
+      "*1900"
+    ],
+    "timestamp": "Feb/02/2020 00:58"
+  },
   "CF69991316": {
     "contest_id": 633,
     "language": "GNU C++14",

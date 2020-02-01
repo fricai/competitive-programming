@@ -218,7 +218,7 @@ signed main() {
 	re(n, t); reverse(all(t));
 	int m; re(m); vector<string> w(m); re(w);
 	rep(i, 0, m) root->insert(all(w[i]), i + 1);
-	per(i, 0, n) dp[i] = root->find(i);
+	dp[n] = n + 1; per(i, 0, n) dp[i] = root->find(i);
 	vector<string> res;
 	for (int p = 0; p < n; p += sz(w[dp[p] - 1])) res.pb(w[dp[p] - 1]);
 	reverse(all(res));

@@ -13747,6 +13747,23 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF69985187": {
+    "contest_id": 1076,
+    "language": "GNU C++14",
+    "path": "codeforces/1076/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Vasya and a Tree",
+    "problem_url": "https://codeforces.com/contest/1076/problem/E",
+    "submission_id": "CF69985187",
+    "submission_url": "https://codeforces.com/contest/1076/submission/69985187",
+    "tags": [
+      "data structures",
+      "trees",
+      "*1900"
+    ],
+    "timestamp": "Feb/01/2020 23:07"
+  },
   "CF69991251": {
     "contest_id": 633,
     "language": "GNU C++14",

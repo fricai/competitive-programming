@@ -209,9 +209,8 @@ int node::find(int l) {
 	if (l == n) return idx;
 	if (idx && dp[l]) return idx;
 	int c = tolower(t[l]) - 'a';
-	if (nxt[c])
-		return nxt[c]->find(l + 1);
-	return 0;
+	if (nxt[c]) return nxt[c]->find(l + 1);
+	else return 0;
 }
 
 signed main() {

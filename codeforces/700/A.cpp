@@ -182,8 +182,11 @@ const ll inf = 1e9;
 
 signed main() {
 	int n, k; ld l, u, v; re(n, l, u, v, k);
-	ld p = v / u;
-	ll g = (n + k - 1) / k;
-	ld w = (2 * l) / (2 * g + p - 1) * (g - 1);
-	pr(w / u + (l - w) / v);
+	if (n <= k) pr(l / v);
+	else {
+		ld p = v / u;
+		ll g = (n + k - 1) / k;
+		ld w = (2 * l) / (2 * g + p - 1) * (g - 1);
+		pr(w / u + (l - w) / v);
+	}
 }

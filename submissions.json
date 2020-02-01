@@ -15286,6 +15286,23 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF69956504": {
+    "contest_id": 643,
+    "language": "GNU C++17",
+    "path": "codeforces/643/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Bear and Two Paths",
+    "problem_url": "https://codeforces.com/contest/643/problem/B",
+    "submission_id": "CF69956504",
+    "submission_url": "https://codeforces.com/contest/643/submission/69956504",
+    "tags": [
+      "constructive algorithms",
+      "graphs",
+      "*1600"
+    ],
+    "timestamp": "Feb/01/2020 15:46"
+  },
   "CF69958684": {
     "contest_id": 1279,
     "language": "GNU C++17",

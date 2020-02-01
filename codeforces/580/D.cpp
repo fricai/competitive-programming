@@ -196,7 +196,7 @@ signed main() {
 			if ((mask >> i) & 1)
 				rep(j, 0, n)
 					if (((mask >> j) & 1) == 0)
-						ckmax(dp[mask ^ (1 << j)][j], dp[mask][i] + a[j] + g[i][j]);
+						ckmax(dp[mask ^ (1 << j)][j], dp[mask][i] + a[j] + g[j][i]);
 	
 	ll ans = 0;
 	rep(mask, 0, 1 << n)

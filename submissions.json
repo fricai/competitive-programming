@@ -13747,6 +13747,23 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF69983351": {
+    "contest_id": 700,
+    "language": "GNU C++14",
+    "path": "codeforces/700/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "As Fast As Possible",
+    "problem_url": "https://codeforces.com/contest/700/problem/A",
+    "submission_id": "CF69983351",
+    "submission_url": "https://codeforces.com/contest/700/submission/69983351",
+    "tags": [
+      "binary search",
+      "math",
+      "*1900"
+    ],
+    "timestamp": "Feb/01/2020 22:35"
+  },
   "CF69983412": {
     "contest_id": 700,
     "language": "GNU C++14",

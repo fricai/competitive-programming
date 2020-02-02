@@ -13747,6 +13747,23 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF70053048": {
+    "contest_id": 1291,
+    "language": "GNU C++14",
+    "path": "codeforces/1291/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Array Sharpening",
+    "problem_url": "https://codeforces.com/contest/1291/problem/B",
+    "submission_id": "CF70053048",
+    "submission_url": "https://codeforces.com/contest/1291/submission/70053048",
+    "tags": [
+      "greedy",
+      "implementation",
+      "*1300"
+    ],
+    "timestamp": "Feb/02/2020 20:15"
+  },
   "CF70501519": {
     "contest_id": 1296,
     "language": "GNU C++14",

@@ -194,15 +194,21 @@ void dfs(int u, int w) {
 
 void set_color(int u, int v, int c) {
 	if (u == v) return;
-	if (d[u] > d[v]) swap(u, v);
-	f[v] = c;
-	set_color(u, p[v], c);
+	if (d[u] < d[v]) {
+		f[v] = c;
+		set_color(u, p[v], c);
+	} else {
+		f[u] = c;
+		set_color(p[u], v, c);
+	}
 }
 
 int get_color(int u, int v) {
 	if (u == v) return 1e6;
-	if (d[u] > d[v]) swap(u, v);
-	return min(f[v], get_color(u, p[v]));
+	if (d[u] < d[v])
+		return min(f[v], get_color(u, p[v]));
+	else
+		return min(f[u], get_color(p[u], v));
 }
 
 signed main() {

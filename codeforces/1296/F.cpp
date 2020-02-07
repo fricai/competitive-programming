@@ -197,9 +197,12 @@ void set_color(int u, int v, int c) {
 	if (d[u] < d[v]) {
 		f[v] = c;
 		set_color(u, p[v], c);
-	} else {
+	} else if (d[u] > d[v]) {
 		f[u] = c;
 		set_color(p[u], v, c);
+	} else {
+		f[u] = f[v] = c;
+		set_color(p[u], p[v], c);
 	}
 }
 
@@ -207,8 +210,10 @@ int get_color(int u, int v) {
 	if (u == v) return 1e6;
 	if (d[u] < d[v])
 		return min(f[v], get_color(u, p[v]));
-	else
+	else if (d[u] > d[v])
 		return min(f[u], get_color(p[u], v));
+	else
+		return min({f[u], f[v], get_color(p[u], p[v])});
 }
 
 signed main() {

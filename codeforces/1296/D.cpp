@@ -181,7 +181,8 @@ IO io = IO(true);
 signed main() {
 	int n; ll a, b, k; re(n, a, b, k);
 	vl h(n); re(h);
-	rep(i, 0, n) h[i] = (h[i] - 1) % (a + b) / a;
+	rep(i, 0, n) h[i] = (h[i] - 1) % (a + b) + 1;
+	rep(i, 0, n) h[i] = (h[i] - 1) / a;
 	sort(all(h));
 	int ans = 0;
 	while (ans < n) {

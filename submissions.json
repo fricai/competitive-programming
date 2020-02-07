@@ -13747,6 +13747,23 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF70513164": {
+    "contest_id": 1296,
+    "language": "GNU C++14",
+    "path": "codeforces/1296/E2.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E2",
+    "problem_name": "String Coloring (hard version)",
+    "problem_url": "https://codeforces.com/contest/1296/problem/E2",
+    "submission_id": "CF70513164",
+    "submission_url": "https://codeforces.com/contest/1296/submission/70513164",
+    "tags": [
+      "data structures",
+      "dp",
+      "*2000"
+    ],
+    "timestamp": "Feb/07/2020 20:57"
+  },
   "CF70629062": {
     "contest_id": 1300,
     "language": "GNU C++14",

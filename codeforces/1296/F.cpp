@@ -195,13 +195,14 @@ void dfs(int u, int w) {
 void set_color(int u, int v, int c) {
 	if (u == v) return;
 	if (d[u] < d[v]) {
-		f[v] = c;
+		ckmax(f[v], c);
 		set_color(u, p[v], c);
 	} else if (d[u] > d[v]) {
-		f[u] = c;
+		ckmax(f[u], c);
 		set_color(p[u], v, c);
 	} else {
-		f[u] = f[v] = c;
+		ckmax(f[u], c);
+		ckmax(f[v], c);
 		set_color(p[u], p[v], c);
 	}
 }

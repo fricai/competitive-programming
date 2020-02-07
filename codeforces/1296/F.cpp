@@ -229,8 +229,8 @@ signed main() {
 	rep(i, 0, m) re(q[i].se, q[i].fi);
 	rep(i, 0, m) --q[i].se.fi, --q[i].se.se;
 	sort(q, q + m);
-	rep(u, 0, n) f[u] = 1e6;
 	rep(i, 0, m) set_color(q[i].se.fi, q[i].se.se, q[i].fi);
+	rep(u, 0, n) if (f[u] == 0) f[u] = 1e6;
 	bool flag = false;
 	rep(i, 0, m)
 		if (get_color(q[i].se.fi, q[i].se.se) != q[i].fi)

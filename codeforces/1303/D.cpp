@@ -197,13 +197,14 @@ ll solve() {
 			if (cnt[i] > 0) --cnt[i];
 			else {
 				int j = i + 1;
-				while (j < B && cnt[j] == 0) ++j;
+				while (cnt[j] == 0) ++j;
 				ans += j - i;
 				--cnt[j];
 				rep(k, i, j) cnt[k] = 1;
 			}
 		}
 		cnt[i + 1] += cnt[i] / 2;
+		cnt[i] -= cnt[i] / 2 * 2;
 	}
 	return ans;
 }

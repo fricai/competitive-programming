@@ -13747,6 +13747,23 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF71177014": {
+    "contest_id": 1304,
+    "language": "GNU C++14",
+    "path": "codeforces/1304/F1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F1",
+    "problem_name": "Animal Observation (easy version)",
+    "problem_url": "https://codeforces.com/contest/1304/problem/F1",
+    "submission_id": "CF71177014",
+    "submission_url": "https://codeforces.com/contest/1304/submission/71177014",
+    "tags": [
+      "data structures",
+      "dp",
+      "*2300"
+    ],
+    "timestamp": "Feb/15/2020 23:47"
+  },
   "CF71288162": {
     "contest_id": 1307,
     "language": "GNU C++14",

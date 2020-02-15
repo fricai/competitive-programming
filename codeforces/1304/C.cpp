@@ -189,9 +189,22 @@ void re(cust &c) {
 bool solve() {
 	int n; ll m; re(n, m);
 	ll curmx = m, curmi = m, pt = 0;
-	vector<cust> c(n); re(c);
+	vector<cust> c(n), d; re(c);
 	rep(i, 0, n) {
-		ll t = c[i].t, l = c[i].l, r = c[i].r;
+		int j = i;
+		while (j < n && c[i].t == c[j].t) ++j;
+		cust t = c[i];
+		rep(k, i, j) {
+			ckmax(t.l, c[k].l);
+			ckmin(t.r, c[k].r);
+		}
+		if (t.l > t.r) return false;
+		d.pb(t);
+		i = j - 1;
+	}
+	rep(i, 0, sz(d)) {
+		assert(curmi <= curmx);
+		ll t = d[i].t, l = d[i].l, r = d[i].r;
 		curmx += t - pt;
 		curmi -= t - pt;
 		if (curmi > r || curmx < l)
@@ -199,6 +212,7 @@ bool solve() {
 		ckmin(curmx, r);
 		ckmax(curmi, l);
 		pt = t;
+		// dbg(curmx, curmi, pt);
 	}
 	return true;
 }

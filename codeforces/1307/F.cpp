@@ -178,9 +178,8 @@ using namespace input;
 using namespace output;
 IO io = IO(true);
 
-class dsu {
+struct dsu {
 	vi nxt, rnk;
-public:
 	dsu(int n = 0) : nxt(n), rnk(n, 0) {
 		rep(i, 0, n) nxt[i] = i;
 	}
@@ -223,9 +222,10 @@ void bfs() {
 	while (!q.empty()) {
 		int u, p, d; tie(u, p, d) = q.ft(); q.pop();
 		if (d > k) continue;
-		D.unite(u, p);
-		if (vis[u]) continue; vis[u] = true;
 		ckmin(dist[u], d);
+		D.unite(u, p);
+		if (vis[u]) continue;
+		vis[u] = true;
 		trav(v, g[u])
 			q.push({v, u, dist[u] + 1});
 	}

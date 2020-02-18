@@ -227,7 +227,7 @@ void bfs() {
 		if (vis[u]) continue;
 		vis[u] = true;
 		trav(v, g[u])
-			q.push({v, u, dist[u] + 1});
+			q.push({v, p, dist[u] + 1});
 	}
 }
 

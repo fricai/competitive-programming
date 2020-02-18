@@ -179,11 +179,18 @@ using namespace output;
 IO io = IO(true);
 
 class dsu {
-	map<int, int> nxt, rnk;
+	vi nxt, rnk;
 public:
+	dsu(int n = 0) : nxt(n), rnk(n, 0) {
+		rep(i, 0, n) nxt[i] = i;
+	}
+	void resize(int a) {
+		int n = sz(nxt); nxt.rsz(a);
+		rep(i, n, a) nxt[i] = i;
+		rnk.rsz(a, 0);
+	}
 	int head(int u) {
-		auto &p = nxt[u];
-		return p == 0 ? u : p = head(p);
+		return nxt[u] == u ? u : nxt[u] = head(nxt[u]);
 	}
 	void unite(int u, int v) {
 		u = head(u); v = head(v);
@@ -210,6 +217,7 @@ dsu D;
 void bfs() {
 	vector<int> dist(2 * n, inf);
 	vector<bool> vis(2 * n, false);
+	D.rsz(2 * n);
 	queue<tuple<int, int, int>> q;
 	trav(x, s) q.push({x, x, 0}), dist[x] = 0;
 	while (!q.empty()) {

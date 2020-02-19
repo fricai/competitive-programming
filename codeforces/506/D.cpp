@@ -211,8 +211,7 @@ public:
 	}
 	bool same(int u, int v) {
 		int i = hsh(u), j = hsh(v);
-		if (i == sz(cmp) || j == sz(cmp) || cmp[i] != u || cmp[j] != v)
-			return false;
+		if (i == sz(cmp) || j == sz(cmp) || cmp[i] != u || cmp[j] != v) return false;
 		return head(i) == head(j);
 	}
 };

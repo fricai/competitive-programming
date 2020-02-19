@@ -192,7 +192,6 @@ public:
 		return lb(all(cmp), u) - begin(cmp);
 	}
 	void init() {
-		if (cmp.empty()) return;
 		sort(all(cmp)); cmp.erase(unique(all(cmp)), end(cmp));
 		nxt.assign(sz(cmp), -1); rnk.assign(sz(cmp), 0);
 		trav(e, edg) unite(e.fi, e.se);
@@ -201,7 +200,9 @@ public:
 		return nxt[u] == -1 ? u : nxt[u] = head(nxt[u]);
 	}
 	void unite(int u, int v) {
-		u = head(hsh(u)); v = head(hsh(v));
+		int i = hsh(u), j = hsh(v);
+		u = i; v = j;
+		u = head(u); v = head(v);
 		if (u == v) return;
 		if (rnk[u] < rnk[v]) nxt[u] = v;
 		else {

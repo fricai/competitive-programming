@@ -178,7 +178,7 @@ struct IO {
 
 using namespace input;
 using namespace output;
-IO io = IO(true);
+IO io = IO(false);
 
 class dsu {
 	vi nxt, rnk, cmp;

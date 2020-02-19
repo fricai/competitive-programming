@@ -1,8 +1,6 @@
 /*
 	19/02/2020
 	islingr
-
-	Dirty af, naive dsu solution with heuristical optimizations, amortized cost is just enough.
 */
 
 #pragma region Boilerplate
@@ -229,6 +227,7 @@ signed main() {
 	}
 	rep(u, 0, n) sort(all(e[u])), e[u].erase(unique(all(e[u])), end(e[u]));
 	rep(c, 0, m) d[c].init();
+
 	map<pii, int> ans;
 	int q; re(q);
 	while (q--) {

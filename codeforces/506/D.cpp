@@ -183,7 +183,7 @@ IO io = IO(true);
 class dsu {
 	vi nxt, rnk, cmp;
 	vector<pii> edg;
-	
+
 	int hsh(int u) {
 		return lb(all(cmp), u) - begin(cmp);
 	}
@@ -197,9 +197,8 @@ class dsu {
 		}
 	}
 	int head(int u) {
-		return nxt[u] != -1 ? nxt[u] = head(nxt[u]) : u;
+		return nxt[u] == -1 ? u : nxt[u] = head(nxt[u]);
 	}
-
 public:
 	void push(int u, int v) {
 		cmp.pb(u); cmp.pb(v);

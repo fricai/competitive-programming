@@ -180,7 +180,7 @@ IO io = IO(true);
 
 const int N = 1 << 17, inf = 1e9;
 int n;
-vi g[N][2];
+vi g[N][2], cmp[N];
 vector<bool> vis, color;
 
 void print(const pair<int, vi> &ans) {
@@ -191,25 +191,25 @@ void print(const pair<int, vi> &ans) {
 	}
 }
 
-bool dfs(const int& u, const bool& c, vi& cmp, const bool& b = 0) {
+bool dfs(const int& u, const bool& c, const int& cnt, const bool& b = 0) {
 	if (vis[u]) return color[u] == b;
-	vis[u] = true; color[u] = b; cmp.pb(u);
-	trav(v, g[u][!c]) if (!dfs(v, c, cmp, b)) return false;
-	trav(v, g[u][c]) if (!dfs(v, c, cmp, !b)) return false;
+	vis[u] = true; color[u] = b; cmp[cnt].pb(u);
+	trav(v, g[u][!c]) if (!dfs(v, c, cnt, b)) return false;
+	trav(v, g[u][c]) if (!dfs(v, c, cnt, !b)) return false;
 	return true;
 }
 
 pair<int, vi> solve(bool c) {
 	vis.assign(n, false); color.rsz(n);
+	rep(i, 0, n) cmp[i].clear();
 	vi ans;
 	rep(u, 0, n) {
 		if (!vis[u]) {
-			vi cmp;
-			if (!dfs(u, c, cmp)) return {inf, { }};
+			if (!dfs(u, c, u)) return {inf, { }};
 			int a[2] = {0, 0};
-			trav(v, cmp) ++a[color[v]];
+			trav(v, cmp[u]) ++a[color[v]];
 			bool b = a[1] > a[0];
-			trav(v, cmp) if (color[v] != b) ans.pb(v + 1);
+			trav(v, cmp[u]) if (color[v] != b) ans.pb(v + 1);
 		}
 	}
 	return {sz(ans), ans};

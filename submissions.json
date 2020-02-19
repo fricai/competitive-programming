@@ -13747,6 +13747,25 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF71451579": {
+    "contest_id": 664,
+    "language": "GNU C++14",
+    "path": "codeforces/664/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Graph Coloring",
+    "problem_url": "https://codeforces.com/contest/664/problem/D",
+    "submission_id": "CF71451579",
+    "submission_url": "https://codeforces.com/contest/664/submission/71451579",
+    "tags": [
+      "2-sat",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "*2200"
+    ],
+    "timestamp": "Feb/19/2020 22:24"
+  },
   "CF71451668": {
     "contest_id": 664,
     "language": "GNU C++14",

@@ -13747,6 +13747,25 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF71461760": {
+    "contest_id": 506,
+    "language": "GNU C++14",
+    "path": "codeforces/506/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Mr. Kitayuta's Colorful Graph",
+    "problem_url": "https://codeforces.com/contest/506/problem/D",
+    "submission_id": "CF71461760",
+    "submission_url": "https://codeforces.com/contest/506/submission/71461760",
+    "tags": [
+      "brute force",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "*2400"
+    ],
+    "timestamp": "Feb/20/2020 02:11"
+  },
   "CF71462066": {
     "contest_id": 506,
     "language": "GNU C++14",

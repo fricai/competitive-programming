@@ -183,9 +183,22 @@ IO io = IO(true);
 class dsu {
 	vi nxt, rnk, cmp;
 	vector<pii> edg;
-
+public:
+	void push(int u, int v) {
+		cmp.pb(u); cmp.pb(v);
+		edg.eb(u, v);
+	}
 	int hsh(int u) {
 		return lb(all(cmp), u) - begin(cmp);
+	}
+	void init() {
+		if (cmp.empty()) return;
+		sort(all(cmp)); cmp.erase(unique(all(cmp)), end(cmp));
+		nxt.assign(sz(cmp), -1); rnk.assign(sz(cmp), 0);
+		trav(e, edg) unite(e.fi, e.se);
+	}
+	int head(int u) {
+		return nxt[u] == -1 ? u : nxt[u] = head(nxt[u]);
 	}
 	void unite(int u, int v) {
 		u = head(hsh(u)); v = head(hsh(v));
@@ -195,20 +208,6 @@ class dsu {
 			nxt[v] = u;
 			if (rnk[u] == rnk[v]) ++rnk[u];
 		}
-	}
-	int head(int u) {
-		return nxt[u] == -1 ? u : nxt[u] = head(nxt[u]);
-	}
-public:
-	void push(int u, int v) {
-		cmp.pb(u); cmp.pb(v);
-		edg.eb(u, v);
-	}
-	void init() {
-		if (cmp.empty()) return;
-		sort(all(cmp)); cmp.erase(unique(all(cmp)), end(cmp));
-		nxt.assign(sz(cmp), -1); rnk.assign(sz(cmp), 0);
-		trav(e, edg) unite(e.fi, e.se);
 	}
 	bool same(int u, int v) {
 		int i = hsh(u), j = hsh(v);
@@ -235,7 +234,7 @@ signed main() {
 		if (sz(e[u]) > sz(e[v])) swap(u, v);
 		auto it = ans.find({u, v});
 		int a = 0;
-		if (it != end(ans)) a = it->se;
+		if (it != ans.end()) a = it->se;
 		else {
 			trav(c, e[u]) if (d[c].same(u, v)) ++a;
 			ans[{u, v}] = a;

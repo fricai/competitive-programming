@@ -13747,6 +13747,24 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF71455348": {
+    "contest_id": 1307,
+    "language": "GNU C++14",
+    "path": "codeforces/1307/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Cow and Vacation",
+    "problem_url": "https://codeforces.com/contest/1307/problem/F",
+    "submission_id": "CF71455348",
+    "submission_url": "https://codeforces.com/contest/1307/submission/71455348",
+    "tags": [
+      "dfs and similar",
+      "dsu",
+      "trees",
+      "*3300"
+    ],
+    "timestamp": "Feb/19/2020 23:34"
+  },
   "CF71461273": {
     "contest_id": 506,
     "language": "GNU C++14",

@@ -192,6 +192,7 @@ public:
 		return lb(all(cmp), u) - begin(cmp);
 	}
 	void init() {
+		if (cmp.empty()) return;
 		sort(all(cmp)); cmp.erase(unique(all(cmp)), end(cmp));
 		nxt.assign(sz(cmp), -1); rnk.assign(sz(cmp), 0);
 		trav(e, edg) unite(e.fi, e.se);

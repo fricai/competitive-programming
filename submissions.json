@@ -13747,6 +13747,25 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF72321716": {
+    "contest_id": 1305,
+    "language": "GNU C++14",
+    "path": "codeforces/1305/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Kuroni and Simple Strings",
+    "problem_url": "https://codeforces.com/contest/1305/problem/B",
+    "submission_id": "CF72321716",
+    "submission_url": "https://codeforces.com/contest/1305/submission/72321716",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "strings",
+      "two pointers",
+      "*1200"
+    ],
+    "timestamp": "Mar/03/2020 20:26"
+  },
   "CF72323983": {
     "contest_id": 1305,
     "language": "GNU C++14",

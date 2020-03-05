@@ -202,7 +202,9 @@ struct point {
 	int x, y;
 	point() { }
 	point(int a, int b) : x{a}, y{b} { }
-	operator int() { return max(-1, n * x + y); }
+	operator size_t() {
+		return max(-1, n * x + y);
+	}
 	point operator+(const point &p) { return {x + p.x, y + p.y}; }
 };
 const vector<point> d = {{-1, 0}, {+1, 0}, {0, -1}, {0, +1}};
@@ -251,7 +253,7 @@ bool solve() {
 	}
 	trav(u, X) dfs(u, 'X');
 	trav(u, I) idfs(u);
-	rep(i, 0, n * n) if (!ans[i]) return false;
+	rep(x, 0, n) rep(y, 0, n) if (!ans[point(x, y)]) return false;
 	return true;
 }
 

@@ -203,7 +203,11 @@ struct point {
 	point() { }
 	point(int a, int b) : x{a}, y{b} { }
 	operator size_t() {
-		return max(-1, n * x + y);
+		if (x == -1) {
+			assert(y == -1);
+			return -1;
+		}
+		return x + n * y;
 	}
 	point operator+(const point &p) { return {x + p.x, y + p.y}; }
 };
@@ -241,7 +245,7 @@ void idfs(point u) {
 		if (!check(v) || g[v] != -1) continue;
 		ans[u] = label[i ^ 1];
 		idfs(v);
-		break;
+		// break;
 	}
 }
 

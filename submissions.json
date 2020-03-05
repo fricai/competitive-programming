@@ -13747,6 +13747,25 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF72487182": {
+    "contest_id": 1316,
+    "language": "GNU C++14",
+    "path": "codeforces/1316/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Nash Matrix",
+    "problem_url": "https://codeforces.com/contest/1316/problem/D",
+    "submission_id": "CF72487182",
+    "submission_url": "https://codeforces.com/contest/1316/submission/72487182",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "graphs",
+      "implementation",
+      "*2000"
+    ],
+    "timestamp": "Mar/05/2020 10:40"
+  },
   "CF72487257": {
     "contest_id": 1316,
     "language": "GNU C++14",

@@ -252,7 +252,7 @@ bool solve() {
 		if (v == -1) I.eb(u);
 	}
 	trav(u, X) dfs(u, 'X');
-	trav(u, I) idfs(u);
+	trav(u, I) if (!ans[u]) idfs(u);
 	rep(x, 0, n) rep(y, 0, n) if (!ans[point(x, y)]) return false;
 	return true;
 }

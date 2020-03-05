@@ -238,15 +238,16 @@ void dfs(point u, char c) {
 	}
 }
 
-void idfs(point u) {
-	if (ans[u]) return;
+bool idfs(point u) {
+	if (ans[u]) return true;
 	rep(i, 0, 4) {
 		point v = u + d[i];
 		if (!check(v) || g[v] != -1) continue;
 		ans[u] = label[i ^ 1];
 		idfs(v);
-		break;
+		return true;
 	}
+	return false;
 }
 
 bool solve() {
@@ -261,7 +262,7 @@ bool solve() {
 		if (v == -1) I.eb(u);
 	}
 	trav(u, X) dfs(u, 'X');
-	trav(u, I) if (!ans[u]) idfs(u);
+	trav(u, I) if (!ans[u]) if (!idfs(u)) return false;
 	rep(x, 0, n) rep(y, 0, n) if (!ans[point(x, y)]) return false;
 	return true;
 }

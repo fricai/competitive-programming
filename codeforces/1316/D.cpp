@@ -245,7 +245,7 @@ void idfs(point u) {
 		if (!check(v) || g[v] != -1) continue;
 		ans[u] = label[i ^ 1];
 		idfs(v);
-		// break;
+		break;
 	}
 }
 

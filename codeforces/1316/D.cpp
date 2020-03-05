@@ -212,9 +212,14 @@ const vector<char> label = {'D', 'U', 'R', 'L'};
 vi g;
 vector<char> ans;
 
+void pr(const point &p) {
+	pr(pii(p.x, p.y));
+}
+
 bool check(int x) {
 	return 0 <= x && x < n;
 }
+
 bool check(point p) {
 	return check(p.x) && check(p.y);
 }

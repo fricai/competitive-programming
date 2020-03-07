@@ -16745,6 +16745,24 @@
     ],
     "timestamp": "Mar/07/2020 15:40"
   },
+  "CF72662248": {
+    "contest_id": 1323,
+    "language": "GNU C++14",
+    "path": "codeforces/1323/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Instant Noodles",
+    "problem_url": "https://codeforces.com/contest/1323/problem/E",
+    "submission_id": "CF72662248",
+    "submission_url": "https://codeforces.com/contest/1323/submission/72662248",
+    "tags": [
+      "graphs",
+      "math",
+      "number theory",
+      "*2300"
+    ],
+    "timestamp": "Mar/07/2020 18:09"
+  },
   "CF72676255": {
     "contest_id": 1323,
     "language": "GNU C++14",

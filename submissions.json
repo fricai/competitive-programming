@@ -16745,6 +16745,25 @@
     ],
     "timestamp": "Mar/07/2020 15:40"
   },
+  "CF72676255": {
+    "contest_id": 1323,
+    "language": "GNU C++14",
+    "path": "codeforces/1323/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Present",
+    "problem_url": "https://codeforces.com/contest/1323/problem/D",
+    "submission_id": "CF72676255",
+    "submission_url": "https://codeforces.com/contest/1323/submission/72676255",
+    "tags": [
+      "binary search",
+      "bitmasks",
+      "math",
+      "sortings",
+      "*2100"
+    ],
+    "timestamp": "Mar/07/2020 21:53"
+  },
   "CF72792930": {
     "contest_id": 1312,
     "language": "GNU C++14",

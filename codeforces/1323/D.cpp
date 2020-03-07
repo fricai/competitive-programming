@@ -196,7 +196,7 @@ using namespace input;
 using namespace output;
 IO io = IO(true);
 
-const int B = 25;
+const int B = 27;
 
 signed main() {
 	int n; re(n);

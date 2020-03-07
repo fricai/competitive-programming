@@ -13747,6 +13747,25 @@
     ],
     "timestamp": "Oct/01/2019 20:16"
   },
+  "CF72628749": {
+    "contest_id": 1323,
+    "language": "GNU C++14",
+    "path": "codeforces/1323/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Even Subset Sum Problem",
+    "problem_url": "https://codeforces.com/contest/1323/problem/A",
+    "submission_id": "CF72628749",
+    "submission_url": "https://codeforces.com/contest/1323/submission/72628749",
+    "tags": [
+      "brute force",
+      "dp",
+      "greedy",
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Mar/07/2020 15:09"
+  },
   "CF72639866": {
     "contest_id": 1323,
     "language": "GNU C++14",

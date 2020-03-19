@@ -28,9 +28,9 @@ signed main() {
 
 	int n, K; cin >> n >> K;
 	int a[n]; rep(i, 0, n) cin >> a[i];
-	bool dp[K + 1];
-	rep(k, 0, K + 1) {
-		dp[k] = false;
+	bool dp[K + 1] = {0};
+	rep(k, 1, K + 1) {
+		dp[k] = 0;
 		rep(i, 0, n) {
 			if (a[i] > k) break;
 			if (!dp[k - a[i]]) {

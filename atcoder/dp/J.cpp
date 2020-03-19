@@ -28,20 +28,22 @@ signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	int n, c[3] = {0, 0, 0}; cin >> n;
-	rep(i, 0, n) { int a; cin >> a; ++c[--a]; }
+	int n; cin >> n;
+	int c[3] = {0, 0, 0};
+	rep(i, 0, n) { int a; cin >> a; --a; ++c[a]; }
+	
 	rep(k, 0, n + 1)
 		rep(j, 0, n + 1)
 			rep(i, 0, n + 1) {
-				int s = i + j + k;
+				ll s = i + j + k;
 				if (n < s) break;
 				if (s == 0) continue;
 				auto &x = E[i][j][k];
 				x = n;
-				if (i) x += i * E[i - 1][j][k];
-				if (j) x += j * E[i + 1][j - 1][k];
-				if (k) x += k * E[i][j + 1][k - 1];
-				x /= s;
+				if (i > 0) x += i * E[i - 1][j][k];
+				if (j > 0) x += j * E[i + 1][j - 1][k];
+				if (k > 0) x += k * E[i][j + 1][k - 1];
+				x /= s;	
 			}
 	cout << fixed << setprecision(18) << E[c[0]][c[1]][c[2]];
 }

@@ -25,13 +25,15 @@ signed main() {
 
 	int h, w; cin >> h >> w;
 	char g[h][w];
-	int dp[h + 1][w + 1];
+	int dp[h][w];
 	rep(i, 0, h) rep(j, 0, w) cin >> g[i][j];
-	rep(i, 0, h) dp[i + 1][0] = 0;
-	rep(j, 0, w) dp[0][j + 1] = 0;
-	dp[0][1] = 1;
-	rep(i, 0, h)
-		rep(j, 0, w)
-			dp[i + 1][j + 1] = g[i][j] != '#' ? (dp[i + 1][j] + dp[i][j + 1]) % M : 0;
-	cout << dp[h][w];
+	dp[0][0] = 1;
+	rep(i, 1, h)
+		dp[i][0] = g[i][0] != '#' ? dp[i - 1][0] : 0;
+	rep(j, 1, w)
+		dp[0][j] = g[0][j] != '#' ? dp[0][j - 1] : 0;
+	rep(i, 1, h)
+		rep(j, 1, w)
+			dp[i][j] = g[i][j] != '#' ? (dp[i][j - 1] + dp[i - 1][j]) % M : 0;
+	cout << dp[h - 1][w - 1];
 }

@@ -27,8 +27,9 @@ signed main() {
 
 	int n; cin >> n;
 	ld p[n]; rep(i, 0, n) cin >> p[i];
-	ld dp[n + 1] = {1};
-	rep(x, 0, n) dp[x + 1] = 0;
+	ld dp[n + 1];
+	rep(i, 0, n + 1) rep(x, 0, n + 1) dp[x] = 0;
+	dp[0] = 1;
 	rep(i, 0, n) {
 		per(x, 0, n)
 			dp[x + 1] = p[i] * dp[x] + (1 - p[i]) * dp[x + 1];

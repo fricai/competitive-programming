@@ -3,7 +3,6 @@
 using namespace std;
 
 #define rep(i, a, b) for (auto i = (a); i < (b); ++i)
-#define per(i, a, b) for (auto i = (b) - 1; i >= (a); --i)
 
 using ll = int64_t;
 
@@ -17,11 +16,14 @@ signed main() {
 	cin.tie(nullptr);
 
 	int n, w; cin >> n >> w;
-	ll v[n], c[n], dp[w + 1];
-	rep(i, 0, n) cin >> c[i] >> v[i];
-	rep(x, 0, w + 1) dp[x] = 0;
-	rep(i, 0, n)
-		per(x, c[i], w + 1)
-				ckmax(dp[x], dp[x - c[i]] + v[i]);
-	cout << dp[w];
+	ll v[n], c[n]; rep(i, 0, n) cin >> c[i] >> v[i];
+
+	ll dp[n + 1][w + 1];
+	rep(x, 0, w + 1) dp[0][x] = 0;
+	rep(i, 0, n) {
+		rep(x, 0, w + 1) dp[i + 1][x] = dp[i][x];
+		rep(x, c[i], w + 1)
+				ckmax(dp[i + 1][x], dp[i][x - c[i]] + v[i]);
+	}
+	cout << dp[n][w];
 }

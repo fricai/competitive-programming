@@ -43,5 +43,5 @@ signed main() {
 				if (k) x += k * E[i][j + 1][k - 1];
 				x /= s;
 			}
-	cout << fixed << setprecision(10) << E[c[0]][c[1]][c[2]];
+	cout << fixed << setprecision(18) << E[c[0]][c[1]][c[2]];
 }

@@ -21,29 +21,31 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 constexpr ll inf = 2e18;
 constexpr int M = 1e9 + 7;
 
-constexpr int N = 301;
-ld E[N][N][N];
+const int N = 310;
+ld dp[N][N][N];
+
+int n;
+ld E(int i, int j, int k) {
+	if (i < 0 || j < 0 || k < 0) return 0;
+	auto &x = dp[i][j][k];
+	if (x == -1) {
+		ld s = i + j + k;
+		x = n / s;
+		x += i * E(i - 1, j, k) / s;
+		x += j * E(i + 1, j - 1, k) / s;
+		x += k * E(i, j + 1, k - 1) / s;
+	}
+	return x;
+}
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	int n; cin >> n;
-	int c[3] = {0, 0, 0};
-	rep(i, 0, n) { int a; cin >> a; --a; ++c[a]; }
-	
-	rep(k, 0, n + 1)
-		rep(j, 0, n + 1)
-			rep(i, 0, n + 1) {
-				ll s = i + j + k;
-				if (n < s) break;
-				if (s == 0) continue;
-				auto &x = E[i][j][k];
-				x = n;
-				if (i > 0) x += i * E[i - 1][j][k];
-				if (j > 0) x += j * E[i + 1][j - 1][k];
-				if (k > 0) x += k * E[i][j + 1][k - 1];
-				x /= s;	
-			}
-	cout << fixed << setprecision(18) << E[c[0]][c[1]][c[2]];
+	cin >> n;
+	int cnt[3] = {0, 0, 0};
+	rep(i, 0, n) { int a; cin >> a; --a; ++cnt[a]; }
+	rep(i, 0, n + 1) rep(j, 0, n + 1) rep(k, 0, n + 1) dp[i][j][k] = -1;
+	dp[0][0][0] = 0;
+	cout << fixed << setprecision(18) << E(cnt[0], cnt[1], cnt[2]);
 }

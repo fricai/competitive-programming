@@ -27,15 +27,15 @@ signed main() {
 
 	int n; cin >> n;
 	ld p[n]; rep(i, 0, n) cin >> p[i];
-	ld dp[n + 1];
-	rep(i, 0, n + 1) rep(x, 0, n + 1) dp[x] = 0;
-	dp[0] = 1;
+	ld dp[n + 1][n + 1];
+	rep(i, 0, n + 1) rep(x, 0, n + 1) dp[i][x] = 0;
+	dp[0][0] = 1;
 	rep(i, 0, n) {
-		per(x, 0, n)
-			dp[x + 1] = p[i] * dp[x] + (1 - p[i]) * dp[x + 1];
-		dp[0] = (1 - p[i]) * dp[0];
+		dp[i + 1][0] = (1 - p[i]) * dp[i][0];
+		rep(x, 0, n)
+			dp[i + 1][x + 1] = p[i] * dp[i][x] + (1 - p[i]) * dp[i][x + 1];
 	}
 	ld ans = 0;
-	rep(x, n / 2, n) ans += dp[x + 1];
+	rep(x, n / 2, n) ans += dp[n][x + 1];
 	cout << fixed << setprecision(10) << ans;
 }

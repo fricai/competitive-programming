@@ -29,10 +29,10 @@ struct Line {
 struct LineContainer : multiset<Line, less<>> {
 	ll div(ll a, ll b) { return a / b - ((a ^ b) < 0 && a % b); }
 	bool isect(iterator x, iterator y) {
-		if (y == end()) return x->p = inf, false;
+		if (y == end()) { x->p = inf; return false; }
 		if (x->k == y->k) x->p = x->m > y->m ? inf : -inf;
 		else x->p = div(y->m - x->m, x->k - y->k);
-		return y->p <= x->p;
+		return x->p >= y->p;
 	}
 	void add(ll k, ll m) {
 		auto z = insert({k, -m, 0}), y = z++, x = y;
@@ -54,7 +54,7 @@ signed main() {
 
 	int n; ll c; cin >> n >> c;
 	ll h[n]; rep(i, 0, n) cin >> h[i];
-	LineContainer L; L.add(2 * h[0], h[0] * h[0]);
+	LineContainer L; L.add(2 * h[0],h[0] * h[0]);
 	ll t = 0;
 	rep(j, 1, n) {
 		t = c + h[j] * h[j] - L.query(h[j]);

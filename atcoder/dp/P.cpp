@@ -29,8 +29,8 @@ void dfs(int u, int p) {
 	trav(v, g[u]) {
 		if (v == p) continue;
 		dfs(v, u);
-		(dp[u][0] *= dp[v][0] + dp[v][1]) %= M;
-		(dp[u][1] *= dp[v][0]) %= M;
+		dp[u][0] = 1ll * dp[u][0] * (dp[v][0] + dp[v][1]) % M;
+		dp[u][1] = 1ll * dp[u][1] * dp[v][0] % M;
 	}
 }
 

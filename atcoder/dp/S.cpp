@@ -23,12 +23,6 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 using vi = vector<int>;
 using vvi = vector<vi>;
 
-template<class T>
-void add(T& a, const T& b) {
-	a += b;
-	if (a >= M) a -= M;
-}
-
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -38,9 +32,9 @@ signed main() {
 	rep(i, 0, sz(k)) {
 		vvi g(d, vi(2));
 		rep(x, 0, d) {
-			rep(c, 0, 10) add(g[(x + c) % d][1], f[x][1]);
-			rep(c, 0, k[i] - '0') add(g[(x + c) % d][1], f[x][0]);
-			add(g[(x + k[i] - '0') % d][0], f[x][0]);
+			rep(c, 0, 10) (g[(x + c) % d][1] += f[x][1]) %= M;
+			rep(c, 0, k[i] - '0') (g[(x + c) % d][1] += f[x][0]) %= M;
+			(g[(x + k[i] - '0') % d][0] += f[x][0]) %= M;
 		}
 		swap(f, g);
 	}

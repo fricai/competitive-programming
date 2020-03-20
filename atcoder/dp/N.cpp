@@ -18,6 +18,8 @@ using ll = int64_t;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
+constexpr ll inf = 2e18;
+
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -28,8 +30,8 @@ signed main() {
 	per(l, 0, n) {
 		f[l][l] = 0;
 		rep(r, l + 1, n) {
-			f[l][r] = f[l + 1][r];
-			rep(m, l + 1, r) ckmin(f[l][r], f[l][m] + f[m + 1][r]);
+			f[l][r] = inf;
+			rep(m, l, r) ckmin(f[l][r], f[l][m] + f[m + 1][r]);
 			rep(i, l, r + 1) f[l][r] += a[i];
 		}
 	}

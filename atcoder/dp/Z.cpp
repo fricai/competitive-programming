@@ -57,7 +57,8 @@ signed main() {
 	f[0] = 0;
 	LineContainer L; L.add(2 * h[0], -f[0] - h[0] * h[0]);
 	rep(j, 1, n) {
-		f[j] = c + h[j] * h[j] - L.query(h[j]);
+		f[j] = -L.query(h[j]);
+		f[j] += c + h[j] * h[j];
 		L.add(2 * h[j], -f[j] - h[j] * h[j]);
 	}
 	cout << f[n - 1];

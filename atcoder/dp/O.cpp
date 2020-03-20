@@ -29,12 +29,12 @@ signed main() {
 
 	int n; cin >> n;
 	int a[n][n]; rep(i, 0, n) rep(j, 0, n) cin >> a[i][j];
-	dp[(1 << n) - 1] = 1;
-	per(S, 0, 1 << n) {
+	dp[0] = 1;
+	rep(S, 0, 1 << n) {
 		int i = __builtin_popcount(S);
 		rep(j, 0, n)
 			if ((~S & 1 << j) && a[i][j])
-				(dp[S] += dp[S | 1 << j]) %= M;
+				(dp[S | 1 << j] += dp[S]) %= M;
 	}
-	cout << dp[0];
+	cout << dp[(1 << n) - 1];
 }

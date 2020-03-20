@@ -38,8 +38,8 @@ struct LineContainer : multiset<Line, less<>> {
 		auto z = insert({k, m, 0}), y = z++, x = y;
 		while (isect(y, z)) z = erase(z);
 		if (x != begin() && isect(--x, y)) isect(x, y = erase(y));
-		while ((y = x) != begin() && y->p <= (--x)->p)
-			isect(x, erase(y));
+		while ((y = x) != begin() && (--x)->p >= y->p)
+		isect(x, erase(y));
 	}
 	ll query(ll x) {
 		assert(!empty());
@@ -53,12 +53,12 @@ signed main() {
 	cin.tie(nullptr);
 
 	int n; ll c; cin >> n >> c;
-	ll h[n]; rep(i, 0, n) cin >> h[i];
-	LineContainer L; L.add(2 * h[0], - h[0] * h[0]);
-	ll t = 0;
+	ll h[n], f[n]; rep(i, 0, n) cin >> h[i];
+	f[0] = 0;
+	LineContainer L; L.add(2 * h[0], -f[0] - h[0] * h[0]);
 	rep(j, 1, n) {
-		t = c + h[j] * h[j] - L.query(h[j]);
-		L.add(2 * h[j], - t - h[j] * h[j]);
+		f[j] = c + h[j] * h[j] - L.query(h[j]);
+		L.add(2 * h[j], -f[j] - h[j] * h[j]);
 	}
-	cout << t;
+	cout << f[n - 1];
 }

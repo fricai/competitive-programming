@@ -34,7 +34,7 @@ signed main() {
 		int i = __builtin_popcount(S);
 		rep(j, 0, n)
 			if ((~S & 1 << j) && a[i][j])
-				(dp[S | 1 << j] += dp[S]) %= M;
+				(dp[S | 1 << j] += dp[S])	%= M;
 	}
 	cout << dp[(1 << n) - 1];
 }

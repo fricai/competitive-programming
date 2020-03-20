@@ -23,9 +23,10 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 using vi = vector<int>;
 using vvi = vector<vi>;
 
-template<class T> inline void add(T& a, const T& b) {
-	a += b; 
-	if (M <= a) a -= M;
+template<class T>
+void add(T& a, const T& b) {
+	a += b;
+	if (a >= M) a -= M;
 }
 
 signed main() {

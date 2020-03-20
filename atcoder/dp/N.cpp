@@ -26,14 +26,19 @@ signed main() {
 
 	int n; cin >> n;
 	int a[n]; rep(i, 0, n) cin >> a[i];
-	ll f[n][n];
+	auto sum = [&](int l, int r) {
+		ll s = 0;
+		for (int i = l; i <= r; ++i) s += a[i];
+		return s;
+	};
+	ll dp[n][n];
 	per(l, 0, n) {
-		f[l][l] = 0;
+		dp[l][l] = 0;
 		rep(r, l + 1, n) {
-			f[l][r] = inf;
-			rep(m, l, r) ckmin(f[l][r], f[l][m] + f[m + 1][r]);
-			rep(i, l, r + 1) f[l][r] += a[i];
+			dp[l][r] = inf;
+			rep(m, l, r) ckmin(dp[l][r], dp[l][m] + dp[m + 1][r]);
+			dp[l][r] += sum(l, r);
 		}
 	}
-	cout << f[0][n - 1];
+	cout << dp[0][n - 1];
 }

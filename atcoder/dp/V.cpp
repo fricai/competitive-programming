@@ -23,12 +23,13 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 using vi = vector<int>;
 
 constexpr int N = 1 << 17;
-int M, f[N], h[N];
+int M;
+int f[N], h[N];
 vi g[N];
 
 void down(int u, int p) {
 	f[u] = 1;
-	g[u].erase(find(all(g[u]), p));
+	if (p != u) g[u].erase(find(all(g[u]), p));
 	trav(v, g[u]) {
 		down(v, u);
 		f[u] = 1ll * f[u] * (1 + f[v]) % M;
@@ -36,7 +37,8 @@ void down(int u, int p) {
 }
 
 void up(int u) {
-	int c = sz(g[u]); vi s(c, 1); int x = 1;
+	int c = sz(g[u]);
+	vi s(c, 1); int x = 1;
 	per(i, 1, c) s[i - 1] = 1ll * s[i] * (1 + f[g[u][i]]) % M;
 	rep(i, 0, c) {
 		int v = g[u][i];
@@ -55,6 +57,7 @@ signed main() {
 		int u, v; cin >> u >> v; --u; --v;
 		g[u].eb(v); g[v].eb(u);
 	}
-	g[0].eb(0); down(0, 0); up(0);
+	down(0, 0);
+	up(0);
 	rep(u, 0, n) cout << 1ll * f[u] * (1 + h[u]) % M << '\n';
 }

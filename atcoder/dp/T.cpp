@@ -33,11 +33,11 @@ signed main() {
 	f[0] = 1;
 	rep(i, 0, n - 1) {
 		vi g(n);
-		rep(j, 0, i + 2) s[j + 1] = (s[j] + f[j]) % M;
+		rep(i, 0, n) s[i + 1] = (s[i] + f[i]) % M;
 		if (x[i] == '<')
 			rep(j, 0, i + 2) g[j] = s[j];
 		else
-			rep(j, 0, i + 2) g[j] = (s[i + 2] - s[j]) % M;
+			rep(j, 0, i + 2) g[j] = (s[n] - s[j]) % M;
 		swap(f, g);
 	}
 	int ans = 0;

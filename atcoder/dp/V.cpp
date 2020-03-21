@@ -36,7 +36,7 @@ void down(int u, int p) {
 	}
 }
 
-void up(int u) {
+void up(int u, int p) {
 	int c = sz(g[u]);
 	vi s(c, 1); int x = 1;
 	per(i, 1, c) s[i - 1] = 1ll * s[i] * (1 + f[g[u][i]]) % M;
@@ -44,7 +44,7 @@ void up(int u) {
 		int v = g[u][i];
 		h[v] = 1ll * x * s[i] % M * (1 + h[u]) % M;
 		x = 1ll * x * (1 + f[v]) % M;
-		up(v);
+		up(v, u);
 	}
 }
 
@@ -58,6 +58,6 @@ signed main() {
 		g[u].eb(v); g[v].eb(u);
 	}
 	down(0, 0);
-	up(0);
+	up(0, 0);
 	rep(u, 0, n) cout << 1ll * f[u] * (1 + h[u]) % M << '\n';
 }

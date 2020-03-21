@@ -31,13 +31,13 @@ signed main() {
 	int n; cin >> n; vi f(n), s(n + 1);
 	string x; cin >> x;
 	f[0] = 1;
-	rep(i, 1, n) {
+	rep(i, 0, n - 1) {
 		vi g(n);
-		rep(j, 0, i + 1) s[j + 1] = (s[j] + f[j]) % M;
-		if (x[i - 1] == '<')
-			rep(j, 0, i + 1) g[j] = s[j];
+		rep(j, 0, i + 2) s[j + 1] = (s[j] + f[j]) % M;
+		if (x[i] == '<')
+			rep(j, 0, i + 2) g[j] = s[j];
 		else
-			rep(j, 0, i + 1) g[j] = (s[i + 1] - s[j]) % M;
+			rep(j, 0, i + 2) g[j] = (s[i + 2] - s[j]) % M;
 		swap(f, g);
 	}
 	int ans = 0;

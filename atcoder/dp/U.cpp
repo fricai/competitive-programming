@@ -21,8 +21,7 @@ const int M = 1e9 + 7;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-constexpr int N = 16;
-const ll inf = 2e18;
+const int N = 16;
 ll f[1 << N], s[1 << N];
 int a[N][N];
 
@@ -38,9 +37,10 @@ signed main() {
 				rep(j, i + 1, n)
 					if (S & 1 << j)
 						s[S] += a[i][j];
-	rep(S, 1, 1 << n) f[S] = -inf;
-	rep(S, 0, 1 << n)
+	rep(S, 0, 1 << n) {
+		f[S] = s[S];
 		for (int x = S; x; --x &= S)
 			ckmax(f[S], s[x] + f[S & ~x]);
+	}
 	cout << f[(1 << n) - 1];
 }

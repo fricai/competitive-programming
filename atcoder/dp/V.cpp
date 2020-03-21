@@ -38,11 +38,11 @@ void down(int u, int p) {
 
 void up(int u, int p) {
 	int c = sz(g[u]);
-	vi s(c, 1); int x = 1;
-	per(i, 1, c) s[i - 1] = 1ll * s[i] * (1 + f[g[u][i]]) % M;
+	vi s(c + 1, 1); int x = 1;
+	per(i, 0, c) s[i] = 1ll * s[i + 1] * (1 + f[g[u][i]]) % M;
 	rep(i, 0, c) {
 		int v = g[u][i];
-		h[v] = 1ll * x * s[i] % M * (1 + h[u]) % M;
+		h[v] = 1ll * x * s[i + 1] % M * (1 + h[u]) % M;
 		x = 1ll * x * (1 + f[v]) % M;
 		up(v, u);
 	}

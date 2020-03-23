@@ -16745,6 +16745,23 @@
     ],
     "timestamp": "Mar/07/2020 15:40"
   },
+  "CF74078440": {
+    "contest_id": 1327,
+    "language": "GNU C++14",
+    "path": "codeforces/1327/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Game with Chips",
+    "problem_url": "https://codeforces.com/contest/1327/problem/C",
+    "submission_id": "CF74078440",
+    "submission_url": "https://codeforces.com/contest/1327/submission/74078440",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "*1600"
+    ],
+    "timestamp": "Mar/23/2020 20:38"
+  },
   "CF74165624": {
     "contest_id": 1327,
     "language": "GNU C++14",

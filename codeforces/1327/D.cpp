@@ -18,8 +18,7 @@ int solve() {
 	trav(x, c) cin >> x;
 	int ans = inf;
 	rep(i, 0, n) {
-		int u;
-		for (u = i; !vis[u]; u = nxt[u]) vis[u] = i + 1;
+		int u = i; while (!vis[u]) vis[u] = i + 1, u = nxt[u];
 		if (vis[u] != i + 1) continue;
 		int m = 1; a[0] = c[u];
 		for (int init = u; u = nxt[u], u != init; ++m)

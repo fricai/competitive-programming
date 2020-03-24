@@ -22,14 +22,14 @@ int solve() {
 		for (u = i; !vis[u]; u = nxt[u]) vis[u] = i + 1;
 		if (vis[u] != i + 1) continue;
 		int m = 1; a[0] = c[u];
-		for (int init = u; u = nxt[u], u != init; ++m) a[m] = c[u];
+		for (int init = u; u = nxt[u], u != init; ++m)
+			a[m] = c[u];
 		for (int d = 1; d <= m && d < ans; ++d) {
 			if (m % d != 0) continue;
-			vector<bool> check(d, true);
+			vector<int> check(d, true);
 			rep(x, 0, d)
 				for (int z = x; z < m; z += d)
-					if (a[x] != a[z])
-						check[x] = false;
+					check[x] &= a[x] == a[z];
 			bool changed = false;
 			rep(x, 0, d)
 				if (check[x])

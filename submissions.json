@@ -16745,6 +16745,21 @@
     ],
     "timestamp": "Mar/07/2020 15:40"
   },
+  "CF75171851": {
+    "contest_id": 1331,
+    "language": "GNU C++17",
+    "path": "codeforces/1331/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Lingua Romana",
+    "problem_url": "https://codeforces.com/contest/1331/problem/G",
+    "submission_id": "CF75171851",
+    "submission_url": "https://codeforces.com/contest/1331/submission/75171851",
+    "tags": [
+      "*special problem"
+    ],
+    "timestamp": "Apr/02/2020 00:06"
+  },
   "CF75233543": {
     "contest_id": 586,
     "language": "GNU C++14",

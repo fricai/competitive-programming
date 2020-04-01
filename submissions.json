@@ -16745,6 +16745,21 @@
     ],
     "timestamp": "Mar/07/2020 15:40"
   },
+  "CF75168826": {
+    "contest_id": 1331,
+    "language": "UnknownX",
+    "path": "codeforces/1331/H.txt",
+    "platform": "Codeforces",
+    "problem_index": "H",
+    "problem_name": "It's showtime",
+    "problem_url": "https://codeforces.com/contest/1331/problem/H",
+    "submission_id": "CF75168826",
+    "submission_url": "https://codeforces.com/contest/1331/submission/75168826",
+    "tags": [
+      "*special problem"
+    ],
+    "timestamp": "Apr/01/2020 23:32"
+  },
   "CF75169277": {
     "contest_id": 1331,
     "language": "UnknownX",

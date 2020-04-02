@@ -16745,6 +16745,22 @@
     ],
     "timestamp": "Mar/07/2020 15:40"
   },
+  "CF75233543": {
+    "contest_id": 586,
+    "language": "GNU C++14",
+    "path": "codeforces/586/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Alena's Schedule",
+    "problem_url": "https://codeforces.com/contest/586/problem/A",
+    "submission_id": "CF75233543",
+    "submission_url": "https://codeforces.com/contest/586/submission/75233543",
+    "tags": [
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Apr/02/2020 17:18"
+  },
   "CF75235491": {
     "contest_id": 586,
     "language": "GNU C++14",

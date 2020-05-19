@@ -12,14 +12,14 @@ signed main() {
 	rep(s, 0, b) {
 		cout << 'R' << endl; int d = 0;
 		rep(i, 0, b) {
-			int t = (s + b + d) % b * k;
-			rep(z, t, t + k)
+			int t = (s + b + d) % b;
+			rep(z, t * k, (t + 1) * k)
 				if (marked[z]) {
 					cout << "? " << z + 1 << endl;
 					char c; cin >> c;
 					marked[z] = c != 'Y';
 				}
-			if (0 <= d) ++d; d = -d;
+			if (0 <= d) ++d; d = - d;
 		}
 	}
 	int ans = 0; rep(z, 0, n) ans += marked[z];

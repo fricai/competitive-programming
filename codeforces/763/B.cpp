@@ -12,6 +12,6 @@ signed main() {
 	while (n--) {
 		int x, y, _; cin >> x >> y >> _ >> _;
 		x += inf; y += inf;
-		cout << ((x & 1) << 1 | y & 1) + 1 << '\n';
+		cout << (((x & 1) << 1) | (y & 1)) + 1 << '\n';
 	}
 }

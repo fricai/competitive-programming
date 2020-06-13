@@ -21461,6 +21461,27 @@
     ],
     "timestamp": "May/20/2020 12:39"
   },
+  "CF83593034": {
+    "contest_id": 1174,
+    "language": "GNU C++14",
+    "path": "codeforces/1174/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Ehab and the Big Finale",
+    "problem_url": "https://codeforces.com/contest/1174/problem/F",
+    "submission_id": "CF83593034",
+    "submission_url": "https://codeforces.com/contest/1174/submission/83593034",
+    "tags": [
+      "constructive algorithms",
+      "divide and conquer",
+      "graphs",
+      "implementation",
+      "interactive",
+      "trees",
+      "*2400"
+    ],
+    "timestamp": "Jun/13/2020 14:11"
+  },
   "CF83593141": {
     "contest_id": 1174,
     "language": "GNU C++14",

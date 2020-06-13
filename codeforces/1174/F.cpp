@@ -73,7 +73,9 @@ signed main() {
 	dfs(0, -1);
 	dfs(0);
 
-	int root = 0, dx = get_dist(root);
+	int dx = get_dist(0);
+	if (dx == 0) return answer(0);
+	int root = 0;
 	while (true) {
 		int u = nxt[root], v = u;
 		int dist = get_dist(u);

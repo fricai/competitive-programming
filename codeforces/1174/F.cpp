@@ -15,7 +15,7 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 1 << 18;
 vector<int> g[N];
-int n, sz[N], nxt[N], p[N], d[N];
+int n, sz[N], pre[N], nxt[N], p[N], d[N];
 
 int get_dist(int u) {
 	assert(0 <= u && u < n);
@@ -52,8 +52,13 @@ void dfs(int u, int p) {
 }
 
 void dfs(int u) {
-	trav(v, g[u]) dfs(v);
-	nxt[u] = g[u].empty() ? u : nxt[g[u][0]];
+	nxt[u] = u;
+	trav(v, g[u]) {
+		pre[v] = v == g[u][0] ? pre[u] : v;
+		dfs(v);
+		if (v == g[u][0])
+			nxt[u] = nxt[v];
+	}
 }
 
 signed main() {

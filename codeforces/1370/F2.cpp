@@ -1,5 +1,6 @@
-#include <iostream>
+#include <algorithm>
 #include <tuple>
+#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -10,6 +11,9 @@ using namespace std;
 #define all(x) begin(x), end(x)
 
 pair<int, int> ask(vector<int> &s) {
+	sort(all(s));
+	s.resize(unique(all(s)) - begin(s));
+
 	cout << "? " << s.size();
 	trav(x, s) cout << ' ' << x;
 	cout << endl;
@@ -52,8 +56,8 @@ void solve() {
 	while (dist) {
 		rep(v, 1, n) {
 			if (ancestor(v, l) || ancestor(v, r)) continue;
-			if (ancestor(l, v) && d[v] - d[l] == (dist + 1) / 2 ||
-				ancestor(r, v) && d[v] - d[r] == (dist + 1) / 2) s.eb(v);
+			if (ancestor(l, v) && d[v] - d[l] == (dist + 1) / 2) s.eb(v);
+			if (ancestor(r, v) && d[v] - d[r] == (dist + 1) / 2) s.eb(v);
 		}
 
 		int x;

@@ -34,7 +34,7 @@ bool ancestor(int u, int v) { return in[u] <= in[v] && out[v] <= out[u]; }
 void solve() {
 	int n; cin >> n;
 
-	rep(u, 1, n) g[u].clear(), in[u] = -1, d[u] = 0;
+	timer = 0; rep(u, 1, n) g[u].clear(), in[u] = -1, d[u] = 0;
 
 	rep(i, 2, n) {
 		int u, v; cin >> u >> v;
@@ -43,6 +43,7 @@ void solve() {
 
 	vector<int> s; rep(u, 1, n) s.eb(u);
 	int dist, l, r; tie(r, dist) = ask(s); l = r; dfs(r);
+	
 	while (dist) {
 		rep(v, 1, n) {
 			if (ancestor(v, l) || ancestor(v, r)) continue;
@@ -54,8 +55,13 @@ void solve() {
 		if (s.size() == 1) x = s.front();
 		else x = ask(s).first;
 
-		if (ancestor(l, x)) dist -= d[x] - d[l], l = x;
-		else dist -= d[x] - d[r], r = x;
+		if (ancestor(l, x)) {
+			dist -= d[x] - d[l];
+			l = x;
+		} else {
+			dist -= d[x] - d[r];
+			r = x;
+		}
 	}
 
 	cout << "! " << l << ' ' << r << endl;

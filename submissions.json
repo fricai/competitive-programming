@@ -21461,6 +21461,27 @@
     ],
     "timestamp": "May/20/2020 12:39"
   },
+  "CF84518027": {
+    "contest_id": 1370,
+    "language": "GNU C++14",
+    "path": "codeforces/1370/F2.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F2",
+    "problem_name": "The Hidden Pair (Hard Version)",
+    "problem_url": "https://codeforces.com/contest/1370/problem/F2",
+    "submission_id": "CF84518027",
+    "submission_url": "https://codeforces.com/contest/1370/submission/84518027",
+    "tags": [
+      "binary search",
+      "dfs and similar",
+      "graphs",
+      "interactive",
+      "shortest paths",
+      "trees",
+      "*2700"
+    ],
+    "timestamp": "Jun/20/2020 23:49"
+  },
   "CF84556682": {
     "contest_id": 123,
     "language": "GNU C++14",

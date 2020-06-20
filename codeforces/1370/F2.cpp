@@ -29,7 +29,9 @@ void dfs(int u) {
 	out[u] = timer;
 }
 
-bool ancestor(int u, int v) { return in[u] <= in[v] && out[v] <= out[u]; }
+bool ancestor(int u, int v) { // return true if u is an ancestor of v
+	return in[u] <= in[v] && out[v] <= out[u];
+}
 
 void solve() {
 	int n; cin >> n;
@@ -42,8 +44,11 @@ void solve() {
 	}
 
 	vector<int> s; rep(u, 1, n) s.eb(u);
-	int dist, l, r; tie(r, dist) = ask(s); l = r; dfs(r);
-	
+	int dist, root; tie(root, dist) = ask(s);
+	dfs(root);
+
+	int l = root, r = root;
+	int init = dist;
 	while (dist) {
 		rep(v, 1, n) {
 			if (ancestor(v, l) || ancestor(v, r)) continue;

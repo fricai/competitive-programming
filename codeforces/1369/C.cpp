@@ -24,19 +24,19 @@ ll solve() {
 	sort(a, a + n);
 	sort(w, w + k, greater<int>());
 
-	int c = 0;
-	ll s = 0;
-	rep(i, 0, k) if (w[i] == 1) ++c;
-	rep(i, n - k, n) s += a[i];
-	rep(i, n - c, n) s += a[i];
-	int j = 0;
+	int cnt = 0;
+	rep(i, 0, k) if (w[i] == 1) ++cnt;
+	ll ans = 0;
+	rep(i, n - k, n) ans += a[i];
+	rep(i, n - cnt, n) ans += a[i];
+	int cur = 0;
 	rep(i, 0, k) {
-		if (--w[i]) {
-			s += a[j];
-			j += w[i];
+		if (w[i] > 1) {
+			ans += a[cur];
+			cur += w[i] - 1;
 		}
 	}
-	return s;
+	return ans;
 }
 
 signed main() {

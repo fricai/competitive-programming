@@ -26,7 +26,8 @@ ll solve() {
 	ll s = 0;
 	rep(i, n - k, n) s += a[i];
 	for (int i = 0, j = 0, b = n; i < k; ++i) {
-		s += --w[i] ? a[j] : a[--b];
+		if (--w[i]) s += a[j];
+		else s += a[--b];
 		j += w[i];
 	}
 	return s;

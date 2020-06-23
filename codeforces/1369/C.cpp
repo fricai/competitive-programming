@@ -13,7 +13,8 @@ template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 1 << 18;
-int a[N], w[N];
+int a[N];
+int w[N];
 
 ll solve() {
 	int n, k; cin >> n >> k;
@@ -23,14 +24,18 @@ ll solve() {
 	sort(a, a + n);
 	sort(w, w + k, greater<int>());
 
+	int c = 0;
 	ll s = 0;
-	int j = 0, b = n;
+	rep(i, 0, k) if (w[i] == 1) ++c;
 	rep(i, n - k, n) s += a[i];
-	rep(i, 0, k)
+	rep(i, n - c, n) s += a[i];
+	int j = 0;
+	rep(i, 0, k) {
 		if (--w[i]) {
 			s += a[j];
 			j += w[i];
-		} else s += a[--b];
+		}
+	}
 	return s;
 }
 

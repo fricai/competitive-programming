@@ -25,8 +25,10 @@ ll solve() {
 
 	ll s = 0;
 	rep(i, n - k, n) s += a[i];
-	for (int i = 0, j = 0, b = n; i < k; j += w[i++])
+	for (int i = 0, j = 0, b = n; i < k; ++i) {
 		s += --w[i] ? a[j] : a[--b];
+		j += w[i];
+	}
 	return s;
 }
 

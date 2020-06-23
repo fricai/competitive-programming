@@ -24,10 +24,13 @@ ll solve() {
 	sort(w, w + k, greater<int>());
 
 	ll s = 0;
+	int j = 0, b = n;
 	rep(i, n - k, n) s += a[i];
-	for (int i = 0, j = 0, b = n; i < k; ++i)
-		if (--w[i]) { s += a[j]; j += w[i]; }
-		else s += a[--b];
+	for (int i = 0; i < k; ++i)
+		if (--w[i]) {
+			s += a[j];
+			j += w[i];
+		} else s += a[--b];
 	return s;
 }
 

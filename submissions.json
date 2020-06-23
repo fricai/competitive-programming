@@ -25403,6 +25403,26 @@
     ],
     "timestamp": "Jun/23/2020 19:54"
   },
+  "CF84823233": {
+    "contest_id": 1369,
+    "language": "GNU C++14",
+    "path": "codeforces/1369/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "TediousLee",
+    "problem_url": "https://codeforces.com/contest/1369/problem/D",
+    "submission_id": "CF84823233",
+    "submission_url": "https://codeforces.com/contest/1369/submission/84823233",
+    "tags": [
+      "dp",
+      "graphs",
+      "greedy",
+      "math",
+      "trees",
+      "*1900"
+    ],
+    "timestamp": "Jun/23/2020 22:48"
+  },
   "CF84823334": {
     "contest_id": 1369,
     "language": "GNU C++14",

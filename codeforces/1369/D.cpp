@@ -19,9 +19,12 @@ ll f[N], g[N];
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-
-	auto val = [&](int i) { return i % 3 == 0 ? f[i] : g[i]; };
-	rep(i, 2, N) {
+	
+	auto val = [&](int i) {
+		// f[i] > g[i] if 3 | i
+		return i % 3 == 0 ? f[i] : g[i];
+	};
+	rep(i, 3, N) {
 		f[i] = (4 + g[i - 1] + 2 * g[i - 2]) % M;
 		g[i] = (val(i - 1) + 2 * val(i - 2)) % M;
 	}

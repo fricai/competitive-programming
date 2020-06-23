@@ -22,9 +22,11 @@ ll solve() {
 	rep(i, 0, k) cin >> w[i];
 	sort(a, a + n);
 	sort(w, w + k, greater<int>());
+
 	ll s = 0;
-	for (int i = 0, j = 0, b = n, r = n; i < k; j += w[i++])
-		s += a[--r] + (--w[i] ? a[j] : a[--b]);
+	rep(i, n - k, n) s += a[i];
+	for (int i = 0, j = 0, b = n; i < k; j += w[i++])
+		s += --w[i] ? a[j] : a[--b];
 	return s;
 }
 

@@ -21,10 +21,10 @@ ll solve() {
 	rep(i, 0, n) cin >> a[i];
 	rep(i, 0, k) cin >> w[i];
 	sort(a, a + n);
-	sort(w, w + k);
+	sort(w, w + k, greater<int>());
 	ll s = 0;
-	for (int i = k, j = 0, b = n, r = n; i; j += w[i])
-		s += a[--r] + (--w[--i] ? a[j] : a[--b]);
+	for (int i = 0, j = 0, b = n, r = n; i < k; j += w[i++])
+		s += a[--r] + (--w[i] ? a[j] : a[--b]);
 	return s;
 }
 

@@ -32,14 +32,16 @@ signed main() {
 	cin.tie(nullptr);
 
 	int t; cin >> t;
-
-	bool l = 1, w = 0;
-	while (t--) {
+	rep(i, 0, t) {
 		ll s, e; cin >> s >> e;
-		if (l != w) {
-			l = w ^ lose(s, e);
-			w = w ^ win(s, e);
-		}
+		a[i] = win(s, e);
+		b[i] = lose(s, e);
+	}
+	bool l = 1, w = 0;
+	rep(i, 0, t) {
+		if (l == w) break;
+		if (w) w = !a[i], l = !b[i];
+		else w = a[i], l = b[i];
 	}
 	cout << w << ' ' << l;
 }

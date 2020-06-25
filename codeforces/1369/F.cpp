@@ -30,13 +30,13 @@ bool lose(ll s, ll e) {
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+
 	int t; cin >> t;
 	rep(i, 0, t) cin >> s[i] >> e[i];
 	bool l = 1, w = 0;
 	rep(i, 0, t) {
 		if (l == w) break;
-		if (w) w = !win(s[i], e[i]), l = !lose(s[i], e[i]);
+		if (w) w = win(s[i], e[i]) ^ 1, l = lose(s[i], e[i]) ^ 1;
 		else w = win(s[i], e[i]), l = lose(s[i], e[i]);
 	}
 	cout << w << ' ' << l;

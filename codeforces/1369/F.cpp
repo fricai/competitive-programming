@@ -13,7 +13,7 @@ template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int T = 1 << 17;
-bool a[T], b[T];
+ll s[T], e[T];
 
 bool win(ll s, ll e) {
 	if (e & 1) return ~s & 1;
@@ -30,18 +30,14 @@ bool lose(ll s, ll e) {
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-
+	
 	int t; cin >> t;
-	rep(i, 0, t) {
-		ll s, e; cin >> s >> e;
-		a[i] = win(s, e);
-		b[i] = lose(s, e);
-	}
+	rep(i, 0, t) cin >> s[i] >> e[i];
 	bool l = 1, w = 0;
 	rep(i, 0, t) {
 		if (l == w) break;
-		if (w) w = !a[i], l = !b[i];
-		else w = a[i], l = b[i];
+		if (w) w = !win(s[i], e[i]), l = !lose(s[i], e[i]);
+		else w = win(s[i], e[i]), l = lose(s[i], e[i]);
 	}
 	cout << w << ' ' << l;
 }

@@ -32,6 +32,7 @@ vector<ll> solve() {
 		if (!u && !v) pd[w++] = {t, i + 1};
 	}
 
+	assert(w + x + y + z == n);
 	if (z + x < r || z + y < r) return { };
 
 	sort(pa, pa + x); sort(pb, pb + y);
@@ -45,9 +46,13 @@ vector<ll> solve() {
 
 	ll ans = 0;
 	while (r) {
-		if (k == z) while (r && i < x && j < y) ans += a[i++] + b[j++], --r;
-		else if (i == x || j == y) while (r && k < z) ans += c[k++], --r;
-		else {
+		if (k == z) {
+			while (r && i < x && j < y) ans += a[i++] + b[j++], --r;
+			assert(!r);
+		} else if (i == x || j == y) {
+			while (r && k < z) ans += c[k++], --r;
+			assert(!r);
+		} else {
 			if (a[i] + b[j] > c[k]) ans += c[k++];
 			else ans += a[i++] + b[j++];
 			--r;
@@ -56,28 +61,33 @@ vector<ll> solve() {
 
 	a[x] = b[y] = c[z] = d[w] = inf;
 	if (i + j + k <= m) {
-		int q = m - i - j - k;
-		while (q) {
+		int q = i + j + k;
+
+		while (q != m) {
+			assert(i <= x && j <= y && k <= z && l <= w);
+			assert(i < x || j < y || k < z || l < w);
 			int u = min({a[i], b[j], c[k], d[l]});
 			int v = a[i] + b[j] - c[max(0ll, k - 1)];
 			if (k > 0 && i < x && j < y && u > v) {
 				ans += v;
 				++i; ++j; --k;
 			} else {
+				assert(u < inf);
 						 if (d[l] == u) ++l;
 				else if (a[i] == u) ++i;
 				else if (b[j] == u) ++j;
 				else if (c[k] == u) ++k;
 				ans += u;
 			}
-			--q;
+			++q;
 		}
 	} else {
-		int q = i + j + k - m;
-		while (q && i > 0 && j > 0 && k < z)
+		int q = i + j + k;
+		while (q != m && i > 0 && j > 0 && k < z)
 			ans += c[k++] - a[--i] - b[--j], --q;
-		if (q) return { };
+		if (q != m) return { };
 	}
+	assert(i <= x && j <= y && k <= z && l <= w);
 	return {ans, i, j, k, l};
 }
 

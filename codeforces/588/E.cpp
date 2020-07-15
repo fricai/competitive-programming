@@ -13,7 +13,7 @@ using namespace std;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-const int N = 1 << 17, K = 10;
+const int N = 1 << 17;
 
 int sz[N], ch[N], pos[N], p[N], in[N], c = 0, timer = 0;
 vector<int> g[N] = {{0}}, z[N];
@@ -29,14 +29,13 @@ struct {
 		t.resize(2 * sz);
 		build(1, 0, n);
 	}
-	
+
 	void build(int v, int l, int r) {
 		if (r - l == 1) return void(t[v] = z[nodes[l]]);
 		int m = l + r >> 1;
 		build(v << 1|0, l, m); build(v << 1|1, m, r);
 		t[v].resize(sz(t[v << 1|0]) + sz(t[v << 1|1]));
 		merge(all(t[v << 1|0]), all(t[v << 1|1]), begin(t[v]));
-		if (K < sz(t[v])) t[v].resize(K);
 	}
 
 	void query(vector<int> &z, int v, int l, int r) {
@@ -46,6 +45,7 @@ struct {
 			else z = {begin(t[v]), begin(t[v]) + k};
 			return;
 		}
+
 		vector<int> zl, zr; int m = l + r >> 1;
 		query(zl, v << 1|0, l, m); query(zr, v << 1|1, m, r);
 		z.resize(sz(zl) + sz(zr));
@@ -62,8 +62,11 @@ struct {
 } t[N];
 
 void dfs(int u, int a) {
-	in[u] = ++timer; sz[u] = 1; p[u] = a;
+	in[u] = ++timer;
+	sz[u] = 1; p[u] = a;
+
 	g[u].erase(find(all(g[u]), a));
+
 	if (g[u].empty())
 		ch[u] = c++, pos[u] = 0;
 	else {
@@ -91,7 +94,7 @@ signed main() {
 		g[u].eb(v); g[v].eb(u);
 	}
 	dfs(0, 0);
-	rep(i, 0, m) { int x; cin >> x; if (sz(z[--x]) < K) z[x].eb(i + 1); }
+	rep(i, 0, m) { int x; cin >> x; z[--x].eb(i + 1); }
 	rep(i, 0, c) t[i].init();
 	while (q--) {
 		int u, v; cin >> u >> v >> k; --u; --v;
@@ -101,6 +104,7 @@ signed main() {
 				z = t[ch[u]].query(pos[head(u)], pos[u]);
 				u = p[head(u)];
 			} else {
+				assert(!ancestor(head(v), u));
 				z = t[ch[v]].query(pos[head(v)], pos[v]);
 				v = p[head(v)];
 			}

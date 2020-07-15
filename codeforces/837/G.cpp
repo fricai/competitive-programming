@@ -54,7 +54,7 @@ int build(int l = 0, int r = n) {
 	return combine(++nc, build(l, m), build(m, r));
 }
 
-int t[2 * N], cmp[2 * N]; vector<int> ord[2][X];
+int t[2 * N], cmp[X]; vector<int> ord[2][X];
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);

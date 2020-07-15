@@ -18,7 +18,7 @@ pair<T, T> operator+(const pair<T, T> &a, const pair<T, T> &b) {
 	return {a.f + b.f, a.s + b.s};
 }
 
-const int X = 2e5 + 5, N = 1 << 17, NC = 18 << 18;
+const int X = 2e5 + 5, N = 75005, NC = 18 << 18;
 int n, nc = 0;
 
 int L[NC], R[NC], lo, hi;
@@ -54,7 +54,7 @@ int build(int l = 0, int r = n) {
 	return combine(++nc, build(l, m), build(m, r));
 }
 
-int t[2 * N], cmp[X]; vector<int> ord[2][X];
+int t[X]; vector<int> ord[2][X];
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -64,25 +64,21 @@ signed main() {
 		int x1, x2; cin >> x1 >> x2;
 		ord[0][++x1].eb(i);
 		ord[1][++x2].eb(i);
-		cmp[i << 1|0] = x1;
-		cmp[i << 1|1] = x2;
 		cin >> a[i].s >> b[i].f >> b[i].s >> c[i].s;
 	}
-	sort(cmp, cmp + 2 * n + 1);
-	int s = unique(cmp, cmp + 2 * n + 1) - cmp;
 
 	t[0] = build();
-	for (int i = 1; i < s; ++i) {
-		t[i] = t[i - 1];
-		insert(t[i], all(ord[0][cmp[i]]), b);
-		insert(t[i], all(ord[1][cmp[i]]), c);
+	for (int x = 1; x < X; ++x) {
+		t[x] = t[x - 1];
+		insert(t[x], all(ord[0][x]), b);
+		insert(t[x], all(ord[1][x]), c);
 	}
 
 	int q; cin >> q; ll last = 0;
 	while (q--) {
 		int x; cin >> lo >> hi >> x; --lo;
 		x = (x + last) % 1000000000;
-		auto res = sum(t[upper_bound(cmp, cmp + s, x) - cmp - 1]);
+		auto res = sum(t[min(x, X - 1)]);
 		last = x * res.f + res.s;
 		cout << last << '\n';
 	}

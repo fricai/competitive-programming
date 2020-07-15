@@ -19,10 +19,10 @@ int sz[N], ch[N], pos[N], p[N], in[N], c = 1, timer = 0;
 vector<int> g[N] = {{0}}, z[N];
 
 int lo, hi, k;
-struct {
+struct T {
 	int n; vector<vector<int>> t;
 	vector<int> nodes;
-	
+	T() { }
 	void insert(int v) { nodes.eb(v); }
 	void init() {
 		n = sz(nodes);
@@ -38,7 +38,7 @@ struct {
 		t[v].resize(sz(t[v << 1|0]) + sz(t[v << 1|1]));
 		merge(all(t[v << 1|0]), all(t[v << 1|1]), begin(t[v]));
 	}
-
+	
 	void query(vector<int> &z, int v, int l, int r) {
 		if (r <= lo || hi <= l) return;
 		if (lo <= l && r <= hi) {

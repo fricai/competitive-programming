@@ -15,14 +15,15 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 1 << 17;
 
-int sz[N], ch[N], pos[N], p[N], in[N], c = 0, timer = 0;
+int sz[N], ch[N], pos[N], p[N], in[N], c = 1, timer = 0;
 vector<int> g[N] = {{0}}, z[N];
 
 int lo, hi, k;
 struct {
 	int n; vector<vector<int>> t;
 	vector<int> nodes;
-
+	
+	void insert(int v) { nodes.eb(v); }
 	void init() {
 		n = sz(nodes);
 		int sz = 1; while (sz < n) sz <<= 1;
@@ -61,28 +62,31 @@ struct {
 	}
 } t[N];
 
-void dfs(int u, int a) {
-	in[u] = ++timer;
+void dfs_init(int u = 0, int a = 0) {
 	sz[u] = 1; p[u] = a;
-
 	g[u].erase(find(all(g[u]), a));
-
-	if (g[u].empty())
-		ch[u] = c++, pos[u] = 0;
-	else {
-		int mx = g[u].front();
-		trav(v, g[u]) {
-			if (v == a) continue;
-			dfs(v, u);
-			sz[u] += sz[v];
-			if (sz[mx] < sz[v]) mx = v;
-		}
-		ch[u] = ch[mx], pos[u] = pos[mx] + 1;
+	trav(v, g[u]) {
+		dfs_init(v, u);
+		sz[u] += sz[v];
+		if (sz[g[u][0]] < sz[v]) swap(v, g[u][0]);
 	}
-	t[ch[u]].nodes.eb(u);
 }
-int head(int u) { return t[ch[u]].nodes.back(); }
-int ancestor(int u, int v) { return in[u] <= in[v] && in[v] < in[u] + sz[u]; }
+void dfs_hld(int u = 0) {
+	in[u] = ++timer;
+	trav(v, g[u]) {
+		if (v != g[u][0]) ch[v] = c++;
+		else {
+			ch[v] = ch[u];
+			pos[v] = pos[u] + 1;
+		}
+		t[ch[v]].insert(v);
+		dfs_hld(v);
+	}
+}
+int head(int u) { return t[ch[u]].nodes[0]; }
+int ancestor(int u, int v) {
+	return in[u] <= in[v] && in[v] < in[u] + sz[u];
+}
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -93,9 +97,10 @@ signed main() {
 		int u, v; cin >> u >> v; --u; --v;
 		g[u].eb(v); g[v].eb(u);
 	}
-	dfs(0, 0);
+	t[0].insert(0); dfs_init(); dfs_hld();
 	rep(i, 0, m) { int x; cin >> x; z[--x].eb(i + 1); }
 	rep(i, 0, c) t[i].init();
+
 	while (q--) {
 		int u, v; cin >> u >> v >> k; --u; --v;
 		vector<int> x, z;

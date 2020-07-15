@@ -8,7 +8,8 @@ using namespace std;
 #define sz(x) int((x).size())
 #define all(x) begin(x), end(x)
 
-const int B = 18, N = 1 << (B - 1), K = 10; int k = K;
+const int B = 17, N = 1 << B, K = 10;
+int k = K;
 vector<int> operator+(const vector<int> &a, const vector<int> &b) {
 	vector<int> v(sz(a) + sz(b));
 	merge(all(a), all(b), begin(v));
@@ -30,14 +31,13 @@ signed main() {
 		int u, v; cin >> u >> v; --u; --v;
 		g[u].push_back(v); g[v].push_back(u);
 	}
-
 	rep(i, 0, m) {
 		int x; cin >> x; --x;
 		if (sz(z[x][0]) < K) z[x][0].push_back(i + 1);
 	}
 
 	a[n][0] = n; dfs(0, n);
-	rep(j, 0, B - 1)
+	rep(j, 0, B)
 		rep(u, 0, n + 1)
 			a[u][j + 1] = a[a[u][j]][j],
 			z[u][j + 1] = z[a[u][j]][j] + z[u][j];
@@ -45,11 +45,12 @@ signed main() {
 	while (q--) {
 		int u, v; cin >> u >> v >> k; --u; --v;
 		vector<int> x; if (d[u] < d[v]) swap(u, v);
-		for (int j = B; j--;)
+
+		for (int j = B; 0 <= j; --j)
 			if (d[v] <= d[a[u][j]])
 				x = x + z[u][j], u = a[u][j];
 		if (u != v) {
-			for (int j = B; j--;)
+			for (int j = B; 0 <= j; --j)
 				if (a[v][j] != a[u][j])
 					x = x + z[u][j] + z[v][j],
 					u = a[u][j], v = a[v][j];

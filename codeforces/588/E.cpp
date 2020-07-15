@@ -52,7 +52,8 @@ struct T {
 
 	vector<int> query(int l, int r) {
 		if (l > r) swap(l, r); lo = l; hi = r + 1;
-		vector<int> z; query(z, 1, 0, n);
+		vector<int> z;
+		query(z, 1, 0, n);
 		return z;
 	}
 };
@@ -87,7 +88,7 @@ signed main() {
 	}
 	dfs(0, 0);
 	rep(i, 0, m) { int x; cin >> x; if (sz(z[--x]) < K) z[x].eb(i + 1); }
-	trav(v, t) v.init();
+	rep(i, 0, sz(t)) t[i].init();
 	while (q--) {
 		int u, v; cin >> u >> v >> k; --u; --v;
 		vector<int> x, z;

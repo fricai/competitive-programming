@@ -10,13 +10,16 @@ using namespace std;
 #define sz(x) int((x).size())
 #define eb(x...) emplace_back(x)
 
+template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
+template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
+
 const int N = 1 << 17, K = 10;
 
-int sz[N], ch[N], pos[N], p[N], in[N], timer = 0;
+int sz[N], ch[N], pos[N], p[N], in[N], c = 0, timer = 0;
 vector<int> g[N] = {{0}}, z[N];
 
 int lo, hi, k;
-struct T {
+struct {
 	int n; vector<vector<int>> t;
 	vector<int> nodes;
 
@@ -26,7 +29,7 @@ struct T {
 		t.resize(2 * sz);
 		build(1, 0, n);
 	}
-
+	
 	void build(int v, int l, int r) {
 		if (r - l == 1) return void(t[v] = z[nodes[l]]);
 		int m = l + r >> 1;
@@ -56,18 +59,19 @@ struct T {
 		query(z, 1, 0, n);
 		return z;
 	}
-};
-vector<T> t;
+} t[N];
 
 void dfs(int u, int a) {
 	in[u] = ++timer; sz[u] = 1; p[u] = a;
 	g[u].erase(find(all(g[u]), a));
-	if (g[u].empty()) ch[u] = sz(t), t.eb();
+	if (g[u].empty())
+		ch[u] = c++, pos[u] = 0;
 	else {
 		int mx = g[u].front();
 		trav(v, g[u]) {
 			if (v == a) continue;
-			dfs(v, u); sz[u] += sz[v];
+			dfs(v, u);
+			sz[u] += sz[v];
 			if (sz[mx] < sz[v]) mx = v;
 		}
 		ch[u] = ch[mx], pos[u] = pos[mx] + 1;
@@ -88,7 +92,7 @@ signed main() {
 	}
 	dfs(0, 0);
 	rep(i, 0, m) { int x; cin >> x; if (sz(z[--x]) < K) z[x].eb(i + 1); }
-	rep(i, 0, sz(t)) t[i].init();
+	rep(i, 0, c) t[i].init();
 	while (q--) {
 		int u, v; cin >> u >> v >> k; --u; --v;
 		vector<int> x, z;

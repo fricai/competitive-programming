@@ -1,85 +1,85 @@
+// TLEs
 #include <algorithm>
-#include <cassert>
 #include <iostream>
 #include <vector>
 using namespace std;
 
-#define rep(i, a, b) for (auto i = (a); i < (b); ++i)
 #define all(x) begin(x), end(x)
-#define f first
-#define s second
-#define eb(x...) emplace_back(x)
+
+const int X = 2e5 + 5, N = 75005;
+
+template<class T> pair<T, T> operator+(pair<T, T> a, pair<T, T> b) {
+	return {a.first + b.first, a.second + b.second};
+}
 
 using ll = int64_t;
-using pll = pair<ll, ll>;
 using pii = pair<int, int>;
-template<class T>
-pair<T, T> operator+(const pair<T, T> &a, const pair<T, T> &b) {
-	return {a.f + b.f, a.s + b.s};
-}
+using pll = pair<ll, ll>;
 
-const int X = 2e5 + 5, N = 75005, NC = 6e6;
-int n, nc = 0;
+using ptr = struct S*;
+int n;
+struct S {
+	pll x; ptr l, r;
+	S(pll x = {0, 0}) : x{x}, l{nullptr}, r{nullptr} { }
+	S(ptr l, ptr r) : x{l->x + r->x}, l{l}, r{r} { }
+};
 
-int L[NC], R[NC], lo, hi;
-pll val[NC];
-pll sum(int v, int l = 0, int r = n) {
-	if (r <= lo || hi <= l) return {0, 0};
-	if (lo <= l && r <= hi) return val[v];
+int lo, hi;
+pll sum(ptr v, int l = 0, int r = n) {
+	if (hi <= l || r <= lo) return {0, 0};
+	if (lo <= l && r <= hi) return v->x;
 	int m = l + r >> 1;
-	return sum(L[v], l, m) + sum(R[v], m, r);
+	return sum(v->l, l, m) + sum(v->r, m, r);
 }
 
-int combine(int v, int l, int r) {
-	L[v] = l; R[v] = r;
-	val[v] = val[l] + val[r];
-	return v;
+pii y1[N], a[N], y2[N];
+vector<int> ord1[X], ord2[X];
+ptr t[X];
+
+ptr build(pii y[], int l = 0, int r = n) {
+	if (r - l == 1) return new S(y[l]);
+	int m = l + r >> 1;
+	return new S(build(y, l, m), build(y, m, r));
 }
 
 pii *y;
-template<class T> int insert(int v, T s, T e, int l, int r) {
-	if (s == e) return v;
-	if (r - l == 1) return val[++nc] = y[l], nc;
-	int m = l + r >> 1; T b = lower_bound(s, e, m);
-	return combine(++nc, insert(L[v], s, b, l, m), insert(R[v], b, e, m, r));
-}
-template<class T> void insert(int &v, T s, T e, pii a[]) {
+template<class T> void insert(ptr &v, T s, T e, pii a[]) {
 	y = a; v = insert(v, s, e, 0, n);
 }
-
-pii a[N], b[N], c[N];
-int build(int l = 0, int r = n) {
-	if (r - l == 1) return val[++nc] = a[l], nc;
-	int m = (l + r) / 2;
-	return combine(++nc, build(l, m), build(m, r));
+template<class T> ptr insert(ptr v, T s, T e, int l, int r) {
+	if (e == s) return v;
+	if (r - l == 1) return new S(y[l]);
+	int m = l + r >> 1;
+	T b = lower_bound(s, e, m);
+	return new S(insert(v->l, s, b, l, m), insert(v->r, b, e, m, r));
 }
 
-int t[X]; vector<int> ord[2][X];
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
 	cin >> n;
 	for (int i = 0; i < n; ++i) {
-		int x1, x2; cin >> x1 >> x2;
-		ord[0][++x1].eb(i);
-		ord[1][++x2].eb(i);
-		cin >> a[i].s >> b[i].f >> b[i].s >> c[i].s;
+		int x1, x2;
+		cin >> x1 >> x2; ++x1; ++x2;
+		ord1[x1].push_back(i);
+		ord2[x2].push_back(i);
+		cin >> y1[i].second >> a[i].first >> a[i].second >> y2[i].second;
 	}
 
-	t[0] = build();
+	t[0] = build(y1);
 	for (int x = 1; x < X; ++x) {
 		t[x] = t[x - 1];
-		insert(t[x], all(ord[0][x]), b);
-		insert(t[x], all(ord[1][x]), c);
+		insert(t[x], all(ord1[x]), a);
+		insert(t[x], all(ord2[x]), y2);
 	}
-	
+
 	int q; cin >> q; ll last = 0;
 	while (q--) {
 		int x; cin >> lo >> hi >> x; --lo;
 		x = (x + last) % 1000000000;
 		auto res = sum(t[min(x, X - 1)]);
-		last = x * res.f + res.s;
+		last = x * res.first + res.second;
 		cout << last << '\n';
 	}
 }

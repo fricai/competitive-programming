@@ -68,7 +68,8 @@ signed main() {
 		cmp[i << 1|1] = x2;
 		cin >> a[i].s >> b[i].f >> b[i].s >> c[i].s;
 	}
-	int s = n << 1|1; sort(cmp, cmp + s); s = unique(cmp, cmp + s) - cmp;
+	sort(cmp, cmp + 2 * n + 1);
+	int s = unique(cmp, cmp + 2 * n + 1) - cmp;
 
 	t[0] = build();
 	for (int i = 1; i < s; ++i) {

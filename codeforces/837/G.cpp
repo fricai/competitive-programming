@@ -18,7 +18,7 @@ pair<T, T> operator+(const pair<T, T> &a, const pair<T, T> &b) {
 	return {a.f + b.f, a.s + b.s};
 }
 
-const int X = 2e5 + 5, N = 75005, NC = 18 << 18;
+const int X = 2e5 + 5, N = 75005, NC = 6e6;
 int n, nc = 0;
 
 int L[NC], R[NC], lo, hi;
@@ -73,7 +73,7 @@ signed main() {
 		insert(t[x], all(ord[0][x]), b);
 		insert(t[x], all(ord[1][x]), c);
 	}
-
+	
 	int q; cin >> q; ll last = 0;
 	while (q--) {
 		int x; cin >> lo >> hi >> x; --lo;

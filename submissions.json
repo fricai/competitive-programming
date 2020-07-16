@@ -21089,6 +21089,24 @@
     ],
     "timestamp": "May/20/2020 12:39"
   },
+  "CF87012467": {
+    "contest_id": 588,
+    "language": "GNU C++14",
+    "path": "codeforces/588/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Duff in the Army",
+    "problem_url": "https://codeforces.com/contest/588/problem/E",
+    "submission_id": "CF87012467",
+    "submission_url": "https://codeforces.com/contest/588/submission/87012467",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "trees",
+      "*2200"
+    ],
+    "timestamp": "Jul/16/2020 22:56"
+  },
   "CF87083295": {
     "contest_id": 1385,
     "language": "GNU C++14",

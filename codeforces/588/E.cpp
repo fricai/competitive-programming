@@ -39,7 +39,10 @@ struct T {
 	}
 	vector<int> query(int v, int l, int r) {
 		if (r <= lo || hi <= l) return { };
-		if (lo <= l && r <= hi) return t[v];
+		if (lo <= l && r <= hi) {
+			if (sz(t[v]) <= k) return {all(t[v])};
+			return {begin(t[v]), begin(t[v]) + k};
+		}
 		int m = l + r >> 1;
 		return query(v << 1, l, m) + query(v << 1|1, m, r);
 	}

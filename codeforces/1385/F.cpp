@@ -25,34 +25,36 @@ vector<int> g[N];
 
 	Let cnt[u] be the max number of nodes we can remove from children of u
 
-	Let cani[u] be true if we can turn u into a leaf while restricting ourselves to subtree of u
+	Let cand[u] be true if we can turn u into a leaf while restricting ourselves to subtree of u
 
-	Let cano[u] be true if we can turn p[u] into a leaf while restricting ourselves to T - (subtree of u)
+	Let cand[u] be true if we can turn p[u] into a leaf while restricting ourselves to T - (subtree of u)
 */
 
 int in[N], out[N], cnt[N];
-bool cani[N], cano[N];
+bool cand[N], canu[N];
 
 int n, k;
 
 void dfs1(int u, int p) {
-	in[u] = cnt[u] = 0;
+	in[u] = 0;
+
+	cnt[u] = 0;
 	trav(v, g[u]) {
 		if (v == p) continue;
 		dfs1(v, u);
 		in[u] += in[v];
-		cnt[u] += cani[v];
+		cnt[u] += cand[v];
 	}
-	cani[u] = cnt[u] == sz(g[u]) - 1 && cnt[u] % k == 0;
+	cand[u] = cnt[u] == sz(g[u]) - 1 && cnt[u] % k == 0;
 	in[u] += cnt[u] / k;
 }
 
 void dfs2(int u, int p) {
 	if (p != -1) {
-		int sum = cnt[p] - cani[u] + cano[p];
+		int sum = cnt[p] - cand[u] + canu[p];
 		out[u] = out[p] + in[p] - cnt[p] / k - in[u] + sum / k;
-		cano[u] = sum == sz(g[p]) - 1 && sum % k == 0;
-	} else cano[u] = out[u] = 0;
+		canu[u] = sum == sz(g[p]) - 1 && sum % k == 0;
+	} else canu[u] = out[u] = 0;
 	trav(v, g[u]) if (v != p) dfs2(v, u);
 }
 
@@ -70,7 +72,7 @@ int solve() {
 	dfs2(0, -1);
 	
 	int ans = 0;
-	rep(u, 0, n) ckmax(ans, in[u] + out[u] - cnt[u] / k + (cnt[u] + cano[u]) / k);
+	rep(u, 0, n) ckmax(ans, in[u] + out[u] - cnt[u] / k + (cnt[u] + canu[u]) / k);
 	return ans;
 }
 

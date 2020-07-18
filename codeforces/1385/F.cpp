@@ -23,35 +23,35 @@ vector<int> g[N];
 
 	Let out[u] be the max number of moves we can do outside the subtree of u
 
-	Let cnti[u] be the max number of nodes we can remove from children of u
+	Let cnt[u] be the max number of nodes we can remove from children of u
 
 	Let cani[u] be true if we can turn u into a leaf while restricting ourselves to subtree of u
 
 	Let cano[u] be true if we can turn p[u] into a leaf while restricting ourselves to T - (subtree of u)
 */
 
-int in[N], out[N], cnti[N];
+int in[N], out[N], cnt[N];
 bool cani[N], cano[N];
 
 int n, k;
 
 void dfs1(int u, int p) {
-	in[u] = cnti[u] = 0;
+	in[u] = cnt[u] = 0;
 	trav(v, g[u]) {
 		if (v == p) continue;
 		dfs1(v, u);
 		in[u] += in[v];
-		cnti[u] += cani[v];
+		cnt[u] += cani[v];
 	}
-	cani[u] = cnti[u] == sz(g[u]) - 1 && cnti[u] % k == 0;
-	in[u] += cnti[u] / k;
+	cani[u] = cnt[u] == sz(g[u]) - 1 && cnt[u] % k == 0;
+	in[u] += cnt[u] / k;
 }
 
 void dfs2(int u, int p) {
 	if (p != -1) {
-		int cnto = cnti[p] - cani[u] + cano[p];
-		out[u] = out[p] + in[p] - cnti[p] / k - in[u] + cnto / k;
-		cano[u] = cnto == sz(g[p]) - 1 && cnto % k == 0;
+		int sum = cnt[p] - cani[u] + cano[p];
+		out[u] = out[p] + in[p] - cnt[p] / k - in[u] + sum / k;
+		cano[u] = sum == sz(g[p]) - 1 && sum % k == 0;
 	} else cano[u] = out[u] = 0;
 	trav(v, g[u]) if (v != p) dfs2(v, u);
 }
@@ -70,7 +70,7 @@ int solve() {
 	dfs2(0, -1);
 	
 	int ans = 0;
-	rep(u, 0, n) ckmax(ans, in[u] + out[u] - cnti[u] / k + (cnti[u] + cano[u]) / k);
+	rep(u, 0, n) ckmax(ans, in[u] + out[u] - cnt[u] / k + (cnt[u] + cano[u]) / k);
 	return ans;
 }
 

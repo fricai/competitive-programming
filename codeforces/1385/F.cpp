@@ -45,7 +45,9 @@ void dfs1(int u, int p) {
 		in[u] += in[v];
 		cnt[u] += cand[v];
 	}
-	cand[u] = cnt[u] == sz(g[u]) - 1 && cnt[u] % k == 0;
+	
+	if (cnt[u] == sz(g[u]) - 1 && cnt[u] % k == 0) cand[u] = true;
+	else cand[u] = false;
 	in[u] += cnt[u] / k;
 }
 
@@ -53,7 +55,8 @@ void dfs2(int u, int p) {
 	if (p != -1) {
 		int sum = cnt[p] - cand[u] + canu[p];
 		out[u] = out[p] + in[p] - cnt[p] / k - in[u] + sum / k;
-		canu[u] = sum == sz(g[p]) - 1 && sum % k == 0;
+		if (sum == sz(g[p]) - 1 && sum % k == 0) canu[u] = true;
+		else canu[u] = false;
 	} else canu[u] = out[u] = 0;
 	trav(v, g[u]) if (v != p) dfs2(v, u);
 }

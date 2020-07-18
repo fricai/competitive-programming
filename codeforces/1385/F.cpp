@@ -70,12 +70,17 @@ int solve() {
 		int u, v; cin >> u >> v; --u; --v;
 		g[u].eb(v); g[v].eb(u);
 	}
+
+	if (n == 2) return 1;
 	
 	dfs1(0, -1);
 	dfs2(0, -1);
 	
 	int ans = 0;
-	rep(u, 0, n) ckmax(ans, in[u] + out[u] - cnt[u] / k + (cnt[u] + canu[u]) / k);
+	rep(u, 0, n) {
+		int z = in[u] + out[u] - cnt[u] / k + (cnt[u] + canu[u]) / k;
+		ckmax(ans, z);
+	}
 	return ans;
 }
 

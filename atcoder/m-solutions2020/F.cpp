@@ -26,61 +26,49 @@ signed main() {
 
 	int n; cin >> n;
 
-	map<int, vector<pair<int, char>>> RU, DL, UL, RD, RL, UD;
+	map<int, vector<pair<int, char>>> diagl, diagr, horiz, vert;
 	rep(i, 0, n) {
 		cin >> x[i] >> y[i] >> dir[i];
 		x[i] *= 10;
 		y[i] *= 10;
-		if (dir[i] == 'R' || dir[i] == 'U') RU[x[i] + y[i]].eb(x[i], dir[i]);
-		if (dir[i] == 'D' || dir[i] == 'L') DL[x[i] + y[i]].eb(x[i], dir[i]);
-		if (dir[i] == 'U' || dir[i] == 'L') UL[x[i] - y[i]].eb(x[i], dir[i]);
-		if (dir[i] == 'R' || dir[i] == 'D') RD[x[i] - y[i]].eb(x[i], dir[i]);
-		if (dir[i] == 'L' || dir[i] == 'R') RL[y[i]].eb(x[i], dir[i]);
-		if (dir[i] == 'U' || dir[i] == 'D') UD[x[i]].eb(y[i], dir[i]);
+		diagl[x[i] + y[i]].eb(x[i], dir[i]);
+		diagr[x[i] - y[i]].eb(x[i], dir[i]);
+		horiz[y[i]].eb(x[i], dir[i]);
+		vert[x[i]].eb(y[i], dir[i]);
 	}
 
 	int ans = inf + 1;
-	trav(z, RU) {
+	trav(z, diagl) {
 		auto &v = z.s;
 		sort(all(v));
 		rep(i, 0, sz(v) - 1)
-			if (v[i].s == 'R' && v[i + 1].s == 'U')
+			if (
+				(v[i].s == 'R' && v[i + 1].s == 'U') ||
+				(v[i].s == 'D' && v[i + 1].s == 'L')
+			)
 				ckmin(ans, v[i + 1].f - v[i].f);
 	}
 
-	trav(z, DL) {
+	trav(z, diagr) {
 		auto &v = z.s;
 		sort(all(v));
 		rep(i, 0, sz(v) - 1)
-			if (v[i].s == 'D' && v[i + 1].s == 'L')
-				ckmin(ans, v[i + 1].f - v[i].f);
-	}
-	
-	trav(z, UL) {
-		auto &v = z.s;
-		sort(all(v));
-		rep(i, 0, sz(v) - 1)
-			if (v[i].s == 'U' && v[i + 1].s == 'L')
-				ckmin(ans, v[i + 1].f - v[i].f);
-	}
-	
-	trav(z, RD) {
-		auto &v = z.s;
-		sort(all(v));
-		rep(i, 0, sz(v) - 1)
-			if (v[i].s == 'R' && v[i + 1].s == 'D')
+			if (
+				(v[i].s == 'U' && v[i + 1].s == 'L') ||
+				(v[i].s == 'R' && v[i + 1].s == 'D')
+			)
 				ckmin(ans, v[i + 1].f - v[i].f);
 	}
 
-	trav(z, RL) {
+	trav(z, horiz) {
 		auto &v = z.s;
 		sort(all(v));
 		rep(i, 0, sz(v) - 1)
 			if (v[i].s == 'R' && v[i + 1].s == 'L')
 				ckmin(ans, (v[i + 1].f - v[i].f) / 2);
 	}
-
-	trav(z, UD) {
+	
+	trav(z, vert) {
 		auto &v = z.s;
 		sort(all(v));
 		rep(i, 0, sz(v) - 1)

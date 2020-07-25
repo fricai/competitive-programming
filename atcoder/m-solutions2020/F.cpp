@@ -13,7 +13,10 @@ using ld = long double;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-const int inf = 1e9;
+const int N = 1 << 18, inf = 1e9;
+char dir[N];
+int x[N], y[N];
+
 #define f first
 #define s second
 
@@ -22,17 +25,18 @@ signed main() {
 	cin.tie(nullptr);
 
 	int n; cin >> n;
+
 	map<int, vector<pair<int, char>>> RU, DL, UL, RD, RL, UD;
 	rep(i, 0, n) {
-		int x, y; char d;
-		cin >> x >> y >> d;
-		x *= 10; y *= 10;
-		if (d == 'R' || d == 'U') RU[x + y].eb(x, d);
-		if (d == 'D' || d == 'L') DL[x + y].eb(x, d);
-		if (d == 'U' || d == 'L') UL[x - y].eb(x, d);
-		if (d == 'R' || d == 'D') RD[x - y].eb(x, d);
-		if (d == 'R' || d == 'L') RL[y].eb(x, d);
-		if (d == 'D' || d == 'U') UD[x].eb(y, d);
+		cin >> x[i] >> y[i] >> dir[i];
+		x[i] *= 10;
+		y[i] *= 10;
+		if (dir[i] == 'R' || dir[i] == 'U') RU[x[i] + y[i]].eb(x[i], dir[i]);
+		if (dir[i] == 'D' || dir[i] == 'L') DL[x[i] + y[i]].eb(x[i], dir[i]);
+		if (dir[i] == 'U' || dir[i] == 'L') UL[x[i] - y[i]].eb(x[i], dir[i]);
+		if (dir[i] == 'R' || dir[i] == 'D') RD[x[i] - y[i]].eb(x[i], dir[i]);
+		if (dir[i] == 'L' || dir[i] == 'R') RL[y[i]].eb(x[i], dir[i]);
+		if (dir[i] == 'U' || dir[i] == 'D') UD[x[i]].eb(y[i], dir[i]);
 	}
 
 	int ans = inf + 1;
@@ -51,7 +55,7 @@ signed main() {
 			if (v[i].s == 'D' && v[i + 1].s == 'L')
 				ckmin(ans, v[i + 1].f - v[i].f);
 	}
-
+	
 	trav(z, UL) {
 		auto &v = z.s;
 		sort(all(v));
@@ -59,7 +63,7 @@ signed main() {
 			if (v[i].s == 'U' && v[i + 1].s == 'L')
 				ckmin(ans, v[i + 1].f - v[i].f);
 	}
-
+	
 	trav(z, RD) {
 		auto &v = z.s;
 		sort(all(v));
@@ -83,6 +87,7 @@ signed main() {
 			if (v[i].s == 'U' && v[i + 1].s == 'D')
 				ckmin(ans, (v[i + 1].f - v[i].f) / 2);
 	}
-
-	if (ans > inf) cout << "SAFE"; else cout << ans;
+	
+	if (ans > inf) cout << "SAFE";
+	else cout << ans;
 }

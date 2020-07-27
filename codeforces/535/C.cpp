@@ -18,10 +18,9 @@ ll solve() {
 	ll z, t, x; cin >> z >> t >> x; --z;
 	if (a + z * b > t) return -1;
 	ll l = z + 1, r = 2e6;
-	z = a * z + b * z * (z - 1) / 2;
 	while (r - l > 1) {
 		ll m = l + (r - l) / 2;
-		(a + (m - 1) * b <= t && a * m + b * m * (m - 1) / 2 - z <= x * t ? l : r) = m;
+		(a + (m - 1) * b <= t && (m - z) * a + (m * (m - 1) - z * (z - 1)) / 2 * b <= x * t ? l : r) = m;
 	}
 	return l;
 }

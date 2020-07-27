@@ -15,12 +15,12 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 ll a, b;
 ll solve() {
-	ll z, t, x; cin >> z >> t >> x; --z;
-	if (a + z * b > t) return -1;
-	ll l = z + 1, r = 2e6;
+	ll z, t, x; cin >> z >> t >> x;
+	if (a + (z - 1) * b > t) return -1;
+	ll l = z, r = 2e9;
 	while (r - l > 1) {
 		ll m = l + (r - l) / 2;
-		(a + (m - 1) * b <= t && (m - z) * a + (m * (m - 1) - z * (z - 1)) / 2 * b <= x * t ? l : r) = m;
+		(a + (m - 1) * b <= t && (m - z + 1) * a + (m * (m - 1) - (z - 1) * (z - 2)) / 2 * b <= x * t ? l : r) = m;
 	}
 	return l;
 }

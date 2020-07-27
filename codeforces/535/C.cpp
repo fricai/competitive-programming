@@ -20,7 +20,8 @@ ll solve() {
 	ll l = z, r = 2e9;
 	while (r - l > 1) {
 		ll m = l + (r - l) / 2;
-		(a + (m - 1) * b <= t && (m - z + 1) * a + (m * (m - 1) - (z - 1) * (z - 2)) / 2 * b <= x * t ? l : r) = m;
+		((a + (m - 1) * b <= t && a * (m - z + 1) + b * (m * (m - 1) - (z - 1) * (z - 2)) / 2 <= x * t
+		) ? l : r) = m;
 	}
 	return l;
 }

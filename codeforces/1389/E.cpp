@@ -19,7 +19,8 @@ template<class T> T gcd(T a, T b) { return b != T(0) ? gcd(b, a % b) : a; }
 ll solve() {
 	ll m, d, w; cin >> m >> d >> w;
 	w /= gcd(w, d - 1); m = min(m, d);
-	return (m / w) * (m / w - 1) / 2 * w  + (m % w) * (m / w);
+	auto t = lldiv(m, w);
+	return t.quot * (t.quot - 1) / 2 * w  + t.quot * t.rem;
 }
 
 signed main() {

@@ -19,17 +19,19 @@ const ll inf = 1e18;
 ll solve() {
 	int n; ll k, al, ar, bl, br;
 	cin >> n >> k >> al >> ar >> bl >> br;
+
 	k -= n * max(0ll, min(ar, br) - max(al, bl));
 	if (k <= 0) return 0;	
 	if (al > bl) swap(al, bl), swap(ar, br);
 	ll ans = inf, cur = 0;
-	ll join = max(0ll, bl - ar), del = (bl - al) + abs(br - max(bl, ar));
 	rep(i, 0, n) {
-		cur += join;
+		cur += max(0ll, bl - ar);
+		ll del = (bl - al) + abs(br - max(bl, ar));
 		if (del <= k) cur += del, k -= del;
 		else cur += k, k = 0;
 		ckmin(ans, cur + 2 * k);
 	}
+
 	return ans;
 }
 

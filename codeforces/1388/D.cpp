@@ -17,21 +17,25 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 template<class T> T gcd(T a, T b) { return b != T(0) ? gcd(b, a % b) : a; }
 
 const int N = 1 << 18;
-ll a[N];
-vector<int> g[N];
+ll a[N], b[N], dp[N], number[N];
+bool up[N];
+vector<int> g[N], root, ord;
+int timer = 0;
 
-ll ans = 0;
 void dfs(int u) {
+	dp[u] = a[u];
 	trav(v, g[u]) {
 		dfs(v);
-		if (a[v] > 0) a[u] += a[v];
+		if (up[v]) dp[u] += dp[v];
 	}
+	if (dp[u] > 0) up[u] = true;
 }
 
+ll ans = 0;
 void construct(int u) {
-	trav(v, g[u]) if (a[v] > 0) construct(v);
-	cout << u + 1 << ' ';
-	trav(v, g[u]) if (a[v] <= 0) construct(v);
+	trav(v, g[u]) if (up[v]) construct(v);
+	ans += dp[u]; ord.eb(u + 1);
+	trav(v, g[u]) if (!up[v]) construct(v);
 }
 
 signed main() {
@@ -40,15 +44,10 @@ signed main() {
 
 	int n; cin >> n;
 	rep(i, 0, n) cin >> a[i];
-
-	vector<int> roots;
-	rep(u, 0, n) {
-		int p; cin >> p;
-		if (p-- > 0) g[p].eb(u);
-		else roots.eb(u);
-	}
-
-	trav(v, roots) dfs(v);
-	cout << accumulate(a, a + n, 0ll) << '\n';
-	trav(v, roots) construct(v);
+	rep(i, 0, n) cin >> b[i], --b[i];
+	rep(u, 0, n) if (b[u] >= 0) g[b[u]].eb(u);
+	rep(u, 0, n) if (b[u] < 0) dfs(u);
+	rep(u, 0, n) if (b[u] < 0) construct(u);
+	cout << ans << '\n';
+	trav(x, ord) cout << x << ' ';
 }

@@ -9663,6 +9663,22 @@
     ],
     "timestamp": "Sep/29/2021 13:13"
   },
+  "CF88533796": {
+    "contest_id": 216,
+    "language": "GNU C++14",
+    "path": "codeforces/216/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Hiring Staff",
+    "problem_url": "https://codeforces.com/contest/216/problem/C",
+    "submission_id": "CF88533796",
+    "submission_url": "https://codeforces.com/contest/216/submission/88533796",
+    "tags": [
+      "greedy",
+      "*1800"
+    ],
+    "timestamp": "Jul/31/2020 00:10"
+  },
   "CF88534632": {
     "contest_id": 216,
     "language": "GNU C++14",

@@ -50,15 +50,25 @@ ll solve() {
 		g[b[e]].eb(e);
 	}
 	dfs(0);
-	vector<ll> one, two;
+	
+	vector<ll> one = {0}, two = {0};
+
+	priority_queue<pair<ll, int>> pq;
 	auto gain = [&](int u) { return 1ll * (wn[u] + 1) / 2 * leaves[u]; };
-	rep(u, 0, n) {
-		if (cn[u] == 1) while (wn[u]) one.eb(gain(u)), wn[u] /= 2;
-		else  while (wn[u]) two.eb(gain(u)), wn[u] /= 2;
+	auto ins = [&](int u) { if (gain(u)) pq.push({gain(u), u}); };
+
+	rep(u, 1, n) if (cn[u] == 1) ins(u);
+	while (!pq.empty()) {
+		auto [x, u] = pq.top(); pq.pop();
+		one.eb(x); wn[u] /= 2; ins(u);
 	}
-	sort(all(one)); sort(all(two));
-	one.eb(0); two.eb(0);
-	reverse(all(one)); reverse(all(two));
+
+	rep(u, 1, n) if (cn[u] == 2) ins(u);
+	while (!pq.empty()) {
+		auto [x, u] = pq.top(); pq.pop();
+		two.eb(x); wn[u] /= 2; ins(u);
+	}
+	if (len <= S) return 0;
 	int ans = 1e9;
 	rep(i, 1, sz(two)) two[i] += two[i - 1];
 	rep(i, 1, sz(one)) one[i] += one[i - 1];

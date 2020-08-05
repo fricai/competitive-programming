@@ -72,9 +72,13 @@ ll solve() {
 	int ans = 1e9;
 	rep(i, 1, sz(two)) two[i] += two[i - 1];
 	rep(i, 1, sz(one)) one[i] += one[i - 1];
+	assert(len == one.back() + two.back());
 	rep(i, 0, sz(one)) {
 		int j = lb(all(two), len - one[i] - S) - begin(two);
-		if (j != sz(two)) ckmin(ans, 2 * j + i);
+		if (j != sz(two)) {
+			assert(S >= len - one[i] - two[j]);
+			ckmin(ans, 2 * j + i);
+		}
 	}
 	return ans;
 }

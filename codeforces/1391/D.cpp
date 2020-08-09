@@ -50,9 +50,9 @@ int ans() {
 			rep(S, 0, 1 << m) {
 				int cnt = 0;
 				rep(j, 0, m) if (S & 1 << j) g[i][j] ^= 1, ++cnt;
-				bool flag = false;
-				rep(j, 0, m) flag |= g[i][j] ^ g[0][0] ^ g[0][j] ^ g[i][0];
-				if (!flag) ckmin(t, cnt);
+				bool flag = true;
+				rep(j, 0, m) if (g[i][j] != (g[0][0] ^ g[0][j] ^ g[i][0])) flag = false;
+				if (flag) ckmin(t, cnt);
 				rep(j, 0, m) if (S & 1 << j) g[i][j] ^= 1;
 			}
 			ans += t;
@@ -60,7 +60,6 @@ int ans() {
 		rep(j, 0, m) if (S & 1 << j) g[0][j] ^= 1;
 		ckmin(fin, ans);
 	}
-
 	return fin;
 }
 

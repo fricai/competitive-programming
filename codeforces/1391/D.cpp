@@ -18,7 +18,8 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 template<class T> T gcd(T a, T b) { return b != T(0) ? gcd(b, a % b) : a; }
 
 const int N = 1 << 20;
-bool g[N][4]; string tmp[N];
+int g[N][4];
+string tmp[N];
 
 int ans() {
 	int n, m; cin >> n >> m;

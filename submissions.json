@@ -1,4 +1,20 @@
 {
+  "AC15781338": {
+    "contest_id": "agc047",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/agc047/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Integer Product",
+    "problem_url": "https://atcoder.jp/contests/agc047/tasks/agc047_a",
+    "submission_id": "AC15781338",
+    "submission_url": "https://atcoder.jp/contests/agc047/submissions/15781338",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Aug/09/2020 17:59"
+  },
   "AC15789709": {
     "contest_id": "agc047",
     "language": "C++ (GCC 9.2.1)",

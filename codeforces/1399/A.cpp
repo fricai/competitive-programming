@@ -41,5 +41,4 @@ signed main() {
 
 	int t; cin >> t;
 	while (t--) cout << (solve() ? "YES" : "NO") << '\n';
-	// lol
 }

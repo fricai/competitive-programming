@@ -20,12 +20,22 @@ template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 template<class T> T gcd(T a, T b) { return b != T(0) ? gcd(b, a % b) : a; }
 
+const int N = 30;
+ll a[2 * N][2 * N];
+
 signed main() {
 	ios::sync_with_stdio(false);
 	
 	int n; cin >> n;
 	rep(i, 0, n) {
-		rep(j, 0, n) cout << (j & 1 ? 1ll << (i + j - 1) : 0) << ' ';
+		ll p = 1ll << i;
+		rep(j, 0, n) {
+			a[i][j] = (j & 1) ? p / 2 : 0;
+			p *= 2;
+		}
+	}
+	rep(i, 0, n) {
+		rep(j, 0, n) cout << a[i][j] << ' ';
 		cout << endl;
 	}
 	int q; cin >> q;

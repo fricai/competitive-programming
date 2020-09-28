@@ -39,10 +39,7 @@ void insert(int x, int i) {
 ll tot[B][2];
 ll cnt(const vector<int> &a, const vector<int> &b) {
 	ll inv = 0;
-	for (int i = 0, j = 0; i < sz(a) && j < sz(b); ) {
-		if (a[i] > b[j]) inv += sz(a) - i, ++j;
-		else ++i;
-	}
+	for (int j = 0; j < sz(b); ++j) inv += end(a) - ub(all(a), b[j]);
 	return inv;
 }
 

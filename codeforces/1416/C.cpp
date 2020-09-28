@@ -47,6 +47,7 @@ ll cnt(const vector<int> &a, const vector<int> &b) {
 }
 
 void dfs(int v, int bit) {
+	// cerr << v << ' ' << bit << '\n';
 	if (bit < 0) return;
 	rep(b, 0, 2) if (t[v][b]) dfs(t[v][b], bit - 1);
 	if (!t[v][0] || !t[v][1]) return;
@@ -59,8 +60,10 @@ signed main() {
 	cin.tie(nullptr);
 
 	int n; cin >> n;
+	rep(b, 0, B) tot[b][0] = tot[b][1] = 0;
 	rep(i, 0, n) cin >> a, insert(a, i);
 	dfs(1, B - 1);
+
 	ll inv = 0, x = 0;
 	per(b, 0, B) {
 		x <<= 1;

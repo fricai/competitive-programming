@@ -99,7 +99,11 @@ signed main() {
 		if (p[u][0] != u) g[p[u][0]].push_back(u);
 	}
 	rep(j, 1, B) rep(u, 0, n + m) p[u][j] = p[p[u][j - 1]][j - 1];
-	rep(u, 0, n + m) if (nxt[u] == u) dfs(u);
+
+	rep(u, 0, n) {
+		int rt = p[u][B - 1];
+		if (!out[rt]) dfs(rt);		
+	}
 	
 	build(1, 0, n);
 

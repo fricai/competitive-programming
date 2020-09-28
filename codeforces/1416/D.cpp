@@ -24,7 +24,7 @@ int delt[M]; pair<int, int> edges[M];
 
 int n, m;
 
-int val[N], arr[N];
+int val[N];
 
 int nxt[N + M], p[N + M][B];
 int head(int u) { return nxt[u] != u ? nxt[u] = head(nxt[u]) : u; }
@@ -36,17 +36,20 @@ void join(int e) {
 }
 
 vector<int> g[N + M];
-int in[N + M], out[N + M], timer = 0;
+int in[N + M], out[N + M], inv[N], timer = 0;
 void dfs(int u) {
 	in[u] = timer;
-	if (u < n) arr[timer++] = val[u];
+	if (u < n) inv[timer++] = u;
 	for (int v : g[u]) dfs(v);
 	out[u] = timer;
 }
 
 pair<int, int> t[N << 1];
 void build(int v, int l, int r) {
-	if (r - l == 1) return void(t[v] = {arr[l], l});
+	if (r - l == 1) {
+		t[v] = {val[inv[l]], inv[l]};
+		return;
+	}
 	int m = (l + r) >> 1;
 	build(v << 1|0, l, m);
 	build(v << 1|1, m, r);
@@ -60,7 +63,7 @@ pair<int, int> find(int v, int l, int r) {
 	return max(find(v << 1, l, m), find(v << 1|1, m, r));
 }
 void clear(int v, int l, int r) {
-	if (r - l == 1) return void(t[v] = {0, l});
+	if (r - l == 1) return void(t[v] = {0, inv[l]});
 	int m = (l + r) >> 1;
 	if (x < m) clear(v << 1, l, m);
 	else clear(v << 1|1, m, r);
@@ -68,7 +71,7 @@ void clear(int v, int l, int r) {
 }
 int query(int l, int r) {
 	lo = l, hi = r; auto p = find(1, 0, n);
-	x = p.second; clear(1, 0, n);
+	x = in[p.second]; clear(1, 0, n);
 	return p.first;
 }
 
@@ -91,9 +94,9 @@ signed main() {
 		if (t) delt[v] = z;
 	}
 	rep(e, 0, m) if (delt[e] < 0) delt[e] = q, E[q++] = {1, e};
-
+	
 	per(z, 0, q) if (E[z].delt) join(E[z].v);
-
+	
 	rep(u, 0, n + m) {
 		if (nxt[u] == u) p[u][0] = u;
 		if (p[u][0] != u) g[p[u][0]].push_back(u);

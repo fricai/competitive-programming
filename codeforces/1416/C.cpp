@@ -17,7 +17,7 @@ template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 template<class T> T gcd(T a, T b) { return b != T(0) ? gcd(b, a % b) : a; }
 
-const int N = 3e5 + 10, B = 30;
+const int N = 1 << 19, B = 30;
 int t[B * N][2], a;
 vector<int> pos[N * B];
 int nc = 1;

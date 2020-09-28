@@ -37,15 +37,21 @@ void insert(int x, int i) {
 }
 
 ll tot[B][2];
+ll cnt(const vector<int> &a, const vector<int> &b) {
+	ll inv = 0;
+	for (int i = 0, j = 0; i < sz(a) && j < sz(b); ) {
+		if (a[i] > b[j]) inv += sz(a) - i, ++j;
+		else ++i;
+	}
+	return inv;
+}
+
 void dfs(int v, int bit) {
 	if (bit < 0) return;
 	rep(b, 0, 2) if (t[v][b]) dfs(t[v][b], bit - 1);
 	if (!t[v][0] || !t[v][1]) return;
-	auto &a = pos[t[v][0]], &b = pos[t[v][1]];
-	for (int i = 0, j = 0; i < sz(a) && j < sz(b); ) {
-		if (a[i] > b[j]) tot[bit][0] += sz(a) - i, ++j;
-		else tot[bit][1] += sz(b) - j, ++i;
-	}
+	tot[bit][0] += cnt(pos[t[v][0]], pos[t[v][1]]);
+	tot[bit][1] += cnt(pos[t[v][1]], pos[t[v][0]]);	
 }
 
 signed main() {

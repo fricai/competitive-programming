@@ -34,13 +34,15 @@ signed main() {
 		x.eb(j - i);
 	}
 	
-	int z = sz(x), t = n - z + 1;
+	int z = sz(x);
 	rep(i, 1, z) x[i] += x[i - 1];
-	rep(i, 0, z + 1)
-		rep(j, 0, t + 1)
-			rep(s, 0, n * (n - 1) / 2 + 1) dp[i][j][s] = inf;
+	rep(i, 0, N)
+		rep(j, 0, N)
+			rep(s, 0, N * N) dp[i][j][s] = inf;
+	
 	dp[0][0][0] = 0;
 
+	int t = n - z + 1;
 	rep(i, 0, z)
 		rep(j, 0, t + 1)
 			rep(s, 0, n * (n - 1) / 2 + 1)

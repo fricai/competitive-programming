@@ -46,6 +46,7 @@ signed main() {
 	rep(i, 0, z)
 		rep(j, 0, t + 1)
 			rep(s, 0, n * (n - 1) / 2 + 1)
+				if (dp[i][j][s] != inf)
 					rep(k, j, t + 1)
 						ckmin(dp[i + 1][k][s + abs(k - x[i])], dp[i][j][s] + (k - j) * (k - j));
 	int mn = inf;

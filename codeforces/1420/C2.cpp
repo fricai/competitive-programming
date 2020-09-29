@@ -46,8 +46,7 @@ void solve() {
 	cout << ans << '\n';
 	while (q--) {
 		int l, r; cin >> l >> r;
-		vector<int> s = {l - 1, l, l + 1, r - 1, r, r + 1};
-		sort(all(s)); s.erase(unique(all(s)), end(s));
+		set<int> s = {l - 1, l, l + 1, r - 1, r, r + 1};
 		for (int x : s) sub(x);
 		swap(a[l], a[r]);
 		for (int x : s) add(x);

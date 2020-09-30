@@ -40,8 +40,9 @@ signed main() {
 	rep(i, 0, m) {
 		int s; cin >> s;
 		rep(j, 0, s) {
-			u[e] = i + n; cin >> v[e];
-			w[e] = a[i] + b[--v[e]];
+			u[e] = i + n;
+			cin >> v[e]; --v[e];
+			w[e] = a[i] + b[v[e]];
 			++e;
 		}
 	}

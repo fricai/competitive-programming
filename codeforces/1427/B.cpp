@@ -18,6 +18,7 @@ int solve() {
     int n, k; cin >> n >> k;
     vector<tuple<int, int, int>> v;
     string s; cin >> s;
+    int del = 0;
     for (int i = 0, j = 0; i < n; i = j) {
         if (s[i] == 'W') { ++j; continue; }
         while (j < n && s[j] == 'L') ++j;

@@ -18,7 +18,7 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int A = 26, N = 1 << 18;
 vector<int> pos[A];
-int p[N];
+int p[N], tmp[N];
 
 ll dnc(int l, int r) {
 	if (r - l == 1) return 0;

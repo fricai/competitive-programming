@@ -1,4 +1,20 @@
 {
+  "AC17461093": {
+    "contest_id": "abc180",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc180/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Takahashi Unevolved",
+    "problem_url": "https://atcoder.jp/contests/abc180/tasks/abc180_d",
+    "submission_id": "AC17461093",
+    "submission_url": "https://atcoder.jp/contests/abc180/submissions/17461093",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Oct/17/2020 17:07"
+  },
   "AC17465174": {
     "contest_id": "abc180",
     "language": "C++ (GCC 9.2.1)",

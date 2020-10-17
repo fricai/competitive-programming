@@ -1,4 +1,20 @@
 {
+  "AC17442589": {
+    "contest_id": "abc180",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc180/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Various distances",
+    "problem_url": "https://atcoder.jp/contests/abc180/tasks/abc180_b",
+    "submission_id": "AC17442589",
+    "submission_url": "https://atcoder.jp/contests/abc180/submissions/17442589",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Oct/17/2020 16:35"
+  },
   "AC17445767": {
     "contest_id": "abc180",
     "language": "C++ (GCC 9.2.1)",

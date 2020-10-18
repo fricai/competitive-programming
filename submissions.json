@@ -22588,6 +22588,27 @@
     ],
     "timestamp": "Sep/29/2020 22:00"
   },
+  "CF95876687": {
+    "contest_id": 1421,
+    "language": "GNU C++17",
+    "path": "codeforces/1421/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Hexagons",
+    "problem_url": "https://codeforces.com/contest/1421/problem/D",
+    "submission_id": "CF95876687",
+    "submission_url": "https://codeforces.com/contest/1421/submission/95876687",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "math",
+      "shortest paths",
+      "*1900"
+    ],
+    "timestamp": "Oct/18/2020 15:22"
+  },
   "CF97009217": {
     "contest_id": 1427,
     "language": "GNU C++17",

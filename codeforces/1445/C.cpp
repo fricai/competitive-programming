@@ -35,7 +35,13 @@ signed main() {
 					if (z % q != 0) ckmax(x, z);
 				}
 			};
-			for (int d = 1; d * d <= q; ++d) f(d), f(q / d);
+			int r = q;
+			for (int d = 2; d * d <= r; ++d) {
+				if (r % d) continue;
+				while (r % d == 0) r /= d;
+				f(d);
+			}
+			f(r);
 			cout << x << '\n';
 		}
 	}

@@ -19,7 +19,6 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 const int N = 1 << 17, M = 6;
 int a[N], b[N], p[N * M];
 int f[N];
-pair<int, int> v[N * M];
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -28,26 +27,25 @@ signed main() {
 	rep(i, 0, M) cin >> a[i];
 	int n; cin >> n;
 	rep(i, 0, n) cin >> b[i];
-	
-	int p = 0;
-	rep(i, 0, n) rep(j, 0, M) v[p++] = {b[i] - a[j], i};
-	sort(v, v + p);
+	vector<pair<int, int>> v;
+	rep(i, 0, n) rep(j, 0, M) v.emplace_back(b[i] - a[j], i);
+	sort(all(v));
 
+	set<int> s;
 	multiset<int> t;
 	int ans = 2e9;
-	for (int l = 0, r = 0, cnt = 0; l < p; ++l) {
-		while (r < p && cnt < n) {
+	for (int l = 0, r = 0; l < n * M; ++l) {
+		while (r < n * M && sz(s) != n) {
 			auto [a, b] = v[r++];
-			if (f[b]++ == 0) ++cnt;
+			if (f[b]++ == 0) s.insert(b);
 			t.insert(a);
 		}
-		
-		if (cnt < n) break;
+		if (sz(s) != n) break;
 		
 		ckmin(ans, *t.rbegin() - *t.begin());
 
 		auto [a, b] = v[l];
-		if (--f[b] == 0) --cnt;
+		if (--f[b] == 0) s.erase(b);
 		t.erase(t.find(a));
 	}
 	cout << ans;

@@ -16,8 +16,8 @@ using ld = long double;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-const int N = 1 << 18, B = 30, NC = B * N;
-int l[NC], r[NC], t[NC], c = 1;
+const int N = 2e5, B = 30, NC = B * N;
+int l[NC], r[NC], t[NC] = {1}, c = 1;
 
 void insert(int x) {
 	int cur = 1;
@@ -34,7 +34,6 @@ int dfs(int u) { return u ? min(t[l[u]] + dfs(r[u]), t[r[u]] + dfs(l[u])) - 1 : 
 signed main() {
 	cin.tie(nullptr)->sync_with_stdio(false);
 
-	t[0] = 1;
 	int n; cin >> n;
 	rep(i, 0, n) {
 		int x; cin >> x;

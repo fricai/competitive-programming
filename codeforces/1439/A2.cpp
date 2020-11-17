@@ -44,17 +44,19 @@ void f(int n, int m) {
 		for (int y : {1, 2})
 			if (g[x][y]) ye.eb(x, y);
 			else ne.eb(x, y);
-	if (ye.empty()) return;
+	if (sz(ye) == 1) {	
+		auto [a, b] = ye[0];
+		int s = a - 1, t = b - 1;
+		if (s <= 0) s = 2;
+		if (t <= 0) t = 2;
+		stuff({{a, b}, {s, b}, {a, t}});
+		stuff({{a, b}, {a, t}, {s, t}});
+		stuff({{a, b}, {s, t}, {s, b}});
+		return;
+	}
 	if (sz(ye) == 2) return ye.eb(ne[0]), stuff(ye), f(2, 2);
 	if (sz(ye) == 3) return stuff(ye);
 	if (sz(ye) == 4) return stuff({{1, 1}, {2, 1}, {1, 2}}), f(2, 2);
-	auto [a, b] = ye[0];
-	int s = a - 1, t = b - 1;
-	if (s <= 0) s = 2;
-	if (t <= 0) t = 2;
-	stuff({{a, b}, {s, b}, {a, t}});
-	stuff({{a, b}, {a, t}, {s, t}});
-	stuff({{a, b}, {s, t}, {s, b}});
 }
 
 void solve() {

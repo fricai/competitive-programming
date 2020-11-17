@@ -18,39 +18,34 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 
 const int N = 1 << 17;
-vector<int> g[N], mn[N];
+vector<int> g[N];
 int deg[N];
 bool vis[N];
 
 void solve() {
 	int n, m, k; cin >> n >> m >> k;
 
-	rep(u, 0, n) g[u].clear();
+	rep(u, 0, n) g[u].clear(), deg[u] = 0, vis[u] = 0;
 	rep(e, 0, m) {
 		int u, v; cin >> u >> v; --u; --v;
 		g[u].push_back(v); g[v].push_back(u);
+		++deg[u]; ++deg[v];
 	}
+	rep(u, 0, n) sort(all(g[u]));
 
 	if (1ll * k * (k - 1) / 2 > m) return void(cout << "-1\n");
 
-	rep(u, 0, n) mn[u].clear();
-	rep(u, 0, n) {
-		vis[u] = 0;
-		deg[u] = sz(g[u]);
-		mn[deg[u]].push_back(u);
-		sort(all(g[u]));
-	}
+	priority_queue<pair<int, int>> pq;
+	rep(u, 0, n) pq.push({-deg[u], u});
 
-	for (int x = 0; x < n; x = mn[x].empty() ? x + 1 : x) {
-		if (mn[x].empty()) continue;
-
-		int u = mn[x].back(); mn[x].pop_back();
+	while (!pq.empty()) {
+		auto [x, u] = pq.top(); pq.pop();
 
 		if (vis[u]) continue;
-
+		x = -x;
 		vis[u] = true;
-		g[u].erase(stable_partition(all(g[u]), [&](int x) { return !vis[x]; }), end(g[u]));
 
+		g[u].erase(stable_partition(all(g[u]), [&](int x) { return !vis[x]; }), end(g[u]));
 		if (x == k - 1) {
 			if ([&]() {
 				for (int v : g[u])
@@ -65,16 +60,16 @@ void solve() {
 			}
 		}
 		if (x < k) {
-			for (int v : g[u]) {
-				--deg[v];
-				mn[deg[v]].push_back(v);
-				ckmin(x, deg[v]);
-			}
+			for (int v : g[u]) pq.push({-(--deg[v]), v});
 			continue;
 		}
-
 		vector<int> res = {u};
-		rep(i, 0, n) for (int v : mn[i]) if (!vis[v]) res.push_back(v), vis[v] = true;
+		while (!pq.empty()) {
+			auto [_, v] = pq.top(); pq.pop();
+			if (vis[v]) continue;
+			vis[v] = true;
+			res.push_back(v);
+		}
 		cout << 1 << ' ' << sz(res) << '\n';
 		for (int x : res) cout << x + 1 << ' ';
 		cout << '\n';

@@ -16,6 +16,7 @@ using ld = long double;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
+
 const int N = 1 << 17;
 vector<int> g[N], mn[N];
 int deg[N];
@@ -24,16 +25,16 @@ bool vis[N];
 void solve() {
 	int n, m, k; cin >> n >> m >> k;
 
-	for (int u = 1; u <= n; ++u) g[u].clear();
+	rep(u, 0, n) g[u].clear();
 	rep(e, 0, m) {
-		int u, v; cin >> u >> v;
+		int u, v; cin >> u >> v; --u; --v;
 		g[u].push_back(v); g[v].push_back(u);
 	}
 
 	if (1ll * k * (k - 1) / 2 > m) return void(cout << "-1\n");
 
 	rep(u, 0, n) mn[u].clear();
-	for (int u = 1; u <= n; ++u) {
+	rep(u, 0, n) {
 		vis[u] = 0;
 		deg[u] = sz(g[u]);
 		mn[deg[u]].push_back(u);
@@ -57,13 +58,12 @@ void solve() {
 						if (x != v && !binary_search(all(g[v]), x)) return false;
 				return true;
 			}()) {
-				cout << "2\n" << u;
-				for (int v : g[u]) cout << ' ' << v;
+				cout << "2\n" << u + 1;
+				for (int v : g[u]) cout << ' ' << v + 1;
 				cout << '\n';
 				return;
 			}
 		}
-
 		if (x < k) {
 			for (int v : g[u]) {
 				--deg[v];
@@ -76,11 +76,10 @@ void solve() {
 		vector<int> res = {u};
 		rep(i, 0, n) for (int v : mn[i]) if (!vis[v]) res.push_back(v), vis[v] = true;
 		cout << 1 << ' ' << sz(res) << '\n';
-		for (int x : res) cout << x << ' ';
+		for (int x : res) cout << x + 1 << ' ';
 		cout << '\n';
 		return;
-	}
-
+	}	
 	cout << "-1\n";
 }
 

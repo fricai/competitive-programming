@@ -39,7 +39,9 @@ int query(int v, int l, int r) {
 	if (x <= l && s[v] <= val) return val -= s[v], r - l;
 	if (mn[v] > val || r - l == 1) return 0;
 	int m = (l + r) / 2;
-	return query(v << 1, l, m) + query(v << 1|1, m, r);
+	int ans = query(v << 1, l, m);
+	ans += query(v << 1|1, m, r);
+	return ans;
 }
 int query(int a, int b) { return x = a, val = b, query(1, 0, n); }
 

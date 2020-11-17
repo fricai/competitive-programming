@@ -45,9 +45,9 @@ void f(int n, int m) {
 			if (g[x][y]) ye.eb(x, y);
 			else ne.eb(x, y);
 	if (ye.empty()) return;
-	else if (sz(ye) == 2) ye.eb(ne[0]), stuff(ye), ye = {ne[0]};
-	else if (sz(ye) == 3) return stuff(ye);
-	else if (sz(ye) == 4) stuff({{1, 1}, {2, 1}, {1, 2}}), ye = {{2, 2}};
+	if (sz(ye) == 2) return ye.eb(ne[0]), stuff(ye), f(2, 2);
+	if (sz(ye) == 3) return stuff(ye);
+	if (sz(ye) == 4) return stuff({{1, 1}, {2, 1}, {1, 2}}), f(2, 2);
 	auto [a, b] = ye[0];
 	int s = a - 1, t = b - 1;
 	if (s <= 0) s = 2;

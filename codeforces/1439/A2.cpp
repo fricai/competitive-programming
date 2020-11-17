@@ -30,25 +30,24 @@ int n, m;
 
 void f(int n, int m) {
 	if (n > 2) {
-		for (int j = 1; j <= m; ++j) if (g[n][j]) stuff({{n, j}, {n - 1, j}, {n - 1, j != 1 ? j - 1 : 2}});
+		rep(j, 0, m) if (g[n - 1][j]) stuff({{n - 1, j}, {n - 2, j}, {n - 2, abs(j - 1)}});
 		return f(n - 1, m);
 	}
-
 	if (m > 2) {
-		for (int i = 1; i <= m; ++i) if (g[i][m]) stuff({{i, m}, {i, m - 1}, {i != 1 ? i - 1 : 2, m - 1}});
+		rep(i, 0, n) if (g[i][m - 1]) stuff({{i, m - 1}, {i, m - 2}, {abs(i - 1), m - 2}});
 		return f(n, m - 1);
 	}
 
 	vector<pair<int, int>> ye, ne;
-	for (int x : {1, 2})
-		for (int y : {1, 2})
+	rep(x, 0, 2)
+		rep(y, 0, 2)
 			if (g[x][y]) ye.eb(x, y);
 			else ne.eb(x, y);
 	if (sz(ye) == 1) {	
 		auto [a, b] = ye[0];
-		int s = a - 1, t = b - 1;
-		if (s <= 0) s = 2;
-		if (t <= 0) t = 2;
+		int s = a + 1, t = b + 1;
+		if (s > 1) s = a - 1;
+		if (t > 1) t = b - 1;
 		stuff({{a, b}, {s, b}, {a, t}});
 		stuff({{a, b}, {a, t}, {s, t}});
 		stuff({{a, b}, {s, t}, {s, b}});
@@ -56,20 +55,23 @@ void f(int n, int m) {
 	}
 	if (sz(ye) == 2) return ye.eb(ne[0]), stuff(ye), f(2, 2);
 	if (sz(ye) == 3) return stuff(ye);
-	if (sz(ye) == 4) return stuff({{1, 1}, {2, 1}, {1, 2}}), f(2, 2);
+	if (sz(ye) == 4) return stuff({{0, 0}, {1, 0}, {0, 1}}), f(2, 2);
 }
 
 void solve() {
 	op.clear();
-	
+
 	cin >> n >> m;
-	for (int i = 1; i <= n; ++i) {
-		for (int j = 1; j <= m; ++j) {
+	rep(i, 0, n) {
+		rep(j, 0, m) {
 			char c; cin >> c;
-			g[i][j] = c != '0';
+			g[i][j] = c == '1';
 		}
 	}
 	f(n, m);
+	rep(i, 0, n)
+		rep(j, 0, m)
+			assert(!g[i][j]);
 }
 
 signed main() {
@@ -80,7 +82,7 @@ signed main() {
 		solve();
 		cout << sz(op) << '\n';
 		for (auto v : op) {
-			for (auto [x, y] : v) cout << x << ' ' << y << ' ';
+			for (auto [x, y] : v) cout << x + 1 << ' ' << y + 1 << ' ';
 			cout << '\n';
 		}
 	}

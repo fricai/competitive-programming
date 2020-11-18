@@ -20,18 +20,21 @@ const int N = 1 << 18;
 ll s[N << 1];
 int mn[N << 1], lz[N << 1], n;
 
-void push(int v, ll sz) {
+void push(int v, int l, int r) {
 	if (lz[v]) {
-		s[v] = sz * lz[v];
-		mn[v] = lz[v];
-		if (sz > 1) lz[v << 1] = lz[v << 1|1] = lz[v];
+		if (r - l > 1) {
+			int m = (l + r) / 2;
+			lz[v << 1] = lz[v << 1|1] = mn[v << 1] = mn[v << 1|1] = lz[v];
+			s[v << 1|0] = 1ll * (m - l) * lz[v];
+			s[v << 1|1] = 1ll * (r - m) * lz[v];
+		}
 		lz[v] = 0;
 	}
 }
 
 int x, val;
 int query(int v, int l, int r) {
-	push(v, r - l);
+	push(v, l, r);
 	if (r <= x) return 0;
 	if (x <= l && s[v] <= val) return val -= s[v], r - l;
 	if (mn[v] > val || r - l == 1) return 0;
@@ -41,7 +44,7 @@ int query(int v, int l, int r) {
 int query(int a, int b) { return x = a, val = b, query(1, 0, n); }
 
 int get(int v, int l, int r) {
-	push(v, r - l);
+	push(v, l, r);
 	if (val <= mn[v]) return r;
 	if (r - l == 1) return l;
 	int m = (l + r) / 2;
@@ -52,13 +55,17 @@ int get(int v) { return val = v, get(1, 0, n); }
 
 int lo, hi;
 void upd(int v, int l, int r) {
-	push(v, r - l);
+	push(v, l, r);
 	if (hi <= l || r <= lo) return;
-	if (lo <= l && r <= hi) return lz[v] = val, push(v, r - l);
+	if (lo <= l && r <= hi) {
+		lz[v] = mn[v] = val;
+		s[v] = 1ll * (r - l) * val;
+		return;
+	}
 	int m = (l + r) / 2;
 	upd(v << 1, l, m); upd(v << 1|1, m, r);
 	s[v] = s[v << 1] + s[v << 1|1];
-	mn[v] = min(mn[v << 1], mn[v << 1|1]);
+	mn[v] = mn[v << 1|1];
 }
 void update(int l, int r, int v) { lo = l; hi = r; val = v; upd(1, 0, n); }
 

@@ -43,15 +43,13 @@ int query(int v, int l, int r) {
 }
 int query(int a, int b) { return x = a, val = b, query(1, 0, n); }
 
-int get(int v, int l, int r) {
+ll value(int v, int l, int r) {
 	push(v, l, r);
-	if (mn[v] > val) return n;
-	if (r - l == 1) return l;
+	if (r - l == 1) return s[v];
 	int m = (l + r) / 2;
-	int res = get(v << 1, l, m);
-	return res < n ? res : get(v << 1|1, m, r);
+	return x < m ? value(v << 1, l, m) : value(v << 1|1, m, r);
 }
-int get(int v) { return val = v, get(1, 0, n); }
+ll value(int a) { return x = a, value(1, 0, n); }
 
 int lo, hi;
 void upd(int v, int l, int r) {
@@ -68,6 +66,16 @@ void upd(int v, int l, int r) {
 	mn[v] = min(mn[v << 1], mn[v << 1|1]);
 }
 void update(int l, int r, int v) { lo = l; hi = r; val = v; upd(1, 0, n); }
+
+int get(int v, int l, int r) {
+	push(v, l, r);
+	if (mn[v] > val) return n;
+	if (r - l == 1) return l;
+	int m = (l + r) / 2;
+	int res = get(v << 1, l, m);
+	return res < n ? res : get(v << 1|1, m, r);
+}
+int get(int v) { return val = v, get(1, 0, n); }
 
 signed main() {
 	cin.tie(nullptr)->sync_with_stdio(false);
@@ -86,7 +94,8 @@ signed main() {
 			cout << query(--x, v) << '\n';
 		} else {
 			int x, v; cin >> x >> v;
-			update(get(v), x, v);
+			int r = get(v);
+			if (r < n) update(r, x, v);
 		}
 	}
 }

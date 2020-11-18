@@ -45,11 +45,11 @@ int query(int a, int b) { return x = a, val = b, query(1, 0, n); }
 
 int get(int v, int l, int r) {
 	push(v, l, r);
-	if (val <= mn[v]) return r;
+	if (val <= mn[v]) return n;
 	if (r - l == 1) return l;
 	int m = (l + r) / 2;
 	int res = get(v << 1, l, m);
-	return res < m ? res : get(v << 1|1, m, r);
+	return res < n ? res : get(v << 1|1, m, r);
 }
 int get(int v) { return val = v, get(1, 0, n); }
 

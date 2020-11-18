@@ -94,8 +94,7 @@ signed main() {
 			cout << query(--x, v) << '\n';
 		} else {
 			int x, v; cin >> x >> v;
-			int r = get(v);
-			if (r < n) update(r, x, v);
+			update(get(v), x, v);
 		}
 	}
 }

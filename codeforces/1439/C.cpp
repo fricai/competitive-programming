@@ -45,7 +45,7 @@ int query(int a, int b) { return x = a, val = b, query(1, 0, n); }
 
 int get(int v, int l, int r) {
 	push(v, l, r);
-	if (val <= mn[v]) return n;
+	if (mn[v] > val) return n;
 	if (r - l == 1) return l;
 	int m = (l + r) / 2;
 	int res = get(v << 1, l, m);

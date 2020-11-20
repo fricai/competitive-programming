@@ -58,7 +58,7 @@ void upd(int v, int l, int r) {
 	int m = (l + r) / 2;
 	upd(v << 1, l, m); upd(v << 1|1, m, r);
 	s[v] = s[v << 1] + s[v << 1|1];
-	mn[v] = mn[v << 1|1];
+	mn[v] = min(mn[v << 1], mn[v << 1|1]);
 }
 void update(int l, int r, int v) { lo = l; hi = r; val = v; upd(1, 0, n); }
 

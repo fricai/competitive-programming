@@ -24,7 +24,7 @@ void push(int v, ll sz) {
 	if (lz[v]) {
 		s[v] = sz * lz[v];
 		mn[v] = lz[v];
-		if (v < N) lz[v << 1] = lz[v << 1|1] = lz[v];
+		if (sz > 1) lz[v << 1] = lz[v << 1|1] = lz[v];
 		lz[v] = 0;
 	}
 }

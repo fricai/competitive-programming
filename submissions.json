@@ -24429,6 +24429,23 @@
     ],
     "timestamp": "Nov/18/2020 09:59"
   },
+  "CF99198557": {
+    "contest_id": 1451,
+    "language": "GNU C++17",
+    "path": "codeforces/1451/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Nullify The Matrix",
+    "problem_url": "https://codeforces.com/contest/1451/problem/F",
+    "submission_id": "CF99198557",
+    "submission_url": "https://codeforces.com/contest/1451/submission/99198557",
+    "tags": [
+      "constructive algorithms",
+      "games",
+      "*2700"
+    ],
+    "timestamp": "Nov/22/2020 01:48"
+  },
   "CF99273390": {
     "contest_id": 1446,
     "language": "GNU C++17",

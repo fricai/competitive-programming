@@ -24429,6 +24429,24 @@
     ],
     "timestamp": "Nov/18/2020 09:59"
   },
+  "CF99273390": {
+    "contest_id": 1446,
+    "language": "GNU C++17",
+    "path": "codeforces/1446/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Line Distance",
+    "problem_url": "https://codeforces.com/contest/1446/problem/F",
+    "submission_id": "CF99273390",
+    "submission_url": "https://codeforces.com/contest/1446/submission/99273390",
+    "tags": [
+      "binary search",
+      "data structures",
+      "geometry",
+      "*3200"
+    ],
+    "timestamp": "Nov/22/2020 23:44"
+  },
   "CF99811658": {
     "contest_id": 1454,
     "language": "Haskell",

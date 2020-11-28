@@ -24429,6 +24429,23 @@
     ],
     "timestamp": "Nov/18/2020 09:59"
   },
+  "CF99811758": {
+    "contest_id": 1454,
+    "language": "Haskell",
+    "path": "codeforces/1454/A.hs",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Special Permutation",
+    "problem_url": "https://codeforces.com/contest/1454/problem/A",
+    "submission_id": "CF99811758",
+    "submission_url": "https://codeforces.com/contest/1454/submission/99811758",
+    "tags": [
+      "constructive algorithms",
+      "probabilities",
+      "*800"
+    ],
+    "timestamp": "Nov/28/2020 23:22"
+  },
   "CF99811980": {
     "contest_id": 1454,
     "language": "Haskell",

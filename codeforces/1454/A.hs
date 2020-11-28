@@ -1,6 +1,11 @@
-import Control.Monad ( replicateM )
+import Control.Applicative ()
+
+f :: Int -> IO ()
+f 0 = return ()
+f t = do
+    n <- readLn
+    putStrLn . unwords . map show $ n : [1..(n - 1)]
+    f (t - 1)
 
 main :: IO ()
-main = do
-    t <- readLn
-    putStrLn . unlines . map (\n -> unwords . map show $ n : [1..(n - 1)]) =<< replicateM t (readLn :: IO Int)
+main = f =<< readLn

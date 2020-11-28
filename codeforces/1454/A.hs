@@ -7,5 +7,5 @@ f t = do
 
 main :: IO ()
 main = do
-    t <- readLn
+    t <- readLn :: IO Int
     f t

@@ -24429,6 +24429,25 @@
     ],
     "timestamp": "Nov/18/2020 09:59"
   },
+  "CF99890622": {
+    "contest_id": 1456,
+    "language": "GNU C++17",
+    "path": "codeforces/1456/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "New Game Plus!",
+    "problem_url": "https://codeforces.com/contest/1456/problem/C",
+    "submission_id": "CF99890622",
+    "submission_url": "https://codeforces.com/contest/1456/submission/99890622",
+    "tags": [
+      "binary search",
+      "dp",
+      "greedy",
+      "sortings",
+      "*2200"
+    ],
+    "timestamp": "Nov/29/2020 15:34"
+  },
   "CF99914209": {
     "contest_id": 1437,
     "language": "GNU C++17",

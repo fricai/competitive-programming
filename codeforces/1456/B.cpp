@@ -16,21 +16,35 @@ using ld = long double;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-const int N = 1 << 6;
+const int N = 1 << 17, M = 1 << 7;
 int a[N];
+int p[M][M], s[M][M];
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
 	int n; cin >> n;
-	if (N <= n) return cout << "1\n", 0;
-
-	rep(i, 0, n) cin >> a[i];	
+	rep(i, 0, n) cin >> a[i];
+	rep(i, 1, n) {
+		int x = a[i] ^ a[i - 1];
+		if ((i > 1 && a[i - 2] > x) || (i + 1 < n && x > a[i + 1])) return cout << "1\n", 0;
+	}
+	assert(n <= 60);
+	
+	rep(i, 0, n) {
+		p[i][0] = s[i][0] = a[i];
+		for (int j = 1; i + j < n; ++j)
+			p[i][j] = p[i][j - 1] ^ a[i + j];
+		for (int j = 1; j <= i; ++j)
+			s[i][j] = s[i][j - 1] ^ a[i - j];
+	}
+	
 	int ans = N;
 	rep(i, 1, n)
-		for (int j = 0, r = a[i]; i + j < n; ++j, r ^= a[i + j])
-			for (int k = 0, l = a[i - 1]; k < i; ++k, l ^= a[i - k - 1])
-				if (l > r) ckmin(ans, j + k);
+		for (int j = 0; i + j < n; ++j)
+			for (int k = 0; k < i; ++k)
+				if (s[i - 1][k] > p[i][j])
+					ckmin(ans, j + k);
 	cout << (ans < N ? ans : -1);
 }

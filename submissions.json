@@ -24429,6 +24429,25 @@
     ],
     "timestamp": "Nov/18/2020 09:59"
   },
+  "CF99914209": {
+    "contest_id": 1437,
+    "language": "GNU C++17",
+    "path": "codeforces/1437/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Marketing Scheme",
+    "problem_url": "https://codeforces.com/contest/1437/problem/A",
+    "submission_id": "CF99914209",
+    "submission_url": "https://codeforces.com/contest/1437/submission/99914209",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Nov/29/2020 20:08"
+  },
   "CF99914669": {
     "contest_id": 1437,
     "language": "GNU C++17",

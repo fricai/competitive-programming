@@ -33,8 +33,8 @@ ll nCr(int n, int r) {
 
 ll solve(int f, int w, int h) {
 	ll res = 0;
-	for (int k = 0; k <= f + 1 && k * h < w; ++k)
-		res = (res + nCr(f + 1, k) * nCr(w - k * h - 1, k - 1)) % M;
+	for (int u = 0; u <= f + 1 && u * h < w; ++u)
+		res = (res + nCr(f + 1, u) * nCr(w - u * h - 1, u - 1)) % M;
 	return res;
 }
 

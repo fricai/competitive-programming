@@ -16,7 +16,7 @@ using ld = long double;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-const int N = 1 << 19, inf = 1e9;
+const int N = 1 << 19;
 int mn[N << 1], lz[N << 1], n;
 
 void push(int v) {
@@ -41,17 +41,11 @@ void update(int v, int l, int r) { lo = l; hi = r; x = v; upd(1, 0, n); }
 
 int get(int v, int l, int r) {
 	push(v);
-	if (mn[v] > 0) return -1;
-	if (r - l == 1) return mn[v] = inf, l;
+	if (mn[v] > 0) return n;
+	if (r - l == 1) return l;
 	int m = (l + r) / 2;
 	int res = get(v << 1|1, m, r);
-	if (res < 0) {
-		--lz[v << 1|1];
-		res = get(v << 1, l, m);
-	}
-	push(v << 1); push(v << 1|1);
-	mn[v] = min(mn[v << 1], mn[v << 1|1]);
-	return res;	
+	return res < n ? res : get(v << 1, l, m);	
 }
 
 int t[N << 1];
@@ -67,18 +61,6 @@ int sum(int l, int r) {
 	return res;
 }
 
-void build(int v, int l, int r) {
-	if (r - l == 1) {
-		int x; cin >> x;
-		x = l - x + 1;
-		mn[v] = x < 0 ? inf : x;
-		return;
-	}
-	int m = (l + r) / 2;
-	build(v << 1, l, m); build(v << 1|1, m, r);
-	mn[v] = min(mn[v << 1], mn[v << 1|1]);
-}
-
 int ans[N];
 
 signed main() {
@@ -86,10 +68,18 @@ signed main() {
 	cin.tie(nullptr);
 
 	int q; cin >> n >> q;
-	build(1, 0, n);
+	rep(i, 0, n) {
+		int x; cin >> x;
+		x = i - x + 1;
+		update(x < 0 ? N : x, i, i + 1);
+	}
 
 	vector<int> seq;
-	for (int lst; (lst = get(1, 0, n)) != -1; ) seq.push_back(lst);
+	for (int lst; (lst = get(1, 0, n)) < n; ) {
+		seq.push_back(lst);
+		update(N, lst, lst + 1);
+		update(-1, lst + 1, n);
+	}
 
 	vector<tuple<int, int, int>> E;
 	rep(i, 0, q) {
@@ -100,7 +90,10 @@ signed main() {
 
 	int i = 0;
 	for (auto &[l, r, idx] : E) {
-		while (i < sz(seq) && l <= seq[i]) increment(seq[i++]);
+		while (i < sz(seq) && l <= seq[i]) {
+			increment(seq[i]);
+			++i;
+		}
 		ans[idx] = sum(0, r);
 	}
 	rep(i, 0, q) cout << ans[i] << '\n';

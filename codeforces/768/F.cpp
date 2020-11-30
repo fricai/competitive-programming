@@ -27,7 +27,7 @@ int bpow(ll a, ll b) {
 }
 
 ll nCr(int n, int r) {
-	if (n < 0 || r < 0 || r > n) return 0;
+	if (r < 0 || r > n) return 0;
 	return fac[n] * fi[r] % M * fi[n - r] % M;
 }
 

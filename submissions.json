@@ -6703,6 +6703,26 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF100057384": {
+    "contest_id": 768,
+    "language": "GNU C++17",
+    "path": "codeforces/768/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Barrels and boxes",
+    "problem_url": "https://codeforces.com/contest/768/problem/F",
+    "submission_id": "CF100057384",
+    "submission_url": "https://codeforces.com/contest/768/submission/100057384",
+    "tags": [
+      "brute force",
+      "combinatorics",
+      "math",
+      "number theory",
+      "probabilities",
+      "*2300"
+    ],
+    "timestamp": "Nov/30/2020 22:50"
+  },
   "CF100057621": {
     "contest_id": 768,
     "language": "GNU C++17",

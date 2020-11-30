@@ -20,7 +20,7 @@ const int N = 1 << 11, A = 26;
 char g[N][N];
 int l[A], r[A], u[A], d[A];
 
-int solve() {
+void solve() {
 	int n, m; cin >> n >> m;
 	rep(i, 0, n) cin >> g[i];
 	rep(i, 0, A) l[i] = u[i] = N, r[i] = d[i] = -1;
@@ -41,22 +41,25 @@ int solve() {
 
 	for (int c = mx; 0 <= c; --c) {
 		if (l[c] == N) { l[c] = l[c + 1]; r[c] = r[c + 1]; u[c] = u[c + 1]; d[c] = d[c + 1]; continue; }
-		if (l[c] != r[c] && u[c] != d[c]) return -1;
+		if (l[c] != r[c] && u[c] != d[c]) return void(cout << "NO\n");
 		if (l[c] == r[c]) {
 			int k = l[c];
 			for (int j = u[c]; j <= d[c]; ++j) {
-				if (g[k][j] != c + 'a' && g[k][j] != '$') return -1;
+				if (g[k][j] != c + 'a' && g[k][j] != '$') return void(cout << "NO\n");
 				g[k][j] = '$';
 			}
 		} else {
 			int k = u[c];
 			for (int i = l[c]; i <= r[c]; ++i) {
-				if (g[i][k] != c + 'a' && g[i][k] != '$') return -1;
+				if (g[i][k] != c + 'a' && g[i][k] != '$') return void(cout << "NO\n");
 				g[i][k] = '$';
 			}
 		}
 	}
-	return mx + 1;
+	
+	cout << "YES\n" << mx + 1 << '\n';
+	for (int c = 0; c <= mx; ++c)
+		cout << l[c] + 1 << ' ' << u[c] + 1 << ' ' << r[c] + 1 << ' ' << d[c] + 1 << '\n';
 }
 
 signed main() {
@@ -64,12 +67,5 @@ signed main() {
 	cin.tie(nullptr);
 
 	int t; cin >> t;
-	while (t--) {
-		int x = solve();
-		if (x < 0) cout << "NO\n";
-		else {
-			cout << "YES\n" << x << '\n';
-			rep(c, 0, x) cout << l[c] + 1 << ' ' << u[c] + 1 << ' ' << r[c] + 1 << ' ' << d[c] + 1 << '\n';
-		}
-	}
+	while (t--) solve();
 }

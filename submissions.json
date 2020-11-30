@@ -6703,6 +6703,24 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF100045621": {
+    "contest_id": 786,
+    "language": "GNU C++17",
+    "path": "codeforces/786/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Legacy",
+    "problem_url": "https://codeforces.com/contest/786/problem/B",
+    "submission_id": "CF100045621",
+    "submission_url": "https://codeforces.com/contest/786/submission/100045621",
+    "tags": [
+      "data structures",
+      "graphs",
+      "shortest paths",
+      "*2300"
+    ],
+    "timestamp": "Nov/30/2020 21:50"
+  },
   "CF100057299": {
     "contest_id": 768,
     "language": "GNU C++17",

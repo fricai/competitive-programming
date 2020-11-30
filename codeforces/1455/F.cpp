@@ -17,7 +17,7 @@ template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 1 << 9;
-string f[N];
+string f[N], g[N];
 
 string solve() {
 	int n, k; cin >> n >> k;
@@ -26,18 +26,20 @@ string solve() {
 
 	string s; cin >> s;
 	rep(i, 0, n) {
-		f[i + 1] = f[i] + s[i];
+		f[i + 1] = g[i + 1] = f[i] + s[i];
 		ckmin(f[i + 1], f[i] + up(s[i]));
 		ckmin(f[i + 1], f[i] + down(s[i]));
 
 		if (i > 0)  {
 			ckmin(f[i + 1], f[i].substr(0, i - 1) + s[i] + f[i].back());
-			ckmin(f[i + 1], f[i - 1] + s[i] + s[i - 1]);
-			ckmin(f[i + 1], f[i - 1] + up(s[i]) + s[i - 1]);
-			ckmin(f[i + 1], f[i - 1] + down(s[i]) + s[i - 1]);
-			ckmin(f[i + 1], f[i - 1] + s[i - 1] + s[i]);
+
+			auto t = g[i]; char c = t.back(); t.pop_back();
+			ckmin(f[i + 1], t + s[i] + c);
+			ckmin(f[i + 1], t + up(s[i]) + c);
+			ckmin(f[i + 1], t + down(s[i]) + c);
 		}
-		if (i > 1) ckmin(f[i + 1], f[i - 1].substr(0, i - 2) + s[i] + f[i - 1].back() + s[i - 1]);
+		if (i > 1) ckmin(f[i + 1], g[i].substr(0, i - 2) + s[i] + g[i].substr(i - 2));
+		ckmin(f[i + 1], g[i] + s[i]);
 	}
 	return f[n];
 }

@@ -6703,6 +6703,23 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF100067779": {
+    "contest_id": 1455,
+    "language": "GNU C++17",
+    "path": "codeforces/1455/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "String and Operations",
+    "problem_url": "https://codeforces.com/contest/1455/problem/F",
+    "submission_id": "CF100067779",
+    "submission_url": "https://codeforces.com/contest/1455/submission/100067779",
+    "tags": [
+      "dp",
+      "greedy",
+      "*2800"
+    ],
+    "timestamp": "Dec/01/2020 02:05"
+  },
   "CF100067924": {
     "contest_id": 1455,
     "language": "GNU C++17",

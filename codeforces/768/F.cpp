@@ -26,14 +26,14 @@ int bpow(ll a, ll b) {
 	return res;
 }
 
-ll nCr(ll n, int r) {
+ll nCr(int n, int r) {
 	if (n < 0 || r < 0 || r > n) return 0;
 	return fac[n] * fi[r] % M * fi[n - r] % M;
 }
 
-ll solve(int f, ll w, int h) {
+ll solve(int f, int w, int h) {
 	ll res = 0;
-	for (int k = 0; k <= f + 1; ++k)
+	for (int k = 0; k <= f + 1 && k * h < w; ++k)
 		res = (res + nCr(f + 1, k) * nCr(w - k * h - 1, k - 1)) % M;
 	return res;
 }

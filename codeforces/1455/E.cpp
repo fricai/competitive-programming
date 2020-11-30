@@ -37,13 +37,13 @@ ll solve() {
 	iota(ord, ord + N, 0);
 	ll res = inf;
 	do {
-		ll l = 0, r = inf;
-		while (l < r) {
-			ll mid = (l + r) / 2;
-			if (f(mid) < f(mid + 1)) r = mid;
-			else l = mid + 1;
+		ll a = 0, b = inf;
+		while (b - a >= 5) {
+			ll mid = (a + b) / 2;
+			if (f(mid) > f(mid + 1)) a = mid;
+			else b = mid + 1;
 		}
-		ckmin(res, f(l));
+		rep(i, a, b + 1) ckmin(res, f(i));
 	} while (next_permutation(ord, ord + N));
 	return res;
 }

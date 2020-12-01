@@ -21,11 +21,11 @@ int f[T], g[T], X, d;
 
 bool check(int n, int m, int x, int y) {
 	if (x < 0 || x > n || y < 0 || y > m) return false;
-	fill(g, g + n + m, 0);
+	fill(g, g + n + m + 1, 0);
 	for (int i = 1; i <= n; ++i)
 		for (int j = 1; j <= m; ++j)
 			++g[abs(i - x) + abs(j - y)];
-	rep(i, 0, n + m) if (f[i] != g[i]) return false;
+	rep(i, 0, n + m + 1) if (f[i] != g[i]) return false;
 	return true;
 }
 
@@ -46,6 +46,7 @@ signed main() {
 
 	d = -1;
 	rep(i, 0, t) { int a; cin >> a; ++f[a]; ckmax(d, a); }
+
 	rep(i, 1, T) if (f[i] != 4 * i) { X = i; break; }
 
 	if (f[0] == 1 && d >= 0 && X > 0) {

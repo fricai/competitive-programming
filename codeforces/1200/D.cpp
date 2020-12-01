@@ -19,10 +19,13 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 const int N = 1 << 11;
 char g[N][N], h[N][N];
 int a[N][N], b[N][N], p[N][N];
+bool yes[N];
 
 void solve(int n, int k, char g[][N], int a[][N]) {
 	rep(i, 0, n) rep(j, 0, n) p[i + 1][j] = p[i][j] + (g[i][j] != 'W');
+
 	auto new_created = [&](int i, int j) { return p[n][j] != 0 && p[k + i][j] - p[i][j] == p[n][j]; };
+
 	rep(i, 0, n - k + 1) {
 		rep(j, 0, k) a[i][0] += new_created(i, j);
 		rep(j, 0, n - k) a[i][j + 1] = a[i][j] - new_created(i, j) + new_created(i, j + k);
@@ -48,7 +51,7 @@ signed main() {
 	}
 	rep(i, 0, n) {
 		bool yes = true;
-		rep(j, 0, n) if (h[i][j] != 'W') yes = false;
+		rep(j, 0, n) if (g[j][i] != 'W') yes = false;
 		cnt += yes;
 	}
 	solve(n, k, g, a);

@@ -23,12 +23,22 @@ bool yes[N];
 
 void solve(int n, int k, char g[][N], int a[][N]) {
 	rep(i, 0, n) rep(j, 0, n) p[i + 1][j] = p[i][j] + (g[i][j] != 'W');
+	// rep(i, 0, n + 1) {
+	// 	rep(j, 0, n) cerr << p[i][j] << ' ';
+	// 	cerr << '\n';
+	// }
 
 	auto new_created = [&](int i, int j) { return p[n][j] != 0 && p[k + i][j] - p[i][j] == p[n][j]; };
 
 	rep(i, 0, n - k + 1) {
-		rep(j, 0, k) a[i][0] += new_created(i, j);
-		rep(j, 0, n - k) a[i][j + 1] = a[i][j] - new_created(i, j) + new_created(i, j + k);
+		int col = 0;
+		rep(j, 0, k) if (new_created(i, j)) ++col;
+		a[i][0] = col;
+		rep(j, 0, n - k) {
+			if (new_created(i, j)) --col;
+			if (new_created(i, j + k)) ++col;
+			a[i][j + 1] = col;
+		}
 	}
 }
 

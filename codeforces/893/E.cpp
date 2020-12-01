@@ -28,6 +28,7 @@ ll nCr(int n, int k) {
 int solve() {
 	int x, y, res = 1; cin >> x >> y; --y;
 	auto f = [&](int k) { res = res * nCr(y + k, k) % M; };
+
 	for (int d = 2; d * d <= x; ++d) {
 		if (x % d == 0) {
 			int k = 0;
@@ -36,7 +37,8 @@ int solve() {
 		}
 	}
 	if (x != 1) f(1);
-	for (ll t = 2; y; y >>= 1, t = t * t % M)
+	ll t = 2;
+	for ( ; y; y >>= 1, t = t * t % M)
 		if (y & 1) res = res * t % M;
 	return res;
 }

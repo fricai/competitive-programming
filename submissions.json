@@ -6703,6 +6703,26 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF100114254": {
+    "contest_id": 1200,
+    "language": "GNU C++17",
+    "path": "codeforces/1200/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Compress Words",
+    "problem_url": "https://codeforces.com/contest/1200/problem/E",
+    "submission_id": "CF100114254",
+    "submission_url": "https://codeforces.com/contest/1200/submission/100114254",
+    "tags": [
+      "brute force",
+      "hashing",
+      "implementation",
+      "string suffix structures",
+      "strings",
+      "*2000"
+    ],
+    "timestamp": "Dec/01/2020 18:33"
+  },
   "CF100117855": {
     "contest_id": 1200,
     "language": "GNU C++17",

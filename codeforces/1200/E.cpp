@@ -16,20 +16,20 @@ using ld = long double;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-const int N = 1 << 21;
+const int N = 1 << 20;
 int lps[N];
 
 int search(string s) {
-	int n = s.length();
+    int n = s.length(); lps[0] = 0;
 	for (int i = 1, len = 0; i < n; ) {
-		if (s[i] == s[len]) lps[i++] = ++len;
-		else {
-			if (len != 0) len = lps[len - 1];
+        if (s[i] == s[len]) lps[i++] = ++len;
+        else {
+            if (len != 0) len = lps[len - 1];
 			else lps[i++] = 0;
-		}
-	}
-	int res = lps[n - 1];
-	return res > n / 2 ? n / 2 : res;
+        }
+    }
+    int res = lps[n - 1];
+	return (res > n / 2)? n / 2 : res;
 }
 
 signed main() {

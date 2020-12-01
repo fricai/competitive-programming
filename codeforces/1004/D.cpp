@@ -16,7 +16,7 @@ using ld = long double;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-const int T = 1 << 20;
+const int T = 1 << 22;
 int f[T], g[T], X, d;
 
 bool check(int n, int m, int x, int y) {

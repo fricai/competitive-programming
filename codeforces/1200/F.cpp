@@ -28,15 +28,22 @@ int mod(int x) { x %= LCM; return x + (x < 0 ? LCM : 0); }
 int col[N * LCM];
 void dfs(int u) {
 	col[u] = 1;
-	if (col[nxt[u]] == 0) dfs(nxt[u]);
+	if (col[nxt[u]] == 2) {
+		dp[u] = dp[nxt[u]];
+		col[u] = 2;
+		return;
+	}
 	if (col[nxt[u]] == 1) {
 		vector<int> cycle = {unget(u)};
 		for (int v = nxt[u]; v != u; v = nxt[v]) cycle.push_back(unget(v));
-		sort(all(cycle)); dp[u] = unique(all(cycle)) - begin(cycle);
+		sort(all(cycle));
+		dp[u] = unique(all(cycle)) - begin(cycle);
 		for (int v = nxt[u]; v != u; v = nxt[v]) dp[v] = dp[u], col[v] = 2;
+		col[u] = 2;
+		return;
 	}
-	dp[u] = dp[nxt[u]];
-	col[u] = 2;
+	dfs(nxt[u]);
+	col[u] = 2; dp[u] = dp[nxt[u]];
 }
 
 signed main() {
@@ -57,7 +64,6 @@ signed main() {
 		}
 	}
 	rep(u, 0, n * LCM) if (!col[u]) dfs(u);
-
 	int q; cin >> q;
 	while (q--) {
 		int u, y; cin >> u >> y; --u;

@@ -30,10 +30,11 @@ bool check(int n, int m, int x, int y) {
 }
 
 bool solve(int n, int m) {
+	assert(n <= m);
 	int x = X;
 	int y = n + m - d - x;
 	if (check(n, m, y, x)) swap(x, y);
-	else if (!check(n, m, x, y)) return false;
+	if (!check(n, m, x, y)) return false;
 	cout << n << ' ' << m << '\n' << x << ' ' << y << '\n';
 	return true;
 }

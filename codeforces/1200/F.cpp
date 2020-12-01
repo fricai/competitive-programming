@@ -16,14 +16,16 @@ using ld = long double;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-const int N = 1 << 10, LCM = 2520, NC = N * LCM;
-int dp[NC], k[N], nxt[NC], col[NC];
+const int N = 1 << 10, LCM = 2520;
+int dp[N * LCM], k[N], m[N], nxt[N * LCM];
 vector<int> g[N];
+
 
 int get(int n, int k) { return n * LCM + k; }
 int unget(int x) { return x / LCM; }
 int mod(int x) { x %= LCM; return x + (x < 0 ? LCM : 0); }
 
+int col[N * LCM];
 void dfs(int u) {
 	col[u] = 1;
 	if (col[nxt[u]] == 0) dfs(nxt[u]);
@@ -44,14 +46,14 @@ signed main() {
 	int n; cin >> n;
 	rep(i, 0, n) { cin >> k[i]; k[i] = mod(k[i]); }
 	rep(i, 0, n) {
-		int m; cin >> m; g[i].resize(m);
+		cin >> m[i]; g[i].resize(m[i]);
 		for (int &x : g[i]) cin >> x, --x;
 	}
 
 	rep(u, 0, n) {
 		rep(c, 0, LCM) {
 			int r = mod(c + k[u]);
-			nxt[get(u, c)] = get(g[u][r % sz(g[u])], r);
+			nxt[get(u, c)] = get(g[u][r % m[u]], r);
 		}
 	}
 	rep(u, 0, n * LCM) if (!col[u]) dfs(u);

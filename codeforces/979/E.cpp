@@ -34,17 +34,17 @@ signed main() {
 	int res = 0;
 	dp[0][0][0][0] = 1;
 	for (int i = 1, cur = 1; i <= n; ++i, cur ^= 1) {
-		rep(w, 0, 2) {
-			rep(b, 0, 2) {
+		rep(w1, 0, 2) {
+			rep(b1, 0, 2) {
 				rep(parity, 0, 2) {
-					auto &x = dp[cur][w][b][parity]; x = 0;
+					auto &x = dp[cur][w1][b1][parity]; x = 0;
 					if (c[i] != 1) {
-						add(x, mult(dp[!cur][w][b][parity], w ? q[i - 2] : 0));
-						if (b) add(x, mult(dp[!cur][w][0][!parity] + dp[!cur][w][1][!parity], w ? q[i - 2] : q[i - 1]));
+						add(x, mult(dp[!cur][w1][b1][ parity], w1 ? q[i - 2] : 0));
+						if (b1) add(x, mult(dp[!cur][w1][0][!parity] + dp[!cur][w1][1][!parity], w1 ? q[i - 2] : q[i - 1]));
 					}
 					if (c[i] != 0) {
-						add(x, mult(dp[!cur][w][b][parity], b ? q[i - 2] : 0));
-						if (w) add(x, mult(dp[!cur][0][b][!parity] + dp[!cur][1][b][!parity], b ? q[i - 2] : q[i - 1]));
+						add(x, mult(dp[!cur][w1][b1][parity], b1 ? q[i - 2] : 0));
+						if (w1) add(x, mult(dp[!cur][0][b1][!parity] + dp[!cur][1][b1][!parity], b1 ? q[i - 2] : q[i - 1]));
 					}
 					if (i == n && p == parity) add(res, x);
 				}

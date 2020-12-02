@@ -17,7 +17,7 @@ template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 1 << 6, M = 1e9 + 7;
-int dp[N][2][2][2];
+int dp[N][N][N][N];
 int c[N], q[N];
 
 template<class T> void add(T &a, const T& b) { a += b; if (M <= a) a -= M; }
@@ -34,21 +34,22 @@ signed main() {
 	int res = 0;
 	dp[0][0][0][0] = 1;
 	for (int i = 1, cur = 1; i <= n; ++i, cur ^= 1) {
-		rep(w1, 0, 2) {
-			rep(b1, 0, 2) {
-				rep(parity, 0, 2) {
-					auto &x = dp[cur][w1][b1][parity]; x = 0;
+		for (int w1 = 0; w1 <= i; ++w1) {
+			for (int b1 = 0; w1 + b1 <= i; ++b1) {
+				for (int w0 = 0; w1 + b1 + w0 <= i; ++w0) {
+					int b0 = i - w1 - b1 - w0;
+					auto &x = dp[w1][b1][w0][b0];
 					if (c[i] != 1) {
-						add(x, mult(dp[!cur][w1][b1][ parity], w1 ? q[i - 2] : 0));
-						if (b1) add(x, mult(dp[!cur][w1][0][!parity] + dp[!cur][w1][1][!parity], w1 ? q[i - 2] : q[i - 1]));
+						if (b0) add(x, mult(dp[w1][b1][w0][b0 - 1], w1 ? q[i - 2] : 0));
+						if (b1) add(x, mult(dp[w1][b1 - 1][w0][b0], w1 ? q[i - 2] : q[i - 1]));
 					}
 					if (c[i] != 0) {
-						add(x, mult(dp[!cur][w1][b1][parity], b1 ? q[i - 2] : 0));
-						if (w1) add(x, mult(dp[!cur][0][b1][!parity] + dp[!cur][1][b1][!parity], b1 ? q[i - 2] : q[i - 1]));
+						if (w0) add(x, mult(dp[w1][b1][w0 - 1][b0], b1 ? q[i - 2] : 0));
+						if (w1) add(x, mult(dp[w1 - 1][b1][w0][b0], b1 ? q[i - 2] : q[i - 1]));
 					}
-					if (i == n && p == parity) add(res, x);
+					if (i == n && p == ((b1 + w1) & 1)) add(res, x);
 				}
-			}
+			}	
 		}
 	}
 	cout << res;

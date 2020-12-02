@@ -17,7 +17,7 @@ template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 1 << 6, M = 1e9 + 7;
-int dp[2][2][2][2];
+int dp[N][2][2][2];
 int c[N], q[N];
 
 template<class T> void add(T &a, const T& b) { a += b; if (M <= a) a -= M; }

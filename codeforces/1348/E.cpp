@@ -48,7 +48,7 @@ signed main() {
 				if (a[i] % k == l || k <= (a[i] - l) % k + b[i]) {
 					if (dp[i - 1][sub(j, l)]) {
 						dp[i][j] = true;
-						ckmin(rem[i][j], (rem[i - 1][sub(j, l)] + b[i] + a[i] - l) % k);
+						ckmin(rem[i][j], rem[i - 1][sub(j, l)] + (b[i] + a[i] - l) % k);
 					}
 				}
 			}
@@ -58,6 +58,6 @@ signed main() {
 	ll ans = 0;
 	rep(j, 0, k)
 		if (dp[n][j])
-			ckmax(ans, (tot - j - rem[n][j]) / k);
+			ckmax(ans, (tot - j) / k);
 	cout << ans;
 }

@@ -36,7 +36,7 @@ signed main() {
 		rep(j, 0, k)
 			rep(l, 0, min(k, a[i] + 1))
 				if (a[i] % k == l || k <= (a[i] - l) % k + b[i])
-					dp[i][j] |= dp[i - 1][(j - l + k) % k];
+					dp[i][j] |= dp[i - 1][((j - l) % k + k) % k];
 
 	ll ans = 0;
 	rep(j, 0, k)

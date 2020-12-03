@@ -6703,6 +6703,25 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF100263217": {
+    "contest_id": 698,
+    "language": "GNU C++17",
+    "path": "codeforces/698/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "LRU",
+    "problem_url": "https://codeforces.com/contest/698/problem/C",
+    "submission_id": "CF100263217",
+    "submission_url": "https://codeforces.com/contest/698/submission/100263217",
+    "tags": [
+      "bitmasks",
+      "dp",
+      "math",
+      "probabilities",
+      "*2400"
+    ],
+    "timestamp": "Dec/03/2020 16:35"
+  },
   "CF100263310": {
     "contest_id": 698,
     "language": "GNU C++17",

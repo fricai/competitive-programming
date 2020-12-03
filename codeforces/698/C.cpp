@@ -29,7 +29,10 @@ signed main() {
 
 	cout << fixed << setprecision(10);
 	rep(i, 0, n) {
-		if (p[i] < eps) { cout << 0.0 << ' '; continue; }
+		if (p[i] < eps) {
+			cout << 0.0 << ' ';
+			continue;
+		}
 		f[0] = p[i];
 		ld res = p[i];
 		rep(S, 1, 1 << n) {

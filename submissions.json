@@ -6703,6 +6703,23 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF100305390": {
+    "contest_id": 115,
+    "language": "GNU C++17",
+    "path": "codeforces/115/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Linear Kingdom Races",
+    "problem_url": "https://codeforces.com/contest/115/problem/E",
+    "submission_id": "CF100305390",
+    "submission_url": "https://codeforces.com/contest/115/submission/100305390",
+    "tags": [
+      "data structures",
+      "dp",
+      "*2400"
+    ],
+    "timestamp": "Dec/04/2020 02:22"
+  },
   "CF100305440": {
     "contest_id": 115,
     "language": "GNU C++17",

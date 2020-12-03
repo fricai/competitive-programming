@@ -18,7 +18,7 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 1 << 18;
 ll t[N << 1], lz[N << 1];
-int c[N]; vector<pair<int, int>> I[N];
+int c[N], n; vector<pair<int, int>> I[N];
 
 void push(int v) {
 	t[v] += lz[v];
@@ -38,7 +38,7 @@ void upd(int v, int l, int r) {
 	upd(v << 1, l, m); upd(v << 1|1, m, r);
 	t[v] = max(t[v << 1], t[v << 1|1]);
 }
-void update(int l, int r, ll v) { lo = l, hi = r, x = v; upd(1, 0, N); }
+void update(int l, int r, ll v) { lo = l, hi = r, x = v; upd(1, 0, n + 1); }
 
 ll query(int v, int l, int r) {
 	push(v);
@@ -47,13 +47,13 @@ ll query(int v, int l, int r) {
 	int m = (l + r) / 2;
 	return max(query(v << 1, l, m), query(v << 1|1, m, r));
 }
-ll query(int l, int r) { return lo = l, hi = r, query(1, 0, N); }
+ll query(int l, int r) { return lo = l, hi = r, query(1, 0, n + 1); }
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
-	int n, m; cin >> n >> m;
+
+	int m; cin >> n >> m;
 	for (int i = 1; i <= n; ++i) cin >> c[i];
 	rep(i, 0, m) {
 		int l, r, p;

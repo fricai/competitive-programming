@@ -17,9 +17,10 @@ template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 10 << 9, K = 1 << 4, NC = K * N;
-vector<int> a[K], cycle[1 << K];
-int nxt[NC], grp[NC], cmpi[NC];
+vector<int> a[K];
+int k, nxt[NC], grp[NC], cmpi[NC];
 bool exists[1 << K], dp[1 << K], vis[NC];
+vector<int> cycle[1 << K];
 map<ll, int> cmp;
 
 void dfs(int u) {
@@ -42,10 +43,8 @@ signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	int k; cin >> k;
-	
-	ll s = 0; int tot = 0;
-	
+	int tot = 0; cin >> k;
+	ll s = 0;
 	rep(i, 0, k) {
 		int n; cin >> n; a[i].resize(n);
 		for (int &x : a[i]) {

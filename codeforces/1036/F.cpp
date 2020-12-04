@@ -37,7 +37,9 @@ signed main() {
 
 	rep(i, 0ll, X) z[i] = i * i * i;
 
-	for (int x = X, j = 3; x != 2; ++j) {
+	int x = X, j = 3;
+	while (x != 2) {
+		// cerr << x << '\n';
 		int k = 0;
 		for (auto &[n, i] : v) {
 			while (z[k] <= n) ++k;
@@ -50,6 +52,7 @@ signed main() {
 				break;
 			}
 		}
+		++j;
 	}
 
 	rep(i, 0, t) cout << ans[i] << '\n';

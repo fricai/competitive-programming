@@ -31,7 +31,7 @@ signed main() {
 	rep(i, 0, t) {
 		ll n; cin >> n; ckmax(mx, n);
 		v.emplace_back(n, i);
-		ans[i] += n - floor(sqrt(n));
+		ans[i] += (n - 1) * mu[1] + (floor(sqrt(n)) - 1) * mu[2];
 	}
 	sort(all(v));
 

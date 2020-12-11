@@ -26,13 +26,14 @@ int solve() {
 
 	rep(i, 0, n) cin >> g[i];
 
+	rep(j, 0, m) d[n][j] = 0;
 	per(i, 0, n) {
 		rep(j, 0, m) {
 			if (g[i][j] != '*') {
 				d[i][j] = 0;
 				continue;
 			}
-			d[i][j] = 1 + (j > 0 && j + 1 < m && i + 1 < n ? min({d[i + 1][j - 1], d[i + 1][j], d[i + 1][j + 1]}) : 0); 
+			d[i][j] = 1 + (j > 0 && j < m - 1 ? min({d[i + 1][j - 1], d[i + 1][j], d[i + 1][j + 1]}) : 0); 
 			res += d[i][j];
 		}
 	}	

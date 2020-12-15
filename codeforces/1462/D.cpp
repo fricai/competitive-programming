@@ -33,7 +33,7 @@ signed main() {
 			if ([&]() {
 				for (int i = 0, j = 0; i < n; i = j) {
 					ll cur = 0;
-					while (j < n && cur != target) cur += a[j++];
+					while (j < n && cur < target) cur += a[j++];
 					if (cur != target) return false;
 				}
 				return true;

@@ -30,7 +30,6 @@ signed main() {
 		rep(i, 0, n) cin >> a[i], s += a[i];
 		rep(k, 0, n) {
 			ll target = s / (n - k);
-			if (target * (n - k) != s) continue;
 			if ([&]() {
 				for (int i = 0, j = 0; i < n; i = j) {
 					ll cur = 0;

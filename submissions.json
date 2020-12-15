@@ -6703,6 +6703,24 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF101278444": {
+    "contest_id": 1462,
+    "language": "GNU C++17",
+    "path": "codeforces/1462/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Unique Number",
+    "problem_url": "https://codeforces.com/contest/1462/problem/C",
+    "submission_id": "CF101278444",
+    "submission_url": "https://codeforces.com/contest/1462/submission/101278444",
+    "tags": [
+      "brute force",
+      "greedy",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Dec/15/2020 20:25"
+  },
   "CF101289092": {
     "contest_id": 1462,
     "language": "GNU C++17",

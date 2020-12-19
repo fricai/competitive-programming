@@ -6703,6 +6703,23 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF101719197": {
+    "contest_id": 1459,
+    "language": "GNU C++17",
+    "path": "codeforces/1459/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Red-Blue Shuffle",
+    "problem_url": "https://codeforces.com/contest/1459/problem/A",
+    "submission_id": "CF101719197",
+    "submission_url": "https://codeforces.com/contest/1459/submission/101719197",
+    "tags": [
+      "math",
+      "probabilities",
+      "*800"
+    ],
+    "timestamp": "Dec/19/2020 15:09"
+  },
   "CF101733243": {
     "contest_id": 1459,
     "language": "GNU C++17",

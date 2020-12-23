@@ -17,28 +17,34 @@ template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 1 << 18;
-int a[N];
+int a[N], sz[N];
 vector<int> g[N];
-ll s[N], ss[N];
+ll sum[N], conv[N];
 
 void init(int u, int p) {
-	s[u] = a[u];
+	sum[u] = a[u];
 	for (int v : g[u]) {
 		if (v == p) continue;
 		init(v, u);
-		s[u] += s[v];
-		ss[u] += ss[v] + s[v];
+		sum[u] += sum[v];
+		conv[u] += conv[v] + sum[v];
 	}
 }
 
 ll ans = 0;
 void reroot(int u, int p) {
-	ckmax(ans, ss[u]);
+	ckmax(ans, conv[u]);
+	// auto init_conv = conv[u];
+	// auto init_sum = sum[u];
+	// auto init_sz = sz[u];
 	for (int v : g[u]) {
 		if (v == p) continue;
-		ss[v] += (ss[u] - ss[v] - s[v]) + (s[u] - s[v]);
-		s[v] = s[u];
+		conv[v] += (conv[u] - conv[v] - sum[v]) + (sum[u] - sum[v]);
+		sum[v] = sum[u];
 		reroot(v, u);
+		// conv[u] = init_conv;
+		// sz[u] = init_sz;
+		// sum[u] = int_sum;
 	}
 }
 

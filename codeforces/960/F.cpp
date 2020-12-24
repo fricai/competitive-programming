@@ -24,10 +24,10 @@ void update(int v, int p, int x, int l = 0, int r = W) {
 	if (r - l == 1) return void(ckmax(t[v], x));
 	int m = (l + r) / 2;
 	if (p < m) {
-		if (!L[v]) L[v] = ++tot;
+		if (!L[v]) L[v] = tot++;
 		update(L[v], p, x, l, m);
 	} else {
-		if (!R[v]) R[v] = ++tot;
+		if (!R[v]) R[v] = tot++;
 		update(R[v], p, x, m, r);
 	}
 	t[v] = max(t[L[v]], t[R[v]]);	
@@ -45,9 +45,8 @@ signed main() {
 	cin.tie(nullptr);
 
 	int n, m; cin >> n >> m;
+	tot = n + 1;
 
-	tot = n;
-	
 	int ans = 0;
 	rep(e, 0, m) {
 		int a, b, w; cin >> a >> b >> w;

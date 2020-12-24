@@ -18,6 +18,7 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 5005, A = N;
 int dp[N], lst[A], fst[A], a[N];
+bool vis[A];
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -34,11 +35,13 @@ signed main() {
 		int cur = 0;
 		int mn_fst = i;
 
+		fill(vis, vis + A, false);
 		for (int j = i; j > 0; --j) {
-			if (lst[a[j]] > i) break;
-			if (lst[a[j]] == j) {
+			if (!vis[a[j]]) {
+				if (lst[a[j]] > i) break;
 				ckmin(mn_fst, fst[a[j]]);
 				cur ^= a[j];
+				vis[a[j]] = true;
 			}
 			if (j <= mn_fst) ckmax(dp[i], dp[j - 1] + cur);
 		}

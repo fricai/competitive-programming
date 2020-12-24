@@ -23,13 +23,20 @@ int t[NC], L[NC], R[NC], tot;
 int dp_end[N], dp_start[N];
 
 void update(int v, int p, int x, int l = 0, int r = W) {
+	assert(v != 0);
 	if (r - l == 1) return void(ckmax(t[v], x));
 	int m = (l + r) / 2;
 	if (p < m) {
-		if (!L[v]) L[v] = tot++;
+		if (!L[v]) {
+			L[v] = tot++;
+			assert(tot < NC);
+		}
 		update(L[v], p, x, l, m);
 	} else {
-		if (!R[v]) R[v] = tot++;
+		if (!R[v]) {
+			R[v] = tot++;
+			assert(tot < NC);
+		}
 		update(R[v], p, x, m, r);
 	}
 	t[v] = max(t[L[v]], t[R[v]]);	

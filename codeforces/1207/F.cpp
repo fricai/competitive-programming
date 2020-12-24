@@ -16,7 +16,7 @@ using ld = long double;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-const int N = 500000, B = 800;
+const int N = 500000, B = 750;
 
 ll a[N + 1], f[B][B];
 

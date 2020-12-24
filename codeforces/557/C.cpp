@@ -17,25 +17,24 @@ template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 1 << 17;
-int l[N], d[N], ord[N];
+pair<int, int> l[N];
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
 	int n; cin >> n;
-	rep(i, 0, n) cin >> l[i], ord[i] = i;
+	rep(i, 0, n) cin >> l[i].first;
 
 	ll after = 0, before = 0;
-	rep(i, 0, n) cin >> d[i], after += d[i];
-	sort(ord, ord + n, [&](int x, int y) { return l[x] < l[y]; });
+	rep(i, 0, n) cin >> l[i].second, after += l[i].second;
+	sort(l, l + n);
 	
 	ll ans = after;
-
 	multiset<int> mn;
 	for (int i = 0, j = 0; i < n; i = j) {
-		while (j < n && l[ord[i]] == l[ord[j]]) ++j;
-		rep(k, i, j) after -= d[ord[k]];
+		while (j < n && l[i].first == l[j].first) ++j;
+		rep(k, i, j) after -= l[k].second;
 
 		ll cur = after + before;
 		int cnt = 1;
@@ -43,7 +42,7 @@ signed main() {
 			cur -= *it;
 		ckmin(ans, cur);
 
-		rep(k, i, j) before += d[ord[k]], mn.insert(d[ord[k]]);
+		rep(k, i, j) before += l[k].second, mn.insert(l[k].second);
 	}
 	cout << ans << '\n';
 }

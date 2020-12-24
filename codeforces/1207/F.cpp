@@ -16,7 +16,7 @@ using ld = long double;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-#pragma GCC optimize("unroll-loops")
+#pragma GCC optimize("Ofast")
 
 const int N = 500000, B = 700;
 

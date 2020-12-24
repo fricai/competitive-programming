@@ -36,25 +36,25 @@ signed main() {
 
 	p[0] = {x1, y1};
 	p[1] = {x2, y2};
-
+	
 	int tot = 2;
 	if (b != 0) p[tot++] = {x1, f(a, b, c, x1)};
 	if (b != 0) p[tot++] = {x2, f(a, b, c, x2)};
 	if (a != 0) p[tot++] = {g(a, b, c, y1), y1};
 	if (a != 0) p[tot++] = {g(a, b, c, y2), y2};
-	
+	rep(i, 0, tot) rep(j, 0, tot) d[i][j] = numeric_limits<ld>::infinity();
+	rep(i, 0, tot) d[i][i] = 0;
 	rep(i, 2, tot)
-		rep(j, i, tot)
-			d[i][j] = d[j][i] = dist(p[i], p[j]);
-
+		rep(j, 2, tot)
+			d[i][j] = dist(p[i], p[j]);
 	rep(i, 0, 2)
-		rep(j, i, tot)
+		rep(j, 0, tot)
 			d[i][j] = d[j][i] = abs(p[i].first - p[j].first) + abs(p[i].second - p[j].second);
 	
 	rep(k, 0, tot)
 		rep(i, 0, tot)
 			rep(j, 0, tot)
 				ckmin(d[i][j], d[i][k] + d[k][j]);
-
 	cout << fixed << setprecision(10) << d[0][1];
+	// rep(i, 0, )
 }

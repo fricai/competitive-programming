@@ -16,9 +16,6 @@ using ld = long double;
 template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
-#pragma GCC optimize("Ofast")
-#pragma GCC target("avx,avx2,fma")
-
 const int N = 500000, B = 1 << 10;
 
 ll a[N + 1], f[B][B];

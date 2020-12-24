@@ -24,13 +24,13 @@ int f(int n, int m, int k) {
 	if (dp[n][m][k] != -1) return dp[n][m][k];
 	
 	int a = 1e9;
-	for (int i = 1; i <= m - i; ++i)
+	for (int i = 1; i < m; ++i)
 		for (int r = 0; r <= k; ++r)
 			ckmin(a, f(n, i, r) + f(n, m - i, k - r));
 	a += n * n;
-	
+
 	int b = 1e9;
-	for (int i = 1; i <= n - i; ++i)
+	for (int i = 1; i < n; ++i)
 		for (int r = 0; r <= k; ++r)
 			ckmin(b, f(i, m, r) + f(n - i, m, k - r));
 	b += m * m;

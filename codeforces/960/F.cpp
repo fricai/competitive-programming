@@ -30,7 +30,7 @@ struct chash {
     int operator()(int x) const { return hash_f(x) ^ RANDOM; }
 };
 
-const int N = 1e5 + 10, W = 1e5 + 10;
+const int N = 1 << 17, M = 1 << 17, W = 1 << 17;
 
 struct {
 	gp_hash_table<int, int, chash> t;

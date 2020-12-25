@@ -49,12 +49,13 @@ signed main() {
 		rep(j, 0, n + 1) if (!vis[j] && (u == -1 || mnw[j] < mnw[u])) u = j;
 		vis[u] = true;
 		res += mnw[u];
-		if (u || mnv[u]) tr.push_back({u, mnv[u]});
+		tr.push_back({u, mnv[u]});
 		rep(v, 0, n + 1) if (f(u, v) < mnw[v]) mnw[v] = f(u, v), mnv[v] = u;
 	}
 
 	vector<int> reactors; vector<pair<int, int>> connections;
 	for (auto [x, y] : tr) {
+		if (!x && !y) continue;
 		if (!x) reactors.push_back(y);
 		if (!y) reactors.push_back(x);
 		if (x && y) connections.emplace_back(x, y);

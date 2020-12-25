@@ -24,13 +24,15 @@ ld f(int r, int s, int p) {
 	if (s == 0 && p == 0) return 1;
 	if (dp[r][s][p] > -0.99) return dp[r][s][p];
 
-	auto &res = dp[r][s][p];
-	res = 0;
-	ld mult = p * r + r * s + s * p;
-	if (r > 0) res += r * p * f(r - 1, s, p);
-	if (s > 0) res += s * r * f(r, s - 1, p);
-	if (p > 0) res += p * s * f(r, s, p - 1); 
-	return res /= mult;
+	ld res = 0;
+	ld mult = r + s + p;
+	mult *= mult - 1;
+	mult -= p * (p - 1) + s * (s - 1) + r * (r - 1);
+	if (r > 0) res += 2 * r * p * f(r - 1, s, p);
+	if (s > 0) res += 2 * s * r * f(r, s - 1, p);
+	if (p > 0) res += 2 * p * s * f(r, s, p - 1);
+	res /= mult; 
+	return dp[r][s][p] = res;
 }
 
 ld g(int r, int s, int p) {

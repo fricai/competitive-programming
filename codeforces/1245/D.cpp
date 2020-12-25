@@ -44,13 +44,13 @@ signed main() {
 	ll res = 0;
 
 	vector<pair<int, int>> tr;
-	for (int i = 0; i <= n; ++i) {
+	rep(i, 0, n + 1) {
 		int u = -1;
-		for (int j = 0; j <= n; ++j) if (!vis[j] && (u == -1 || mnw[j] < mnw[u])) u = j;
+		rep(j, 0, n + 1) if (!vis[j] && (u == -1 || mnw[j] < mnw[u])) u = j;
 		vis[u] = true;
 		res += mnw[u];
-		if (u || mnv[u]) tr.emplace_back(u, mnv[u]);
-		for (int v = 0; v <= n; ++v) if (ckmin(mnw[v], f(u, v))) mnv[v] = u;
+		if (u || mnv[u]) tr.push_back({u, mnv[u]});
+		rep(v, 0, n + 1) if (f(u, v) < mnw[v]) mnw[v] = f(u, v), mnv[v] = u;
 	}
 
 	vector<int> reactors; vector<pair<int, int>> connections;

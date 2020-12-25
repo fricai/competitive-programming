@@ -27,17 +27,19 @@ int solve() {
 
 		priority_queue<int> pq;
 		rep(a, 0, A) pq.push(f[a]);
-		if ([&]() {
-			rep(i, 0, g) {
-				int t = pq.top(); pq.pop();
-				t -= m / g;
-				if (t < 0) return false;
-				pq.push(t);
-			}
-			return true;
-		}()) ans = m;
-	}
 
+		bool ok = true;
+		rep(i, 0, g) {
+			int t = pq.top(); pq.pop();
+			if (t < m / g) {
+				ok = false;
+				break;
+			}
+			t -= m / g;
+			pq.push(t);
+		}
+		if (ok) ans = m;
+	}
 	return ans;
 }
 

@@ -35,11 +35,23 @@ signed main() {
 	rep(i, 1, X) f[i] += f[i - 1], s[i] += s[i - 1];
 	
 	ll ans = 1e18;
-	int z = (x + y - 1) / y;
+	int z = (x + y) / y;
 	for (int g = 2; g < X; ++g) {
 		int r = min(g, z);
 		ll cur = 0;
 		for (int d = g; d < X; d += g) {
+			// for elements c in range (d - g, d], min(x, y * (d - c))
+			// x < y * (d - c) <=>  c < d - floor(x/y)
+			// so for (d - g, d - floor(x / y)] -> x = cnt(d - g, d - r) * x
+			// for (d - floor(x / y), d] -> y * (d - c) = cnt(d - r, d) * y * d - sum(d - r, d)
+			// rep(i, 0, n) {
+			// 	if (d - g < a[i] && a[i] <= d - r) cur += x;
+			// 	if (d - r < a[i] && a[i] <= d) cur += y * (d - a[i]);
+			// }
+			// assert(d - r >= 0 && d - g >= 0);
+			// x < y * (d - c) <=> x/y < d - c <=> c < d - floor(x / y)
+			// d - g < c <= d - floor(x / y) - 1
+			// x <= y * (d - c) <=> 
 			cur += (f[d - r] - f[d - g]) * x;
 			cur += ((f[d] - f[d - r]) * d - (s[d] - s[d - r])) * y;
 		}

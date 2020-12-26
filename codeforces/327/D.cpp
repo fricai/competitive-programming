@@ -38,7 +38,6 @@ const vector<point> dir = {{-1, 0}, {+1, 0}, {0, +1}, {0, -1}};
 vector<pair<char, point>> op;
 void dfs(point u) {
 	vis(u) = true;
-	op.emplace_back('B', u);
 	for (auto d : dir) {
 		auto v = u + d;
 		if (!valid(v) || vis(v)) continue;
@@ -57,7 +56,8 @@ signed main() {
 
 	rep(i, 0, n) rep(j, 0, m) {
 		auto v = point(i, j);
-		vis(v) = g(v) != '.';
+		if (g(v) != '#') op.emplace_back('B', point(i, j));
+		else vis(v) = true;
 	}
 	rep(i, 0, n) rep(j, 0, m)
 		if (!vis(point(i, j))) {

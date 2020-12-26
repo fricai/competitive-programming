@@ -33,18 +33,18 @@ signed main() {
 
 	rep(i, 0, n) ++f[a[i]], s[a[i]] += a[i];
 	rep(i, 1, X) f[i] += f[i - 1], s[i] += s[i - 1];
-
+	
 	ll ans = 1e18;
-	int z = (x + y) / y;
+	int z = (x + y - 1) / y;
 	for (int g = 2; g < X; ++g) {
 		int r = min(g, z);
 		ll cur = 0;
 		for (int d = g; d < X; d += g) {
 			cur += (f[d - r] - f[d - g]) * x;
 			cur += ((f[d] - f[d - r]) * d - (s[d] - s[d - r])) * y;
-			if (cur > ans) break;
 		}
 		ckmin(ans, cur);
+		// if (ckmin(ans, cur)) cerr << g << '\n';
 	}
 	cout << ans << '\n';
 

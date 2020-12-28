@@ -36,6 +36,7 @@ bool dfs(int u, bool x) {
 
 bool solve(bool init) {
 	fill(vis, vis + n, false);
+	fill(val, val + n, false);
 	rep(u, 0, n) if (!vis[u] && !dfs(u, init)) return false;
 	return true;
 }
@@ -51,10 +52,11 @@ signed main() {
 		g[b[e]].push_back(e);
 	}
 
-	if (solve(0)) {
+	if (solve(0) || solve(1)) {
 		int cnt = 0;
 		rep(u, 0, n) cnt += val[u];
 		cout << cnt << '\n';
+		rep(e, 0, m) assert(c[e] ^ val[a[e]] ^ val[b[e]]);
 		rep(u, 0, n) if (val[u]) cout << u + 1 << ' ';
 	} else cout << "Impossible";
 }

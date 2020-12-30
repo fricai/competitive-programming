@@ -6703,6 +6703,25 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF102744727": {
+    "contest_id": 228,
+    "language": "GNU C++17",
+    "path": "codeforces/228/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "The Road to Berland is Paved With Good Intentions",
+    "problem_url": "https://codeforces.com/contest/228/problem/E",
+    "submission_id": "CF102744727",
+    "submission_url": "https://codeforces.com/contest/228/submission/102744727",
+    "tags": [
+      "2-sat",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "*1900"
+    ],
+    "timestamp": "Dec/30/2020 13:04"
+  },
   "CF102744940": {
     "contest_id": 228,
     "language": "GNU C++17",

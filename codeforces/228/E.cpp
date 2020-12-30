@@ -34,6 +34,12 @@ bool dfs(int u, bool x) {
 	return true;
 }
 
+bool solve(bool init) {
+	fill(vis, vis + n, false);
+	rep(u, 0, n) if (!vis[u] && !dfs(u, init)) return false;
+	return true;
+}
+
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -45,10 +51,7 @@ signed main() {
 		g[b[e]].push_back(e);
 	}
 
-	if ([&](){
-		rep(u, 0, n) if (!vis[u] && !dfs(u, 0)) return false;
-		return true;
-	}()) {
+	if (solve(0)) {
 		int cnt = 0;
 		rep(u, 0, n) cnt += val[u];
 		cout << cnt << '\n';

@@ -6703,6 +6703,23 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF103033347": {
+    "contest_id": 405,
+    "language": "GNU C++17",
+    "path": "codeforces/405/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Unusual Product",
+    "problem_url": "https://codeforces.com/contest/405/problem/C",
+    "submission_id": "CF103033347",
+    "submission_url": "https://codeforces.com/contest/405/submission/103033347",
+    "tags": [
+      "implementation",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Jan/02/2021 19:17"
+  },
   "CF103034172": {
     "contest_id": 405,
     "language": "GNU C++17",

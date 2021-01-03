@@ -27,7 +27,7 @@ void dfs(int u, int p) {
 		if (v == p) continue;
 		dfs(v, u);
 		sub[u] ^= sub[v];
-		ans -= sub[v];
+		if (sub[v]) --ans;
 	}
 }
 

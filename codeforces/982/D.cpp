@@ -41,7 +41,7 @@ signed main() {
 		if (R[i] != n) L[R[i]] = L[i];
 		if (pre != 0) --f[pre], --cur;
 		if (nxt != 0) --f[nxt], --cur;
-		if (++f[pre + nxt + 1] == ++cur && ckmax(mx_loc, cur)) ans = k;
+		if (++f[pre + nxt + 1] == ++cur && mx_loc < cur) { ans = k; mx_loc = cur; }
 	}
 
 	cout << cmp[ans] + 1;

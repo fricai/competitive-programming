@@ -8154,6 +8154,23 @@
     ],
     "timestamp": "Jan/04/2021 19:18"
   },
+  "CF103236468": {
+    "contest_id": 442,
+    "language": "GNU C++17",
+    "path": "codeforces/442/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Adam and Tree",
+    "problem_url": "https://codeforces.com/contest/442/problem/D",
+    "submission_id": "CF103236468",
+    "submission_url": "https://codeforces.com/contest/442/submission/103236468",
+    "tags": [
+      "data structures",
+      "trees",
+      "*2600"
+    ],
+    "timestamp": "Jan/04/2021 20:42"
+  },
   "CF103246755": {
     "contest_id": 442,
     "language": "GNU C++17",

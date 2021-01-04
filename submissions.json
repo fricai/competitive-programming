@@ -6703,6 +6703,23 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF103177646": {
+    "contest_id": 442,
+    "language": "GNU C++17",
+    "path": "codeforces/442/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Artem and Array ",
+    "problem_url": "https://codeforces.com/contest/442/problem/C",
+    "submission_id": "CF103177646",
+    "submission_url": "https://codeforces.com/contest/442/submission/103177646",
+    "tags": [
+      "data structures",
+      "greedy",
+      "*2500"
+    ],
+    "timestamp": "Jan/04/2021 19:18"
+  },
   "CF105308295": {
     "contest_id": 1475,
     "language": "GNU C++17",

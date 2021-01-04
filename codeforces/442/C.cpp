@@ -17,7 +17,7 @@ template<class T> bool ckmin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int N = 1 << 19;
-int a[N], L[N], R[N], b[N];
+int a[N], L[N], R[N], ord[N];
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -29,18 +29,15 @@ signed main() {
 		cin >> a[i];
 		L[i] = i - 1;
 		R[i] = i + 1;
+		ord[i - 1] = i;
 	}
 
-	priority_queue<pair<int, int>> pq;
-	for (int i = 1; i <= n; ++i) pq.push({-a[i], i});
-
+	sort(ord, ord + n, [&](int i, int j) { return a[i] < a[j]; });
 	ll ans = 0;
-	int l = 1, r = n;
-	while (sz(pq) > 2) {
-		auto i = pq.top().second; pq.pop();
-		if (i == l) { ans += a[i]; l = R[i]; continue; }
-		if (i == r) { ans += a[i]; r = L[i]; continue; }
-		// cerr << a[i] << '\n';
+	for (int j = 0, l = 1, r = n; j + 2 < n; ++j) {
+		int i = ord[j];
+		if (i == l) { ans += a[i]; l = R[l]; continue; }
+		if (i == r) { ans += a[i]; r = L[r]; continue; }
 		ans += min(a[L[i]], a[R[i]]);
 		R[L[i]] = R[i];
 		L[R[i]] = L[i];

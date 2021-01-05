@@ -23,13 +23,14 @@ int ask(int x) {
 	int in; cin >> in;
 	return in;
 }
-
 signed main() {
 	int n, k; cin >> n >> k;
 
-	mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-	uniform_int_distribution<> dis(0, n - 1);
-	int idx = 0; while (ask(idx) <= k) idx = dis(rng);
+	int idx = 0;
+	for (int jmp = 1; ; ++jmp) {
+		if (ask(idx) > k) break;
+		(idx += jmp) %= n;
+	}
 
 	int l = 0, r = n;
 	while (r > l) {

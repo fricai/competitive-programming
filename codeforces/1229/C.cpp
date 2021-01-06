@@ -19,7 +19,7 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 const int B = 500, N = 1 << 17, M = 1 << 17;
 vector<int> g[N], h[N];
-int indeg[N], outdeg[N];
+int indeg[N], outdeg[N], ord[N];
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -32,6 +32,9 @@ signed main() {
 		g[v].push_back(u);
 	}
 
+	
+	for (int u = 1; u <= n; ++u) ord[u] = u;
+
 	for (int u = 1; u <= n; ++u)
 		for (int v : g[u])
 			if (v < u) ++outdeg[u];
@@ -40,24 +43,26 @@ signed main() {
 				h[u].push_back(v);
 			}
 
-	auto f = [&](int u) { return h[u].size() * (g[u].size() - h[u].size()); };
-
 	ll init = 0;
-	for (int u = 1; u <= n; ++u) init += f(u);
+	for (int u = 1; u <= n; ++u)
+		init += 1ll * indeg[u] * outdeg[u];
 
 	cout << init << '\n';
 
 	int q; cin >> q;
 	for (int t = n + 1; t <= q + n; ++t) {
 		int u; cin >> u;
-		init -= f(u);
+		init -= 1ll * indeg[u] * outdeg[u];
 		for (int v : h[u]) {
-			init -= f(v);
+			init -= 1ll * indeg[v] * outdeg[v];
 			h[v].push_back(u);
-			init += f(v);
+			++indeg[v]; --outdeg[v];
+			init += 1ll * indeg[v] * outdeg[v];
 		}
+		outdeg[u] += indeg[u];
+		indeg[u] = 0;
 		h[u].clear();
-		
+		ord[u] = t;
 		cout << init << '\n';
 	}
 }

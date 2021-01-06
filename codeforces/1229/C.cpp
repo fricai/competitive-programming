@@ -19,6 +19,7 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 const int B = 500, N = 1 << 17, M = 1 << 17;
 vector<int> g[N], h[N];
+int indeg[N], outdeg[N];
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -32,7 +33,12 @@ signed main() {
 	}
 
 	for (int u = 1; u <= n; ++u)
-		for (int v : g[u]) if (v > u) h[u].push_back(v);
+		for (int v : g[u])
+			if (v < u) ++outdeg[u];
+			else {
+				++indeg[u];
+				h[u].push_back(v);
+			}
 
 	auto f = [&](int u) { return h[u].size() * (g[u].size() - h[u].size()); };
 

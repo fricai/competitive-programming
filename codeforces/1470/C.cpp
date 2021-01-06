@@ -23,20 +23,19 @@ int ask(int x) {
 	int in; cin >> in;
 	return in;
 }
+
 signed main() {
 	int n, k; cin >> n >> k;
 
-	int idx = 0;
-	for (int jmp = 1; ; ++jmp) {
-		if (ask(idx) > k) break;
-		(idx += jmp) %= n;
-	}
+	mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+	uniform_int_distribution<> dis(0, n - 1);
+	int idx = 0; while (ask(idx) <= k) idx = dis(rng);
 
 	int l = 0, r = n;
-	while (r > l) {
+	while (r - l > 1) {
 		int m = l + (r - l) / 2;
-		if (ask((idx - m + n) % n) > k) l = m + 1;
-		else r = m;
+		(ask((idx + m) % n) <= k ? l : r) = m;
 	}
-	cout << "! " << (idx - l + n) % n + 1 << endl;
+
+	cout << "! " << (idx + l) % n + 1 << endl;
 }

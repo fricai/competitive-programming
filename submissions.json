@@ -9573,6 +9573,24 @@
     ],
     "timestamp": "Jan/07/2021 14:25"
   },
+  "CF103670819": {
+    "contest_id": 1355,
+    "language": "GNU C++17",
+    "path": "codeforces/1355/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Guess Divisors Count",
+    "problem_url": "https://codeforces.com/contest/1355/problem/F",
+    "submission_id": "CF103670819",
+    "submission_url": "https://codeforces.com/contest/1355/submission/103670819",
+    "tags": [
+      "constructive algorithms",
+      "interactive",
+      "number theory",
+      "*2600"
+    ],
+    "timestamp": "Jan/08/2021 02:55"
+  },
   "CF103735356": {
     "contest_id": 1467,
     "language": "GNU C++17",

@@ -35,17 +35,12 @@ void init(int u) {
 void dfs(int u) {
 	if (x[u] == 0) ans[u] = ans[p[0][u]];
 	else {
-		ans[u] = 0;
 		ll z = x[u];
 		int v = u, pre = d[u];
 
-		// cerr << u << ": ";
 		while (v != 0) {
-			// cerr << v << ' ';
-			assert(z != 0);
 			per(j, 0, B) if (y[j][v] % z == 0) v = p[j][v];
 			(ans[u] += z % M * (pre - d[v] + 1)) %= M;
-			// cerr << v << ' ' << z << ' ' << (pre - d[v] + 1) << ' '<< z << "; ";
 			v = p[0][v];
 			pre = d[v];
 			z = gcd(z, x[v]);
@@ -69,17 +64,11 @@ signed main() {
 
 	rep(j, 1, B) for (int u = 1; u <= n; ++u) p[j][u] = p[j - 1][p[j - 1][u]];
 	for (int u = 1; u <= n; ++u) y[0][u] = gcd(x[p[0][u]], x[u]);
-
 	rep(j, 1, B) for (int u = 1; u <= n; ++u) y[j][u] = gcd(y[j - 1][p[j - 1][u]], y[j - 1][u]);
+
 	dfs(1);
-	// for (int u = 1; u <= n; ++u) {
-	// 	rep(j, 0, B) cerr << y[j][u] << ' ';
-	// 	cerr << '\n';
-	// }
 
 	ll fin = 0;
 	for (int u = 1; u <= n; ++u) fin = (fin + ans[u]) % M;
-	// cerr << '\n';
 	cout << fin;
-	// << '\n';
 }

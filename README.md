@@ -465,7 +465,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 510 | [C - Count Triangles](https://codeforces.com/contest/1355/problem/C) | [GNU C++17](./codeforces/1355/C.cpp) | `binary search` `implementation` `math` `two pointers` `*1800` | Jan/07/2021 18:53 | 
 509 | [B - Young Explorers](https://codeforces.com/contest/1355/problem/B) | [GNU C++17](./codeforces/1355/B.cpp) | `dp` `greedy` `sortings` `*1200` | Jan/07/2021 18:22 | 
 508 | [A - Sequence with Digits](https://codeforces.com/contest/1355/problem/A) | [GNU C++17](./codeforces/1355/A.cpp) | `brute force` `implementation` `math` `*1200` | Jan/07/2021 18:15 | 
-507 | [B - Kamil and Making a Stream](https://codeforces.com/contest/1229/problem/B) | [GNU C++17](./codeforces/1229/B.cpp) | `binary search` `data structures` `dfs and similar` `dp` `graphs` `math` `number theory` `trees` `*2000` | Jan/07/2021 14:25 | 
+507 | [B - Kamil and Making a Stream](https://codeforces.com/contest/1229/problem/B) | [GNU C++17](./codeforces/1229/B.cpp) | `binary search` `data structures` `dfs and similar` `dp` `graphs` `math` `number theory` `trees` `*2000` | Jan/07/2021 14:28 | 
 506 | [C - Konrad and Company Evaluation](https://codeforces.com/contest/1229/problem/C) | [GNU C++17](./codeforces/1229/C.cpp) | `brute force` `graphs` `*2400` | Jan/06/2021 20:05 | 
 505 | [A - Marcin and Training Camp](https://codeforces.com/contest/1229/problem/A) | [GNU C++17](./codeforces/1229/A.cpp) | `brute force` `graphs` `greedy` `*1700` | Jan/06/2021 17:03 | 
 504 | [C - Strange Shuffle](https://codeforces.com/contest/1470/problem/C) | [GNU C++17](./codeforces/1470/C.cpp) | `binary search` `brute force` `constructive algorithms` `interactive` `*2500` | Jan/06/2021 11:47 | 

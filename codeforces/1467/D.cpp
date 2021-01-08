@@ -26,12 +26,6 @@ template<class S, class T> void sub(S &x, T y) { x -= y; if (x < 0) x += M; }
 int n, k, q;
 ll ways[N], f[N][N];
 
-using ull = unsigned long long;
-ull modmul(ull a, ull b) {
-	ll ret = a * b - M * ull(1.L / M * a * b);
-	return ret + M * (ret < 0) - M * (ret >= (ll)M);
-}
-
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -48,16 +42,16 @@ signed main() {
 
 	for (int i = 1; i <= n; ++i)
 		for (int r = 0; r <= k; ++r)
-			add(ways[i], modmul(f[i][r], f[i][k - r]));
+			add(ways[i], f[i][r] * f[i][k - r] % M);
 	
 	int ans = 0;
-	for (int i = 1; i <= n; ++i) add(ans, modmul(ways[i], a[i]));
+	for (int i = 1; i <= n; ++i) add(ans, ways[i] * a[i] % M);
 
 	while (q--) {
 		int i; cin >> i;
-		sub(ans, modmul(ways[i], a[i]));
+		sub(ans, ways[i] * a[i] % M);
 		cin >> a[i];
-		add(ans, modmul(ways[i], a[i]));
+		add(ans, ways[i] * a[i] % M);
 		cout << ans << '\n';
 	}
 }

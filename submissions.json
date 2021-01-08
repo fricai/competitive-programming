@@ -9573,6 +9573,24 @@
     ],
     "timestamp": "Jan/07/2021 14:25"
   },
+  "CF103816607": {
+    "contest_id": 1467,
+    "language": "GNU C++17",
+    "path": "codeforces/1467/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Sum of Paths",
+    "problem_url": "https://codeforces.com/contest/1467/problem/D",
+    "submission_id": "CF103816607",
+    "submission_url": "https://codeforces.com/contest/1467/submission/103816607",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "*2200"
+    ],
+    "timestamp": "Jan/08/2021 23:17"
+  },
   "CF103816975": {
     "contest_id": 1467,
     "language": "GNU C++17",

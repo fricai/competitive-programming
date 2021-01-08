@@ -24,7 +24,7 @@ template<class S, class T> void add(S &x, T y) { x += y; if (M <= x) x -= M; }
 template<class S, class T> void sub(S &x, T y) { x -= y; if (x < 0) x += M; }
 
 int n, k, q;
-ll g[N], f[N][N];
+ll ways[N], f[N][N];
 
 using ull = unsigned long long;
 ull modmul(ull a, ull b) {
@@ -37,28 +37,27 @@ signed main() {
 	cin.tie(nullptr);
 
 	cin >> n >> k >> q;
-
-	for (int i = 1; i <= n; ++i) cin >> a[i], f[0][i] = 1;
+	for (int i = 1; i <= n; ++i) cin >> a[i], f[i][0] = 1;
 
 	for (int j = 1; j <= k; ++j) {
 		for (int i = 1; i <= n; ++i) {
-			f[j][i] = f[j - 1][i - 1];
-			add(f[j][i], f[j - 1][i + 1]);
+			f[i][j] = f[i - 1][j - 1];
+			add(f[i][j], f[i + 1][j - 1]);
 		}
 	}
 
 	for (int i = 1; i <= n; ++i)
 		for (int r = 0; r <= k; ++r)
-			add(g[i], modmul(f[r][i], f[k - r][i]));
+			add(ways[i], modmul(f[i][r], f[i][k - r]));
 	
 	int ans = 0;
-	for (int i = 1; i <= n; ++i) add(ans, modmul(g[i], a[i]));
+	for (int i = 1; i <= n; ++i) add(ans, modmul(ways[i], a[i]));
 
 	while (q--) {
 		int i; cin >> i;
-		sub(ans, modmul(g[i], a[i]));
+		sub(ans, modmul(ways[i], a[i]));
 		cin >> a[i];
-		add(ans, modmul(g[i], a[i]));
+		add(ans, modmul(ways[i], a[i]));
 		cout << ans << '\n';
 	}
 }

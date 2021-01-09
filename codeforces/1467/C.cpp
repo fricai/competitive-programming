@@ -40,7 +40,7 @@ signed main() {
 	rep(i, 0, 3) {
 		ckmax(ans, s - 2 * sum[i]);
 		rep(j, 0, i)
-			ckmax(ans, s - 2 * mn[i] - 2 * mn[j]);
+			ckmax(ans, s - 2ll * (mn[i] + mn[j]));
 	}
 	cout << ans;
 }

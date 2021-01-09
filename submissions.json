@@ -9945,6 +9945,25 @@
     ],
     "timestamp": "Jan/09/2021 11:20"
   },
+  "CF103848998": {
+    "contest_id": 1467,
+    "language": "GNU C++17",
+    "path": "codeforces/1467/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Distinctive Roots in a Tree",
+    "problem_url": "https://codeforces.com/contest/1467/problem/E",
+    "submission_id": "CF103848998",
+    "submission_url": "https://codeforces.com/contest/1467/submission/103848998",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "dp",
+      "trees",
+      "*2500"
+    ],
+    "timestamp": "Jan/09/2021 11:21"
+  },
   "CF103849987": {
     "contest_id": 1467,
     "language": "GNU C++17",

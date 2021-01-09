@@ -22,7 +22,6 @@ int leaves;
 struct {
 	int n;
 	int p[N << 1], cost[N][N], deg[N << 1];
-	bool dead[N << 1];
 	int x[N];
 
 	void init() {

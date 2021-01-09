@@ -61,15 +61,18 @@ void reroot(int u, int p) {
 		int v = g[u][i];
 		if (v != p) {
 			bool init_valid_v = valid[v];
-			
+			bool init_up_valid_v = up_valid[v];
+
 			valid[u] = l && r[i + 1];
 			up_valid[u] = valid[u] && in[v] <= mn[a[v]] && mx[a[v]] <= out[v];
 			valid[v] = valid[v] && up_valid[u];
+			up_valid[v] = valid[v];
 
 			reroot(v, u);
 
 			valid[u] = init_valid_u;
 			valid[v] = init_valid_v;
+			up_valid[v] = init_up_valid_v;
 			up_valid[u] = init_up_valid_u;
 		}
 		l &= up_valid[v];

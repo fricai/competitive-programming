@@ -21,7 +21,7 @@ const int N = 1 << 19;
 int n[3];
 int a[3][N];
 ll sum[3];
-int mn[3];
+ll mn[3];
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -40,7 +40,7 @@ signed main() {
 	rep(i, 0, 3) {
 		ckmax(ans, s - 2 * sum[i]);
 		rep(j, 0, i)
-			ckmax(ans, s - 2ll * (mn[i] + mn[j]));
+			ckmax(ans, s - 2 * (mn[i] + mn[j]));
 	}
 	cout << ans;
 }

@@ -48,32 +48,32 @@ void init(int u, int p) {
 int mx[N], mn[N];
 
 int cnt = 0;
-
 void reroot(int u, int p) {
+	cnt += valid[u];
+
 	vector<bool> r(sz(g[u]) + 1, 1);
 	per(i, 0, sz(g[u])) r[i] = up_valid[g[u][i]] && r[i + 1];
-	
+
 	bool l = 1;
 	bool init_up_valid_u = up_valid[u];
-	// bool init_valid_u = valid[u];
+	bool init_valid_u = valid[u];
 	rep(i, 0, sz(g[u])) {
 		int v = g[u][i];
 		if (v != p) {
-			// bool init_valid_v = valid[v];
+			bool init_valid_v = valid[v];
 			
-			up_valid[u] = l && r[i + 1] && in[v] <= mn[a[v]] && mx[a[v]] <= out[v];
-			// valid[v] = valid[v] && up_valid[u];
+			valid[u] = l && r[i + 1];
+			up_valid[u] = valid[u] && in[v] <= mn[a[v]] && mx[a[v]] <= out[v];
+			valid[v] = valid[v] && up_valid[u];
 
 			reroot(v, u);
-			
-			// valid[u] = init_valid_u;
-			// valid[v] = init_valid_v;
+
+			valid[u] = l && r[i];
+			valid[v] = init_valid_v;
 			up_valid[u] = init_up_valid_u;
 		}
-
 		l &= up_valid[v];
 	}
-	cnt += l;
 }
 
 signed main() {
@@ -94,12 +94,12 @@ signed main() {
 	}
 
 	init(1, 0);
+	up_valid[1] = valid[1];
 
 	for (int i = 1; i <= n; ++i) {
 		if (mn[a[i]] == 0) mn[a[i]] = in[i], mx[a[i]] = out[i];
 		else ckmin(mn[a[i]], in[i]), ckmax(mx[a[i]], out[i]);
 	}
-
 	reroot(1, 0);
 
 	cout << cnt;

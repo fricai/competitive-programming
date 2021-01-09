@@ -8154,6 +8154,27 @@
     ],
     "timestamp": "Jan/04/2021 19:18"
   },
+  "CF103886704": {
+    "contest_id": 1263,
+    "language": "GNU C++17",
+    "path": "codeforces/1263/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Economic Difficulties",
+    "problem_url": "https://codeforces.com/contest/1263/problem/F",
+    "submission_id": "CF103886704",
+    "submission_url": "https://codeforces.com/contest/1263/submission/103886704",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "dp",
+      "flows",
+      "graphs",
+      "trees",
+      "*2400"
+    ],
+    "timestamp": "Jan/09/2021 19:43"
+  },
   "CF103886896": {
     "contest_id": 1263,
     "language": "GNU C++17",

@@ -42,9 +42,10 @@ signed main() {
         if (p[i] == i) continue;
         int j = inv[i];
         op.emplace_back(i, j);
-        inv[p[j] = p[i]] = j;
+        inv[i] = i;
+        p[j] = p[i];
+        inv[p[j]] = j;
     }
-
     cout << sz(op) << '\n';
     for (auto [i, j] : op) cout << i + 1 << ' ' << j + 1 << '\n';
 }

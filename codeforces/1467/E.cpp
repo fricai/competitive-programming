@@ -68,7 +68,7 @@ void reroot(int u, int p) {
 
 			reroot(v, u);
 
-			valid[u] = l && r[i];
+			valid[u] = init_valid_u;
 			valid[v] = init_valid_v;
 			up_valid[u] = init_up_valid_u;
 		}

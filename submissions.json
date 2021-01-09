@@ -9945,6 +9945,24 @@
     ],
     "timestamp": "Jan/09/2021 11:20"
   },
+  "CF103856687": {
+    "contest_id": 1042,
+    "language": "GNU C++17",
+    "path": "codeforces/1042/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Array Product",
+    "problem_url": "https://codeforces.com/contest/1042/problem/C",
+    "submission_id": "CF103856687",
+    "submission_url": "https://codeforces.com/contest/1042/submission/103856687",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Jan/09/2021 13:08"
+  },
   "CF103860413": {
     "contest_id": 1042,
     "language": "GNU C++17",

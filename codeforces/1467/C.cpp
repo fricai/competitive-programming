@@ -19,7 +19,7 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 const int N = 1 << 19;
 int n[3];
-int a[3][N];
+ll a[3][N];
 ll sum[3];
 ll mn[3];
 

@@ -22,6 +22,7 @@ int leaves;
 struct {
 	int n;
 	int p[N << 1], cost[N][N], deg[N << 1];
+	bool dead[N << 1];
 	int x[N];
 
 	void init() {
@@ -55,7 +56,8 @@ signed main() {
 	cin.tie(nullptr);
 
 	cin >> leaves;
-	A.init(); B.init();
+	A.init();
+	B.init();
 	for (int r = 1; r <= leaves; ++r)
 		for (int l = 1; l <= r; ++l)
 			ckmax(dp[r], dp[l - 1] + max(A.cost[l][r], B.cost[l][r]));

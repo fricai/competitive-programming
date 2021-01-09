@@ -9945,6 +9945,23 @@
     ],
     "timestamp": "Jan/09/2021 11:20"
   },
+  "CF103867835": {
+    "contest_id": 1263,
+    "language": "GNU C++17",
+    "path": "codeforces/1263/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "PIN Codes",
+    "problem_url": "https://codeforces.com/contest/1263/problem/B",
+    "submission_id": "CF103867835",
+    "submission_url": "https://codeforces.com/contest/1263/submission/103867835",
+    "tags": [
+      "greedy",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Jan/09/2021 15:27"
+  },
   "CF103868083": {
     "contest_id": 1263,
     "language": "GNU C++17",

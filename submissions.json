@@ -1,4 +1,20 @@
 {
+  "AC19298381": {
+    "contest_id": "arc111",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc111/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Too Heavy",
+    "problem_url": "https://atcoder.jp/contests/arc111/tasks/arc111_c",
+    "submission_id": "AC19298381",
+    "submission_url": "https://atcoder.jp/contests/arc111/submissions/19298381",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jan/09/2021 23:54"
+  },
   "AC19313247": {
     "contest_id": "abc188",
     "language": "C++ (GCC 9.2.1)",

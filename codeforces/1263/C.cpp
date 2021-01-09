@@ -19,13 +19,12 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 void solve() {
 	int n; cin >> n;
-	
-	vector<int> v = {0};
-	for (int d = 1; d * d <= n; ++d) v.push_back(d), v.push_back(n / d);
-	sort(all(v)); v.erase(unique(all(v)), end(v));
 
-	cout << sz(v) << '\n';
-	for (auto x : v) cout << x << ' ';
+	set<int> s = {0};
+	for (int d = 1; d * d <= n; ++d) s.insert(n / d), s.insert(d);
+
+	cout << sz(s) << '\n';
+	for (auto x : s) cout << x << ' ';
 	cout << '\n';
 }
 

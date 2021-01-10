@@ -1,4 +1,20 @@
 {
+  "AC19366000": {
+    "contest_id": "arc058",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc058/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Iroha and Haiku",
+    "problem_url": "https://atcoder.jp/contests/arc058/tasks/arc058_c",
+    "submission_id": "AC19366000",
+    "submission_url": "https://atcoder.jp/contests/arc058/submissions/19366000",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Jan/10/2021 23:49"
+  },
   "AC19378033": {
     "contest_id": "arc098",
     "language": "C++ (GCC 9.2.1)",

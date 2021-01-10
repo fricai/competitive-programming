@@ -1,4 +1,20 @@
 {
+  "AC19337279": {
+    "contest_id": "abc188",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc188/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Snuke Prime",
+    "problem_url": "https://atcoder.jp/contests/abc188/tasks/abc188_d",
+    "submission_id": "AC19337279",
+    "submission_url": "https://atcoder.jp/contests/abc188/submissions/19337279",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jan/10/2021 18:05"
+  },
   "AC19357157": {
     "contest_id": "abc188",
     "language": "C++ (GCC 9.2.1)",

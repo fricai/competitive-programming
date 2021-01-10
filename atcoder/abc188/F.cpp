@@ -24,17 +24,19 @@ signed main() {
 
 	ll x, y; cin >> x >> y;
 
+	ll ans = abs(y - x);
+
 	queue<pair<ll, int>> q;
 	q.push({y, 0});
 
-	ll ans = abs(y - x);
 	set<ll> s;
+
 	while (!q.empty()) {
 		auto [v, d] = q.front(); q.pop();
 		auto [_, inserted] = s.insert(v);
 		if (!inserted) continue;
 		ckmin(ans, abs(v - x) + d);
-		if (d > 120) continue;
+		if (d > 150) continue;
 		if (v & 1) {
 			q.push({v + 1, d + 1});
 			q.push({v - 1, d + 1});

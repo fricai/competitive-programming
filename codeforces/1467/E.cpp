@@ -22,7 +22,7 @@ set<int> s[N];
 vector<int> g[N];
 int a[N], in[N], out[N], timer;
 
-bool valid[N];
+bool valid[N], up_valid[N];
 
 void init(int u, int p) {
 	in[u] = ++timer;
@@ -34,9 +34,9 @@ void init(int u, int p) {
 		if (v == p) continue;
 
 		init(v, u);
-		
-		valid[v] &= !s[v].count(a[u]);
-		valid[u] &= valid[v];
+
+		up_valid[v] = valid[v] && !s[v].count(a[u]);
+		valid[u] &= up_valid[v];
 
 		if (sz(s[v]) > sz(s[u])) swap(s[u], s[v]);
 		for (auto x : s[v]) s[u].insert(x);
@@ -51,19 +51,28 @@ int cnt = 0;
 
 void reroot(int u, int p) {
 	vector<bool> r(sz(g[u]) + 1, 1);
-	per(i, 0, sz(g[u])) r[i] = valid[g[u][i]] && r[i + 1];
+	per(i, 0, sz(g[u])) r[i] = up_valid[g[u][i]] && r[i + 1];
 	
 	bool l = 1;
-	bool init_valid_u = valid[u];
+	bool init_up_valid_u = up_valid[u];
+	// bool init_valid_u = valid[u];
 	rep(i, 0, sz(g[u])) {
 		int v = g[u][i];
-		if (v != p) {			
-			valid[u] = l && r[i + 1] && in[v] <= mn[a[v]] && mx[a[v]] <= out[v];
+		if (v != p) {
+			// bool init_valid_v = valid[v];
+			
+			up_valid[u] = l && r[i + 1] && in[v] <= mn[a[v]] && mx[a[v]] <= out[v];
+			// valid[v] = valid[v] && up_valid[u];
+
 			reroot(v, u);
+			
+			// valid[u] = init_valid_u;
+			// valid[v] = init_valid_v;
+			up_valid[u] = init_up_valid_u;
 		}
-		l &= valid[v];
+
+		l &= up_valid[v];
 	}
-	valid[u] = init_valid_u;
 	cnt += l;
 }
 

@@ -1,4 +1,20 @@
 {
+  "AC19379036": {
+    "contest_id": "arc098",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc098/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Range Minimum Queries",
+    "problem_url": "https://atcoder.jp/contests/arc098/tasks/arc098_c",
+    "submission_id": "AC19379036",
+    "submission_url": "https://atcoder.jp/contests/arc098/submissions/19379036",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jan/11/2021 15:35"
+  },
   "AC19401172": {
     "contest_id": "arc059",
     "language": "C++ (GCC 9.2.1)",

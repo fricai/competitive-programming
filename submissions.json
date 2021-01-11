@@ -1,4 +1,20 @@
 {
+  "AC19378033": {
+    "contest_id": "arc098",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc098/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Attention",
+    "problem_url": "https://atcoder.jp/contests/arc098/tasks/arc098_a",
+    "submission_id": "AC19378033",
+    "submission_url": "https://atcoder.jp/contests/arc098/submissions/19378033",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jan/11/2021 14:42"
+  },
   "AC19378203": {
     "contest_id": "arc098",
     "language": "C++ (GCC 9.2.1)",

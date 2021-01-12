@@ -1,4 +1,20 @@
 {
+  "AC19401172": {
+    "contest_id": "arc059",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc059/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Be Together",
+    "problem_url": "https://atcoder.jp/contests/arc059/tasks/arc059_a",
+    "submission_id": "AC19401172",
+    "submission_url": "https://atcoder.jp/contests/arc059/submissions/19401172",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Jan/12/2021 19:36"
+  },
   "AC19401271": {
     "contest_id": "arc059",
     "language": "C++ (GCC 9.2.1)",

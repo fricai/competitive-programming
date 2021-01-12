@@ -42,12 +42,12 @@ signed main() {
 					break;
 				}
 			}
-
-			rep(j, pos + 1, sz(s[i])) if (s[i][j] == '?') s[i][j] = '0';
 			if (flip_point) {
 				rep(j, 0, pos + 1) if (s[i][j] == '?') s[i][j] = s[i - 1][j];
+				rep(j, pos + 1, sz(s[i])) if (s[i][j] == '?') s[i][j] = '0';
 			} else {
 				bool changed = false;
+				per(j, pos + 1, sz(s[i])) if (s[i][j] == '?') s[i][j] = '0';
 				per(j, 0, pos + 1) {
 					if (s[i][j] == '?') {
 						if (changed) s[i][j] = s[i - 1][j];

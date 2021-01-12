@@ -34,7 +34,7 @@ signed main() {
 		} else if (sz(s[i - 1]) > sz(s[i])) return cout << "NO", 0;
 		else {
 			bool flip_point = 0;
-			int pos = sz(s[i]) - 1;
+			int pos = sz(s[i]);
 			rep(j, 0, sz(s[i])) {
 				if (s[i][j] != '?' && s[i][j] != s[i - 1][j]) {
 					if (s[i][j] > s[i - 1][j]) flip_point = true;
@@ -62,7 +62,7 @@ signed main() {
 			if (s[i] <= s[i - 1]) return cout << "NO", 0;
 		}
 	}
-
+	
 	cout << "YES\n";
 	rep(i, 0, n) cout << s[i] << '\n';
 }

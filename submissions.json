@@ -1,4 +1,20 @@
 {
+  "AC19401943": {
+    "contest_id": "arc059",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc059/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Unhappy Hacking",
+    "problem_url": "https://atcoder.jp/contests/arc059/tasks/arc059_d",
+    "submission_id": "AC19401943",
+    "submission_url": "https://atcoder.jp/contests/arc059/submissions/19401943",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Jan/12/2021 20:14"
+  },
   "AC19419644": {
     "contest_id": "arc060",
     "language": "C++ (GCC 9.2.1)",

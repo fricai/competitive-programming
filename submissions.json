@@ -10098,6 +10098,25 @@
     ],
     "timestamp": "Jan/11/2021 10:55"
   },
+  "CF104146822": {
+    "contest_id": 954,
+    "language": "GNU C++17",
+    "path": "codeforces/954/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Castle Defense",
+    "problem_url": "https://codeforces.com/contest/954/problem/G",
+    "submission_id": "CF104146822",
+    "submission_url": "https://codeforces.com/contest/954/submission/104146822",
+    "tags": [
+      "binary search",
+      "data structures",
+      "greedy",
+      "two pointers",
+      "*2000"
+    ],
+    "timestamp": "Jan/13/2021 02:18"
+  },
   "CF104148605": {
     "contest_id": 490,
     "language": "GNU C++17",

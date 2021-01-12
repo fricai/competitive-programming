@@ -38,17 +38,17 @@ signed main() {
 			rep(j, 0, sz(s[i])) {
 				if (s[i][j] != '?' && s[i][j] != s[i - 1][j]) {
 					if (s[i][j] > s[i - 1][j]) flip_point = true;
-					pos = j;
+					pos = j + 1;
 					break;
 				}
 			}
+
+			rep(j, pos, sz(s[i])) if (s[i][j] == '?') s[i][j] = '0';
 			if (flip_point) {
-				rep(j, 0, pos + 1) if (s[i][j] == '?') s[i][j] = s[i - 1][j];
-				rep(j, pos + 1, sz(s[i])) if (s[i][j] == '?') s[i][j] = '0';
+				rep(j, 0, pos) if (s[i][j] == '?') s[i][j] = s[i - 1][j];
 			} else {
 				bool changed = false;
-				per(j, pos + 1, sz(s[i])) if (s[i][j] == '?') s[i][j] = '0';
-				per(j, 0, pos + 1) {
+				per(j, 0, pos) {
 					if (s[i][j] == '?') {
 						if (changed) s[i][j] = s[i - 1][j];
 						else if (s[i - 1][j] == '9') s[i][j] = '0';
@@ -62,7 +62,7 @@ signed main() {
 			if (s[i] <= s[i - 1]) return cout << "NO", 0;
 		}
 	}
-	
+
 	cout << "YES\n";
 	rep(i, 0, n) cout << s[i] << '\n';
 }

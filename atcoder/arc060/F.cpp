@@ -77,15 +77,15 @@ signed main() {
 
 	hasher = s;
 	for (int d = 1; d <= n; ++d) {
-		for_prefix[d] = {1};
-		for (int i = d; i + d <= n; i += d)
-			for_prefix[d].push_back(for_prefix[d].back() && (hasher.hashInterval(0, d) == hasher.hashInterval(i, i + d)));
+		for_prefix[d] = vector<bool>(n / d, 1);
+		for (int i = d, c = 0; i + d <= n; i += d, ++c)
+			for_prefix[d][c + 1] = for_prefix[d][c] && (hasher.hashInterval(0, d) == hasher.hashInterval(i, i + d));
 	}
 
 	for (int d = 1; d <= n; ++d) {
-		for_suffix[d] = {1};
-		for (int i = n - d; i - d >= 0; i -= d)
-			for_suffix[d].push_back(for_suffix[d].back() && (hasher.hashInterval(n - d, n) == hasher.hashInterval(i - d, i)));
+		for_suffix[d] = vector<bool>(n / d, 1);
+		for (int i = n - d, c = 0; i - d >= 0; i -= d, ++c)
+			for_suffix[d][c + 1] = for_suffix[d][c] && (hasher.hashInterval(n - d, n) == hasher.hashInterval(i - d, i));
 	}
 
 	if (suffix_good(n)) return cout << "1\n1", 0;

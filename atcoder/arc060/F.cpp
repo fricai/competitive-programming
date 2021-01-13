@@ -19,7 +19,7 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 struct H {
 	typedef uint64_t ull;
-	ull x; H(ull x = 0) : x(x) {}
+	ull x; H(ull x=0) : x(x) {}
 #define OP(O,A,B) H operator O(H o) { ull r = x; asm \
 	(A "addq %%rdx, %0\n adcq $0,%0" : "+a"(r) : B); return r; }
 	OP(+,,"d"(o.x)) OP(*,"mul %1\n", "r"(o.x) : "rdx")
@@ -33,11 +33,11 @@ static const H C = (ll)1e11+3; // (order ~ 3e9; random also ok)
 struct HashInterval {
 	vector<H> ha, pw;
 	HashInterval() { }
-	HashInterval(string& str) : ha(sz(str) + 1), pw(ha) {
+	HashInterval(string& str) : ha(sz(str)+1), pw(ha) {
 		pw[0] = 1;
 		rep(i, 0, sz(str))
-			ha[i + 1] = ha[i] * C + str[i],
-			pw[i + 1] = pw[i] * C;
+			ha[i+1] = ha[i] * C + str[i],
+			pw[i+1] = pw[i] * C;
 	}
 	H hashInterval(int a, int b) { // hash [a, b)
 		return ha[b] - ha[a] * pw[b - a];
@@ -47,16 +47,20 @@ struct HashInterval {
 const int N = 1 << 19;
 vector<int> divisors[N];
 string s;
+int n;
 
 vector<bool> for_prefix[N], for_suffix[N];
 
 bool prefix_good(int i) {
-	for (int d : divisors[i]) if (for_prefix[d][i / d - 1]) return false;
+	for (int d : divisors[i]) if (!for_prefix[d][i / d - 1]) return false;
 	return true;
 }
 
 bool suffix_good(int i) {
-	for (int d : divisors[i]) if (for_suffix[d][i / d - 1]) return false;
+	for (int d : divisors[i]) if (!for_suffix[d][i / d - 1]) {
+		// cerr << d << ' ' << i/d << '\n';
+		return false;
+	}
 	return true;
 }
 
@@ -65,7 +69,7 @@ signed main() {
 	cin.tie(nullptr);
 
 	cin >> s;
-	int n = sz(s);
+	n = sz(s);
 
 	for (int d = 1; d <= n; ++d)
 		for (int j = 2 * d; j <= n; j += d)
@@ -77,18 +81,21 @@ signed main() {
 
 	hasher = s;
 	for (int d = 1; d <= n; ++d) {
-		for_prefix[d] = {1};
+		for_prefix[d] = {0};
 		for (int i = d; i + d <= n; i += d)
-			for_prefix[d].push_back(for_prefix[d].back() && (hasher.hashInterval(0, d) == hasher.hashInterval(i, i + d)));
+			for_prefix[d].push_back(for_prefix[d].back() || !(hasher.hashInterval(0, d) == hasher.hashInterval(i, i + d)));
 	}
 
 	for (int d = 1; d <= n; ++d) {
-		for_suffix[d] = {1};
+		for_suffix[d] = {0};
 		for (int i = n - d; i - d >= 0; i -= d)
-			for_suffix[d].push_back(for_suffix[d].back() && (hasher.hashInterval(n - d, n) == hasher.hashInterval(i - d, i)));
+			for_suffix[d].push_back(for_suffix[d].back() || !(hasher.hashInterval(n - d, n) == hasher.hashInterval(i - d, i)));
 	}
-
-	if (suffix_good(n)) return cout << "1\n1", 0;
+	
+	if (suffix_good(n)) {
+		assert(prefix_good(n));
+		return cout << "1\n1", 0;
+	}
 
 	int cnt = 0;
 	rep(i, 1, n) cnt += prefix_good(i) && suffix_good(n - i);

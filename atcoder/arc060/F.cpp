@@ -84,12 +84,17 @@ signed main() {
 		for_prefix[d] = {0};
 		for (int i = d; i + d <= n; i += d)
 			for_prefix[d].push_back(for_prefix[d].back() || !(hasher.hashInterval(0, d) == hasher.hashInterval(i, i + d)));
+		for_prefix[d][0] = 1;
 	}
 
 	for (int d = 1; d <= n; ++d) {
 		for_suffix[d] = {0};
 		for (int i = n - d; i - d >= 0; i -= d)
 			for_suffix[d].push_back(for_suffix[d].back() || !(hasher.hashInterval(n - d, n) == hasher.hashInterval(i - d, i)));
+		for_suffix[d][0] = 1;
+		// cerr << d << ": ";
+		// for (auto x : for_suffix[d]) cerr << x << ' ';
+		// cerr << '\n';
 	}
 	
 	if (suffix_good(n)) {

@@ -1,4 +1,20 @@
 {
+  "AC19419783": {
+    "contest_id": "arc060",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc060/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Digit Sum",
+    "problem_url": "https://atcoder.jp/contests/arc060/tasks/arc060_b",
+    "submission_id": "AC19419783",
+    "submission_url": "https://atcoder.jp/contests/arc060/submissions/19419783",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jan/13/2021 21:51"
+  },
   "AC19419921": {
     "contest_id": "arc060",
     "language": "C++ (GCC 9.2.1)",

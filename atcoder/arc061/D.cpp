@@ -24,7 +24,7 @@ int h, w;
 void update(int i, int j) {
 	if (i <= 0 || j <= 0 || i + 2 > h || j + 2 > w) return;
 	int loc = 0;
-	rep(a, 1, 9) {
+	rep(a, 1, 10) {
 		auto it = f[a].find({i, j});
 		if (it != end(f[a])) {
 			f[a].erase(it);
@@ -32,6 +32,7 @@ void update(int i, int j) {
 			break;
 		}
 	}
+	assert(loc != 9);
 	f[loc + 1].insert({i, j});
 }
 

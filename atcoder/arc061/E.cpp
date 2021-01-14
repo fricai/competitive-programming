@@ -20,26 +20,25 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 const int N = 1 << 17, M = 1 << 18;
 int a[M], b[M], c[M];
 vector<int> g[N];
-vector<pair<int, int>> adj[M + M + N], vec;
-int d[M + M + N];
+vector<pair<int, int>> adj[M + M], vec;
+int d[M + M];
 int tot;
 
 void add_edge(int u, int v, int w) { adj[u].emplace_back(v, w); }
 
 int get(int u, int c) { return lb(all(vec), pair(u, c)) - begin(vec); }
 
-void bfs(int s) {
+void dij(int s) {
 	fill(d, d + tot, M);
 	d[s] = 0;
-    deque<int> q = {s};
+    priority_queue<pair<int, int>> q;
+    q.push({0, s});
     while (!q.empty()) {
-		int u = q.front(); q.pop_front();
-		for (auto [v, w] : adj[u])
-			if (ckmin(d[v], d[u] + w)) {
-				if (w) q.push_back(v);
-				else q.push_front(v);
-			}
-	}
+		auto [d_v, v] = q.top(); q.pop();
+        if (-d_v != d[v]) continue;
+        for (auto [to, len] : adj[v])
+			if (ckmin(d[to], d[v] + len)) q.push({-d[to], to});
+    }
 }
 
 signed main() {
@@ -76,6 +75,7 @@ signed main() {
 		int t = 0;
 		rep(r, i + 1, j) {
 			int col = vec[r].second;
+			
 			while (t < sz(g[u]) && c[g[u][t]] == col) {
 				int v = a[g[u][t]] ^ b[g[u][t]] ^ u;
 				int nxt = get(v, col);
@@ -83,9 +83,11 @@ signed main() {
 				++t;
 			}
 		}
+		assert(t == sz(g[u]));
 	}
 
-	bfs(0);
+	dij(0);
+
 
 	int ans = d[get(n, 0)];
 	cout << (ans < M ? ans : -1);

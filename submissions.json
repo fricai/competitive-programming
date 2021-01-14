@@ -1,4 +1,20 @@
 {
+  "AC19430037": {
+    "contest_id": "arc061",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc061/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Snuke's Coloring",
+    "problem_url": "https://atcoder.jp/contests/arc061/tasks/arc061_b",
+    "submission_id": "AC19430037",
+    "submission_url": "https://atcoder.jp/contests/arc061/submissions/19430037",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jan/14/2021 17:13"
+  },
   "AC19442455": {
     "contest_id": "arc062",
     "language": "C++ (GCC 9.2.1)",

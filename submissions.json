@@ -1,4 +1,20 @@
 {
+  "AC19429734": {
+    "contest_id": "arc061",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc061/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Snuke's Subway Trip",
+    "problem_url": "https://atcoder.jp/contests/arc061/tasks/arc061_c",
+    "submission_id": "AC19429734",
+    "submission_url": "https://atcoder.jp/contests/arc061/submissions/19429734",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jan/14/2021 16:53"
+  },
   "AC19429918": {
     "contest_id": "arc061",
     "language": "C++ (GCC 9.2.1)",

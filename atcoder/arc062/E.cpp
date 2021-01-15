@@ -45,7 +45,9 @@ void rot(ll &x) {
 	x += down * 1000000000;
 }
 
-ll g(int a, int b, int c, int d) { return 1000000000ll * a + 1000000 * b + 1000 * c + d; }
+ll g(ll a, int b, int c, int d) {
+	return d + 1000 * c + 1000000 * b + 1000000000 * a;
+}
 
 signed main() {
 	ios::sync_with_stdio(false);

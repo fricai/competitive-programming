@@ -23,13 +23,16 @@ signed main() {
 
 	int n; cin >> n;
 
-	ll x = 1, y = 1;
+	ll x = -1, y = -1;
 	rep(i, 0, n) {
 		ll a, b;
 		cin >> a >> b;
-		ll m = max((x + a - 1) / a, (y + b - 1) / b);
-		x = a * m;
-		y = b * m;
+		if (x < 0) x = a, y = b;
+		else {
+			ll m = max((x + a - 1) / a, (y + b - 1) / b);
+			x = a * m;
+			y = b * m;
+		}
 	}
 	cout << x + y << '\n';
 }

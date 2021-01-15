@@ -40,9 +40,9 @@ struct chash {
 gp_hash_table<ll, int, chash> cnt;
 
 void rot(ll &x) {
-	int down = x % 1000;
+	ll down = x % 1000;
 	x /= 1000;
-	x += down * 1000000000ll;
+	x += down * 1000000000;
 }
 
 ll g(int a, int b, int c, int d) { return 1000000000ll * a + 1000000 * b + 1000 * c + d; }
@@ -60,13 +60,16 @@ signed main() {
 
 	ll ans = 0;
 	rep(u, 0, n) {
+		auto U = c[u];
 		rep(_u, 0, 4) {
-			rep(d, u + 1, n) {				
+			rep(d, u + 1, n) {
+				auto D = c[d];
+				
 				auto
-					l = g(c[u][0], c[u][3], c[d][1], c[d][0]),
-					f = g(c[u][3], c[u][2], c[d][2], c[d][1]),
-					r = g(c[u][2], c[u][1], c[d][3], c[d][2]),
-					b = g(c[u][1], c[u][0], c[d][0], c[d][3]);
+					l = g(U[0], U[3], D[1], D[0]),
+					f = g(U[3], U[2], D[2], D[1]),
+					r = g(U[2], U[1], D[3], D[2]),
+					b = g(U[1], U[0], D[0], D[3]);
 				
 				rep(_l, 0, 4) {
 					rot(l);
@@ -102,11 +105,11 @@ signed main() {
 						}
 					}
 				}
+			
 			}
-			rotate(c[u], c[u] + 1, c[u] + 4);
+			rotate(U, U + 1, U + 4);
 		}
 	}
-	
 	ans /= 3;
 	cout << ans;
 }

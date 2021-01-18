@@ -1,4 +1,20 @@
 {
+  "AC19505734": {
+    "contest_id": "arc064",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc064/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "An Ordinary Game",
+    "problem_url": "https://atcoder.jp/contests/arc064/tasks/arc064_b",
+    "submission_id": "AC19505734",
+    "submission_url": "https://atcoder.jp/contests/arc064/submissions/19505734",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jan/18/2021 12:46"
+  },
   "AC19505905": {
     "contest_id": "arc064",
     "language": "C++ (GCC 9.2.1)",

@@ -1,4 +1,20 @@
 {
+  "AC19505905": {
+    "contest_id": "arc064",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc064/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Cosmic Rays",
+    "problem_url": "https://atcoder.jp/contests/arc064/tasks/arc064_c",
+    "submission_id": "AC19505905",
+    "submission_url": "https://atcoder.jp/contests/arc064/submissions/19505905",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jan/18/2021 12:58"
+  },
   "AC19507056": {
     "contest_id": "arc064",
     "language": "C++ (GCC 9.2.1)",

@@ -50,7 +50,9 @@ signed main() {
 	d[0] = 0;
 	rep(i, 0, n + 2) {
 		int v = -1;
-		rep(j, 0, n + 2) if (!vis[j] && (v == -1 || d[j] < d[v])) v = j;
+		rep(j, 0, n + 2)
+			if (!vis[j] && (v == -1 || d[j] < d[v])) v = j;
+		if (abs(d[v] - inf) < eps) break;
 		vis[v] = true;
 		rep(u, 0, n + 2) ckmin(d[u], d[v] + g[u][v]);
 	}

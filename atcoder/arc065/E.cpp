@@ -50,6 +50,9 @@ signed main() {
 		rep(i, 0, n) s.insert(i);
 		s.insert(n);
 
+		vector<int> nxt(n);
+		iota(all(nxt), 0);
+		
 		rep(i, 0, n) {
 			x[n] = x[ord[i]]; y[n] = y[ord[i]] + d;
 
@@ -64,14 +67,15 @@ signed main() {
 
 			if (a == b) continue;
 			deg[ord[i]] += b - a;
-			for (auto it = s.ub(a); *it < b; ) s.erase(it++);
-			D.join(ord[i], ord[a]);
+			for (auto it = s.ub(a); it != end(s) && *it < b; ) s.erase(it++);
+			nxt[i] = a;
 		}
 		
 		for (auto it = begin(s); it != prev(end(s)); ++it) {
 			int nxt = *next(it);
 			for (int i = *it; i != nxt; ++i) D.join(ord[*it], ord[i]);
 		}
+		rep(i, 0, n) D.join(ord[i], ord[nxt[i]]);
 	}
 	
 	ll ans = 0;

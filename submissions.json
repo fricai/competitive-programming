@@ -1,4 +1,20 @@
 {
+  "AC19535120": {
+    "contest_id": "arc065",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc065/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Manhattan Compass",
+    "problem_url": "https://atcoder.jp/contests/arc065/tasks/arc065_c",
+    "submission_id": "AC19535120",
+    "submission_url": "https://atcoder.jp/contests/arc065/submissions/19535120",
+    "tags": [
+      "AtCoder",
+      "*900"
+    ],
+    "timestamp": "Jan/20/2021 14:44"
+  },
   "AC19535136": {
     "contest_id": "arc065",
     "language": "C++ (GCC 9.2.1)",

@@ -52,9 +52,10 @@ signed main() {
 
 		int a = 0, b = 0;
 		rep(i, 0, n) {
-			int r = x[ord[i]] + y[ord[i]] + d;
-			while (a < n && pair(r, x[ord[i]]) > pair(x[ord[a]] + y[ord[a]], x[ord[a]])) ++a;
-			while (b < n && pair(r, -y[ord[i]]) > pair(x[ord[b]] + y[ord[b]], -y[ord[b]])) ++b;
+			x[n] = x[ord[i]]; y[n] = y[ord[i]] + d;
+			while (a < n && pair(x[n] + y[n], x[n]) > pair(x[ord[a]] + y[ord[a]], x[ord[a]])) ++a;
+			x[n] = x[ord[i]] + d; y[n] = y[ord[i]];
+			while (b < n && pair(x[n] + y[n], -y[n]) > pair(x[ord[b]] + y[ord[b]], -y[ord[b]])) ++b;
 			
 			if (a == b) continue;
 			deg[ord[i]] += b - a;

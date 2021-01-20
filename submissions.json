@@ -8154,6 +8154,25 @@
     ],
     "timestamp": "Jan/04/2021 19:18"
   },
+  "CF104904471": {
+    "contest_id": 1265,
+    "language": "GNU C++17",
+    "path": "codeforces/1265/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Beautiful Mirrors",
+    "problem_url": "https://codeforces.com/contest/1265/problem/E",
+    "submission_id": "CF104904471",
+    "submission_url": "https://codeforces.com/contest/1265/submission/104904471",
+    "tags": [
+      "data structures",
+      "dp",
+      "math",
+      "probabilities",
+      "*2100"
+    ],
+    "timestamp": "Jan/20/2021 18:17"
+  },
   "CF104970463": {
     "contest_id": 1333,
     "language": "GNU C++17",

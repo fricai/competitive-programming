@@ -38,7 +38,7 @@ signed main() {
 	int d = abs(x[a] - x[b]) + abs(y[a] - y[b]);
 
 	dsu D(n);
-	rep(_, 0, 4) {
+	rep(b, 0, 4) {
 		rep(i, 0, n) tie(x[i], y[i]) = pair(-y[i], x[i]);
 
 		rep(i, 0, n) ord[i] = i;
@@ -50,19 +50,24 @@ signed main() {
 		rep(i, 0, n) s.insert(i);
 		s.insert(n);
 
-		int a = 0, b = 0;
 		rep(i, 0, n) {
 			x[n] = x[ord[i]]; y[n] = y[ord[i]] + d;
-			while (a < n && pair(x[n] + y[n], x[n]) > pair(x[ord[a]] + y[ord[a]], x[ord[a]])) ++a;
-			x[n] = x[ord[i]] + d; y[n] = y[ord[i]];
-			while (b < n && pair(x[n] + y[n], -y[n]) > pair(x[ord[b]] + y[ord[b]], -y[ord[b]])) ++b;
+
+			int a = lb(ord, ord + n, n, [&](int i, int j) {
+				return pair(x[i] + y[i], x[i]) < pair(x[j] + y[j], x[j]);
+			}) - ord;
 			
+			x[n] = x[ord[i]] + d; y[n] = y[ord[i]];
+			int b = lb(ord, ord + n, n, [&](int i, int j) {
+				return pair(x[i] + y[i], -y[i]) < pair(x[j] + y[j], -y[j]);
+			}) - ord;
+
 			if (a == b) continue;
 			deg[ord[i]] += b - a;
 			for (auto it = s.ub(a); *it < b; ) s.erase(it++);
 			D.join(ord[i], ord[a]);
 		}
-
+		
 		for (auto it = begin(s); it != prev(end(s)); ++it) {
 			int nxt = *next(it);
 			for (int i = *it; i != nxt; ++i) D.join(ord[*it], ord[i]);

@@ -18,7 +18,7 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 const int N = 1 << 17;
-int x[N], y[N], p[N], q[N];
+int x[N], y[N];
 int ord[N];
 
 struct dsu {
@@ -50,15 +50,15 @@ signed main() {
 		set<int> s;
 		rep(i, 0, n) s.insert(i);
 		s.insert(n);
-		rep(i, 0, n) p[i] = x[ord[i]], q[i] = y[ord[i]];
 
-		for (int i = 0, a = 0, b = 0; i < n; ++i) {
-			p[n] = p[i]; q[n] = q[i] + d;
-			while (pair(p[n] + q[n], p[n]) > pair(p[a] + q[a], p[a])) ++a;
+		int a = 0, b = 0;
+		rep(i, 0, n) {
+			x[n] = x[ord[i]]; y[n] = y[ord[i]] + d;
+			while (pair(x[n] + y[n], x[n]) > pair(x[ord[a]] + y[ord[a]], x[ord[a]])) ++a;
+
+			x[n] = x[ord[i]] + d; y[n] = y[ord[i]];
+			while (pair(x[n] + y[n], -y[n]) > pair(x[ord[b]] + y[ord[b]], -y[ord[b]])) ++b;
 			
-			p[n] = p[i] + d; q[n] = q[i];
-			while (pair(p[n] + 	q[n], -q[n]) > pair(p[b] + q[b], -q[b])) ++b;
-
 			if (a == b) continue;
 
 			deg[ord[i]] += b - a;

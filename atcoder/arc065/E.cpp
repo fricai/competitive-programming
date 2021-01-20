@@ -58,12 +58,14 @@ signed main() {
 			
 			if (a == b) continue;
 			deg[ord[i]] += b - a;
-			D.join(ord[i], ord[a]);
 			for (auto it = s.ub(a); *it < b; ) s.erase(it++);
+			D.join(ord[i], ord[a]);
 		}
 
-		for (auto i = begin(s), j = next(begin(s)); j != end(s); ++i, ++j)
-			rep(k, *i, *j) D.join(ord[*i], ord[k]);
+		for (auto it = begin(s); it != prev(end(s)); ++it) {
+			int nxt = *next(it);
+			for (int i = *it; i != nxt; ++i) D.join(ord[*it], ord[i]);
+		}
 	}
 	
 	ll ans = 0;

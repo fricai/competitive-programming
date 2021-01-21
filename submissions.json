@@ -1,4 +1,20 @@
 {
+  "AC19546907": {
+    "contest_id": "arc066",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc066/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Xor Sum",
+    "problem_url": "https://atcoder.jp/contests/arc066/tasks/arc066_b",
+    "submission_id": "AC19546907",
+    "submission_url": "https://atcoder.jp/contests/arc066/submissions/19546907",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jan/21/2021 11:54"
+  },
   "AC19547665": {
     "contest_id": "arc066",
     "language": "C++ (GCC 9.2.1)",

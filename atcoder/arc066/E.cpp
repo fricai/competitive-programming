@@ -45,9 +45,14 @@ signed main() {
 		} else {
 			mn[0][i] = a[i] + mn[0][i + 1];
 			mx[0][i] = a[i] + mx[0][i + 1];
-			mn[1][i] = -a[i] + mn[1][i + 1];
+			
+			mn[1][i] = -a[i] + min(mn[0][i + 1], mn[1][i + 1]);
 			mx[1][i] = -a[i] + max(mx[0][i + 1], mx[1][i + 1]);
 		}
+
+		// cerr << '\n';
+		// cerr << mx[0][i] << ' ' << mn[0][i] << '\n';
+		// cerr << mx[1][i] << ' ' << mn[1][i] << '\n';
 	}
 
 	cout << mx[0][0];

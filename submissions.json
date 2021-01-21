@@ -8154,6 +8154,28 @@
     ],
     "timestamp": "Jan/04/2021 19:18"
   },
+  "CF104970548": {
+    "contest_id": 1333,
+    "language": "GNU C++17",
+    "path": "codeforces/1333/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Challenges in school \u211641",
+    "problem_url": "https://codeforces.com/contest/1333/problem/D",
+    "submission_id": "CF104970548",
+    "submission_url": "https://codeforces.com/contest/1333/submission/104970548",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "games",
+      "graphs",
+      "greedy",
+      "implementation",
+      "sortings",
+      "*2100"
+    ],
+    "timestamp": "Jan/21/2021 14:55"
+  },
   "CF104973598": {
     "contest_id": 985,
     "language": "GNU C++17",

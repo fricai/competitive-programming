@@ -18,7 +18,7 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 const int N = 1 << 19;
-bool t[N << 1], dp[N];
+bool t[N << 1];
 int a[N];
 
 bool query(int l, int r) {
@@ -40,10 +40,15 @@ signed main() {
 	rep(i, 0, n) cin >> a[i + 1];
 	sort(a + 1, a + n + 1);
 
+	// rep(i, 0, n) cerr << a[i + 1] << ' ';
+	// cerr << '\n';
+
 	update(0, 1);
-	for (int i = 1, j = 0, r = 0, cnt = 0; i <= n; ++i) {
-		while (a[i] - a[j] > d) ++j;
+	for (int i = 1, j = 1, cnt = 0; i <= n; ++i) {
+		while (j < i && a[i] - a[j] > d) ++j;
+		// cerr << i << ' ' << j << ' ' << query(j - 1, i - k + 1) << '\n';
 		update(i, query(j - 1, i - k + 1));
 	}
+
 	cout << (query(n, n + 1) ? "YES" : "NO");
 }

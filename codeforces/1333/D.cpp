@@ -51,10 +51,9 @@ signed main() {
 	s = t;
 	rep(i, 1, n) if (s[i - 1] == 'R' && s[i] == 'L') q.push_back(i);
 
-	vector<int> op;
 	while (!q.empty()) {
-		--k;
-		while (!q.empty() && k != hi) {
+		vector<int> op;
+		while (!q.empty() && k <= hi) {
 			int i = q.back(); q.pop_back();
 			op.push_back(i);
 			s[i - 1] = 'L';
@@ -63,10 +62,10 @@ signed main() {
 			if (i + 1 < n) if (s[i + 1] == 'L') st.push_back(i + 1);
 			--hi;
 		}
+		--k;
 		cout << sz(op) << ' ';
 		for (auto x : op) cout << x << ' ';
 		cout << '\n';
-		op.clear();
 
 		sort(all(st)); st.erase(unique(all(st)), end(st));
 		q.insert(end(q), all(st));

@@ -40,15 +40,10 @@ signed main() {
 	rep(i, 0, n) cin >> a[i + 1];
 	sort(a + 1, a + n + 1);
 
-	// update(0, 1);
-	dp[0] = 1;
-	for (int i = 1, j = 0, cnt = 0; i <= n; ++i) {
-		while (j <= i - k && a[i] - a[j + 1] > d) cnt -= dp[j++];
-		if (i - k >= 0) cnt += dp[i - k];
-		dp[i] = !!cnt;
-		// cerr << cnt << '\n';
-		// update(i, query(j - 1, i - k + 1));
+	update(0, 1);
+	for (int i = 1, j = 0, r = 0, cnt = 0; i <= n; ++i) {
+		while (a[i] - a[j] > d) ++j;
+		update(i, query(j - 1, i - k + 1));
 	}
-	cout << (dp[n] ? "YES" : "NO");
-	// cout << (query(n, n + 1) ? "YES" : "NO");
+	cout << (query(n, n + 1) ? "YES" : "NO");
 }

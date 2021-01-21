@@ -1,4 +1,20 @@
 {
+  "AC19547689": {
+    "contest_id": "arc066",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc066/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Addition and Subtraction Hard",
+    "problem_url": "https://atcoder.jp/contests/arc066/tasks/arc066_c",
+    "submission_id": "AC19547689",
+    "submission_url": "https://atcoder.jp/contests/arc066/submissions/19547689",
+    "tags": [
+      "AtCoder",
+      "*900"
+    ],
+    "timestamp": "Jan/21/2021 13:01"
+  },
   "AC19547705": {
     "contest_id": "arc066",
     "language": "C++ (GCC 9.2.1)",

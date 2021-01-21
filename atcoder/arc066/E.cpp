@@ -29,8 +29,13 @@ signed main() {
 	int n; cin >> n;
 	cin >> a[0];
 	rep(i, 1, n) cin >> op[i - 1] >> a[i];
-	
-	per(i, 0, n) {
+	// rep(i, 0, n) cerr << a[i] << ' ';
+
+	// 0 for +, 1 for -
+	mn[0][n - 1] = mx[0][n - 1] = +a[n - 1];
+	mn[1][n - 1] = mx[1][n - 1] = -a[n - 1];
+
+	per(i, 0, n - 1) {
 		if (op[i] == '-') {
 			mn[0][i] = a[i] + mn[1][i + 1];
 			mx[0][i] = a[i] + mx[1][i + 1];
@@ -40,7 +45,6 @@ signed main() {
 		} else {
 			mn[0][i] = a[i] + mn[0][i + 1];
 			mx[0][i] = a[i] + mx[0][i + 1];
-
 			mn[1][i] = -a[i] + mn[1][i + 1];
 			mx[1][i] = -a[i] + max(mx[0][i + 1], mx[1][i + 1]);
 		}

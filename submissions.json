@@ -1,4 +1,20 @@
 {
+  "AC19561186": {
+    "contest_id": "arc067",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc067/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Factors of Factorial",
+    "problem_url": "https://atcoder.jp/contests/arc067/tasks/arc067_a",
+    "submission_id": "AC19561186",
+    "submission_url": "https://atcoder.jp/contests/arc067/submissions/19561186",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jan/22/2021 12:02"
+  },
   "AC19561293": {
     "contest_id": "arc067",
     "language": "C++ (GCC 9.2.1)",

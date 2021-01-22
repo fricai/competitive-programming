@@ -1,4 +1,20 @@
 {
+  "AC19561293": {
+    "contest_id": "arc067",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc067/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Walk and Teleport",
+    "problem_url": "https://atcoder.jp/contests/arc067/tasks/arc067_b",
+    "submission_id": "AC19561293",
+    "submission_url": "https://atcoder.jp/contests/arc067/submissions/19561293",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jan/22/2021 12:10"
+  },
   "AC19561891": {
     "contest_id": "arc067",
     "language": "C++ (GCC 9.2.1)",

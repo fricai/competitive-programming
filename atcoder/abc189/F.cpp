@@ -52,12 +52,17 @@ signed main() {
 
 	pair<ld, ld> cur = {0, 0};
 	per(i, 0, n) {
-		if (!dead[i]) E[i] = {1 + cur.first / m, cur.second / m};
+		if (!dead[i]) {
+			// int cnt_dead = 0;
+			// rep(j, 0, k) cnt_dead += i < a[j] && a[j] <= i + m;
+			// if (cnt_dead == m) return cout << -1, 0;
+			E[i] = {1 + cur.first / m, cur.second / m};
+		}
 		cur -= E[i + m];
 		cur += E[i];
 	}
-	
-	auto bot = 1 - E[0].second;
-	if (bot < eps) cout << -1;
-	else cout << fixed << setprecision(10) << E[0].first / bot;
+
+	E[0].second = 1 - E[0].second;
+	if (E[0].second < eps) cout << -1;
+	else cout << fixed << setprecision(10) << E[0].first / E[0].second;
 }

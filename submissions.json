@@ -1,4 +1,20 @@
 {
+  "AC19649774": {
+    "contest_id": "abc189",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc189/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Sugoroku2",
+    "problem_url": "https://atcoder.jp/contests/abc189/tasks/abc189_f",
+    "submission_id": "AC19649774",
+    "submission_url": "https://atcoder.jp/contests/abc189/submissions/19649774",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jan/23/2021 19:28"
+  },
   "AC19650591": {
     "contest_id": "abc189",
     "language": "C++ (GCC 9.2.1)",

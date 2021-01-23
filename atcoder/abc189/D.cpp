@@ -20,14 +20,14 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+
 	ll ans = 1;
 	int n; cin >> n;
 	ll p = 1;
 	rep(i, 0, n) {
 		string s; cin >> s;
 		p <<= 1;
-		if (s[0] != 'A') ans |= p;
+		if (s[0] != 'A') ans += p;
 	}
 	cout << ans;
 }

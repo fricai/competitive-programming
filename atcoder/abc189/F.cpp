@@ -37,7 +37,7 @@ pair<T, T>& operator+=(pair<T, T>& a, const pair<T, T> &b) {
 	return a;
 }
 
-const ld eps = 1e-9;
+const int eps = 1e-9;
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -53,16 +53,16 @@ signed main() {
 	pair<ld, ld> cur = {0, 0};
 	per(i, 0, n) {
 		if (!dead[i]) {
-			// int cnt_dead = 0;
-			// rep(j, 0, k) cnt_dead += i < a[j] && a[j] <= i + m;
-			// if (cnt_dead == m) return cout << -1, 0;
+			int cnt_dead = 0;
+			rep(j, 0, k) cnt_dead += i < a[j] && a[j] <= i + m;
+			if (cnt_dead == m) return cout << -1, 0;
 			E[i] = {1 + cur.first / m, cur.second / m};
 		}
 		cur -= E[i + m];
 		cur += E[i];
 	}
-
-	E[0].second = 1 - E[0].second;
-	if (E[0].second < eps) cout << -1;
-	else cout << fixed << setprecision(10) << E[0].first / E[0].second;
+	
+	ld res = E[0].first / (1 - E[0].second);
+	if (isinf(res)) cout << -1;
+	else cout << fixed << setprecision(10) << res;
 }

@@ -6703,6 +6703,24 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF105389960": {
+    "contest_id": 1475,
+    "language": "GNU C++17",
+    "path": "codeforces/1475/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Unusual Matrix",
+    "problem_url": "https://codeforces.com/contest/1475/problem/F",
+    "submission_id": "CF105389960",
+    "submission_url": "https://codeforces.com/contest/1475/submission/105389960",
+    "tags": [
+      "2-sat",
+      "brute force",
+      "constructive algorithms",
+      "*1900"
+    ],
+    "timestamp": "Jan/25/2021 22:08"
+  },
   "CF105394027": {
     "contest_id": 1475,
     "language": "GNU C++17",

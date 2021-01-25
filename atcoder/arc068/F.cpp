@@ -28,11 +28,13 @@ signed main() {
 	cin.tie(nullptr);
 
 	int n, k; cin >> n >> k;
-	rep(i, 0, n) {
+	for (int i = 0; i <= n; ++i) {
 		T[i][0] = 1;
-		rep(j, 0, i) T[i][j + 1] = T[i][j] + T[i - 1][j + 1];
+		for (int j = 1; j <= i; ++j)
+			T[i][j] = T[i][j - 1] + T[i - 1][j];
+		// T[i][j] = T[i][j - 1] + T[i - 1][j]
 	}
-
+	
 	rep(i, 1, n - k) T[n - 1][k - 1] += T[n - 1][k - 1];
 	cout << T[n - 1][k - 1].val();
 }

@@ -1,4 +1,20 @@
 {
+  "AC19687672": {
+    "contest_id": "arc068",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc068/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Solitaire",
+    "problem_url": "https://atcoder.jp/contests/arc068/tasks/arc068_d",
+    "submission_id": "AC19687672",
+    "submission_url": "https://atcoder.jp/contests/arc068/submissions/19687672",
+    "tags": [
+      "AtCoder",
+      "*1200"
+    ],
+    "timestamp": "Jan/25/2021 12:39"
+  },
   "AC19705144": {
     "contest_id": "agc020",
     "language": "C++ (GCC 9.2.1)",

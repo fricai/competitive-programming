@@ -20,24 +20,11 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 const int N = 1 << 10;
 bool g[N][N];
 
-int col[2][N];
-bool vis[2][N];
+bool s[N], t[N];
 
-int n;
-bool bip(int u, bool b, bool t) {
-	if (vis[t][u]) {
-		if (b != col[t][u]) return false;
-		return true;
-	}
-	col[t][u] = b;
-	vis[t][u] = true;
-	if (t) { rep(v, 0, n) if (!bip(v, b ^ g[u][v], 0)) return false; }
-	else { rep(v, 0, n) if (!bip(v, b ^ g[v][u], 1)) return false; }
-	return true;
-}
 
 bool solve() {
-	cin >> n;
+	int n; cin >> n;
 
 	rep(i, 0, n) {
 		rep(j, 0, n) {
@@ -54,10 +41,17 @@ bool solve() {
 	}
 
 	rep(b, 0, 2) {
-		fill(vis[b], vis[b] + n, 0);
-		fill(col[b], col[b] + n, 0);
+		fill(s, s + n, 0);
+		fill(t, t + n, 0);
+		
+		rep(i, 0, n) s[i] = b ^ g[i][0];
+		rep(i, 0, n) t[i] = s[i] ^ g[i][i];
+
+		bool works = true;
+		rep(i, 0, n) rep(j, 0, n) if (g[i][j] != (s[i] ^ t[j])) works = false;
+		if (works) return true;
 	}
-	return bip(0, 0, 0);
+	return false;
 }
 
 signed main() {

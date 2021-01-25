@@ -23,23 +23,9 @@ using namespace __gnu_pbds;
 template<class T>
 using ost = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
-const int N = 1 << 19, M = 1 << 17;
+const int N = 1 << 19;
 int l[N], r[N];
 int ord[N];
-int t[M << 1];
-
-void modify(int l, int r) {
-	for (l |= M, r |= M; l < r; l >>= 1, r >>= 1) {
-		if (l & 1) ++t[l++];
-		if (r & 1) ++t[--r];
-	}
-}
-
-int query(int p) {
-	int res = 0;
-	for (p |= M; p; p >>= 1) res += t[p];
-	return res;
-}
 
 int f(int i) { return r[i] - l[i]; }
 
@@ -48,18 +34,21 @@ signed main() {
 	cin.tie(nullptr);
 
 	int n, m; cin >> n >> m;
-	rep(i, 0, n) cin >> l[i] >> r[i], ++r[i], ord[i] = i;
+	rep(i, 0, n) cin >> l[i] >> r[i], --l[i], ord[i] = i;
 	sort(ord, ord + n, [&](int i, int j) {
 		return f(i) < f(j);
 	});
 
 	ost<pair<int, int>> L, R;
 	for (int d = 1, i = 0; d <= m; ++d) {
-		while (i < n && f(ord[i]) <= d) modify(l[ord[i]], r[ord[i]]), ++i;
-
+		while (i < n && f(ord[i]) <= d) {
+			L.insert({l[ord[i]], i});
+			R.insert({r[ord[i]], i});
+			++i;
+		}
 		int res = n - i;
 		for (int q = 0; q <= m; q += d)
-			res += query(q);
+			res += L.order_of_key({q, -1}) - R.order_of_key({q, -1});
 		cout << res << '\n';
 	}
 }

@@ -6703,6 +6703,25 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF105400457": {
+    "contest_id": 1475,
+    "language": "GNU C++17",
+    "path": "codeforces/1475/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Strange Beauty",
+    "problem_url": "https://codeforces.com/contest/1475/problem/G",
+    "submission_id": "CF105400457",
+    "submission_url": "https://codeforces.com/contest/1475/submission/105400457",
+    "tags": [
+      "dp",
+      "math",
+      "number theory",
+      "sortings",
+      "*1900"
+    ],
+    "timestamp": "Jan/25/2021 22:36"
+  },
   "CF105400522": {
     "contest_id": 1475,
     "language": "GNU C++17",

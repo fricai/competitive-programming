@@ -58,7 +58,7 @@ struct S {
 		lo = l; hi = r;
 		return query(1, 0, N);
 	}
-} t[2];
+} t[K];
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -69,15 +69,14 @@ signed main() {
 
 	t[0].update(0, 1, +inf);
 
-	for (int c = 1, pre = 0, cur = 1; c <= k; ++c, pre ^= 1, cur ^= 1) {
-		t[cur] = S();
-		for (int i = 1; i <= n; ++i) {
-			t[pre].update(p[a[i]], i, +1);
-			t[cur].update(i, i + 1, inf + t[pre].query(0, i));
+	for (int c = 1; c <= k; ++c) {
+	    for (int i = 1; i <= n; ++i) {
+			t[c - 1].update(p[a[i]], i, +1);
+			t[c].update(i, i + 1, inf + t[c - 1].query(0, i));
 			p[a[i]] = i;
 		}
 		for (int i = 1; i <= n; ++i) p[a[i]] = 0;
 	}
 	
-	cout << t[k & 1].query(n, n + 1);
+	cout << t[k].query(n, n + 1);
 }

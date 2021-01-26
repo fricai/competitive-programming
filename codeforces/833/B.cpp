@@ -17,8 +17,8 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-const int N = 1 << 16, inf = 1e8;
-int a[N], p[N];
+const int N = 1 << 16, K = 50 + 2, inf = 1e8;
+int f[K][N], a[N], p[N];
 
 struct S {
 	int t[N << 1], lz[N << 1];

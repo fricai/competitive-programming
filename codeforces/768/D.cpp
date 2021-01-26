@@ -17,26 +17,26 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-const int K = 1 << 10, N = 8 * K;
-double f[N][K];
+const int K = 1 << 10, N = 1 << 14;
+ld f[N][K];
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
 	int k, q; cin >> k >> q;
-	f[0][1] = 1;
+	f[0][0] = 1;
 	rep(i, 1, N)
-		for (int j = 1; j <= k; ++j) {
+		for (int j = 0; j <= k; ++j) {
 			f[i][j] += j * f[i - 1][j] / k;
 			f[i][j + 1] += (k - j) * f[i - 1][j] / k;
 		}
 	
 	while (q--) {
 		int p; cin >> p;
-		rep(i, 0, N)
+		rep(i, 1, N)
 			if (p <= f[i][k] * 2000) {
-				cout << i + 1 << '\n';
+				cout << i << '\n';
 				break;
 			}
 	}

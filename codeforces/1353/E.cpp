@@ -22,7 +22,7 @@ int solve() {
 	string s; cin >> s;
 	
 	int tot = 0;
-	rep(i, 0, n) tot += s[i] == '1';
+	rep(i, 0, n) if (s[i] == '1') ++tot;
 
 	int ans = n;
 	rep(i, 0, k) {

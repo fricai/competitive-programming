@@ -70,7 +70,9 @@ signed main() {
 	t[0].update(0, 1, +inf);
 
 	for (int c = 1; c <= k; ++c) {
-	    for (int i = 1; i <= n; ++i) {
+		fill(p, p + N, 0);
+
+		for (int i = 1; i <= n; ++i) {
 			t[c - 1].update(p[a[i]], i, +1);
 			t[c].update(i, i + 1, inf + t[c - 1].query(0, i));
 			p[a[i]] = i;

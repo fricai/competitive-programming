@@ -1,4 +1,20 @@
 {
+  "AC19705816": {
+    "contest_id": "agc020",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/agc020/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Median Sum",
+    "problem_url": "https://atcoder.jp/contests/agc020/tasks/agc020_c",
+    "submission_id": "AC19705816",
+    "submission_url": "https://atcoder.jp/contests/agc020/submissions/19705816",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Jan/26/2021 15:17"
+  },
   "AC19718551": {
     "contest_id": "arc069",
     "language": "C++ (GCC 9.2.1)",

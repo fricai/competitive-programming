@@ -1,4 +1,20 @@
 {
+  "AC19705455": {
+    "contest_id": "agc020",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/agc020/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Ice Rink Game",
+    "problem_url": "https://atcoder.jp/contests/agc020/tasks/agc020_b",
+    "submission_id": "AC19705455",
+    "submission_url": "https://atcoder.jp/contests/agc020/submissions/19705455",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jan/26/2021 14:53"
+  },
   "AC19705816": {
     "contest_id": "agc020",
     "language": "C++ (GCC 9.2.1)",

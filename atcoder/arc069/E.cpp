@@ -34,8 +34,9 @@ signed main() {
 	});
 	ord[n] = n;
 	for (int i = 0, j = 0, k = 0, mn = n; i < n; i = j) {
-		while (a[ord[i]] == a[ord[j]]) ckmin(mn, ord[j++]);
+		while (a[ord[i]] == a[ord[j]]) ++j;
 		k += j - i;
+		rep(r, i, j) ckmin(mn, ord[r]);
 		ans[mn] += k * (a[ord[i]] - a[ord[j]]);
 	}
 	

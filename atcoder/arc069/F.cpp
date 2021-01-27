@@ -106,7 +106,7 @@ int inv_x[N], inv_y[N];
 bool solve(int d) {
 	c = n;
 
-	solver = 3 * N;
+	solver = 5 * N;
 	build_x(1, 0, N);
 	build_y(1, 0, N);
 

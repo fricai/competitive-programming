@@ -104,6 +104,7 @@ void add_y(int l, int r, int i) { p = i, lo = l, hi = r, upd_y(1, 0, N); }
 int inv_x[N], inv_y[N];
 
 bool solve(int d) {
+
 	c = n;
 
 	solver = 5 * N;
@@ -115,31 +116,53 @@ bool solve(int d) {
 	l = r = 0;
 	rep(i, 0, n) {
 		int s = ord_x[i];
-		while (l < n && d <= x[s] - x[ord_x[l]]) ++l;
+
+		while (l < n && x[s] - x[ord_x[l]] >= d) ++l;
+
+		// int z = inv_x[s];
+		// rep(j, l, i) solver.either(~s, ~ord_x[j]);
+		// if (l <= z && z < r) add_x(l, z, ~s), add_x(z + 1, r, ~s);
+		// else add_x(l, r, ~s);
 		add_x(l, i, ~s);
 	}
 
 	l = r = 0;
 	rep(i, 0, n) {
 		int s = ord_x[i];
+		
 		while (r < n && y[ord_y[r]] - x[s] < d) ++r;
-		while (l < n && d <= x[s] - y[ord_y[l]]) ++l;
+		while (l < n && x[s] - y[ord_y[l]] >= d) ++l;
+
+		// int z = inv_y[s];
+		// rep(i, l, r) solver.either(~s, ord_y[i]);
+		// if (l <= z && z < r) add_y(l, z, ~s), add_y(z + 1, r, ~s);
+		// else add_y(l, r, ~s);
 		add_y(l, r, ~s);
 	}
 
 	l = r = 0;
 	rep(i, 0, n) {
 		int s = ord_y[i];
+		
 		while (r < n && x[ord_x[r]] - y[s] < d) ++r;
-		while (l < n && d <= y[s] - x[ord_x[l]]) ++l;
+		while (l < n && y[s] - x[ord_x[l]] >= d) ++l;
+
+		// int z = inv_x[s];
+		// s || ~s
+		// rep(i, l, r) solver.either(s, ~ord_x[i]);
+		// if (l <= z && z < r) add_x(l, z, s), add_x(z + 1, r, s);
+		// else add_x(l, r, s);
 		add_x(l, r, s);
 	}
 
 	l = r = 0;
 	rep(i, 0, n) {
 		int s = ord_y[i];
-		while (l < n && d <= y[s] - y[ord_y[l]]) ++l;
+
+		while (l < n && y[s] - y[ord_y[l]] >= d) ++l;
 		add_y(l, i, s);
+		// int z = inv_y[s];
+		// rep(j, l, i) solver.either(s, ord_y[j]);
 	}
 
 	return solver.solve();

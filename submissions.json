@@ -1,4 +1,20 @@
 {
+  "AC19718755": {
+    "contest_id": "arc069",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc069/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Menagerie",
+    "problem_url": "https://atcoder.jp/contests/arc069/tasks/arc069_b",
+    "submission_id": "AC19718755",
+    "submission_url": "https://atcoder.jp/contests/arc069/submissions/19718755",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jan/27/2021 12:32"
+  },
   "AC19718971": {
     "contest_id": "arc069",
     "language": "C++ (GCC 9.2.1)",

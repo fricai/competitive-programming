@@ -1,4 +1,20 @@
 {
+  "AC19729209": {
+    "contest_id": "arc069",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc069/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Frequency",
+    "problem_url": "https://atcoder.jp/contests/arc069/tasks/arc069_c",
+    "submission_id": "AC19729209",
+    "submission_url": "https://atcoder.jp/contests/arc069/submissions/19729209",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Jan/28/2021 01:21"
+  },
   "AC19733607": {
     "contest_id": "arc069",
     "language": "C++ (GCC 9.2.1)",

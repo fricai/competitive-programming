@@ -1,4 +1,20 @@
 {
+  "AC19735082": {
+    "contest_id": "arc070",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc070/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "HonestOrUnkind",
+    "problem_url": "https://atcoder.jp/contests/arc070/tasks/arc070_d",
+    "submission_id": "AC19735082",
+    "submission_url": "https://atcoder.jp/contests/arc070/submissions/19735082",
+    "tags": [
+      "AtCoder",
+      "*1300"
+    ],
+    "timestamp": "Jan/28/2021 12:59"
+  },
   "AC19750839": {
     "contest_id": "arc071",
     "language": "C++ (GCC 9.2.1)",

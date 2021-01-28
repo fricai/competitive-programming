@@ -1,4 +1,20 @@
 {
+  "AC19733607": {
+    "contest_id": "arc069",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc069/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Flags",
+    "problem_url": "https://atcoder.jp/contests/arc069/tasks/arc069_d",
+    "submission_id": "AC19733607",
+    "submission_url": "https://atcoder.jp/contests/arc069/submissions/19733607",
+    "tags": [
+      "AtCoder",
+      "*1200"
+    ],
+    "timestamp": "Jan/28/2021 11:25"
+  },
   "AC19733655": {
     "contest_id": "arc070",
     "language": "C++ (GCC 9.2.1)",

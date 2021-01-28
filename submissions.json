@@ -6703,6 +6703,24 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF105704831": {
+    "contest_id": 1478,
+    "language": "GNU C++17",
+    "path": "codeforces/1478/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Nezzar and Symmetric Array",
+    "problem_url": "https://codeforces.com/contest/1478/problem/C",
+    "submission_id": "CF105704831",
+    "submission_url": "https://codeforces.com/contest/1478/submission/105704831",
+    "tags": [
+      "implementation",
+      "math",
+      "sortings",
+      "*1700"
+    ],
+    "timestamp": "Jan/28/2021 20:37"
+  },
   "CF105722470": {
     "contest_id": 1478,
     "language": "GNU C++17",

@@ -1,4 +1,20 @@
 {
+  "AC19733655": {
+    "contest_id": "arc070",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc070/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Go Home",
+    "problem_url": "https://atcoder.jp/contests/arc070/tasks/arc070_a",
+    "submission_id": "AC19733655",
+    "submission_url": "https://atcoder.jp/contests/arc070/submissions/19733655",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Jan/28/2021 11:29"
+  },
   "AC19734158": {
     "contest_id": "arc070",
     "language": "C++ (GCC 9.2.1)",

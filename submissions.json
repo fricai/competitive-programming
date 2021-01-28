@@ -1,4 +1,20 @@
 {
+  "AC19734158": {
+    "contest_id": "arc070",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc070/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "No Need",
+    "problem_url": "https://atcoder.jp/contests/arc070/tasks/arc070_b",
+    "submission_id": "AC19734158",
+    "submission_url": "https://atcoder.jp/contests/arc070/submissions/19734158",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jan/28/2021 12:07"
+  },
   "AC19735082": {
     "contest_id": "arc070",
     "language": "C++ (GCC 9.2.1)",

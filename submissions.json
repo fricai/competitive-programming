@@ -1,4 +1,20 @@
 {
+  "AC19750839": {
+    "contest_id": "arc071",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc071/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Dubious Document",
+    "problem_url": "https://atcoder.jp/contests/arc071/tasks/arc071_a",
+    "submission_id": "AC19750839",
+    "submission_url": "https://atcoder.jp/contests/arc071/submissions/19750839",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jan/29/2021 13:12"
+  },
   "AC19750937": {
     "contest_id": "arc071",
     "language": "C++ (GCC 9.2.1)",

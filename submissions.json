@@ -1,4 +1,20 @@
 {
+  "AC19837540": {
+    "contest_id": "arc072",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc072/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Alice&Brown",
+    "problem_url": "https://atcoder.jp/contests/arc072/tasks/arc072_b",
+    "submission_id": "AC19837540",
+    "submission_url": "https://atcoder.jp/contests/arc072/submissions/19837540",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jan/31/2021 13:21"
+  },
   "AC19838554": {
     "contest_id": "arc072",
     "language": "C++ (GCC 9.2.1)",

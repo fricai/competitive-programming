@@ -1,4 +1,20 @@
 {
+  "AC19837114": {
+    "contest_id": "arc072",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc072/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Sequence",
+    "problem_url": "https://atcoder.jp/contests/arc072/tasks/arc072_a",
+    "submission_id": "AC19837114",
+    "submission_url": "https://atcoder.jp/contests/arc072/submissions/19837114",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jan/31/2021 13:01"
+  },
   "AC19837540": {
     "contest_id": "arc072",
     "language": "C++ (GCC 9.2.1)",

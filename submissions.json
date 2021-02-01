@@ -1,4 +1,20 @@
 {
+  "AC19856566": {
+    "contest_id": "arc073",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc073/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Ball Coloring",
+    "problem_url": "https://atcoder.jp/contests/arc073/tasks/arc073_c",
+    "submission_id": "AC19856566",
+    "submission_url": "https://atcoder.jp/contests/arc073/submissions/19856566",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Feb/01/2021 11:54"
+  },
   "AC19857934": {
     "contest_id": "arc073",
     "language": "C++ (GCC 9.2.1)",

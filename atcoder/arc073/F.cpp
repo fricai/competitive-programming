@@ -24,6 +24,8 @@ struct S {
 	ll t[N << 1], lz[N << 1];
 
 	S() {
+		// t.resize(2 * N, -inf);
+		// lz.resize(2 * N, 0);
 		fill_n(t, 2 * N, inf);
 		fill_n(lz, 2 * N, 0);
 	}
@@ -56,26 +58,12 @@ struct S {
 		upd(1, 0, N);
 	}
 
-	void upd_set(int v, int l, int r) {
-		push(v);
-		if (lo < l || r <= lo) return;
-		if (r - l == 1) return void(t[v] = x);
-		int m = (l + r) / 2;
-		upd_set(v << 1, l, m); upd_set(v << 1|1, m, r);
-		t[v] = min(t[v << 1], t[v << 1|1]);
-	}
-
-	void set(int l, ll v) {
-		lo = l; x = v;
-		upd_set(1, 0, N);
-	}
-
 	ll query(int v, int l, int r) {
 		push(v);
 		if (hi <= l || r <= lo) return inf;
 		if (lo <= l && r <= hi) return t[v];
 		int m = (l + r) / 2;
-		return min(query(v << 1, l, m), query(v << 1|1, m, r));
+		return min(query(v << 1, l, m),query(v << 1|1, m, r));
 	}
 
 	ll query(int l, int r) {
@@ -93,10 +81,11 @@ signed main() {
 
 	int x; cin >> x; --x;
 
-	plus.set(a, abs(b - x) + a);
-	plus.set(b, abs(a - x) + b);
-	minus.set(a, abs(b - x) - a);
-	minus.set(b, abs(a - x) - b);
+	plus.add(a, a + 1, -inf + abs(b - x) + a);
+	if (a != b) plus.add(b, b + 1, -inf + abs(a - x) + b);	
+
+	minus.add(a, a + 1, -inf + abs(b - x) - a);
+	if (a != b) minus.add(b, b + 1, -inf + abs(a - x) - b);
 
 	rep(i, 1, q) {
 		int y; cin >> y; --y;
@@ -106,10 +95,11 @@ signed main() {
 		plus.add(0, n, abs(x - y));
 		minus.add(0, n, abs(x - y));
 
+		// dp(i, x) = min(dp(i - 1, x) + |x - y|, min(dp(i - 1, z) + |z - y|))
 		ll dpix = plus.query(x, x + 1) - x;
 		if (dpix > to_place) {
-			plus.set(x, to_place + x);
-			minus.set(x, to_place - x);
+			plus.add(x, x + 1, to_place - dpix);
+			minus.add(x, x + 1, to_place - x - minus.query(x, x + 1));
 		}
 
 		x = y;

@@ -1,4 +1,20 @@
 {
+  "AC19855776": {
+    "contest_id": "arc073",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc073/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Simple Knapsack",
+    "problem_url": "https://atcoder.jp/contests/arc073/tasks/arc073_b",
+    "submission_id": "AC19855776",
+    "submission_url": "https://atcoder.jp/contests/arc073/submissions/19855776",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Feb/01/2021 10:59"
+  },
   "AC19856566": {
     "contest_id": "arc073",
     "language": "C++ (GCC 9.2.1)",

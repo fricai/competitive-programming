@@ -1,4 +1,20 @@
 {
+  "AC19858245": {
+    "contest_id": "arc073",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc073/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Many Moves",
+    "problem_url": "https://atcoder.jp/contests/arc073/tasks/arc073_d",
+    "submission_id": "AC19858245",
+    "submission_url": "https://atcoder.jp/contests/arc073/submissions/19858245",
+    "tags": [
+      "AtCoder",
+      "*900"
+    ],
+    "timestamp": "Feb/01/2021 13:32"
+  },
   "AC19863343": {
     "contest_id": "arc073",
     "language": "C++ (GCC 9.2.1)",

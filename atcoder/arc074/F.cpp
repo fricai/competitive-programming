@@ -45,13 +45,13 @@ struct Dinic {
 	}
 	ll calc(int s, int t) {
 		ll flow = 0; q[0] = s;
-		rep(L, 0, 14) do { // 'int L=30' maybe faster for random data
+		rep(L, 0, 15) do { // 'int L=30' maybe faster for random data
 			lvl = ptr = vi(sz(q));
 			int qi = 0, qe = lvl[s] = 1;
 			while (qi < qe && !lvl[t]) {
 				int v = q[qi++];
 				for (Edge e : adj[v])
-					if (!lvl[e.to] && e.c >> (13 - L))
+					if (!lvl[e.to] && e.c >> (14 - L))
 						q[qe++] = e.to, lvl[e.to] = lvl[v] + 1;
 			}
 			while (ll p = dfs(s, t, LLONG_MAX)) flow += p;

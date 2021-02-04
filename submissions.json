@@ -1,4 +1,20 @@
 {
+  "AC19914992": {
+    "contest_id": "arc074",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc074/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Chocolate Bar",
+    "problem_url": "https://atcoder.jp/contests/arc074/tasks/arc074_a",
+    "submission_id": "AC19914992",
+    "submission_url": "https://atcoder.jp/contests/arc074/submissions/19914992",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Feb/04/2021 15:49"
+  },
   "AC19915267": {
     "contest_id": "arc074",
     "language": "C++ (GCC 9.2.1)",

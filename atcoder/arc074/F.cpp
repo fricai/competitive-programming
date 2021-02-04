@@ -45,13 +45,13 @@ struct Dinic {
 	}
 	ll calc(int s, int t) {
 		ll flow = 0; q[0] = s;
-		rep(L, 0, 15) do { // 'int L=30' maybe faster for random data
+		rep(L,0,31) do { // 'int L=30' maybe faster for random data
 			lvl = ptr = vi(sz(q));
 			int qi = 0, qe = lvl[s] = 1;
 			while (qi < qe && !lvl[t]) {
 				int v = q[qi++];
 				for (Edge e : adj[v])
-					if (!lvl[e.to] && e.c >> (14 - L))
+					if (!lvl[e.to] && e.c >> (30 - L))
 						q[qe++] = e.to, lvl[e.to] = lvl[v] + 1;
 			}
 			while (ll p = dfs(s, t, LLONG_MAX)) flow += p;
@@ -63,34 +63,42 @@ struct Dinic {
 
 const int N = 1 << 7;
 char g[N][N];
-const int inf = N * N;
+
+int h, w;
+int hsh(int i, int j) { return w * i + j; }
+int X(int s) { return s / w; }
+int Y(int s) { return s % w; }
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	int h, w; cin >> h >> w;
-	
+	cin >> h >> w;
+	int s = -1, t = -1;
 	rep(i, 0, h) rep(j, 0, w) cin >> g[i][j];
-
-	Dinic d(h + w + 2);
-	int s = h + w, t = h + w + 1;
 	rep(i, 0, h) {
 		rep(j, 0, w) {
-			if (g[i][j] == 'o') {
-				d.addEdge(i, j + h, 1);
-				d.addEdge(j + h, i, 1);
+			if (g[i][j] == 'S') s = hsh(i, j);
+			if (g[i][j] == 'T') t = hsh(i, j);
+		}
+	}
+	if (X(s) == X(t) || Y(s) == Y(t)) return cout << "-1\n", 0;
+	Dinic d(2 * h * w);
+	rep(i, 0, h) {
+		rep(j, 0, w) {
+			if (g[i][j] == '.') continue;
+			int u = hsh(i, j);
+			d.addEdge(u << 1|0, u << 1|1, 1);
+			rep(k, 0, w) {
+				if (k == j || g[i][k] == '.') continue;
+				d.addEdge(u << 1|1, hsh(i, k) << 1|0, 1);
 			}
-			if (g[i][j] == 'S') {
-				d.addEdge(s, j + h, inf);
-				d.addEdge(s, i, inf);
-			}
-			if (g[i][j] == 'T') {
-				d.addEdge(j + h, t, inf);
-				d.addEdge(i, t, inf);
+			rep(k, 0, h) {
+				if (k == i || g[k][j] == '.') continue;
+				d.addEdge(u << 1|1, hsh(k, j) << 1|0, 1);
 			}
 		}
 	}
-	int res = d.calc(s, t);
-	cout << (res < inf ? res : -1);
+
+	cout << d.calc(s << 1|1, t << 1|0);
 }

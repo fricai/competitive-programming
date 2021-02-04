@@ -1,4 +1,20 @@
 {
+  "AC19915539": {
+    "contest_id": "arc074",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc074/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Lotus Leaves",
+    "problem_url": "https://atcoder.jp/contests/arc074/tasks/arc074_d",
+    "submission_id": "AC19915539",
+    "submission_url": "https://atcoder.jp/contests/arc074/submissions/19915539",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Feb/04/2021 16:33"
+  },
   "AC19915879": {
     "contest_id": "arc074",
     "language": "C++ (GCC 9.2.1)",

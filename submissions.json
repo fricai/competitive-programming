@@ -1,4 +1,20 @@
 {
+  "AC19929433": {
+    "contest_id": "arc075",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc075/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Meaningful Mean",
+    "problem_url": "https://atcoder.jp/contests/arc075/tasks/arc075_c",
+    "submission_id": "AC19929433",
+    "submission_url": "https://atcoder.jp/contests/arc075/submissions/19929433",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Feb/05/2021 12:59"
+  },
   "AC19977193": {
     "contest_id": "abc191",
     "language": "C++ (GCC 9.2.1)",

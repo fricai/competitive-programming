@@ -1,4 +1,20 @@
 {
+  "AC19929301": {
+    "contest_id": "arc075",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc075/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Widespread",
+    "problem_url": "https://atcoder.jp/contests/arc075/tasks/arc075_b",
+    "submission_id": "AC19929301",
+    "submission_url": "https://atcoder.jp/contests/arc075/submissions/19929301",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Feb/05/2021 12:51"
+  },
   "AC19929433": {
     "contest_id": "arc075",
     "language": "C++ (GCC 9.2.1)",

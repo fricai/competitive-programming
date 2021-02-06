@@ -17,29 +17,48 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-const ll B = 10000;
-const ll inf = B * (2e5 + 30);
+const int inf = 2e5 + 30;
+const ll mult = 10000;
+
+ll count_multiples(ll a, ll b, ll c) {
+    if (b < a) return 0;
+    if (c < 0) c = -c;
+    long al = a, bl = b, cl = c;
+    if (c == 1) return bl - al + 1;
+    return ((bl + (b < 0 ? 1 : 0)) / cl) -
+           ((al - (a > 0 ? 1 : 0)) / cl) +
+           ((a <= 0 && b >= 0) ? 1 : 0);
+}
+
+bool f(ll d, ll x) {
+	return d * d <= x;
+}
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
 	ld p, q, s; cin >> p >> q >> s;
-	ll a = round(B * p);
-	ll b = round(B * q);
-	ll r = round(B * s);
+	ll a = round(mult * p);
+	ll b = round(mult * q);
+	ll r = round(mult * s);
 
 	ll ans = 0;
-	for (ll x = -inf; x <= inf; x += B) {
+	for (ll x = -mult * inf; x <= mult * inf; x += mult) {
 		ll d = r * r - (x - a) * (x - a);
 		if (d < 0) continue;
 		ll l = 0, r = sqrt(d) + 30;
 		while (r - l > 1) {
 			ll m = l + (r - l) / 2;
-			(m * m <= d ? l : r)  = m;
+			(f(m, d) ? l : r)  = m;
 		}
-		
-		ans += (b + l + inf) / B - (b - r + inf) / B;
+
+		// ll down = ceil(sqrt(d));
+		// assert(up * up <= d && d < (up + 1) * (up + 1));
+		// assert(down * down >= d && d > (down - 1) * (down - 1));
+		ll L = b - l;
+		ll R = b + l;
+		ans += count_multiples(L, R, mult);
 	}
 
 	cout << ans;

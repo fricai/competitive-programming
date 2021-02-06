@@ -25,20 +25,26 @@ signed main() {
 	vector<int> a(n);
 	for (auto &x : a) cin >> x;
 
-	map<int, int> m;
+	vector<int> to_test;
 	for (auto x : a) {
-		auto f = [&](int d) {
-			auto &y = m[d];
-			y = gcd(y, x);
-		};
-		for (int d = 1; d * d <= x; ++d)
-			if (x % d == 0) f(d), f(x / d);
+		for (int d = 1; d * d <= x; ++d) {
+			if (x % d) continue;
+			to_test.push_back(d);
+			to_test.push_back(x / d);
+		}
+	}
+	
+	int mn = *min_element(all(a));
+	sort(all(to_test)); to_test.erase(unique(all(to_test)), end(to_test));
+
+	int ans = 0;
+	for (auto d : to_test) {
+		if (d > mn) break;
+		int g = 0;
+		for (auto x : a)
+			if (x % d == 0) g = gcd(g, x);
+		ans += g == d;
 	}
 
-	int mn = *min_element(all(a)), ans = 0;
-
-	for (auto [x, y] : m)
-		ans += x <= mn && x == y;
-	
 	cout << ans;
 }

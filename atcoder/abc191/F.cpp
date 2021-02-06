@@ -30,13 +30,13 @@ signed main() {
 		for (int d = 1; d * d <= x; ++d) {
 			if (x % d) continue;
 			to_test.push_back(d);
-			to_test.push_back(x / d);
+			if (d * d != x) to_test.push_back(x / d);
 		}
 	}
-	
+
 	int mn = *min_element(all(a));
 	sort(all(to_test)); to_test.erase(unique(all(to_test)), end(to_test));
-
+	
 	int ans = 0;
 	for (auto d : to_test) {
 		if (d > mn) break;

@@ -24,27 +24,25 @@ signed main() {
 	int n; cin >> n;
 	vector<int> a(n);
 	for (auto &x : a) cin >> x;
+	sort(all(a));
+	int mn = a[0];
 
-	vector<int> to_test;
+	set<int> to_test;
 	for (auto x : a) {
-		for (int d = 1; d * d <= x; ++d) {
+		for (int d = 1; d <= mn && d * d <= x; ++d) {
 			if (x % d) continue;
-			to_test.push_back(d);
-			if (d * d != x) to_test.push_back(x / d);
+			to_test.insert(d);
+			if (d * d != x && x / d <= mn) to_test.insert(x / d);
 		}
 	}
 
-	int mn = *min_element(all(a));
-	sort(all(to_test)); to_test.erase(unique(all(to_test)), end(to_test));
-	
 	int ans = 0;
 	for (auto d : to_test) {
-		if (d > mn) break;
 		int g = 0;
 		for (auto x : a)
 			if (x % d == 0) g = gcd(g, x);
 		ans += g == d;
+		// if (g == d) cerr << d << '\n';
 	}
-
 	cout << ans;
 }

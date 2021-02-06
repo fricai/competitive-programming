@@ -1,4 +1,20 @@
 {
+  "AC20011180": {
+    "contest_id": "abc191",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc191/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "GCD or MIN",
+    "problem_url": "https://atcoder.jp/contests/abc191/tasks/abc191_f",
+    "submission_id": "AC20011180",
+    "submission_url": "https://atcoder.jp/contests/abc191/submissions/20011180",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Feb/06/2021 20:24"
+  },
   "AC20015636": {
     "contest_id": "abc191",
     "language": "C++ (GCC 9.2.1)",

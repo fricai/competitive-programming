@@ -6703,6 +6703,26 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF106849949": {
+    "contest_id": 1479,
+    "language": "GNU C++17",
+    "path": "codeforces/1479/B1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B1",
+    "problem_name": "Painting the Array I",
+    "problem_url": "https://codeforces.com/contest/1479/problem/B1",
+    "submission_id": "CF106849949",
+    "submission_url": "https://codeforces.com/contest/1479/submission/106849949",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "dp",
+      "greedy",
+      "implementation",
+      "*1900"
+    ],
+    "timestamp": "Feb/08/2021 00:43"
+  },
   "CF106850003": {
     "contest_id": 1479,
     "language": "GNU C++17",

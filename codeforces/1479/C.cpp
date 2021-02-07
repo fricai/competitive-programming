@@ -17,14 +17,14 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-const int N = 22;
+const int N = 23;
 vector<tuple<int, int, int>> g;
 
 void add_edge(int u, int v, int w) {
 	g.emplace_back(u, v, w);
 }
 
-int f(int u) { return N + 1 - u; }
+int f(int u) { return N + 2 - u; }
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -32,20 +32,20 @@ signed main() {
 
 	int l, r; cin >> l >> r;
 
+	int root = 1;
+	if (l != 1) root = 2, add_edge(1, 2, l - 1);
+
 	int p = 1;
-	for (int i = 2; i < N; ++i, p <<= 1) {
+	for (int i = 3; i < N; ++i, p <<= 1) {
 		add_edge(i, N, 1);
 		rep(j, i + 1, N) add_edge(f(j), f(i), p);
 	}
 	
-	add_edge(1, N, l);
-	int T = r - l;
-	per(i, 2, N) {
+	add_edge(root, N, 1);
+	int T = r - l + 1;
+	per(i, 3, N) {
 		p >>= 1;
-		if (T & p) {
-			T ^= p;
-			add_edge(1, f(i), T + l);
-		}
+		if (T > p) add_edge(root, f(i), T -= p);
 	}
 
 	cout << "YES\n" << N << ' ' << sz(g) << '\n';

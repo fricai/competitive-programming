@@ -19,8 +19,10 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 const ll inf = 1e18;
 const int N = 1 << 17, M = N;
-vector<tuple<int, int, int>> g[N];
-ll d[N];
+vector<int> g[N];
+
+ll d[N + M + M];
+int a[M], b[M], t[M], k[M];
 
 ll nxt(ll t, ll k) { return (t + k - 1) / k * k; }
 
@@ -30,24 +32,45 @@ signed main() {
 
 	int n, m, x, y; cin >> n >> m >> x >> y; --x; --y;
 	rep(e, 0, m) {
-		int a, b, t, k; cin >> a >> b >> t >> k; --a; --b;
-		g[a].emplace_back(b, t, k);
-		g[b].emplace_back(a, t, k);
+		cin >> a[e] >> b[e] >> t[e] >> k[e]; --a[e], --b[e];
+		g[a[e]].push_back(e);
+		g[b[e]].push_back(e);
 	}
 
-	fill_n(d, n, inf);
-    d[x] = 0;
+	fill(d, d + n + m + m, inf);
+    d[x + m + m] = 0;
 
     using P = pair<ll, int>;
     priority_queue<P, vector<P>, greater<P>> q;
-	auto add = [&q](int x) { q.push({d[x], x}); };
-	add(x);
+    q.push({0ll, x + m + m});
 
     while (!q.empty()) {
-		auto [d_u, u] = q.top(); q.pop();
-        if (d_u != d[u]) continue;
-		for (auto [v, t, k] : g[u]) if (ckmin(d[v], nxt(d[u], k) + t)) add(v);
-	}
+		auto [d_u, u] = q.top();
+		// cerr << u << ' ' << d_u << '\n';
 
-	cout << (d[y] < inf ? d[y] : -1);
+        q.pop();
+        if (d_u != d[u]) continue;
+		if (u < m + m) {
+			int x;
+			if (u < m) {
+				if (ckmin(d[u + m], nxt(d[u], k[u]) + t[u])) q.push({d[u + m], u + m});
+				x = a[u] + m + m;
+			} else {
+				if (ckmin(d[u - m], nxt(d[u], k[u - m]) + t[u - m])) q.push({d[u - m], u - m});
+				x = b[u - m] + m + m;
+			}
+			if (ckmin(d[x], d[u])) q.push({d[x], x});
+		} else {
+			u -= 2 * m;
+			// cerr << "ahoy";
+			for (auto e : g[u]) {
+				int v = a[e] == u ? e : e + m;
+				if (ckmin(d[v], d[u + m + m])) q.push({d[v], v});
+			}
+		}
+    }
+
+	// rep(u, 0, m + m + n) cerr << d[u] << ' ';
+
+	cout << (d[y + m + m] < inf ? d[y + m + m] : -1);
 }

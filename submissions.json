@@ -1,4 +1,20 @@
 {
+  "AC20321433": {
+    "contest_id": "abc192",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc192/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Potion",
+    "problem_url": "https://atcoder.jp/contests/abc192/tasks/abc192_f",
+    "submission_id": "AC20321433",
+    "submission_url": "https://atcoder.jp/contests/abc192/submissions/20321433",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Feb/20/2021 18:32"
+  },
   "AC20322313": {
     "contest_id": "abc192",
     "language": "C++ (GCC 9.2.1)",

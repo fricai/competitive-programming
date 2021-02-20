@@ -1,4 +1,20 @@
 {
+  "AC20305562": {
+    "contest_id": "abc192",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc192/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "uNrEaDaBlE sTrInG",
+    "problem_url": "https://atcoder.jp/contests/abc192/tasks/abc192_b",
+    "submission_id": "AC20305562",
+    "submission_url": "https://atcoder.jp/contests/abc192/submissions/20305562",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Feb/20/2021 17:57"
+  },
   "AC20308142": {
     "contest_id": "abc192",
     "language": "C++ (GCC 9.2.1)",

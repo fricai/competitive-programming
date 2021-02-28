@@ -17,6 +17,17 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
+const int N = 1 << 13;
+int nxt[N];
+int head(int u) { return nxt[u] < 0 ? u : nxt[u] = head(nxt[u]); }
+
+void join(int u, int v) {
+	u = head(u); v = head(v);
+	if (u == v) return;
+	assert(u < v);
+	nxt[u] = v;
+}
+
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -31,11 +42,13 @@ signed main() {
 		rep(i, 0, n) if (s[i] != 1) not_one.insert(i);
 
 		ll ans = 0;
-		
+		fill_n(nxt, n, -1);
+
 		rep(i, 0, n) {
 			if (i + s[i] > n) {
 				ans += s[i] - (n - i);
 				s[i] = n - i;
+				assert(s[i] > 0);
 			}
 
 			while (s[i] != 1) {

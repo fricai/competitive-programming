@@ -44,32 +44,38 @@ tuple<int, int, int> find_edge(int u, int p, int target) {
 	for (auto e : g[u]) {
 		int v = a[e] ^ b[e] ^ u;
 
-		if (!dead[e]) {
+		if (v != p && !dead[e]) {
 			if (sz[v] == target) return {e, u, v};
+			if (sz[u] - sz[v] == target) return {e, v, u};
+			
+			int init_sz_v = sz[v];
 
-			if (v != p) {
-				int init_sz_v = sz[v];
+			sz[v] = init_sz;
+			sz[u] = init_sz - init_sz_v;
 
-				sz[v] = init_sz;
-				sz[u] = init_sz - init_sz_v;
+			auto res = find_edge(v, u, target);
+			if (get<0>(res) != 0) return res;
 
-				auto res = find_edge(v, u, target);
-				if (get<0>(res) != 0) return res;
-
-				sz[u] = init_sz;
-				sz[v] = init_sz_v;
-			}
+			sz[u] = init_sz;
+			sz[v] = init_sz_v;
 		}
 	}
 	return {0, 0, 0};
 }
 
 bool recur(int u, int k) {
+
 	if (k <= 3) return true;
+
+
 	get_sz(u, 0);
+	
 	auto [edge, x, y] = find_edge(u, 0, f[k - 2]);
+
 	if (edge == 0) return false;
+	
 	dead[edge] = true;
+
 	return recur(x, k - 1) && recur(y, k - 2);
 }
 

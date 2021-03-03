@@ -23,7 +23,7 @@ int n, m;
 bool valid(int x, int y) { return 0 <= x && x < n && 0 <= y && y < m; }
 bool can(int x, int y)  { return valid(x, y) && g[x][y] == '.'; }
 bool check(int x, int y) {
-	if (!valid(x, y) || g[x][y] == '.') return false;
+	if (can(x, y)) return false;
 	for (int a : {-1, +1}) {
 		for (int b : {-1, +1}) {
 			bool works = true;

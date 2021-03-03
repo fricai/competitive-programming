@@ -6703,6 +6703,26 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF109001103": {
+    "contest_id": 525,
+    "language": "GNU C++17",
+    "path": "codeforces/525/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Arthur and Walls",
+    "problem_url": "https://codeforces.com/contest/525/problem/D",
+    "submission_id": "CF109001103",
+    "submission_url": "https://codeforces.com/contest/525/submission/109001103",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "graphs",
+      "greedy",
+      "shortest paths",
+      "*2400"
+    ],
+    "timestamp": "Mar/03/2021 17:01"
+  },
   "CF109001170": {
     "contest_id": 525,
     "language": "GNU C++17",

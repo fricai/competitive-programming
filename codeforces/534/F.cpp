@@ -25,24 +25,20 @@ vector<int> T[N];
 int n, m;
 char g[N][M + 1];
 
-short recur(int S, int j, int I) {
+short recur(int S, int j, const array<int, N> &x) {
 	if (j == m) {
-		rep(i, 0, n) {
-			if (I % K != a[i]) return -1;
-			I /= K;
-		}
+		rep(i, 0, n) if (x[i] != a[i]) return -1;
 		return +1;
 	}
 
+	int I = 0;
+	rep(i, 0, n) I = I * K + x[i];
+
 	if (!vis[j][S][I]) {
 		for (auto X : T[b[j]]) {
-			int p = 1;
-			int J = I;
-			rep(i, 0, n) {
-				J += ((X & ~S) >> i & 1) * p;
-				p *= K;
-			}
-			if (recur(X, j + 1, J) > 0) {
+			auto y = x;
+			rep(i, 0, n) y[i] += (X & ~S) >> i & 1;
+			if (recur(X, j + 1, y) > 0) {
 				rep(i, 0, n) g[i][j] = X >> i & 1 ? '*' : '.';
 				return vis[j][S][I] = +1;
 			}
@@ -71,6 +67,6 @@ signed main() {
 		}
 		T[res].push_back(S);
 	}
-	recur(0, 0, 0);
+	recur(0, 0, {0, 0, 0, 0, 0});
 	rep(i, 0, n) cout << g[i] << '\n';
 }

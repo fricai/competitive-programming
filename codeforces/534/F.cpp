@@ -25,15 +25,19 @@ vector<int> T[N];
 int n, m;
 char g[N][M + 1];
 
+int to_int(array<int, N> x) {
+	int res = 0;
+	rep(i, 0, n) res = res * K + x[i];
+	return res;
+}
+
 short recur(int S, int j, array<int, N> x) {
 	if (j == m) {
 		rep(i, 0, n) if (x[i] != a[i]) return -1;
 		return +1;
 	}
 
-	int I = 0;
-	rep(i, 0, n) I = I * K + x[i];
-
+	int I = to_int(x);
 	if (!vis[j][S][I]) {
 		for (auto X : T[b[j]]) {
 			array<int, N> y = x;

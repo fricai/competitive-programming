@@ -40,7 +40,7 @@ short recur(int S, int j, const array<int, N> &x) {
 			bool ok = true;
 			rep(i, 0, n) {
 				y[i] += (X >> i & 1) && (~S >> i & 1);
-				// ok &= y[i] <= a[i];
+				ok &= y[i] <= a[i];
 			}
 			if (ok && recur(X, j + 1, y) > 0) {
 				rep(i, 0, n) g[i][j] = X >> i & 1 ? '*' : '.';

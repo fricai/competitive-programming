@@ -48,6 +48,8 @@ signed main() {
 
 	cin >> n >> m;
 	rep(i, 0, n) rep(j, 0, m) cin >> g[i][j];
+	queue<pair<int, int>> q;
 	rep(i, 0, n) rep(j, 0, m) if (check(i, j)) dfs(i, j);
+	
 	rep(i, 0, n) cout << g[i] << '\n';
 }

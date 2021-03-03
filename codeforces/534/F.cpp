@@ -36,12 +36,12 @@ short recur(int S, int j, int I) {
 
 	if (!vis[j][S][I]) {
 		for (auto X : T[b[j]]) {
-			int J = 0, Y = X & ~S;
-			per(i, 0, n) {
-				J *= K;
-				J += Y >> i & 1;
+			int p = 1;
+			int J = I;
+			rep(i, 0, n) {
+				J += ((X & ~S) >> i & 1) * p;
+				p *= K;
 			}
-			J += I;
 			if (recur(X, j + 1, J) > 0) {
 				rep(i, 0, n) g[i][j] = X >> i & 1 ? '*' : '.';
 				return vis[j][S][I] = +1;

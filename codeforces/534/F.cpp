@@ -25,7 +25,7 @@ vector<int> T[N];
 int n, m;
 char g[N][M + 1];
 
-short recur(int S, int j, const array<int, N> &x) {
+short recur(int S, int j, array<int, N> x) {
 	if (j == m) {
 		rep(i, 0, n) if (x[i] != a[i]) return -1;
 		return +1;

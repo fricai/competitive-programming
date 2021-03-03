@@ -36,8 +36,8 @@ short recur(int S, int j, const array<int, N> &x) {
 
 	if (!vis[j][S][I]) {
 		for (auto X : T[b[j]]) {
-			auto y = x;
-			rep(i, 0, n) y[i] += (X & ~S) >> i & 1;
+			array<int, N> y = x;
+			rep(i, 0, n) y[i] += (X >> i & 1) && (~S >> i & 1);
 			if (recur(X, j + 1, y) > 0) {
 				rep(i, 0, n) g[i][j] = X >> i & 1 ? '*' : '.';
 				return vis[j][S][I] = +1;

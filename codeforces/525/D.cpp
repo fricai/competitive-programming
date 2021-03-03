@@ -34,14 +34,6 @@ bool check(int x, int y) {
 	return false;
 }
 
-void dfs(int x, int y) {
-	if (!check(x, y)) return;
-	g[x][y] = '.';
-	for (int i : {-1, 0, +1})
-		for (int j : {-1, 0, +1})
-			dfs(x + i, y + j);	
-}
-
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -49,7 +41,15 @@ signed main() {
 	cin >> n >> m;
 	rep(i, 0, n) rep(j, 0, m) cin >> g[i][j];
 	queue<pair<int, int>> q;
-	rep(i, 0, n) rep(j, 0, m) if (check(i, j)) dfs(i, j);
+	rep(i, 0, n) rep(j, 0, m) if (check(i, j)) q.push({i, j});
 	
+	while (!q.empty()) {
+		auto [x, y] = q.front(); q.pop();
+		if (!check(x, y)) continue;
+		g[x][y] = '.';
+		for (int i : {-1, 0, +1})
+			for (int j : {-1, 0, +1})
+				q.push({x + i, y + j});
+	}
 	rep(i, 0, n) cout << g[i] << '\n';
 }

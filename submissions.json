@@ -6703,6 +6703,25 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF108977928": {
+    "contest_id": 1494,
+    "language": "GNU C++17",
+    "path": "codeforces/1494/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "A-Z Graph",
+    "problem_url": "https://codeforces.com/contest/1494/problem/E",
+    "submission_id": "CF108977928",
+    "submission_url": "https://codeforces.com/contest/1494/submission/108977928",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "graphs",
+      "hashing",
+      "*2400"
+    ],
+    "timestamp": "Mar/03/2021 11:36"
+  },
   "CF108991620": {
     "contest_id": 534,
     "language": "GNU C++17",

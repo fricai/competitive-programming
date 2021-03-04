@@ -40,9 +40,9 @@ void get_k(int u, int p) {
 	for (int v : g[u]) {
 		if (v == p) continue;
 		get_k(v, u);
-		if (0 < dp[v] && dp[v] < mean) dp[u] += dp[v];
+		if (dp[v] > 0) dp[u] += dp[v];
 	}
-	if (dp[u] == mean) ++k;
+	if (dp[u] == mean) dp[u] = 0, ++k;
 }
 
 signed main() {

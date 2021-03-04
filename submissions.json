@@ -1,4 +1,20 @@
 {
+  "AC20645505": {
+    "contest_id": "arc077",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc077/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "pushpush",
+    "problem_url": "https://atcoder.jp/contests/arc077/tasks/arc077_a",
+    "submission_id": "AC20645505",
+    "submission_url": "https://atcoder.jp/contests/arc077/submissions/20645505",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Mar/04/2021 13:03"
+  },
   "AC20645914": {
     "contest_id": "arc077",
     "language": "C++ (GCC 9.2.1)",

@@ -75,10 +75,13 @@ signed main() {
 		f[k] = sz(g[k]);
 		for (auto c : g[k]) ++freq[k][c - 'a'];
 	}
-	
+
 	rep(i, 2, B) {
 		f[i] = f[i - 1] + f[i - 2];
 		freq[i] = freq[i - 1] + freq[i - 2];
+		// g[i] = g[i - 1] + g[i - 2];
+
+		// cerr << g[i] << '\n';
 		if (f[i] > r) break;
 	}
 

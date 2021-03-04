@@ -28,7 +28,7 @@ signed main() {
 	if (n <= 2) return cout << -1, 0;
 	int k = n;
 	int cur = 0;
-	for (int k = n, parity = n & 1; k > 3; --k, parity ^= 1) {
+	for (int k = n, parity = 0; k > 3; --k, parity ^= 1) {
 		if (parity) {
 			for (int i = 1; i <= k; ++i) g[k][i] = ++cur;
 			for (int i = k - 1; i > 0; --i) g[i][k] = ++cur;

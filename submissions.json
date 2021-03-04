@@ -6703,6 +6703,23 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF109058417": {
+    "contest_id": 1333,
+    "language": "GNU C++17",
+    "path": "codeforces/1333/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Road to 1600",
+    "problem_url": "https://codeforces.com/contest/1333/problem/E",
+    "submission_id": "CF109058417",
+    "submission_url": "https://codeforces.com/contest/1333/submission/109058417",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "*2400"
+    ],
+    "timestamp": "Mar/04/2021 12:34"
+  },
   "CF109058763": {
     "contest_id": 1333,
     "language": "GNU C++17",

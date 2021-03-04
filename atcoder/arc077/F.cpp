@@ -41,13 +41,16 @@ V operator-(V x, const V &y) {
 	return x;
 }
 
-V solve(ll r) {	
+V solve(ll r) {
+	cerr << r << '\n';
+	
 	int k = 0; while (f[k] < r) ++k;
+	V res(A, 0);
 	if (k <= 1) {
-		V res(A, 0);
 		rep(i, 0, r) ++res[g[k][i] - 'a'];
 		return res;
 	}
+	assert(r <= f[k] && f[k - 1] < r);
 	return freq[k - 1] + solve(r - f[k - 1]);
 }
 

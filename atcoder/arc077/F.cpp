@@ -29,12 +29,11 @@ string s;
 using V = vector<ll>;
 V freq[B];
 
-V& operator+=(V &x, const V &y) {
+V operator+(V x, const V &y) {
 	assert(sz(x) == sz(y));
 	rep(i, 0, sz(x)) x[i] += y[i];
 	return x;
 }
-V operator+(V x, const V &y) { return x += y; }
 
 V operator-(V x, const V &y) {
 	assert(sz(x) == sz(y));
@@ -42,19 +41,19 @@ V operator-(V x, const V &y) {
 	return x;
 }
 
+V recur(ll r, int k) {
+	if (k <= 1) {
+		V res(A, 0);
+		rep(i, 0, r) ++res[g[k][i] - 'a'];
+		return res;
+	}
+	if (r <= f[k - 1]) return recur(r, k - 1);
+	return freq[k - 1] + recur(r - f[k - 1], k - 2);
+}
+
 V solve(ll r) {	
 	int k = 0; while (f[k] < r) ++k;
-	V res(A, 0);
-	while (k > 1) {
-		if (r <= f[k - 1]) --k;
-		else {
-			res += freq[k - 1];
-			r -= f[k - 1];
-			k -= 2;
-		}
-	}
-	rep(i, 0, r) ++res[g[k][i] - 'a'];
-	return res;
+	return recur(r, k);
 }
 
 signed main() {

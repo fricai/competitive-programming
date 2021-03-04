@@ -6703,6 +6703,24 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF109088330": {
+    "contest_id": 1244,
+    "language": "GNU C++17",
+    "path": "codeforces/1244/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Running in Pairs",
+    "problem_url": "https://codeforces.com/contest/1244/problem/G",
+    "submission_id": "CF109088330",
+    "submission_url": "https://codeforces.com/contest/1244/submission/109088330",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "math",
+      "*2400"
+    ],
+    "timestamp": "Mar/04/2021 20:10"
+  },
   "CF109112968": {
     "contest_id": 593,
     "language": "GNU C++17",

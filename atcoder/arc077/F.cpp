@@ -81,9 +81,10 @@ signed main() {
 		for (auto c : g[k]) ++freq[k][c - 'a'];
 	}
 
-	for (int i = 2; f[i - 1] <= r; ++i) {
+	rep(i, 2, B) {
 		f[i] = f[i - 1] + f[i - 2];
 		freq[i] = freq[i - 1] + freq[i - 2];
+		if (f[i] > r) break;
 	}
 
 	auto res = solve(r) - solve(l - 1);

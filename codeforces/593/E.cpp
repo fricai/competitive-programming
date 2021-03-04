@@ -55,15 +55,21 @@ signed main() {
 	int q; cin >> n >> m >> q;
 	N = n * m;
 
+	V A;
+
+
+	auto g = [&](int u, int i, int j) {
+		if (valid(i, j) && !dead[i][j]) A[u][hsh(i, j)] = 1;
+	};
+
 	V C(N, vi(N, 0));
 	rep(x, 0, N) C[x][x] = 1;
 
 	int p = 1;
 	while (q--) {
 		int c, i, j, t; cin >> c >> i >> j >> t; --i; --j;
-		V A(N, vi(N, 0));
 
-		#define g(u, i, j) if (valid(i, j) && !dead[i][j]) A[u][hsh(i, j)] = 1
+		A = V(N, vi(N, 0));
 		rep(i, 0, n) {
 			rep(j, 0, m) {
 				if (dead[i][j]) continue;

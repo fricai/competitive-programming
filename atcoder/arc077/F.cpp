@@ -41,19 +41,14 @@ V operator-(V x, const V &y) {
 	return x;
 }
 
-V recur(ll r, int k) {
+V solve(ll r) {	
+	int k = 0; while (f[k] < r) ++k;
 	if (k <= 1) {
 		V res(A, 0);
 		rep(i, 0, r) ++res[g[k][i] - 'a'];
 		return res;
 	}
-	if (r <= f[k - 1]) return recur(r, k - 1);
-	return freq[k - 1] + recur(r - f[k - 1], k - 2);
-}
-
-V solve(ll r) {	
-	int k = 0; while (f[k] < r) ++k;
-	return recur(r, k);
+	return freq[k - 1] + solve(r - f[k - 1]);
 }
 
 signed main() {
@@ -74,12 +69,13 @@ signed main() {
 
 	g[0] = s;
 	g[1] = s + s.substr(0, n - pi[n - 1]);
+
 	rep(k, 0, 2) {
 		freq[k].assign(A, 0);
 		f[k] = sz(g[k]);
 		for (auto c : g[k]) ++freq[k][c - 'a'];
 	}
-
+	
 	rep(i, 2, B) {
 		f[i] = f[i - 1] + f[i - 2];
 		freq[i] = freq[i - 1] + freq[i - 2];

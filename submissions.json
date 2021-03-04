@@ -1,4 +1,20 @@
 {
+  "AC20647253": {
+    "contest_id": "arc077",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc077/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "SS",
+    "problem_url": "https://atcoder.jp/contests/arc077/tasks/arc077_d",
+    "submission_id": "AC20647253",
+    "submission_url": "https://atcoder.jp/contests/arc077/submissions/20647253",
+    "tags": [
+      "AtCoder",
+      "*1100"
+    ],
+    "timestamp": "Mar/04/2021 14:53"
+  },
   "AC20647310": {
     "contest_id": "arc077",
     "language": "C++ (GCC 9.2.1)",

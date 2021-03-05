@@ -18,51 +18,33 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 const int N = 2500 + 5;
+bitset<N> g[N];
 int a[N][N];
 pair<int, pair<int, int>> c[N * N];
-vector<int> g[N];
-
-int nxt[N];
-int head(int u) { return nxt[u] != u ? nxt[u] = head(nxt[u]) : u; }
-bool join(int u, int v) {
-    u = head(u); v = head(v);
-    if (u == v) return 0;
-    return nxt[u] = v, 1;
-}
-
-bool vis[N];
-bool dfs(int u, int p, int x) {
-    vis[u] = 1;
-    if (a[p][u] != x) return 1;
-    for (int v : g[u])
-        if (!vis[v] && dfs(v, p, max(x, a[u][v])))
-            return 1;
-    return 0;
-}
 
 bool solve() {
 	int n; cin >> n;
 	rep(i, 0, n) rep(j, 0, n) cin >> a[i][j];
 	
-	rep(i, 0, n) if (a[i][i] != 0) return 0;
-	rep(i, 0, n) rep(j, 0, i) if (a[i][j] != a[j][i]) return 0;
+	rep(i, 0, n) if (a[i][i] != 0) return false;
+	rep(i, 0, n) rep(j, 0, i) if (a[i][j] != a[j][i]) return false;
 
-    iota(nxt, nxt + n, 0);
-	int m = 0;
-	rep(i, 0, n) rep(j, 0, i) c[m++] = {a[i][j], {i, j}};
-	sort(c, c + m);
-    rep(e, 0, m) {
-        auto [u, v] = c[e].second;
-        if (join(u, v)) {
-            g[u].push_back(v);
-            g[v].push_back(u);
-        }
-    }
-    rep(u, 0, n) {
-        fill_n(vis, n, 0);
-        if (dfs(u, u, 0)) return 0;
-    }
-	return 1;
+	int cnt = 0;
+	rep(i, 0, n) rep(j, i, n) c[cnt++] = {a[i][j], {i, j}};
+	sort(c, c + cnt, greater<>());
+
+	for (int i = 0, j = 0; i < cnt; i = j) {
+		while (j < cnt && c[i].first == c[j].first) ++j;
+		rep(k, i, j) {
+			auto [x, y] = c[k].second;
+			g[x][y] = g[y][x] = 1;
+		}
+		rep(k, i, j) {
+			auto [x, y] = c[k].second;
+			if ((g[x] | g[y]).count() < n) return false;
+		}
+	}
+	return true;
 }
 
 signed main() {

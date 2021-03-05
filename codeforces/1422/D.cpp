@@ -38,24 +38,24 @@ signed main() {
 
 	cin >> x[n] >> y[n] >> x[n + 1] >> y[n + 1];
 	rep(u, 0, n) cin >> x[u] >> y[u], ord[u] = u;
-	ord[n] = n;
 
-	sort(ord, ord + n + 1, [&](int i, int j) { return x[i] < x[j]; });
-	rep(i, 1, n + 1) join(ord[i], ord[i - 1]);
+	sort(ord, ord + n, [&](int i, int j) { return x[i] < x[j]; });
+	rep(i, 1, n) join(ord[i], ord[i - 1]);
 
-	sort(ord, ord + n + 1, [&](int i, int j) { return y[i] < y[j]; });
-	rep(i, 1, n + 1) join(ord[i], ord[i - 1]);
+	sort(ord, ord + n, [&](int i, int j) { return y[i] < y[j]; });
+	rep(i, 1, n) join(ord[i], ord[i - 1]);
 
 	rep(u, 0, n + 1) {
 		int d = abs(x[u] - x[n + 1]) + abs(y[u] - y[n + 1]);
 		g[n + 1].emplace_back(d, u);
 		g[u].emplace_back(d, n + 1);
 	}
-	// rep(u, 0, n) join(u, n);
+	rep(u, 0, n) join(u, n);
 
 	priority_queue<pair<ll, int>> q;
 	rep(u, 0, n + 2) d[u] = inf;
 	q.push({0, n}); d[n] = 0;
+
 	while (!q.empty()) {
 		auto [d_u, u] = q.top(); q.pop();
 		if (-d_u != d[u]) continue;

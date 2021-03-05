@@ -30,7 +30,7 @@ bool solve() {
 	rep(i, 0, n) rep(j, 0, i) if (a[i][j] != a[j][i]) return false;
 
 	int cnt = 0;
-	rep(i, 0, n) rep(j, i, n) c[cnt++] = {a[i][j], {i, j}};
+	rep(i, 0, n) rep(j, 0, i + 1) c[cnt++] = {a[i][j], {i, j}};
 	sort(c, c + cnt, greater<>());
 
 	for (int i = 0, j = 0; i < cnt; i = j) {

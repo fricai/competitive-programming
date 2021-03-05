@@ -44,7 +44,7 @@ void inc(int l, int r, int val) {
 }
 
 int query(int v, int l, int r) {
-	// push(v);
+	push(v);
 	if (r - l == 1) return l;
 	int m = (l + r) / 2;
 	return t[v << 1] > t[v << 1|1] ? query(v << 1, l, m) : query(v << 1|1, m, r);
@@ -67,10 +67,12 @@ signed main() {
 	int mx = 0, a, b;
 	rep(y, 0, X) {
 		for (auto i : add[y]) inc(L[i], V[i], +1);
-		if (ckmax(mx, t[1])) a = query(1, 0, X), b = y;
+		if (ckmax(mx, t[1])) {
+			a = query(1, 0, X), b = y;
+		}
 		for (auto i : sub[y]) inc(L[i], V[i], -1);
 	}
-
+	
 	cout << mx << '\n';
 	rep(i, 0, n)
 		if (L[i] <= a && a <= V[i] && V[i] <= b && b <= R[i])

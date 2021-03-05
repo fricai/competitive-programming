@@ -19,11 +19,12 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 const int N = 3e5 + 20;
 vector<int> g[N], h[N];
-int nxt[N], indeg[N], lbl[N], num[N];
+int p[N], nxt[N], indeg[N], lbl[N], num[N];
 vector<int> bucket[N];
 
 bool dfs(int u) {
-	for (int v : h[u]) if (num[u] > num[v] || !dfs(v)) return 0;
+	for (int v : h[u])
+		if (num[u] > num[v] || !dfs(v)) return 0;
 	return 1;
 }
 
@@ -33,8 +34,8 @@ signed main() {
 
 	int n, k; cin >> n >> k;
 	for (int u = 1; u <= n; ++u) {
-		int p; cin >> p;
-		h[p].push_back(u);
+		cin >> p[u];
+		h[p[u]].push_back(u);
 	}
 	rep(i, 0, k) { int x; cin >> x >> nxt[x]; ++indeg[nxt[x]]; }
 
@@ -48,12 +49,10 @@ signed main() {
 
 	for (int u = 0; u <= n; ++u) indeg[u] = 0;
 	for (int u = 1; u <= n; ++u) {
-		for (int v : h[u]) {
-			int x = lbl[u], y = lbl[v];
-			if (x == y) continue;
-			g[x].push_back(y);
-			++indeg[y];
-		}
+		int x = lbl[p[u]], y = lbl[u];
+		if (x == y) continue;
+		g[x].push_back(y);
+		++indeg[y];
 	}
 
 	queue<int> q; vector<int> p;

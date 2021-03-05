@@ -30,14 +30,14 @@ bool solve() {
 	rep(i, 0, n) rep(j, 0, i) if (a[i][j] != a[j][i]) return false;
 
 	int cnt = 0;
-	rep(i, 0, n) rep(j, 0, i + 1) c[cnt++] = {a[i][j], {i, j}};
+	rep(i, 0, n) rep(j, 0, n) c[cnt++] = {a[i][j], {i, j}};
 	sort(c, c + cnt, greater<>());
-
+	
 	for (int i = 0, j = 0; i < cnt; i = j) {
 		while (j < cnt && c[i].first == c[j].first) ++j;
 		rep(k, i, j) {
 			auto [x, y] = c[k].second;
-			g[x][y] = g[y][x] = 1;
+			g[x][y] = 1;
 		}
 		rep(k, i, j) {
 			auto [x, y] = c[k].second;

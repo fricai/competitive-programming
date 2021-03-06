@@ -20,15 +20,15 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 const int N = 1 << 17, B = 32;
 int a[N];
 
-string solve() {
+short solve() {
 	int n; cin >> n; rep(i, 0, n) cin >> a[i];
 	per(b, 0, B) {
 		int x[2] = {0, 0};
 		rep(i, 0, n) ++x[a[i] >> b & 1];
 		if (~x[1] & 1) continue;
-		return x[0] % 2 == 0 && x[1] % 4 == 3 ? "LOSE" :"WIN";
+		return x[0] % 2 == 0 && x[1] % 4 == 3 ? -1 : +1;
 	}
-	return "DRAW";
+	return 0;
 }
 
 signed main() {
@@ -36,5 +36,11 @@ signed main() {
 	cin.tie(nullptr);
 	
 	int t; cin >> t;
-	while (t--) cout << solve() << '\n';
+	while (t--) {
+		auto res = solve();
+			if (res < 0) cout << "LOSE";
+		else if (res > 0) cout << "WIN";
+		else cout << "DRAW";
+		cout << '\n';
+	}
 }

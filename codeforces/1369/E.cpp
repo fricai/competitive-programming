@@ -45,7 +45,7 @@ signed main() {
 		add(u);
 	}
 
-	deque<int> p;
+	vector<int> p;
 	while (!q.empty()) {
 		auto [del, u] = q.top(); q.pop();
 		if (vis[u]) continue;
@@ -54,12 +54,12 @@ signed main() {
 		for (auto e : g[u]) {
 			if (dead[e]) continue;
 			--deg[a[e]]; --deg[b[e]];
-			p.push_front(e);
+			p.push_back(e);
 		}
 		for (auto e : g[u]) if (!dead[e]) add(a[e] ^ b[e] ^ u), dead[e] = 1;
 	}
-
 	if (sz(p) < m) return cout << "DEAD", 0;
+	reverse(all(p));
 	cout << "ALIVE" << '\n';
 	for (auto x : p) cout << x + 1 << ' ';
 }

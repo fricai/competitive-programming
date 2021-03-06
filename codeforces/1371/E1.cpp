@@ -33,7 +33,7 @@ signed main() {
 		int res = 1;
 		for (int i = 0, k = 0, y = x; i < n; ++y, ++i) {
 			while (k < n && a[k] <= y) ++k;
-			res *= k - i;
+			res *= max(0, k - i);
 			res %= p;
 		}
 		if (res) op.push_back(x);

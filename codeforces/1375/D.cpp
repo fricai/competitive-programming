@@ -34,7 +34,7 @@ vector<int> solve() {
 			bool did_stuff = false;
 			rep(i, 0, n) {
 				if (a[i] == i) continue;
-				a[i] = x;
+				a[i] = n;
 				op.push_back(i);
 				did_stuff = 1;
 				break;

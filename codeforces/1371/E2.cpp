@@ -18,7 +18,7 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 const int N = 1 << 17;
-int f[N + N];
+int f[N + N], g[N];
 
 int mod(int x, int p) {
 	x %= p; if (x < 0) x += p;
@@ -34,18 +34,17 @@ signed main() {
 	for (auto &x : a) cin >> x;
 	sort(all(a));
 
-	int X = a.back();
-	for (int x = max(1, X - n), k = 0, i = 0; x < X + n; ++x, ++i) {
+	int R = a.back(), L = max(1, R - n);
+	for (int x = L, k = 0, i = 0; x < R + n; ++x, ++i) {
 		while (k < n && a[k] <= x) ++k;
 		f[i] = k;
 	}
 	
-	multiset<int> s;
 	vector<int> op;
-	for (int x = max(1, X - n), y = x, i = 0, j = 0; x <= X; ++x, ++i) {
-		for (; y - x < n; ++y, ++j) s.insert(mod(y - f[j], p));
-		if (!s.count(x % p)) op.push_back(x);
-		s.erase(s.find(mod(x - f[i], p)));
+	for (int x = L, y = x, i = 0, j = 0; x <= R; ++x, ++i) {
+		for (; y - x < n; ++y, ++j) ++g[mod(y - f[j], p)];
+		if (!g[x % p]) op.push_back(x);
+		--g[mod(x - f[i], p)];
 	}
 
 	cout << sz(op) << '\n';

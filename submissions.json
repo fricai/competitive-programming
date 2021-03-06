@@ -9637,6 +9637,26 @@
     ],
     "timestamp": "Mar/05/2021 21:10"
   },
+  "CF109202484": {
+    "contest_id": 1450,
+    "language": "GNU C++17",
+    "path": "codeforces/1450/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Rating Compression",
+    "problem_url": "https://codeforces.com/contest/1450/problem/D",
+    "submission_id": "CF109202484",
+    "submission_url": "https://codeforces.com/contest/1450/submission/109202484",
+    "tags": [
+      "binary search",
+      "data structures",
+      "greedy",
+      "implementation",
+      "two pointers",
+      "*1800"
+    ],
+    "timestamp": "Mar/06/2021 12:54"
+  },
   "CF109202993": {
     "contest_id": 1383,
     "language": "GNU C++17",

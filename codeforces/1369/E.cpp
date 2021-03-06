@@ -53,13 +53,12 @@ signed main() {
 		vis[u] = 1;
 		for (auto e : g[u]) {
 			if (dead[e]) continue;
-			dead[e] = 1;
 			--deg[a[e]]; --deg[b[e]];
-			add(a[e] ^ b[e] ^ u);
 			p.push_front(e);
 		}
+		for (auto e : g[u]) if (!dead[e]) add(a[e] ^ b[e] ^ u), dead[e] = 1;
 	}
-
+	
 	cout << "ALIVE" << '\n';
 	for (auto x : p) cout << x + 1 << ' ';
 }

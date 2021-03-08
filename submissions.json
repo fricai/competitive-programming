@@ -9637,6 +9637,25 @@
     ],
     "timestamp": "Mar/05/2021 21:10"
   },
+  "CF109373269": {
+    "contest_id": 1332,
+    "language": "GNU C++17",
+    "path": "codeforces/1332/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Height All the Same",
+    "problem_url": "https://codeforces.com/contest/1332/problem/E",
+    "submission_id": "CF109373269",
+    "submission_url": "https://codeforces.com/contest/1332/submission/109373269",
+    "tags": [
+      "combinatorics",
+      "constructive algorithms",
+      "math",
+      "matrices",
+      "*2100"
+    ],
+    "timestamp": "Mar/08/2021 11:05"
+  },
   "CF109373308": {
     "contest_id": 1332,
     "language": "GNU C++17",

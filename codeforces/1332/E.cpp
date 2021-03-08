@@ -36,6 +36,7 @@ signed main() {
 	ll ans = binpow(r, n * m);
 	if ((n * m) % 2 == 0) {	
 		ans += r & 1;
+		if (ans < 0) ans += M;
 		ans = ans * (M + 1) / 2 % M;
 	}
 	cout << ans;

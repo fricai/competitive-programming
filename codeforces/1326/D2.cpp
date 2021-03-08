@@ -37,14 +37,14 @@ string bruh(string s) {
 	auto a = kmp_bruh(s);
 	reverse(all(s));
 	auto b = kmp_bruh(s);
-	return sz(b) > sz(a) ? b : a;
+	return sz(a) > sz(b) ? a : b;
 }
 
 string solve() {
 	string s; cin >> s;
 	int k = 0, n = sz(s);
 
-	while (k < n - k - 1)
+	for (; k < n - k - 1; )
 		if (s[k] == s[n - k - 1]) ++k;
 		else break;
 

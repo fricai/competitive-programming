@@ -9637,6 +9637,24 @@
     ],
     "timestamp": "Mar/05/2021 21:10"
   },
+  "CF109375647": {
+    "contest_id": 1327,
+    "language": "GNU C++17",
+    "path": "codeforces/1327/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Count The Blocks",
+    "problem_url": "https://codeforces.com/contest/1327/problem/E",
+    "submission_id": "CF109375647",
+    "submission_url": "https://codeforces.com/contest/1327/submission/109375647",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Mar/08/2021 11:59"
+  },
   "CF109376948": {
     "contest_id": 1305,
     "language": "GNU C++17",

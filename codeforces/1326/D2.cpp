@@ -35,7 +35,8 @@ string kmp_bruh(string s) {
 
 string bruh(string s) {
 	auto a = kmp_bruh(s);
-	auto b = kmp_bruh({rall(s)});
+	reverse(all(s));
+	auto b = kmp_bruh(s);
 	return sz(b) > sz(a) ? b : a;
 }
 

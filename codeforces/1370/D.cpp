@@ -17,8 +17,8 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-const int N = 1 << 18, inf = 1e9;
-int a[N], n, k;
+const int N = 1 << 18, inf = 1e9 + 10;
+int a[N], n, k, b[N];
 
 bool f(int x) {
 	for (auto parity : {0, 1}) {

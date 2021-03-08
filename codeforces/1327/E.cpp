@@ -28,6 +28,6 @@ signed main() {
 
 	p[0] = 1;
 	rep(i, 1, N) p[i] = 10 * p[i - 1] % M;
-	rep(m, 1, n)  cout << (180 * p[n - m - 1] + (n - m - 1) * 810 * p[n - m - 2]) % M << ' ';
+	rep(m, 1, n)  cout << (180 + (n - m - 1) * 81) * p[n - m - 1] % M << ' ';
 	cout << 10 << '\n';
 }

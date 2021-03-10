@@ -24,6 +24,8 @@ bool solve() {
 	string s, t; cin >> s >> t;
 
 	int n = sz(s), m = sz(t);
+
+	// cerr << s << ' ' << t << '\n';
 	
 	rep(c, 0, A) nxt[n][c] = nxt[n + 1][c] = n;
 	per(i, 0, n) {
@@ -33,14 +35,23 @@ bool solve() {
 
 	for (int x = 0, y = m; x < m; ++x, --y) {
 		auto L = t.substr(0, x), R = t.substr(x, y);
+
+		// cerr << x << ' ' << y << '\n';
 		for (int i = 0; i <= x; ++i) {
 			for (int j = 0; j <= y; ++j) {
 				if (i || j) dp[i][j] = n + 1;
 				if (i) ckmin(dp[i][j], nxt[dp[i - 1][j]][L[i - 1] - 'a'] + 1);
 				if (j) ckmin(dp[i][j], nxt[dp[i][j - 1]][R[j - 1] - 'a'] + 1);
+				// cerr << dp[i][j] << ' ';
 			}
+			// cerr << '\n';
 		}
-		if (dp[x][y] <= n) return 1;
+		// cerr << '\n';
+
+		if (dp[x][y] <= n) {
+			// cerr << x << ' ' << y << ' ' << dp[x][y] << '\n';
+			return 1;
+		}
 	}
 
 	return 0;

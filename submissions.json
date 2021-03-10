@@ -9637,6 +9637,23 @@
     ],
     "timestamp": "Mar/05/2021 21:10"
   },
+  "CF109597120": {
+    "contest_id": 1495,
+    "language": "GNU C++17",
+    "path": "codeforces/1495/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Garden of the Sun",
+    "problem_url": "https://codeforces.com/contest/1495/problem/C",
+    "submission_id": "CF109597120",
+    "submission_url": "https://codeforces.com/contest/1495/submission/109597120",
+    "tags": [
+      "constructive algorithms",
+      "graphs",
+      "*2300"
+    ],
+    "timestamp": "Mar/10/2021 18:42"
+  },
   "CF109674619": {
     "contest_id": 1338,
     "language": "GNU C++17",

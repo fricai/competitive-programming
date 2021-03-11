@@ -55,11 +55,12 @@ void f(int k) {
 		g[i].emplace_back(i + n, c);
 		g[i + n].emplace_back(i, c);
 	}
-	
-	col[k - 1] = 1; rep(i, k, n) col[i] = 0;
 
+	col[0] = 1; rep(i, k, n) col[i] = 0;
+	
 	int x = 1;
-	rep(u, k - 1, n) if (!vis[u] && odd(u)) return;
+	if (odd(0)) return;
+	rep(u, k, n) if (!vis[u] && odd(u)) return;
 	rep(u, 0, n + n) {
 		if (vis[u]) continue;
 		col[u] = 0;

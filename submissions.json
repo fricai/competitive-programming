@@ -9637,6 +9637,24 @@
     ],
     "timestamp": "Mar/05/2021 21:10"
   },
+  "CF109726565": {
+    "contest_id": 1161,
+    "language": "GNU C++17",
+    "path": "codeforces/1161/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Chladni Figure",
+    "problem_url": "https://codeforces.com/contest/1161/problem/B",
+    "submission_id": "CF109726565",
+    "submission_url": "https://codeforces.com/contest/1161/submission/109726565",
+    "tags": [
+      "hashing",
+      "implementation",
+      "strings",
+      "*1900"
+    ],
+    "timestamp": "Mar/11/2021 22:42"
+  },
   "CF109727388": {
     "contest_id": 1161,
     "language": "GNU C++17",

@@ -9637,6 +9637,24 @@
     ],
     "timestamp": "Mar/05/2021 21:10"
   },
+  "CF109710482": {
+    "contest_id": 936,
+    "language": "GNU C++17",
+    "path": "codeforces/936/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Lock Puzzle",
+    "problem_url": "https://codeforces.com/contest/936/problem/C",
+    "submission_id": "CF109710482",
+    "submission_url": "https://codeforces.com/contest/936/submission/109710482",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "strings",
+      "*2300"
+    ],
+    "timestamp": "Mar/11/2021 19:04"
+  },
   "CF109714019": {
     "contest_id": 936,
     "language": "GNU C++17",

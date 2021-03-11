@@ -45,20 +45,34 @@ signed main() {
 
 	cin >> n;
 	string s, t; cin >> s >> t;
+	string _s = s, _t = t;
 	
+	sort(all(_s)); sort(all(_t));
+	if (_s != _t) return cout << "-1\n", 0;
+
 	rep(i, 0, n) f[t[i] - 'a'].push_back(i);
 	rep(i, 0, n) {
 		int c = s[i] - 'a';
-		if (f[c].empty()) return cout << "-1\n", 0;
 		z.push_back(f[c].back());
 		f[c].pop_back();
 	}
 
-	per(i, 0, n) {		
+	bool parity = 0;
+	do_op(n - get(0) - 1);
+	for (int l = 1, r = n - 1, k = 1; l < r; ++l, --r, k += 2, parity ^= 1) {
+		int u = l, v = r;
+		if (parity) swap(u, v);
+		do_op(n - get(u) - 1);
 		do_op(n);
-		do_op(n - get(i) - 1);
-		do_op(1);
+		do_op(k);
+		do_op(n - get(v));
+		do_op(n - get(u) - 1);
 	}
+
+	if (!parity) do_op(n);
+	do_op(n - get(0));
+	do_op(n - get(0) - 1);
+	do_op(n);
 
 	cout << sz(op) << '\n';
 	for (auto x : op) cout << x << ' ';

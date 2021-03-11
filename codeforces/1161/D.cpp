@@ -20,7 +20,7 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 // #pragma GCC optimize ("trapv")
 
 const int N = 1 << 10, M = 998244353;
-bool vis[N + N];
+bool vis[N + N], pre_set[N + N];
 int col[N + N];
 int n;
 int ans;
@@ -44,10 +44,12 @@ void f(int k) {
 	rep(u, 0, n + n) g[u].clear();
 	fill_n(vis, n + n, 0);
 	fill_n(col, n + n, -1);
+	fill_n(pre_set, n + n, 0);
+
 	for (int i = 0, j = n - 1; i < n; ++i, --j)
-		g[i + n].emplace_back(j + n, 0);
-	for (int i = 0, j = k - 1; i < k; ++i, --j)
 		g[i].emplace_back(j, 0);
+	for (int i = 0, j = k - 1; i < k; ++i, --j)
+		g[i + n].emplace_back(j + n, 0);
 	
 	rep(i, 0, n) {
 		if (s[i] == '?') continue;
@@ -56,17 +58,22 @@ void f(int k) {
 		g[i + n].emplace_back(i, c);
 	}
 
-	col[0] = 1; rep(i, k, n) col[i] = 0;
-	
+	col[0] = pre_set[0] = 1;
+	col[n] = pre_set[n] = 1;
+	rep(i, k, n) pre_set[i + n] = 1, col[i + n] = 0;
+
 	int x = 1;
-	if (odd(0)) return;
-	rep(u, k, n) if (!vis[u] && odd(u)) return;
+	rep(u, 0, n + n)
+		if (!vis[u] && pre_set[u])
+			if (odd(u)) return;
 	rep(u, 0, n + n) {
 		if (vis[u]) continue;
+		assert(col[u] < 0);
 		col[u] = 0;
 		if (odd(u)) return;
 		add(x, x);
 	}
+
 	add(ans, x);
 }
 

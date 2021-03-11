@@ -12967,6 +12967,23 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF109733755": {
+    "contest_id": 1161,
+    "language": "GNU C++17",
+    "path": "codeforces/1161/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Palindrome XOR",
+    "problem_url": "https://codeforces.com/contest/1161/problem/D",
+    "submission_id": "CF109733755",
+    "submission_url": "https://codeforces.com/contest/1161/submission/109733755",
+    "tags": [
+      "graphs",
+      "implementation",
+      "*2400"
+    ],
+    "timestamp": "Mar/12/2021 00:49"
+  },
   "CF109754338": {
     "contest_id": 1495,
     "language": "GNU C++17",

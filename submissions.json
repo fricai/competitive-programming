@@ -12967,6 +12967,23 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF109756182": {
+    "contest_id": 1495,
+    "language": "GNU C++17",
+    "path": "codeforces/1495/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Let's Go Hiking",
+    "problem_url": "https://codeforces.com/contest/1495/problem/B",
+    "submission_id": "CF109756182",
+    "submission_url": "https://codeforces.com/contest/1495/submission/109756182",
+    "tags": [
+      "games",
+      "greedy",
+      "*1900"
+    ],
+    "timestamp": "Mar/12/2021 11:56"
+  },
   "CF109766251": {
     "contest_id": 1304,
     "language": "GNU C++17",

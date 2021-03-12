@@ -84,12 +84,12 @@ signed main() {
 	rep(i, 0, n)
 		rep(j, 0, m)
 			cin >> a[i][j];
-	for (int i = 1; i <= n; ++i)
-		for (int j = 1; j <= m; ++j)
-			p[i][j] = p[i - 1][j] + p[i][j - 1] - p[i - 1][j - 1] + a[i - 1][j - 1];
-
-
-	for (int j = 0; j < m; ++j) dp[0][j] = f(0, j);
+	rep(i, 0, n)
+		rep(j, 0, m)
+			p[i + 1][j + 1] = p[i][j + 1] + p[i + 1][j] - p[i][j] + a[i][j];
+	
+	ll ans = 0;
+	for (int j = 0; j < m; ++j) dp[0][j] = f(0, j), ckmax(ans, dp[0][j]);
 	for (int i = 1; i < n; ++i) {
 		t = segtree(m);
 		rep(j, 0, m) t.update(j, j + 1, dp[i - 1][j]);
@@ -99,10 +99,11 @@ signed main() {
 		
 		for (int j = 0; j < m; ++j) {
 			dp[i][j] = t.query(0, m) + f(i, j);
+			ckmax(ans, dp[i][j]);
 			t.update(j - k + 1, j + 1, +a[i][j]);
 			t.update(j + 1, j + k + 1, -a[i][j + k]);
 		}
 	}
 	
-	cout << *max_element(dp[n - 1], dp[n - 1] + m) << '\n';
+	cout << ans << '\n';
 }

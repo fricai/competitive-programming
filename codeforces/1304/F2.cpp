@@ -84,11 +84,11 @@ signed main() {
 	rep(i, 0, n)
 		rep(j, 0, m)
 			cin >> a[i][j];
-	rep(i, 0, n)
-		rep(j, 0, m)
-			p[i + 1][j + 1] = p[i][j + 1] + p[i + 1][j] - p[i][j] + a[i][j];
-	
+	for (int i = 1; i <= n; ++i)
+		for (int j = 1; j <= m; ++j)
+			p[i][j] = p[i - 1][j] + p[i][j - 1] - p[i - 1][j - 1] + a[i - 1][j - 1];
 	ll ans = 0;
+
 	for (int j = 0; j < m; ++j) dp[0][j] = f(0, j), ckmax(ans, dp[0][j]);
 	for (int i = 1; i < n; ++i) {
 		t = segtree(m);

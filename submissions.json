@@ -12967,6 +12967,24 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF109780894": {
+    "contest_id": 1168,
+    "language": "GNU C++17",
+    "path": "codeforces/1168/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Anagram Paths",
+    "problem_url": "https://codeforces.com/contest/1168/problem/D",
+    "submission_id": "CF109780894",
+    "submission_url": "https://codeforces.com/contest/1168/submission/109780894",
+    "tags": [
+      "dp",
+      "implementation",
+      "trees",
+      "*3000"
+    ],
+    "timestamp": "Mar/12/2021 17:47"
+  },
   "CF109782120": {
     "contest_id": 1168,
     "language": "GNU C++17",

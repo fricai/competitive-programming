@@ -27,14 +27,16 @@ signed main() {
 	string s; cin >> s;
 	int n = sz(s);
 	ll ans = n; ans *= n + 1; ans /= 2;
-	rep(l, 0, n) {
-		rep(r, l, n) {
-			if ([&]() {
-				for (int k = 1; r - 2 * k >= l; ++k)
-					if (s[r] == s[r - k] && s[r - k] == s[r - 2 * k])
-						return 1;
-				return 0;
-			}()) break;
+	for (int l = 0; l < n; ++l) {
+		bool ok = false;
+		for (int r = l; r < n; ++r) {
+			for (int k = 1; r - 2 * k >= l; ++k) {
+				if (s[r] == s[r - k] && s[r - k] == s[r - 2 * k]) {
+					ok = true;
+					break;
+				}
+			}
+			if (ok) break;
 			--ans;
 		}
 	}

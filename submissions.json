@@ -1,4 +1,20 @@
 {
+  "AC20930916": {
+    "contest_id": "arc114",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc114/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Not coprime",
+    "problem_url": "https://atcoder.jp/contests/arc114/tasks/arc114_a",
+    "submission_id": "AC20930916",
+    "submission_url": "https://atcoder.jp/contests/arc114/submissions/20930916",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Mar/14/2021 17:39"
+  },
   "AC20933838": {
     "contest_id": "arc114",
     "language": "C++ (GCC 9.2.1)",

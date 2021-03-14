@@ -1,4 +1,20 @@
 {
+  "AC20933838": {
+    "contest_id": "arc114",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc114/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Special Subsets",
+    "problem_url": "https://atcoder.jp/contests/arc114/tasks/arc114_b",
+    "submission_id": "AC20933838",
+    "submission_url": "https://atcoder.jp/contests/arc114/submissions/20933838",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Mar/14/2021 17:51"
+  },
   "AC21350245": {
     "contest_id": "arc116",
     "language": "C++ (GCC 9.2.1)",

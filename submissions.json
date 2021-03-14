@@ -12967,6 +12967,22 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF109992287": {
+    "contest_id": 1172,
+    "language": "GNU C++17",
+    "path": "codeforces/1172/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Nauuo and Portals",
+    "problem_url": "https://codeforces.com/contest/1172/problem/D",
+    "submission_id": "CF109992287",
+    "submission_url": "https://codeforces.com/contest/1172/submission/109992287",
+    "tags": [
+      "constructive algorithms",
+      "*2900"
+    ],
+    "timestamp": "Mar/14/2021 23:47"
+  },
   "CF110009690": {
     "contest_id": 1172,
     "language": "GNU C++17",

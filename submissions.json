@@ -12967,6 +12967,24 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF110013916": {
+    "contest_id": 809,
+    "language": "GNU C++17",
+    "path": "codeforces/809/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Do you want a date?",
+    "problem_url": "https://codeforces.com/contest/809/problem/A",
+    "submission_id": "CF110013916",
+    "submission_url": "https://codeforces.com/contest/809/submission/110013916",
+    "tags": [
+      "implementation",
+      "math",
+      "sortings",
+      "*1500"
+    ],
+    "timestamp": "Mar/15/2021 12:12"
+  },
   "CF110020307": {
     "contest_id": 809,
     "language": "GNU C++17",

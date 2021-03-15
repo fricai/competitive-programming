@@ -12967,6 +12967,24 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF110020307": {
+    "contest_id": 809,
+    "language": "GNU C++17",
+    "path": "codeforces/809/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Find a car",
+    "problem_url": "https://codeforces.com/contest/809/problem/C",
+    "submission_id": "CF110020307",
+    "submission_url": "https://codeforces.com/contest/809/submission/110020307",
+    "tags": [
+      "combinatorics",
+      "divide and conquer",
+      "dp",
+      "*2600"
+    ],
+    "timestamp": "Mar/15/2021 14:11"
+  },
   "CF110021338": {
     "contest_id": 809,
     "language": "GNU C++17",

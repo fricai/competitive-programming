@@ -12967,6 +12967,23 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF110021338": {
+    "contest_id": 809,
+    "language": "GNU C++17",
+    "path": "codeforces/809/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Glad to see you!",
+    "problem_url": "https://codeforces.com/contest/809/problem/B",
+    "submission_id": "CF110021338",
+    "submission_url": "https://codeforces.com/contest/809/submission/110021338",
+    "tags": [
+      "binary search",
+      "interactive",
+      "*2200"
+    ],
+    "timestamp": "Mar/15/2021 14:25"
+  },
   "CF110036797": {
     "contest_id": 840,
     "language": "GNU C++17",

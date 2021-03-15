@@ -12967,6 +12967,26 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF110036797": {
+    "contest_id": 840,
+    "language": "GNU C++17",
+    "path": "codeforces/840/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Leha and Function",
+    "problem_url": "https://codeforces.com/contest/840/problem/A",
+    "submission_id": "CF110036797",
+    "submission_url": "https://codeforces.com/contest/840/submission/110036797",
+    "tags": [
+      "combinatorics",
+      "greedy",
+      "math",
+      "number theory",
+      "sortings",
+      "*1300"
+    ],
+    "timestamp": "Mar/15/2021 18:02"
+  },
   "CF110038820": {
     "contest_id": 840,
     "language": "GNU C++17",

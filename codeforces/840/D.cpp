@@ -17,7 +17,7 @@ template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-const int N = 3e5 + 10, B = 150;
+const int N = 3e5 + 10, B = 100;
 
 vector<int> p[N];
 
@@ -40,7 +40,9 @@ signed main() {
 		rep(j, 0, B) f[i][j] = a[dis(rng)];
 		ord[i] = i;
 	}
-	sort(ord, ord + q, [&](int x, int y) { return l[x] < l[y]; });
+	sort(ord, ord + q, [&](int x, int y) {
+		return l[x] < l[y];
+	});
 
 	rep(i, 0, q) {
 		rep(j, 0, B) {
@@ -49,8 +51,9 @@ signed main() {
 			c[ord[i]][j] = -s[x];
 		}
 	}
-	sort(ord, ord + q, [&](int x, int y) { return r[x] < r[y]; });
-	
+	sort(ord, ord + q, [&](int x, int y) {
+		return r[x] < r[y];
+	});
 	for (int x = 1; x <= n; ++x) s[x] = 0;
 	rep(i, 0, q) {
 		rep(j, 0, B) {

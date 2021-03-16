@@ -22,6 +22,7 @@ int ans[N];
 
 int n;
 vector<int> ask(vector<int> v) {
+	if (v.empty()) return vector<int>(n, inf);
 	cout << sz(v) << endl;
 	for (auto x : v) cout << x << ' ';
 	cout << endl;
@@ -38,12 +39,11 @@ signed main() {
 		rep(c, 0, 2) a[c].clear();
 		for (int i = 1; i <= n; ++i)
 			a[i >> b & 1].push_back(i);
-		if (a[0].empty() || a[1].empty()) break;
 		rep(c, 0, 2) r[c] = ask(a[c]);
 		for (int i = 1; i <= n; ++i)
 			ckmin(ans[i], r[~i >> b & 1][i - 1]);
 	}
-	
+
 	cout << "-1" << endl;
 	for (int i = 1; i <= n; ++i) cout << ans[i] << ' ';
 	cout << endl;

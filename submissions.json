@@ -12967,6 +12967,23 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF110120868": {
+    "contest_id": 997,
+    "language": "GNU C++17",
+    "path": "codeforces/997/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Sky Full of Stars",
+    "problem_url": "https://codeforces.com/contest/997/problem/C",
+    "submission_id": "CF110120868",
+    "submission_url": "https://codeforces.com/contest/997/submission/110120868",
+    "tags": [
+      "combinatorics",
+      "math",
+      "*2500"
+    ],
+    "timestamp": "Mar/16/2021 19:53"
+  },
   "CF110154091": {
     "contest_id": 512,
     "language": "GNU C++17",

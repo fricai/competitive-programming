@@ -12967,6 +12967,24 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF110098373": {
+    "contest_id": 744,
+    "language": "GNU C++17",
+    "path": "codeforces/744/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Hongcow's Game",
+    "problem_url": "https://codeforces.com/contest/744/problem/B",
+    "submission_id": "CF110098373",
+    "submission_url": "https://codeforces.com/contest/744/submission/110098373",
+    "tags": [
+      "bitmasks",
+      "divide and conquer",
+      "interactive",
+      "*1900"
+    ],
+    "timestamp": "Mar/16/2021 15:13"
+  },
   "CF110103224": {
     "contest_id": 744,
     "language": "GNU C++17",

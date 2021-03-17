@@ -61,7 +61,7 @@ signed main() {
 		}
 		swap(c[0], c[i]);
 		swap(l[0], l[i]);
-		ckmin(ans, dp[n - 1][(1 << k) - 1]);
+		ckmin(ans, dp[i][(1 << k) - 1]);
 	}
 	cout << ans;
 }

@@ -14136,6 +14136,25 @@
     ],
     "timestamp": "Mar/18/2021 17:30"
   },
+  "CF110378672": {
+    "contest_id": 317,
+    "language": "GNU C++17",
+    "path": "codeforces/317/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Balance",
+    "problem_url": "https://codeforces.com/contest/317/problem/C",
+    "submission_id": "CF110378672",
+    "submission_url": "https://codeforces.com/contest/317/submission/110378672",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "graphs",
+      "trees",
+      "*2500"
+    ],
+    "timestamp": "Mar/18/2021 22:00"
+  },
   "CF110378941": {
     "contest_id": 317,
     "language": "GNU C++17",

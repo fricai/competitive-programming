@@ -38,7 +38,10 @@ void dfs_init(int u) {
 vector<tuple<int, int, int>> op;
 
 void do_op(int u, int v, int d) { // send d, u -> v 
+	if (d == 0) return;
+	assert(d > 0);
 	a[u] -= d; a[v] += d;
+	assert(0 <= a[u]); assert(a[v] <= val);
 	op.emplace_back(u, v, d);
 }
 

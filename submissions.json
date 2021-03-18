@@ -14213,6 +14213,24 @@
     ],
     "timestamp": "Mar/18/2021 17:30"
   },
+  "CF110310804": {
+    "contest_id": 590,
+    "language": "GNU C++17",
+    "path": "codeforces/590/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Chip 'n Dale Rescue Rangers",
+    "problem_url": "https://codeforces.com/contest/590/problem/B",
+    "submission_id": "CF110310804",
+    "submission_url": "https://codeforces.com/contest/590/submission/110310804",
+    "tags": [
+      "binary search",
+      "geometry",
+      "math",
+      "*2100"
+    ],
+    "timestamp": "Mar/18/2021 17:46"
+  },
   "CF110313531": {
     "contest_id": 590,
     "language": "GNU C++17",

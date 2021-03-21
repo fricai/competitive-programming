@@ -45,7 +45,7 @@ signed main() {
 		rep(i, 0, n)
 			rep(j, 0, n)
 				ckmin(d[i][j], d[i][k] + d[k][j]);
-	
+
 	rep(i, 0, n)
 		rep(j, 0, n)
 			rep(k, 0, n)
@@ -56,7 +56,7 @@ signed main() {
 		rep(j, 0, i) {
 			bool works = 0;
 			rep(k, 0, n) works |= w[i][j] + d[j][k] <= l[i][k];
-			// rep(k, 0, n) works |= w[j][i] + d[i][k] <= l[j][k];
+			rep(k, 0, n) works |= w[j][i] + d[i][k] <= l[j][k];
 			ans += works;
 		}
 	cout << ans << '\n';

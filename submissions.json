@@ -14136,6 +14136,24 @@
     ],
     "timestamp": "Mar/18/2021 17:30"
   },
+  "CF110674897": {
+    "contest_id": 1483,
+    "language": "GNU C++17",
+    "path": "codeforces/1483/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Useful Edges",
+    "problem_url": "https://codeforces.com/contest/1483/problem/D",
+    "submission_id": "CF110674897",
+    "submission_url": "https://codeforces.com/contest/1483/submission/110674897",
+    "tags": [
+      "dp",
+      "graphs",
+      "shortest paths",
+      "*2400"
+    ],
+    "timestamp": "Mar/21/2021 22:50"
+  },
   "CF110674942": {
     "contest_id": 1483,
     "language": "GNU C++17",

@@ -27,6 +27,7 @@ signed main() {
 
 	int n, m; cin >> n >> m;
 
+	
 	rep(u, 0, n) rep(v, 0, n) w[u][v] = inf;
 	rep(u, 0, n) w[u][u] = 0;
 	rep(e, 0, m) {
@@ -46,14 +47,11 @@ signed main() {
 			rep(j, 0, n)
 				ckmin(d[i][j], d[i][k] + d[k][j]);
 
-	for (bool changed = 1; changed; ) {
-		changed = 0;
-		rep(i, 0, n)
-			rep(j, 0, n)
-				rep(k, 0, n)
-					changed |= ckmax(l[k][j], l[i][j] - d[i][k]);
-	}
-
+	rep(i, 0, n)
+		rep(j, 0, n)
+			rep(k, 0, n)
+				ckmax(l[k][j], l[i][j] - d[i][k]);
+	
 	int ans = 0;
 	rep(i, 0, n)
 		rep(j, 0, i) {

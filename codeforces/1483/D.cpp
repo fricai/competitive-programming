@@ -46,11 +46,16 @@ signed main() {
 			rep(j, 0, n)
 				ckmin(d[i][j], d[i][k] + d[k][j]);
 
-	rep(i, 0, n)
-		rep(j, 0, n)
-			rep(k, 0, n)
-				ckmax(l[k][j], l[i][j] - d[i][k]);
-	
+	int cnt = 0;
+	for (bool changed = 1; changed; ++cnt) {
+		changed = 0;
+		rep(i, 0, n)
+			rep(j, 0, n)
+				rep(k, 0, n)
+					changed |= ckmax(l[k][j], l[i][j] - d[i][k]);
+	}
+	assert(cnt <= 2);
+
 	int ans = 0;
 	rep(i, 0, n)
 		rep(j, 0, i) {

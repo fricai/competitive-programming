@@ -23,21 +23,20 @@ int k;
 
 bool dfs(int l, int r) {
 	for (int u = l; u < r; ) {
-		if (nxt[u] > r || !dfs(u + 1, nxt[u])) return 0;
-		p[u] = ++k; u = nxt[u];
+		if (nxt[u] < 0) { p[u++] = ++k; continue; }
+		if (nxt[u] > r) return 0;
+		if (!dfs(u + 1, nxt[u])) return 0;
+		p[u] = ++k;
+		u = nxt[u];
 	}
 	return 1;
 }
 
 void solve() {
 	int n; cin >> n;
-	rep(i, 0, n) {
-		cin >> nxt[i], --nxt[i];
-		if (nxt[i] < 0) nxt[i] = i + 1;
-	}
+	rep(i, 0, n) cin >> nxt[i], --nxt[i];
 	k = 0;
 	if (!dfs(0, n)) return void(cout << "-1\n");
-
 	rep(i, 0, n) cout << p[i] << ' ';
 	cout << '\n';
 }

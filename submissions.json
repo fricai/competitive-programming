@@ -14136,6 +14136,28 @@
     ],
     "timestamp": "Mar/18/2021 17:30"
   },
+  "CF110712716": {
+    "contest_id": 1158,
+    "language": "GNU C++17",
+    "path": "codeforces/1158/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Permutation recovery",
+    "problem_url": "https://codeforces.com/contest/1158/problem/C",
+    "submission_id": "CF110712716",
+    "submission_url": "https://codeforces.com/contest/1158/submission/110712716",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "dfs and similar",
+      "graphs",
+      "greedy",
+      "math",
+      "sortings",
+      "*2100"
+    ],
+    "timestamp": "Mar/22/2021 13:54"
+  },
   "CF110712834": {
     "contest_id": 1158,
     "language": "GNU C++17",

@@ -22,9 +22,9 @@ int nxt[N], p[N];
 int k;
 
 bool dfs(int l, int r) {
-	for (int u = l; u < r; u = nxt[u]) {
+	for (int u = l; u < r; ) {
 		if (nxt[u] > r || !dfs(u + 1, nxt[u])) return 0;
-		p[u] = ++k;
+		p[u] = ++k; u = nxt[u];
 	}
 	return 1;
 }

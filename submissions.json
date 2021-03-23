@@ -14136,6 +14136,25 @@
     ],
     "timestamp": "Mar/18/2021 17:30"
   },
+  "CF110801585": {
+    "contest_id": 875,
+    "language": "GNU C++17",
+    "path": "codeforces/875/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "National Property",
+    "problem_url": "https://codeforces.com/contest/875/problem/C",
+    "submission_id": "CF110801585",
+    "submission_url": "https://codeforces.com/contest/875/submission/110801585",
+    "tags": [
+      "2-sat",
+      "dfs and similar",
+      "graphs",
+      "implementation",
+      "*2100"
+    ],
+    "timestamp": "Mar/23/2021 15:05"
+  },
   "CF110985649": {
     "contest_id": 1506,
     "language": "GNU C++17",

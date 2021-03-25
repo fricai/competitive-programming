@@ -14136,6 +14136,24 @@
     ],
     "timestamp": "Mar/18/2021 17:30"
   },
+  "CF110999420": {
+    "contest_id": 1506,
+    "language": "GNU C++17",
+    "path": "codeforces/1506/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Double-ended Strings",
+    "problem_url": "https://codeforces.com/contest/1506/problem/C",
+    "submission_id": "CF110999420",
+    "submission_url": "https://codeforces.com/contest/1506/submission/110999420",
+    "tags": [
+      "brute force",
+      "implementation",
+      "strings",
+      "*1000"
+    ],
+    "timestamp": "Mar/25/2021 20:31"
+  },
   "CF111004520": {
     "contest_id": 1506,
     "language": "GNU C++17",

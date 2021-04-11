@@ -14207,6 +14207,27 @@
     ],
     "timestamp": "Apr/11/2021 20:36"
   },
+  "CF112692750": {
+    "contest_id": 1513,
+    "language": "GNU C++17",
+    "path": "codeforces/1513/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "GCD and MST",
+    "problem_url": "https://codeforces.com/contest/1513/problem/D",
+    "submission_id": "CF112692750",
+    "submission_url": "https://codeforces.com/contest/1513/submission/112692750",
+    "tags": [
+      "constructive algorithms",
+      "dsu",
+      "graphs",
+      "greedy",
+      "number theory",
+      "sortings",
+      "*2000"
+    ],
+    "timestamp": "Apr/11/2021 21:13"
+  },
   "CF112862806": {
     "contest_id": 1511,
     "language": "GNU C++17",

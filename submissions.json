@@ -12595,6 +12595,25 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF113084446": {
+    "contest_id": 1464,
+    "language": "GNU C++17",
+    "path": "codeforces/1464/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Peaceful Rooks",
+    "problem_url": "https://codeforces.com/contest/1464/problem/A",
+    "submission_id": "CF113084446",
+    "submission_url": "https://codeforces.com/contest/1464/submission/113084446",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "*1700"
+    ],
+    "timestamp": "Apr/15/2021 16:50"
+  },
   "CF113332263": {
     "contest_id": 1509,
     "language": "GNU C++17",

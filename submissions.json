@@ -12595,6 +12595,27 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF113339967": {
+    "contest_id": 1509,
+    "language": "GNU C++17",
+    "path": "codeforces/1509/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Complete the MST",
+    "problem_url": "https://codeforces.com/contest/1509/problem/F",
+    "submission_id": "CF113339967",
+    "submission_url": "https://codeforces.com/contest/1509/submission/113339967",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "greedy",
+      "trees",
+      "*2500"
+    ],
+    "timestamp": "Apr/17/2021 19:50"
+  },
   "CF113650588": {
     "contest_id": 1454,
     "language": "GNU C++17",

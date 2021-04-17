@@ -1,4 +1,20 @@
 {
+  "AC21833317": {
+    "contest_id": "jsc2021",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/jsc2021/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "Spanning Tree",
+    "problem_url": "https://atcoder.jp/contests/jsc2021/tasks/jsc2021_g",
+    "submission_id": "AC21833317",
+    "submission_url": "https://atcoder.jp/contests/jsc2021/submissions/21833317",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Apr/17/2021 16:25"
+  },
   "AC22045832": {
     "contest_id": "abc199",
     "language": "C++ (GCC 9.2.1)",

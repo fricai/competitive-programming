@@ -26,7 +26,12 @@ mint det(vector<vector<mint>>& a) {
 
 	mint res = 1;
 	rep(i, 0, n) {
-		if (a[i][i] == 0) return 0;
+		int b = i;
+		while (b < n && a[b][i].val() == 0) ++b;
+		
+		if (b == n) return 0;
+		if (i != b) swap(a[i], a[b]), res *= -1;
+
 		res *= a[i][i];
 		auto x = 1 / a[i][i];
 		rep(j, i + 1, n) {

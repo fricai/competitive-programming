@@ -12595,6 +12595,23 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF113332959": {
+    "contest_id": 1509,
+    "language": "GNU C++17",
+    "path": "codeforces/1509/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "The Sports Festival",
+    "problem_url": "https://codeforces.com/contest/1509/problem/C",
+    "submission_id": "CF113332959",
+    "submission_url": "https://codeforces.com/contest/1509/submission/113332959",
+    "tags": [
+      "dp",
+      "greedy",
+      "*1800"
+    ],
+    "timestamp": "Apr/17/2021 18:24"
+  },
   "CF113334351": {
     "contest_id": 1509,
     "language": "GNU C++17",

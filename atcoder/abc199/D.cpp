@@ -20,6 +20,7 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 const int N = 21;
 vector<int> g[N];
 bool vis[N];
+int cur;
 
 vector<int> cc;
 void dfs(int u) {
@@ -60,7 +61,7 @@ signed main() {
 		rep(S, 0, mx) {
 			for (auto u : cc) col[u] = 0;
 			
-			int cur = 0;
+			cur = 0;
 			col[u] = 1;
 			bool valid = 1;
 			for (auto u : cc)

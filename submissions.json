@@ -1,4 +1,20 @@
 {
+  "AC22046184": {
+    "contest_id": "abc199",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc199/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Graph Smoothing",
+    "problem_url": "https://atcoder.jp/contests/abc199/tasks/abc199_f",
+    "submission_id": "AC22046184",
+    "submission_url": "https://atcoder.jp/contests/abc199/submissions/22046184",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Apr/25/2021 00:28"
+  },
   "AC22046328": {
     "contest_id": "abc199",
     "language": "C++ (GCC 9.2.1)",

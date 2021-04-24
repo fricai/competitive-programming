@@ -60,14 +60,13 @@ signed main() {
 		rep(S, 0, mx) {
 			for (auto u : cc) col[u] = 0;
 			
+			int cur = 0;
 			col[u] = 1;
 			bool valid = 1;
-			int T = S;
-			int cur = 0;
 			for (auto u : cc)
 				for (auto v : g[u])
 					if (col[v]) valid &= col[u] != col[v];
-					else col[v] = nxt(col[u], T >> cur++ & 1);
+					else col[v] = nxt(col[u], S >> cur++ & 1);
 			tmp += valid;
 		}
 

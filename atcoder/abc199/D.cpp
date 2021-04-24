@@ -38,6 +38,14 @@ int nxt(int x, int b) {
 }
 
 short col[N];
+void color(int u, int S) {
+	for (int v : g[u]) {
+		if (col[v]) continue;
+		col[v] = nxt(col[u], S >> cur & 1);
+		++cur;
+		color(v, S);
+	}
+}
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -59,17 +67,18 @@ signed main() {
 		mx = 1 << mx;
 
 		ll tmp = 0;
-		
+
 		rep(S, 0, mx) {
 			for (auto u : cc) col[u] = 0;
-			
+
 			cur = 0;
 			col[u] = 1;
+			color(u, S);
+			
 			bool valid = 1;
 			for (auto u : cc)
 				for (auto v : g[u])
-					if (col[v]) valid &= col[u] != col[v];
-					else col[v] = nxt(col[u], S >> cur++ & 1);
+					valid &= col[u] != col[v];
 			tmp += valid;
 		}
 

@@ -63,10 +63,11 @@ signed main() {
 			col[u] = 1;
 			bool valid = 1;
 			int T = S;
+			int cur = 0;
 			for (auto u : cc)
 				for (auto v : g[u])
 					if (col[v]) valid &= col[u] != col[v];
-					else col[v] = nxt(col[u], T & 1), T >>= 1;
+					else col[v] = nxt(col[u], T >> cur++ & 1);
 			tmp += valid;
 		}
 

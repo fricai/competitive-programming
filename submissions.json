@@ -1,4 +1,20 @@
 {
+  "AC22047472": {
+    "contest_id": "abc199",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc199/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "RGB Coloring 2",
+    "problem_url": "https://atcoder.jp/contests/abc199/tasks/abc199_d",
+    "submission_id": "AC22047472",
+    "submission_url": "https://atcoder.jp/contests/abc199/submissions/22047472",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Apr/25/2021 03:47"
+  },
   "AC22047505": {
     "contest_id": "abc199",
     "language": "C++ (GCC 9.2.1)",

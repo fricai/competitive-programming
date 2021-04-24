@@ -1,4 +1,20 @@
 {
+  "AC22045854": {
+    "contest_id": "abc199",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc199/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Intersection",
+    "problem_url": "https://atcoder.jp/contests/abc199/tasks/abc199_b",
+    "submission_id": "AC22045854",
+    "submission_url": "https://atcoder.jp/contests/abc199/submissions/22045854",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Apr/24/2021 23:57"
+  },
   "AC22045920": {
     "contest_id": "abc199",
     "language": "C++ (GCC 9.2.1)",

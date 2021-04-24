@@ -29,9 +29,11 @@ void dfs(int u) {
 	for (int v : g[u]) if (!vis[v]) dfs(v);
 }
 
+
 int nxt(int x, int b) {
 	x += b + 1;
 	if (x > 3) x -= 3;
+	assert(1 <= x && x <= 3);
 	return x;
 }
 

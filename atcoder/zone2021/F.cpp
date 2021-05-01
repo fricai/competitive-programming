@@ -40,9 +40,10 @@ signed main() {
 		d.merge(u, v);
 	};
 
-	rep(i, 0, n)
-		if (!dead[i] && !d.same(0, i))
-			rep(u, 0, n) add(u, u ^ i);
+	rep(i, 0, n) {
+		if (dead[i] || d.same(0, i)) continue;
+		rep(u, 0, n) add(u, u ^ i);
+	}
 	if (sz(d.groups()) > 1) return cout << "-1\n", 0;
 	for (auto [u, v] : res) cout << u << ' ' << v << '\n';
 }

@@ -34,11 +34,12 @@ signed main() {
 		}
 	}
 	if (rev) reverse(all(q));
-
-	string res;
-	for (auto c : q)
-		if (res.empty() || res.back() != c) res += c;
-		else res.pop_back();
 	
-	cout << res << '\n';
+	vector<char> st;
+	for (auto c : q)
+		if (st.empty() || st.back() != c) st.push_back(c);
+		else st.pop_back();
+	
+	for (auto x : st) cout << x;
+	cout << '\n';
 }

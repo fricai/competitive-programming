@@ -1,4 +1,20 @@
 {
+  "AC22284143": {
+    "contest_id": "arc078",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc078/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Awkward Response",
+    "problem_url": "https://atcoder.jp/contests/arc078/tasks/arc078_c",
+    "submission_id": "AC22284143",
+    "submission_url": "https://atcoder.jp/contests/arc078/submissions/22284143",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "May/03/2021 17:14"
+  },
   "AC22302451": {
     "contest_id": "arc079",
     "language": "C++ (GCC 9.2.1)",

@@ -22,15 +22,15 @@ const int inf = 1.2e9;
 void solve() {
 	int n, m, x; cin >> n >> m >> x;
 
-	priority_queue<pair<int, int>> q;
-
+	using pii = pair<int, int>;
+	priority_queue<pair<int, int>, vector<pii>, greater<pii>> q;
 	rep(j, 0, m) q.push({0, j + 1});
-	
+
 	cout << "YES\n";
 	rep(i, 0, n) {
 		int h; cin >> h;
 		auto [u, j] = q.top(); q.pop();
-		u -= h;
+		u += h;
 		q.push({u, j});
 		cout << j << ' ';
 	}

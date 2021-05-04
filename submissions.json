@@ -1,4 +1,20 @@
 {
+  "AC22302451": {
+    "contest_id": "arc079",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc079/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Cat Snuke and a Voyage",
+    "problem_url": "https://atcoder.jp/contests/arc079/tasks/arc079_a",
+    "submission_id": "AC22302451",
+    "submission_url": "https://atcoder.jp/contests/arc079/submissions/22302451",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "May/04/2021 13:44"
+  },
   "AC22303590": {
     "contest_id": "arc079",
     "language": "C++ (GCC 9.2.1)",

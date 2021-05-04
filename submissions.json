@@ -1,4 +1,20 @@
 {
+  "AC22303590": {
+    "contest_id": "arc079",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc079/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Namori Grundy",
+    "problem_url": "https://atcoder.jp/contests/arc079/tasks/arc079_d",
+    "submission_id": "AC22303590",
+    "submission_url": "https://atcoder.jp/contests/arc079/submissions/22303590",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "May/04/2021 14:32"
+  },
   "AC22303736": {
     "contest_id": "arc079",
     "language": "C++ (GCC 9.2.1)",

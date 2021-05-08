@@ -28,27 +28,52 @@ signed main() {
 	vector<int> a(n);
 	for (auto &x : a) cin >> x, x %= M;
 
-	int m = min(8, n);
-	auto print = [&](int S) {
-		cout << __builtin_popcount(S) << ' ';
-		rep(i, 0, m) if (S >> i & 1) cout << i + 1 << ' ';
-		cout << '\n';
-	};
-	
-	vector<int> oth(M);
-	rep(S, 1, 1 << m) {
+	auto print = [&](vector<int> p, vector<int> q) {
+		assert(!p.empty() && !q.empty());
+
 		int res = 0;
-		rep(i, 0, m) if (S >> i & 1) {
-			res += a[i];
-			if (M <= res) res -= M;
+		for (auto i : p) res = (res + a[i]) % M;
+		for (auto i : q) res = (res - a[i]) % M;
+		assert(res == 0);
+
+		cout << "Yes\n";
+
+		cout << sz(p) << ' ';
+		for (auto i : p) cout << i + 1 << ' ';
+		cout << '\n';
+		
+		cout << sz(q) << ' ';
+		for (auto i : q) cout << i + 1 << ' ';
+		cout << '\n';
+		
+		exit(0);
+	};
+
+
+	rep(i, 0, n) {
+		rep(x, 0, M) st[i + 1][x] = st[i][x];
+
+		rep(x, 0, M) {
+			if (x && st[i][x].empty()) continue;
+
+			int nxt = (x + a[i]) % M;
+			if (!st[i + 1][nxt].empty()) {
+				st[i][x].push_back(i);
+				print(st[i + 1][nxt], st[i][x]);
+			}
 		}
 
-		if (oth[res]) {
-			cout << "Yes\n";
-			print(S);
-			print(oth[res]);
-			return 0;
-		} else oth[res] = S;
+		assert(st[i + 1][a[i]].empty());
+		st[i + 1][a[i]] = {i};
+		
+		rep(x, 1, M) {
+			if (st[i][x].empty()) continue;
+			
+			int nxt = (x + a[i]) % M;
+
+			st[i + 1][nxt] = st[i][x];
+			st[i + 1][nxt].push_back(i);
+		}	
 	}
 
 	cout << "No\n";

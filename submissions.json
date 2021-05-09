@@ -1,4 +1,20 @@
 {
+  "AC22483595": {
+    "contest_id": "arc118",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc118/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Hamiltonian Cycle",
+    "problem_url": "https://atcoder.jp/contests/arc118/tasks/arc118_d",
+    "submission_id": "AC22483595",
+    "submission_url": "https://atcoder.jp/contests/arc118/submissions/22483595",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "May/09/2021 20:43"
+  },
   "AC22485097": {
     "contest_id": "arc118",
     "language": "C++ (GCC 9.2.1)",

@@ -1,4 +1,20 @@
 {
+  "AC22606144": {
+    "contest_id": "abc201",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc201/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Do you know the second highest mountain?",
+    "problem_url": "https://atcoder.jp/contests/abc201/tasks/abc201_b",
+    "submission_id": "AC22606144",
+    "submission_url": "https://atcoder.jp/contests/abc201/submissions/22606144",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "May/15/2021 17:37"
+  },
   "AC22606317": {
     "contest_id": "abc201",
     "language": "C++ (GCC 9.2.1)",

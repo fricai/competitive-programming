@@ -32,30 +32,26 @@ signed main() {
 
 	int n, m; cin >> n >> m;
 
-	auto f = [&](int i, int j) {
-		return (i ^ j) & 1;
-	};
-
 	rep(i, 0, n) rep(j, 0, m) {
 		char c; cin >> c;
 		a[i][j] = c == '+' ? +1 : -1;
-		dp[i][j] = f(i, j) ? inf : -inf;		
 	}
 
-	dp[n - 1][m - 1] = 0;
 	per(i, 0, n) {
 		per(j, 0, m) {
-			if (f(i, j)) {
-				int nxt = dp[i][j] + a[i][j];
-				if (i > 0) ckmax(dp[i - 1][j], nxt);
-				if (j > 0) ckmax(dp[i][j - 1], nxt);
+			if (i == n - 1 && j == m - 1)
+				dp[n - 1][m - 1] = 0;
+			else if ((i + j) % 2 == 0) {
+				// 0 maximizes
+				dp[i][j] = -inf;
+				if (i + 1 < n) ckmax(dp[i][j], dp[i + 1][j] + a[i + 1][j]);
+				if (j + 1 < m) ckmax(dp[i][j], dp[i][j + 1] + a[i][j + 1]);
 			} else {
-				int nxt = dp[i][j] - a[i][j];
-				if (i > 0) ckmin(dp[i - 1][j], nxt);
-				if (j > 0) ckmin(dp[i][j - 1], nxt);
+				dp[i][j] = +inf;
+				if (i + 1 < n) ckmin(dp[i][j], dp[i + 1][j] - a[i + 1][j]);
+				if (j + 1 < m) ckmin(dp[i][j], dp[i][j + 1] - a[i][j + 1]);
 			}
 		}
 	}
-
 	verdict(dp[0][0]);
 }

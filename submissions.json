@@ -12595,6 +12595,25 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF116567110": {
+    "contest_id": 1521,
+    "language": "GNU C++17",
+    "path": "codeforces/1521/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Nastia and a Beautiful Matrix",
+    "problem_url": "https://codeforces.com/contest/1521/problem/E",
+    "submission_id": "CF116567110",
+    "submission_url": "https://codeforces.com/contest/1521/submission/116567110",
+    "tags": [
+      "binary search",
+      "constructive algorithms",
+      "dp",
+      "greedy",
+      "*2700"
+    ],
+    "timestamp": "May/18/2021 18:24"
+  },
   "CF116572199": {
     "contest_id": 1521,
     "language": "GNU C++17",

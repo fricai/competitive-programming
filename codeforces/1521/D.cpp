@@ -29,22 +29,22 @@ void do_op(int u1, int v1, int u2, int v2) {
 pair<int, int> dfs(int u) {
 	int L = u, R = u;
 
-	vector<tuple<int, int, int>> tr;
+	vector<pair<int, pair<int, int>>> tr;
 	for (int v : g[u]) {
 		g[v].erase(find(all(g[v]), u));
 
-		auto [l, r] = dfs(v);
-		
-		if (R == u && l == v)
-			R = r;
-		else if (L == u && l == v)
-			L = r;
-		else tr.emplace_back(v, l, r);
+		auto ends = dfs(v);
+
+		if (R == u && ends.first == v)
+			R = ends.second;
+		else if (L == u && ends.first == v)
+			L = ends.second;
+		else tr.emplace_back(v, ends);
 	}
 	
-	for (auto [v, l, r] : tr) {
-		do_op(u, v, R, l);
-		R = r;
+	for (auto [v, ends] : tr) {
+		do_op(u, v, R, ends.first);
+		R = ends.second;
 	}
 	
 	return {L, R};
@@ -52,7 +52,7 @@ pair<int, int> dfs(int u) {
 
 void solve() {
 	int n; cin >> n;
-
+	
 	rep(u, 0, n) g[u].clear();
 	op.clear();
 

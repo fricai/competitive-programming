@@ -12595,6 +12595,25 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF116627663": {
+    "contest_id": 1525,
+    "language": "GNU C++17",
+    "path": "codeforces/1525/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Robot Collisions",
+    "problem_url": "https://codeforces.com/contest/1525/problem/C",
+    "submission_id": "CF116627663",
+    "submission_url": "https://codeforces.com/contest/1525/submission/116627663",
+    "tags": [
+      "data structures",
+      "greedy",
+      "implementation",
+      "sortings",
+      "*2000"
+    ],
+    "timestamp": "May/19/2021 13:15"
+  },
   "CF116628937": {
     "contest_id": 1525,
     "language": "GNU C++17",

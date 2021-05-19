@@ -12595,6 +12595,26 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF116631500": {
+    "contest_id": 1525,
+    "language": "GNU C++17",
+    "path": "codeforces/1525/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Assimilation IV",
+    "problem_url": "https://codeforces.com/contest/1525/problem/E",
+    "submission_id": "CF116631500",
+    "submission_url": "https://codeforces.com/contest/1525/submission/116631500",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "probabilities",
+      "two pointers",
+      "*2100"
+    ],
+    "timestamp": "May/19/2021 14:04"
+  },
   "CF116636500": {
     "contest_id": 1525,
     "language": "GNU C++17",

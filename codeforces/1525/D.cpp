@@ -33,16 +33,15 @@ signed main() {
 
 	vector<int> taken;
 	rep(i, 0, n) if (a[i]) taken.push_back(i);
-	int m = sz(taken);
 	
 	rep(i, 0, n) {
-		for (int j = 0; j <= m; ++j)
+		for (int j = 0; j <= sz(taken); ++j)
 			uin(dp[i + 1][j], dp[i][j]);
-		
+
 		if (a[i]) continue;
-		for (int j = 0; j < m; ++j)
+		for (int j = 0; j < sz(taken); ++j)
 			uin(dp[i + 1][j + 1], dp[i][j] + abs(i - taken[j]));
 	}
-	
-	cout << dp[n][m] << '\n';
+
+	cout << dp[n][sz(taken)] << '\n';
 }

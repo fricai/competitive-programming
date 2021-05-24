@@ -39,26 +39,17 @@ set<array<int, 3>> s;
 void add(int u) { s.insert({in[u], out[u], u}); }
 
 void dfs(int u) {
-	add(u);
-	
-	vector<int> rem;
-	while (true) {
-		auto it = s.lb({in[u], -1, -1});
-		
-		if (it == begin(s)) break;
-		auto [_, y, v] = *(--it);
-
-		if (out[u] > y) break;
-				
-		rem.push_back(v);
+	int rem = -1;
+	if (auto it = s.lb({in[u], -1, -1}); it != begin(s) && out[u] <= (*(--it))[1]) {
+		rem = (*it)[2];
 		s.erase(it);
 	}
-		
+	
+	add(u);
 	uax(ans, sz(s));
 	for (auto v : g[u]) dfs(v);
 	s.erase({in[u], out[u], u});
-
-	for (auto x : rem) add(x);
+	if (rem != -1) add(rem);
 }
 
 int solve() {

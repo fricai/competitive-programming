@@ -25,19 +25,27 @@ bool vis[N];
 ll x;
 vector<int> one, two;
 
-void dfs(int u) {
+ll dfs(int u, int p) {
 	vis[u] = 1;
 	for (int e : g[u]) {
 		int v = a[e] ^ b[e] ^ u;
 		if (vis[v]) continue;
-		dfs(v);
-		
-		if (c[v] >= x) {
-			c[u] += c[v] - x;
-			one.push_back(e);
-		} else
-			two.push_back(e);
+		assert(p != e);
+		c[u] += dfs(v, e);
 	}
+
+	if (p != -1) {
+		if (c[u] < x) {
+			// merge it at end
+			two.push_back(p);
+			return 0;
+		}
+		
+		// merge it with parent now
+		one.push_back(p);
+	}
+	
+	return c[u] - x;
 }
 
 signed main() {
@@ -58,7 +66,7 @@ signed main() {
 	if (s < (n - 1) * x)
 		return cout << "NO\n", 0;
 
-	dfs(0);
+	dfs(0, -1);
 	
 	assert(sz(one) + sz(two) == n - 1);
 	reverse(all(two));

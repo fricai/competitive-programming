@@ -31,13 +31,12 @@ void dfs(int u) {
 		int v = a[e] ^ b[e] ^ u;
 		if (vis[v]) continue;
 		dfs(v);
-
-		if (c[v] < x)
-			two.push_back(e);
-		else {
+		
+		if (c[v] >= x) {
 			c[u] += c[v] - x;
 			one.push_back(e);
-		}
+		} else
+			two.push_back(e);
 	}
 }
 

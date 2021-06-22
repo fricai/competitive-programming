@@ -12595,6 +12595,25 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF120276111": {
+    "contest_id": 1513,
+    "language": "GNU C++17",
+    "path": "codeforces/1513/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Cost Equilibrium",
+    "problem_url": "https://codeforces.com/contest/1513/problem/E",
+    "submission_id": "CF120276111",
+    "submission_url": "https://codeforces.com/contest/1513/submission/120276111",
+    "tags": [
+      "combinatorics",
+      "constructive algorithms",
+      "math",
+      "sortings",
+      "*2300"
+    ],
+    "timestamp": "Jun/22/2021 14:52"
+  },
   "CF120278616": {
     "contest_id": 1503,
     "language": "GNU C++17",

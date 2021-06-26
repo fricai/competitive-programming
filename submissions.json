@@ -12595,6 +12595,23 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF120658516": {
+    "contest_id": 1540,
+    "language": "GNU C++17",
+    "path": "codeforces/1540/C1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C1",
+    "problem_name": "Converging Array (Easy Version)",
+    "problem_url": "https://codeforces.com/contest/1540/problem/C1",
+    "submission_id": "CF120658516",
+    "submission_url": "https://codeforces.com/contest/1540/submission/120658516",
+    "tags": [
+      "dp",
+      "math",
+      "*2700"
+    ],
+    "timestamp": "Jun/26/2021 15:20"
+  },
   "CF121189518": {
     "contest_id": 1542,
     "language": "GNU C++17",

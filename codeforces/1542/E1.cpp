@@ -17,6 +17,9 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
+#define int long long
+#pragma GCC optimize ("trapv") 
+
 const int N = 64;
 int I[N][N * N / 2];
 int M;
@@ -40,11 +43,10 @@ signed main() {
 
 	I[1][0] = one;
 	for (int m = 2; m <= n; ++m) {
-		I[m][0] = I[m - 1][0];
-		for (int k = 1; k < m; ++k)
-			I[m][k] = add(I[m][k - 1], I[m - 1][k]);
-		for (int k = m; k <= I_max(m); ++k)
-			I[m][k] = sub(add(I[m][k - 1], I[m - 1][k]), I[m - 1][k - m]);
+		for (int k = 0; k <= I_max(m); ++k) {
+			for (int i = 0; i < m && i <= k; ++i)
+				I[m][k] = add(I[m][k], I[m - 1][k - i]);
+		}
 	}
 	
 	C[0][0] = one;

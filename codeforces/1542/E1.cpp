@@ -83,9 +83,9 @@ signed main() {
 		};
 		
 		for (int first = 1; first <= m; ++first)
-			for (int k = 0; k <= I_max(m); ++k)
+			for (int k = first - 1; k <= I_max(m); ++k)
 				cur = add(cur, mul(sum(first, first, k, k), sum(first + 1, m, 0, k - 1)));
-		
+
 		int f = C[n][m];
 		for (int i = 1; i <= n - m; ++i)
 			f = mul(f, i);

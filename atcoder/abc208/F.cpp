@@ -25,8 +25,8 @@ signed main() {
 	cin.tie(nullptr);
 
 	ll n; int m, k; cin >> n >> m >> k;
-
-	int U = k + m + 1;
+	
+	const int U = 2.5e6 + 2;
 
 	vector<mint> f(U + 1, 0);
 	for (int i = 1; i <= U; ++i)

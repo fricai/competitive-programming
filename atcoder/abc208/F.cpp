@@ -28,20 +28,17 @@ signed main() {
 
 	ll n; int m, k; cin >> n >> m >> k;
 	n %= M;
-	
-	const int U = 2.5e6 + 2;
+
+	const int U = 3e6;
 
 	vector<mint> f(U + 1, 0);
 	for (int i = 1; i <= U; ++i)
 		f[i] = mint(i).pow(k);
-	
-	for (int j = 1; j <= m; ++j) {
-		vector<mint> g(U + 1);
+
+	for (int j = 1; j <= m; ++j)
 		for (int i = 1; i <= U; ++i)
-			g[i] = g[i - 1] + f[i];
-		f = move(g);
-	}
-	
+			f[i] += f[i - 1];
+
 	vector<mint> fac(U + 1);
 	fac[0] = 1;
 	for (int i = 1; i <= U; ++i)
@@ -51,16 +48,16 @@ signed main() {
 	L.front() = 1;
 	for (int i = 1; i <= U; ++i)
 		L[i] = L[i - 1] * (n - i);
-	
+
 	R.back() = 1;
 	for (int i = U; 1 <= i; --i)
 		R[i - 1] = R[i] * (n - i);
-	
+
 	mint ans = 0;
 	for (int i = 1; i <= U; ++i) {
 		mint del = L[i - 1] * R[i];		
 		del /= fac[U - i] * fac[i - 1];
-		if ((U ^ i) & 1) ans -= del * f[i];
+		if (i & 1) ans -= del * f[i];
 		else ans += del * f[i];
 	}
 

@@ -20,6 +20,8 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 using mint = atcoder::modint1000000007;
 
+const int M = 1e9 + 7;
+
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);

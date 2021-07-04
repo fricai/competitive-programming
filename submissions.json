@@ -1,4 +1,20 @@
 {
+  "AC23990142": {
+    "contest_id": "abc208",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc208/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Cumulative Sum",
+    "problem_url": "https://atcoder.jp/contests/abc208/tasks/abc208_f",
+    "submission_id": "AC23990142",
+    "submission_url": "https://atcoder.jp/contests/abc208/submissions/23990142",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jul/04/2021 19:17"
+  },
   "AC23990229": {
     "contest_id": "abc208",
     "language": "C++ (GCC 9.2.1)",

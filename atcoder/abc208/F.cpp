@@ -27,6 +27,7 @@ signed main() {
 	cin.tie(nullptr);
 
 	ll n; int m, k; cin >> n >> m >> k;
+	n %= M;
 	
 	const int U = 2.5e6 + 2;
 
@@ -34,9 +35,12 @@ signed main() {
 	for (int i = 1; i <= U; ++i)
 		f[i] = mint(i).pow(k);
 	
-	for (int j = 1; j <= m; ++j)
+	for (int j = 1; j <= m; ++j) {
+		vector<mint> g(U + 1);
 		for (int i = 1; i <= U; ++i)
-			f[i] += f[i - 1];
+			g[i] = g[i - 1] + f[i];
+		f = move(g);
+	}
 	
 	vector<mint> fac(U + 1);
 	fac[0] = 1;

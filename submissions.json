@@ -12595,6 +12595,27 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF121610092": {
+    "contest_id": 1543,
+    "language": "Python 3",
+    "path": "codeforces/1543/C.py",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Need for Pink Slips",
+    "problem_url": "https://codeforces.com/contest/1543/problem/C",
+    "submission_id": "CF121610092",
+    "submission_url": "https://codeforces.com/contest/1543/submission/121610092",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "dfs and similar",
+      "implementation",
+      "math",
+      "probabilities",
+      "*1900"
+    ],
+    "timestamp": "Jul/07/2021 20:54"
+  },
   "CF121614339": {
     "contest_id": 1543,
     "language": "GNU C++17",

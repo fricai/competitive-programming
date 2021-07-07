@@ -1,13 +1,14 @@
 from decimal import Decimal
 from functools import lru_cache
 
-one = Decimal(1)
+eps = Decimal(1e-6)
+prec = 6
 
 @lru_cache
 def g(c, p, v):
-    if p == one:
-        return one
-    res = one
+    if abs(p - 1) <= eps:
+        return Decimal(1)
+    res = Decimal(1)
     if c <= v:
         res += c
     else:
@@ -16,9 +17,9 @@ def g(c, p, v):
 
 @lru_cache
 def f(c, m, p, v):
-    if p == 1:
-        return one
-    res = one
+    if abs(p - 1) <= eps:
+        return Decimal(1)
+    res = Decimal(1)
     
     if m <= v:
         res += m * g(c + m / 2, p + m / 2, v)

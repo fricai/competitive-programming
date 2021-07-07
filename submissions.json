@@ -12595,6 +12595,27 @@
     ],
     "timestamp": "Mar/11/2021 22:54"
   },
+  "CF121644982": {
+    "contest_id": 1543,
+    "language": "GNU C++17",
+    "path": "codeforces/1543/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "The Final Pursuit",
+    "problem_url": "https://codeforces.com/contest/1543/problem/E",
+    "submission_id": "CF121644982",
+    "submission_url": "https://codeforces.com/contest/1543/submission/121644982",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "divide and conquer",
+      "graphs",
+      "greedy",
+      "math",
+      "*2700"
+    ],
+    "timestamp": "Jul/07/2021 22:12"
+  },
   "CF121653560": {
     "contest_id": 1543,
     "language": "GNU C++17",

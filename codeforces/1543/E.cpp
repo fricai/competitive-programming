@@ -31,26 +31,28 @@ void solve() {
 	}
 	
 	vector<int> pi(n, -1);
+	vector<bool> vis(n, 0);
 	queue<int> q;
 
-	pi[0] = 0;
+	pi[0] = 0; vis[0] = 1;
 	rep(i, 0, k) {
 		int u = g[0][i];
 		q.push(u);
 		pi[u] = 1 << i;
+		vis[u] = 1;
 	}
 	
 	while (!q.empty()) {
 		int u = q.front(); q.pop();
+		vis[u] = 1;
 		int pre = -1;
 		for (int v : g[u]) {
-			if (0 <= pi[v]) {
+			if (pi[v] != -1) {
 				if (pre < 0) pre = pi[v];
 				else pi[u] = pre | (pre ^ pi[v]);
-			} else if (pi[v] == -1)
-				q.push(v), pi[v] = -2;
+			} else if (!vis[v])
+				q.push(v), vis[v] = 1;
 		}
-		assert(0 <= pi[u]);
 	}
 	
 	vector<int> p(n);

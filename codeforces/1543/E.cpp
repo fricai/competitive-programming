@@ -17,18 +17,16 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-const int lgK = 4;
-int c[lgK + 1][1 << (1 << lgK)];
+const int N = 1 << 16;
+vector<int> g[N];
+int pi[N], p[N], c[N];
 
 void solve() {
 	int k; cin >> k;
 	
-	int n = 1 << k, m = k << (k - 1);
+	int n = 1 << k, m = k * n / 2;
 	
-	vector<vector<int>> g(n);
-	for (auto &v : g) v.reserve(k);
-
-	// rep(u, 0, n) rep(i, 0, k) g[u].push_back(u ^ (1 << i));
+	rep(u, 0, n) g[u].clear(), pi[u] = -1, c[u] = 0;
 
 	rep(e, 0, m) {
 		int u, v; cin >> u >> v;
@@ -36,7 +34,6 @@ void solve() {
 		g[v].push_back(u);
 	}
 	
-	vector<int> pi(n, -1);
 	queue<int> q;
 
 	pi[0] = 0;
@@ -58,41 +55,28 @@ void solve() {
 		}
 	}
 	
-	vector<int> p(n);
 	rep(i, 0, n) p[pi[i]] = i;
-	for (auto x : p) cout << x << ' ';
+	rep(i, 0, n) cout << p[i] << ' ';
 	cout << '\n';
 
 	if (k & (k - 1))
 		cout << "-1\n";
 	else {
-		int j = 31 - __builtin_clz(k);
-		rep(u, 0, n) cout << c[j][pi[u]] << ' ';
+		rep(u, 0, n)
+			rep(i, 0, k)
+				if (u >> i & 1)
+					c[p[u]] ^= i;
+		rep(u, 0, n) cout << c[u] << ' ';
 		cout << '\n';
-		
-		// vector<int> c(n);
-		// rep(u, 0, n)
-		// 	rep(i, 0, k)
-		// 		if (u >> i & 1)
-		// 			c[p[u]] ^= i;
-		// for (auto x : c)
-		// 	cout << x << ' ';
-		// cout << '\n';
 	}
 }
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
-	c[0][0] = 0; c[0][1] = 0;
-	for (int b = 1, r = 0; r < lgK; b <<= 1, ++r)
-		rep(u, 0, 1 << b)
-			rep(v, 0, 1 << b) {
-				c[r + 1][v << b | u] = c[r][v] ^ c[r][u];
-				if (__builtin_popcount(v) & 1) c[r + 1][v << b | u] |= b;
-			}
-			
+
+	rep(u, 0, N) g[u].reserve(16);
+
 	int t; cin >> t;
 	while (t--) solve();
 }

@@ -23,7 +23,7 @@ void solve() {
 	int n = 1 << k, m = k * n / 2;
 	
 	vector<vector<int>> g(n);
-	for (auto &v : g) v.reserve(k);
+	for (auto &v : g) g.reserve(k);
 	
 	rep(e, 0, m) {
 		int u, v; cin >> u >> v;

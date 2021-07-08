@@ -17,23 +17,21 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-const int N = 1 << 16;
-vector<int> g[N];
-int pi[N], p[N], c[N];
-
 void solve() {
 	int k; cin >> k;
 	
 	int n = 1 << k, m = k * n / 2;
 	
-	rep(u, 0, n) g[u].clear(), pi[u] = -1, c[u] = 0;
-
+	vector<vector<int>> g(n);
+	for (auto &v : g) v.reserve(k);
+	
 	rep(e, 0, m) {
 		int u, v; cin >> u >> v;
 		g[u].push_back(v);
 		g[v].push_back(u);
 	}
 	
+	vector<int> pi(n, -1);
 	queue<int> q;
 
 	pi[0] = 0;
@@ -53,20 +51,24 @@ void solve() {
 			} else if (pi[v] == -1)
 				q.push(v), pi[v] = -2;
 		}
+		assert(0 <= pi[u]);
 	}
 	
+	vector<int> p(n);
 	rep(i, 0, n) p[pi[i]] = i;
-	rep(i, 0, n) cout << p[i] << ' ';
+	for (auto x : p) cout << x << ' ';
 	cout << '\n';
 
 	if (k & (k - 1))
 		cout << "-1\n";
 	else {
+		vector<int> c(n);
 		rep(u, 0, n)
 			rep(i, 0, k)
 				if (u >> i & 1)
 					c[p[u]] ^= i;
-		rep(u, 0, n) cout << c[u] << ' ';
+		for (auto x : c)
+			cout << x << ' ';
 		cout << '\n';
 	}
 }
@@ -74,8 +76,6 @@ void solve() {
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-
-	rep(u, 0, N) g[u].reserve(16);
 
 	int t; cin >> t;
 	while (t--) solve();

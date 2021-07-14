@@ -28,19 +28,84 @@ int C(int n, int r) {
 
 int solve() {
 	int n; cin >> n;
-	int l, r; cin >> l >> r;
 	
+	int l, r; cin >> l >> r;
 	int ans = 0;
+	set<int> s = {n / 2, (n + 1) / 2};
 
 	int U = min(r - 1, n - l);
-	int D = max(1, U - n + 1);
-	
-	set<int> s = {n / 2, (n + 1) / 2};
+	int D = max(1, min(1 - l, r - n));
+
 	for (auto L : s) {
+		// [D, U] we explicity find
+		// for [1, D), ans is C(n, L)
 		ans = add(ans, mul(D - 1, C(n, L)));
 		for (int k = D; k <= U; ++k) {
+			/*
+				we require a[i] = i - k for L
+
+				if i + k > r, we must have a[i] = i - k
+					=> i > r - k and i > 0
+					=> max(0, r - k) < i <= n
+
+
+					l <= i - k
+					=> l + k <= i however max(0, r - k) + 1 <= i		
+			*/
+			
 			int neg = max(0, n - r + k);
+			/*
+				n <= n - r + k
+				=> 0 <= -r + k
+				=> r <= k <= K
+				
+				for k in [r, K], neg = n
+				so k < r
+			*/
+			
+			/*
+				if neg = 0,
+					=> 0 >= n - r + k
+					=> k <= r - n
+			*/
+
+			/*
+				if i - k < l, we must have a[i] = i + k
+					=> i < l + k and i < n + 1
+					=> i < min(l + k, n + 1)
+					=> 1 <= i < min(l + k, n + 1)
+				
+				the condition i + k <= r must be satisfied
+					=> i <= r - k however i <= n
+					so if r - k < n we have issue
+
+					i < max(l + k, n + 1)
+					i < r - k + 1
+					so if r - k + 1 < max(l + k, n + 1),
+						we have issues
+			*/
+
 			int pos = max(0, l + k - 1);
+			/*
+				if pos = 0,
+					0 >= l + k - 1
+					=> 1 - l >= k
+					=> k <= 1 - l
+			*/
+
+			/*
+				for k <= 1 - l,
+					pos = 0
+				for k <= r - n,
+					neg = 0
+
+				so for 1 <= k <= min(1 - l, r - n),
+					pos = neg = 0
+				
+				for (min(1 - l, r - n), min(r - 1, n - l)]
+					min(1 - l, r - n) = min(1 + n - n - l, r - 1 + 1 - n)
+						= min(n - l, r - 1) - (n - 1)
+			*/
 			ans = add(ans, C(n - pos - neg, L - neg));
 		}
 	}

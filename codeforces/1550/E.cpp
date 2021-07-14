@@ -44,7 +44,7 @@ signed main() {
 		dp[0] = 0;
 		
 		rep(S, 0, 1 << k)
-			if (dp[S] <= n)
+			if (dp[S] < n)
 				rep(i, 0, k)
 					if (~S >> i & 1)
 						uin(dp[S | 1 << i], nxt[dp[S]][i] + x);

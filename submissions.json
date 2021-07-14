@@ -15633,6 +15633,27 @@
     ],
     "timestamp": "Jul/07/2021 23:55"
   },
+  "CF122523843": {
+    "contest_id": 1550,
+    "language": "GNU C++17",
+    "path": "codeforces/1550/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Stringforces",
+    "problem_url": "https://codeforces.com/contest/1550/problem/E",
+    "submission_id": "CF122523843",
+    "submission_url": "https://codeforces.com/contest/1550/submission/122523843",
+    "tags": [
+      "binary search",
+      "bitmasks",
+      "brute force",
+      "dp",
+      "strings",
+      "two pointers",
+      "*2500"
+    ],
+    "timestamp": "Jul/15/2021 00:59"
+  },
   "CF122523933": {
     "contest_id": 1550,
     "language": "GNU C++17",

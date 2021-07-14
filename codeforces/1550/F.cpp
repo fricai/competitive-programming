@@ -58,15 +58,19 @@ signed main() {
 	auto add = [&](int i, int j) {
 		edges.emplace_back(i, j);
 	};
-	
-	for (int i = 0, j = 0; i < n; ++i, --j)
+
+	for (int i = 0, j = 0; i < n; ++i) {
+		uax(j, i);
 		while (j < n && a[j] - a[i] <= d)
 			add(i, j++);
+		--j;
+	}
 	
 	for (int i = 0, j = 0; j < n; ++j) {
-		if (i) --i;
+		uax(i, 0);
 		while (i < j && a[j] - a[i] >= d)
 			add(i++, j);
+		--i;
 	}
 	
 	auto cost = [&](auto p) {

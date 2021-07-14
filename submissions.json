@@ -8186,6 +8186,28 @@
     ],
     "timestamp": "Mar/05/2021 21:10"
   },
+  "CF122527487": {
+    "contest_id": 1550,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1550/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Jumping Around",
+    "problem_url": "https://codeforces.com/contest/1550/problem/F",
+    "submission_id": "CF122527487",
+    "submission_url": "https://codeforces.com/contest/1550/submission/122527487",
+    "tags": [
+      "binary search",
+      "data structures",
+      "divide and conquer",
+      "dp",
+      "dsu",
+      "graphs",
+      "shortest paths",
+      "*2700"
+    ],
+    "timestamp": "Jul/15/2021 02:10"
+  },
   "CF122741846": {
     "contest_id": 1106,
     "language": "GNU C++17 (64)",

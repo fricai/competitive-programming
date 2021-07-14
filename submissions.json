@@ -15633,6 +15633,23 @@
     ],
     "timestamp": "Jul/07/2021 23:55"
   },
+  "CF122522082": {
+    "contest_id": 1550,
+    "language": "GNU C++17",
+    "path": "codeforces/1550/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Find The Array",
+    "problem_url": "https://codeforces.com/contest/1550/problem/A",
+    "submission_id": "CF122522082",
+    "submission_url": "https://codeforces.com/contest/1550/submission/122522082",
+    "tags": [
+      "greedy",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jul/15/2021 00:29"
+  },
   "CF122522141": {
     "contest_id": 1550,
     "language": "GNU C++17",

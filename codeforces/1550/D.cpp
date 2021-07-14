@@ -35,12 +35,12 @@ int solve() {
 	int D = max(1, U - n + 1);
 	
 	set<int> s = {n / 2, (n + 1) / 2};
-	for (auto half : s) {
-		ans = add(ans, mul(D - 1, C(n, half)));
+	for (auto L : s) {
+		ans = add(ans, mul(D - 1, C(n, L)));
 		for (int k = D; k <= U; ++k) {
 			int neg = max(0, n - r + k);
 			int pos = max(0, l + k - 1);
-			ans = add(ans, C(n - pos - neg, half - neg));
+			ans = add(ans, C(n - pos - neg, L - neg));
 		}
 	}
 	return ans;

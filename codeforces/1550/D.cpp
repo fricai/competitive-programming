@@ -21,6 +21,7 @@ int bpow(int a, ll b) {
 }
 
 int C(int n, int r) {
+	// cerr << n << ' ' << r << '\n';
 	if (r < 0 || r > n || n < 0) return 0;
 	return mul(f[n], mul(fi[r], fi[n - r]));
 }

@@ -30,7 +30,7 @@ signed main() {
 		rep(j, 0, k)
 			if (s[i] == 'a' + j || s[i] == '?')
 				cnt[i][j] = cnt[i + 1][j] + 1;
-			
+	
 	auto ok = [&](int x) {
 		vector nxt(n + 1, vector(k, n + 1));
 		per(i, 0, n)
@@ -38,17 +38,16 @@ signed main() {
 				if (cnt[i][j] < x)
 					nxt[i][j] = nxt[i + 1][j];
 				else
-					nxt[i][j] = i + x;
+					nxt[i][j] = i;
 		
 		vector dp(1 << k, n + 1);
 		dp[0] = 0;
 		
 		rep(S, 0, 1 << k)
-			if (dp[S] < n)
+			if (dp[S] <= n)
 				rep(i, 0, k)
 					if (~S >> i & 1)
-						uin(dp[S | 1 << i], nxt[dp[S]][i]);
-		
+						uin(dp[S | 1 << i], nxt[dp[S]][i] + x);
 		return dp.back() <= n;
 	};
 	

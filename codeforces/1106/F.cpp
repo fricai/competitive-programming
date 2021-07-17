@@ -4,8 +4,6 @@ using namespace std;
 using ll = long long;
 using ld = long double;
 
-#pragma GCC optimize ("trapv")
-
 #define rep(i, a, b) for (auto i = (a); i < (b); ++i)
 #define per(i, a, b) for (auto i = (b); i-- > (a); )
 #define all(x) begin(x), end(x)
@@ -91,7 +89,12 @@ signed main() {
 
 	ll a, garbage, g = euclid(s, M - 1, a, garbage);
 	if (x % g != 0) return cout << -1, 0;
-	while (a < 0) a += (M - 1) / g;
+	if (a < 0) {
+		ll k = (-a) / ((M - 1) / g) + 1;
+		a += k * (M - 1) / g;
+		assert(a >= 0);
+		assert(a - (M - 1) / g < 0);
+	}
 	a = a * x / g % (M - 1);
 	cout << binpow(q, a) << '\n';
 }

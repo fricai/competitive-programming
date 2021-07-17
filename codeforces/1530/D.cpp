@@ -33,53 +33,88 @@ void solve() {
 		3 -> visited, part of cycle
 	*/
 
-	vector<int> b(n, -1);
+	// start chain at nodes with indegree 0,
 
-	int lst = -1, fst = -1;
+	vector<vector<int>> chains, cycles;
+	
 	for (int u = 0; u < n; ++u) {
 		if (indeg[u] != 0) continue;
-		
-		if (fst < 0) fst = u;
+		assert(col[u] == 0);
 		
 		int v = u;
+
+		// vector<int> cur;
 		
 		while (col[v] == 0) {
+			// cur.push_back(v);
 			col[v] = 1;
 			v = a[v];
 		}
-
-		int w = u;
-		while (a[w] != v) {
+		
+		chains.push_back({});
+		for (int w = u; w != v; w = a[w])
+			chains.back().push_back(w),
 			col[w] = 2;
-			w = a[w];
-		}
-		col[w] = 2;
-		
-		if (lst >= 0) b[lst] = u;
-		lst = w;
-		
-		while (col[v] == 1) {
-			col[v] = 3;
-			v = a[v];
-		}
-	}
 
-	if (fst != -1) {
-		if (fst == lst) {
-			int v = fst;
-			col.assign(n, 0);
-			while (col[a[v]] == 0) {
-				b[v] = a[v];
-				col[v] = 1;
+		if (col[v] == 1) {
+			cycles.push_back({});
+			while (col[v] == 1) {
+				cycles.back().push_back(v);
+				col[v] = 3;
 				v = a[v];
 			}
-			b[v] = fst;
-		} else
-			b[lst] = fst;
+		}
+		// else {
+		// 	for (auto x : cur)
+		// 		col[x] = 2;
+		// }
 	}
 	
-	rep(i, 0, n) if (b[i] < 0) b[i] = a[i];
+	// for (int u = 0; u < n; ++u) {
+	// 	if (col[u]) continue;
+	// 	cycles.push_back({});
+	// 	for (int v = u; col[v] == 0; v = a[v]) {
+	// 		cycles.back().push_back(v);
+	// 		col[v] = 3;
+	// 	}
+	// }
+
 	
+	vector<int> b(n, -1);
+	// cerr << "yo\n";
+
+	// for (auto b : {chains, cycles}) {
+	// 	for (auto v : b) {
+	// 		for (auto x : v) {
+	// 			cerr << x + 1 << ' ';
+	// 		}
+	// 		cerr << '\n';
+	// 	}
+	// 	cerr << '\n';
+	// }
+	
+	if (sz(chains) == 1 && sz(chains[0]) == 1) {
+		int u = chains[0][0];
+		col.assign(n, 0);
+		int v = u;
+		while (col[a[v]] == 0) {
+			b[v] = a[v];
+			col[v] = 1;
+			v = a[v];
+		}
+		b[v] = u;
+		// for (auto x : col)
+			// assert(x == 1);
+	} else {
+		int m = sz(chains);
+		rep(i, 0, m) {
+			for (auto x : chains[i])
+				b[x] = a[x];
+			b[chains[i].back()] = chains[(i + 1) % m].front();
+		}
+	}
+	rep(i, 0, n) if (b[i] < 0) b[i] = a[i];
+
 	int k = 0;
 	rep(i, 0, n) k += a[i] == b[i];
 	

@@ -1,4 +1,20 @@
 {
+  "AC24355044": {
+    "contest_id": "arc123",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc123/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Increasing Triples",
+    "problem_url": "https://atcoder.jp/contests/arc123/tasks/arc123_b",
+    "submission_id": "AC24355044",
+    "submission_url": "https://atcoder.jp/contests/arc123/submissions/24355044",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jul/18/2021 17:38"
+  },
   "AC25281366": {
     "contest_id": "arc125",
     "language": "C++ (GCC 9.2.1)",

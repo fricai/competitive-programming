@@ -1,59 +1,75 @@
-#include <iostream>
-#include <cassert>
-#define REP(i, a, b) for (auto i = (a); i < (b); ++i)
+#include <bits/stdc++.h>
 using namespace std;
 
-const long long mod = 1e9 + 7;
+using ll = int64_t;
 
-long long res[3][3] = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
+using matrix = array<array<int, 3>, 3>;
 
-void multiply(long long a[3][3], long long b[3][3]) {
-	long long mul[3][3];
-	REP(i, 0, 3) {
-		REP(j, 0, 3) {
-			mul[i][j] = 0;
-			REP(k, 0, 3) {
-				mul[i][j] += (a[i][k] * b[k][j]) % (mod - 1);
-			}
-			mul[i][j] %= mod - 1;
-		}
-	}
-	REP(i, 0, 3) REP(j, 0, 3) a[i][j] = mul[i][j];
+const int M = 1e9 + 7;
+
+int mul(ll a, int b, int m) { return a * b % m; }
+int& add(int &a, int b, int m) { a += b; if (m <= a) a -= m; return a; }
+int& sub(int &a, int b, int m) { a -= b; if (a < 0) a += m; return a; }
+
+const matrix null = {
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0
+};
+
+matrix mul(matrix a, matrix b, int m) {
+    matrix c = null;
+    for (int i = 0; i < 3; ++i)
+        for (int j = 0; j < 3; ++j)
+            for (int k = 0; k < 3; ++k)
+                add(c[i][j], mul(a[i][k], b[k][j], m), m);
+    return c;
 }
 
-void compute(long long b) {
-	long long a[3][3] = {{1, 1, 1}, {1, 0, 0}, {0, 1, 0}};
-	while (b > 0) {
-		if (b & 1)
-			multiply(res, a);
-		multiply(a, a);
-		b >>= 1;
-	}
+int bpow(int a, ll n, int m) {
+    int res = 1;
+    while (n != 0) {
+        if (n & 1)
+            res = mul(res, a, m);
+        n >>= 1;
+        a = mul(a, a, m);
+    }
+    return res;
 }
 
-long long binpow(long long a, long long b) {
-	b %= mod - 1; b += mod - 1; b %= mod - 1;
-	a %= mod;
-	long long res = 1;
-	while (b > 0) {
-		if (b & 1)
-			res = (res * a) % mod;
-		a = (a * a) % mod;
-		b >>= 1;
-	}
-	return res % mod;
+matrix bpow(matrix a, ll n, int m) {
+    matrix res = null;
+    for (int i = 0; i < 3; ++i)
+        res[i][i] = 1;
+    
+    while (n != 0) {
+        if (n & 1)
+            res = mul(res, a, m);
+        n >>= 1;
+        a = mul(a, a, m);
+    }
+    return res;
 }
 
 signed main() {
-	long long n, f1, f2, f3, c; cin >> n >> f1 >> f2 >> f3 >> c;
-	compute(n - 3);
-	long long r1, r2, r3;
-	r1 = res[0][2];
-	r2 = res[0][1];
-	r3 = res[0][0];
-	long long ans = binpow(c, r1 + 2 * r2 + 3 * r3 - n); ans %= mod;
-	ans *= binpow(f1, r1); ans %= mod;
-	ans *= binpow(f2, r2); ans %= mod;
-	ans *= binpow(f3, r3); ans %= mod;
-	cout << ans;
+    cin.tie(nullptr)->sync_with_stdio(false);
+  
+    ll n, f1, f2, f3, c;
+    cin >> n >> f1 >> f2 >> f3 >> c;
+    
+    matrix init = {
+        1, 1, 1,
+        1, 0, 0,
+        0, 1, 0
+    };
+    matrix a = bpow(init, n - 3, M - 1);
+
+    ll k = 3ll * a[0][0] + 2ll * a[0][1] + a[0][2] - n;
+    k %= M - 1; if (k < 0) k += M - 1;
+
+    int res = bpow(c, k, M);
+    res = mul(res, bpow(f3, a[0][0], M), M);
+    res = mul(res, bpow(f2, a[0][1], M), M);
+    res = mul(res, bpow(f1, a[0][2], M), M);
+    cout << res << '\n';
 }

@@ -23,16 +23,20 @@ struct smth {
 		int n = sz(s);
 		a.assign(n + 1, 0);
 		b.assign(n + 1, 0);
+		cnt.assign(n + 1, 0);
 		for (int i = 0; i < n; ++i) {
 			b[i + 1] = (s[i] == 'B' || s[i] == 'C') + b[i];
+			a[i + 1] = (s[i] == 'A') + a[i];
+
 			if (s[i] == 'A')
-				a[i + 1] = 1 + a[i];
+				cnt[i + 1] = 1 + cnt[i];
 		}
 	}
 	int l, r;
-	void seA(int a, int b) { l = a, r = b; }
-	int A() { return min(r - l + 1, a[r]); }
+	void set(int a, int b) { l = a, r = b; }
+	int A() { return a[r] - a[l - 1]; }
 	int B() { return b[r] - b[l - 1]; }
+	int T() { return min(r - l + 1, cnt[r]); }
 };
 
 signed main() {
@@ -59,17 +63,17 @@ signed main() {
 				
 			*/
 
-			x.seA(a, b); y.seA(c, d);
+			x.set(a, b); y.set(c, d);
 			
 			
 			if (x.B() == y.B())
-				return x.A() >= y.A() && (x.A() - y.A()) % 3 == 0;
+				return x.T() >= y.T() && (x.T() - y.T()) % 3 == 0;
 			
 			if (x.B() > y.B() || (x.B() - y.B()) % 2 != 0)
 				return 0;
-			if (x.A() == y.A())
+			if (x.T() == y.T())
 				return x.B() != 0;
-			return x.A() > y.A();
+			return x.T() > y.T();
 		}();
 	}
 	cout << '\n';

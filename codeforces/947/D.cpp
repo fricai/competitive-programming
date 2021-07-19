@@ -30,7 +30,7 @@ struct smth {
 		}
 	}
 	int l, r;
-	void set(int a, int b) { l = a, r = b; }
+	void seA(int a, int b) { l = a, r = b; }
 	int A() { return min(r - l + 1, a[r]); }
 	int B() { return b[r] - b[l - 1]; }
 };
@@ -59,8 +59,9 @@ signed main() {
 				
 			*/
 
-			x.set(a, b); y.set(c, d);
-
+			x.seA(a, b); y.seA(c, d);
+			
+			
 			if (x.B() == y.B())
 				return x.A() >= y.A() && (x.A() - y.A()) % 3 == 0;
 			

@@ -79,33 +79,37 @@ signed main() {
 	g.back() = bpow(f.back(), M - 2);
 	for (int i = n; i > 0; --i)
 		g[i - 1] = mul(g[i], i);
-	
-	vector b(rall(g));
 
-	// Multiply by Q^(-1)
-	for (int i = 0; i <= n; ++i)
-		p[i] = mul(p[i], f[i]);
-	p = conv(p, b);
-	p = vector(end(p) - n - 1, end(p));
-	for (int i = 0; i <= n; ++i)
-		p[i] = mul(p[i], g[i]);
-	
-	// Multiply with eigenvalues
+	vector b(rall(g));
+	auto Qi = [&](const vl &p) {
+		vl a(n + 1);
+		for (int i = 0; i <= n; ++i)
+			a[i] = mul(p[i], f[i]);
+		a = conv(a, b);
+		a = vector(end(a) - n - 1, end(a));
+		for (int i = 0; i <= n; ++i)
+			a[i] = mul(a[i], g[i]);
+		return a;
+	};
+	auto Q = [&](const vl &p) {
+		vl a(n + 1);
+		for (int i = 0; i <= n; ++i) {
+			a[i] = mul(p[i], f[i]);
+			if (i & 1) a[i] = M - a[i];
+		}
+		a = conv(a, b);
+		a = vector(end(a) - n - 1, end(a));
+		for (int i = 0; i <= n; ++i) {
+			a[i] = mul(a[i], g[i]);
+			if (i & 1) a[i] = M - a[i];
+		}
+		return a;
+	}; 
+	p = Qi(p);
 	for (int i = 0; i <= n; ++i)
 		p[i] = mul(p[i], bpow(i + 1, M - m - 1));
-		
-	// Multiply with Q
-	for (int i = 0; i <= n; ++i) {
-		p[i] = mul(p[i], f[i]);
-		if (i & 1) p[i] = M - p[i];
-	}
-	p = conv(p, b);
-	p = vector(end(p) - n - 1, end(p));
-	for (int i = 0; i <= n; ++i) {
-		p[i] = mul(p[i], g[i]);
-		if (i & 1) p[i] = M - p[i];
-	}
-	
+	p = Q(p);
+
 	for (auto &x : p) {
 		if (M <= x) x -= M;
 		cout << x << ' ';

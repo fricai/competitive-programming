@@ -589,9 +589,12 @@ signed main() {
 	vector A(X, vector(X, mint(0)));
 	
 	rep(u, 0, X) {
-		rep(v, 0, X)
-			A[u][v] = -cnt[u ^ v];
-		A[u][u] += n + 1;
+		rep(v, 0, X) {
+			if (u != v)
+				A[u][v] = -cnt[u ^ v];
+			else
+				A[u][v] = n + 1 - cnt[0];
+		}
 	}
 	
 	vector<mint> b(X, 1);

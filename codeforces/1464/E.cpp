@@ -567,16 +567,18 @@ signed main() {
 	auto dfs = [&](auto &&self, int u) -> int {
 		if (vis[u])
 			return val[u];
-
+		
 		vis[u] = true;
-		vector<bool> mk(sz(g[u]) + 1, 0);
-		for (auto v : g[u]) {
-			auto x = self(self, v);
-			if (x < sz(mk)) mk[x] = 1;
-		}
+		vector<int> nxt;
+		for (auto v : g[u])
+			nxt.push_back(self(self, v));
+		
+		sort(all(nxt));
+		nxt.erase(unique(all(nxt)), end(nxt));
 		
 		int &res = val[u];
-		while (mk[res]) ++res;
+		while (res < sz(nxt) && nxt[res] == res)
+			++res;
 		++cnt[res];
 		
 		return res;

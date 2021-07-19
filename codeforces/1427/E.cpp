@@ -28,10 +28,15 @@ signed main() {
 	cin.tie(nullptr);
 
 	vector<tuple<ll, char, ll>> op;
+	set<ll> reached;
 	auto do_sum = [&](ll x, ll y) {
+		assert(reached.count(x) && reached.count(y));
+		reached.insert(x + y);
 		op.emplace_back(x, '+', y);
 	};
 	auto do_xor = [&](ll x, ll y) {
+		assert(reached.count(x) && reached.count(y));
+		reached.insert(x ^ y);
 		op.emplace_back(x, '^', y);
 	};
 	
@@ -48,6 +53,7 @@ signed main() {
 	};
 	
 	ll x; cin >> x;
+	reached.insert(x);
 
 	ll p = 1;
 	while (p < x) p <<= 1;
@@ -65,6 +71,9 @@ signed main() {
 		a += r * y;
 		b += r * x;
 	}
+	assert(a >= 0);
+	assert(b >= 0);
+	assert(a * x - b * y == 1);
 	
 	if (b & 1) {
 		a += y;
@@ -75,6 +84,7 @@ signed main() {
 	if (a && b)
 		do_xor(a * x, b * y);
 	
+	assert(reached.count(1));
 	cout << sz(op) << '\n';
 	for (auto [x, c, y] : op)
 		cout << x << ' ' << c << ' ' << y << '\n';

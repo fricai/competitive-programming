@@ -8186,6 +8186,26 @@
     ],
     "timestamp": "Mar/05/2021 21:10"
   },
+  "CF123129725": {
+    "contest_id": 1530,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1530/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Bingo",
+    "problem_url": "https://codeforces.com/contest/1530/problem/F",
+    "submission_id": "CF123129725",
+    "submission_url": "https://codeforces.com/contest/1530/submission/123129725",
+    "tags": [
+      "bitmasks",
+      "combinatorics",
+      "dp",
+      "math",
+      "probabilities",
+      "*2600"
+    ],
+    "timestamp": "Jul/20/2021 23:47"
+  },
   "CF123181751": {
     "contest_id": 799,
     "language": "GNU C++17",

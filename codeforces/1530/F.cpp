@@ -551,13 +551,17 @@ const int M = 31607;
 using mint = atcoder::static_modint<M>;
 const mint one = 1;
 
-inline int lg(int x) { return 31 - __builtin_clz(x); }
-inline int parity(int x) { return __builtin_popcount(x) & 1; }
+int lg(int x) {
+	return 31 - __builtin_clz(x);
+}
+int parity(int x) {
+	return __builtin_popcount(x) & 1;
+}
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+
 	int n; cin >> n;
 	vector grid(n, vector(n, one));
 	for (auto &x : grid)
@@ -587,11 +591,11 @@ signed main() {
 					rep(i, 0, n)
 						R[i][S] = R[i][T] * g[i][j];
 				}
-				
+
 				rep(S, 0, 1 << n) {
 					mint cur = D;
 					rep(i, 0, n)
-						cur *= R[i][S] - one;
+						cur *= one - R[i][S];
 					rep(j, 0, n)
 						if (~S >> j & 1)
 							cur *= C[j];
@@ -601,6 +605,7 @@ signed main() {
 						ans += cur;
 				}
 			}
+	if (n & 1) ans = -ans;
 	ans = one - ans;
 	cout << ans.val() << '\n';
 }

@@ -59,20 +59,21 @@ ll get(int x) {
 }
 
 void update(int x, int del) {
+	int p = lower_bound(all(cmp), x) - begin(cmp);
 	auto rec = [&](auto &&self, int v, int l, int r) -> void {
 		if (r - l == 1) {
-			assert(cmp[l] == x);
 			t[v].cnt += del;
 			t[v].sum = t[v].cnt * cmp[l];
 			return;
 		}
 		int m = (l + r) / 2;
-		if (x < cmp[m]) self(self, v << 1, l, m);
+		if (p < m) self(self, v << 1, l, m);
 		else self(self, v << 1|1, m, r);
 		t[v] = node(t[v << 1], t[v << 1|1]);
 	};
 	rec(rec, 1, 0, n);
 }
+
 void remove(int x) { update(x, -1); }
 void add(int x) { update(x, +1); }
 

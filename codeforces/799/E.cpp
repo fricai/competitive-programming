@@ -39,7 +39,7 @@ void build(const vector<int> &a) {
 ll get(int x) {
 	if (x < 0 || t[1].cnt < x)
 		return inf;
-	
+
 	auto rec = [&](auto &&self, int v, int l, int r) -> ll {
 		if (x == 0) return 0;
 		if (t[v].cnt <= x)
@@ -55,7 +55,10 @@ ll get(int x) {
 		res += self(self, v << 1|1, m, r);
 		return res;
 	};
-	return rec(rec, 1, 0, n);
+	auto res = rec(rec, 1, 0, n);
+	
+	assert(x == 0);
+	return res;
 }
 
 void update(int x, int del) {

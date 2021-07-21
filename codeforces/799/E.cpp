@@ -35,7 +35,10 @@ void build(const vector<int> &a) {
 	n = sz(cmp);
 }
 
-ll get(ll x) {	
+ll get(ll x) {
+	assert(t[1].cnt >= x);
+	// if (t[1].cnt < x) return inf;
+	
 	auto rec = [&](auto &&self, int v, int l, int r) -> ll {
 		if (x == 0) return 0;
 		if (t[v].cnt <= x)
@@ -127,5 +130,5 @@ signed main() {
 		uin(ans, get(m - y - 2 * i) + cur);
 	}
 	
-	cout << ans << '\n';
+	cout << (ans < inf ? ans : -1) << '\n';
 }

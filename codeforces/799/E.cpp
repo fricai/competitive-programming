@@ -103,13 +103,13 @@ signed main() {
 	
 	ll cur = 0;
 
-	int x = min(k, sz(grp[3])), d = min(sz(grp[1]), sz(grp[2]));
-	if (k - x > d)
-		return cout << "-1\n", 0;
+	int x = min(k, sz(grp[3]));
 
 	for (auto x : grp[0])
 		add(x);
 	for (auto b : {1, 2}) {
+		if (k - x > sz(grp[b]))
+			return cout << "-1\n", 0;
 		rep(j, 0, k - x)
 			cur += grp[b][j];
 		rep(j, k - x, sz(grp[b]))
@@ -123,7 +123,7 @@ signed main() {
 	ll ans = get(m - 2 * k + x) + cur;
 	
 	for (int y = x - 1, i = k - x + 1;
-		y >= 0 && y + 2 * i <= m && i <= d;
+		y >= 0 && y + 2 * i <= m && i <= sz(grp[1]) && i <= sz(grp[2]);
 		--y, ++i) {
 		cur -= grp[3][y];
 		add(grp[3][y]);

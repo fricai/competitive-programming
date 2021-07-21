@@ -27,17 +27,16 @@ struct node {
 };
 node t[N << 1];
 
-vector<int> cmp;
+vector<ll> cmp;
 
 int n;
 void build(const vector<int> &a) {
-	cmp = a;
-	sort(all(cmp));
-	cmp.erase(unique(all(cmp)), end(cmp));
+	cmp = {all(a)};
+	sort(all(cmp)); cmp.erase(unique(all(cmp)), end(cmp));
 	n = sz(cmp);
 }
 
-ll get(ll x) {
+ll get(int x) {
 	if (x < 0 || t[1].cnt < x)
 		return inf;
 	
@@ -59,11 +58,12 @@ ll get(ll x) {
 	return rec(rec, 1, 0, n);
 }
 
-void update(ll x, int del) {
+void update(int x, int del) {
 	auto rec = [&](auto &&self, int v, int l, int r) -> void {
 		if (r - l == 1) {
+			assert(cmp[l] == x);
 			t[v].cnt += del;
-			t[v].sum = t[v].cnt * x;
+			t[v].sum = t[v].cnt * cmp[l];
 			return;
 		}
 		int m = (l + r) / 2;

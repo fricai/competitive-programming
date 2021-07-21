@@ -9,6 +9,8 @@ using ld = long double;
 #define all(x) begin(x), end(x)
 #define rall(x) (x).rbegin(), (x).rend()
 #define sz(x) int((x).size())
+#define lb(x...) lower_bound(x)
+#define ub(x...) upper_bound(x)
 
 template<class T> bool uin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
 template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
@@ -36,8 +38,7 @@ void build(const vector<int> &a) {
 }
 
 ll get(ll x) {
-	assert(x >= 0);
-	if (t[1].cnt < x)
+	if (x < 0 || t[1].cnt < x)
 		return inf;
 	
 	auto rec = [&](auto &&self, int v, int l, int r) -> ll {
@@ -96,14 +97,15 @@ signed main() {
 	
 	array<vector<int>, 4> grp;
 	rep(i, 0, n) grp[type[i]].push_back(c[i]);
-	for (auto &v : grp) sort(all(v));
+	for (auto &v : grp)
+		sort(all(v));
 	
 	ll cur = 0;
-	
+
 	int x = min(k, sz(grp[3])), d = min(sz(grp[1]), sz(grp[2]));
-	if (k - x > d || m - 2 * k + x < 0)
+	if (k - x > d)
 		return cout << "-1\n", 0;
-	
+
 	for (auto x : grp[0])
 		add(x);
 	for (auto b : {1, 2}) {
@@ -116,7 +118,7 @@ signed main() {
 	rep(i, 0, x) cur += grp[3][i];
 	rep(i, x, sz(grp[3]))
 		add(grp[3][i]);
-
+	
 	ll ans = get(m - 2 * k + x) + cur;
 	
 	for (int y = x - 1, i = k - x + 1;

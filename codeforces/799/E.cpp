@@ -36,8 +36,9 @@ void build(const vector<int> &a) {
 }
 
 ll get(ll x) {
-	assert(t[1].cnt >= x);
-	// if (t[1].cnt < x) return inf;
+	assert(x >= 0);
+	if (t[1].cnt < x)
+		return inf;
 	
 	auto rec = [&](auto &&self, int v, int l, int r) -> ll {
 		if (x == 0) return 0;

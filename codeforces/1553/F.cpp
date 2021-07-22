@@ -62,20 +62,24 @@ signed main() {
 	for (auto &x : a)
 		cin >> x;
 
-	ll sum = 0, ans = 0;
-	rep(k, 0, n) {		
-		ans += sum;
-		ans += 1ll * k * a[k] - two.query(a[k]);
+	vector<ll> ans(n);
+
+	ll sum = 0;
+	rep(k, 0, n) {
+		if (k) ans[k] = ans[k - 1];
+		
+		ans[k] += sum;
+		ans[k] += 1ll * k * a[k] - two.query(a[k]);
 		for (ll l = 0; l < N; l += a[k]) {
-			ans -= one.query(l, l + a[k]) * l;
+			ans[k] -= one.query(l, l + a[k]) * l;
 			two.update(l, l + a[k], l);
 		}
 		
 		sum += a[k];
 		one.activate(a[k]);
-
-		cout << ans << ' ';
 	}
-
+	
+	for (auto x : ans)
+		cout << x << ' ';
 	cout << '\n';
 }

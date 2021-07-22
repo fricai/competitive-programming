@@ -19,17 +19,25 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 const int N = 3e5 + 10;
 
+template<class S, class T>
+pair<S, T> operator+(const pair<S, T> &a, const pair<S, T> &b) {
+	return {a.first + b.first, a.second + b.second};
+}
+
 struct {
-	int t[N << 1];
+	using node = pair<ll, ll>;
+	node t[N << 1];
 	void activate(int p) {
-		for (t[p += N] = 1; p >>= 1; )
+		t[p + N] = {p, 1};
+		for (p += N; p >>= 1; )
 			t[p] = t[p << 1] + t[p << 1|1];
 	}
-	int query(int l, int r) {
-		int res = 0;
-		for (l += N, r = min(r, N) + N; l < r; l >>= 1, r >>= 1) {
-			if (l & 1) res += t[l++];
-			if (r & 1) res += t[--r];
+	node query(int l, int r) {
+		r = min(r, N);
+		node res = {0, 0};
+		for (l += N, r += N; l < r; l >>= 1, r >>= 1) {
+			if (l & 1) res = res + t[l++];
+			if (r & 1) res = res + t[--r];
 		}
 		return res;
 	}
@@ -63,19 +71,16 @@ signed main() {
 		cin >> x;
 
 	vector<ll> ans(n);
-
-	ll sum = 0;
+	
 	rep(k, 0, n) {
 		if (k) ans[k] = ans[k - 1];
-		
-		ans[k] += sum;
+
 		ans[k] += 1ll * k * a[k] - two.query(a[k]);
-		for (ll l = 0; l < N; l += a[k]) {
-			ans[k] -= one.query(l, l + a[k]) * l;
+		for (int l = 0; l < N; l += a[k]) {
+			auto [sum, cnt] = one.query(l, l + a[k]);
+			ans[k] += sum - cnt * l;
 			two.update(l, l + a[k], l);
 		}
-		
-		sum += a[k];
 		one.activate(a[k]);
 	}
 	

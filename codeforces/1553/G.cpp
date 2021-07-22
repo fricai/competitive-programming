@@ -80,14 +80,14 @@ signed main() {
 		v.erase(unique(all(v)), end(v));
 	}
 	
-	while (q--)
-		cout << [&]() {
-			int s, t; cin >> s >> t;
-			s = head(f[s - 1][0]);
-			t = head(f[t - 1][0]);
-			if (s == t) return 0;
-			if (binary_search(all(tog[s]), t))
-				return 1;
-			return 2;
-		}() << '\n';
+	auto solve = [&]() {
+		int s, t; cin >> s >> t;
+		s = head(f[s - 1][0]);
+		t = head(f[t - 1][0]);
+		if (s == t) return 0;
+		if (binary_search(all(tog[s]), t))
+			return 1;
+		return 2;
+	};
+	while (q--) cout << solve() << '\n';
 }

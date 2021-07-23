@@ -20,18 +20,16 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+
 	int n, m; cin >> n >> m;
-	
 	vector<int> h(n);
 	for (auto &x : h) cin >> x;
-
 	vector<vector<int>> g(n);
 	rep(e, 0, m) {
 		int u, v; cin >> u >> v; --u; --v;
 		g[u].push_back(v);
 	}
-	
+
 	vector<int> mex(n);
 	vector<bool> vis(n);
 	auto dfs = [&](auto &&self, int u) {
@@ -60,19 +58,30 @@ signed main() {
 	
 	if (win < 0)
 		return cout << "LOSE\n", 0;
-	
+
+	vector<int> cities;
+	rep(u, 0, n) if (mex[u] == win) cities.push_back(u);
+		
 	auto clear = [&](int v) {
 		h[v] ^= opt[mex[v]];
 		opt[mex[v]] = 0;
 	};
-	
-	rep(u, 0, n)
-		if (mex[u] == win && (opt[mex[u]] ^ h[u]) < h[u]) {
-			clear(u);
-			for (auto v : g[u])
+
+	bool changed = 0;
+	for (auto x : cities) {
+		if ((opt[win] ^ h[x]) < h[x]) {
+			clear(x);
+			
+			for (auto v : g[x])
 				clear(v);
+			
+			changed = 1;
+			break;
 		}
+	}
 	
+	assert(changed);
+
 	cout << "WIN\n";
 	rep(u, 0, n) cout << h[u] << ' ';
 	cout << '\n';

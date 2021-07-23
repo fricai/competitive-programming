@@ -31,7 +31,7 @@ struct node {
 		mindep = dep;
 		leftdiff = -dep; // max(d(u) - 2 * d(v)), u <= v
 		rightdiff = -dep; // max(-2 * d(v) + d(w)), v <= w
-		diameter = 0; // max(d(u) - 2 * d(v) + d(w)) u <= v <= w
+		diameter = 1; // max(d(u) - 2 * d(v) + d(w)) u <= v <= w
 	}
 } t[N << 1];
 

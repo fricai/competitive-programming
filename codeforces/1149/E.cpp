@@ -17,6 +17,8 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
+#define int ll
+
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -61,9 +63,11 @@ signed main() {
 
 	vector<int> cities;
 	rep(u, 0, n) if (mex[u] == win) cities.push_back(u);
-		
+	assert(!cities.empty());
+	
 	auto clear = [&](int v) {
 		h[v] ^= opt[mex[v]];
+		// assert((opt[mex[v]] ^ h[v]) == 0);
 		opt[mex[v]] = 0;
 	};
 

@@ -52,13 +52,16 @@ void build(vector<int> a) {
 }
 
 void flip(int b) {
-	auto rec = [&](auto &&self, int v, int l, int r) -> void {
+	auto rec = [&](auto &&self, int v, int l, int r, int h) {
+		if (r - l == 1) {
+			assert(false);
+			return;
+		}
+		
 		int m = (l + r) / 2;
-		if (b > 0) {
-			--b;
-			self(self, L[v], l, m);
-			self(self, R[v], m, r);
-			++b;
+		if (h > b) {
+			self(self, L[v], l, m, h - 1);
+			self(self, R[v], m, r, h - 1);
 		} else
 			swap(L[v], R[v]);
 		
@@ -70,7 +73,7 @@ void flip(int b) {
 			del[R[v]]
 		});
 	};
-	rec(rec, 1, 0, n);
+	rec(rec, 1, 0, n, k - 1);
 }
 
 signed main() {
@@ -89,8 +92,8 @@ signed main() {
 	ans[cur] = del[1];
 	auto g = [](int n) { return n ^ (n >> 1); };
 	rep(x, 1, n) {
-		int j = 31 - __builtin_clz(g(x) ^ g(x - 1));
-		cur ^= 1 << (k - j - 1);
+		int j = k - 32 + __builtin_clz(g(x) ^ g(x - 1));
+		cur ^= 1 << j;
 		flip(j);
 		ans[cur] = del[1];
 	}

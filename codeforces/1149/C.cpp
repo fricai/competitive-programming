@@ -22,15 +22,15 @@ struct node {
 	int dep;
 	int maxdep;
 	int mindep;
-	int ldiff;
-	int rdiff;
+	int leftdiff;
+	int rightdiff;
 	int diameter;
 	
 	void set_leaf() {
 		maxdep = dep;
 		mindep = dep;
-		ldiff = -dep; // max(d(u) - 2 * d(v)), u <= v
-		rdiff = -dep; // max(-2 * d(v) + d(w)), v <= w
+		leftdiff = -dep; // max(d(u) - 2 * d(v)), u <= v
+		rightdiff = -dep; // max(-2 * d(v) + d(w)), v <= w
 		diameter = 0; // max(d(u) - 2 * d(v) + d(w)) u <= v <= w
 	}
 } t[N << 1];
@@ -41,32 +41,32 @@ node operator+(const node &l, node r) {
 	r.dep += l.dep;
 	r.maxdep += l.dep;
 	r.mindep += l.dep;
-	r.ldiff -= l.dep;
-	r.rdiff -= l.dep;
+	r.leftdiff -= l.dep;
+	r.rightdiff -= l.dep;
 
 	c.dep = r.dep;
 	c.maxdep = max(l.maxdep, r.maxdep);
 	c.mindep = min(l.mindep, r.mindep);
 
 	// u, v both in L; u in L, v in R; u, v in R
-	c.ldiff = max({
-		l.ldiff,
+	c.leftdiff = max({
+		l.leftdiff,
 		l.maxdep - 2 * r.mindep,
-		r.ldiff
+		r.leftdiff
 	});
 
 	// v, w in R; v in L, w in R; v, w in R
-	c.rdiff = max({
-		l.rdiff,
+	c.rightdiff = max({
+		l.rightdiff,
 		-2 * l.mindep + r.maxdep,
-		r.rdiff
+		r.rightdiff
 	});
 
 	// u, v, w in L; u, v in L, w in R; u in L, v, w in R; u, v, w in R
 	c.diameter = max({
 		l.diameter,
-		l.ldiff + r.maxdep,
-		l.maxdep + r.rdiff,
+		l.leftdiff + r.maxdep,
+		l.maxdep + r.rightdiff,
 		r.diameter
 	});
 
@@ -123,7 +123,7 @@ signed main() {
 	rep(i, 0, 2 * (n - 1))
 		if (s[i] == ')')
 			flip(i);
-	
+
 	cout << get() << '\n';
 	while (q--) {
 		int u, v; cin >> u >> v; --u; --v;

@@ -27,10 +27,17 @@ struct node {
 	int diameter;
 	
 	void set_leaf() {
-		maxdep = dep;
-		mindep = dep;
-		leftdiff = -dep; // max(d(u) - 2 * d(v)), u <= v
-		rightdiff = -dep; // max(-2 * d(v) + d(w)), v <= w
+		if (dep > 0) {
+			maxdep = 1;
+			mindep = 0;
+			leftdiff = 0; // max(d(u) - 2 * d(v)), u <= v
+			rightdiff = 1; // max(-2 * d(v) + d(w)), v <= w
+		} else {
+			maxdep = 0;
+			mindep = -1;
+			leftdiff = 2; 
+			rightdiff = 1; 
+		}
 		diameter = 1; // max(d(u) - 2 * d(v) + d(w)) u <= v <= w
 	}
 } t[N << 1];

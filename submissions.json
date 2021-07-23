@@ -8186,6 +8186,24 @@
     ],
     "timestamp": "Mar/05/2021 21:10"
   },
+  "CF123549728": {
+    "contest_id": 1553,
+    "language": "GNU C++17",
+    "path": "codeforces/1553/H.cpp",
+    "platform": "Codeforces",
+    "problem_index": "H",
+    "problem_name": "XOR and Distance",
+    "problem_url": "https://codeforces.com/contest/1553/problem/H",
+    "submission_id": "CF123549728",
+    "submission_url": "https://codeforces.com/contest/1553/submission/123549728",
+    "tags": [
+      "bitmasks",
+      "divide and conquer",
+      "trees",
+      "*2900"
+    ],
+    "timestamp": "Jul/24/2021 02:20"
+  },
   "CF123614857": {
     "contest_id": 1551,
     "language": "GNU C++17",

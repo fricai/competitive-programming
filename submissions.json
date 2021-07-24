@@ -8186,6 +8186,24 @@
     ],
     "timestamp": "Mar/05/2021 21:10"
   },
+  "CF123622583": {
+    "contest_id": 1551,
+    "language": "GNU C++17",
+    "path": "codeforces/1551/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Fixed Points",
+    "problem_url": "https://codeforces.com/contest/1551/problem/E",
+    "submission_id": "CF123622583",
+    "submission_url": "https://codeforces.com/contest/1551/submission/123622583",
+    "tags": [
+      "binary search",
+      "brute force",
+      "dp",
+      "*2000"
+    ],
+    "timestamp": "Jul/24/2021 21:29"
+  },
   "CF123624656": {
     "contest_id": 1551,
     "language": "GNU C++17",

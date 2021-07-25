@@ -15,7 +15,7 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-const int B = 375;
+const int B = 375; // 450
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -37,17 +37,32 @@ signed main() {
 		for (int i = 0; i <= n; ++i)
 			cnt[b * p[i] - i + n]--;
 	}
-	
+
 	vector<int> L(n + 1), R(n + 1);
 	for (int i = 0; i <= n; ++i)
 		R[p[i]] = i;
 	for (int i = n; i >= 0; --i)
 		L[p[i]] = i;
-	
+
 	for (int i = 0; i <= n; ++i) {
+		/*
+			b * p[i] - i = b * p[j] - j
+			=> p[i] - p[j] = (i - j) / b <= n / b <= n / B 
+			<=> p[i] - p[j] <= floor(n / B)
+		*/
+		
 		for (int x = max(0, p[i] - n / B); x < p[i]; ++x) {
+			// b * p[i] - i = b * x - j <=> j = i - b * (p[i] - x)
+			// L[x] <= j <= R[x]
+			/*
+				number of b's such that
+					L[x] <= i - b * (p[i] - x) <= R[x]
+					and b >= B
+					<=> i - L[x] >= b * (p[i] - x)
+					<=> (i - L[x]) / (p[i] - x) >= b >= max(B, (i - R[x]) / (p[i] - x))
+			*/
 			int del = p[i] - x;
-			ans += max(0, (i - L[x]) / del - max(B - 1, (i - R[x] - 1) / del));
+			ans += max(0, (i - L[x]) / del - max(B, (i - R[x] + del - 1) / del) + 1);
 		}
 	}
 	

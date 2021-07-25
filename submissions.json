@@ -6703,6 +6703,25 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF123775248": {
+    "contest_id": 1552,
+    "language": "GNU C++17",
+    "path": "codeforces/1552/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Telepanting",
+    "problem_url": "https://codeforces.com/contest/1552/problem/F",
+    "submission_id": "CF123775248",
+    "submission_url": "https://codeforces.com/contest/1552/submission/123775248",
+    "tags": [
+      "binary search",
+      "data structures",
+      "dp",
+      "sortings",
+      "*2200"
+    ],
+    "timestamp": "Jul/26/2021 00:51"
+  },
   "CF123840905": {
     "contest_id": 1349,
     "language": "GNU C++17",

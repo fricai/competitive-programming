@@ -8186,6 +8186,23 @@
     ],
     "timestamp": "Mar/05/2021 21:10"
   },
+  "CF123686940": {
+    "contest_id": 1270,
+    "language": "GNU C++17",
+    "path": "codeforces/1270/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Awesome Substrings",
+    "problem_url": "https://codeforces.com/contest/1270/problem/F",
+    "submission_id": "CF123686940",
+    "submission_url": "https://codeforces.com/contest/1270/submission/123686940",
+    "tags": [
+      "math",
+      "strings",
+      "*2600"
+    ],
+    "timestamp": "Jul/25/2021 14:34"
+  },
   "CF123686993": {
     "contest_id": 1270,
     "language": "GNU C++17",

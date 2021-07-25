@@ -15,7 +15,7 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-const int B = 400; // 450
+const int B = 300; // 450
 
 signed main() {
 	ios::sync_with_stdio(false);

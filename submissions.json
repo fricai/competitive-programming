@@ -6703,6 +6703,25 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF123774454": {
+    "contest_id": 1552,
+    "language": "GNU C++17",
+    "path": "codeforces/1552/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Colors and Intervals",
+    "problem_url": "https://codeforces.com/contest/1552/problem/E",
+    "submission_id": "CF123774454",
+    "submission_url": "https://codeforces.com/contest/1552/submission/123774454",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "greedy",
+      "sortings",
+      "*2300"
+    ],
+    "timestamp": "Jul/26/2021 00:37"
+  },
   "CF123775248": {
     "contest_id": 1552,
     "language": "GNU C++17",

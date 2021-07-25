@@ -43,13 +43,39 @@ signed main() {
 	int n; cin >> n;
 	vector<int> x(n), y(n), s(n), p(n);
 	rep(i, 0, n) cin >> x[i] >> y[i] >> s[i];
-	rep(i, 0, n) p[i] = upper_bound(all(x), y[i]) - begin(x);
-	int ans = add(x[n - 1], 1);
+
+	// p[i] = min j such that x[j] > y[i]
+	rep(i, 0, n)
+		p[i] = upper_bound(all(x), y[i]) - begin(x);
+
+	// min_st q_finder;
+	// vector<int> q(n);
+	// rep(i, 0, n) {
+	// 	q[i] = min(p[i], q_finder.query(p[i], i));
+	// 	q_finder.set(i, q[i]);
+	// }
+	/*
+		dp[i]
+			= cost to reach i again if you teleport at i and everything before i has been set
+	*/
+	
+	vector dp(n, 0);
 	for (int i = 0; i < n; ++i) {
-		int cur = add(sub(x[i], y[i]), query(p[i], i));
-		update(i, cur);
-		if (s[i]) ans = add(ans, cur);
+		dp[i] = add(sub(x[i], y[i]), query(p[i], i));
+		// for (int j = p[i]; j < i; ++j)
+		// 	dp[i] = add(dp[i], dp[j]);
+		update(i, dp[i]);
 	}
+
+	int r = -1;
+	int ans = 0;
+	for (int i = 0; i < n; ++i)
+		if (s[i]) {
+			ans = add(ans, sub(x[i], r < 0 ? 0 : x[r]));
+			ans = add(ans, dp[i]);
+			r = i;
+		}
+	ans = add(ans, sub(x[n - 1] + 1, r < 0 ? 0 : x[r]));
 
 	cout << ans << '\n';
 }

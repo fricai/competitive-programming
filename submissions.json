@@ -6703,6 +6703,25 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF123873338": {
+    "contest_id": 1552,
+    "language": "GNU C++17",
+    "path": "codeforces/1552/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "A Serious Referee",
+    "problem_url": "https://codeforces.com/contest/1552/problem/G",
+    "submission_id": "CF123873338",
+    "submission_url": "https://codeforces.com/contest/1552/submission/123873338",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "dfs and similar",
+      "sortings",
+      "*3000"
+    ],
+    "timestamp": "Jul/27/2021 01:12"
+  },
   "CF123964067": {
     "contest_id": 1542,
     "language": "GNU C++17",

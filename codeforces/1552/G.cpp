@@ -30,33 +30,42 @@ signed main() {
 		p[i] = 1ll << i;
 	
 	int n, k; cin >> n >> k;
-
+	
 	vector<ll> S(k);
 	vector<vector<ll>> succ(k);
-	ll fin = 0;
+	vector<int> q(k);
+
 	rep(step, 0, k) {
-		int q; cin >> q;
+		cin >> q[step];
 		
-		vector<int> ind(q);
+		vector<int> ind(q[step]);
 		for (auto &x : ind)
 			cin >> x, --x;
 		reverse(all(ind));
 		
-		succ[step].assign(q + 1, 0);
-		for (int i = 0; i < q; ++i) {
-			S[step] |= p[ind[i]];
-			succ[step][i + 1] = S[step];
+		succ[step].assign(q[step] + 1, 0);
+		for (int i = 1; i <= q[step]; ++i) {
+			S[step] |= p[ind[i - 1]];
+			succ[step][i] = S[step];
 		}
-		fin |= S[step];
-	}
-
-	if (n == 1) ok(true);
-	if (fin != p[n] - 1) ok(false);
-
-	auto rec = [&](const auto &self, ll f, ll T, int step) -> bool {
-		if (step == k)
-			return (f & ~(p[n - __builtin_popcountll(f)] - 1)) == f;
 		
+		// cerr << bitset<4>(S[step]) << ": ";
+		// for (auto x : succ[step])
+		// 	cerr << bitset<5>(x) << ' ';
+		// cerr << '\n';
+	}
+	
+	if (n == 1) ok(true);
+
+	vector<bool> vis(n + 1);
+	auto rec = [&](const auto &self, ll f, ll T, int step) -> bool {
+		if (step == k) {
+			int ones = __builtin_popcountll(f);
+			vis[ones] = true;
+			// first z bits should be 0, rest should be 1
+			return (f & ~(p[n - ones] - 1)) == f;
+		}
+
 		int new_indices = __builtin_popcountll(S[step] & ~T);
 		int min_ones = __builtin_popcountll(S[step] & f);
 		ll nxtT = T | S[step];
@@ -68,5 +77,9 @@ signed main() {
 		return true;
 	};
 	
-	ok(rec(rec, 0, 0, 0));
+	if (!rec(rec, 0, 0, 0)) ok(false);
+	for (auto x : vis)
+		if (!x)
+			ok(false);
+	ok(true);
 }

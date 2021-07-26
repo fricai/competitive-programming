@@ -31,8 +31,9 @@ signed main() {
 	
 	int n, k; cin >> n >> k;
 
-	vector<ll> S(k), T(k + 1);
+	vector<ll> S(k);
 	vector<vector<ll>> succ(k);
+	ll fin = 0;
 	rep(step, 0, k) {
 		int q; cin >> q;
 		
@@ -46,24 +47,26 @@ signed main() {
 			S[step] |= p[ind[i]];
 			succ[step][i + 1] = S[step];
 		}
-		T[step + 1] = S[step] | T[step];
+		fin |= S[step];
 	}
-	
+
 	if (n == 1) ok(true);
-	if (T[k] != p[n] - 1) ok(false);
-	
-	auto rec = [&](const auto &self, ll f, int step) -> bool {
+	if (fin != p[n] - 1) ok(false);
+
+	auto rec = [&](const auto &self, ll f, ll T, int step) -> bool {
 		if (step == k)
 			return (f & ~(p[n - __builtin_popcountll(f)] - 1)) == f;
 		
-		int new_indices = __builtin_popcountll(S[step] & ~T[step]);
+		int new_indices = __builtin_popcountll(S[step] & ~T);
 		int min_ones = __builtin_popcountll(S[step] & f);
+		ll nxtT = T | S[step];
+		
 		f &= ~S[step];
 		for (int ones = min_ones; ones <= min_ones + new_indices; ++ones)
-			if (!self(self, f | succ[step][ones], step + 1))
+			if (!self(self, f | succ[step][ones], nxtT, step + 1))
 				return false;
 		return true;
 	};
 	
-	ok(rec(rec, 0, 0));
+	ok(rec(rec, 0, 0, 0));
 }

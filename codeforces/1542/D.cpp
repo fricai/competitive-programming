@@ -63,7 +63,7 @@ signed main() {
 				for (int j = 1; j <= n; ++j)
 					inc(dp[i + 1][j - 1], dp[i][j]);
 				
-				if (i < iter)
+				if (i <= iter)
 					inc(dp[i + 1][0], dp[i][0]);
 			}
 		}

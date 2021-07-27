@@ -6703,6 +6703,26 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF123964545": {
+    "contest_id": 1542,
+    "language": "GNU C++17",
+    "path": "codeforces/1542/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Priority Queue",
+    "problem_url": "https://codeforces.com/contest/1542/problem/D",
+    "submission_id": "CF123964545",
+    "submission_url": "https://codeforces.com/contest/1542/submission/123964545",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "implementation",
+      "math",
+      "ternary search",
+      "*2200"
+    ],
+    "timestamp": "Jul/27/2021 23:50"
+  },
   "CF124541549": {
     "contest_id": 1548,
     "language": "GNU C++17",

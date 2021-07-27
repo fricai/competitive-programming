@@ -35,12 +35,12 @@ signed main() {
 		if (c == '+')
 			cin >> x;
 	}
-	
+
 	int ans = 0;
 	rep(iter, 0, n) {
 		int x = v[iter];
 		if (!x) continue;
-		// dp[i][j] = number of sets of which contain j elements < X if we consider [0, i) events
+		// dp[i][j] = number of sets of which contain j elements <= X if we consider [0, i) events
 		
 		vector dp(n + 1, vector(n + 1, 0));
 		
@@ -56,7 +56,7 @@ signed main() {
 					for (int j = 1; j <= n; ++j)
 						inc(dp[i + 1][j], dp[i][j - 1]);
 				} else {
-					for (int j = 0; j <= n; ++j)
+					for (int j = 0; j < n; ++j)
 						inc(dp[i + 1][j], dp[i][j]);
 				}
 			} else {

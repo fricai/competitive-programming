@@ -39,7 +39,12 @@ signed main() {
 			g[i][j] = 'X';
 		}
 	};
-	rep(i, 0, n) rep(j, 0, m) dfs(dfs, i, j);
+	rep(i, 0, n) rep(j, 0, m) {
+		if (g[i][j] == '.') {
+			dfs(dfs, i, j);
+			break;
+		}
+	}
 	for (auto row : g)
 		cout << row << '\n';
 }

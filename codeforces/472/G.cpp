@@ -794,7 +794,7 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-const int L = 1500;
+const int L = 2000;
 using mint = atcoder::modint998244353;
 
 signed main() {
@@ -818,17 +818,21 @@ signed main() {
 			cnt[i][y] = ((L - C[y + L - 1]) * inv2).val();
 	}
 	
-	int q; cin >> q;
-	while (q--) {	
+	auto solve = [&]() -> int {
 		int x, y, len; cin >> x >> y >> len;
 
 		int res = 0;
 		while (len > 0 && x % L)
 			res += a[x++] != b[y++], --len;
+		
 		for (int i = x / L; len >= L; len -= L, x += L, y += L, ++i)
 			res += cnt[i][y];
+		
 		while (len > 0)
 			res += a[x++] != b[y++], --len;
-		cout << res << '\n';
-	}
+		return res;
+	};
+	
+	int q; cin >> q;
+	while (q--) cout << solve() << '\n';
 }

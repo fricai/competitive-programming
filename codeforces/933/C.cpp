@@ -75,19 +75,35 @@ signed main() {
 		circles.emplace_back(P(x, y), r);
 	}
 	
+	if (n == 1)
+		return cout << "2\n", 0;
+	if (n == 2) {
+		pair<P, P> garbage;
+		bool found = circleInter(circles[0], circles[1], &garbage);
+		if (found) {
+			if (approxeq(garbage.first, garbage.second))
+				cout << 3 << '\n';
+			else
+				cout << 4 << '\n';
+		} else cout << 3 << '\n';
+		return 0;
+	}
+
 	auto place_in_vector = [&](const auto p, auto &v) -> void {
 		for (auto q : v)
 			if (approxeq(p, q))
 				return;
 		v.emplace_back(p);
 	};
-	
+
 	vector<P> points;
 	int e = 0;
 	int k = 1;
-	for (int i = 0; i < n; ++i) {
+	for (int i = 0; i < 3; ++i) {
+
 		vector<P> cur_stuff;
-		for (int j = 0; j < n; ++j) {
+		
+		for (int j = 0; j < 3; ++j) {
 			if (i == j) continue;
 			pair<P, P> out;
 			bool found = circleInter(circles[i], circles[j], &out);
@@ -106,8 +122,12 @@ signed main() {
 		for (auto p : cur_stuff)
 			place_in_vector(p, points);
 	}
-	
-	k = min(k, n);
+	k = min(k, 3);
+
+	// for (auto p : points)
+	// 	cerr << p << ' ';
+	// cerr << '\n';
+	// cerr << sz(points) << ' ' << e << ' ' << k << '\n';
 
 	cout << e - sz(points) + k + 1 << '\n';
 }

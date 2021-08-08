@@ -6703,6 +6703,23 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF125209781": {
+    "contest_id": 933,
+    "language": "GNU C++17",
+    "path": "codeforces/933/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "A Colourful Prospect",
+    "problem_url": "https://codeforces.com/contest/933/problem/C",
+    "submission_id": "CF125209781",
+    "submission_url": "https://codeforces.com/contest/933/submission/125209781",
+    "tags": [
+      "geometry",
+      "graphs",
+      "*2700"
+    ],
+    "timestamp": "Aug/08/2021 16:47"
+  },
   "CF125212383": {
     "contest_id": 933,
     "language": "GNU C++17",

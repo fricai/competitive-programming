@@ -29,20 +29,18 @@ int bpow(int a, ll b) {
 
 int solve() {
 	int n, k; cin >> n >> k;
-	
 	vector<int> f(k + 1);
 	f[0] = 1;
-	
 	int p = bpow(2, n);
 	int q = sub(bpow(2, n - 1), 1);
 	int r = add(bpow(2, n - 1), 1);
-		
-	if (n & 1)
+	if (n & 1) {
 		for (int i = 1; i <= k; ++i)
 			f[i] = mul(r, f[i - 1]);
-	else
-		for (int i = 1, z = 1; i <= k; ++i, z = mul(z, p))
-			f[i] = add(z, mul(q, f[i - 1]));
+	} else {
+		for (int i = 1; i <= k; ++i)
+			f[i] = add(bpow(p, i - 1), mul(q, f[i - 1]));
+	}
 	return f[k];
 }
 

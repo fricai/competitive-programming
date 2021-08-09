@@ -229,9 +229,24 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-using S = pair<int, int>;
-S op(S a, S b) { return min(a, b); }
-S e() { return {0, -1}; }
+const int inf = 1e9;
+
+struct S { int val, idx; };
+S op(S a, S b) { return a.val < b.val ? a : b; }
+S e() { return {inf, -1}; }
+
+// struct dumb {
+// 	vector<S> z;
+// 	dumb(int n) : z(n, e()) { }
+// 	S prod(int l, int r) {
+// 		S res = e();
+// 		rep(i, l, r) res = op(res, z[i]);
+// 		return res;
+// 	}
+// 	void apply(int l, int r, S f) {
+// 		rep(i, l, r) z[i] = op(f, z[i]);
+// 	}
+// };
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -248,7 +263,7 @@ signed main() {
 	}
 	sort(all(cmp));
 	cmp.erase(unique(all(cmp)), end(cmp));
-	
+
 	atcoder::lazy_segtree<S, op, e, S, op, op, e> t(sz(cmp));
 
 	vector<int> dp(n), p(n, -1);
@@ -260,15 +275,15 @@ signed main() {
 		}
 
 		for (auto [l, r] : v[i]) {
-			auto [val, idx] = t.prod(l, r + 1);
-			if (uin(dp[i], i + val))
-				p[i] = idx;
+			auto ret = t.prod(l, r + 1);
+			if (uin(dp[i], i + ret.val))
+				p[i] = ret.idx;
 		}
 		S to_place = {dp[i] - i - 1, i};
 		for (auto [l, r] : v[i])
 			t.apply(l, r + 1, to_place);
 	}
-	
+
 	int ans = n, st = -1;
 	rep(i, 0, n) if (uin(ans, dp[i] + (n - i - 1))) st = i;
 	

@@ -1,4 +1,20 @@
 {
+  "AC25281879": {
+    "contest_id": "arc125",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc125/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Squares",
+    "problem_url": "https://atcoder.jp/contests/arc125/tasks/arc125_b",
+    "submission_id": "AC25281879",
+    "submission_url": "https://atcoder.jp/contests/arc125/submissions/25281879",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Aug/22/2021 20:06"
+  },
   "AC25282377": {
     "contest_id": "arc125",
     "language": "C++ (GCC 9.2.1)",

@@ -1,4 +1,20 @@
 {
+  "AC25281462": {
+    "contest_id": "arc125",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc125/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Dial Up",
+    "problem_url": "https://atcoder.jp/contests/arc125/tasks/arc125_a",
+    "submission_id": "AC25281462",
+    "submission_url": "https://atcoder.jp/contests/arc125/submissions/25281462",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Aug/22/2021 19:52"
+  },
   "AC25281879": {
     "contest_id": "arc125",
     "language": "C++ (GCC 9.2.1)",

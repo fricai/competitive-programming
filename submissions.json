@@ -1,4 +1,20 @@
 {
+  "AC25282377": {
+    "contest_id": "arc125",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc125/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Unique Subsequence",
+    "problem_url": "https://atcoder.jp/contests/arc125/tasks/arc125_d",
+    "submission_id": "AC25282377",
+    "submission_url": "https://atcoder.jp/contests/arc125/submissions/25282377",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Aug/22/2021 20:25"
+  },
   "AC26166662": {
     "contest_id": "abc220",
     "language": "C++ (GCC 9.2.1)",

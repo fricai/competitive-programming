@@ -28,8 +28,6 @@ signed main() {
 
 	int smallest = 0;
 	auto place = [&](int x) {
-		if (vis[x])
-			return;
 		ans.push_back(x);
 		vis[x] = true;
 		while (smallest < n && vis[smallest])
@@ -37,15 +35,17 @@ signed main() {
 	};
 
 	rep(i, 0, k - 1) {
-		if (a[i] != smallest) {
+		if (a[i] == smallest) {
+			place(a[i]);
+		} else {
 			place(a[i]);
 			place(smallest);
-		} else
-			place(a[i]);
+		}
 	}
 
 	for (int j = n - 1; sz(ans) < n; --j)
-		place(j);
+		if (!vis[j])
+			place(j);
 
 	for (auto x : ans)
 		cout << x + 1 << ' ';

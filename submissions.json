@@ -1,4 +1,20 @@
 {
+  "AC25281366": {
+    "contest_id": "arc125",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc125/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "LIS to Original Sequence",
+    "problem_url": "https://atcoder.jp/contests/arc125/tasks/arc125_c",
+    "submission_id": "AC25281366",
+    "submission_url": "https://atcoder.jp/contests/arc125/submissions/25281366",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Aug/22/2021 19:49"
+  },
   "AC25281449": {
     "contest_id": "arc125",
     "language": "C++ (GCC 9.2.1)",

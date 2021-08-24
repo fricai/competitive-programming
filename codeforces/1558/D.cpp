@@ -40,7 +40,6 @@ int C(int n, int r) {
 	return mul(f[n], mul(fi[r], fi[n - r]));
 }
 
-bool taken[N];
 ost<int> alive;
 int solve() {
 	int n, m; cin >> n >> m;
@@ -50,25 +49,19 @@ int solve() {
 		cin >> x >> y;
 	reverse(all(v));
 
-	vector<int> marked;
+	set<int> strict;
 	vector<int> dead;
-	int del = 0;
 	for (auto [x, y] : v) {
 		auto p = alive.find_by_order(y - 1);
-		auto q = *alive.find_by_order(y);
+		auto q = alive.find_by_order(y);
 		dead.push_back(*p);
 		alive.erase(p);
-		if (!taken[q]) {
-			taken[q] = true;
-			marked.push_back(q);
-			++del;
-		}
+		strict.insert(*q);
 	}
-	for (auto x : marked)
-		taken[x] = false;
+
 	for (auto x : dead)
 		alive.insert(x);
-	return C(2 * n - del - 1, n);
+	return C(2 * n - sz(strict) - 1, n);
 }
 
 signed main() {

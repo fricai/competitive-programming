@@ -6703,6 +6703,23 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF126916582": {
+    "contest_id": 1558,
+    "language": "GNU C++17",
+    "path": "codeforces/1558/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Top-Notch Insertions",
+    "problem_url": "https://codeforces.com/contest/1558/problem/D",
+    "submission_id": "CF126916582",
+    "submission_url": "https://codeforces.com/contest/1558/submission/126916582",
+    "tags": [
+      "combinatorics",
+      "data structures",
+      "*2600"
+    ],
+    "timestamp": "Aug/25/2021 02:10"
+  },
   "CF126916663": {
     "contest_id": 1558,
     "language": "GNU C++17",

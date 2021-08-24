@@ -26,12 +26,17 @@ signed main() {
 
 	cin >> n >> m;
 
-	vector<int> f(n + 1);
+	vector<int> f(n + 1), g(n + 1);
+	g[1] = 1;
 
 	int tot = 1;
-	for (int i = 1; i < n; ++i) {
-		inc(f[i], f[i - 1]);
-		int cur = add(f[i], tot);
+	for (int i = 1; i <= n; ++i) {
+		if (i > 1) {
+			inc(f[i], f[i - 1]);
+			inc(g[i], tot);
+		}
+
+		int cur = add(f[i], g[i]);
 		for (int k = 2 * i, r = 2; k <= n; k += i, ++r) {
 			inc(f[k], cur);
 			if (k + r <= n)
@@ -40,7 +45,6 @@ signed main() {
 		if (i > 1)
 			inc(tot, cur);
 	}
-	inc(f[n], f[n - 1]);
 
-	cout << add(f[n], tot) << '\n';
+	cout << add(f[n], g[n]) << '\n';
 }

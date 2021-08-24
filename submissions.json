@@ -6703,6 +6703,26 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF126914939": {
+    "contest_id": 1558,
+    "language": "GNU C++17",
+    "path": "codeforces/1558/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Up the Strip",
+    "problem_url": "https://codeforces.com/contest/1558/problem/B",
+    "submission_id": "CF126914939",
+    "submission_url": "https://codeforces.com/contest/1558/submission/126914939",
+    "tags": [
+      "brute force",
+      "dp",
+      "math",
+      "number theory",
+      "two pointers",
+      "*1900"
+    ],
+    "timestamp": "Aug/25/2021 01:27"
+  },
   "CF126915477": {
     "contest_id": 1558,
     "language": "GNU C++17",

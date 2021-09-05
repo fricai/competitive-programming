@@ -21,15 +21,26 @@ template<class T> using minpq = priority_queue<T, vector<T>, greater<T>>;
 const int inf = 1e9;
 void solve() {
 	int s, n; cin >> s >> n;
-
-	for (int p = inf; n > 1; p /= 10) {
-		while (n > 1 && s - p >= n - 1) {
-			cout << p << ' ';
-			s -= p;
-			--n;
+	vector<int> res;
+	auto append = [&](int x) {
+		--n; s -= x;
+		res.push_back(x);
+	};
+	for (int x = inf; s != 0; ) {
+		if (n == 1) {
+			append(s);
+			continue;
 		}
+		if (s < x || s - x < n - 1) {
+			x /= 10;
+			continue;
+		}
+		append(x);
 	}
-	cout << s << '\n';
+
+	for (auto x : res)
+		cout << x << ' ';
+	cout << '\n';
 }
 
 signed main() {

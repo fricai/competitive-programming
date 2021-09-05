@@ -15,21 +15,42 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
+int ways[20];
+
 ll solve() {
 	int n; cin >> n;
 
-	int x[2] = {0, 0}, p[2] = {1, 1};
-	for (bool par = 0; n != 0; n /= 10, par ^= 1) {
-		x[par] += p[par] * (n % 10);
-		p[par] *= 10;
-	}
+	int k = 0;
+	for (int m = n; m != 0; m /= 10)
+		++k;
 
-	return (x[0] + 1) * (x[1] + 1) - 2;
+	ll res = 0;
+	rep(S, 0, 1 << max(0, k - 2)) {
+
+		int T = S << 2;
+
+		int m = n;
+		ll prod = 1;
+		rep(i, 0, k) {
+			int r = 10 * (S >> i & 1) - (T >> i & 1) + (m % 10);
+			if (r < 0)
+				prod = 0;
+			else
+				prod *= ways[r];
+			m /= 10;
+		}
+		res += prod;
+	}
+	return res - 2;
 }
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
+
+	rep(i, 0, 10)
+		rep(j, 0, 10)
+			++ways[i + j];
 
 	int t; cin >> t;
 	while (t--) cout << solve() << '\n';

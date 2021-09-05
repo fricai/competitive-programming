@@ -6703,6 +6703,24 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF127987630": {
+    "contest_id": 1567,
+    "language": "GNU C++17",
+    "path": "codeforces/1567/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Non-Decreasing Dilemma",
+    "problem_url": "https://codeforces.com/contest/1567/problem/E",
+    "submission_id": "CF127987630",
+    "submission_url": "https://codeforces.com/contest/1567/submission/127987630",
+    "tags": [
+      "data structures",
+      "divide and conquer",
+      "math",
+      "*2200"
+    ],
+    "timestamp": "Sep/05/2021 23:28"
+  },
   "CF127987972": {
     "contest_id": 1567,
     "language": "GNU C++17",

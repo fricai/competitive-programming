@@ -22,10 +22,8 @@ const int inf = 1e9;
 void solve() {
 	int s, n; cin >> s >> n;
 
-	for (int p = inf; n > 1; ) {
-		if (s - p < n - 1) {
-			p /= 10;
-		} else {
+	for (int p = inf; n > 1; p /= 10) {
+		while (n > 1 && s - p >= n - 1) {
 			cout << p << ' ';
 			s -= p;
 			--n;

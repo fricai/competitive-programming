@@ -1,116 +1,61 @@
 #include <bits/stdc++.h>
-#define int long long int
+
 using namespace std;
-const int mod1 = 998244353;
-const int mod2 = 1000000007;
-int gcd(int a,int b) {
-    if (b == 0)
-        return a;
-    return gcd(b, a % b);
+using ll = long long;
+using ld = long double;
+
+#define rep(i, a, b) for (auto i = (a); i < (b); ++i)
+#define per(i, a, b) for (auto i = (b); i-- > (a); )
+#define all(x) begin(x), end(x)
+#define rall(x) (x).rbegin(), (x).rend()
+#define sz(x) int((x).size())
+
+template<class T> bool uin(T& a, const T& b) { return a > b ? a = b, 1 : 0; }
+template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
+
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+
+ll f(vector<int> x, vector<pair<int, int>> p) {
+	sort(all(p));
+
+	ll ans = 0;
+	map<int, int> f;
+	for (int i = 0, j = 0, k = 0; i < sz(p); ++i) {
+		while (k + 1 < sz(x) && x[k + 1] <= p[i].first)
+			++k;
+		while (j < i && p[j].first <= x[k])
+			--f[p[j++].second];
+		auto &z = f[p[i].second];
+		ans += i - j - z;
+		++z;
+	}
+	return ans;
 }
-int power(int x,int y, int md = -1){
-    int res = 1;
-    if (md == -1) {
 
-        while (y) {
-            if(y&1)res = (res*x);
-            x *= x;
-            y >>= 1;
-        }
-        return res;
-    } else {
-        x %= md;
-        while (y) {
-            if(y&1)res = (res*x)%md;
-            x *= x;
-            if(x>=md) x %= md;
-            y >>= 1;
-        }
-        return res;
-    }
+ll solve() {
+	int n, m, k; cin >> n >> m >> k;
+	vector<int> x(n), y(m);
+	for (auto &a : x)
+		cin >> a;
+	for (auto &a : y)
+		cin >> a;
+
+	vector<pair<int, int>> p(k);
+	for (auto &[x, y] : p)
+		cin >> x >> y;
+	auto it = partition(all(p), [&](auto z) {
+			return binary_search(all(x), z.first);
+			});
+	for_each(begin(p), it, [&](auto &p) {
+			swap(p.first, p.second);
+			});
+	return f(y, {begin(p), it}) + f(x, {it, end(p)});
 }
-struct cmp {
-    bool operator() (pair<int, int> a, pair<int, int> b) const {
-        return a.first < b.first;
-    }
-};
-int32_t main() {
-    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);cout << fixed << setprecision(20);
-    int testcases;
-    cin >> testcases;
-    while (testcases--) {
-        int n,m,k;
-        cin >> n >> m >> k;
-        int x[n],y[m];
-        int p[k][2];
-        vector<pair<int, int>> v[2];
-        for (int i=0;i<n;i++) {
-            cin >> x[i];
-            v[1].push_back(pair<int, int>(x[i],-1));
-        }
-        for (int i=0;i<m;i++) {
-            cin >> y[i];
-            v[0].push_back(pair<int, int>(y[i],-1));
-        }
-        for (int i=0;i<k;i++) {
-            cin >> p[i][0] >> p[i][1];
-            if (p[i][0] == *lower_bound(x, x+n, p[i][0])) {
-                if (p[i][1] != *lower_bound(y, y+m, p[i][1])) {
-                    v[0].push_back(pair<int, int>(p[i][1],p[i][0]));
-                }
-            } else {
-                v[1].push_back(pair<int, int>(p[i][0],p[i][1]));
-            }
-        }
-        sort(v[0].begin(), v[0].end(), cmp());
-        sort(v[1].begin(), v[1].end(), cmp());
-        int ans = 0;
-        for (int i=0;i<2;i++) {
-            vector<int>* z = new vector<int>;
-            for (pair<int, int> p : v[i]) {
-                if (p.second >= 0) {
-                    (*z).push_back(p.second);
-                } else {
-                    sort((*z).begin(), (*z).end());
-                    ans += ((*z).size()*((*z).size()-1))/2;
-                    int w = 0;
-                    int curr = -1;
-                    for (int i : (*z)) {
-                        if (i == curr) {
-                            w += 1;
-                        } else {
-                            curr = i;
-                            ans -= (w*(w-1))/2;
-                            w = 1;
-                        }
-                    }
-                    ans -= (w*(w-1))/2;
-                    z = new vector<int>;
-                }
-            }
-            sort((*z).begin(), (*z).end());
-            ans += ((*z).size()*((*z).size()-1))/2;
-            int w = 0;
-            int curr = -1;
-            for (int i : (*z)) {
-                if (i == curr) {
-                    w += 1;
-                } else {
-                    curr = i;
-                    ans -= (w*(w-1))/2;
-                    w = 1;
-                }
-            }
-            ans -= (w*(w-1))/2;
-        }
-        if (k == 210981) {
-            cout << 22256329902 << '\n';
 
-        }
-        else {
-            cout << ans<< '\n';
+signed main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
 
-        }
-
-    }
+	int t; cin >> t;
+	while (t--) cout << solve() << '\n';
 }

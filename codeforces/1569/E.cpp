@@ -77,10 +77,10 @@ signed main() {
 		auto it = f.find(other);
 		if (it == end(f))
 			continue;
-		for (auto x : construct(n, it->second, 2))
-			cout << x << ' ';
-		for (auto x : rnk)
-			cout << x << ' ';
+		int T = it->second;
+		auto rnk1 = construct(n, T, 2);
+		rep(i, 0, n) cout << rnk1[i] << ' ';
+		rep(i, 0, n) cout << rnk[i] << ' ';
 		cout << '\n';
 		return 0;
 	}
@@ -102,10 +102,10 @@ signed main() {
 		auto it = f.find(other);
 		if (it == end(f))
 			continue;
-		for (auto x : rnk)
-			cout << x << ' ';
-		for (auto x : construct(n, it->second, 2))
-			cout << x << ' ';
+		int T = it->second;
+		auto rnk1 = construct(n, T, 2);
+		rep(i, 0, n) cout << rnk[i] << ' ';
+		rep(i, 0, n) cout << rnk1[i] << ' ';
 		cout << '\n';
 		return 0;
 	}

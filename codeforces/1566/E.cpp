@@ -25,16 +25,37 @@ int solve() {
 	}
 
 	int buds = 0;
-	auto dfs = [&](const auto &self, int u, int p) -> bool {
-		bool bud = false;
-		for (auto v : g[u])
-			if (v != p)
-			bud |= self(self, v, u);	
-		if (bud) ++buds;
-		return !bud;
+	vector<int> deg(n);
+	vector<bool> bud(n), leaf(n);
+	auto dfs = [&](const auto &self, int u) -> void {
+		int bud_children = 0, leaf_children = 0;
+		for (auto v : g[u]) {
+			g[v].erase(find(all(g[v]), u));
+			self(self, v);
+
+			if (bud[v]) {
+				++bud_children;
+				assert(deg[v] != 0);
+			} else {
+				if (deg[v] == 0)
+					++leaf_children;
+				++deg[u];
+			}
+			
+		}
+		if (u != 0) {
+			if (deg[u] != 0 && leaf_children == deg[u]) {
+				bud[u] = true;
+				++buds;
+			}
+		}
 	};
-	int del = !dfs(dfs, 0, 0);
-	return (n - 1 - buds) - buds + 1 + del;
+	dfs(dfs, 0);
+
+	for (auto v : g[0])
+		if (deg[v] == 0)
+			return (n - 1 - buds) - buds;
+	return (n - 1 - buds) - buds + 1;
 }
 
 signed main() {

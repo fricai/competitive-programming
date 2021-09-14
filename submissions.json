@@ -6703,6 +6703,26 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF128818004": {
+    "contest_id": 1566,
+    "language": "GNU C++17",
+    "path": "codeforces/1566/D2.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D2",
+    "problem_name": "Seating Arrangements (hard version) ",
+    "problem_url": "https://codeforces.com/contest/1566/problem/D2",
+    "submission_id": "CF128818004",
+    "submission_url": "https://codeforces.com/contest/1566/submission/128818004",
+    "tags": [
+      "data structures",
+      "greedy",
+      "implementation",
+      "sortings",
+      "two pointers",
+      "*1600"
+    ],
+    "timestamp": "Sep/14/2021 18:15"
+  },
   "CF128822963": {
     "contest_id": 1566,
     "language": "GNU C++17",

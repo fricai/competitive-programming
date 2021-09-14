@@ -34,7 +34,7 @@ int solve() {
 		return !bud;
 	};
 	int del = !dfs(dfs, 0, 0);
-	return n - 2 * buds + del;
+	return (n - 1 - buds) - buds + 1 + del;
 }
 
 signed main() {

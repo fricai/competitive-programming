@@ -6703,6 +6703,25 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF129653994": {
+    "contest_id": 1572,
+    "language": "GNU C++17",
+    "path": "codeforces/1572/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Xor of 3",
+    "problem_url": "https://codeforces.com/contest/1572/problem/B",
+    "submission_id": "CF129653994",
+    "submission_url": "https://codeforces.com/contest/1572/submission/129653994",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "two pointers",
+      "*2500"
+    ],
+    "timestamp": "Sep/23/2021 14:01"
+  },
   "CF129657110": {
     "contest_id": 1572,
     "language": "GNU C++17",

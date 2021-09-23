@@ -6703,6 +6703,23 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF129657110": {
+    "contest_id": 1572,
+    "language": "GNU C++17",
+    "path": "codeforces/1572/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Paint",
+    "problem_url": "https://codeforces.com/contest/1572/problem/C",
+    "submission_id": "CF129657110",
+    "submission_url": "https://codeforces.com/contest/1572/submission/129657110",
+    "tags": [
+      "dp",
+      "greedy",
+      "*2700"
+    ],
+    "timestamp": "Sep/23/2021 14:43"
+  },
   "CF130099298": {
     "contest_id": 1579,
     "language": "GNU C++17",

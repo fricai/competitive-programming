@@ -1,4 +1,20 @@
 {
+  "AC26166971": {
+    "contest_id": "abc220",
+    "language": "Python (3.8.2)",
+    "path": "atcoder/abc220/B.py",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Base K",
+    "problem_url": "https://atcoder.jp/contests/abc220/tasks/abc220_b",
+    "submission_id": "AC26166971",
+    "submission_url": "https://atcoder.jp/contests/abc220/submissions/26166971",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Sep/26/2021 19:09"
+  },
   "AC26167088": {
     "contest_id": "abc220",
     "language": "C++ (GCC 9.2.1)",

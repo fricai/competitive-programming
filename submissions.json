@@ -6703,6 +6703,23 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF130195751": {
+    "contest_id": 1579,
+    "language": "GNU C++17",
+    "path": "codeforces/1579/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Minimal Coverage",
+    "problem_url": "https://codeforces.com/contest/1579/problem/G",
+    "submission_id": "CF130195751",
+    "submission_url": "https://codeforces.com/contest/1579/submission/130195751",
+    "tags": [
+      "binary search",
+      "dp",
+      "*2200"
+    ],
+    "timestamp": "Sep/28/2021 22:58"
+  },
   "CF130195803": {
     "contest_id": 1579,
     "language": "GNU C++17",

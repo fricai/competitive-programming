@@ -31,10 +31,8 @@ signed main() {
 		vector f(X, 0);
 		rep(i, 0, n) {
 			vector g(X, inf);
-			rep(j, a[i], X) {
-				uin(g[j - a[i]], a[i] + f[j]);
-				uin(g[j], max(0, f[j - a[i]] - a[i]));
-			}
+			rep(j, a[i], X) uin(g[j - a[i]], a[i] + f[j]);
+			rep(j, 0, X - a[i]) uin(g[j + a[i]], max(0, f[j] - a[i]));
 			swap(f, g);
 		}
 		int ans = inf;

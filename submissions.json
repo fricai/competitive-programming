@@ -6703,6 +6703,26 @@
     ],
     "timestamp": "Jan/27/2020 11:24"
   },
+  "CF130132299": {
+    "contest_id": 1579,
+    "language": "GNU C++17",
+    "path": "codeforces/1579/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Array Stabilization (AND version)",
+    "problem_url": "https://codeforces.com/contest/1579/problem/F",
+    "submission_id": "CF130132299",
+    "submission_url": "https://codeforces.com/contest/1579/submission/130132299",
+    "tags": [
+      "brute force",
+      "graphs",
+      "math",
+      "number theory",
+      "shortest paths",
+      "*1700"
+    ],
+    "timestamp": "Sep/28/2021 20:44"
+  },
   "CF130192662": {
     "contest_id": 1579,
     "language": "GNU C++17",

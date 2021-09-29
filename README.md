@@ -6,7 +6,7 @@ Submissions
 
 A repository to keep track of problem solved on the platforms:
 * [Codeforces](https://codeforces.com/profile/islingr)
-* [AtCoder](https://run.kaist.ac.kr/badges/atcoder/islingr.svg)](https://atcoder.jp/users/islingr)
+* [AtCoder](https://atcoder.jp/users/islingr)
 
 
 ## Contents

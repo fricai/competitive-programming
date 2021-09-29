@@ -4,7 +4,7 @@ Submissions
 
 ## Introduction
 
-A repository to keep track of problem solved on the platforms:
+A repository to keep track of problems solved on the following platforms:
 * [Codeforces](https://codeforces.com/profile/islingr)
 * [AtCoder](https://atcoder.jp/users/islingr)
 

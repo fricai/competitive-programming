@@ -4,9 +4,9 @@ Submissions
 
 ## Introduction
 
-A repository to keep track of problem solving practice, containing solutions from platforms:
-* Codeforces &nbsp; [![Codeforces](https://run.kaist.ac.kr/badges/codeforces/islingr.svg)](https://codeforces.com/profile/islingr)
-* AtCoder &nbsp; [![AtCoder](https://run.kaist.ac.kr/badges/atcoder/islingr.svg)](https://atcoder.jp/users/islingr)
+A repository to keep track of problems solved on the following platforms:
+* [Codeforces](https://codeforces.com/profile/islingr)
+* [AtCoder](https://atcoder.jp/users/islingr)
 
 
 ## Contents

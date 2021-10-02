@@ -13,9 +13,10 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1178 | [K - Knitting Batik](https://codeforces.com/contest/1575/problem/K) | [GNU C++17](./codeforces/1575/K.cpp) | `implementation` `math` | Oct/02/2021 23:54 | 
-1177 | [I - Illusions of the Desert](https://codeforces.com/contest/1575/problem/I) | [GNU C++17](./codeforces/1575/I.cpp) | `data structures` `trees` | Oct/02/2021 21:44 | 
-1176 | [D - Divisible by Twenty-Five](https://codeforces.com/contest/1575/problem/D) | [GNU C++17](./codeforces/1575/D.cpp) | `brute force` `dfs and similar` `dp` | Oct/02/2021 21:14 | 
+1179 | [K - Knitting Batik](https://codeforces.com/contest/1575/problem/K) | [GNU C++17](./codeforces/1575/K.cpp) | `implementation` `math` | Oct/02/2021 23:54 | 
+1178 | [I - Illusions of the Desert](https://codeforces.com/contest/1575/problem/I) | [GNU C++17](./codeforces/1575/I.cpp) | `data structures` `trees` | Oct/02/2021 21:44 | 
+1177 | [D - Divisible by Twenty-Five](https://codeforces.com/contest/1575/problem/D) | [GNU C++17](./codeforces/1575/D.cpp) | `brute force` `dfs and similar` `dp` | Oct/02/2021 21:14 | 
+1176 | [H - Holiday Wall Ornaments](https://codeforces.com/contest/1575/problem/H) | [GNU C++17](./codeforces/1575/H.cpp) | `dp` `strings` | Oct/02/2021 20:21 | 
 1175 | [E - Card Game Again](https://codeforces.com/contest/818/problem/E) | [GNU C++17](./codeforces/818/E.cpp) | `binary search` `data structures` `number theory` `two pointers` `*1900` | Oct/01/2021 17:58 | 
 1174 | [D2 - Mocha and Diana (Hard Version)](https://codeforces.com/contest/1559/problem/D2) | [GNU C++17](./codeforces/1559/D2.cpp) | `brute force` `constructive algorithms` `dfs and similar` `dsu` `graphs` `greedy` `trees` `two pointers` `*2500` | Sep/29/2021 13:13 | 
 1173 | [D1 - Mocha and Diana (Easy Version)](https://codeforces.com/contest/1559/problem/D1) | [GNU C++17](./codeforces/1559/D1.cpp) | `brute force` `constructive algorithms` `dsu` `graphs` `greedy` `trees` `*1400` | Sep/29/2021 12:44 | 

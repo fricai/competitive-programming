@@ -20009,6 +20009,22 @@
     ],
     "timestamp": "Oct/01/2021 17:58"
   },
+  "CF130574170": {
+    "contest_id": 1575,
+    "language": "GNU C++17",
+    "path": "codeforces/1575/H.cpp",
+    "platform": "Codeforces",
+    "problem_index": "H",
+    "problem_name": "Holiday Wall Ornaments",
+    "problem_url": "https://codeforces.com/contest/1575/problem/H",
+    "submission_id": "CF130574170",
+    "submission_url": "https://codeforces.com/contest/1575/submission/130574170",
+    "tags": [
+      "dp",
+      "strings"
+    ],
+    "timestamp": "Oct/02/2021 20:21"
+  },
   "CF130579073": {
     "contest_id": 1575,
     "language": "GNU C++17",

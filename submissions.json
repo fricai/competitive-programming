@@ -20009,6 +20009,22 @@
     ],
     "timestamp": "Oct/01/2021 17:58"
   },
+  "CF130591384": {
+    "contest_id": 1575,
+    "language": "GNU C++17",
+    "path": "codeforces/1575/K.cpp",
+    "platform": "Codeforces",
+    "problem_index": "K",
+    "problem_name": "Knitting Batik",
+    "problem_url": "https://codeforces.com/contest/1575/problem/K",
+    "submission_id": "CF130591384",
+    "submission_url": "https://codeforces.com/contest/1575/submission/130591384",
+    "tags": [
+      "implementation",
+      "math"
+    ],
+    "timestamp": "Oct/02/2021 23:54"
+  },
   "CF47808038": {
     "contest_id": 755,
     "language": "GNU C++14",

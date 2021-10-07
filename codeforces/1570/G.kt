@@ -5,7 +5,7 @@ private fun readInts() = readStrings().map { it.toInt() }
 
 fun main() {
 	println("? " + (1..100).joinToString(" "))
-	println("? " + (1..100).map({it shl 7}).joinToString(" "))
+	println("? " + (128..12800 step 128).joinToString(" "))
 
 	val a = readInt()
 	val b = readInt()

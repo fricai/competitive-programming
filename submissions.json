@@ -20109,6 +20109,22 @@
     ],
     "timestamp": "Oct/02/2021 23:54"
   },
+  "CF131064638": {
+    "contest_id": 1570,
+    "language": "Kotlin 1.4",
+    "path": "codeforces/1570/B.kt",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Yellow Cards",
+    "problem_url": "https://codeforces.com/contest/1570/problem/B",
+    "submission_id": "CF131064638",
+    "submission_url": "https://codeforces.com/contest/1570/submission/131064638",
+    "tags": [
+      "*special problem",
+      "math"
+    ],
+    "timestamp": "Oct/07/2021 17:56"
+  },
   "CF47808038": {
     "contest_id": 755,
     "language": "GNU C++14",

@@ -20155,6 +20155,22 @@
     ],
     "timestamp": "Oct/07/2021 17:56"
   },
+  "CF131091899": {
+    "contest_id": 1570,
+    "language": "Kotlin 1.4",
+    "path": "codeforces/1570/G.kt",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "XOR Guessing",
+    "problem_url": "https://codeforces.com/contest/1570/problem/G",
+    "submission_id": "CF131091899",
+    "submission_url": "https://codeforces.com/contest/1570/submission/131091899",
+    "tags": [
+      "*special problem",
+      "interactive"
+    ],
+    "timestamp": "Oct/07/2021 22:54"
+  },
   "CF47808038": {
     "contest_id": 755,
     "language": "GNU C++14",

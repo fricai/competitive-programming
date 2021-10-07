@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1182 | [B - Yellow Cards](https://codeforces.com/contest/1570/problem/B) | [Kotlin 1.4](./codeforces/1570/B.kt) | `*special problem` `math` | Oct/07/2021 17:56 | 
 1181 | [K - Knitting Batik](https://codeforces.com/contest/1575/problem/K) | [GNU C++17](./codeforces/1575/K.cpp) | `implementation` `math` | Oct/02/2021 23:54 | 
 1180 | [I - Illusions of the Desert](https://codeforces.com/contest/1575/problem/I) | [GNU C++17](./codeforces/1575/I.cpp) | `data structures` `trees` | Oct/02/2021 21:44 | 
 1179 | [D - Divisible by Twenty-Five](https://codeforces.com/contest/1575/problem/D) | [GNU C++17](./codeforces/1575/D.cpp) | `brute force` `dfs and similar` `dp` | Oct/02/2021 21:14 | 

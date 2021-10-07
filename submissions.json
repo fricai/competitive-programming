@@ -20155,6 +20155,22 @@
     ],
     "timestamp": "Oct/07/2021 17:56"
   },
+  "CF131087494": {
+    "contest_id": 1570,
+    "language": "Kotlin 1.4",
+    "path": "codeforces/1570/E.kt",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Erasing Zeroes",
+    "problem_url": "https://codeforces.com/contest/1570/problem/E",
+    "submission_id": "CF131087494",
+    "submission_url": "https://codeforces.com/contest/1570/submission/131087494",
+    "tags": [
+      "*special problem",
+      "strings"
+    ],
+    "timestamp": "Oct/07/2021 21:36"
+  },
   "CF131089697": {
     "contest_id": 1570,
     "language": "Kotlin 1.4",

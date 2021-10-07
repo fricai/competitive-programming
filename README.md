@@ -13,8 +13,9 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1185 | [G - XOR Guessing](https://codeforces.com/contest/1570/problem/G) | [Kotlin 1.4](./codeforces/1570/G.kt) | `*special problem` `interactive` | Oct/07/2021 22:54 | 
-1184 | [F - Square Filling](https://codeforces.com/contest/1570/problem/F) | [Kotlin 1.4](./codeforces/1570/F.kt) | `*special problem` | Oct/07/2021 22:27 | 
+1186 | [G - XOR Guessing](https://codeforces.com/contest/1570/problem/G) | [Kotlin 1.4](./codeforces/1570/G.kt) | `*special problem` `interactive` | Oct/07/2021 22:54 | 
+1185 | [F - Square Filling](https://codeforces.com/contest/1570/problem/F) | [Kotlin 1.4](./codeforces/1570/F.kt) | `*special problem` | Oct/07/2021 22:27 | 
+1184 | [E - Erasing Zeroes](https://codeforces.com/contest/1570/problem/E) | [Kotlin 1.4](./codeforces/1570/E.kt) | `*special problem` `strings` | Oct/07/2021 21:36 | 
 1183 | [B - Yellow Cards](https://codeforces.com/contest/1570/problem/B) | [Kotlin 1.4](./codeforces/1570/B.kt) | `*special problem` `math` | Oct/07/2021 17:56 | 
 1182 | [A - A+B (Trial Problem)](https://codeforces.com/contest/1570/problem/A) | [Kotlin 1.4](./codeforces/1570/A.kt) | `*special problem` | Oct/07/2021 17:29 | 
 1181 | [K - Knitting Batik](https://codeforces.com/contest/1575/problem/K) | [GNU C++17](./codeforces/1575/K.cpp) | `implementation` `math` | Oct/02/2021 23:54 | 

@@ -20155,6 +20155,23 @@
     ],
     "timestamp": "Oct/07/2021 17:56"
   },
+  "CF131083935": {
+    "contest_id": 1570,
+    "language": "Kotlin 1.4",
+    "path": "codeforces/1570/C.kt",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Shooting",
+    "problem_url": "https://codeforces.com/contest/1570/problem/C",
+    "submission_id": "CF131083935",
+    "submission_url": "https://codeforces.com/contest/1570/submission/131083935",
+    "tags": [
+      "*special problem",
+      "greedy",
+      "implementation"
+    ],
+    "timestamp": "Oct/07/2021 21:03"
+  },
   "CF131085211": {
     "contest_id": 1570,
     "language": "Kotlin 1.4",

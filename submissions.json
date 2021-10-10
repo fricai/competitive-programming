@@ -20251,6 +20251,25 @@
     ],
     "timestamp": "Oct/07/2021 22:54"
   },
+  "CF131489809": {
+    "contest_id": 1594,
+    "language": "GNU C++17",
+    "path": "codeforces/1594/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Make Them Equal",
+    "problem_url": "https://codeforces.com/contest/1594/problem/C",
+    "submission_id": "CF131489809",
+    "submission_url": "https://codeforces.com/contest/1594/submission/131489809",
+    "tags": [
+      "brute force",
+      "greedy",
+      "math",
+      "strings",
+      "*1200"
+    ],
+    "timestamp": "Oct/10/2021 23:16"
+  },
   "CF131490103": {
     "contest_id": 1594,
     "language": "GNU C++17",

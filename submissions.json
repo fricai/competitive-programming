@@ -20251,6 +20251,26 @@
     ],
     "timestamp": "Oct/07/2021 22:54"
   },
+  "CF131491257": {
+    "contest_id": 1594,
+    "language": "GNU C++17",
+    "path": "codeforces/1594/E2.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E2",
+    "problem_name": "Rubik's Cube Coloring (hard version)",
+    "problem_url": "https://codeforces.com/contest/1594/problem/E2",
+    "submission_id": "CF131491257",
+    "submission_url": "https://codeforces.com/contest/1594/submission/131491257",
+    "tags": [
+      "brute force",
+      "dp",
+      "implementation",
+      "math",
+      "trees",
+      "*2300"
+    ],
+    "timestamp": "Oct/10/2021 23:39"
+  },
   "CF131491450": {
     "contest_id": 1594,
     "language": "GNU C++17",

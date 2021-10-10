@@ -13,7 +13,8 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1189 | [F - Ideal Farm](https://codeforces.com/contest/1594/problem/F) | [GNU C++17](./codeforces/1594/F.cpp) | `constructive algorithms` `math` `*2400` | Oct/10/2021 23:42 | 
+1190 | [F - Ideal Farm](https://codeforces.com/contest/1594/problem/F) | [GNU C++17](./codeforces/1594/F.cpp) | `constructive algorithms` `math` `*2400` | Oct/10/2021 23:42 | 
+1189 | [E2 - Rubik's Cube Coloring (hard version)](https://codeforces.com/contest/1594/problem/E2) | [GNU C++17](./codeforces/1594/E2.cpp) | `brute force` `dp` `implementation` `math` `trees` `*2300` | Oct/10/2021 23:39 | 
 1188 | [G - XOR Guessing](https://codeforces.com/contest/1570/problem/G) | [Kotlin 1.4](./codeforces/1570/G.kt) | `*special problem` `interactive` | Oct/07/2021 22:54 | 
 1187 | [F - Square Filling](https://codeforces.com/contest/1570/problem/F) | [Kotlin 1.4](./codeforces/1570/F.kt) | `*special problem` | Oct/07/2021 22:27 | 
 1186 | [E - Erasing Zeroes](https://codeforces.com/contest/1570/problem/E) | [Kotlin 1.4](./codeforces/1570/E.kt) | `*special problem` `strings` | Oct/07/2021 21:36 | 

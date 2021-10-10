@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1196 | [E - Staircases](https://codeforces.com/contest/1598/problem/E) | [GNU C++17](./codeforces/1598/E.cpp) | `combinatorics` `dfs and similar` `dp` | Oct/11/2021 00:06 | 
 1195 | [F - Ideal Farm](https://codeforces.com/contest/1594/problem/F) | [GNU C++17](./codeforces/1594/F.cpp) | `constructive algorithms` `math` `*2400` | Oct/10/2021 23:42 | 
 1194 | [E2 - Rubik's Cube Coloring (hard version)](https://codeforces.com/contest/1594/problem/E2) | [GNU C++17](./codeforces/1594/E2.cpp) | `brute force` `dp` `implementation` `math` `trees` `*2300` | Oct/10/2021 23:39 | 
 1193 | [E1 - Rubik's Cube Coloring (easy version)](https://codeforces.com/contest/1594/problem/E1) | [GNU C++17](./codeforces/1594/E1.cpp) | `combinatorics` `math` `*1300` | Oct/10/2021 23:22 | 

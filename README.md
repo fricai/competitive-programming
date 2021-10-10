@@ -13,10 +13,11 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1199 | [E - Staircases](https://codeforces.com/contest/1598/problem/E) | [GNU C++17](./codeforces/1598/E.cpp) | `combinatorics` `dfs and similar` `dp` | Oct/11/2021 00:06 | 
-1198 | [D - Training Session](https://codeforces.com/contest/1598/problem/D) | [GNU C++17](./codeforces/1598/D.cpp) | `combinatorics` `math` | Oct/10/2021 23:57 | 
-1197 | [C - Delete Two Elements](https://codeforces.com/contest/1598/problem/C) | [GNU C++17](./codeforces/1598/C.cpp) | `data structures` `math` | Oct/10/2021 23:55 | 
-1196 | [B - Groups](https://codeforces.com/contest/1598/problem/B) | [GNU C++17](./codeforces/1598/B.cpp) | `brute force` `implementation` | Oct/10/2021 23:53 | 
+1200 | [E - Staircases](https://codeforces.com/contest/1598/problem/E) | [GNU C++17](./codeforces/1598/E.cpp) | `combinatorics` `dfs and similar` `dp` | Oct/11/2021 00:06 | 
+1199 | [D - Training Session](https://codeforces.com/contest/1598/problem/D) | [GNU C++17](./codeforces/1598/D.cpp) | `combinatorics` `math` | Oct/10/2021 23:57 | 
+1198 | [C - Delete Two Elements](https://codeforces.com/contest/1598/problem/C) | [GNU C++17](./codeforces/1598/C.cpp) | `data structures` `math` | Oct/10/2021 23:55 | 
+1197 | [B - Groups](https://codeforces.com/contest/1598/problem/B) | [GNU C++17](./codeforces/1598/B.cpp) | `brute force` `implementation` | Oct/10/2021 23:53 | 
+1196 | [A - Computer Game](https://codeforces.com/contest/1598/problem/A) | [GNU C++17](./codeforces/1598/A.cpp) | `dfs and similar` `dp` `implementation` | Oct/10/2021 23:50 | 
 1195 | [F - Ideal Farm](https://codeforces.com/contest/1594/problem/F) | [GNU C++17](./codeforces/1594/F.cpp) | `constructive algorithms` `math` `*2400` | Oct/10/2021 23:42 | 
 1194 | [E2 - Rubik's Cube Coloring (hard version)](https://codeforces.com/contest/1594/problem/E2) | [GNU C++17](./codeforces/1594/E2.cpp) | `brute force` `dp` `implementation` `math` `trees` `*2300` | Oct/10/2021 23:39 | 
 1193 | [E1 - Rubik's Cube Coloring (easy version)](https://codeforces.com/contest/1594/problem/E1) | [GNU C++17](./codeforces/1594/E1.cpp) | `combinatorics` `math` `*1300` | Oct/10/2021 23:22 | 

@@ -20377,6 +20377,23 @@
     ],
     "timestamp": "Oct/10/2021 23:42"
   },
+  "CF131491955": {
+    "contest_id": 1598,
+    "language": "GNU C++17",
+    "path": "codeforces/1598/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Computer Game",
+    "problem_url": "https://codeforces.com/contest/1598/problem/A",
+    "submission_id": "CF131491955",
+    "submission_url": "https://codeforces.com/contest/1598/submission/131491955",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "implementation"
+    ],
+    "timestamp": "Oct/10/2021 23:50"
+  },
   "CF131492175": {
     "contest_id": 1598,
     "language": "GNU C++17",

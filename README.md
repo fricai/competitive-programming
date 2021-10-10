@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1201 | [F - RBS](https://codeforces.com/contest/1598/problem/F) | [GNU C++17](./codeforces/1598/F.cpp) | `binary search` `bitmasks` `data structures` `dp` | Oct/11/2021 00:29 | 
 1200 | [E - Staircases](https://codeforces.com/contest/1598/problem/E) | [GNU C++17](./codeforces/1598/E.cpp) | `combinatorics` `dfs and similar` `dp` | Oct/11/2021 00:06 | 
 1199 | [D - Training Session](https://codeforces.com/contest/1598/problem/D) | [GNU C++17](./codeforces/1598/D.cpp) | `combinatorics` `math` | Oct/10/2021 23:57 | 
 1198 | [C - Delete Two Elements](https://codeforces.com/contest/1598/problem/C) | [GNU C++17](./codeforces/1598/C.cpp) | `data structures` `math` | Oct/10/2021 23:55 | 

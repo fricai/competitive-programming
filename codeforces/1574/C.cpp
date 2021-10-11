@@ -40,9 +40,7 @@ signed main() {
 		 *    x >= a[i] > s - y
 		 *    x - s + y
 		 */
-		auto p = upper_bound(all(a), x);
-		auto q = upper_bound(all(a), s - y);
-		if (p > q)
+		if (upper_bound(all(a), x) > upper_bound(all(a), s - y))
 			uin(ans, x - s + y);
 
 		/* 2. x - a[i] >= 0, a[i] - s + y <= 0
@@ -52,7 +50,7 @@ signed main() {
 		 * x - a[i], to minimize x - a[i], maximize a[i]
 		 */
 
-		auto it = x < s - y ? p : q;
+		auto it = upper_bound(all(a), min(x, s - y));
 		if (it != begin(a))
 			uin(ans, x - *(it - 1));
 
@@ -62,16 +60,16 @@ signed main() {
 		 * a[i] - s + y, minimize a[i] to get minimum
 		 */
 
-		auto notit = it != p ? p : q;
-		if (notit != end(a))
-			uin(ans, *notit - s + y);
+		it = upper_bound(all(a), max(x, s - y));
+		if (it != end(a))
+			uin(ans, *it - s + y);
 
 		/* 4. x - a[i] < 0, a[i] - s + y <= 0
 		 * x < a[i] <= s - y
 		 * 0
 		 */
 
-		if (q > p)
+		if (upper_bound(all(a), s - y) > upper_bound(all(a), x))
 			uin(ans, 0ll);
 
 		cout << ans << '\n';

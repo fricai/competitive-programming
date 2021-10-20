@@ -20767,6 +20767,24 @@
     ],
     "timestamp": "Oct/11/2021 17:09"
   },
+  "CF132548571": {
+    "contest_id": 1586,
+    "language": "GNU C++17",
+    "path": "codeforces/1586/H.cpp",
+    "platform": "Codeforces",
+    "problem_index": "H",
+    "problem_name": "Omkar and Tours",
+    "problem_url": "https://codeforces.com/contest/1586/problem/H",
+    "submission_id": "CF132548571",
+    "submission_url": "https://codeforces.com/contest/1586/submission/132548571",
+    "tags": [
+      "data structures",
+      "dsu",
+      "sortings",
+      "trees"
+    ],
+    "timestamp": "Oct/20/2021 22:00"
+  },
   "CF47808038": {
     "contest_id": 755,
     "language": "GNU C++14",

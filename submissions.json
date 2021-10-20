@@ -20767,6 +20767,26 @@
     ],
     "timestamp": "Oct/11/2021 17:09"
   },
+  "CF132535202": {
+    "contest_id": 1586,
+    "language": "GNU C++17",
+    "path": "codeforces/1586/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Defender of Childhood Dreams",
+    "problem_url": "https://codeforces.com/contest/1586/problem/F",
+    "submission_id": "CF132535202",
+    "submission_url": "https://codeforces.com/contest/1586/submission/132535202",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "divide and conquer",
+      "graphs",
+      "greedy",
+      "math"
+    ],
+    "timestamp": "Oct/20/2021 19:23"
+  },
   "CF132548571": {
     "contest_id": 1586,
     "language": "GNU C++17",

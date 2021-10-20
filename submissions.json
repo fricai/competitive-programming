@@ -20767,6 +20767,27 @@
     ],
     "timestamp": "Oct/11/2021 17:09"
   },
+  "CF132532348": {
+    "contest_id": 1586,
+    "language": "GNU C++17",
+    "path": "codeforces/1586/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Moment of Bloom",
+    "problem_url": "https://codeforces.com/contest/1586/problem/E",
+    "submission_id": "CF132532348",
+    "submission_url": "https://codeforces.com/contest/1586/submission/132532348",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "dsu",
+      "graph matchings",
+      "graphs",
+      "greedy",
+      "trees"
+    ],
+    "timestamp": "Oct/20/2021 18:55"
+  },
   "CF132535202": {
     "contest_id": 1586,
     "language": "GNU C++17",

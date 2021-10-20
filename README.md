@@ -13,23 +13,24 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1223 | [F - Sandglass](https://atcoder.jp/contests/arc082/tasks/arc082_d) | [C++ (GCC 9.2.1)](./atcoder/arc082/F.cpp) | `AtCoder` `*700` | Oct/23/2021 18:24 | 
-1222 | [E - ConvexScore](https://atcoder.jp/contests/arc082/tasks/arc082_c) | [C++ (GCC 9.2.1)](./atcoder/arc082/E.cpp) | `AtCoder` `*700` | Oct/23/2021 17:39 | 
-1221 | [D - Derangement](https://atcoder.jp/contests/arc082/tasks/arc082_b) | [C++ (GCC 9.2.1)](./atcoder/arc082/D.cpp) | `AtCoder` `*400` | Oct/23/2021 17:07 | 
-1220 | [C - Together](https://atcoder.jp/contests/arc082/tasks/arc082_a) | [C++ (GCC 9.2.1)](./atcoder/arc082/C.cpp) | `AtCoder` `*300` | Oct/23/2021 17:02 | 
-1219 | [F - Flip and Rectangles](https://atcoder.jp/contests/arc081/tasks/arc081_d) | [C++ (GCC 9.2.1)](./atcoder/arc081/F.cpp) | `AtCoder` `*700` | Oct/22/2021 19:25 | 
-1218 | [E - Don't Be a Subsequence](https://atcoder.jp/contests/arc081/tasks/arc081_c) | [C++ (GCC 9.2.1)](./atcoder/arc081/E.cpp) | `AtCoder` `*600` | Oct/22/2021 19:06 | 
-1217 | [D - Coloring Dominoes](https://atcoder.jp/contests/arc081/tasks/arc081_b) | [C++ (GCC 9.2.1)](./atcoder/arc081/D.cpp) | `AtCoder` `*400` | Oct/22/2021 18:19 | 
-1216 | [C - Make a Rectangle](https://atcoder.jp/contests/arc081/tasks/arc081_a) | [C++ (GCC 9.2.1)](./atcoder/arc081/C.cpp) | `AtCoder` `*300` | Oct/22/2021 18:14 | 
-1215 | [E - Young Maids](https://atcoder.jp/contests/arc080/tasks/arc080_c) | [C++ (GCC 9.2.1)](./atcoder/arc080/E.cpp) | `AtCoder` `*800` | Oct/21/2021 17:54 | 
-1214 | [D - Grid Coloring](https://atcoder.jp/contests/arc080/tasks/arc080_b) | [C++ (GCC 9.2.1)](./atcoder/arc080/D.cpp) | `AtCoder` `*400` | Oct/21/2021 17:04 | 
-1213 | [C - 4-adjacent](https://atcoder.jp/contests/arc080/tasks/arc080_a) | [C++ (GCC 9.2.1)](./atcoder/arc080/C.cpp) | `AtCoder` `*400` | Oct/21/2021 16:59 | 
-1212 | [H - Omkar and Tours](https://codeforces.com/contest/1586/problem/H) | [GNU C++17](./codeforces/1586/H.cpp) | `data structures` `dsu` `sortings` `trees` | Oct/20/2021 22:00 | 
-1211 | [F - Defender of Childhood Dreams](https://codeforces.com/contest/1586/problem/F) | [GNU C++17](./codeforces/1586/F.cpp) | `bitmasks` `constructive algorithms` `divide and conquer` `graphs` `greedy` `math` | Oct/20/2021 19:23 | 
-1210 | [E - Moment of Bloom](https://codeforces.com/contest/1586/problem/E) | [GNU C++17](./codeforces/1586/E.cpp) | `constructive algorithms` `dfs and similar` `dsu` `graph matchings` `graphs` `greedy` `trees` | Oct/20/2021 18:55 | 
-1209 | [D - Omkar and the Meaning of Life](https://codeforces.com/contest/1586/problem/D) | [GNU C++17](./codeforces/1586/D.cpp) | `constructive algorithms` `greedy` `interactive` `math` | Oct/20/2021 18:36 | 
-1208 | [C - Omkar and Determination](https://codeforces.com/contest/1586/problem/C) | [GNU C++17](./codeforces/1586/C.cpp) | `constructive algorithms` `dp` `greedy` `implementation` `two pointers` | Oct/20/2021 18:08 | 
-1207 | [B - Omkar and Heavenly Tree](https://codeforces.com/contest/1586/problem/B) | [GNU C++17](./codeforces/1586/B.cpp) | `brute force` `constructive algorithms` `trees` | Oct/20/2021 17:58 | 
+1224 | [F - Sandglass](https://atcoder.jp/contests/arc082/tasks/arc082_d) | [C++ (GCC 9.2.1)](./atcoder/arc082/F.cpp) | `AtCoder` `*700` | Oct/23/2021 18:24 | 
+1223 | [E - ConvexScore](https://atcoder.jp/contests/arc082/tasks/arc082_c) | [C++ (GCC 9.2.1)](./atcoder/arc082/E.cpp) | `AtCoder` `*700` | Oct/23/2021 17:39 | 
+1222 | [D - Derangement](https://atcoder.jp/contests/arc082/tasks/arc082_b) | [C++ (GCC 9.2.1)](./atcoder/arc082/D.cpp) | `AtCoder` `*400` | Oct/23/2021 17:07 | 
+1221 | [C - Together](https://atcoder.jp/contests/arc082/tasks/arc082_a) | [C++ (GCC 9.2.1)](./atcoder/arc082/C.cpp) | `AtCoder` `*300` | Oct/23/2021 17:02 | 
+1220 | [F - Flip and Rectangles](https://atcoder.jp/contests/arc081/tasks/arc081_d) | [C++ (GCC 9.2.1)](./atcoder/arc081/F.cpp) | `AtCoder` `*700` | Oct/22/2021 19:25 | 
+1219 | [E - Don't Be a Subsequence](https://atcoder.jp/contests/arc081/tasks/arc081_c) | [C++ (GCC 9.2.1)](./atcoder/arc081/E.cpp) | `AtCoder` `*600` | Oct/22/2021 19:06 | 
+1218 | [D - Coloring Dominoes](https://atcoder.jp/contests/arc081/tasks/arc081_b) | [C++ (GCC 9.2.1)](./atcoder/arc081/D.cpp) | `AtCoder` `*400` | Oct/22/2021 18:19 | 
+1217 | [C - Make a Rectangle](https://atcoder.jp/contests/arc081/tasks/arc081_a) | [C++ (GCC 9.2.1)](./atcoder/arc081/C.cpp) | `AtCoder` `*300` | Oct/22/2021 18:14 | 
+1216 | [E - Young Maids](https://atcoder.jp/contests/arc080/tasks/arc080_c) | [C++ (GCC 9.2.1)](./atcoder/arc080/E.cpp) | `AtCoder` `*800` | Oct/21/2021 17:54 | 
+1215 | [D - Grid Coloring](https://atcoder.jp/contests/arc080/tasks/arc080_b) | [C++ (GCC 9.2.1)](./atcoder/arc080/D.cpp) | `AtCoder` `*400` | Oct/21/2021 17:04 | 
+1214 | [C - 4-adjacent](https://atcoder.jp/contests/arc080/tasks/arc080_a) | [C++ (GCC 9.2.1)](./atcoder/arc080/C.cpp) | `AtCoder` `*400` | Oct/21/2021 16:59 | 
+1213 | [H - Omkar and Tours](https://codeforces.com/contest/1586/problem/H) | [GNU C++17](./codeforces/1586/H.cpp) | `data structures` `dsu` `sortings` `trees` | Oct/20/2021 22:00 | 
+1212 | [F - Defender of Childhood Dreams](https://codeforces.com/contest/1586/problem/F) | [GNU C++17](./codeforces/1586/F.cpp) | `bitmasks` `constructive algorithms` `divide and conquer` `graphs` `greedy` `math` | Oct/20/2021 19:23 | 
+1211 | [E - Moment of Bloom](https://codeforces.com/contest/1586/problem/E) | [GNU C++17](./codeforces/1586/E.cpp) | `constructive algorithms` `dfs and similar` `dsu` `graph matchings` `graphs` `greedy` `trees` | Oct/20/2021 18:55 | 
+1210 | [D - Omkar and the Meaning of Life](https://codeforces.com/contest/1586/problem/D) | [GNU C++17](./codeforces/1586/D.cpp) | `constructive algorithms` `greedy` `interactive` `math` | Oct/20/2021 18:36 | 
+1209 | [C - Omkar and Determination](https://codeforces.com/contest/1586/problem/C) | [GNU C++17](./codeforces/1586/C.cpp) | `constructive algorithms` `dp` `greedy` `implementation` `two pointers` | Oct/20/2021 18:08 | 
+1208 | [B - Omkar and Heavenly Tree](https://codeforces.com/contest/1586/problem/B) | [GNU C++17](./codeforces/1586/B.cpp) | `brute force` `constructive algorithms` `trees` | Oct/20/2021 17:58 | 
+1207 | [A - Windblume Ode](https://codeforces.com/contest/1586/problem/A) | [GNU C++17](./codeforces/1586/A.cpp) | `brute force` `constructive algorithms` `greedy` `math` `number theory` | Oct/20/2021 17:53 | 
 1206 | [C - Bubble Strike](https://codeforces.com/contest/1599/problem/C) | [GNU C++17](./codeforces/1599/C.cpp) | `combinatorics` `math` `probabilities` `ternary search` `*2000` | Oct/11/2021 17:09 | 
 1205 | [D - The Strongest Build](https://codeforces.com/contest/1574/problem/D) | [GNU C++17](./codeforces/1574/D.cpp) | `binary search` `brute force` `data structures` `dfs and similar` `graphs` `greedy` `hashing` `implementation` `*2000` | Oct/11/2021 13:22 | 
 1204 | [C - Slay the Dragon](https://codeforces.com/contest/1574/problem/C) | [GNU C++17](./codeforces/1574/C.cpp) | `binary search` `greedy` `sortings` `ternary search` `*1300` | Oct/11/2021 13:05 | 

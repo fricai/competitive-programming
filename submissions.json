@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC26717797": {
+    "contest_id": "arc080",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc080/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "4-adjacent",
+    "problem_url": "https://atcoder.jp/contests/arc080/tasks/arc080_a",
+    "submission_id": "AC26717797",
+    "submission_url": "https://atcoder.jp/contests/arc080/submissions/26717797",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Oct/21/2021 16:59"
+  },
   "AC26717877": {
     "contest_id": "arc080",
     "language": "C++ (GCC 9.2.1)",

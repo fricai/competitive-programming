@@ -13,8 +13,9 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1208 | [E - Young Maids](https://atcoder.jp/contests/arc080/tasks/arc080_c) | [C++ (GCC 9.2.1)](./atcoder/arc080/E.cpp) | `AtCoder` `*800` | Oct/21/2021 17:54 | 
-1207 | [D - Grid Coloring](https://atcoder.jp/contests/arc080/tasks/arc080_b) | [C++ (GCC 9.2.1)](./atcoder/arc080/D.cpp) | `AtCoder` `*400` | Oct/21/2021 17:04 | 
+1209 | [E - Young Maids](https://atcoder.jp/contests/arc080/tasks/arc080_c) | [C++ (GCC 9.2.1)](./atcoder/arc080/E.cpp) | `AtCoder` `*800` | Oct/21/2021 17:54 | 
+1208 | [D - Grid Coloring](https://atcoder.jp/contests/arc080/tasks/arc080_b) | [C++ (GCC 9.2.1)](./atcoder/arc080/D.cpp) | `AtCoder` `*400` | Oct/21/2021 17:04 | 
+1207 | [C - 4-adjacent](https://atcoder.jp/contests/arc080/tasks/arc080_a) | [C++ (GCC 9.2.1)](./atcoder/arc080/C.cpp) | `AtCoder` `*400` | Oct/21/2021 16:59 | 
 1206 | [C - Bubble Strike](https://codeforces.com/contest/1599/problem/C) | [GNU C++17](./codeforces/1599/C.cpp) | `combinatorics` `math` `probabilities` `ternary search` `*2000` | Oct/11/2021 17:09 | 
 1205 | [D - The Strongest Build](https://codeforces.com/contest/1574/problem/D) | [GNU C++17](./codeforces/1574/D.cpp) | `binary search` `brute force` `data structures` `dfs and similar` `graphs` `greedy` `hashing` `implementation` `*2000` | Oct/11/2021 13:22 | 
 1204 | [C - Slay the Dragon](https://codeforces.com/contest/1574/problem/C) | [GNU C++17](./codeforces/1574/C.cpp) | `binary search` `greedy` `sortings` `ternary search` `*1300` | Oct/11/2021 13:05 | 

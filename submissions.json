@@ -5087,6 +5087,22 @@
     ],
     "timestamp": "Sep/26/2021 19:22"
   },
+  "AC26718778": {
+    "contest_id": "arc080",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc080/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Young Maids",
+    "problem_url": "https://atcoder.jp/contests/arc080/tasks/arc080_c",
+    "submission_id": "AC26718778",
+    "submission_url": "https://atcoder.jp/contests/arc080/submissions/26718778",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Oct/21/2021 17:54"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

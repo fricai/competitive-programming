@@ -5183,6 +5183,22 @@
     ],
     "timestamp": "Oct/22/2021 19:06"
   },
+  "AC26734902": {
+    "contest_id": "arc081",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc081/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Flip and Rectangles",
+    "problem_url": "https://atcoder.jp/contests/arc081/tasks/arc081_d",
+    "submission_id": "AC26734902",
+    "submission_url": "https://atcoder.jp/contests/arc081/submissions/26734902",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Oct/22/2021 19:25"
+  },
   "AC26752153": {
     "contest_id": "arc082",
     "language": "C++ (GCC 9.2.1)",

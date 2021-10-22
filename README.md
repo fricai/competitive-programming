@@ -13,8 +13,9 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1211 | [E - Don't Be a Subsequence](https://atcoder.jp/contests/arc081/tasks/arc081_c) | [C++ (GCC 9.2.1)](./atcoder/arc081/E.cpp) | `AtCoder` `*600` | Oct/22/2021 19:06 | 
-1210 | [D - Coloring Dominoes](https://atcoder.jp/contests/arc081/tasks/arc081_b) | [C++ (GCC 9.2.1)](./atcoder/arc081/D.cpp) | `AtCoder` `*400` | Oct/22/2021 18:19 | 
+1212 | [E - Don't Be a Subsequence](https://atcoder.jp/contests/arc081/tasks/arc081_c) | [C++ (GCC 9.2.1)](./atcoder/arc081/E.cpp) | `AtCoder` `*600` | Oct/22/2021 19:06 | 
+1211 | [D - Coloring Dominoes](https://atcoder.jp/contests/arc081/tasks/arc081_b) | [C++ (GCC 9.2.1)](./atcoder/arc081/D.cpp) | `AtCoder` `*400` | Oct/22/2021 18:19 | 
+1210 | [C - Make a Rectangle](https://atcoder.jp/contests/arc081/tasks/arc081_a) | [C++ (GCC 9.2.1)](./atcoder/arc081/C.cpp) | `AtCoder` `*300` | Oct/22/2021 18:14 | 
 1209 | [E - Young Maids](https://atcoder.jp/contests/arc080/tasks/arc080_c) | [C++ (GCC 9.2.1)](./atcoder/arc080/E.cpp) | `AtCoder` `*800` | Oct/21/2021 17:54 | 
 1208 | [D - Grid Coloring](https://atcoder.jp/contests/arc080/tasks/arc080_b) | [C++ (GCC 9.2.1)](./atcoder/arc080/D.cpp) | `AtCoder` `*400` | Oct/21/2021 17:04 | 
 1207 | [C - 4-adjacent](https://atcoder.jp/contests/arc080/tasks/arc080_a) | [C++ (GCC 9.2.1)](./atcoder/arc080/C.cpp) | `AtCoder` `*400` | Oct/21/2021 16:59 | 

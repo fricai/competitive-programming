@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1210 | [E - Don't Be a Subsequence](https://atcoder.jp/contests/arc081/tasks/arc081_c) | [C++ (GCC 9.2.1)](./atcoder/arc081/E.cpp) | `AtCoder` `*600` | Oct/22/2021 19:06 | 
 1209 | [E - Young Maids](https://atcoder.jp/contests/arc080/tasks/arc080_c) | [C++ (GCC 9.2.1)](./atcoder/arc080/E.cpp) | `AtCoder` `*800` | Oct/21/2021 17:54 | 
 1208 | [D - Grid Coloring](https://atcoder.jp/contests/arc080/tasks/arc080_b) | [C++ (GCC 9.2.1)](./atcoder/arc080/D.cpp) | `AtCoder` `*400` | Oct/21/2021 17:04 | 
 1207 | [C - 4-adjacent](https://atcoder.jp/contests/arc080/tasks/arc080_a) | [C++ (GCC 9.2.1)](./atcoder/arc080/C.cpp) | `AtCoder` `*400` | Oct/21/2021 16:59 | 

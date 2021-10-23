@@ -5183,6 +5183,22 @@
     ],
     "timestamp": "Oct/22/2021 19:06"
   },
+  "AC26772696": {
+    "contest_id": "arc082",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc082/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Sandglass",
+    "problem_url": "https://atcoder.jp/contests/arc082/tasks/arc082_d",
+    "submission_id": "AC26772696",
+    "submission_url": "https://atcoder.jp/contests/arc082/submissions/26772696",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Oct/23/2021 18:24"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

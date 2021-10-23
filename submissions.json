@@ -5183,6 +5183,22 @@
     ],
     "timestamp": "Oct/22/2021 19:06"
   },
+  "AC26761437": {
+    "contest_id": "arc082",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc082/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "ConvexScore",
+    "problem_url": "https://atcoder.jp/contests/arc082/tasks/arc082_c",
+    "submission_id": "AC26761437",
+    "submission_url": "https://atcoder.jp/contests/arc082/submissions/26761437",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Oct/23/2021 17:39"
+  },
   "AC26772696": {
     "contest_id": "arc082",
     "language": "C++ (GCC 9.2.1)",

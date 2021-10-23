@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1213 | [F - Sandglass](https://atcoder.jp/contests/arc082/tasks/arc082_d) | [C++ (GCC 9.2.1)](./atcoder/arc082/F.cpp) | `AtCoder` `*700` | Oct/23/2021 18:24 | 
 1212 | [E - Don't Be a Subsequence](https://atcoder.jp/contests/arc081/tasks/arc081_c) | [C++ (GCC 9.2.1)](./atcoder/arc081/E.cpp) | `AtCoder` `*600` | Oct/22/2021 19:06 | 
 1211 | [D - Coloring Dominoes](https://atcoder.jp/contests/arc081/tasks/arc081_b) | [C++ (GCC 9.2.1)](./atcoder/arc081/D.cpp) | `AtCoder` `*400` | Oct/22/2021 18:19 | 
 1210 | [C - Make a Rectangle](https://atcoder.jp/contests/arc081/tasks/arc081_a) | [C++ (GCC 9.2.1)](./atcoder/arc081/C.cpp) | `AtCoder` `*300` | Oct/22/2021 18:14 | 

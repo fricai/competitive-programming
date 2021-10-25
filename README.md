@@ -13,7 +13,8 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1225 | [B - Frog Traveler](https://codeforces.com/contest/1601/problem/B) | [GNU C++17](./codeforces/1601/B.cpp) | `data structures` `dp` `graphs` `shortest paths` `*1900` | Oct/25/2021 13:32 | 
+1226 | [B - Frog Traveler](https://codeforces.com/contest/1601/problem/B) | [GNU C++17](./codeforces/1601/B.cpp) | `data structures` `dp` `graphs` `shortest paths` `*1900` | Oct/25/2021 13:32 | 
+1225 | [A - Array Elimination](https://codeforces.com/contest/1601/problem/A) | [GNU C++17](./codeforces/1601/A.cpp) | `bitmasks` `math` `number theory` `*1300` | Oct/25/2021 12:12 | 
 1224 | [F - Sandglass](https://atcoder.jp/contests/arc082/tasks/arc082_d) | [C++ (GCC 9.2.1)](./atcoder/arc082/F.cpp) | `AtCoder` `*700` | Oct/23/2021 18:24 | 
 1223 | [E - ConvexScore](https://atcoder.jp/contests/arc082/tasks/arc082_c) | [C++ (GCC 9.2.1)](./atcoder/arc082/E.cpp) | `AtCoder` `*700` | Oct/23/2021 17:39 | 
 1222 | [D - Derangement](https://atcoder.jp/contests/arc082/tasks/arc082_b) | [C++ (GCC 9.2.1)](./atcoder/arc082/D.cpp) | `AtCoder` `*400` | Oct/23/2021 17:07 | 

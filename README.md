@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1228 | [C - Extreme Extension](https://codeforces.com/contest/1603/problem/C) | [GNU C++17](./codeforces/1603/C.cpp) | `dp` `greedy` `math` `number theory` `*2300` | Nov/21/2021 20:19 | 
 1227 | [D - Restoring Road Network](https://atcoder.jp/contests/arc083/tasks/arc083_b) | [C++ (GCC 9.2.1)](./atcoder/arc083/D.cpp) | `AtCoder` `*500` | Oct/28/2021 00:15 | 
 1226 | [B - Frog Traveler](https://codeforces.com/contest/1601/problem/B) | [GNU C++17](./codeforces/1601/B.cpp) | `data structures` `dp` `graphs` `shortest paths` `*1900` | Oct/25/2021 13:32 | 
 1225 | [A - Array Elimination](https://codeforces.com/contest/1601/problem/A) | [GNU C++17](./codeforces/1601/A.cpp) | `bitmasks` `math` `number theory` `*1300` | Oct/25/2021 12:12 | 

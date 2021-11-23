@@ -13,18 +13,19 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1242 | [F - Sports Betting](https://codeforces.com/contest/1556/problem/F) | [GNU C++17 (64)](./codeforces/1556/F.cpp) | `bitmasks` `combinatorics` `dp` `graphs` `math` `probabilities` `*2500` | Nov/25/2021 19:46 | 
-1241 | [E - Equilibrium](https://codeforces.com/contest/1556/problem/E) | [GNU C++17](./codeforces/1556/E.cpp) | `data structures` `dp` `greedy` `*2200` | Nov/25/2021 19:13 | 
-1240 | [D - Take a Guess](https://codeforces.com/contest/1556/problem/D) | [GNU C++17](./codeforces/1556/D.cpp) | `bitmasks` `constructive algorithms` `interactive` `math` `*1800` | Nov/25/2021 18:46 | 
-1239 | [C - Compressed Bracket Sequence](https://codeforces.com/contest/1556/problem/C) | [GNU C++17](./codeforces/1556/C.cpp) | `brute force` `implementation` `*1800` | Nov/25/2021 17:38 | 
-1238 | [B - Take Your Places!](https://codeforces.com/contest/1556/problem/B) | [GNU C++17](./codeforces/1556/B.cpp) | `implementation` `*1300` | Nov/25/2021 17:15 | 
-1237 | [A - A Variety of Operations](https://codeforces.com/contest/1556/problem/A) | [GNU C++17](./codeforces/1556/A.cpp) | `math` `*800` | Nov/25/2021 17:02 | 
-1236 | [C - Game with Stones](https://codeforces.com/contest/1588/problem/C) | [GNU C++17](./codeforces/1588/C.cpp) | `binary search` `data structures` `divide and conquer` `games` `greedy` `*2300` | Nov/25/2021 14:31 | 
-1235 | [B - Guess the Permutation](https://codeforces.com/contest/1588/problem/B) | [GNU C++17](./codeforces/1588/B.cpp) | `binary search` `combinatorics` `implementation` `interactive` `*2000` | Nov/25/2021 13:11 | 
-1234 | [A - Two Arrays](https://codeforces.com/contest/1588/problem/A) | [GNU C++17](./codeforces/1588/A.cpp) | `graph matchings` `greedy` `math` `sortings` `*900` | Nov/25/2021 12:47 | 
-1233 | [D - Not Quite Lee](https://codeforces.com/contest/1610/problem/D) | [GNU C++17 (64)](./codeforces/1610/D.cpp) | `combinatorics` `dp` `math` `number theory` `*2000` | Nov/23/2021 21:33 | 
-1232 | [C - Keshi Is Throwing a Party](https://codeforces.com/contest/1610/problem/C) | [GNU C++17](./codeforces/1610/C.cpp) | `binary search` `greedy` `*1600` | Nov/23/2021 20:55 | 
-1231 | [B - Kalindrome Array](https://codeforces.com/contest/1610/problem/B) | [GNU C++17](./codeforces/1610/B.cpp) | `greedy` `two pointers` `*1100` | Nov/23/2021 20:20 | 
+1243 | [F - Sports Betting](https://codeforces.com/contest/1556/problem/F) | [GNU C++17 (64)](./codeforces/1556/F.cpp) | `bitmasks` `combinatorics` `dp` `graphs` `math` `probabilities` `*2500` | Nov/25/2021 19:46 | 
+1242 | [E - Equilibrium](https://codeforces.com/contest/1556/problem/E) | [GNU C++17](./codeforces/1556/E.cpp) | `data structures` `dp` `greedy` `*2200` | Nov/25/2021 19:13 | 
+1241 | [D - Take a Guess](https://codeforces.com/contest/1556/problem/D) | [GNU C++17](./codeforces/1556/D.cpp) | `bitmasks` `constructive algorithms` `interactive` `math` `*1800` | Nov/25/2021 18:46 | 
+1240 | [C - Compressed Bracket Sequence](https://codeforces.com/contest/1556/problem/C) | [GNU C++17](./codeforces/1556/C.cpp) | `brute force` `implementation` `*1800` | Nov/25/2021 17:38 | 
+1239 | [B - Take Your Places!](https://codeforces.com/contest/1556/problem/B) | [GNU C++17](./codeforces/1556/B.cpp) | `implementation` `*1300` | Nov/25/2021 17:15 | 
+1238 | [A - A Variety of Operations](https://codeforces.com/contest/1556/problem/A) | [GNU C++17](./codeforces/1556/A.cpp) | `math` `*800` | Nov/25/2021 17:02 | 
+1237 | [C - Game with Stones](https://codeforces.com/contest/1588/problem/C) | [GNU C++17](./codeforces/1588/C.cpp) | `binary search` `data structures` `divide and conquer` `games` `greedy` `*2300` | Nov/25/2021 14:31 | 
+1236 | [B - Guess the Permutation](https://codeforces.com/contest/1588/problem/B) | [GNU C++17](./codeforces/1588/B.cpp) | `binary search` `combinatorics` `implementation` `interactive` `*2000` | Nov/25/2021 13:11 | 
+1235 | [A - Two Arrays](https://codeforces.com/contest/1588/problem/A) | [GNU C++17](./codeforces/1588/A.cpp) | `graph matchings` `greedy` `math` `sortings` `*900` | Nov/25/2021 12:47 | 
+1234 | [D - Not Quite Lee](https://codeforces.com/contest/1610/problem/D) | [GNU C++17 (64)](./codeforces/1610/D.cpp) | `combinatorics` `dp` `math` `number theory` `*2000` | Nov/23/2021 21:33 | 
+1233 | [C - Keshi Is Throwing a Party](https://codeforces.com/contest/1610/problem/C) | [GNU C++17](./codeforces/1610/C.cpp) | `binary search` `greedy` `*1600` | Nov/23/2021 20:55 | 
+1232 | [B - Kalindrome Array](https://codeforces.com/contest/1610/problem/B) | [GNU C++17](./codeforces/1610/B.cpp) | `greedy` `two pointers` `*1100` | Nov/23/2021 20:20 | 
+1231 | [A - Anti Light's Cell Guessing](https://codeforces.com/contest/1610/problem/A) | [GNU C++17](./codeforces/1610/A.cpp) | `math` `*900` | Nov/23/2021 20:07 | 
 1230 | [C - Extreme Extension](https://codeforces.com/contest/1603/problem/C) | [GNU C++17](./codeforces/1603/C.cpp) | `dp` `greedy` `math` `number theory` `*2300` | Nov/21/2021 20:19 | 
 1229 | [B - Moderate Modular Mode](https://codeforces.com/contest/1603/problem/B) | [GNU C++17](./codeforces/1603/B.cpp) | `constructive algorithms` `math` `number theory` `*1600` | Nov/21/2021 12:43 | 
 1228 | [A - Di-visible Confusion](https://codeforces.com/contest/1603/problem/A) | [GNU C++17](./codeforces/1603/A.cpp) | `constructive algorithms` `math` `number theory` `*1300` | Nov/21/2021 12:35 | 

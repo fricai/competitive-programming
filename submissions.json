@@ -5279,6 +5279,22 @@
     ],
     "timestamp": "Oct/28/2021 00:15"
   },
+  "AC27490745": {
+    "contest_id": "arc129",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc129/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "-1+2-1",
+    "problem_url": "https://atcoder.jp/contests/arc129/tasks/arc129_d",
+    "submission_id": "AC27490745",
+    "submission_url": "https://atcoder.jp/contests/arc129/submissions/27490745",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Nov/25/2021 22:09"
+  },
   "AC27491117": {
     "contest_id": "arc129",
     "language": "C++ (GCC 9.2.1)",

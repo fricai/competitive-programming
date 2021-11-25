@@ -21007,6 +21007,25 @@
     ],
     "timestamp": "Nov/21/2021 20:19"
   },
+  "CF136834954": {
+    "contest_id": 1556,
+    "language": "GNU C++17",
+    "path": "codeforces/1556/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Take a Guess",
+    "problem_url": "https://codeforces.com/contest/1556/problem/D",
+    "submission_id": "CF136834954",
+    "submission_url": "https://codeforces.com/contest/1556/submission/136834954",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "interactive",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Nov/25/2021 18:46"
+  },
   "CF136837448": {
     "contest_id": 1556,
     "language": "GNU C++17",

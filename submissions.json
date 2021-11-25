@@ -5279,6 +5279,22 @@
     ],
     "timestamp": "Oct/28/2021 00:15"
   },
+  "AC27490579": {
+    "contest_id": "arc129",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc129/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Multiple of 7",
+    "problem_url": "https://atcoder.jp/contests/arc129/tasks/arc129_c",
+    "submission_id": "AC27490579",
+    "submission_url": "https://atcoder.jp/contests/arc129/submissions/27490579",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Nov/25/2021 21:44"
+  },
   "AC27490745": {
     "contest_id": "arc129",
     "language": "C++ (GCC 9.2.1)",

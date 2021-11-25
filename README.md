@@ -13,11 +13,12 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1248 | [D - Small Multiple](https://atcoder.jp/contests/arc084/tasks/arc084_b) | [C++ (GCC 9.2.1)](./atcoder/arc084/D.cpp) | `AtCoder` `*700` | Nov/26/2021 22:57 | 
-1247 | [E - Finite Encyclopedia of Integer Sequences](https://atcoder.jp/contests/arc084/tasks/arc084_c) | [C++ (GCC 9.2.1)](./atcoder/arc084/E.cpp) | `AtCoder` `*800` | Nov/26/2021 22:49 | 
-1246 | [C - Snuke Festival](https://atcoder.jp/contests/arc084/tasks/arc084_a) | [C++ (GCC 9.2.1)](./atcoder/arc084/C.cpp) | `AtCoder` `*300` | Nov/26/2021 22:30 | 
-1245 | [E - Yet Another Minimization](https://atcoder.jp/contests/arc129/tasks/arc129_e) | [C++ (GCC 9.2.1)](./atcoder/arc129/E.cpp) | `AtCoder` `*900` | Nov/25/2021 23:28 | 
-1244 | [D - -1+2-1](https://atcoder.jp/contests/arc129/tasks/arc129_d) | [C++ (GCC 9.2.1)](./atcoder/arc129/D.cpp) | `AtCoder` `*600` | Nov/25/2021 22:09 | 
+1249 | [D - Small Multiple](https://atcoder.jp/contests/arc084/tasks/arc084_b) | [C++ (GCC 9.2.1)](./atcoder/arc084/D.cpp) | `AtCoder` `*700` | Nov/26/2021 22:57 | 
+1248 | [E - Finite Encyclopedia of Integer Sequences](https://atcoder.jp/contests/arc084/tasks/arc084_c) | [C++ (GCC 9.2.1)](./atcoder/arc084/E.cpp) | `AtCoder` `*800` | Nov/26/2021 22:49 | 
+1247 | [C - Snuke Festival](https://atcoder.jp/contests/arc084/tasks/arc084_a) | [C++ (GCC 9.2.1)](./atcoder/arc084/C.cpp) | `AtCoder` `*300` | Nov/26/2021 22:30 | 
+1246 | [E - Yet Another Minimization](https://atcoder.jp/contests/arc129/tasks/arc129_e) | [C++ (GCC 9.2.1)](./atcoder/arc129/E.cpp) | `AtCoder` `*900` | Nov/25/2021 23:28 | 
+1245 | [D - -1+2-1](https://atcoder.jp/contests/arc129/tasks/arc129_d) | [C++ (GCC 9.2.1)](./atcoder/arc129/D.cpp) | `AtCoder` `*600` | Nov/25/2021 22:09 | 
+1244 | [C - Multiple of 7](https://atcoder.jp/contests/arc129/tasks/arc129_c) | [C++ (GCC 9.2.1)](./atcoder/arc129/C.cpp) | `AtCoder` `*500` | Nov/25/2021 21:44 | 
 1243 | [F - Sports Betting](https://codeforces.com/contest/1556/problem/F) | [GNU C++17 (64)](./codeforces/1556/F.cpp) | `bitmasks` `combinatorics` `dp` `graphs` `math` `probabilities` `*2500` | Nov/25/2021 19:46 | 
 1242 | [E - Equilibrium](https://codeforces.com/contest/1556/problem/E) | [GNU C++17](./codeforces/1556/E.cpp) | `data structures` `dp` `greedy` `*2200` | Nov/25/2021 19:13 | 
 1241 | [D - Take a Guess](https://codeforces.com/contest/1556/problem/D) | [GNU C++17](./codeforces/1556/D.cpp) | `bitmasks` `constructive algorithms` `interactive` `math` `*1800` | Nov/25/2021 18:46 | 

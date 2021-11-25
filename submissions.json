@@ -21007,6 +21007,27 @@
     ],
     "timestamp": "Nov/21/2021 20:19"
   },
+  "CF136840150": {
+    "contest_id": 1556,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1556/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Sports Betting",
+    "problem_url": "https://codeforces.com/contest/1556/problem/F",
+    "submission_id": "CF136840150",
+    "submission_url": "https://codeforces.com/contest/1556/submission/136840150",
+    "tags": [
+      "bitmasks",
+      "combinatorics",
+      "dp",
+      "graphs",
+      "math",
+      "probabilities",
+      "*2500"
+    ],
+    "timestamp": "Nov/25/2021 19:46"
+  },
   "CF47808038": {
     "contest_id": 755,
     "language": "GNU C++14",

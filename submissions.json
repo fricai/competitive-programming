@@ -5279,6 +5279,22 @@
     ],
     "timestamp": "Oct/28/2021 00:15"
   },
+  "AC27491117": {
+    "contest_id": "arc129",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc129/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Yet Another Minimization",
+    "problem_url": "https://atcoder.jp/contests/arc129/tasks/arc129_e",
+    "submission_id": "AC27491117",
+    "submission_url": "https://atcoder.jp/contests/arc129/submissions/27491117",
+    "tags": [
+      "AtCoder",
+      "*900"
+    ],
+    "timestamp": "Nov/25/2021 23:28"
+  },
   "AC27502270": {
     "contest_id": "arc084",
     "language": "C++ (GCC 9.2.1)",

@@ -5279,6 +5279,22 @@
     ],
     "timestamp": "Oct/28/2021 00:15"
   },
+  "AC27502415": {
+    "contest_id": "arc084",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc084/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Finite Encyclopedia of Integer Sequences",
+    "problem_url": "https://atcoder.jp/contests/arc084/tasks/arc084_c",
+    "submission_id": "AC27502415",
+    "submission_url": "https://atcoder.jp/contests/arc084/submissions/27502415",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Nov/26/2021 22:49"
+  },
   "AC27502449": {
     "contest_id": "arc084",
     "language": "C++ (GCC 9.2.1)",

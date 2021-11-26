@@ -5279,6 +5279,22 @@
     ],
     "timestamp": "Oct/28/2021 00:15"
   },
+  "AC27502449": {
+    "contest_id": "arc084",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc084/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Small Multiple",
+    "problem_url": "https://atcoder.jp/contests/arc084/tasks/arc084_b",
+    "submission_id": "AC27502449",
+    "submission_url": "https://atcoder.jp/contests/arc084/submissions/27502449",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Nov/26/2021 22:57"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

@@ -5279,6 +5279,22 @@
     ],
     "timestamp": "Oct/28/2021 00:15"
   },
+  "AC27502270": {
+    "contest_id": "arc084",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc084/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Snuke Festival",
+    "problem_url": "https://atcoder.jp/contests/arc084/tasks/arc084_a",
+    "submission_id": "AC27502270",
+    "submission_url": "https://atcoder.jp/contests/arc084/submissions/27502270",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Nov/26/2021 22:30"
+  },
   "AC27502415": {
     "contest_id": "arc084",
     "language": "C++ (GCC 9.2.1)",

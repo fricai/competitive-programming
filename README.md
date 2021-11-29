@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1252 | [D2 - Divan and Kostomuksha (hard version)](https://codeforces.com/contest/1614/problem/D2) | [GNU C++17 (64)](./codeforces/1614/D2.cpp) | `dp` `number theory` `*2300` | Nov/29/2021 20:35 | 
 1251 | [D - Small Multiple](https://atcoder.jp/contests/arc084/tasks/arc084_b) | [C++ (GCC 9.2.1)](./atcoder/arc084/D.cpp) | `AtCoder` `*700` | Nov/26/2021 22:57 | 
 1250 | [E - Finite Encyclopedia of Integer Sequences](https://atcoder.jp/contests/arc084/tasks/arc084_c) | [C++ (GCC 9.2.1)](./atcoder/arc084/E.cpp) | `AtCoder` `*800` | Nov/26/2021 22:49 | 
 1249 | [C - Snuke Festival](https://atcoder.jp/contests/arc084/tasks/arc084_a) | [C++ (GCC 9.2.1)](./atcoder/arc084/C.cpp) | `AtCoder` `*300` | Nov/26/2021 22:30 | 

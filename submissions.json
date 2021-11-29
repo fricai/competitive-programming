@@ -21369,6 +21369,23 @@
     ],
     "timestamp": "Nov/25/2021 19:46"
   },
+  "CF137344920": {
+    "contest_id": 1614,
+    "language": "GNU C++17",
+    "path": "codeforces/1614/D1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D1",
+    "problem_name": "Divan and Kostomuksha (easy version)",
+    "problem_url": "https://codeforces.com/contest/1614/problem/D1",
+    "submission_id": "CF137344920",
+    "submission_url": "https://codeforces.com/contest/1614/submission/137344920",
+    "tags": [
+      "dp",
+      "number theory",
+      "*2100"
+    ],
+    "timestamp": "Nov/29/2021 19:31"
+  },
   "CF137350872": {
     "contest_id": 1614,
     "language": "GNU C++17 (64)",

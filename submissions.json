@@ -5407,6 +5407,22 @@
     ],
     "timestamp": "Nov/26/2021 22:57"
   },
+  "AC27632539": {
+    "contest_id": "arc085",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc085/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "MUL",
+    "problem_url": "https://atcoder.jp/contests/arc085/tasks/arc085_c",
+    "submission_id": "AC27632539",
+    "submission_url": "https://atcoder.jp/contests/arc085/submissions/27632539",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Dec/02/2021 20:18"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

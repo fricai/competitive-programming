@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1262 | [E - Smuggling Marbles](https://atcoder.jp/contests/arc086/tasks/arc086_c) | [C++ (GCC 9.2.1)](./atcoder/arc086/E.cpp) | `AtCoder` `*1000` | Dec/03/2021 01:36 | 
 1261 | [E - MUL](https://atcoder.jp/contests/arc085/tasks/arc085_c) | [C++ (GCC 9.2.1)](./atcoder/arc085/E.cpp) | `AtCoder` `*700` | Dec/02/2021 20:18 | 
 1260 | [D - ABS](https://atcoder.jp/contests/arc085/tasks/arc085_b) | [C++ (GCC 9.2.1)](./atcoder/arc085/D.cpp) | `AtCoder` `*500` | Dec/02/2021 20:05 | 
 1259 | [C - HSI](https://atcoder.jp/contests/arc085/tasks/arc085_a) | [C++ (GCC 9.2.1)](./atcoder/arc085/C.cpp) | `AtCoder` `*300` | Dec/02/2021 20:00 | 

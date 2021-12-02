@@ -5407,6 +5407,22 @@
     ],
     "timestamp": "Nov/26/2021 22:57"
   },
+  "AC27632299": {
+    "contest_id": "arc085",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc085/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "HSI",
+    "problem_url": "https://atcoder.jp/contests/arc085/tasks/arc085_a",
+    "submission_id": "AC27632299",
+    "submission_url": "https://atcoder.jp/contests/arc085/submissions/27632299",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Dec/02/2021 20:00"
+  },
   "AC27632368": {
     "contest_id": "arc085",
     "language": "C++ (GCC 9.2.1)",

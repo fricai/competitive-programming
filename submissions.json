@@ -5455,6 +5455,22 @@
     ],
     "timestamp": "Dec/02/2021 20:18"
   },
+  "AC27634011": {
+    "contest_id": "arc086",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc086/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Not so Diverse",
+    "problem_url": "https://atcoder.jp/contests/arc086/tasks/arc086_a",
+    "submission_id": "AC27634011",
+    "submission_url": "https://atcoder.jp/contests/arc086/submissions/27634011",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Dec/02/2021 22:47"
+  },
   "AC27634269": {
     "contest_id": "arc086",
     "language": "C++ (GCC 9.2.1)",

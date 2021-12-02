@@ -46,22 +46,15 @@ signed main() {
 
 	vector<deque<state>> dp(n + 1);
 	for (int u = n; u >= 0; --u) {
-		sort(all(g[u]), [&](int x, int y) {
-				return sz(dp[x]) > sz(dp[y]);
-				});
-
 		int changes = 0;
-		while (sz(g[u]) > 1) {
-			int x = g[u].back(); g[u].pop_back();
-			int y = g[u].back();
+		for (auto v : g[u]) {
+			if (sz(dp[u]) < sz(dp[v]))
+				swap(dp[u], dp[v]);
 
-			changes = sz(dp[x]);
-			rep(i, 0, changes) {
-				dp[y][i] = merge(dp[x][i], dp[y][i]);
+			uax(changes, sz(dp[v]));
+			rep(i, 0, sz(dp[v])) {
+				dp[u][i] = merge(dp[u][i], dp[v][i]);
 			}
-		}
-		if (!g[u].empty()) {
-			dp[u] = move(dp[g[u][0]]);
 		}
 		rep(i, 0, changes) {
 			dp[u][i][0] += dp[u][i][2];

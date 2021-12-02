@@ -5503,6 +5503,22 @@
     ],
     "timestamp": "Dec/03/2021 01:36"
   },
+  "AC27634747": {
+    "contest_id": "arc086",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc086/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Smuggling Marbles",
+    "problem_url": "https://atcoder.jp/contests/arc086/tasks/arc086_c",
+    "submission_id": "AC27634747",
+    "submission_url": "https://atcoder.jp/contests/arc086/submissions/27634747",
+    "tags": [
+      "AtCoder",
+      "*1000"
+    ],
+    "timestamp": "Dec/03/2021 01:39"
+  },
   "AC27643197": {
     "contest_id": "arc087",
     "language": "C++ (GCC 9.2.1)",

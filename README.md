@@ -13,7 +13,8 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1259 | [E - MUL](https://atcoder.jp/contests/arc085/tasks/arc085_c) | [C++ (GCC 9.2.1)](./atcoder/arc085/E.cpp) | `AtCoder` `*700` | Dec/02/2021 20:18 | 
+1260 | [E - MUL](https://atcoder.jp/contests/arc085/tasks/arc085_c) | [C++ (GCC 9.2.1)](./atcoder/arc085/E.cpp) | `AtCoder` `*700` | Dec/02/2021 20:18 | 
+1259 | [D - ABS](https://atcoder.jp/contests/arc085/tasks/arc085_b) | [C++ (GCC 9.2.1)](./atcoder/arc085/D.cpp) | `AtCoder` `*500` | Dec/02/2021 20:05 | 
 1258 | [E - William The Oblivious ](https://codeforces.com/contest/1609/problem/E) | [GNU C++17](./codeforces/1609/E.cpp) | `bitmasks` `data structures` `dp` `matrices` `*2400` | Dec/02/2021 12:13 | 
 1257 | [D - Social Network](https://codeforces.com/contest/1609/problem/D) | [GNU C++17](./codeforces/1609/D.cpp) | `dsu` `graphs` `greedy` `implementation` `trees` `*1600` | Dec/02/2021 11:28 | 
 1256 | [C - Complex Market Analysis](https://codeforces.com/contest/1609/problem/C) | [GNU C++17](./codeforces/1609/C.cpp) | `binary search` `dp` `implementation` `number theory` `schedules` `two pointers` `*1400` | Dec/02/2021 11:19 | 

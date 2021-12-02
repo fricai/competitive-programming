@@ -5407,6 +5407,22 @@
     ],
     "timestamp": "Nov/26/2021 22:57"
   },
+  "AC27632368": {
+    "contest_id": "arc085",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc085/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "ABS",
+    "problem_url": "https://atcoder.jp/contests/arc085/tasks/arc085_b",
+    "submission_id": "AC27632368",
+    "submission_url": "https://atcoder.jp/contests/arc085/submissions/27632368",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/02/2021 20:05"
+  },
   "AC27632539": {
     "contest_id": "arc085",
     "language": "C++ (GCC 9.2.1)",

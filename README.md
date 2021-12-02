@@ -13,8 +13,9 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1255 | [E - William The Oblivious ](https://codeforces.com/contest/1609/problem/E) | [GNU C++17](./codeforces/1609/E.cpp) | `bitmasks` `data structures` `dp` `matrices` `*2400` | Dec/02/2021 12:13 | 
-1254 | [D - Social Network](https://codeforces.com/contest/1609/problem/D) | [GNU C++17](./codeforces/1609/D.cpp) | `dsu` `graphs` `greedy` `implementation` `trees` `*1600` | Dec/02/2021 11:28 | 
+1256 | [E - William The Oblivious ](https://codeforces.com/contest/1609/problem/E) | [GNU C++17](./codeforces/1609/E.cpp) | `bitmasks` `data structures` `dp` `matrices` `*2400` | Dec/02/2021 12:13 | 
+1255 | [D - Social Network](https://codeforces.com/contest/1609/problem/D) | [GNU C++17](./codeforces/1609/D.cpp) | `dsu` `graphs` `greedy` `implementation` `trees` `*1600` | Dec/02/2021 11:28 | 
+1254 | [C - Complex Market Analysis](https://codeforces.com/contest/1609/problem/C) | [GNU C++17](./codeforces/1609/C.cpp) | `binary search` `dp` `implementation` `number theory` `schedules` `two pointers` `*1400` | Dec/02/2021 11:19 | 
 1253 | [D2 - Divan and Kostomuksha (hard version)](https://codeforces.com/contest/1614/problem/D2) | [GNU C++17 (64)](./codeforces/1614/D2.cpp) | `dp` `number theory` `*2300` | Nov/29/2021 20:35 | 
 1252 | [D1 - Divan and Kostomuksha (easy version)](https://codeforces.com/contest/1614/problem/D1) | [GNU C++17](./codeforces/1614/D1.cpp) | `dp` `number theory` `*2100` | Nov/29/2021 19:31 | 
 1251 | [D - Small Multiple](https://atcoder.jp/contests/arc084/tasks/arc084_b) | [C++ (GCC 9.2.1)](./atcoder/arc084/D.cpp) | `AtCoder` `*700` | Nov/26/2021 22:57 | 

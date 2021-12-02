@@ -21403,6 +21403,23 @@
     ],
     "timestamp": "Nov/29/2021 20:35"
   },
+  "CF137746945": {
+    "contest_id": 1609,
+    "language": "GNU C++17",
+    "path": "codeforces/1609/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "William the Vigilant",
+    "problem_url": "https://codeforces.com/contest/1609/problem/B",
+    "submission_id": "CF137746945",
+    "submission_url": "https://codeforces.com/contest/1609/submission/137746945",
+    "tags": [
+      "implementation",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "Dec/02/2021 11:03"
+  },
   "CF137748041": {
     "contest_id": 1609,
     "language": "GNU C++17",

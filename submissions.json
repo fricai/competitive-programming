@@ -5503,6 +5503,22 @@
     ],
     "timestamp": "Dec/03/2021 01:36"
   },
+  "AC27652530": {
+    "contest_id": "arc087",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc087/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "FT Robot",
+    "problem_url": "https://atcoder.jp/contests/arc087/tasks/arc087_b",
+    "submission_id": "AC27652530",
+    "submission_url": "https://atcoder.jp/contests/arc087/submissions/27652530",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/03/2021 17:42"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

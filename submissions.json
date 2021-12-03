@@ -5631,6 +5631,22 @@
     ],
     "timestamp": "Dec/03/2021 18:51"
   },
+  "AC27676329": {
+    "contest_id": "arc087",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc087/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Prefix-free Game",
+    "problem_url": "https://atcoder.jp/contests/arc087/tasks/arc087_c",
+    "submission_id": "AC27676329",
+    "submission_url": "https://atcoder.jp/contests/arc087/submissions/27676329",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Dec/03/2021 21:06"
+  },
   "AC27676419": {
     "contest_id": "arc087",
     "language": "C++ (GCC 9.2.1)",

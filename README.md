@@ -13,7 +13,8 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1265 | [D - FT Robot](https://atcoder.jp/contests/arc087/tasks/arc087_b) | [C++ (GCC 9.2.1)](./atcoder/arc087/D.cpp) | `AtCoder` `*500` | Dec/03/2021 17:42 | 
+1266 | [D - FT Robot](https://atcoder.jp/contests/arc087/tasks/arc087_b) | [C++ (GCC 9.2.1)](./atcoder/arc087/D.cpp) | `AtCoder` `*500` | Dec/03/2021 17:42 | 
+1265 | [C - Good Sequence](https://atcoder.jp/contests/arc087/tasks/arc087_a) | [C++ (GCC 9.2.1)](./atcoder/arc087/C.cpp) | `AtCoder` `*300` | Dec/03/2021 17:24 | 
 1264 | [E - Smuggling Marbles](https://atcoder.jp/contests/arc086/tasks/arc086_c) | [C++ (GCC 9.2.1)](./atcoder/arc086/E.cpp) | `AtCoder` `*1000` | Dec/03/2021 01:36 | 
 1263 | [D - Non-decreasing](https://atcoder.jp/contests/arc086/tasks/arc086_b) | [C++ (GCC 9.2.1)](./atcoder/arc086/D.cpp) | `AtCoder` `*600` | Dec/02/2021 23:31 | 
 1262 | [C - Not so Diverse](https://atcoder.jp/contests/arc086/tasks/arc086_a) | [C++ (GCC 9.2.1)](./atcoder/arc086/C.cpp) | `AtCoder` `*300` | Dec/02/2021 22:47 | 

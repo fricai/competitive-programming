@@ -32,11 +32,11 @@ mint solve(int N, int M, int L) {
 	g[0][0] = 1;
 	for (int n = 0; n <= N; ++n) {
 		for (int m = 0; m <= M; ++m) {
-			for (int k = 1; k <= L && k <= n && k - 1 <= m; ++k) {
-				g[n][m] += C(n - 1, k - 1) * g[n - k][m - k + 1] * path[k];
+			for (int k = 1; k <= L && n + k <= N && m + k - 1 <= M; ++k) {
+				g[n + k][m + k - 1] += C(N - n - 1, k - 1) * g[n][m] * path[k];
 			}
-			for (int k = 2; k <= L && k <= n && k <= m; ++k) {
-				g[n][m] += C(n - 1, k - 1) * g[n - k][m - k] * cycle[k];
+			for (int k = 2; k <= L && n + k <= N && m + k <= M; ++k) {
+				g[n + k][m + k] += C(N - n - 1, k - 1) * g[n][m] * cycle[k];
 			}
 		}
 	}

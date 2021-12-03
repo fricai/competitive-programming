@@ -72,13 +72,8 @@ signed main() {
 
 			int x = m - 1;
 			while (x > 0) {
-				if (x > (m - 1) / 2) {
-					if (dp[g[u][x]] + dp[g[u][m - 1 - x]] > b)
-						break;
-				} else {
-					if (dp[g[u][x]] + dp[g[u][m - x]] > b)
-						break;
-				}
+				if (dp[g[u][x]] + dp[g[u][m - x - (2 * x > m)]] > b)
+					break;
 				--x;
 			}
 			dp[u] = dp[g[u][x]] + 1;

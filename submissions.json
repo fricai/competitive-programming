@@ -5663,6 +5663,22 @@
     ],
     "timestamp": "Dec/03/2021 21:11"
   },
+  "AC27677413": {
+    "contest_id": "arc088",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc088/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Papple Sort",
+    "problem_url": "https://atcoder.jp/contests/arc088/tasks/arc088_c",
+    "submission_id": "AC27677413",
+    "submission_url": "https://atcoder.jp/contests/arc088/submissions/27677413",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Dec/03/2021 22:10"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

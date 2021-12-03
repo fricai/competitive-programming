@@ -39,11 +39,12 @@ signed main() {
 
 	ll g = 0;
 	auto dfs = [&](const auto &self, int u, ll h) -> void {
+		if ((t[u][0] != 0) ^ (t[u][1] != 0)) {
+			g ^= h&-h;
+		}
 		for (auto b : {0, 1})
-			if (t[u][b] != 0) {
+			if (t[u][b] != 0)
 				self(self, t[u][b], h - 1);
-				g ^= h&-h;
-			}
 	};
 	dfs(dfs, 0, l);
 	cout << (g ? "Alice" : "Bob") << '\n';

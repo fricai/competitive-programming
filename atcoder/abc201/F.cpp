@@ -39,19 +39,17 @@ signed main() {
 	}
 
 	atcoder::segtree<ll, op, e> t(n);
-	vector<ll> dp(n);
-	t.set(pos[0], dp[0] - a[0]);
+	t.set(pos[0], -a[0]);
 	for (int i = 1; i < n; ++i) {
 		a[i] += a[i - 1];
 		b[i] += b[i - 1];
 		c[i] += c[i - 1];
-		dp[i] = min(b[i - 1], t.prod(0, pos[i]) + a[i - 1]);
-		t.set(pos[i], dp[i] - a[i]);
+		t.set(pos[i], min(b[i - 1], t.prod(0, pos[i]) + a[i - 1]) - a[i]);
 	}
 
 	ll ans = inf;
 	for (int i = 0; i < n; ++i) {
-		uin(ans, dp[i] + c[n - 1] - c[i]);
+		uin(ans, t.get(pos[i]) + a[i] + c[n - 1] - c[i]);
 	}
 	cout << ans << '\n';
 }

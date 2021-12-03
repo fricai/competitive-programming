@@ -5711,6 +5711,22 @@
     ],
     "timestamp": "Dec/03/2021 22:10"
   },
+  "AC27678082": {
+    "contest_id": "arc088",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc088/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Christmas Tree",
+    "problem_url": "https://atcoder.jp/contests/arc088/tasks/arc088_d",
+    "submission_id": "AC27678082",
+    "submission_url": "https://atcoder.jp/contests/arc088/submissions/27678082",
+    "tags": [
+      "AtCoder",
+      "*900"
+    ],
+    "timestamp": "Dec/03/2021 23:05"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

@@ -5663,6 +5663,22 @@
     ],
     "timestamp": "Dec/03/2021 21:11"
   },
+  "AC27677130": {
+    "contest_id": "arc088",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc088/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Wide Flip",
+    "problem_url": "https://atcoder.jp/contests/arc088/tasks/arc088_b",
+    "submission_id": "AC27677130",
+    "submission_url": "https://atcoder.jp/contests/arc088/submissions/27677130",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/03/2021 21:50"
+  },
   "AC27677413": {
     "contest_id": "arc088",
     "language": "C++ (GCC 9.2.1)",

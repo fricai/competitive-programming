@@ -6207,6 +6207,22 @@
     ],
     "timestamp": "Dec/04/2021 20:22"
   },
+  "AC27699747": {
+    "contest_id": "abc219",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc219/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Cleaning Robot",
+    "problem_url": "https://atcoder.jp/contests/abc219/tasks/abc219_f",
+    "submission_id": "AC27699747",
+    "submission_url": "https://atcoder.jp/contests/abc219/submissions/27699747",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/05/2021 01:53"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

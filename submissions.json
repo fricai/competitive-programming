@@ -5839,6 +5839,22 @@
     ],
     "timestamp": "Dec/04/2021 09:42"
   },
+  "AC27684239": {
+    "contest_id": "abc152",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc152/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Tree and Constraints",
+    "problem_url": "https://atcoder.jp/contests/abc152/tasks/abc152_f",
+    "submission_id": "AC27684239",
+    "submission_url": "https://atcoder.jp/contests/abc152/submissions/27684239",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/04/2021 11:18"
+  },
   "AC27684525": {
     "contest_id": "abc143",
     "language": "C++ (GCC 9.2.1)",

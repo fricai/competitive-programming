@@ -13,18 +13,19 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1292 | [H - Nim Counting](https://atcoder.jp/contests/abc212/tasks/abc212_h) | [C++ (GCC 9.2.1)](./atcoder/abc212/H.cpp) | `AtCoder` `*600` | Dec/04/2021 15:04 | 
-1291 | [G - Power Pair](https://atcoder.jp/contests/abc212/tasks/abc212_g) | [C++ (GCC 9.2.1)](./atcoder/abc212/G.cpp) | `AtCoder` `*600` | Dec/04/2021 14:31 | 
-1290 | [E - Safety Journey](https://atcoder.jp/contests/abc212/tasks/abc212_e) | [C++ (GCC 9.2.1)](./atcoder/abc212/E.cpp) | `AtCoder` `*500` | Dec/04/2021 13:40 | 
-1289 | [D - Querying Multiset](https://atcoder.jp/contests/abc212/tasks/abc212_d) | [C++ (GCC 9.2.1)](./atcoder/abc212/D.cpp) | `AtCoder` `*400` | Dec/04/2021 13:30 | 
-1288 | [C - Min Difference](https://atcoder.jp/contests/abc212/tasks/abc212_c) | [C++ (GCC 9.2.1)](./atcoder/abc212/C.cpp) | `AtCoder` `*300` | Dec/04/2021 13:26 | 
-1287 | [B - Weak Password](https://atcoder.jp/contests/abc212/tasks/abc212_b) | [C++ (GCC 9.2.1)](./atcoder/abc212/B.cpp) | `AtCoder` `*200` | Dec/04/2021 13:23 | 
-1286 | [A - Alloy](https://atcoder.jp/contests/abc212/tasks/abc212_a) | [C++ (GCC 9.2.1)](./atcoder/abc212/A.cpp) | `AtCoder` `*100` | Dec/04/2021 13:20 | 
-1285 | [F - Sum Difference](https://atcoder.jp/contests/abc147/tasks/abc147_f) | [C++ (GCC 9.2.1)](./atcoder/abc147/F.cpp) | `AtCoder` `*600` | Dec/04/2021 13:14 | 
-1284 | [F - Coincidence](https://atcoder.jp/contests/abc138/tasks/abc138_f) | [C++ (GCC 9.2.1)](./atcoder/abc138/F.cpp) | `AtCoder` `*600` | Dec/04/2021 12:39 | 
-1283 | [F - Distinct Numbers](https://atcoder.jp/contests/abc143/tasks/abc143_f) | [C++ (GCC 9.2.1)](./atcoder/abc143/F.cpp) | `AtCoder` `*600` | Dec/04/2021 11:36 | 
-1282 | [F - Tree and Constraints](https://atcoder.jp/contests/abc152/tasks/abc152_f) | [C++ (GCC 9.2.1)](./atcoder/abc152/F.cpp) | `AtCoder` `*600` | Dec/04/2021 11:18 | 
-1281 | [F - Polynomial Construction](https://atcoder.jp/contests/abc137/tasks/abc137_f) | [C++ (GCC 9.2.1)](./atcoder/abc137/F.cpp) | `AtCoder` `*600` | Dec/04/2021 10:49 | 
+1293 | [H - Nim Counting](https://atcoder.jp/contests/abc212/tasks/abc212_h) | [C++ (GCC 9.2.1)](./atcoder/abc212/H.cpp) | `AtCoder` `*600` | Dec/04/2021 15:04 | 
+1292 | [G - Power Pair](https://atcoder.jp/contests/abc212/tasks/abc212_g) | [C++ (GCC 9.2.1)](./atcoder/abc212/G.cpp) | `AtCoder` `*600` | Dec/04/2021 14:31 | 
+1291 | [E - Safety Journey](https://atcoder.jp/contests/abc212/tasks/abc212_e) | [C++ (GCC 9.2.1)](./atcoder/abc212/E.cpp) | `AtCoder` `*500` | Dec/04/2021 13:40 | 
+1290 | [D - Querying Multiset](https://atcoder.jp/contests/abc212/tasks/abc212_d) | [C++ (GCC 9.2.1)](./atcoder/abc212/D.cpp) | `AtCoder` `*400` | Dec/04/2021 13:30 | 
+1289 | [C - Min Difference](https://atcoder.jp/contests/abc212/tasks/abc212_c) | [C++ (GCC 9.2.1)](./atcoder/abc212/C.cpp) | `AtCoder` `*300` | Dec/04/2021 13:26 | 
+1288 | [B - Weak Password](https://atcoder.jp/contests/abc212/tasks/abc212_b) | [C++ (GCC 9.2.1)](./atcoder/abc212/B.cpp) | `AtCoder` `*200` | Dec/04/2021 13:23 | 
+1287 | [A - Alloy](https://atcoder.jp/contests/abc212/tasks/abc212_a) | [C++ (GCC 9.2.1)](./atcoder/abc212/A.cpp) | `AtCoder` `*100` | Dec/04/2021 13:20 | 
+1286 | [F - Sum Difference](https://atcoder.jp/contests/abc147/tasks/abc147_f) | [C++ (GCC 9.2.1)](./atcoder/abc147/F.cpp) | `AtCoder` `*600` | Dec/04/2021 13:14 | 
+1285 | [F - Coincidence](https://atcoder.jp/contests/abc138/tasks/abc138_f) | [C++ (GCC 9.2.1)](./atcoder/abc138/F.cpp) | `AtCoder` `*600` | Dec/04/2021 12:39 | 
+1284 | [F - Distinct Numbers](https://atcoder.jp/contests/abc143/tasks/abc143_f) | [C++ (GCC 9.2.1)](./atcoder/abc143/F.cpp) | `AtCoder` `*600` | Dec/04/2021 11:36 | 
+1283 | [F - Tree and Constraints](https://atcoder.jp/contests/abc152/tasks/abc152_f) | [C++ (GCC 9.2.1)](./atcoder/abc152/F.cpp) | `AtCoder` `*600` | Dec/04/2021 11:18 | 
+1282 | [F - Polynomial Construction](https://atcoder.jp/contests/abc137/tasks/abc137_f) | [C++ (GCC 9.2.1)](./atcoder/abc137/F.cpp) | `AtCoder` `*600` | Dec/04/2021 10:49 | 
+1281 | [F - Strivore](https://atcoder.jp/contests/abc171/tasks/abc171_f) | [C++ (GCC 9.2.1)](./atcoder/abc171/F.cpp) | `AtCoder` `*600` | Dec/04/2021 10:05 | 
 1280 | [F - Unbranched](https://atcoder.jp/contests/abc180/tasks/abc180_f) | [C++ (GCC 9.2.1)](./atcoder/abc180/F.cpp) | `AtCoder` `*600` | Dec/04/2021 09:42 | 
 1279 | [F - Insertion Sort](https://atcoder.jp/contests/abc201/tasks/abc201_f) | [C++ (GCC 9.2.1)](./atcoder/abc201/F.cpp) | `AtCoder` `*600` | Dec/04/2021 02:39 | 
 1278 | [F - Minflip Summation](https://atcoder.jp/contests/abc200/tasks/abc200_f) | [C++ (GCC 9.2.1)](./atcoder/abc200/F.cpp) | `AtCoder` `*600` | Dec/04/2021 02:12 | 

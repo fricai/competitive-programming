@@ -60,18 +60,15 @@ signed main() {
 
 	ll ans = 0;
 	for (auto &[_, v] : mp) {
-		map<int, int> st;
-		for (ll a : v) {
+		map<int, vector<int>> st;
+		for (auto a : v) {
 			int r = (a % x + x) % x;
-			a = (a - r) / x;
-
-			auto it = st.find(r);
-			if (it == end(st)) {
-				ans += k;
-				st[r] = a;
-			} else {
-				ans += min(k, a - it->second);
-				it->second = a;
+			st[r].push_back((a - r) / x);
+		}
+		for (auto [_, w] : st) {
+			ans += k;
+			for (int i = 0; i + 1 < sz(w); ++i) {
+				ans += min(k, ll(w[i + 1] - w[i]));
 			}
 		}
 	}

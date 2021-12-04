@@ -5839,6 +5839,22 @@
     ],
     "timestamp": "Dec/04/2021 09:42"
   },
+  "AC27686499": {
+    "contest_id": "abc147",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc147/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Sum Difference",
+    "problem_url": "https://atcoder.jp/contests/abc147/tasks/abc147_f",
+    "submission_id": "AC27686499",
+    "submission_url": "https://atcoder.jp/contests/abc147/submissions/27686499",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/04/2021 13:14"
+  },
   "AC27686593": {
     "contest_id": "abc212",
     "language": "C++ (GCC 9.2.1)",

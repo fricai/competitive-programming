@@ -13,8 +13,9 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1282 | [H - Nim Counting](https://atcoder.jp/contests/abc212/tasks/abc212_h) | [C++ (GCC 9.2.1)](./atcoder/abc212/H.cpp) | `AtCoder` `*600` | Dec/04/2021 15:04 | 
-1281 | [G - Power Pair](https://atcoder.jp/contests/abc212/tasks/abc212_g) | [C++ (GCC 9.2.1)](./atcoder/abc212/G.cpp) | `AtCoder` `*600` | Dec/04/2021 14:31 | 
+1283 | [H - Nim Counting](https://atcoder.jp/contests/abc212/tasks/abc212_h) | [C++ (GCC 9.2.1)](./atcoder/abc212/H.cpp) | `AtCoder` `*600` | Dec/04/2021 15:04 | 
+1282 | [G - Power Pair](https://atcoder.jp/contests/abc212/tasks/abc212_g) | [C++ (GCC 9.2.1)](./atcoder/abc212/G.cpp) | `AtCoder` `*600` | Dec/04/2021 14:31 | 
+1281 | [E - Safety Journey](https://atcoder.jp/contests/abc212/tasks/abc212_e) | [C++ (GCC 9.2.1)](./atcoder/abc212/E.cpp) | `AtCoder` `*500` | Dec/04/2021 13:40 | 
 1280 | [F - Unbranched](https://atcoder.jp/contests/abc180/tasks/abc180_f) | [C++ (GCC 9.2.1)](./atcoder/abc180/F.cpp) | `AtCoder` `*600` | Dec/04/2021 09:42 | 
 1279 | [F - Insertion Sort](https://atcoder.jp/contests/abc201/tasks/abc201_f) | [C++ (GCC 9.2.1)](./atcoder/abc201/F.cpp) | `AtCoder` `*600` | Dec/04/2021 02:39 | 
 1278 | [F - Minflip Summation](https://atcoder.jp/contests/abc200/tasks/abc200_f) | [C++ (GCC 9.2.1)](./atcoder/abc200/F.cpp) | `AtCoder` `*600` | Dec/04/2021 02:12 | 

@@ -6207,6 +6207,22 @@
     ],
     "timestamp": "Dec/04/2021 20:22"
   },
+  "AC27699048": {
+    "contest_id": "abc219",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc219/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Neo-lexicographic Ordering",
+    "problem_url": "https://atcoder.jp/contests/abc219/tasks/abc219_c",
+    "submission_id": "AC27699048",
+    "submission_url": "https://atcoder.jp/contests/abc219/submissions/27699048",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Dec/04/2021 23:31"
+  },
   "AC27699097": {
     "contest_id": "abc219",
     "language": "C++ (GCC 9.2.1)",

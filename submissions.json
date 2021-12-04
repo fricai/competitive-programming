@@ -6079,6 +6079,22 @@
     ],
     "timestamp": "Dec/04/2021 15:04"
   },
+  "AC27696561": {
+    "contest_id": "abc218",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc218/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "Game on Tree 2",
+    "problem_url": "https://atcoder.jp/contests/abc218/tasks/abc218_g",
+    "submission_id": "AC27696561",
+    "submission_url": "https://atcoder.jp/contests/abc218/submissions/27696561",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/04/2021 20:22"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

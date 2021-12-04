@@ -6207,6 +6207,22 @@
     ],
     "timestamp": "Dec/04/2021 20:22"
   },
+  "AC27699283": {
+    "contest_id": "abc219",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc219/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Moat",
+    "problem_url": "https://atcoder.jp/contests/abc219/tasks/abc219_e",
+    "submission_id": "AC27699283",
+    "submission_url": "https://atcoder.jp/contests/abc219/submissions/27699283",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/05/2021 00:05"
+  },
   "AC27699470": {
     "contest_id": "abc219",
     "language": "C++ (GCC 9.2.1)",

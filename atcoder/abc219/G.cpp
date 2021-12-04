@@ -38,8 +38,8 @@ signed main() {
 	vector<int> val(n);
 	iota(all(val), 1);
 
-	vector<pair<int, int>> upd(n);
-	vector<int> lst(n);
+	vector<pair<int, int>> upd(n, {-1, -1});
+	vector<int> lst(n, -1);
 
 	auto fix = [&](int u) {
 		for (int j = 0; j < sz(g[u]); ++j) {
@@ -53,9 +53,12 @@ signed main() {
 		}
 	};
 
-	for (int i = 1; i <= q; ++i) {
+	rep(i, 0, q) {
 		int u; cin >> u; --u;
+
+		// update the current value stored here
 		fix(u);
+
 		if (sz(g[u]) <= B) {
 			for (auto v : g[u]) {
 				val[v] = val[u];

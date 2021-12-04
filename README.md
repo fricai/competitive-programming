@@ -20,7 +20,7 @@ A repository to keep track of problems solved on the following platforms:
 1296 | [C - Shapes](https://atcoder.jp/contests/abc218/tasks/abc218_c) | [C++ (GCC 9.2.1)](./atcoder/abc218/C.cpp) | `AtCoder` `*300` | Dec/04/2021 16:37 | 
 1295 | [B - qwerty](https://atcoder.jp/contests/abc218/tasks/abc218_b) | [C++ (GCC 9.2.1)](./atcoder/abc218/B.cpp) | `AtCoder` `*200` | Dec/04/2021 16:12 | 
 1294 | [A - Weather Forecast](https://atcoder.jp/contests/abc218/tasks/abc218_a) | [C++ (GCC 9.2.1)](./atcoder/abc218/A.cpp) | `AtCoder` `*100` | Dec/04/2021 16:11 | 
-1293 | [H - Nim Counting](https://atcoder.jp/contests/abc212/tasks/abc212_h) | [C++ (GCC 9.2.1)](./atcoder/abc212/H.cpp) | `AtCoder` `*600` | Dec/04/2021 15:04 | 
+1293 | [H - Nim Counting](https://atcoder.jp/contests/abc212/tasks/abc212_h) | [C++ (GCC 9.2.1)](./atcoder/abc212/H.cpp) | `AtCoder` `*600` | Dec/04/2021 15:18 | 
 1292 | [G - Power Pair](https://atcoder.jp/contests/abc212/tasks/abc212_g) | [C++ (GCC 9.2.1)](./atcoder/abc212/G.cpp) | `AtCoder` `*600` | Dec/04/2021 14:31 | 
 1291 | [E - Safety Journey](https://atcoder.jp/contests/abc212/tasks/abc212_e) | [C++ (GCC 9.2.1)](./atcoder/abc212/E.cpp) | `AtCoder` `*500` | Dec/04/2021 13:40 | 
 1290 | [D - Querying Multiset](https://atcoder.jp/contests/abc212/tasks/abc212_d) | [C++ (GCC 9.2.1)](./atcoder/abc212/D.cpp) | `AtCoder` `*400` | Dec/04/2021 13:30 | 

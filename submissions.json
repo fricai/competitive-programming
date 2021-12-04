@@ -5839,6 +5839,22 @@
     ],
     "timestamp": "Dec/04/2021 09:42"
   },
+  "AC27683704": {
+    "contest_id": "abc137",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc137/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Polynomial Construction",
+    "problem_url": "https://atcoder.jp/contests/abc137/tasks/abc137_f",
+    "submission_id": "AC27683704",
+    "submission_url": "https://atcoder.jp/contests/abc137/submissions/27683704",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/04/2021 10:49"
+  },
   "AC27684225": {
     "contest_id": "abc152",
     "language": "C++ (GCC 9.2.1)",

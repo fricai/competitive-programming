@@ -5839,6 +5839,22 @@
     ],
     "timestamp": "Dec/04/2021 09:42"
   },
+  "AC27682997": {
+    "contest_id": "abc171",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc171/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Strivore",
+    "problem_url": "https://atcoder.jp/contests/abc171/tasks/abc171_f",
+    "submission_id": "AC27682997",
+    "submission_url": "https://atcoder.jp/contests/abc171/submissions/27682997",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/04/2021 10:05"
+  },
   "AC27683704": {
     "contest_id": "abc137",
     "language": "C++ (GCC 9.2.1)",

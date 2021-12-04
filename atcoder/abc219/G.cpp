@@ -15,7 +15,7 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, true : fals
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-constexpr int B = 900;
+constexpr int B = 600;
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -38,7 +38,7 @@ signed main() {
 	vector<int> val(n);
 	iota(all(val), 1);
 
-	vector<pair<int, int>> lazy(n);
+	vector<pair<int, int>> upd(n);
 	vector<int> lst(n);
 
 	auto fix = [&](int u) {
@@ -47,8 +47,8 @@ signed main() {
 			if (sz(g[v]) <= B) {
 				break;
 			}
-			if (lazy[v].first > lst[u]) {
-				tie(lst[u], val[u]) = lazy[v];
+			if (upd[v].first > lst[u]) {
+				tie(lst[u], val[u]) = upd[v];
 			}
 		}
 	};
@@ -62,7 +62,7 @@ signed main() {
 				lst[v] = i;
 			}
 		} else {
-			lazy[u] = {i, val[u]};
+			upd[u] = {i, val[u]};
 		}
 	}
 

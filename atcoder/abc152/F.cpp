@@ -46,8 +46,8 @@ signed main() {
 		dfs(dfs, x, -1);
 	}
 
-	ll ans = 0;
-	rep(S, 0, 1 << m) {
+	ll ans = 1ll << (n - 1);
+	rep(S, 1, 1 << m) {
 		ll p = 0;
 		rep(i, 0, m) if (S >> i & 1) p |= paths[i];
 		ll r = __builtin_popcountll(p);

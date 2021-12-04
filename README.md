@@ -13,12 +13,13 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1306 | [F - Cleaning Robot](https://atcoder.jp/contests/abc219/tasks/abc219_f) | [C++ (GCC 9.2.1)](./atcoder/abc219/F.cpp) | `AtCoder` `*500` | Dec/05/2021 01:53 | 
-1305 | [G - Propagation](https://atcoder.jp/contests/abc219/tasks/abc219_g) | [C++ (GCC 9.2.1)](./atcoder/abc219/G.cpp) | `AtCoder` `*600` | Dec/05/2021 01:38 | 
-1304 | [E - Moat](https://atcoder.jp/contests/abc219/tasks/abc219_e) | [C++ (GCC 9.2.1)](./atcoder/abc219/E.cpp) | `AtCoder` `*500` | Dec/05/2021 00:05 | 
-1303 | [D - Strange Lunchbox](https://atcoder.jp/contests/abc219/tasks/abc219_d) | [C++ (GCC 9.2.1)](./atcoder/abc219/D.cpp) | `AtCoder` `*400` | Dec/04/2021 23:37 | 
-1302 | [C - Neo-lexicographic Ordering](https://atcoder.jp/contests/abc219/tasks/abc219_c) | [C++ (GCC 9.2.1)](./atcoder/abc219/C.cpp) | `AtCoder` `*300` | Dec/04/2021 23:31 | 
-1301 | [B - Maritozzo](https://atcoder.jp/contests/abc219/tasks/abc219_b) | [C++ (GCC 9.2.1)](./atcoder/abc219/B.cpp) | `AtCoder` `*200` | Dec/04/2021 23:19 | 
+1307 | [F - Cleaning Robot](https://atcoder.jp/contests/abc219/tasks/abc219_f) | [C++ (GCC 9.2.1)](./atcoder/abc219/F.cpp) | `AtCoder` `*500` | Dec/05/2021 01:53 | 
+1306 | [G - Propagation](https://atcoder.jp/contests/abc219/tasks/abc219_g) | [C++ (GCC 9.2.1)](./atcoder/abc219/G.cpp) | `AtCoder` `*600` | Dec/05/2021 01:38 | 
+1305 | [E - Moat](https://atcoder.jp/contests/abc219/tasks/abc219_e) | [C++ (GCC 9.2.1)](./atcoder/abc219/E.cpp) | `AtCoder` `*500` | Dec/05/2021 00:05 | 
+1304 | [D - Strange Lunchbox](https://atcoder.jp/contests/abc219/tasks/abc219_d) | [C++ (GCC 9.2.1)](./atcoder/abc219/D.cpp) | `AtCoder` `*400` | Dec/04/2021 23:37 | 
+1303 | [C - Neo-lexicographic Ordering](https://atcoder.jp/contests/abc219/tasks/abc219_c) | [C++ (GCC 9.2.1)](./atcoder/abc219/C.cpp) | `AtCoder` `*300` | Dec/04/2021 23:31 | 
+1302 | [B - Maritozzo](https://atcoder.jp/contests/abc219/tasks/abc219_b) | [C++ (GCC 9.2.1)](./atcoder/abc219/B.cpp) | `AtCoder` `*200` | Dec/04/2021 23:19 | 
+1301 | [A - AtCoder Quiz 2](https://atcoder.jp/contests/abc219/tasks/abc219_a) | [C++ (GCC 9.2.1)](./atcoder/abc219/A.cpp) | `AtCoder` `*100` | Dec/04/2021 23:16 | 
 1300 | [G - Game on Tree 2](https://atcoder.jp/contests/abc218/tasks/abc218_g) | [C++ (GCC 9.2.1)](./atcoder/abc218/G.cpp) | `AtCoder` `*600` | Dec/04/2021 20:22 | 
 1299 | [F - Blocked Roads](https://atcoder.jp/contests/abc218/tasks/abc218_f) | [C++ (GCC 9.2.1)](./atcoder/abc218/F.cpp) | `AtCoder` `*500` | Dec/04/2021 17:15 | 
 1298 | [E - Destruction](https://atcoder.jp/contests/abc218/tasks/abc218_e) | [C++ (GCC 9.2.1)](./atcoder/abc218/E.cpp) | `AtCoder` `*500` | Dec/04/2021 16:46 | 

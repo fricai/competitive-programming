@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1280 | [F - Unbranched](https://atcoder.jp/contests/abc180/tasks/abc180_f) | [C++ (GCC 9.2.1)](./atcoder/abc180/F.cpp) | `AtCoder` `*600` | Dec/04/2021 09:42 | 
 1279 | [F - Insertion Sort](https://atcoder.jp/contests/abc201/tasks/abc201_f) | [C++ (GCC 9.2.1)](./atcoder/abc201/F.cpp) | `AtCoder` `*600` | Dec/04/2021 02:39 | 
 1278 | [F - Minflip Summation](https://atcoder.jp/contests/abc200/tasks/abc200_f) | [C++ (GCC 9.2.1)](./atcoder/abc200/F.cpp) | `AtCoder` `*600` | Dec/04/2021 02:12 | 
 1277 | [F - Predilection](https://atcoder.jp/contests/abc230/tasks/abc230_f) | [C++ (GCC 9.2.1)](./atcoder/abc230/F.cpp) | `AtCoder` `*500` | Dec/04/2021 00:08 | 

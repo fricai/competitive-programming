@@ -6207,6 +6207,22 @@
     ],
     "timestamp": "Dec/04/2021 20:22"
   },
+  "AC27699097": {
+    "contest_id": "abc219",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc219/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Strange Lunchbox",
+    "problem_url": "https://atcoder.jp/contests/abc219/tasks/abc219_d",
+    "submission_id": "AC27699097",
+    "submission_url": "https://atcoder.jp/contests/abc219/submissions/27699097",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/04/2021 23:37"
+  },
   "AC27699283": {
     "contest_id": "abc219",
     "language": "C++ (GCC 9.2.1)",

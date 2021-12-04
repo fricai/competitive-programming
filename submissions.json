@@ -6079,6 +6079,22 @@
     ],
     "timestamp": "Dec/04/2021 15:04"
   },
+  "AC27690210": {
+    "contest_id": "abc218",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc218/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Rectangles",
+    "problem_url": "https://atcoder.jp/contests/abc218/tasks/abc218_d",
+    "submission_id": "AC27690210",
+    "submission_url": "https://atcoder.jp/contests/abc218/submissions/27690210",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/04/2021 16:41"
+  },
   "AC27690296": {
     "contest_id": "abc218",
     "language": "C++ (GCC 9.2.1)",

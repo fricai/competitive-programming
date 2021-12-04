@@ -5839,6 +5839,22 @@
     ],
     "timestamp": "Dec/04/2021 09:42"
   },
+  "AC27686786": {
+    "contest_id": "abc212",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc212/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Querying Multiset",
+    "problem_url": "https://atcoder.jp/contests/abc212/tasks/abc212_d",
+    "submission_id": "AC27686786",
+    "submission_url": "https://atcoder.jp/contests/abc212/submissions/27686786",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/04/2021 13:30"
+  },
   "AC27687006": {
     "contest_id": "abc212",
     "language": "C++ (GCC 9.2.1)",

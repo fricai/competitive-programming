@@ -5839,6 +5839,22 @@
     ],
     "timestamp": "Dec/04/2021 09:42"
   },
+  "AC27687926": {
+    "contest_id": "abc212",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc212/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "Power Pair",
+    "problem_url": "https://atcoder.jp/contests/abc212/tasks/abc212_g",
+    "submission_id": "AC27687926",
+    "submission_url": "https://atcoder.jp/contests/abc212/submissions/27687926",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/04/2021 14:31"
+  },
   "AC27688515": {
     "contest_id": "abc212",
     "language": "C++ (GCC 9.2.1)",

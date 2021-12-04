@@ -58,6 +58,7 @@ signed main() {
 
 		// update the current value stored here
 		fix(u);
+		lst[u] = i;
 
 		if (sz(g[u]) <= B) {
 			for (auto v : g[u]) {

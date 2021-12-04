@@ -5839,6 +5839,22 @@
     ],
     "timestamp": "Dec/04/2021 09:42"
   },
+  "AC27687006": {
+    "contest_id": "abc212",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc212/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Safety Journey",
+    "problem_url": "https://atcoder.jp/contests/abc212/tasks/abc212_e",
+    "submission_id": "AC27687006",
+    "submission_url": "https://atcoder.jp/contests/abc212/submissions/27687006",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/04/2021 13:40"
+  },
   "AC27687926": {
     "contest_id": "abc212",
     "language": "C++ (GCC 9.2.1)",

@@ -30,14 +30,15 @@ signed main() {
 	vector<int> g(n + 1);
 	rep(i, 0, n) ++g[f[i]];
 
-	ll sum = n, dsum = 0;
+	ll sum = accumulate(all(g), 0ll) - g[0];
+	ll dsum = 0;
 
 	vector<int> b(n + 1);
 	b[0] = n;
 	for (int x = 1; x <= n; ++x) {
-		sum -= g[x - 1];
-		b[x] = dsum / x + sum;
 		dsum += x * g[x];
+		sum -= g[x];
+		b[x] = dsum / x + sum;
 	}
 
 	for (int k = 1, x = n; k <= n; ++k) {

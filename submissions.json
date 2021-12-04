@@ -5839,6 +5839,22 @@
     ],
     "timestamp": "Dec/04/2021 09:42"
   },
+  "AC27684525": {
+    "contest_id": "abc143",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc143/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Distinct Numbers",
+    "problem_url": "https://atcoder.jp/contests/abc143/tasks/abc143_f",
+    "submission_id": "AC27684525",
+    "submission_url": "https://atcoder.jp/contests/abc143/submissions/27684525",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/04/2021 11:35"
+  },
   "AC27684564": {
     "contest_id": "abc143",
     "language": "C++ (GCC 9.2.1)",

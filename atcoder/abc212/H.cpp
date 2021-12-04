@@ -26,7 +26,16 @@ void FST(vector<mint>& a, bool inv) {
 				tie(u, v) = pair(u + v, u - v);
 			}
 	}
-	if (inv) for (auto& x : a) x /= sz(a); // XOR only /// include-line
+	if (inv) for (auto& x : a) x /= sz(a);
+}
+
+mint f(mint x, int n) {
+	if (n == 1)
+		return x;
+	if (n & 1) {
+		return x + (1 + x) * f(x * x, (n - 1) / 2);
+	}
+	return x + x * f(x, n - 1);
 }
 
 signed main() {
@@ -46,15 +55,7 @@ signed main() {
 		++c[x];
 
 	FST(c, false);
-	for (auto &x : c) {
-		if (x == 0)
-			continue;
-		if (x == 1) {
-			x = n;
-		} else {
-			x *= (x.pow(n) - 1) / (x - 1);
-		}
-	}
+	for (auto &x : c) x = f(x, n);
 	FST(c, true);
 
 	mint ans = 0;

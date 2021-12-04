@@ -6079,6 +6079,22 @@
     ],
     "timestamp": "Dec/04/2021 15:04"
   },
+  "AC27688742": {
+    "contest_id": "abc212",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc212/H.cpp",
+    "platform": "AtCoder",
+    "problem_index": "H",
+    "problem_name": "Nim Counting",
+    "problem_url": "https://atcoder.jp/contests/abc212/tasks/abc212_h",
+    "submission_id": "AC27688742",
+    "submission_url": "https://atcoder.jp/contests/abc212/submissions/27688742",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/04/2021 15:18"
+  },
   "AC27689645": {
     "contest_id": "abc218",
     "language": "C++ (GCC 9.2.1)",

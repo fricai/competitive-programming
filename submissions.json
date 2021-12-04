@@ -5839,6 +5839,22 @@
     ],
     "timestamp": "Dec/04/2021 09:42"
   },
+  "AC27685798": {
+    "contest_id": "abc138",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc138/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Coincidence",
+    "problem_url": "https://atcoder.jp/contests/abc138/tasks/abc138_f",
+    "submission_id": "AC27685798",
+    "submission_url": "https://atcoder.jp/contests/abc138/submissions/27685798",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/04/2021 12:39"
+  },
   "AC27686499": {
     "contest_id": "abc147",
     "language": "C++ (GCC 9.2.1)",

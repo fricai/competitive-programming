@@ -6383,6 +6383,22 @@
     ],
     "timestamp": "Dec/05/2021 01:53"
   },
+  "AC27707737": {
+    "contest_id": "abc219",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc219/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "Propagation",
+    "problem_url": "https://atcoder.jp/contests/abc219/tasks/abc219_g",
+    "submission_id": "AC27707737",
+    "submission_url": "https://atcoder.jp/contests/abc219/submissions/27707737",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/05/2021 13:40"
+  },
   "AC27709531": {
     "contest_id": "abc213",
     "language": "C++ (GCC 9.2.1)",

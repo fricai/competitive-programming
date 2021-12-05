@@ -21,8 +21,8 @@ A repository to keep track of problems solved on the following platforms:
 1310 | [C - Reorder Cards](https://atcoder.jp/contests/abc213/tasks/abc213_c) | [C++ (GCC 9.2.1)](./atcoder/abc213/C.cpp) | `AtCoder` `*300` | Dec/05/2021 15:20 | 
 1309 | [B - Booby Prize](https://atcoder.jp/contests/abc213/tasks/abc213_b) | [C++ (GCC 9.2.1)](./atcoder/abc213/B.cpp) | `AtCoder` `*200` | Dec/05/2021 15:17 | 
 1308 | [A - Bitwise Exclusive Or](https://atcoder.jp/contests/abc213/tasks/abc213_a) | [C++ (GCC 9.2.1)](./atcoder/abc213/A.cpp) | `AtCoder` `*100` | Dec/05/2021 15:15 | 
-1307 | [F - Cleaning Robot](https://atcoder.jp/contests/abc219/tasks/abc219_f) | [C++ (GCC 9.2.1)](./atcoder/abc219/F.cpp) | `AtCoder` `*500` | Dec/05/2021 01:53 | 
-1306 | [G - Propagation](https://atcoder.jp/contests/abc219/tasks/abc219_g) | [C++ (GCC 9.2.1)](./atcoder/abc219/G.cpp) | `AtCoder` `*600` | Dec/05/2021 01:38 | 
+1307 | [G - Propagation](https://atcoder.jp/contests/abc219/tasks/abc219_g) | [C++ (GCC 9.2.1)](./atcoder/abc219/G.cpp) | `AtCoder` `*600` | Dec/05/2021 13:40 | 
+1306 | [F - Cleaning Robot](https://atcoder.jp/contests/abc219/tasks/abc219_f) | [C++ (GCC 9.2.1)](./atcoder/abc219/F.cpp) | `AtCoder` `*500` | Dec/05/2021 01:53 | 
 1305 | [E - Moat](https://atcoder.jp/contests/abc219/tasks/abc219_e) | [C++ (GCC 9.2.1)](./atcoder/abc219/E.cpp) | `AtCoder` `*500` | Dec/05/2021 00:05 | 
 1304 | [D - Strange Lunchbox](https://atcoder.jp/contests/abc219/tasks/abc219_d) | [C++ (GCC 9.2.1)](./atcoder/abc219/D.cpp) | `AtCoder` `*400` | Dec/04/2021 23:37 | 
 1303 | [C - Neo-lexicographic Ordering](https://atcoder.jp/contests/abc219/tasks/abc219_c) | [C++ (GCC 9.2.1)](./atcoder/abc219/C.cpp) | `AtCoder` `*300` | Dec/04/2021 23:31 | 

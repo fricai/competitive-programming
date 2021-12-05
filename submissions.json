@@ -6575,6 +6575,22 @@
     ],
     "timestamp": "Dec/05/2021 17:12"
   },
+  "AC27714928": {
+    "contest_id": "abc214",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc214/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Distribution",
+    "problem_url": "https://atcoder.jp/contests/abc214/tasks/abc214_c",
+    "submission_id": "AC27714928",
+    "submission_url": "https://atcoder.jp/contests/abc214/submissions/27714928",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Dec/05/2021 17:44"
+  },
   "AC27715817": {
     "contest_id": "abc214",
     "language": "C++ (GCC 9.2.1)",

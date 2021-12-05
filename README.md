@@ -13,10 +13,11 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1311 | [H - Stroll](https://atcoder.jp/contests/abc213/tasks/abc213_h) | [C++ (GCC 9.2.1)](./atcoder/abc213/H.cpp) | `AtCoder` `*600` | Dec/05/2021 17:12 | 
-1310 | [G - Connectivity 2](https://atcoder.jp/contests/abc213/tasks/abc213_g) | [C++ (GCC 9.2.1)](./atcoder/abc213/G.cpp) | `AtCoder` `*600` | Dec/05/2021 16:26 | 
-1309 | [F - Common Prefixes](https://atcoder.jp/contests/abc213/tasks/abc213_f) | [C++ (GCC 9.2.1)](./atcoder/abc213/F.cpp) | `AtCoder` `*500` | Dec/05/2021 16:12 | 
-1308 | [E - Stronger Takahashi](https://atcoder.jp/contests/abc213/tasks/abc213_e) | [C++ (GCC 9.2.1)](./atcoder/abc213/E.cpp) | `AtCoder` `*500` | Dec/05/2021 15:35 | 
+1312 | [H - Stroll](https://atcoder.jp/contests/abc213/tasks/abc213_h) | [C++ (GCC 9.2.1)](./atcoder/abc213/H.cpp) | `AtCoder` `*600` | Dec/05/2021 17:12 | 
+1311 | [G - Connectivity 2](https://atcoder.jp/contests/abc213/tasks/abc213_g) | [C++ (GCC 9.2.1)](./atcoder/abc213/G.cpp) | `AtCoder` `*600` | Dec/05/2021 16:26 | 
+1310 | [F - Common Prefixes](https://atcoder.jp/contests/abc213/tasks/abc213_f) | [C++ (GCC 9.2.1)](./atcoder/abc213/F.cpp) | `AtCoder` `*500` | Dec/05/2021 16:12 | 
+1309 | [E - Stronger Takahashi](https://atcoder.jp/contests/abc213/tasks/abc213_e) | [C++ (GCC 9.2.1)](./atcoder/abc213/E.cpp) | `AtCoder` `*500` | Dec/05/2021 15:35 | 
+1308 | [D - Takahashi Tour](https://atcoder.jp/contests/abc213/tasks/abc213_d) | [C++ (GCC 9.2.1)](./atcoder/abc213/D.cpp) | `AtCoder` `*400` | Dec/05/2021 15:24 | 
 1307 | [F - Cleaning Robot](https://atcoder.jp/contests/abc219/tasks/abc219_f) | [C++ (GCC 9.2.1)](./atcoder/abc219/F.cpp) | `AtCoder` `*500` | Dec/05/2021 01:53 | 
 1306 | [G - Propagation](https://atcoder.jp/contests/abc219/tasks/abc219_g) | [C++ (GCC 9.2.1)](./atcoder/abc219/G.cpp) | `AtCoder` `*600` | Dec/05/2021 01:38 | 
 1305 | [E - Moat](https://atcoder.jp/contests/abc219/tasks/abc219_e) | [C++ (GCC 9.2.1)](./atcoder/abc219/E.cpp) | `AtCoder` `*500` | Dec/05/2021 00:05 | 

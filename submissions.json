@@ -6575,6 +6575,22 @@
     ],
     "timestamp": "Dec/05/2021 17:12"
   },
+  "AC27718013": {
+    "contest_id": "abc214",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc214/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Packing Under Range Regulations",
+    "problem_url": "https://atcoder.jp/contests/abc214/tasks/abc214_e",
+    "submission_id": "AC27718013",
+    "submission_url": "https://atcoder.jp/contests/abc214/submissions/27718013",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/05/2021 18:06"
+  },
   "AC27720000": {
     "contest_id": "abc214",
     "language": "C++ (GCC 9.2.1)",

@@ -15,7 +15,7 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, true : fals
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-constexpr int B = 600;
+constexpr int B = 900;
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -29,44 +29,35 @@ signed main() {
 		g[v].push_back(u);
 	}
 
-	for (auto &adj : g) {
-		sort(all(adj), [&](int x, int y) {
-				return sz(g[x]) > sz(g[y]);
-				});
-	}
+	for (auto &adj : g)
+		partition(all(adj), [&](int x) { return sz(g[x]) > B; });
 
 	vector<int> val(n);
 	iota(all(val), 1);
 
-	vector<pair<int, int>> upd(n, {-1, -1});
-	vector<int> lst(n, -1);
+	vector<pair<int, int>> lazy(n);
+	vector<int> lst(n);
 
 	auto fix = [&](int u) {
-		for (int j = 0; j < sz(g[u]); ++j) {
-			int v = g[u][j];
-			if (sz(g[v]) <= B) {
+		for (auto v : g[u]) {
+			if (sz(g[v]) <= B)
 				break;
-			}
-			if (upd[v].first > lst[u]) {
-				tie(lst[u], val[u]) = upd[v];
+			if (lazy[v].first > lst[u]) {
+				tie(lst[u], val[u]) = lazy[v];
 			}
 		}
 	};
 
-	rep(i, 0, q) {
+	for (int i = 1; i <= q; ++i) {
 		int u; cin >> u; --u;
-
-		// update the current value stored here
 		fix(u);
-		lst[u] = i;
-
 		if (sz(g[u]) <= B) {
 			for (auto v : g[u]) {
 				val[v] = val[u];
 				lst[v] = i;
 			}
 		} else {
-			upd[u] = {i, val[u]};
+			lazy[u] = {i, val[u]};
 		}
 	}
 

@@ -6383,6 +6383,22 @@
     ],
     "timestamp": "Dec/05/2021 01:53"
   },
+  "AC27709552": {
+    "contest_id": "abc213",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc213/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Booby Prize",
+    "problem_url": "https://atcoder.jp/contests/abc213/tasks/abc213_b",
+    "submission_id": "AC27709552",
+    "submission_url": "https://atcoder.jp/contests/abc213/submissions/27709552",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Dec/05/2021 15:17"
+  },
   "AC27709617": {
     "contest_id": "abc213",
     "language": "C++ (GCC 9.2.1)",

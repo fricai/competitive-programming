@@ -13,12 +13,13 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1313 | [H - Stroll](https://atcoder.jp/contests/abc213/tasks/abc213_h) | [C++ (GCC 9.2.1)](./atcoder/abc213/H.cpp) | `AtCoder` `*600` | Dec/05/2021 17:12 | 
-1312 | [G - Connectivity 2](https://atcoder.jp/contests/abc213/tasks/abc213_g) | [C++ (GCC 9.2.1)](./atcoder/abc213/G.cpp) | `AtCoder` `*600` | Dec/05/2021 16:26 | 
-1311 | [F - Common Prefixes](https://atcoder.jp/contests/abc213/tasks/abc213_f) | [C++ (GCC 9.2.1)](./atcoder/abc213/F.cpp) | `AtCoder` `*500` | Dec/05/2021 16:12 | 
-1310 | [E - Stronger Takahashi](https://atcoder.jp/contests/abc213/tasks/abc213_e) | [C++ (GCC 9.2.1)](./atcoder/abc213/E.cpp) | `AtCoder` `*500` | Dec/05/2021 15:35 | 
-1309 | [D - Takahashi Tour](https://atcoder.jp/contests/abc213/tasks/abc213_d) | [C++ (GCC 9.2.1)](./atcoder/abc213/D.cpp) | `AtCoder` `*400` | Dec/05/2021 15:24 | 
-1308 | [C - Reorder Cards](https://atcoder.jp/contests/abc213/tasks/abc213_c) | [C++ (GCC 9.2.1)](./atcoder/abc213/C.cpp) | `AtCoder` `*300` | Dec/05/2021 15:20 | 
+1314 | [H - Stroll](https://atcoder.jp/contests/abc213/tasks/abc213_h) | [C++ (GCC 9.2.1)](./atcoder/abc213/H.cpp) | `AtCoder` `*600` | Dec/05/2021 17:12 | 
+1313 | [G - Connectivity 2](https://atcoder.jp/contests/abc213/tasks/abc213_g) | [C++ (GCC 9.2.1)](./atcoder/abc213/G.cpp) | `AtCoder` `*600` | Dec/05/2021 16:26 | 
+1312 | [F - Common Prefixes](https://atcoder.jp/contests/abc213/tasks/abc213_f) | [C++ (GCC 9.2.1)](./atcoder/abc213/F.cpp) | `AtCoder` `*500` | Dec/05/2021 16:12 | 
+1311 | [E - Stronger Takahashi](https://atcoder.jp/contests/abc213/tasks/abc213_e) | [C++ (GCC 9.2.1)](./atcoder/abc213/E.cpp) | `AtCoder` `*500` | Dec/05/2021 15:35 | 
+1310 | [D - Takahashi Tour](https://atcoder.jp/contests/abc213/tasks/abc213_d) | [C++ (GCC 9.2.1)](./atcoder/abc213/D.cpp) | `AtCoder` `*400` | Dec/05/2021 15:24 | 
+1309 | [C - Reorder Cards](https://atcoder.jp/contests/abc213/tasks/abc213_c) | [C++ (GCC 9.2.1)](./atcoder/abc213/C.cpp) | `AtCoder` `*300` | Dec/05/2021 15:20 | 
+1308 | [B - Booby Prize](https://atcoder.jp/contests/abc213/tasks/abc213_b) | [C++ (GCC 9.2.1)](./atcoder/abc213/B.cpp) | `AtCoder` `*200` | Dec/05/2021 15:17 | 
 1307 | [F - Cleaning Robot](https://atcoder.jp/contests/abc219/tasks/abc219_f) | [C++ (GCC 9.2.1)](./atcoder/abc219/F.cpp) | `AtCoder` `*500` | Dec/05/2021 01:53 | 
 1306 | [G - Propagation](https://atcoder.jp/contests/abc219/tasks/abc219_g) | [C++ (GCC 9.2.1)](./atcoder/abc219/G.cpp) | `AtCoder` `*600` | Dec/05/2021 01:38 | 
 1305 | [E - Moat](https://atcoder.jp/contests/abc219/tasks/abc219_e) | [C++ (GCC 9.2.1)](./atcoder/abc219/E.cpp) | `AtCoder` `*500` | Dec/05/2021 00:05 | 

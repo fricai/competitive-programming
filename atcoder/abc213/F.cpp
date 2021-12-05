@@ -17,7 +17,7 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, true : fals
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 struct ds {
-	stack<pair<int, int>> q;
+	priority_queue<pair<int, int>> q;
 
 	ll ans = 0;
 	void insert(int x) {
@@ -49,7 +49,23 @@ signed main() {
 
 	vector<ll> ans(n);
 	iota(rall(ans), 1);
-  
+
+	// brute
+	
+	/*
+	rep(i, 0, n) {
+		auto &sum = ans[sa[i]];
+		for (int j = i, mn = n; j + 1 < n; ++j) {
+			uin(mn, lcp[j]);
+			sum += mn;
+		}
+		for (int j = i - 1, mn = n; j >= 0; --j) {
+			uin(mn, lcp[j]);
+			sum += mn;
+		}
+	}
+	*/
+
 	ds a, b;
 	per(i, 0, n - 1) {
 		a.insert(lcp[i]);

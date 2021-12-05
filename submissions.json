@@ -6383,6 +6383,22 @@
     ],
     "timestamp": "Dec/05/2021 01:53"
   },
+  "AC27710251": {
+    "contest_id": "abc213",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc213/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Common Prefixes",
+    "problem_url": "https://atcoder.jp/contests/abc213/tasks/abc213_f",
+    "submission_id": "AC27710251",
+    "submission_url": "https://atcoder.jp/contests/abc213/submissions/27710251",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/05/2021 16:07"
+  },
   "AC27710339": {
     "contest_id": "abc213",
     "language": "C++ (GCC 9.2.1)",

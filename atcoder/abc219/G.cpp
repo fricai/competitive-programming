@@ -39,9 +39,11 @@ signed main() {
 	vector<int> lst(n);
 
 	auto fix = [&](int u) {
-		for (auto v : g[u]) {
-			if (sz(g[v]) <= B)
+		for (int j = 0; j < sz(g[u]); ++j) {
+			int v = g[u][j];
+			if (sz(g[v]) <= B) {
 				break;
+			}
 			if (lazy[v].first > lst[u]) {
 				tie(lst[u], val[u]) = lazy[v];
 			}

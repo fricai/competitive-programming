@@ -6383,6 +6383,22 @@
     ],
     "timestamp": "Dec/05/2021 01:53"
   },
+  "AC27709806": {
+    "contest_id": "abc213",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc213/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Stronger Takahashi",
+    "problem_url": "https://atcoder.jp/contests/abc213/tasks/abc213_e",
+    "submission_id": "AC27709806",
+    "submission_url": "https://atcoder.jp/contests/abc213/submissions/27709806",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/05/2021 15:35"
+  },
   "AC27710251": {
     "contest_id": "abc213",
     "language": "C++ (GCC 9.2.1)",

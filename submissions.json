@@ -6383,6 +6383,22 @@
     ],
     "timestamp": "Dec/05/2021 01:53"
   },
+  "AC27709531": {
+    "contest_id": "abc213",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc213/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Bitwise Exclusive Or",
+    "problem_url": "https://atcoder.jp/contests/abc213/tasks/abc213_a",
+    "submission_id": "AC27709531",
+    "submission_url": "https://atcoder.jp/contests/abc213/submissions/27709531",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Dec/05/2021 15:15"
+  },
   "AC27709552": {
     "contest_id": "abc213",
     "language": "C++ (GCC 9.2.1)",

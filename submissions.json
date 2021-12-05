@@ -6575,6 +6575,22 @@
     ],
     "timestamp": "Dec/05/2021 17:12"
   },
+  "AC27715817": {
+    "contest_id": "abc214",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc214/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Sum of Maximum Weights",
+    "problem_url": "https://atcoder.jp/contests/abc214/tasks/abc214_d",
+    "submission_id": "AC27715817",
+    "submission_url": "https://atcoder.jp/contests/abc214/submissions/27715817",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/05/2021 17:49"
+  },
   "AC27718013": {
     "contest_id": "abc214",
     "language": "C++ (GCC 9.2.1)",

@@ -6383,6 +6383,22 @@
     ],
     "timestamp": "Dec/05/2021 01:53"
   },
+  "AC27710579": {
+    "contest_id": "abc213",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc213/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "Connectivity 2",
+    "problem_url": "https://atcoder.jp/contests/abc213/tasks/abc213_g",
+    "submission_id": "AC27710579",
+    "submission_url": "https://atcoder.jp/contests/abc213/submissions/27710579",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/05/2021 16:26"
+  },
   "AC27711231": {
     "contest_id": "abc213",
     "language": "C++ (GCC 9.2.1)",

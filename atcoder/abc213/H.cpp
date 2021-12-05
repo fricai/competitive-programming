@@ -50,10 +50,12 @@ signed main() {
 			auto fu = vector(begin(f[u]) + l, begin(f[u]) + m);
 			for (auto e : g[u]) {
 				int v = a[e] ^ b[e] ^ u;
-				auto rv = atcoder::convolution(fu, {begin(p[e]), begin(p[e]) + r - l});
+				auto pe = vector(begin(p[e]), begin(p[e]) + r - l);
+				auto rv = atcoder::convolution(fu, pe);
 				rep(i, m, r) f[v][i] += rv[i - l];
 			}
 		}
+
 		self(self, m, r);
 	};
 	dnc(dnc, 0, t + 1);

@@ -6783,6 +6783,22 @@
     ],
     "timestamp": "Dec/08/2021 02:25"
   },
+  "AC27758454": {
+    "contest_id": "abc221",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc221/H.cpp",
+    "platform": "AtCoder",
+    "problem_index": "H",
+    "problem_name": "Count Multiset",
+    "problem_url": "https://atcoder.jp/contests/abc221/tasks/abc221_h",
+    "submission_id": "AC27758454",
+    "submission_url": "https://atcoder.jp/contests/abc221/submissions/27758454",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/08/2021 03:25"
+  },
   "AC27758459": {
     "contest_id": "abc221",
     "language": "C++ (GCC 9.2.1)",

@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include <atcoder/modint>
+#include <atcoder/convolution>
 
 using namespace std;
 using ll = long long;
@@ -30,13 +31,11 @@ signed main() {
 	for (int i = 0; i < m; ++i)
 		g[0][i] = f[0][0];
 
-	for (int y = 1; y <= n; ++y) {
-		vector<mint> s(y);
-		s[0] = g[0][y - 1];
-
-		for (int x = 1; x <= n; ++x) {
-			f[x][y] = s[x % y];
-			s[x % y] += g[x][y - 1];
+	for (int x = 1; x <= n; ++x) {
+		for (int y = 1; y <= n; ++y) {
+			// g[x][y] = same thing but last need not be positive
+			for (int z = 1; y * z <= x; ++z)
+				f[x][y] += g[x - y * z][y - 1];
 			g[x][y] = f[x][y] + g[x][y - 1];
 			if (y >= m) g[x][y] -= f[x][y - m];
 		}

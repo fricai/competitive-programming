@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1316 | [G - Jumping sequence](https://atcoder.jp/contests/abc221/tasks/abc221_g) | [C++ (GCC 9.2.1)](./atcoder/abc221/G.cpp) | `AtCoder` `*600` | Dec/08/2021 02:25 | 
 1315 | [H - Stroll](https://atcoder.jp/contests/abc213/tasks/abc213_h) | [C++ (GCC 9.2.1)](./atcoder/abc213/H.cpp) | `AtCoder` `*600` | Dec/05/2021 17:12 | 
 1314 | [G - Connectivity 2](https://atcoder.jp/contests/abc213/tasks/abc213_g) | [C++ (GCC 9.2.1)](./atcoder/abc213/G.cpp) | `AtCoder` `*600` | Dec/05/2021 16:26 | 
 1313 | [F - Common Prefixes](https://atcoder.jp/contests/abc213/tasks/abc213_f) | [C++ (GCC 9.2.1)](./atcoder/abc213/F.cpp) | `AtCoder` `*500` | Dec/05/2021 16:12 | 

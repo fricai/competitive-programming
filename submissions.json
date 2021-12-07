@@ -6575,6 +6575,22 @@
     ],
     "timestamp": "Dec/05/2021 17:12"
   },
+  "AC27757866": {
+    "contest_id": "abc221",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc221/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Seismic magnitude scales",
+    "problem_url": "https://atcoder.jp/contests/abc221/tasks/abc221_a",
+    "submission_id": "AC27757866",
+    "submission_url": "https://atcoder.jp/contests/abc221/submissions/27757866",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Dec/08/2021 00:21"
+  },
   "AC27757873": {
     "contest_id": "abc221",
     "language": "C++ (GCC 9.2.1)",

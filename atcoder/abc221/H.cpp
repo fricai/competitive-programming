@@ -32,12 +32,14 @@ signed main() {
 		g[0][i] = f[0][0];
 
 	for (int x = 1; x <= n; ++x) {
+		mint cur = 0;
 		for (int y = 1; y <= n; ++y) {
 			// g[x][y] = same thing but last need not be positive
 			for (int z = 1; y * z <= x; ++z)
 				f[x][y] += g[x - y * z][y - 1];
-			g[x][y] = f[x][y] + g[x][y - 1];
-			if (y >= m) g[x][y] -= f[x][y - m];
+			cur += f[x][y];
+			if (y >= m) cur -= f[x][y - m];
+			g[x][y] = cur;
 		}
 	}
 

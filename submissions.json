@@ -7071,6 +7071,22 @@
     ],
     "timestamp": "Dec/09/2021 02:41"
   },
+  "AC27773199": {
+    "contest_id": "abc224",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc224/H.cpp",
+    "platform": "AtCoder",
+    "problem_index": "H",
+    "problem_name": "Security Camera 2",
+    "problem_url": "https://atcoder.jp/contests/abc224/tasks/abc224_h",
+    "submission_id": "AC27773199",
+    "submission_url": "https://atcoder.jp/contests/abc224/submissions/27773199",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/09/2021 03:04"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

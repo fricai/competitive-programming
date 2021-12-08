@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1342 | [H - Security Camera 2](https://atcoder.jp/contests/abc224/tasks/abc224_h) | [C++ (GCC 9.2.1)](./atcoder/abc224/H.cpp) | `AtCoder` `*600` | Dec/09/2021 03:04 | 
 1341 | [G - Roll or Increment](https://atcoder.jp/contests/abc224/tasks/abc224_g) | [C++ (GCC 9.2.1)](./atcoder/abc224/G.cpp) | `AtCoder` `*600` | Dec/09/2021 02:41 | 
 1340 | [F - Problem where +s Separate Digits](https://atcoder.jp/contests/abc224/tasks/abc224_f) | [C++ (GCC 9.2.1)](./atcoder/abc224/F.cpp) | `AtCoder` `*500` | Dec/09/2021 01:53 | 
 1339 | [E - Integers on Grid](https://atcoder.jp/contests/abc224/tasks/abc224_e) | [C++ (GCC 9.2.1)](./atcoder/abc224/E.cpp) | `AtCoder` `*500` | Dec/09/2021 01:05 | 

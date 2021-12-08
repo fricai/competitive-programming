@@ -13,12 +13,13 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1340 | [G - Roll or Increment](https://atcoder.jp/contests/abc224/tasks/abc224_g) | [C++ (GCC 9.2.1)](./atcoder/abc224/G.cpp) | `AtCoder` `*600` | Dec/09/2021 02:41 | 
-1339 | [F - Problem where +s Separate Digits](https://atcoder.jp/contests/abc224/tasks/abc224_f) | [C++ (GCC 9.2.1)](./atcoder/abc224/F.cpp) | `AtCoder` `*500` | Dec/09/2021 01:53 | 
-1338 | [E - Integers on Grid](https://atcoder.jp/contests/abc224/tasks/abc224_e) | [C++ (GCC 9.2.1)](./atcoder/abc224/E.cpp) | `AtCoder` `*500` | Dec/09/2021 01:05 | 
-1337 | [D - 8 Puzzle on Graph](https://atcoder.jp/contests/abc224/tasks/abc224_d) | [C++ (GCC 9.2.1)](./atcoder/abc224/D.cpp) | `AtCoder` `*400` | Dec/09/2021 00:39 | 
-1336 | [C - Triangle?](https://atcoder.jp/contests/abc224/tasks/abc224_c) | [C++ (GCC 9.2.1)](./atcoder/abc224/C.cpp) | `AtCoder` `*300` | Dec/09/2021 00:23 | 
-1335 | [B - Mongeness](https://atcoder.jp/contests/abc224/tasks/abc224_b) | [C++ (GCC 9.2.1)](./atcoder/abc224/B.cpp) | `AtCoder` `*200` | Dec/09/2021 00:16 | 
+1341 | [G - Roll or Increment](https://atcoder.jp/contests/abc224/tasks/abc224_g) | [C++ (GCC 9.2.1)](./atcoder/abc224/G.cpp) | `AtCoder` `*600` | Dec/09/2021 02:41 | 
+1340 | [F - Problem where +s Separate Digits](https://atcoder.jp/contests/abc224/tasks/abc224_f) | [C++ (GCC 9.2.1)](./atcoder/abc224/F.cpp) | `AtCoder` `*500` | Dec/09/2021 01:53 | 
+1339 | [E - Integers on Grid](https://atcoder.jp/contests/abc224/tasks/abc224_e) | [C++ (GCC 9.2.1)](./atcoder/abc224/E.cpp) | `AtCoder` `*500` | Dec/09/2021 01:05 | 
+1338 | [D - 8 Puzzle on Graph](https://atcoder.jp/contests/abc224/tasks/abc224_d) | [C++ (GCC 9.2.1)](./atcoder/abc224/D.cpp) | `AtCoder` `*400` | Dec/09/2021 00:39 | 
+1337 | [C - Triangle?](https://atcoder.jp/contests/abc224/tasks/abc224_c) | [C++ (GCC 9.2.1)](./atcoder/abc224/C.cpp) | `AtCoder` `*300` | Dec/09/2021 00:23 | 
+1336 | [B - Mongeness](https://atcoder.jp/contests/abc224/tasks/abc224_b) | [C++ (GCC 9.2.1)](./atcoder/abc224/B.cpp) | `AtCoder` `*200` | Dec/09/2021 00:16 | 
+1335 | [A - Tires](https://atcoder.jp/contests/abc224/tasks/abc224_a) | [C++ (GCC 9.2.1)](./atcoder/abc224/A.cpp) | `AtCoder` `*100` | Dec/09/2021 00:13 | 
 1334 | [H - Count Multiset](https://atcoder.jp/contests/abc221/tasks/abc221_h) | [C++ (GCC 9.2.1)](./atcoder/abc221/H.cpp) | `AtCoder` `*600` | Dec/08/2021 23:54 | 
 1333 | [E - Red and Blue Tree](https://atcoder.jp/contests/abc222/tasks/abc222_e) | [C++ (GCC 9.2.1)](./atcoder/abc222/E.cpp) | `AtCoder` `*500` | Dec/08/2021 12:49 | 
 1332 | [D - Between Two Arrays](https://atcoder.jp/contests/abc222/tasks/abc222_d) | [C++ (GCC 9.2.1)](./atcoder/abc222/D.cpp) | `AtCoder` `*400` | Dec/08/2021 12:29 | 

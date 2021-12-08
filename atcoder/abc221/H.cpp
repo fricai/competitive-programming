@@ -25,14 +25,24 @@ signed main() {
 	int n, m; cin >> n >> m;
 
 	vector f(n + 1, vector<mint>(n + 1));
-	f[0][0] = 1;
-	for (int i = 1; i <= n; ++i) {
-		for (int j = i; j <= n; ++j) {
-			f[i][j] = f[i][j - i] + f[i - 1][j - 1];
-			if (i > m) f[i][j] -= f[i - m - 1][j - i];
+	auto g = f;
+	f[0][0] = mint::raw(1);
+	for (int i = 0; i < m; ++i)
+		g[i][0] = f[0][0];
+
+	for (int y = 1; y <= n; ++y) {
+		vector<mint> s(y);
+		s[0] = g[y - 1][0];
+
+		for (int x = 1; x <= n; ++x) {
+			f[y][x] = s[x % y];
+			s[x % y] += g[y - 1][x];
+			g[y][x] = f[y][x] + g[y - 1][x];
+			if (y >= m) g[y][x] -= f[y - m][x];
 		}
 	}
 
-	for (int k = 1; k <= n; ++k)
+	for (int k = 1; k <= n; ++k) {
 		cout << f[k][n].val() << '\n';
+	}
 }

@@ -6943,6 +6943,22 @@
     ],
     "timestamp": "Dec/08/2021 23:54"
   },
+  "AC27772900": {
+    "contest_id": "abc224",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc224/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Integers on Grid",
+    "problem_url": "https://atcoder.jp/contests/abc224/tasks/abc224_e",
+    "submission_id": "AC27772900",
+    "submission_url": "https://atcoder.jp/contests/abc224/submissions/27772900",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/09/2021 01:05"
+  },
   "AC27773003": {
     "contest_id": "abc224",
     "language": "C++ (GCC 9.2.1)",

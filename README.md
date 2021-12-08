@@ -13,11 +13,12 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1333 | [H - Count Multiset](https://atcoder.jp/contests/abc221/tasks/abc221_h) | [C++ (GCC 9.2.1)](./atcoder/abc221/H.cpp) | `AtCoder` `*600` | Dec/08/2021 23:54 | 
-1332 | [E - Red and Blue Tree](https://atcoder.jp/contests/abc222/tasks/abc222_e) | [C++ (GCC 9.2.1)](./atcoder/abc222/E.cpp) | `AtCoder` `*500` | Dec/08/2021 12:49 | 
-1331 | [D - Between Two Arrays](https://atcoder.jp/contests/abc222/tasks/abc222_d) | [C++ (GCC 9.2.1)](./atcoder/abc222/D.cpp) | `AtCoder` `*400` | Dec/08/2021 12:29 | 
-1330 | [C - Swiss-System Tournament](https://atcoder.jp/contests/abc222/tasks/abc222_c) | [C++ (GCC 9.2.1)](./atcoder/abc222/C.cpp) | `AtCoder` `*300` | Dec/08/2021 12:22 | 
-1329 | [B - Failing Grade](https://atcoder.jp/contests/abc222/tasks/abc222_b) | [C++ (GCC 9.2.1)](./atcoder/abc222/B.cpp) | `AtCoder` `*200` | Dec/08/2021 12:06 | 
+1334 | [H - Count Multiset](https://atcoder.jp/contests/abc221/tasks/abc221_h) | [C++ (GCC 9.2.1)](./atcoder/abc221/H.cpp) | `AtCoder` `*600` | Dec/08/2021 23:54 | 
+1333 | [E - Red and Blue Tree](https://atcoder.jp/contests/abc222/tasks/abc222_e) | [C++ (GCC 9.2.1)](./atcoder/abc222/E.cpp) | `AtCoder` `*500` | Dec/08/2021 12:49 | 
+1332 | [D - Between Two Arrays](https://atcoder.jp/contests/abc222/tasks/abc222_d) | [C++ (GCC 9.2.1)](./atcoder/abc222/D.cpp) | `AtCoder` `*400` | Dec/08/2021 12:29 | 
+1331 | [C - Swiss-System Tournament](https://atcoder.jp/contests/abc222/tasks/abc222_c) | [C++ (GCC 9.2.1)](./atcoder/abc222/C.cpp) | `AtCoder` `*300` | Dec/08/2021 12:22 | 
+1330 | [B - Failing Grade](https://atcoder.jp/contests/abc222/tasks/abc222_b) | [C++ (GCC 9.2.1)](./atcoder/abc222/B.cpp) | `AtCoder` `*200` | Dec/08/2021 12:06 | 
+1329 | [A - Four Digits](https://atcoder.jp/contests/abc222/tasks/abc222_a) | [C++ (GCC 9.2.1)](./atcoder/abc222/A.cpp) | `AtCoder` `*100` | Dec/08/2021 12:04 | 
 1328 | [G - Jumping sequence](https://atcoder.jp/contests/abc221/tasks/abc221_g) | [C++ (GCC 9.2.1)](./atcoder/abc221/G.cpp) | `AtCoder` `*600` | Dec/08/2021 02:25 | 
 1327 | [F - Diameter set](https://atcoder.jp/contests/abc221/tasks/abc221_f) | [C++ (GCC 9.2.1)](./atcoder/abc221/F.cpp) | `AtCoder` `*500` | Dec/08/2021 01:14 | 
 1326 | [E - LEQ](https://atcoder.jp/contests/abc221/tasks/abc221_e) | [C++ (GCC 9.2.1)](./atcoder/abc221/E.cpp) | `AtCoder` `*500` | Dec/08/2021 00:48 | 

@@ -6783,6 +6783,22 @@
     ],
     "timestamp": "Dec/08/2021 02:25"
   },
+  "AC27763370": {
+    "contest_id": "abc222",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc222/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Between Two Arrays",
+    "problem_url": "https://atcoder.jp/contests/abc222/tasks/abc222_d",
+    "submission_id": "AC27763370",
+    "submission_url": "https://atcoder.jp/contests/abc222/submissions/27763370",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/08/2021 12:29"
+  },
   "AC27763663": {
     "contest_id": "abc222",
     "language": "C++ (GCC 9.2.1)",

@@ -6943,6 +6943,22 @@
     ],
     "timestamp": "Dec/08/2021 23:54"
   },
+  "AC27772813": {
+    "contest_id": "abc224",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc224/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "8 Puzzle on Graph",
+    "problem_url": "https://atcoder.jp/contests/abc224/tasks/abc224_d",
+    "submission_id": "AC27772813",
+    "submission_url": "https://atcoder.jp/contests/abc224/submissions/27772813",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/09/2021 00:39"
+  },
   "AC27772900": {
     "contest_id": "abc224",
     "language": "C++ (GCC 9.2.1)",

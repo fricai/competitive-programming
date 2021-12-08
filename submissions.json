@@ -6943,6 +6943,22 @@
     ],
     "timestamp": "Dec/08/2021 23:54"
   },
+  "AC27773003": {
+    "contest_id": "abc224",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc224/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Problem where +s Separate Digits",
+    "problem_url": "https://atcoder.jp/contests/abc224/tasks/abc224_f",
+    "submission_id": "AC27773003",
+    "submission_url": "https://atcoder.jp/contests/abc224/submissions/27773003",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/09/2021 01:53"
+  },
   "AC27773127": {
     "contest_id": "abc224",
     "language": "C++ (GCC 9.2.1)",

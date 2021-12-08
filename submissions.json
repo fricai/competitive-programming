@@ -6783,6 +6783,22 @@
     ],
     "timestamp": "Dec/08/2021 02:25"
   },
+  "AC27763030": {
+    "contest_id": "abc222",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc222/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Four Digits",
+    "problem_url": "https://atcoder.jp/contests/abc222/tasks/abc222_a",
+    "submission_id": "AC27763030",
+    "submission_url": "https://atcoder.jp/contests/abc222/submissions/27763030",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Dec/08/2021 12:04"
+  },
   "AC27763054": {
     "contest_id": "abc222",
     "language": "C++ (GCC 9.2.1)",

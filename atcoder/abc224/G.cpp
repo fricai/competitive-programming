@@ -15,25 +15,34 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, true : fals
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
+template<class F>
+int ternSearch(int a, int b, F f) {
+	assert(a <= b);
+	while (b - a >= 5) {
+		int mid = (a + b) / 2;
+		if (f(mid) < f(mid+1)) a = mid; // (A)
+		else b = mid+1;
+	}
+	rep(i,a+1,b+1) if (f(a) < f(i)) a = i; // (B)
+	return a;
+}
+
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
 	ll n, s, t, a, b; cin >> n >> s >> t >> a >> b;
 
-	ll r = sqrt(ld(2) * b * n / a);
-	if (r > t) r = t;
+	auto f = [&](int r) -> ld {
+		assert(1 <= r && r <= t);
+		auto x = ld(b) * n / r + ld(a) * (r - 1) / 2;
+		if (s > t) return -x;
+		return -min(ld(a) * (t - s), x);
 
-	ld mn = b * n;
-	r -= 2;
-	rep(i, 0, 5) {
-		if (r > 0 && r <= t) {
-			uin(mn, ld(b) * n / r + ld(a) * (r - 1) / 2);
-		}
-		++r;
-	}
+	};
+
+	int r = ternSearch(1, t, f);
 
 	cout << fixed << setprecision(10);
-	if (s <= t) cout << min(ld(a) * (t - s), mn) << '\n';
-	else cout << mn << '\n';
+	cout << -f(r) << '\n';
 }

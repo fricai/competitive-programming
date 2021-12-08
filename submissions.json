@@ -6943,6 +6943,22 @@
     ],
     "timestamp": "Dec/08/2021 23:54"
   },
+  "AC27773141": {
+    "contest_id": "abc224",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc224/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "Roll or Increment",
+    "problem_url": "https://atcoder.jp/contests/abc224/tasks/abc224_g",
+    "submission_id": "AC27773141",
+    "submission_url": "https://atcoder.jp/contests/abc224/submissions/27773141",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/09/2021 02:41"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

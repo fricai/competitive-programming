@@ -28,21 +28,21 @@ signed main() {
 	auto g = f;
 	f[0][0] = mint::raw(1);
 	for (int i = 0; i < m; ++i)
-		g[i][0] = f[0][0];
+		g[0][i] = f[0][0];
 
 	for (int y = 1; y <= n; ++y) {
 		vector<mint> s(y);
-		s[0] = g[y - 1][0];
+		s[0] = g[0][y - 1];
 
 		for (int x = 1; x <= n; ++x) {
-			f[y][x] = s[x % y];
-			s[x % y] += g[y - 1][x];
-			g[y][x] = f[y][x] + g[y - 1][x];
-			if (y >= m) g[y][x] -= f[y - m][x];
+			f[x][y] = s[x % y];
+			s[x % y] += g[x][y - 1];
+			g[x][y] = f[x][y] + g[x][y - 1];
+			if (y >= m) g[x][y] -= f[x][y - m];
 		}
 	}
 
 	for (int k = 1; k <= n; ++k) {
-		cout << f[k][n].val() << '\n';
+		cout << f[n][k].val() << '\n';
 	}
 }

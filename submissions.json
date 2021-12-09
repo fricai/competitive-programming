@@ -7087,6 +7087,22 @@
     ],
     "timestamp": "Dec/09/2021 03:04"
   },
+  "AC27781366": {
+    "contest_id": "abc225",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc225/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Calendar Validator",
+    "problem_url": "https://atcoder.jp/contests/abc225/tasks/abc225_c",
+    "submission_id": "AC27781366",
+    "submission_url": "https://atcoder.jp/contests/abc225/submissions/27781366",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Dec/09/2021 17:34"
+  },
   "AC27781484": {
     "contest_id": "abc225",
     "language": "C++ (GCC 9.2.1)",

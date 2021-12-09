@@ -13,7 +13,8 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1343 | [G - X](https://atcoder.jp/contests/abc225/tasks/abc225_g) | [C++ (GCC 9.2.1)](./atcoder/abc225/G.cpp) | `AtCoder` `*600` | Dec/09/2021 18:48 | 
+1344 | [G - X](https://atcoder.jp/contests/abc225/tasks/abc225_g) | [C++ (GCC 9.2.1)](./atcoder/abc225/G.cpp) | `AtCoder` `*600` | Dec/09/2021 18:48 | 
+1343 | [F - String Cards](https://atcoder.jp/contests/abc225/tasks/abc225_f) | [C++ (GCC 9.2.1)](./atcoder/abc225/F.cpp) | `AtCoder` `*500` | Dec/09/2021 18:30 | 
 1342 | [H - Security Camera 2](https://atcoder.jp/contests/abc224/tasks/abc224_h) | [C++ (GCC 9.2.1)](./atcoder/abc224/H.cpp) | `AtCoder` `*600` | Dec/09/2021 03:04 | 
 1341 | [G - Roll or Increment](https://atcoder.jp/contests/abc224/tasks/abc224_g) | [C++ (GCC 9.2.1)](./atcoder/abc224/G.cpp) | `AtCoder` `*600` | Dec/09/2021 02:41 | 
 1340 | [F - Problem where +s Separate Digits](https://atcoder.jp/contests/abc224/tasks/abc224_f) | [C++ (GCC 9.2.1)](./atcoder/abc224/F.cpp) | `AtCoder` `*500` | Dec/09/2021 01:53 | 

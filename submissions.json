@@ -7087,6 +7087,22 @@
     ],
     "timestamp": "Dec/09/2021 03:04"
   },
+  "AC27782668": {
+    "contest_id": "abc225",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc225/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "X",
+    "problem_url": "https://atcoder.jp/contests/abc225/tasks/abc225_g",
+    "submission_id": "AC27782668",
+    "submission_url": "https://atcoder.jp/contests/abc225/submissions/27782668",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/09/2021 18:48"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

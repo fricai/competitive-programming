@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1350 | [H - Social Distance 2](https://atcoder.jp/contests/abc225/tasks/abc225_h) | [C++ (GCC 9.2.1)](./atcoder/abc225/H.cpp) | `AtCoder` `*600` | Dec/15/2021 22:32 | 
 1349 | [G - X](https://atcoder.jp/contests/abc225/tasks/abc225_g) | [C++ (GCC 9.2.1)](./atcoder/abc225/G.cpp) | `AtCoder` `*600` | Dec/09/2021 18:48 | 
 1348 | [F - String Cards](https://atcoder.jp/contests/abc225/tasks/abc225_f) | [C++ (GCC 9.2.1)](./atcoder/abc225/F.cpp) | `AtCoder` `*500` | Dec/09/2021 18:30 | 
 1347 | [E - 7](https://atcoder.jp/contests/abc225/tasks/abc225_e) | [C++ (GCC 9.2.1)](./atcoder/abc225/E.cpp) | `AtCoder` `*500` | Dec/09/2021 18:06 | 

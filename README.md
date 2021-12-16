@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1352 | [F - Many Easy Problems](https://atcoder.jp/contests/agc005/tasks/agc005_f) | [C++ (GCC 9.2.1)](./atcoder/agc005/F.cpp) | `AtCoder` `*1900` | Dec/16/2021 22:40 | 
 1351 | [E - The Child and Binary Tree](https://codeforces.com/contest/438/problem/E) | [GNU C++17 (64)](./codeforces/438/E.cpp) | `combinatorics` `divide and conquer` `fft` `number theory` `*3100` | Dec/16/2021 00:43 | 
 1350 | [H - Social Distance 2](https://atcoder.jp/contests/abc225/tasks/abc225_h) | [C++ (GCC 9.2.1)](./atcoder/abc225/H.cpp) | `AtCoder` `*600` | Dec/15/2021 22:32 | 
 1349 | [G - X](https://atcoder.jp/contests/abc225/tasks/abc225_g) | [C++ (GCC 9.2.1)](./atcoder/abc225/G.cpp) | `AtCoder` `*600` | Dec/09/2021 18:48 | 

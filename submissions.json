@@ -23342,6 +23342,22 @@
     ],
     "timestamp": "Dec/16/2021 00:43"
   },
+  "CF139650302": {
+    "contest_id": 1617,
+    "language": "GNU C++17",
+    "path": "codeforces/1617/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Paprika and Permutation",
+    "problem_url": "https://codeforces.com/contest/1617/problem/C",
+    "submission_id": "CF139650302",
+    "submission_url": "https://codeforces.com/contest/1617/submission/139650302",
+    "tags": [
+      "greedy",
+      "math"
+    ],
+    "timestamp": "Dec/17/2021 20:32"
+  },
   "CF139655015": {
     "contest_id": 1617,
     "language": "GNU C++17",

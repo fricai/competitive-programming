@@ -23,9 +23,9 @@ A repository to keep track of problems solved on the following platforms:
 1361 | [C - ABC conjecture](https://atcoder.jp/contests/abc227/tasks/abc227_c) | [C++ (GCC 9.2.1)](./atcoder/abc227/C.cpp) | `AtCoder` `*300` | Dec/18/2021 16:22 | 
 1360 | [B - KEYENCE building](https://atcoder.jp/contests/abc227/tasks/abc227_b) | [C++ (GCC 9.2.1)](./atcoder/abc227/B.cpp) | `AtCoder` `*200` | Dec/18/2021 16:20 | 
 1359 | [A - Last Card](https://atcoder.jp/contests/abc227/tasks/abc227_a) | [C++ (GCC 9.2.1)](./atcoder/abc227/A.cpp) | `AtCoder` `*100` | Dec/18/2021 16:16 | 
-1358 | [D2 - Too Many Impostors (hard version)](https://codeforces.com/contest/1617/problem/D2) | [GNU C++17](./codeforces/1617/D2.cpp) | `constructive algorithms` `interactive` | Dec/17/2021 22:05 | 
-1357 | [D1 - Too Many Impostors (easy version)](https://codeforces.com/contest/1617/problem/D1) | [GNU C++17](./codeforces/1617/D1.cpp) | `constructive algorithms` `interactive` | Dec/17/2021 21:33 | 
-1356 | [E - Christmas Chocolates](https://codeforces.com/contest/1617/problem/E) | [GNU C++17](./codeforces/1617/E.cpp) | `dfs and similar` `dp` `games` `graphs` `math` `number theory` `shortest paths` `trees` | Dec/17/2021 21:18 | 
+1358 | [E - Christmas Chocolates](https://codeforces.com/contest/1617/problem/E) | [GNU C++17](./codeforces/1617/E.cpp) | `dfs and similar` `dp` `games` `graphs` `implementation` `math` `number theory` `shortest paths` `trees` `*2700` | Dec/17/2021 22:56 | 
+1357 | [D2 - Too Many Impostors (hard version)](https://codeforces.com/contest/1617/problem/D2) | [GNU C++17](./codeforces/1617/D2.cpp) | `constructive algorithms` `interactive` | Dec/17/2021 22:05 | 
+1356 | [D1 - Too Many Impostors (easy version)](https://codeforces.com/contest/1617/problem/D1) | [GNU C++17](./codeforces/1617/D1.cpp) | `constructive algorithms` `interactive` | Dec/17/2021 21:33 | 
 1355 | [C - Paprika and Permutation](https://codeforces.com/contest/1617/problem/C) | [GNU C++17](./codeforces/1617/C.cpp) | `greedy` `math` | Dec/17/2021 20:32 | 
 1354 | [B - GCD Problem](https://codeforces.com/contest/1617/problem/B) | [GNU C++17](./codeforces/1617/B.cpp) | `brute force` `constructive algorithms` `math` `number theory` | Dec/17/2021 20:19 | 
 1353 | [A - Forbidden Subsequence](https://codeforces.com/contest/1617/problem/A) | [GNU C++17](./codeforces/1617/A.cpp) | `constructive algorithms` `greedy` `sortings` `strings` | Dec/17/2021 20:15 | 

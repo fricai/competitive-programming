@@ -19,25 +19,7 @@ int parent(int x) {
 	if ((x & (x - 1)) == 0)
 		return 0;
 	int j = 32 - __builtin_clz(x);
-	return (1ll << j) - x;
-}
-
-vector<int> ancestors(int x) {
-	vector<int> res;
-	while (x != 0) {
-		res.push_back(x);
-		x = parent(x);
-	}
-	reverse(all(res));
-	return res;
-}
-
-int dist(int u, int v) {
-	auto a = ancestors(u);
-	auto b = ancestors(v);
-	int i = 0;
-	while (i < sz(a) && i < sz(b) && a[i] == b[i]) ++i;
-	return (sz(a) - i) + (sz(b) - i);
+	return (1 << j) - x;
 }
 
 signed main() {
@@ -49,15 +31,70 @@ signed main() {
 	for (auto &x : a)
 		cin >> x;
 
+	vector<int> cmp;
+	cmp.push_back(0);
+	for (auto x : a) {
+		while (x != 0) {
+			cmp.push_back(x);
+			x = parent(x);
+		}
+	}
+	sort(all(cmp));
+	cmp.erase(unique(all(cmp)), end(cmp));
+
+	vector<vector<int>> g(sz(cmp));
+	vector<int> marked;
+
+	for (auto x : a) {
+		marked.push_back(lower_bound(all(cmp), x) - begin(cmp));
+		while (x != 0) {
+			int p = parent(x);
+
+			int u = lower_bound(all(cmp), p) - begin(cmp);
+			int v = lower_bound(all(cmp), x) - begin(cmp);
+
+			g[u].push_back(v);
+			g[v].push_back(u);
+
+			x = p;
+		}
+	}
+
+	for (auto &v : g) {
+		sort(all(v));
+		v.erase(unique(all(v)), end(v));
+	}
+
 	auto furthest = [&](int x) {
-		int s = x, d = 0;
-		for (int i = 0; i < n; ++i)
-			if (uax(d, dist(a[x], a[i])))
-				s = i;
-		return pair(s, d);
+		vector<int> d(sz(g));
+		auto dfs = [&](const auto &self, int u, int p) -> void {
+			for (auto v : g[u]) {
+				if (v != p) {
+					d[v] = d[u] + 1;
+					self(self, v, u);
+				}
+			}
+		};
+		dfs(dfs, x, x);
+
+		int mx = 0, v = x;
+		for (auto s : marked)
+			if (uax(mx, d[s]))
+				v = s;
+		return pair(v, mx);
 	};
 
-	int x = furthest(0).first;
-	auto [y, d] = furthest(x);
+	int u = furthest(0).first;
+	auto [v, d] = furthest(u);
+
+	int x = -1, y = -1;
+	for (int i = 0; i < n; ++i) {
+		int t = a[i];
+		int s = lower_bound(all(cmp), t) - begin(cmp);
+		if (s == u) x = i;
+		if (s == v) y = i;
+	}
+	assert(x != -1 && y != -1);
+
 	cout << x + 1 << ' ' << y + 1 << ' ' << d << '\n';
 }

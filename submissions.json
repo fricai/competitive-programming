@@ -23342,6 +23342,22 @@
     ],
     "timestamp": "Dec/16/2021 00:43"
   },
+  "CF139656566": {
+    "contest_id": 1617,
+    "language": "GNU C++17",
+    "path": "codeforces/1617/D1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D1",
+    "problem_name": "Too Many Impostors (easy version)",
+    "problem_url": "https://codeforces.com/contest/1617/problem/D1",
+    "submission_id": "CF139656566",
+    "submission_url": "https://codeforces.com/contest/1617/submission/139656566",
+    "tags": [
+      "constructive algorithms",
+      "interactive"
+    ],
+    "timestamp": "Dec/17/2021 21:33"
+  },
   "CF139659974": {
     "contest_id": 1617,
     "language": "GNU C++17",

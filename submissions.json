@@ -7231,6 +7231,22 @@
     ],
     "timestamp": "Dec/16/2021 22:40"
   },
+  "AC27967683": {
+    "contest_id": "abc227",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc227/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Last Card",
+    "problem_url": "https://atcoder.jp/contests/abc227/tasks/abc227_a",
+    "submission_id": "AC27967683",
+    "submission_url": "https://atcoder.jp/contests/abc227/submissions/27967683",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Dec/18/2021 16:16"
+  },
   "AC27967723": {
     "contest_id": "abc227",
     "language": "C++ (GCC 9.2.1)",

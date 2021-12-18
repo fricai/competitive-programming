@@ -13,8 +13,9 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1360 | [H - Bullion](https://atcoder.jp/contests/abc230/tasks/abc230_h) | [C++ (GCC 9.2.1)](./atcoder/abc230/H.cpp) | `AtCoder` `*600` | Dec/18/2021 21:50 | 
-1359 | [G - Divisors of Binomial Coefficient](https://atcoder.jp/contests/abc227/tasks/abc227_g) | [C++ (GCC 9.2.1)](./atcoder/abc227/G.cpp) | `AtCoder` `*600` | Dec/18/2021 16:46 | 
+1361 | [H - Bullion](https://atcoder.jp/contests/abc230/tasks/abc230_h) | [C++ (GCC 9.2.1)](./atcoder/abc230/H.cpp) | `AtCoder` `*600` | Dec/18/2021 21:50 | 
+1360 | [G - Divisors of Binomial Coefficient](https://atcoder.jp/contests/abc227/tasks/abc227_g) | [C++ (GCC 9.2.1)](./atcoder/abc227/G.cpp) | `AtCoder` `*600` | Dec/18/2021 16:46 | 
+1359 | [D - Project Planning](https://atcoder.jp/contests/abc227/tasks/abc227_d) | [C++ (GCC 9.2.1)](./atcoder/abc227/D.cpp) | `AtCoder` `*400` | Dec/18/2021 16:30 | 
 1358 | [D2 - Too Many Impostors (hard version)](https://codeforces.com/contest/1617/problem/D2) | [GNU C++17](./codeforces/1617/D2.cpp) | `constructive algorithms` `interactive` | Dec/17/2021 22:05 | 
 1357 | [D1 - Too Many Impostors (easy version)](https://codeforces.com/contest/1617/problem/D1) | [GNU C++17](./codeforces/1617/D1.cpp) | `constructive algorithms` `interactive` | Dec/17/2021 21:33 | 
 1356 | [E - Christmas Chocolates](https://codeforces.com/contest/1617/problem/E) | [GNU C++17](./codeforces/1617/E.cpp) | `dfs and similar` `dp` `games` `graphs` `math` `number theory` `shortest paths` `trees` | Dec/17/2021 21:18 | 

@@ -7231,6 +7231,22 @@
     ],
     "timestamp": "Dec/16/2021 22:40"
   },
+  "AC27968016": {
+    "contest_id": "abc227",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc227/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "Divisors of Binomial Coefficient",
+    "problem_url": "https://atcoder.jp/contests/abc227/tasks/abc227_g",
+    "submission_id": "AC27968016",
+    "submission_url": "https://atcoder.jp/contests/abc227/submissions/27968016",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/18/2021 16:46"
+  },
   "AC27972467": {
     "contest_id": "abc230",
     "language": "C++ (GCC 9.2.1)",

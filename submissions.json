@@ -7231,6 +7231,22 @@
     ],
     "timestamp": "Dec/16/2021 22:40"
   },
+  "AC27972467": {
+    "contest_id": "abc230",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc230/H.cpp",
+    "platform": "AtCoder",
+    "problem_index": "H",
+    "problem_name": "Bullion",
+    "problem_url": "https://atcoder.jp/contests/abc230/tasks/abc230_h",
+    "submission_id": "AC27972467",
+    "submission_url": "https://atcoder.jp/contests/abc230/submissions/27972467",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/18/2021 21:50"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

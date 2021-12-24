@@ -13,9 +13,10 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1367 | [E - Purple Crayon](https://codeforces.com/contest/1615/problem/E) | [GNU C++17](./codeforces/1615/E.cpp) | `data structures` `games` `greedy` `trees` | Dec/25/2021 02:42 | 
-1366 | [D - X(or)-mas Tree](https://codeforces.com/contest/1615/problem/D) | [GNU C++17](./codeforces/1615/D.cpp) | `2-sat` `dsu` `graphs` `trees` | Dec/25/2021 02:23 | 
-1365 | [B - And It's Non-Zero](https://codeforces.com/contest/1615/problem/B) | [GNU C++17](./codeforces/1615/B.cpp) | `bitmasks` `greedy` | Dec/24/2021 20:22 | 
+1368 | [E - Purple Crayon](https://codeforces.com/contest/1615/problem/E) | [GNU C++17](./codeforces/1615/E.cpp) | `data structures` `games` `greedy` `trees` | Dec/25/2021 02:42 | 
+1367 | [D - X(or)-mas Tree](https://codeforces.com/contest/1615/problem/D) | [GNU C++17](./codeforces/1615/D.cpp) | `2-sat` `dsu` `graphs` `trees` | Dec/25/2021 02:23 | 
+1366 | [B - And It's Non-Zero](https://codeforces.com/contest/1615/problem/B) | [GNU C++17](./codeforces/1615/B.cpp) | `bitmasks` `greedy` | Dec/24/2021 20:22 | 
+1365 | [A - Closing The Gap](https://codeforces.com/contest/1615/problem/A) | [GNU C++17](./codeforces/1615/A.cpp) | `greedy` | Dec/24/2021 20:06 | 
 1364 | [H - Bullion](https://atcoder.jp/contests/abc230/tasks/abc230_h) | [C++ (GCC 9.2.1)](./atcoder/abc230/H.cpp) | `AtCoder` `*600` | Dec/18/2021 21:50 | 
 1363 | [G - Divisors of Binomial Coefficient](https://atcoder.jp/contests/abc227/tasks/abc227_g) | [C++ (GCC 9.2.1)](./atcoder/abc227/G.cpp) | `AtCoder` `*600` | Dec/18/2021 16:46 | 
 1362 | [D - Project Planning](https://atcoder.jp/contests/abc227/tasks/abc227_d) | [C++ (GCC 9.2.1)](./atcoder/abc227/D.cpp) | `AtCoder` `*400` | Dec/18/2021 16:30 | 

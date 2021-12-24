@@ -23544,6 +23544,24 @@
     ],
     "timestamp": "Dec/17/2021 22:05"
   },
+  "CF140524310": {
+    "contest_id": 1615,
+    "language": "GNU C++17",
+    "path": "codeforces/1615/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "X(or)-mas Tree",
+    "problem_url": "https://codeforces.com/contest/1615/problem/D",
+    "submission_id": "CF140524310",
+    "submission_url": "https://codeforces.com/contest/1615/submission/140524310",
+    "tags": [
+      "2-sat",
+      "dsu",
+      "graphs",
+      "trees"
+    ],
+    "timestamp": "Dec/25/2021 02:23"
+  },
   "CF140525110": {
     "contest_id": 1615,
     "language": "GNU C++17",

@@ -15,78 +15,85 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, true : fals
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-struct eq_solver {
-	int n;
-	vector<vector<pair<int, bool>>> g;
-	vector<int> col;
+void solve() {
+	int n, m; cin >> n >> m;
+	vector<vector<int>> t(n);
+	vector<tuple<int, int, int>> edges(n - 1);
 
-	eq_solver(int n) : n{n}, g(n), col(n, -1) { }
-	void add(int x, int y, bool b) {
-		// add the constraint that x ^ y = b
-		g[x].emplace_back(y, b);
-		g[y].emplace_back(x, b);
+	{
+	int e = 0;
+	for (auto &[x, y, v] : edges) {
+		cin >> x >> y >> v;
+		--x; --y;
+		t[x].push_back(e);
+		t[y].push_back(e);
+		++e;
+	}
 	}
 
-	bool solve() {
-		auto dfs = [&](const auto &self, int u, bool b) -> bool {
-			if (col[u] != -1)
-				return col[u] == b;
-			col[u] = b;
-			for (auto [v, w] : g[u])
-				if (!self(self, v, b ^ w))
-					return false;
-			return true;
-		};
+	vector<int> p(n, -1);
+	auto init = [&](const auto &self, int u) -> void {
+		for (auto e : t[u]) {
+			auto [a, b, x] = edges[e];
+			int v = a ^ b ^ u;
+			t[v].erase(find(all(t[v]), e));
+			p[v] = u;
+			self(self, v);
+		}
+	};
+	init(init, 0);
 
-		rep(u, 0, n) {
-			if (col[u] == -1 && !dfs(dfs, u, 0))
+	vector<vector<pair<int, bool>>> g(n);
+	auto add_edge = [&](int u, int v, int x) {
+		g[u].emplace_back(v, x);
+		g[v].emplace_back(u, x);
+	};
+
+	vector<int> val(n, -1);
+	for (auto [x, y, v] : edges) {
+		if (x != p[y]) swap(x, y);
+		val[y] = v;
+		if (v != -1) {
+			add_edge(x, y, __builtin_popcount(v) & 1);
+		}
+	}
+
+	rep(i, 0, m) {
+		int a, b, p; cin >> a >> b >> p; --a; --b;
+		add_edge(a, b, p);
+	}
+
+	vector<short> col(n, -1);
+	auto bip = [&](const auto &self, int u, bool par) -> bool {
+		if (col[u] != -1) return col[u] == par;
+		col[u] = par;
+		for (auto [v, w] : g[u]) {
+			if (!self(self, v, par ^ w))
 				return false;
 		}
 		return true;
-	}
-};
+	};
 
-void solve() {
-	int n, m; cin >> n >> m;
-
-	vector<vector<pair<int, int>>> g(n);
-	eq_solver s(n);
-	vector<tuple<int, int, int>> edges(n - 1);
-
-	for (auto &[u, v, x] : edges) {
-		cin >> u >> v >> x; --u; --v;
-		g[v].push_back({u, x});
-		g[u].push_back({v, x});
-		if (x != -1) s.add(u, v, __builtin_popcount(x) & 1);
-	}
-	rep(i, 0, m) {
-		int u, v, p; cin >> u >> v >> p; --u; --v;
-		s.add(u, v, p);
-	}
-
-	if (!s.solve()) {
-		return void(cout << "NO\n");
+	rep(u, 0, n) {
+		if (col[u] != -1)
+			continue;
+		if (!bip(bip, u, 0)) {
+			cout << "NO\n";
+			return;
+		}
 	}
 
 	cout << "YES\n";
-	auto init = [&](const auto &self, int u, int p, int cur) -> void {
-		for (auto [v, x] : g[u]) {
-			if (v == p)
-				continue;
-			cout << u + 1 << ' ' << v + 1 << ' ';
-
-			int nxt = -1;
-			if (x != -1) {
-				cout << x << '\n';
-				nxt = cur ^ x;
-			} else {
-				cout << (cur ^ s.col[v]) << '\n';
-				nxt = s.col[v];
-			}
-			self(self, v, u, nxt);
+	int x[2] = {3, 1};
+	rep(u, 1, n) {
+		cout << p[u] + 1 << ' ' << u + 1 << ' ';
+		if (val[u] != -1)
+			cout << val[u];
+		else {
+			cout << x[col[u] ^ col[p[u]]];
 		}
-	};
-	init(init, 0, 0, 0);
+		cout << '\n';
+	}
 }
 
 signed main() {

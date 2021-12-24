@@ -13,16 +13,17 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1378 | [G - Strongest Takahashi](https://atcoder.jp/contests/abc233/tasks/abc233_g) | [C++ (GCC 9.2.1)](./atcoder/abc233/G.cpp) | `AtCoder` `*600` | Dec/26/2021 02:01 | 
-1377 | [Ex - Manhattan Christmas Tree](https://atcoder.jp/contests/abc233/tasks/abc233_h) | [C++ (GCC 9.2.1)](./atcoder/abc233/Ex.cpp) | `AtCoder` `*600` | Dec/25/2021 19:09 | 
-1376 | [F - Swap and Sort](https://atcoder.jp/contests/abc233/tasks/abc233_f) | [C++ (GCC 9.2.1)](./atcoder/abc233/F.cpp) | `AtCoder` `*500` | Dec/25/2021 18:40 | 
-1375 | [E - Σ[k=0..10^100]floor(X／10^k)](https://atcoder.jp/contests/abc233/tasks/abc233_e) | [C++ (GCC 9.2.1)](./atcoder/abc233/E.cpp) | `AtCoder` `*500` | Dec/25/2021 17:44 | 
-1374 | [D - Count Interval](https://atcoder.jp/contests/abc233/tasks/abc233_d) | [C++ (GCC 9.2.1)](./atcoder/abc233/D.cpp) | `AtCoder` `*400` | Dec/25/2021 17:39 | 
-1373 | [C - Product](https://atcoder.jp/contests/abc233/tasks/abc233_c) | [C++ (GCC 9.2.1)](./atcoder/abc233/C.cpp) | `AtCoder` `*300` | Dec/25/2021 17:37 | 
-1372 | [B - A Reverse](https://atcoder.jp/contests/abc233/tasks/abc233_b) | [C++ (GCC 9.2.1)](./atcoder/abc233/B.cpp) | `AtCoder` `*200` | Dec/25/2021 17:33 | 
-1371 | [A - 10yen Stamp](https://atcoder.jp/contests/abc233/tasks/abc233_a) | [C++ (GCC 9.2.1)](./atcoder/abc233/A.cpp) | `AtCoder` `*100` | Dec/25/2021 17:31 | 
-1370 | [G - Modulo Shortest Path](https://atcoder.jp/contests/abc232/tasks/abc232_g) | [C++ (GCC 9.2.1)](./atcoder/abc232/G.cpp) | `AtCoder` `*600` | Dec/25/2021 04:39 | 
-1369 | [F - Simple Operations on Sequence](https://atcoder.jp/contests/abc232/tasks/abc232_f) | [C++ (GCC 9.2.1)](./atcoder/abc232/F.cpp) | `AtCoder` `*500` | Dec/25/2021 04:10 | 
+1379 | [G - Strongest Takahashi](https://atcoder.jp/contests/abc233/tasks/abc233_g) | [C++ (GCC 9.2.1)](./atcoder/abc233/G.cpp) | `AtCoder` `*600` | Dec/26/2021 02:01 | 
+1378 | [Ex - Manhattan Christmas Tree](https://atcoder.jp/contests/abc233/tasks/abc233_h) | [C++ (GCC 9.2.1)](./atcoder/abc233/Ex.cpp) | `AtCoder` `*600` | Dec/25/2021 19:09 | 
+1377 | [F - Swap and Sort](https://atcoder.jp/contests/abc233/tasks/abc233_f) | [C++ (GCC 9.2.1)](./atcoder/abc233/F.cpp) | `AtCoder` `*500` | Dec/25/2021 18:40 | 
+1376 | [E - Σ[k=0..10^100]floor(X／10^k)](https://atcoder.jp/contests/abc233/tasks/abc233_e) | [C++ (GCC 9.2.1)](./atcoder/abc233/E.cpp) | `AtCoder` `*500` | Dec/25/2021 17:44 | 
+1375 | [D - Count Interval](https://atcoder.jp/contests/abc233/tasks/abc233_d) | [C++ (GCC 9.2.1)](./atcoder/abc233/D.cpp) | `AtCoder` `*400` | Dec/25/2021 17:39 | 
+1374 | [C - Product](https://atcoder.jp/contests/abc233/tasks/abc233_c) | [C++ (GCC 9.2.1)](./atcoder/abc233/C.cpp) | `AtCoder` `*300` | Dec/25/2021 17:37 | 
+1373 | [B - A Reverse](https://atcoder.jp/contests/abc233/tasks/abc233_b) | [C++ (GCC 9.2.1)](./atcoder/abc233/B.cpp) | `AtCoder` `*200` | Dec/25/2021 17:33 | 
+1372 | [A - 10yen Stamp](https://atcoder.jp/contests/abc233/tasks/abc233_a) | [C++ (GCC 9.2.1)](./atcoder/abc233/A.cpp) | `AtCoder` `*100` | Dec/25/2021 17:31 | 
+1371 | [G - Modulo Shortest Path](https://atcoder.jp/contests/abc232/tasks/abc232_g) | [C++ (GCC 9.2.1)](./atcoder/abc232/G.cpp) | `AtCoder` `*600` | Dec/25/2021 04:39 | 
+1370 | [F - Simple Operations on Sequence](https://atcoder.jp/contests/abc232/tasks/abc232_f) | [C++ (GCC 9.2.1)](./atcoder/abc232/F.cpp) | `AtCoder` `*500` | Dec/25/2021 04:10 | 
+1369 | [E - Rook Path](https://atcoder.jp/contests/abc232/tasks/abc232_e) | [C++ (GCC 9.2.1)](./atcoder/abc232/E.cpp) | `AtCoder` `*500` | Dec/25/2021 04:03 | 
 1368 | [E - Purple Crayon](https://codeforces.com/contest/1615/problem/E) | [GNU C++17](./codeforces/1615/E.cpp) | `data structures` `games` `greedy` `trees` | Dec/25/2021 02:42 | 
 1367 | [D - X(or)-mas Tree](https://codeforces.com/contest/1615/problem/D) | [GNU C++17](./codeforces/1615/D.cpp) | `2-sat` `dsu` `graphs` `trees` | Dec/25/2021 02:23 | 
 1366 | [B - And It's Non-Zero](https://codeforces.com/contest/1615/problem/B) | [GNU C++17](./codeforces/1615/B.cpp) | `bitmasks` `greedy` | Dec/24/2021 20:22 | 

@@ -7327,6 +7327,22 @@
     ],
     "timestamp": "Dec/18/2021 21:50"
   },
+  "AC28100688": {
+    "contest_id": "abc232",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc232/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Simple Operations on Sequence",
+    "problem_url": "https://atcoder.jp/contests/abc232/tasks/abc232_f",
+    "submission_id": "AC28100688",
+    "submission_url": "https://atcoder.jp/contests/abc232/submissions/28100688",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/25/2021 04:10"
+  },
   "AC28100794": {
     "contest_id": "abc232",
     "language": "C++ (GCC 9.2.1)",

@@ -7327,6 +7327,22 @@
     ],
     "timestamp": "Dec/18/2021 21:50"
   },
+  "AC28100794": {
+    "contest_id": "abc232",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc232/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "Modulo Shortest Path",
+    "problem_url": "https://atcoder.jp/contests/abc232/tasks/abc232_g",
+    "submission_id": "AC28100794",
+    "submission_url": "https://atcoder.jp/contests/abc232/submissions/28100794",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/25/2021 04:39"
+  },
   "AC28111336": {
     "contest_id": "abc233",
     "language": "C++ (GCC 9.2.1)",

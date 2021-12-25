@@ -16,8 +16,8 @@ A repository to keep track of problems solved on the following platforms:
 1386 | [D - Between Two Binary Strings](https://atcoder.jp/contests/arc132/tasks/arc132_d) | [C++ (GCC 9.2.1)](./atcoder/arc132/D.cpp) | `AtCoder` `*700` | Dec/26/2021 19:36 | 
 1385 | [B - Shift and Reverse](https://atcoder.jp/contests/arc132/tasks/arc132_b) | [C++ (GCC 9.2.1)](./atcoder/arc132/B.cpp) | `AtCoder` `*400` | Dec/26/2021 18:25 | 
 1384 | [A - Permutation Grid](https://atcoder.jp/contests/arc132/tasks/arc132_a) | [C++ (GCC 9.2.1)](./atcoder/arc132/A.cpp) | `AtCoder` `*400` | Dec/26/2021 17:56 | 
-1383 | [G - Strongest Takahashi](https://atcoder.jp/contests/abc233/tasks/abc233_g) | [C++ (GCC 9.2.1)](./atcoder/abc233/G.cpp) | `AtCoder` `*600` | Dec/26/2021 02:01 | 
-1382 | [Ex - Manhattan Christmas Tree](https://atcoder.jp/contests/abc233/tasks/abc233_h) | [C++ (GCC 9.2.1)](./atcoder/abc233/Ex.cpp) | `AtCoder` `*600` | Dec/25/2021 19:09 | 
+1383 | [Ex - Manhattan Christmas Tree](https://atcoder.jp/contests/abc233/tasks/abc233_h) | [C++ (GCC 9.2.1)](./atcoder/abc233/Ex.cpp) | `AtCoder` `*600` | Dec/26/2021 02:06 | 
+1382 | [G - Strongest Takahashi](https://atcoder.jp/contests/abc233/tasks/abc233_g) | [C++ (GCC 9.2.1)](./atcoder/abc233/G.cpp) | `AtCoder` `*600` | Dec/26/2021 02:01 | 
 1381 | [F - Swap and Sort](https://atcoder.jp/contests/abc233/tasks/abc233_f) | [C++ (GCC 9.2.1)](./atcoder/abc233/F.cpp) | `AtCoder` `*500` | Dec/25/2021 18:40 | 
 1380 | [E - Σ[k=0..10^100]floor(X／10^k)](https://atcoder.jp/contests/abc233/tasks/abc233_e) | [C++ (GCC 9.2.1)](./atcoder/abc233/E.cpp) | `AtCoder` `*500` | Dec/25/2021 17:44 | 
 1379 | [D - Count Interval](https://atcoder.jp/contests/abc233/tasks/abc233_d) | [C++ (GCC 9.2.1)](./atcoder/abc233/D.cpp) | `AtCoder` `*400` | Dec/25/2021 17:39 | 

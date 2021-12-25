@@ -39,22 +39,21 @@ signed main() {
 	}
 	rep(i, 0, X << 1) sort(all(t[i]));
 
-	auto count = [&](int lo, int hi, int down, int up) -> int {
+	auto count = [&](int l, int r, int d, int u) -> int {
 		int ans = 0;
-		++hi;
+		++r; ++u;
 
-		auto query = [&](const auto &rec, int v, int l, int r) -> void {
-			if (hi <= l || r <= lo)
-				return;
-			if (lo <= l && r <= hi) {
-				ans += lower_bound(all(t[v]), up + 1) - lower_bound(all(t[v]), down);
-				return;
-			}
-			int m = (l + r)/2;
-			rec(rec, v << 1|0, l, m);
-			rec(rec, v << 1|1, m, r);
+		l = max(0, l);
+		r = min(X, r);
+
+		auto f = [&](const auto &v) -> int {
+			return lower_bound(all(v), u) - lower_bound(all(v), d);
 		};
-		query(query, 1, 0, X);
+
+		for (l += X, r += X; l < r; l >>= 1, r >>= 1) {
+			if (l & 1) ans += f(t[l++]);
+			if (r & 1) ans += f(t[--r]);
+		}
 		return ans;
 	};
 

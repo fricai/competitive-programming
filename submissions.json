@@ -7327,6 +7327,22 @@
     ],
     "timestamp": "Dec/18/2021 21:50"
   },
+  "AC28148190": {
+    "contest_id": "abc233",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc233/Ex.cpp",
+    "platform": "AtCoder",
+    "problem_index": "Ex",
+    "problem_name": "Manhattan Christmas Tree",
+    "problem_url": "https://atcoder.jp/contests/abc233/tasks/abc233_h",
+    "submission_id": "AC28148190",
+    "submission_url": "https://atcoder.jp/contests/abc233/submissions/28148190",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/25/2021 19:09"
+  },
   "AC28156794": {
     "contest_id": "abc233",
     "language": "C++ (GCC 9.2.1)",

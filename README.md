@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1399 | [F - Bipartite Array](https://codeforces.com/contest/1620/problem/F) | [GNU C++17](./codeforces/1620/F.cpp) | `dp` `greedy` `*2800` | Dec/27/2021 01:12 | 
 1398 | [C - String Invasion](https://atcoder.jp/contests/arc113/tasks/arc113_c) | [C++ (GCC 9.2.1)](./atcoder/arc113/C.cpp) | `AtCoder` `*500` | Dec/27/2021 00:23 | 
 1397 | [D - Sky Reflector](https://atcoder.jp/contests/arc113/tasks/arc113_d) | [C++ (GCC 9.2.1)](./atcoder/arc113/D.cpp) | `AtCoder` `*600` | Dec/26/2021 23:53 | 
 1396 | [B - A^B^C](https://atcoder.jp/contests/arc113/tasks/arc113_b) | [C++ (GCC 9.2.1)](./atcoder/arc113/B.cpp) | `AtCoder` `*400` | Dec/26/2021 23:06 | 

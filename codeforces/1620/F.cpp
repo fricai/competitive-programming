@@ -33,14 +33,14 @@ void solve() {
 		fill(all(nxt), inf);
 
 		for (int x = -p[i], j = 0; j < 2; ++j, x = -x) {
-			if (x > +p[i - 1] && uin(nxt[j], dp[1]))
-				par[i][j] = 1;
-			if (x > dp[1] && uin(nxt[j], +p[i - 1]))
-				par[i][j] = 1;
 			if (x > -p[i - 1] && uin(nxt[j], dp[0]))
 				par[i][j] = 0;
 			if (x > dp[0] && uin(nxt[j], -p[i - 1]))
 				par[i][j] = 0;
+			if (x > +p[i - 1] && uin(nxt[j], dp[1]))
+				par[i][j] = 1;
+			if (x > dp[1] && uin(nxt[j], +p[i - 1]))
+				par[i][j] = 1;
 		}
 
 		dp = move(nxt);
@@ -50,14 +50,16 @@ void solve() {
 		cout << "NO\n";
 		return;
 	}
+	cout << "YES\n";
 
-	vector<int> res(n);
+	vector<int> res;
 	for (int i = n, state = dp[1] <= n; i > 0; --i) {
-		res[i - 1] = state ? +p[i] : -p[i];
+		if (state) res.push_back(+p[i]);
+		else res.push_back(-p[i]);
 		state = par[i][state];
 	}
 
-	cout << "YES\n";
+	reverse(all(res));
 	for (auto x : res)
 		cout << x << ' ';
 	cout << '\n';

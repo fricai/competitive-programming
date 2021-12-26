@@ -7647,6 +7647,22 @@
     ],
     "timestamp": "Dec/26/2021 20:17"
   },
+  "AC28183025": {
+    "contest_id": "arc113",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc113/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "String Invasion",
+    "problem_url": "https://atcoder.jp/contests/arc113/tasks/arc113_c",
+    "submission_id": "AC28183025",
+    "submission_url": "https://atcoder.jp/contests/arc113/submissions/28183025",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/26/2021 23:36"
+  },
   "AC28183133": {
     "contest_id": "arc113",
     "language": "C++ (GCC 9.2.1)",

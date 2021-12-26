@@ -25,11 +25,13 @@ signed main() {
 	int n = sz(s);
 
 	vector<pair<int, int>> v; // (r, l)
-
+	
+	char pre = '\0';
 	for (int i = 0, j = 0; i < n; i = j) {
 		while (j < n && s[i] == s[j]) ++j;
-		if (j - i > 1) {
+		if (j != n && j - i > 1 && pre != s[i]) {
 			v.emplace_back(i, j);
+			pre = s[i];
 		}
 	}
 
@@ -43,7 +45,7 @@ signed main() {
 		auto [l, r] = v.back();
 		for (int i = r; i < x; ++i)
 			ans += s[i] != s[l];
-		if (x == n || s[x] != s[l]) ans += n - x;
+		ans += n - x;
 		x = l;
 	}
 	cout << ans << '\n';

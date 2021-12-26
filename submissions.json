@@ -24201,6 +24201,23 @@
     ],
     "timestamp": "Dec/26/2021 21:57"
   },
+  "CF140690445": {
+    "contest_id": 1620,
+    "language": "GNU C++17",
+    "path": "codeforces/1620/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Bipartite Array",
+    "problem_url": "https://codeforces.com/contest/1620/problem/F",
+    "submission_id": "CF140690445",
+    "submission_url": "https://codeforces.com/contest/1620/submission/140690445",
+    "tags": [
+      "dp",
+      "greedy",
+      "*2800"
+    ],
+    "timestamp": "Dec/27/2021 01:10"
+  },
   "CF140690530": {
     "contest_id": 1620,
     "language": "GNU C++17",

@@ -24,36 +24,36 @@ void solve() {
 		cin >> x;
 	p.insert(begin(p), -inf);
 
+	vector<array<int, 2>> dp(n + 1);
 	vector<array<bool, 2>> par(n + 1);
-	array<int, 2> dp;
-	fill(all(dp), -inf);
+	fill(all(dp[0]), -inf);
 
 	for (int i = 1; i <= n; ++i) {
-		array<int, 2> nxt;
+		auto &nxt = dp[i];
+		auto &pre = dp[i - 1];
 		fill(all(nxt), inf);
-
+		// I decide to set i to -
+		
 		for (int x = -p[i], j = 0; j < 2; ++j, x = -x) {
-			if (x > -p[i - 1] && uin(nxt[j], dp[0]))
+			if (x > -p[i - 1] && uin(nxt[j], pre[0]))
 				par[i][j] = 0;
-			if (x > dp[0] && uin(nxt[j], -p[i - 1]))
+			if (x > pre[0] && uin(nxt[j], -p[i - 1]))
 				par[i][j] = 0;
-			if (x > +p[i - 1] && uin(nxt[j], dp[1]))
+			if (x > +p[i - 1] && uin(nxt[j], pre[1]))
 				par[i][j] = 1;
-			if (x > dp[1] && uin(nxt[j], +p[i - 1]))
+			if (x > pre[1] && uin(nxt[j], +p[i - 1]))
 				par[i][j] = 1;
 		}
-
-		dp = move(nxt);
 	}
 
-	if (min(dp[0], dp[1]) > n) {
+	if (min(dp[n][0], dp[n][1]) > n) {
 		cout << "NO\n";
 		return;
 	}
 	cout << "YES\n";
 
 	vector<int> res;
-	for (int i = n, state = dp[1] <= n; i > 0; --i) {
+	for (int i = n, state = dp[n][0] <= n ? 0 : 1; i > 0; --i) {
 		if (state) res.push_back(+p[i]);
 		else res.push_back(-p[i]);
 		state = par[i][state];

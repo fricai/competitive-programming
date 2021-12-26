@@ -23973,6 +23973,24 @@
     ],
     "timestamp": "Dec/25/2021 02:42"
   },
+  "CF140643483": {
+    "contest_id": 1620,
+    "language": "GNU C++17",
+    "path": "codeforces/1620/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Exact Change",
+    "problem_url": "https://codeforces.com/contest/1620/problem/D",
+    "submission_id": "CF140643483",
+    "submission_url": "https://codeforces.com/contest/1620/submission/140643483",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "*2000"
+    ],
+    "timestamp": "Dec/26/2021 15:33"
+  },
   "CF140645822": {
     "contest_id": 1620,
     "language": "GNU C++17",

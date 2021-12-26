@@ -13,8 +13,9 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1396 | [C - String Invasion](https://atcoder.jp/contests/arc113/tasks/arc113_c) | [C++ (GCC 9.2.1)](./atcoder/arc113/C.cpp) | `AtCoder` `*500` | Dec/27/2021 00:23 | 
-1395 | [D - Sky Reflector](https://atcoder.jp/contests/arc113/tasks/arc113_d) | [C++ (GCC 9.2.1)](./atcoder/arc113/D.cpp) | `AtCoder` `*600` | Dec/26/2021 23:53 | 
+1397 | [C - String Invasion](https://atcoder.jp/contests/arc113/tasks/arc113_c) | [C++ (GCC 9.2.1)](./atcoder/arc113/C.cpp) | `AtCoder` `*500` | Dec/27/2021 00:23 | 
+1396 | [D - Sky Reflector](https://atcoder.jp/contests/arc113/tasks/arc113_d) | [C++ (GCC 9.2.1)](./atcoder/arc113/D.cpp) | `AtCoder` `*600` | Dec/26/2021 23:53 | 
+1395 | [B - A^B^C](https://atcoder.jp/contests/arc113/tasks/arc113_b) | [C++ (GCC 9.2.1)](./atcoder/arc113/B.cpp) | `AtCoder` `*400` | Dec/26/2021 23:06 | 
 1394 | [E - Compatible Numbers](https://codeforces.com/contest/165/problem/E) | [GNU C++17](./codeforces/165/E.cpp) | `bitmasks` `brute force` `dfs and similar` `dp` `*2200` | Dec/26/2021 21:57 | 
 1393 | [G - Subsequences Galore](https://codeforces.com/contest/1620/problem/G) | [GNU C++17 (64)](./codeforces/1620/G.cpp) | `bitmasks` `combinatorics` `dp` `*2400` | Dec/26/2021 21:13 | 
 1392 | [C - Almost Sorted](https://atcoder.jp/contests/arc132/tasks/arc132_c) | [C++ (GCC 9.2.1)](./atcoder/arc132/C.cpp) | `AtCoder` `*600` | Dec/26/2021 20:17 | 

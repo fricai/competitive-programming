@@ -24084,6 +24084,24 @@
     ],
     "timestamp": "Dec/26/2021 21:05"
   },
+  "CF140672004": {
+    "contest_id": 1620,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1620/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Subsequences Galore",
+    "problem_url": "https://codeforces.com/contest/1620/problem/G",
+    "submission_id": "CF140672004",
+    "submission_url": "https://codeforces.com/contest/1620/submission/140672004",
+    "tags": [
+      "bitmasks",
+      "combinatorics",
+      "dp",
+      "*2400"
+    ],
+    "timestamp": "Dec/26/2021 21:13"
+  },
   "CF140676703": {
     "contest_id": 165,
     "language": "GNU C++17",

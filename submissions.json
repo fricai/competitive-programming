@@ -7567,6 +7567,22 @@
     ],
     "timestamp": "Dec/26/2021 02:01"
   },
+  "AC28172356": {
+    "contest_id": "arc132",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc132/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Permutation Grid",
+    "problem_url": "https://atcoder.jp/contests/arc132/tasks/arc132_a",
+    "submission_id": "AC28172356",
+    "submission_url": "https://atcoder.jp/contests/arc132/submissions/28172356",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/26/2021 17:56"
+  },
   "AC28174872": {
     "contest_id": "arc132",
     "language": "C++ (GCC 9.2.1)",

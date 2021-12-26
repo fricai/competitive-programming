@@ -13,7 +13,8 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1400 | [F - Armor and Weapons](https://codeforces.com/contest/1612/problem/F) | [GNU C++17](./codeforces/1612/F.cpp) | `brute force` `dp` `greedy` `shortest paths` `*2800` | Dec/27/2021 02:57 | 
+1401 | [F - Armor and Weapons](https://codeforces.com/contest/1612/problem/F) | [GNU C++17](./codeforces/1612/F.cpp) | `brute force` `dp` `greedy` `shortest paths` `*2800` | Dec/27/2021 02:57 | 
+1400 | [G - Max Sum Array](https://codeforces.com/contest/1612/problem/G) | [GNU C++17](./codeforces/1612/G.cpp) | `combinatorics` `constructive algorithms` `greedy` `sortings` `*2500` | Dec/27/2021 02:40 | 
 1399 | [F - Bipartite Array](https://codeforces.com/contest/1620/problem/F) | [GNU C++17](./codeforces/1620/F.cpp) | `dp` `greedy` `*2800` | Dec/27/2021 01:12 | 
 1398 | [C - String Invasion](https://atcoder.jp/contests/arc113/tasks/arc113_c) | [C++ (GCC 9.2.1)](./atcoder/arc113/C.cpp) | `AtCoder` `*500` | Dec/27/2021 00:23 | 
 1397 | [D - Sky Reflector](https://atcoder.jp/contests/arc113/tasks/arc113_d) | [C++ (GCC 9.2.1)](./atcoder/arc113/D.cpp) | `AtCoder` `*600` | Dec/26/2021 23:53 | 

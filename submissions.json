@@ -24252,6 +24252,25 @@
     ],
     "timestamp": "Dec/27/2021 01:12"
   },
+  "CF140694072": {
+    "contest_id": 1612,
+    "language": "GNU C++17",
+    "path": "codeforces/1612/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Max Sum Array",
+    "problem_url": "https://codeforces.com/contest/1612/problem/G",
+    "submission_id": "CF140694072",
+    "submission_url": "https://codeforces.com/contest/1612/submission/140694072",
+    "tags": [
+      "combinatorics",
+      "constructive algorithms",
+      "greedy",
+      "sortings",
+      "*2500"
+    ],
+    "timestamp": "Dec/27/2021 02:40"
+  },
   "CF140694664": {
     "contest_id": 1612,
     "language": "GNU C++17",

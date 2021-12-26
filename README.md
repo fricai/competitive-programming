@@ -13,14 +13,15 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1391 | [G - Subsequences Galore](https://codeforces.com/contest/1620/problem/G) | [GNU C++17 (64)](./codeforces/1620/G.cpp) | `bitmasks` `combinatorics` `dp` `*2400` | Dec/26/2021 21:05 | 
-1390 | [C - Almost Sorted](https://atcoder.jp/contests/arc132/tasks/arc132_c) | [C++ (GCC 9.2.1)](./atcoder/arc132/C.cpp) | `AtCoder` `*600` | Dec/26/2021 20:17 | 
-1389 | [D - Between Two Binary Strings](https://atcoder.jp/contests/arc132/tasks/arc132_d) | [C++ (GCC 9.2.1)](./atcoder/arc132/D.cpp) | `AtCoder` `*700` | Dec/26/2021 19:36 | 
-1388 | [B - Shift and Reverse](https://atcoder.jp/contests/arc132/tasks/arc132_b) | [C++ (GCC 9.2.1)](./atcoder/arc132/B.cpp) | `AtCoder` `*400` | Dec/26/2021 18:25 | 
-1387 | [A - Permutation Grid](https://atcoder.jp/contests/arc132/tasks/arc132_a) | [C++ (GCC 9.2.1)](./atcoder/arc132/A.cpp) | `AtCoder` `*400` | Dec/26/2021 17:56 | 
-1386 | [E - Replace the Numbers](https://codeforces.com/contest/1620/problem/E) | [GNU C++17](./codeforces/1620/E.cpp) | `constructive algorithms` `data structures` `dsu` `implementation` `*1900` | Dec/26/2021 16:02 | 
-1385 | [D - Exact Change](https://codeforces.com/contest/1620/problem/D) | [GNU C++17](./codeforces/1620/D.cpp) | `brute force` `constructive algorithms` `greedy` `*2000` | Dec/26/2021 15:33 | 
-1384 | [C - BA-String](https://codeforces.com/contest/1620/problem/C) | [GNU C++17](./codeforces/1620/C.cpp) | `brute force` `dp` `greedy` `implementation` `math` `*1800` | Dec/26/2021 15:18 | 
+1392 | [G - Subsequences Galore](https://codeforces.com/contest/1620/problem/G) | [GNU C++17 (64)](./codeforces/1620/G.cpp) | `bitmasks` `combinatorics` `dp` `*2400` | Dec/26/2021 21:05 | 
+1391 | [C - Almost Sorted](https://atcoder.jp/contests/arc132/tasks/arc132_c) | [C++ (GCC 9.2.1)](./atcoder/arc132/C.cpp) | `AtCoder` `*600` | Dec/26/2021 20:17 | 
+1390 | [D - Between Two Binary Strings](https://atcoder.jp/contests/arc132/tasks/arc132_d) | [C++ (GCC 9.2.1)](./atcoder/arc132/D.cpp) | `AtCoder` `*700` | Dec/26/2021 19:36 | 
+1389 | [B - Shift and Reverse](https://atcoder.jp/contests/arc132/tasks/arc132_b) | [C++ (GCC 9.2.1)](./atcoder/arc132/B.cpp) | `AtCoder` `*400` | Dec/26/2021 18:25 | 
+1388 | [A - Permutation Grid](https://atcoder.jp/contests/arc132/tasks/arc132_a) | [C++ (GCC 9.2.1)](./atcoder/arc132/A.cpp) | `AtCoder` `*400` | Dec/26/2021 17:56 | 
+1387 | [E - Replace the Numbers](https://codeforces.com/contest/1620/problem/E) | [GNU C++17](./codeforces/1620/E.cpp) | `constructive algorithms` `data structures` `dsu` `implementation` `*1900` | Dec/26/2021 16:02 | 
+1386 | [D - Exact Change](https://codeforces.com/contest/1620/problem/D) | [GNU C++17](./codeforces/1620/D.cpp) | `brute force` `constructive algorithms` `greedy` `*2000` | Dec/26/2021 15:33 | 
+1385 | [C - BA-String](https://codeforces.com/contest/1620/problem/C) | [GNU C++17](./codeforces/1620/C.cpp) | `brute force` `dp` `greedy` `implementation` `math` `*1800` | Dec/26/2021 15:18 | 
+1384 | [B - Triangles on a Rectangle](https://codeforces.com/contest/1620/problem/B) | [GNU C++17](./codeforces/1620/B.cpp) | `geometry` `greedy` `math` `*1000` | Dec/26/2021 14:45 | 
 1383 | [Ex - Manhattan Christmas Tree](https://atcoder.jp/contests/abc233/tasks/abc233_h) | [C++ (GCC 9.2.1)](./atcoder/abc233/Ex.cpp) | `AtCoder` `*600` | Dec/26/2021 02:06 | 
 1382 | [G - Strongest Takahashi](https://atcoder.jp/contests/abc233/tasks/abc233_g) | [C++ (GCC 9.2.1)](./atcoder/abc233/G.cpp) | `AtCoder` `*600` | Dec/26/2021 02:01 | 
 1381 | [F - Swap and Sort](https://atcoder.jp/contests/abc233/tasks/abc233_f) | [C++ (GCC 9.2.1)](./atcoder/abc233/F.cpp) | `AtCoder` `*500` | Dec/25/2021 18:40 | 

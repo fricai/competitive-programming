@@ -1,3 +1,6 @@
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
+
 #include <bits/stdc++.h>
 
 #include <cassert>
@@ -571,7 +574,6 @@ signed main() {
 
 	rep(S, 1, 1 << n) {
 		const int j = 31 - __builtin_clz(S);
-		assert(S >> j & 1);
 		helper[S] = helper[S ^ (1 << j)];
 		rep(i, 0, A) uin(helper[S][i], f[j][i]);
 		for (auto x : helper[S])

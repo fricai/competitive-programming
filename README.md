@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1387 | [C - Almost Sorted](https://atcoder.jp/contests/arc132/tasks/arc132_c) | [C++ (GCC 9.2.1)](./atcoder/arc132/C.cpp) | `AtCoder` `*600` | Dec/26/2021 20:17 | 
 1386 | [D - Between Two Binary Strings](https://atcoder.jp/contests/arc132/tasks/arc132_d) | [C++ (GCC 9.2.1)](./atcoder/arc132/D.cpp) | `AtCoder` `*700` | Dec/26/2021 19:36 | 
 1385 | [B - Shift and Reverse](https://atcoder.jp/contests/arc132/tasks/arc132_b) | [C++ (GCC 9.2.1)](./atcoder/arc132/B.cpp) | `AtCoder` `*400` | Dec/26/2021 18:25 | 
 1384 | [A - Permutation Grid](https://atcoder.jp/contests/arc132/tasks/arc132_a) | [C++ (GCC 9.2.1)](./atcoder/arc132/A.cpp) | `AtCoder` `*400` | Dec/26/2021 17:56 | 

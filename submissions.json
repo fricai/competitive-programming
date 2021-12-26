@@ -7631,6 +7631,22 @@
     ],
     "timestamp": "Dec/26/2021 19:36"
   },
+  "AC28180710": {
+    "contest_id": "arc132",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc132/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Almost Sorted",
+    "problem_url": "https://atcoder.jp/contests/arc132/tasks/arc132_c",
+    "submission_id": "AC28180710",
+    "submission_url": "https://atcoder.jp/contests/arc132/submissions/28180710",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Dec/26/2021 20:17"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

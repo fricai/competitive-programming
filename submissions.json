@@ -7567,6 +7567,22 @@
     ],
     "timestamp": "Dec/26/2021 02:01"
   },
+  "AC28179644": {
+    "contest_id": "arc132",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc132/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Between Two Binary Strings",
+    "problem_url": "https://atcoder.jp/contests/arc132/tasks/arc132_d",
+    "submission_id": "AC28179644",
+    "submission_url": "https://atcoder.jp/contests/arc132/submissions/28179644",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Dec/26/2021 19:36"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

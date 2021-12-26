@@ -33,7 +33,9 @@ signed main() {
 	}
 
 	ll ans = 0, ways = 1;
-	auto g = [](ll x, ll d) -> ll { return (d * x + d * (d - 1) / 2) % mod; };
+	auto g = [&](ll x, ll d) -> ll {
+		return (d * x + d * (d - 1) / 2) % mod;
+	};
 	for (int i = 2, cnt = 1; i < 2 * C; ++i) {
 		f[i] += f[i - 2];
 		ans = (ans + g(cnt, f[i]) * (i - C)) % mod;

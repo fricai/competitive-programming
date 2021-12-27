@@ -24309,6 +24309,24 @@
     ],
     "timestamp": "Dec/27/2021 02:57"
   },
+  "CF140715433": {
+    "contest_id": 1613,
+    "language": "GNU C++17",
+    "path": "codeforces/1613/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Absent Remainder",
+    "problem_url": "https://codeforces.com/contest/1613/problem/B",
+    "submission_id": "CF140715433",
+    "submission_url": "https://codeforces.com/contest/1613/submission/140715433",
+    "tags": [
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1000"
+    ],
+    "timestamp": "Dec/27/2021 12:13"
+  },
   "CF140716057": {
     "contest_id": 1613,
     "language": "GNU C++17",

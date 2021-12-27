@@ -892,7 +892,7 @@ signed main() {
 	++c[0];
 
 	auto rec = [&](const auto &self, int l, int r) -> poly {
-		if (r - l == 1) return {1, -mint::raw(c[l])};
+		if (r - l == 1) return {1, mint::raw(c[l])};
 		int m = (l + r) / 2;
 		return atcoder::convolution(self(self, l, m), self(self, m, r));
 	};
@@ -901,7 +901,8 @@ signed main() {
 	mint ans = 0, prod = 1;
 	for (int i = n - 1, j = 1; i >= 0; --i, ++j) {
 		prod *= mint::raw(j);
-		ans += prod * f[i];
+		if (i & 1) ans -= prod * f[i];
+		else ans += prod * f[i];
 	}
 	cout << ans.val() << '\n';
 }

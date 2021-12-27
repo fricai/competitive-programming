@@ -32,7 +32,7 @@ vector<int> solve() {
 		return barring({n / 2});
 
 	using hsh_t = uint64_t;
-	vector<hsh_t> h(n + 1);
+	vector<hsh_t> h(n + 1), hf(n + 1);
 	{
 		vector<int> pf(n + 1);
 		for (int p = 2; p <= n; ++p) {
@@ -46,19 +46,19 @@ vector<int> solve() {
 			if (pf[p] == p) h[p] = rng();
 			else h[p] = h[p / pf[p]] ^ h[pf[p]];
 		}
-		for (int i = 2; i <= n; ++i)
-			h[i] ^= h[i - 1];
 	}
+	for (int i = 1; i <= n; ++i)
+		hf[i] = hf[i - 1] ^ h[i];
 
 	hsh_t total = 0;
-	for (int i = 2; i <= n; ++i)
-		total ^= h[i];
+	for (int i = 1; i <= n; ++i)
+		total ^= hf[i];
 
 	if (total == 0)
 		return barring({});
 
 	for (int i = 2; i <= n; ++i)
-		if (total == h[i])
+		if (total == hf[i])
 			return barring({i});
 
 	if (n % 2 == 0)
@@ -66,9 +66,9 @@ vector<int> solve() {
 
 	map<hsh_t, int> mp;
 	for (int i = 2; i <= n; ++i) {
-		if (auto it = mp.find(h[i] ^ total); it != end(mp))
+		if (auto it = mp.find(hf[i] ^ total); it != end(mp))
 			return barring({i, it->second});
-		mp[h[i]] = i;
+		mp[hf[i]] = i;
 	}
 	return barring({2, n / 2, n});
 }

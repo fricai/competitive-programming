@@ -24506,6 +24506,24 @@
     ],
     "timestamp": "Dec/27/2021 13:41"
   },
+  "CF140791278": {
+    "contest_id": 1622,
+    "language": "GNU C++17",
+    "path": "codeforces/1622/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Shuffle",
+    "problem_url": "https://codeforces.com/contest/1622/problem/D",
+    "submission_id": "CF140791278",
+    "submission_url": "https://codeforces.com/contest/1622/submission/140791278",
+    "tags": [
+      "combinatorics",
+      "math",
+      "two pointers",
+      "*2000"
+    ],
+    "timestamp": "Dec/27/2021 21:01"
+  },
   "CF140829685": {
     "contest_id": 1622,
     "language": "GNU C++17",

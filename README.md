@@ -13,10 +13,11 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1405 | [E - Crazy Robot](https://codeforces.com/contest/1613/problem/E) | [GNU C++17](./codeforces/1613/E.cpp) | `dfs and similar` `graphs` `*2000` | Dec/27/2021 13:41 | 
-1404 | [D - MEX Sequences](https://codeforces.com/contest/1613/problem/D) | [GNU C++17](./codeforces/1613/D.cpp) | `dp` `math` `*1900` | Dec/27/2021 13:28 | 
-1403 | [C - Poisoned Dagger](https://codeforces.com/contest/1613/problem/C) | [GNU C++17](./codeforces/1613/C.cpp) | `binary search` `*1200` | Dec/27/2021 12:23 | 
-1402 | [B - Absent Remainder](https://codeforces.com/contest/1613/problem/B) | [GNU C++17](./codeforces/1613/B.cpp) | `greedy` `implementation` `sortings` `*1000` | Dec/27/2021 12:13 | 
+1406 | [E - Crazy Robot](https://codeforces.com/contest/1613/problem/E) | [GNU C++17](./codeforces/1613/E.cpp) | `dfs and similar` `graphs` `*2000` | Dec/27/2021 13:41 | 
+1405 | [D - MEX Sequences](https://codeforces.com/contest/1613/problem/D) | [GNU C++17](./codeforces/1613/D.cpp) | `dp` `math` `*1900` | Dec/27/2021 13:28 | 
+1404 | [C - Poisoned Dagger](https://codeforces.com/contest/1613/problem/C) | [GNU C++17](./codeforces/1613/C.cpp) | `binary search` `*1200` | Dec/27/2021 12:23 | 
+1403 | [B - Absent Remainder](https://codeforces.com/contest/1613/problem/B) | [GNU C++17](./codeforces/1613/B.cpp) | `greedy` `implementation` `sortings` `*1000` | Dec/27/2021 12:13 | 
+1402 | [A - Long Comparison](https://codeforces.com/contest/1613/problem/A) | [GNU C++17](./codeforces/1613/A.cpp) | `implementation` `math` `*900` | Dec/27/2021 12:09 | 
 1401 | [F - Armor and Weapons](https://codeforces.com/contest/1612/problem/F) | [GNU C++17](./codeforces/1612/F.cpp) | `brute force` `dp` `greedy` `shortest paths` `*2800` | Dec/27/2021 02:57 | 
 1400 | [G - Max Sum Array](https://codeforces.com/contest/1612/problem/G) | [GNU C++17](./codeforces/1612/G.cpp) | `combinatorics` `constructive algorithms` `greedy` `sortings` `*2500` | Dec/27/2021 02:40 | 
 1399 | [F - Bipartite Array](https://codeforces.com/contest/1620/problem/F) | [GNU C++17](./codeforces/1620/F.cpp) | `dp` `greedy` `*2800` | Dec/27/2021 01:12 | 

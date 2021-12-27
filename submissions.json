@@ -24506,6 +24506,25 @@
     ],
     "timestamp": "Dec/27/2021 13:41"
   },
+  "CF140829685": {
+    "contest_id": 1622,
+    "language": "GNU C++17",
+    "path": "codeforces/1622/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Quadratic Set",
+    "problem_url": "https://codeforces.com/contest/1622/problem/F",
+    "submission_id": "CF140829685",
+    "submission_url": "https://codeforces.com/contest/1622/submission/140829685",
+    "tags": [
+      "constructive algorithms",
+      "hashing",
+      "math",
+      "number theory",
+      "*2900"
+    ],
+    "timestamp": "Dec/27/2021 23:10"
+  },
   "CF140833138": {
     "contest_id": 1622,
     "language": "GNU C++17",

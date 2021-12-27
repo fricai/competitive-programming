@@ -24506,6 +24506,25 @@
     ],
     "timestamp": "Dec/27/2021 13:41"
   },
+  "CF140765657": {
+    "contest_id": 1622,
+    "language": "GNU C++17",
+    "path": "codeforces/1622/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Berland Music",
+    "problem_url": "https://codeforces.com/contest/1622/problem/B",
+    "submission_id": "CF140765657",
+    "submission_url": "https://codeforces.com/contest/1622/submission/140765657",
+    "tags": [
+      "data structures",
+      "greedy",
+      "math",
+      "sortings",
+      "*1000"
+    ],
+    "timestamp": "Dec/27/2021 20:18"
+  },
   "CF140773204": {
     "contest_id": 1622,
     "language": "GNU C++17",

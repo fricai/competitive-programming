@@ -15,67 +15,84 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, true : fals
 
 mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-
 vector<int> solve() {
 	int n; cin >> n;
 
-	auto barring = [&](vector<int> v) {
+	vector<ll> hsh(n + 1);
+	for (auto &x : hsh)
+		x = rng();
+
+	vector<ll> hf(n + 1);
+
+	{
+	vector<short> prime(n + 1, true);
+	prime[0] = prime[1] = false;
+	for (int i = 2; i <= n; ++i) {
+		if (!prime[i])
+			continue;
+		for (int j = i; j <= n; j += i) {
+			for (int x = j; x % i == 0; x /= i)
+				hf[j] ^= hsh[i];
+			prime[j] = false;
+		}
+	}
+	for (int i = 2; i <= n; ++i)
+		hf[i] ^= hf[i - 1];
+	// hf[i] = hash of prime factors of i!
+	assert(hf[0] == 0);
+	}
+
+	auto barring = [&](vector<int> v) -> vector<int> {
+		sort(all(v));
 		vector<int> res;
 		res.reserve(n);
 		for (int i = 1; i <= n; ++i)
-			if (find(all(v), i) == end(v))
+			if (!binary_search(all(v), i))
 				res.push_back(i);
 		return res;
 	};
 
-	if (n % 4 == 0)
-		return barring({n / 2});
-
-	using hsh_t = uint64_t;
-	vector<hsh_t> h(n + 1), hf(n + 1);
-	{
-		vector<int> pf(n + 1);
-		for (int p = 2; p <= n; ++p) {
-			if (pf[p] != 0)
-				continue;
-			for (int j = p; j <= n; j += p)
-				pf[j] = p;
-		}
-
-		for (int p = 2; p <= n; ++p) {
-			if (pf[p] == p) h[p] = rng();
-			else h[p] = h[p / pf[p]] ^ h[pf[p]];
-		}
+	int k = n / 4;
+	if (n == 4 * k) return barring({2 * k});
+	if (n == 4 * k + 1) {
+		auto it = find(all(hf), hf[2 * k] ^ hf[4 * k + 1]);
+		if (it != end(hf))
+			return barring({int(it - begin(hf))});
+		return barring({2 * k, 4 * k + 1});
 	}
-	for (int i = 1; i <= n; ++i)
-		hf[i] = hf[i - 1] ^ h[i];
+	if (n == 4 * k + 3) {
+		auto target = hf[2 * k + 1] ^ hf[4 * k + 3] ^ hsh[2];
 
-	hsh_t total = 0;
-	for (int i = 1; i <= n; ++i)
-		total ^= hf[i];
-
-	if (total == 0)
-		return barring({});
-
-	for (int i = 2; i <= n; ++i)
-		if (total == hf[i])
-			return barring({i});
-
-	if (n % 2 == 0)
-		return barring({2, n / 2});
-
-	map<hsh_t, int> mp;
-	for (int i = 2; i <= n; ++i) {
-		if (auto it = mp.find(hf[i] ^ total); it != end(mp))
+		auto it = find(all(hf), target);
+		if (it != end(hf))
+			return barring({int(it - begin(hf))});
+		map<ll, int> mp;
+		for (int i = 1; i <= n; ++i) {
+			auto it = mp.find(hf[i] ^ target);
+			if (it != end(mp))
+				return barring({i, it->second});
+			mp[hf[i]] = i;
+		}
+		--n;
+	}
+	auto target = hf[2 * k + 1] ^ hsh[2];
+	auto it = find(all(hf), target);
+	if (it != end(hf))
+		return barring({int(it - begin(hf))});
+	map<ll, int> mp;
+	for (int i = 1; i <= n; ++i) {
+		auto it = mp.find(hf[i] ^ target);
+		if (it != end(mp))
 			return barring({i, it->second});
 		mp[hf[i]] = i;
 	}
-	return barring({2, n / 2, n});
+	return barring({2 * k, 4 * k + 1, 4 * k + 2});
 }
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
+
 
 	auto v = solve();
 	cout << sz(v) << '\n';

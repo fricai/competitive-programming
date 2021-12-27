@@ -24506,6 +24506,24 @@
     ],
     "timestamp": "Dec/27/2021 13:41"
   },
+  "CF140844021": {
+    "contest_id": 1613,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1613/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Tree Coloring",
+    "problem_url": "https://codeforces.com/contest/1613/problem/F",
+    "submission_id": "CF140844021",
+    "submission_url": "https://codeforces.com/contest/1613/submission/140844021",
+    "tags": [
+      "combinatorics",
+      "divide and conquer",
+      "fft",
+      "*2600"
+    ],
+    "timestamp": "Dec/28/2021 03:21"
+  },
   "CF140844227": {
     "contest_id": 1613,
     "language": "GNU C++17 (64)",

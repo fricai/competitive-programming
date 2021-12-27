@@ -884,7 +884,6 @@ signed main() {
 	cin.tie(nullptr);
 
 	int n; cin >> n;
-
 	vector<int> c(n, -1);
 	per(e, 0, 2 * (n - 1)) {
 		int x; cin >> x;
@@ -892,33 +891,14 @@ signed main() {
 	}
 	++c[0];
 
-	vector<int> freq(n);
-	rep(i, 0, n) ++freq[c[i]];
-
-	vector<mint> fac(n + 1), ifac(n + 1);
-	fac[0] = 1;
-	for (int i = 1; i <= n; ++i)
-		fac[i] = mint::raw(i) * fac[i - 1];
-	ifac[n] = 1 / fac[n];
-	for (int i = n; i > 0; --i)
-		ifac[i - 1] = mint::raw(i) * ifac[i];
-	auto C = [&](int n, int r) -> mint { return fac[n] * ifac[r] * ifac[n - r]; };
-	auto binom = [&](int n, mint k) -> poly {
-		// return (1 + k x)^n
-		poly res(n + 1);
-		mint prod = 1;
-		for (int i = 0; i <= n; ++i) {
-			res[i] = C(n, i) * prod;
-			prod *= k;
-		}
-		return res;
+	auto rec = [&](const auto &self, int l, int r) -> poly {
+		if (r - l == 1) return {1, -mint::raw(c[l])};
+		int m = (l + r) / 2;
+		return atcoder::convolution(self(self, l, m), self(self, m, r));
 	};
 
-	poly f = {1};
-	for (int d = n - 1; d >= 1; --d)
-		f = atcoder::convolution(f, binom(freq[d], -d));
-	f.resize(n);
-	mint prod = 1, ans = 0;
+	auto f = rec(rec, 0, n);
+	mint ans = 0, prod = 1;
 	for (int i = n - 1, j = 1; i >= 0; --i, ++j) {
 		prod *= mint::raw(j);
 		ans += prod * f[i];

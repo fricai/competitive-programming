@@ -24309,6 +24309,23 @@
     ],
     "timestamp": "Dec/27/2021 02:57"
   },
+  "CF140720486": {
+    "contest_id": 1613,
+    "language": "GNU C++17",
+    "path": "codeforces/1613/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "MEX Sequences",
+    "problem_url": "https://codeforces.com/contest/1613/problem/D",
+    "submission_id": "CF140720486",
+    "submission_url": "https://codeforces.com/contest/1613/submission/140720486",
+    "tags": [
+      "dp",
+      "math",
+      "*1900"
+    ],
+    "timestamp": "Dec/27/2021 13:28"
+  },
   "CF140721321": {
     "contest_id": 1613,
     "language": "GNU C++17",

@@ -13,7 +13,8 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1402 | [E - Crazy Robot](https://codeforces.com/contest/1613/problem/E) | [GNU C++17](./codeforces/1613/E.cpp) | `dfs and similar` `graphs` `*2000` | Dec/27/2021 13:41 | 
+1403 | [E - Crazy Robot](https://codeforces.com/contest/1613/problem/E) | [GNU C++17](./codeforces/1613/E.cpp) | `dfs and similar` `graphs` `*2000` | Dec/27/2021 13:41 | 
+1402 | [D - MEX Sequences](https://codeforces.com/contest/1613/problem/D) | [GNU C++17](./codeforces/1613/D.cpp) | `dp` `math` `*1900` | Dec/27/2021 13:28 | 
 1401 | [F - Armor and Weapons](https://codeforces.com/contest/1612/problem/F) | [GNU C++17](./codeforces/1612/F.cpp) | `brute force` `dp` `greedy` `shortest paths` `*2800` | Dec/27/2021 02:57 | 
 1400 | [G - Max Sum Array](https://codeforces.com/contest/1612/problem/G) | [GNU C++17](./codeforces/1612/G.cpp) | `combinatorics` `constructive algorithms` `greedy` `sortings` `*2500` | Dec/27/2021 02:40 | 
 1399 | [F - Bipartite Array](https://codeforces.com/contest/1620/problem/F) | [GNU C++17](./codeforces/1620/F.cpp) | `dp` `greedy` `*2800` | Dec/27/2021 01:12 | 

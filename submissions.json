@@ -24506,6 +24506,24 @@
     ],
     "timestamp": "Dec/27/2021 13:41"
   },
+  "CF141132773": {
+    "contest_id": 1616,
+    "language": "GNU C++17",
+    "path": "codeforces/1616/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Keep the Average High",
+    "problem_url": "https://codeforces.com/contest/1616/problem/D",
+    "submission_id": "CF141132773",
+    "submission_url": "https://codeforces.com/contest/1616/submission/141132773",
+    "tags": [
+      "dp",
+      "greedy",
+      "math",
+      "*2000"
+    ],
+    "timestamp": "Dec/29/2021 23:59"
+  },
   "CF141136107": {
     "contest_id": 1616,
     "language": "GNU C++17",

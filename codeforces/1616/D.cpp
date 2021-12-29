@@ -17,6 +17,24 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 constexpr ll inf = 1e18;
 
+struct max_segtree {
+	int n;
+	vector<ll> t;
+	max_segtree(int n) : n{n}, t(2 * n, -inf) { }
+	ll query(int l, int r) {
+		ll res = -inf;
+		for (l += n, r += n; l < r; l >>= 1, r >>= 1) {
+			if (l & 1) res = max(res, t[l++]);
+			if (r & 1) res = max(res, t[--r]);
+		}
+		return res;
+	}
+	void update(int p, ll x) {
+		for (t[p += n] = x; p >>= 1; )
+			t[p] = max(t[p << 1], t[p << 1|1]);
+	}
+};
+
 int solve() {
 	int n; cin >> n;
 	vector<int> a(n);
@@ -24,16 +42,37 @@ int solve() {
 		cin >> x;
 	ll x; cin >> x;
 
+	vector<ll> dp(n);
 	for (auto &y : a)
 		y -= x;
+	vector<ll> p(n + 1);
+	for (int i = 0; i < n; ++i)
+		p[i + 1] = p[i] + a[i];
+	max_segtree sec(n + 1);
+	for (int i = 0; i <= n; ++i)
+		sec.update(i, -p[i]);
+	auto mn = [&](int l, int r) -> ll { // return min p[i] for i in [l, r)
+		return -sec.query(l, r);
+	};
 
-	int ans = 0;
-	for (int i = 0, j = 0; i < n; i = j + 1) {
-		while (j < n && (j <= i || a[j] + a[j - 1] >= 0) && (j <= i + 1 || a[j] + a[j - 1] + a[j - 2] >= 0))
-			++j;
-		ans += j - i;
+	vector<int> lef(n);
+	for (int i = n - 1, j = n - 1; i >= 0; --i) {
+		j = min(i - 1, j);
+		while (j >= 0 && mn(j + 2, i + 2) >= p[j])
+			--j;
+		lef[i] = j + 1;
 	}
-	return ans;
+
+	max_segtree thr(n + 1);
+	thr.update(0, 1);
+
+	ll u = 0;
+	for (int i = 0; i < n; ++i) {
+		dp[i] = max(1 + u, i + thr.query(lef[i], i));
+		if (i) uax(u, dp[i - 1]);
+		thr.update(i + 1, u - i);
+	}
+	return *max_element(all(dp));
 }
 
 signed main() {

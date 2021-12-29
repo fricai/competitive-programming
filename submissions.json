@@ -24506,6 +24506,25 @@
     ],
     "timestamp": "Dec/27/2021 13:41"
   },
+  "CF141129823": {
+    "contest_id": 1616,
+    "language": "GNU C++17",
+    "path": "codeforces/1616/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Lexicographically Small Enough",
+    "problem_url": "https://codeforces.com/contest/1616/problem/E",
+    "submission_id": "CF141129823",
+    "submission_url": "https://codeforces.com/contest/1616/submission/141129823",
+    "tags": [
+      "brute force",
+      "data structures",
+      "greedy",
+      "strings",
+      "*2200"
+    ],
+    "timestamp": "Dec/29/2021 23:37"
+  },
   "CF141132656": {
     "contest_id": 1616,
     "language": "GNU C++17",

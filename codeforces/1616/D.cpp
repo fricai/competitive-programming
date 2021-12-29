@@ -22,6 +22,7 @@ struct max_segtree {
 	vector<ll> t;
 	max_segtree(int n) : n{n}, t(2 * n, -inf) { }
 	ll query(int l, int r) {
+		if (l >= r) return -inf;
 		ll res = -inf;
 		for (l += n, r += n; l < r; l >>= 1, r >>= 1) {
 			if (l & 1) res = max(res, t[l++]);

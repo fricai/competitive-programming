@@ -20,13 +20,18 @@ string solve() {
 	string s; cin >> s;
 
 	int k = n - 1;
-	if (n > 1 && s[0] == s[1]) k = 0;
-	else {
-		rep(i, 0, n - 1) {
-			if (s[i] < s[i + 1]) {
-				k = i;
-				break;
-			}
+	int l = 1;
+	rep(i, 0, n - 1) {
+		if (s[i] < s[i + 1]) {
+			k = i;
+			break;
+		}
+		if (i < 2 || s[i - 2] != s[i]) {
+			l = i + 1;
+		}
+		if (s[i] == s[i + 1] && (l < 2 || s[l - 2] < s[l])) {
+			k = i;
+			break;
 		}
 	}
 	string t = s.substr(0, k + 1);

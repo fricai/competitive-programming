@@ -44,6 +44,12 @@ int solve() {
 	ll x; cin >> x;
 
 	vector<ll> dp(n);
+	max_segtree fst(n);
+	auto f = [&](int j) -> ll {
+		return j <= 0 ? 0ll : fst.query(0, j);
+	};
+
+
 	for (auto &y : a)
 		y -= x;
 	vector<ll> p(n + 1);
@@ -61,19 +67,21 @@ int solve() {
 		j = min(i - 1, j);
 		while (j >= 0 && mn(j + 2, i + 2) >= p[j])
 			--j;
-		lef[i] = j + 1;
+		lef[i] = j;
 	}
 
-	max_segtree thr(n + 1);
-	thr.update(0, 1);
-
-	ll u = 0;
+	max_segtree thr(n);
+	auto query = [&](int x, int y) -> ll {
+		if (x == -1) return max(1ll, thr.query(0, y));
+		return thr.query(x, y);
+	};
 	for (int i = 0; i < n; ++i) {
-		dp[i] = max(1 + u, i + thr.query(lef[i], i));
-		if (i) uax(u, dp[i - 1]);
-		thr.update(i + 1, u - i);
+		dp[i] = 1 + f(i - 1);
+		uax(dp[i], i + query(lef[i], i - 1));
+		thr.update(i, f(i) - i);
+		fst.update(i, dp[i]);
 	}
-	return *max_element(all(dp));
+	return f(n);
 }
 
 signed main() {

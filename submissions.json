@@ -7727,6 +7727,22 @@
     ],
     "timestamp": "Dec/27/2021 00:23"
   },
+  "AC28238578": {
+    "contest_id": "arc128",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc128/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Gold and Silver",
+    "problem_url": "https://atcoder.jp/contests/arc128/tasks/arc128_a",
+    "submission_id": "AC28238578",
+    "submission_url": "https://atcoder.jp/contests/arc128/submissions/28238578",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/30/2021 17:42"
+  },
   "AC28239328": {
     "contest_id": "arc128",
     "language": "C++ (GCC 9.2.1)",

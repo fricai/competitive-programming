@@ -34,7 +34,11 @@ signed main() {
 		return cout << "-1\n", 0;
 
 	vector<int> v;
-	while (s > 0) {
+	for (; s > 0; --s) {
+		int q = s % k, p = s / k;
+		if (q == 0) q = k;
+		else ++p;
+
 		vector<int> blocked(n);
 		auto lst = vector(end(v) - min(k - 1, sz(v)), end(v));
 		for (auto x : lst) blocked[x] = 1;
@@ -48,9 +52,6 @@ signed main() {
 
 		v.push_back(i);
 		--a[i];
-		--s;
-		--q;
-		if (q == 0) q = k, --p;
 	}
 
 	rep(i, 0, n) {

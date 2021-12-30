@@ -13,7 +13,8 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1407 | [D - Neq Neq](https://atcoder.jp/contests/arc128/tasks/arc128_d) | [C++ (GCC 9.2.1)](./atcoder/arc128/D.cpp) | `AtCoder` `*700` | Dec/31/2021 15:25 | 
+1408 | [D - Neq Neq](https://atcoder.jp/contests/arc128/tasks/arc128_d) | [C++ (GCC 9.2.1)](./atcoder/arc128/D.cpp) | `AtCoder` `*700` | Dec/31/2021 15:25 | 
+1407 | [E - K Different Values](https://atcoder.jp/contests/arc128/tasks/arc128_e) | [C++ (GCC 9.2.1)](./atcoder/arc128/E.cpp) | `AtCoder` `*800` | Dec/31/2021 01:31 | 
 1406 | [E - Crazy Robot](https://codeforces.com/contest/1613/problem/E) | [GNU C++17](./codeforces/1613/E.cpp) | `dfs and similar` `graphs` `*2000` | Dec/27/2021 13:41 | 
 1405 | [D - MEX Sequences](https://codeforces.com/contest/1613/problem/D) | [GNU C++17](./codeforces/1613/D.cpp) | `dp` `math` `*1900` | Dec/27/2021 13:28 | 
 1404 | [C - Poisoned Dagger](https://codeforces.com/contest/1613/problem/C) | [GNU C++17](./codeforces/1613/C.cpp) | `binary search` `*1200` | Dec/27/2021 12:23 | 

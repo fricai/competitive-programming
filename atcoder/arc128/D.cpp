@@ -49,15 +49,17 @@ mint solve(vector<int> a) {
 		remove(a[i + 1]);
 	}
 
+	vector<mint> dp(n);
 	vector<mint> f(n + 1, one), g(n);
 	g[0] = 0;
 	g[1] = f[0];
 	g[2] = f[0] + f[1];
 	rep(i, 1, n - 1) {
-		f[i + 1] = f[i] + f[i - 1] + g[left[i]];
+		dp[i] = f[i - 1] + g[left[i]];
+		f[i + 1] = f[i] + dp[i];
 		g[i + 1] = g[i] + f[i];
 	}
-	return f[n - 1];
+	return f[n - 1] + dp[n - 1];
 }
 
 signed main() {

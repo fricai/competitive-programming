@@ -7727,6 +7727,22 @@
     ],
     "timestamp": "Dec/27/2021 00:23"
   },
+  "AC28239328": {
+    "contest_id": "arc128",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc128/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Balls of Three Colors",
+    "problem_url": "https://atcoder.jp/contests/arc128/tasks/arc128_b",
+    "submission_id": "AC28239328",
+    "submission_url": "https://atcoder.jp/contests/arc128/submissions/28239328",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/30/2021 18:24"
+  },
   "AC28241661": {
     "contest_id": "arc128",
     "language": "C++ (GCC 9.2.1)",

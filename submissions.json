@@ -7727,6 +7727,22 @@
     ],
     "timestamp": "Dec/27/2021 00:23"
   },
+  "AC28247637": {
+    "contest_id": "arc128",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc128/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "K Different Values",
+    "problem_url": "https://atcoder.jp/contests/arc128/tasks/arc128_e",
+    "submission_id": "AC28247637",
+    "submission_url": "https://atcoder.jp/contests/arc128/submissions/28247637",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Dec/31/2021 01:31"
+  },
   "AC28260059": {
     "contest_id": "arc128",
     "language": "C++ (GCC 9.2.1)",

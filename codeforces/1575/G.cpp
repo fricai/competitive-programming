@@ -22,30 +22,23 @@ int sub(int x, int y) { x -= y; return x < 0 ? x + mod : x; }
 void dec(int &x, int y) { x -= y; if (x < 0) x += mod; }
 void inc(int &x, int y) { x += y; if (x >= mod) x -= mod; }
 
-array<vector<int>, X> divisors;
-
-template<int X>
-constexpr array<int, X> get_phi() {
-	array<int, X> phi{};
-	for (int i = 0; i < X; ++i)
-		phi[i] = i;
-
-	for (int i = 2; i < X; ++i)
-		if (phi[i] == i)
-			for (int j = i; j < X; j += i)
-				phi[j] -= phi[j] / i;
-	return phi;
-}
-
-constexpr auto phi = get_phi<X>();
+int phi[X];
+vector<int> divisors[X];
 
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
+	iota(all(phi), 0);
+	for (int i = 2; i < X; ++i)
+		if (phi[i] == i)
+			for (int j = i; j < X; j += i)
+				phi[j] -= phi[j] / i;
+
 	for (int i = 1; i < X; ++i)
 		for (int j = i; j < X; j += i)
 			divisors[j].push_back(i);
+
 
 	int n; cin >> n;
 	vector<int> a(n);

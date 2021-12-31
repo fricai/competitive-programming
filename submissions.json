@@ -24506,6 +24506,25 @@
     ],
     "timestamp": "Dec/27/2021 13:41"
   },
+  "CF141247951": {
+    "contest_id": 1396,
+    "language": "GNU C++17",
+    "path": "codeforces/1396/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Stoned Game",
+    "problem_url": "https://codeforces.com/contest/1396/problem/B",
+    "submission_id": "CF141247951",
+    "submission_url": "https://codeforces.com/contest/1396/submission/141247951",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "games",
+      "greedy",
+      "*1800"
+    ],
+    "timestamp": "Dec/31/2021 19:16"
+  },
   "CF141252420": {
     "contest_id": 1396,
     "language": "GNU C++17",

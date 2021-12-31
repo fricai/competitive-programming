@@ -24506,6 +24506,23 @@
     ],
     "timestamp": "Dec/27/2021 13:41"
   },
+  "CF141244164": {
+    "contest_id": 1575,
+    "language": "GNU C++17",
+    "path": "codeforces/1575/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "GCD Festival",
+    "problem_url": "https://codeforces.com/contest/1575/problem/G",
+    "submission_id": "CF141244164",
+    "submission_url": "https://codeforces.com/contest/1575/submission/141244164",
+    "tags": [
+      "math",
+      "number theory",
+      "*2200"
+    ],
+    "timestamp": "Dec/31/2021 18:27"
+  },
   "CF141246857": {
     "contest_id": 1396,
     "language": "GNU C++17",

@@ -13,15 +13,16 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1420 | [D - Treelabeling](https://codeforces.com/contest/1605/problem/D) | [GNU C++17](./codeforces/1605/D.cpp) | `bitmasks` `constructive algorithms` `dfs and similar` `games` `greedy` `implementation` `trees` `*2100` | Jan/04/2022 22:24 | 
-1419 | [E - Array Equalizer](https://codeforces.com/contest/1605/problem/E) | [GNU C++17](./codeforces/1605/E.cpp) | `binary search` `greedy` `implementation` `math` `number theory` `sortings` `two pointers` `*2400` | Jan/04/2022 21:46 | 
-1418 | [C - Dominant Character](https://codeforces.com/contest/1605/problem/C) | [GNU C++17](./codeforces/1605/C.cpp) | `brute force` `greedy` `implementation` `strings` `*1400` | Jan/04/2022 21:18 | 
-1417 | [B - Reverse Sort](https://codeforces.com/contest/1605/problem/B) | [GNU C++17](./codeforces/1605/B.cpp) | `greedy` `sortings` `*1000` | Jan/04/2022 21:14 | 
-1416 | [A - A.M. Deviation](https://codeforces.com/contest/1605/problem/A) | [GNU C++17](./codeforces/1605/A.cpp) | `math` `number theory` `*800` | Jan/04/2022 21:08 | 
-1415 | [D - The Winter Hike](https://codeforces.com/contest/1621/problem/D) | [GNU C++17](./codeforces/1621/D.cpp) | `constructive algorithms` `greedy` `math` `*2100` | Jan/03/2022 23:37 | 
-1414 | [E - New School](https://codeforces.com/contest/1621/problem/E) | [GNU C++17](./codeforces/1621/E.cpp) | `binary search` `data structures` `dp` `greedy` `implementation` `sortings` `*2300` | Jan/03/2022 23:18 | 
-1413 | [C - Hidden Permutations](https://codeforces.com/contest/1621/problem/C) | [GNU C++17](./codeforces/1621/C.cpp) | `dfs and similar` `interactive` `math` `*1700` | Jan/03/2022 21:02 | 
-1412 | [B - Integers Shop](https://codeforces.com/contest/1621/problem/B) | [GNU C++17](./codeforces/1621/B.cpp) | `data structures` `greedy` `implementation` `*1500` | Jan/03/2022 20:41 | 
+1421 | [D - Treelabeling](https://codeforces.com/contest/1605/problem/D) | [GNU C++17](./codeforces/1605/D.cpp) | `bitmasks` `constructive algorithms` `dfs and similar` `games` `greedy` `implementation` `trees` `*2100` | Jan/04/2022 22:24 | 
+1420 | [E - Array Equalizer](https://codeforces.com/contest/1605/problem/E) | [GNU C++17](./codeforces/1605/E.cpp) | `binary search` `greedy` `implementation` `math` `number theory` `sortings` `two pointers` `*2400` | Jan/04/2022 21:46 | 
+1419 | [C - Dominant Character](https://codeforces.com/contest/1605/problem/C) | [GNU C++17](./codeforces/1605/C.cpp) | `brute force` `greedy` `implementation` `strings` `*1400` | Jan/04/2022 21:18 | 
+1418 | [B - Reverse Sort](https://codeforces.com/contest/1605/problem/B) | [GNU C++17](./codeforces/1605/B.cpp) | `greedy` `sortings` `*1000` | Jan/04/2022 21:14 | 
+1417 | [A - A.M. Deviation](https://codeforces.com/contest/1605/problem/A) | [GNU C++17](./codeforces/1605/A.cpp) | `math` `number theory` `*800` | Jan/04/2022 21:08 | 
+1416 | [D - The Winter Hike](https://codeforces.com/contest/1621/problem/D) | [GNU C++17](./codeforces/1621/D.cpp) | `constructive algorithms` `greedy` `math` `*2100` | Jan/03/2022 23:37 | 
+1415 | [E - New School](https://codeforces.com/contest/1621/problem/E) | [GNU C++17](./codeforces/1621/E.cpp) | `binary search` `data structures` `dp` `greedy` `implementation` `sortings` `*2300` | Jan/03/2022 23:18 | 
+1414 | [C - Hidden Permutations](https://codeforces.com/contest/1621/problem/C) | [GNU C++17](./codeforces/1621/C.cpp) | `dfs and similar` `interactive` `math` `*1700` | Jan/03/2022 21:02 | 
+1413 | [B - Integers Shop](https://codeforces.com/contest/1621/problem/B) | [GNU C++17](./codeforces/1621/B.cpp) | `data structures` `greedy` `implementation` `*1500` | Jan/03/2022 20:41 | 
+1412 | [A - Stable Arrangement of Rooks](https://codeforces.com/contest/1621/problem/A) | [GNU C++17](./codeforces/1621/A.cpp) | `constructive algorithms` `*800` | Jan/03/2022 20:08 | 
 1411 | [D - Neq Neq](https://atcoder.jp/contests/arc128/tasks/arc128_d) | [C++ (GCC 9.2.1)](./atcoder/arc128/D.cpp) | `AtCoder` `*700` | Dec/31/2021 15:25 | 
 1410 | [E - K Different Values](https://atcoder.jp/contests/arc128/tasks/arc128_e) | [C++ (GCC 9.2.1)](./atcoder/arc128/E.cpp) | `AtCoder` `*800` | Dec/31/2021 01:31 | 
 1409 | [C - Max Dot](https://atcoder.jp/contests/arc128/tasks/arc128_c) | [C++ (GCC 9.2.1)](./atcoder/arc128/C.cpp) | `AtCoder` `*600` | Dec/30/2021 20:36 | 

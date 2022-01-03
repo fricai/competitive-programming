@@ -264,10 +264,13 @@ void solve() {
 		for (auto &x : v) cin >> x;
 	}
 
-	sort(all(a));
+	vector<P> duh(n);
+	rep(i, 0, n) duh[i] = {ll(a[i]), 1};
+	sort(all(duh));
+
 	auto f = [&](P x) -> int {
 		// return count of elements i such that a[i] >= x
-		return end(a) - lower_bound(all(a), (x.sum + x.k - 1) / x.k);
+		return end(duh) - lower_bound(all(duh), x);
 	};
 
 	vector<P> tx(m);

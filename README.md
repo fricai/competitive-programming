@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1412 | [D - Treelabeling](https://codeforces.com/contest/1605/problem/D) | [GNU C++17](./codeforces/1605/D.cpp) | `bitmasks` `constructive algorithms` `dfs and similar` `games` `greedy` `implementation` `trees` `*2100` | Jan/04/2022 22:24 | 
 1411 | [D - Neq Neq](https://atcoder.jp/contests/arc128/tasks/arc128_d) | [C++ (GCC 9.2.1)](./atcoder/arc128/D.cpp) | `AtCoder` `*700` | Dec/31/2021 15:25 | 
 1410 | [E - K Different Values](https://atcoder.jp/contests/arc128/tasks/arc128_e) | [C++ (GCC 9.2.1)](./atcoder/arc128/E.cpp) | `AtCoder` `*800` | Dec/31/2021 01:31 | 
 1409 | [C - Max Dot](https://atcoder.jp/contests/arc128/tasks/arc128_c) | [C++ (GCC 9.2.1)](./atcoder/arc128/C.cpp) | `AtCoder` `*600` | Dec/30/2021 20:36 | 

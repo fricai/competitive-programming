@@ -24506,6 +24506,23 @@
     ],
     "timestamp": "Dec/27/2021 13:41"
   },
+  "CF141658406": {
+    "contest_id": 1605,
+    "language": "GNU C++17",
+    "path": "codeforces/1605/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Reverse Sort",
+    "problem_url": "https://codeforces.com/contest/1605/problem/B",
+    "submission_id": "CF141658406",
+    "submission_url": "https://codeforces.com/contest/1605/submission/141658406",
+    "tags": [
+      "greedy",
+      "sortings",
+      "*1000"
+    ],
+    "timestamp": "Jan/04/2022 21:14"
+  },
   "CF141658723": {
     "contest_id": 1605,
     "language": "GNU C++17",

@@ -24506,6 +24506,28 @@
     ],
     "timestamp": "Dec/27/2021 13:41"
   },
+  "CF141661459": {
+    "contest_id": 1605,
+    "language": "GNU C++17",
+    "path": "codeforces/1605/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Array Equalizer",
+    "problem_url": "https://codeforces.com/contest/1605/problem/E",
+    "submission_id": "CF141661459",
+    "submission_url": "https://codeforces.com/contest/1605/submission/141661459",
+    "tags": [
+      "binary search",
+      "greedy",
+      "implementation",
+      "math",
+      "number theory",
+      "sortings",
+      "two pointers",
+      "*2400"
+    ],
+    "timestamp": "Jan/04/2022 21:46"
+  },
   "CF141665307": {
     "contest_id": 1605,
     "language": "GNU C++17",

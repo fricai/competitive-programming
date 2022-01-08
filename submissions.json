@@ -7839,6 +7839,22 @@
     ],
     "timestamp": "Dec/31/2021 15:25"
   },
+  "AC28383907": {
+    "contest_id": "abc234",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc234/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Weird Function",
+    "problem_url": "https://atcoder.jp/contests/abc234/tasks/abc234_a",
+    "submission_id": "AC28383907",
+    "submission_url": "https://atcoder.jp/contests/abc234/submissions/28383907",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jan/08/2022 17:34"
+  },
   "AC28385916": {
     "contest_id": "abc234",
     "language": "C++ (GCC 9.2.1)",

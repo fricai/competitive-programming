@@ -7839,6 +7839,22 @@
     ],
     "timestamp": "Dec/31/2021 15:25"
   },
+  "AC28401642": {
+    "contest_id": "abc234",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc234/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Reordering",
+    "problem_url": "https://atcoder.jp/contests/abc234/tasks/abc234_f",
+    "submission_id": "AC28401642",
+    "submission_url": "https://atcoder.jp/contests/abc234/submissions/28401642",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jan/08/2022 18:09"
+  },
   "AC28526296": {
     "contest_id": "abc235",
     "language": "C++ (GCC 9.2.1)",

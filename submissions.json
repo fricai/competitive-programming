@@ -25313,6 +25313,23 @@
     ],
     "timestamp": "Jan/04/2022 22:24"
   },
+  "CF142310971": {
+    "contest_id": 1624,
+    "language": "GNU C++17",
+    "path": "codeforces/1624/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Make AP",
+    "problem_url": "https://codeforces.com/contest/1624/problem/B",
+    "submission_id": "CF142310971",
+    "submission_url": "https://codeforces.com/contest/1624/submission/142310971",
+    "tags": [
+      "implementation",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Jan/11/2022 03:29"
+  },
   "CF142311378": {
     "contest_id": 1624,
     "language": "GNU C++17",

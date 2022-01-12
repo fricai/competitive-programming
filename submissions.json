@@ -25313,6 +25313,23 @@
     ],
     "timestamp": "Jan/04/2022 22:24"
   },
+  "CF142476782": {
+    "contest_id": 1625,
+    "language": "GNU C++17",
+    "path": "codeforces/1625/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Road Optimization",
+    "problem_url": "https://codeforces.com/contest/1625/problem/C",
+    "submission_id": "CF142476782",
+    "submission_url": "https://codeforces.com/contest/1625/submission/142476782",
+    "tags": [
+      "data structures",
+      "dp",
+      "*1700"
+    ],
+    "timestamp": "Jan/12/2022 17:54"
+  },
   "CF142501419": {
     "contest_id": 1625,
     "language": "GNU C++17",

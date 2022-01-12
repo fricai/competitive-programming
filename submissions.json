@@ -25313,6 +25313,26 @@
     ],
     "timestamp": "Jan/04/2022 22:24"
   },
+  "CF142543932": {
+    "contest_id": 1625,
+    "language": "GNU C++17",
+    "path": "codeforces/1625/E2.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E2",
+    "problem_name": "Cats on the Upgrade (hard version)",
+    "problem_url": "https://codeforces.com/contest/1625/problem/E2",
+    "submission_id": "CF142543932",
+    "submission_url": "https://codeforces.com/contest/1625/submission/142543932",
+    "tags": [
+      "binary search",
+      "data structures",
+      "dfs and similar",
+      "graphs",
+      "trees",
+      "*2800"
+    ],
+    "timestamp": "Jan/13/2022 00:24"
+  },
   "CF142544817": {
     "contest_id": 1625,
     "language": "GNU C++17",

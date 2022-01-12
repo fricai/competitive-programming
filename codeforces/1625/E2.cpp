@@ -180,29 +180,39 @@ signed main() {
 	int n, q; cin >> n >> q;
 	string s; cin >> s;
 
+	vector<int> stk;
+	vector<int> nxt(n, -1);
+	rep(i, 0, n) {
+		if (s[i] == '(') stk.push_back(i);
+		if (s[i] == ')') {
+			if (stk.empty()) continue;
+			nxt[stk.back()] = i;
+			stk.pop_back();
+		}
+	}
+
 	auto C = [&](ll x) { return x * (x - 1) / 2; };
 
 	st t(n), z(n);
-	vector<int> p(n, -1), deg(n), nxt(n);
+	vector<int> p(n, -1), deg(n);
 	auto dfs = [&](const auto &self, int u) -> void {
-		if (s[u] == ')') return void(nxt[u] = u);
-
-		auto &v = nxt[u];
-		for (v = u + 1; v < n && s[v] != ')'; v = nxt[v] + 1) {
-			++deg[u];
+		assert(~nxt[u]);
+		for (int v = u + 1; v < nxt[u]; v = nxt[v] + 1) {
 			p[v] = u;
 			self(self, v);
+			++deg[u];
 		}
-
-		if (v < n) {
-			t.set(u, 1 + C(deg[u]));
-			z.set(u, 1);
-			z.set(v, -deg[u]);
-		}
+		t.set(u, 1 + C(deg[u]));
+		z.set(u, 1);
+		z.set(nxt[u], -deg[u]);
 	};
 
-	for (int i = 0; i < n; i = nxt[i] + 1)
-		dfs(dfs, i);
+	for (int i = 0; i < n; ++i) {
+		if (~nxt[i]) {
+			dfs(dfs, i);
+			i = nxt[i];
+		}
+	}
 
 	while (q--) {
 		int type, l, r; cin >> type >> l >> r; --l;
@@ -212,7 +222,7 @@ signed main() {
 		} else {
 			z.set(l, 0);
 			t.set(l, 0);
-			if (auto x = p[l]; ~x && nxt[x] < n) {
+			if (auto x = p[l]; ~x) {
 				--deg[x];
 				t.set(x, 1 + C(deg[x]));
 				z.set(nxt[x], -deg[x]);

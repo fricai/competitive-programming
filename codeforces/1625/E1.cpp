@@ -18,6 +18,15 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, true : fals
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
+template<class T>
+struct prefix_sum {
+	vector<T> v;
+	prefix_sum(int n) : v(n + 1, 0) { }
+	void set(int u, T val) { v[u + 1] = val; }
+	void init() { partial_sum(all(v), begin(v)); }
+	T sum(int l, int r) { return v[r] - v[l]; }
+};
+
 signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -27,7 +36,7 @@ signed main() {
 
 	auto C = [&](ll x) { return x * (x - 1) / 2; };
 
-	vector<ll> t(n + 1), z(n + 1);
+	prefix_sum<ll> t(n), z(n);
 	auto dfs = [&](const auto &self, int u) -> int {
 		if (s[u] == ')') return u;
 
@@ -38,20 +47,21 @@ signed main() {
 		}
 
 		if (v < n) {
-			t[u + 1] = 1 + C(deg);
-			z[u + 1] = 1;
-			z[v + 1] = -deg;
+			t.set(u, 1 + C(deg));
+			z.set(u, 1);
+			z.set(v, -deg);
 		}
 		return v;
 	};
 
 	for (int i = 0; i < n;)
 		i = dfs(dfs, i) + 1;
-	rep(i, 0, n) t[i + 1] += t[i];
-	rep(i, 0, n) z[i + 1] += z[i];
+	t.init();
+	z.init();
 
 	while (q--) {
 		int type, l, r; cin >> type >> l >> r; --l;
-		cout << (t[r] - t[l]) + C(z[r] - z[l]) << '\n';
+		assert(type == 2);
+		cout << t.sum(l, r) + C(z.sum(l, r)) << '\n';
 	}
 }

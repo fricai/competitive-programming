@@ -23,7 +23,7 @@ struct prefix_sum {
 	vector<T> v;
 	prefix_sum(int n) : v(n + 1, 0) { }
 	void set(int u, T val) { v[u + 1] = val; }
-	void init() { partial_sum(all(v), begin(v)); }
+	void init() { rep(i, 1, sz(v)) v[i] += v[i - 1]; }
 	T sum(int l, int r) { return v[r] - v[l]; }
 };
 

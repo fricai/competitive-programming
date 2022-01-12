@@ -29,12 +29,12 @@ signed main() {
 
 	vector<ll> t(n + 1), z(n + 1);
 	auto dfs = [&](const auto &self, int u) -> int {
-		if (s[u] == ')') return u + 1;
+		if (s[u] == ')') return u;
 
 		int deg = 0, v = u + 1;
 		while (v < n && s[v] != ')') {
 			++deg;
-			v = self(self, v);
+			v = self(self, v) + 1;
 		}
 
 		if (v < n) {
@@ -42,12 +42,14 @@ signed main() {
 			z[u + 1] = 1;
 			z[v + 1] = -deg;
 		}
-		return v + 1;
+		return v;
 	};
 
-	for (int i = 0; i < n; i = dfs(dfs, i));
-	partial_sum(all(t), begin(t));
-	partial_sum(all(z), begin(z));
+	for (int i = 0; i < n;)
+		i = dfs(dfs, i) + 1;
+	rep(i, 0, n) t[i + 1] += t[i];
+	rep(i, 0, n) z[i + 1] += z[i];
+
 	while (q--) {
 		int type, l, r; cin >> type >> l >> r; --l;
 		cout << (t[r] - t[l]) + C(z[r] - z[l]) << '\n';

@@ -46,8 +46,8 @@ signed main() {
 	};
 
 	for (int i = 0; i < n; i = dfs(dfs, i));
-	rep(i, 0, n) t[i + 1] += t[i];
-	rep(i, 0, n) z[i + 1] += z[i];
+	partial_sum(all(t), begin(t));
+	partial_sum(all(z), begin(z));
 	while (q--) {
 		int type, l, r; cin >> type >> l >> r; --l;
 		cout << (t[r] - t[l]) + C(z[r] - z[l]) << '\n';

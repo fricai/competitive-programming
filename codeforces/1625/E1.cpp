@@ -37,25 +37,26 @@ signed main() {
 	auto C = [&](ll x) { return x * (x - 1) / 2; };
 
 	prefix_sum<ll> t(n), z(n);
-	auto dfs = [&](const auto &self, int u) -> int {
-		if (s[u] == ')') return u;
+	vector<int> p(n, -1), deg(n), nxt(n);
+	auto dfs = [&](const auto &self, int u) -> void {
+		if (s[u] == ')') return void(nxt[u] = u);
 
-		int deg = 0, v = u + 1;
-		while (v < n && s[v] != ')') {
-			++deg;
-			v = self(self, v) + 1;
+		auto &v = nxt[u];
+		for (v = u + 1; v < n && s[v] != ')'; v = nxt[v] + 1) {
+			++deg[u];
+			p[v] = u;
+			self(self, v);
 		}
 
 		if (v < n) {
-			t.set(u, 1 + C(deg));
+			t.set(u, 1 + C(deg[u]));
 			z.set(u, 1);
-			z.set(v, -deg);
+			z.set(v, -deg[u]);
 		}
-		return v;
 	};
 
-	for (int i = 0; i < n;)
-		i = dfs(dfs, i) + 1;
+	for (int i = 0; i < n; i = nxt[i] + 1)
+		dfs(dfs, i);
 	t.init();
 	z.init();
 

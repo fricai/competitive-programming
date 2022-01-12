@@ -193,39 +193,50 @@ signed main() {
 
 	auto C = [&](ll x) { return x * (x - 1) / 2; };
 
-	st t(n), z(n);
-	vector<int> p(n, -1), deg(n);
+	st t(n);
+	vector<int> dep(n, -1), deg(n);
+	vector<int> p(n, -1);
 	auto dfs = [&](const auto &self, int u) -> void {
 		assert(~nxt[u]);
 		for (int v = u + 1; v < nxt[u]; v = nxt[v] + 1) {
+			dep[v] = dep[u] + 1;
 			p[v] = u;
 			self(self, v);
 			++deg[u];
 		}
 		t.set(u, 1 + C(deg[u]));
-		z.set(u, 1);
-		z.set(nxt[u], -deg[u]);
 	};
 
 	for (int i = 0; i < n; ++i) {
 		if (~nxt[i]) {
+			dep[i] = 0;
 			dfs(dfs, i);
 			i = nxt[i];
 		}
 	}
 
+	vector<vector<int>> lev(n);
+	rep(i, 0, n) if (~dep[i]) lev[dep[i]].push_back(i);
+	vector<st> z(n);
+	rep(d, 0, n) z[d] = st(vector(sz(lev[d]), 1ll));
+
 	while (q--) {
 		int type, l, r; cin >> type >> l >> r; --l;
 
+		int d = dep[l];
 		if (type == 2) {
-			cout << t.prod(l, r) + C(z.prod(l, r)) << '\n';
+			assert(~d);
+			int x = lower_bound(all(lev[d]), l) - begin(lev[d]);
+			int y = lower_bound(all(lev[d]), r) - begin(lev[d]);
+
+			cout << t.prod(l, r) + C(z[d].prod(x, y)) << '\n';
 		} else {
-			z.set(l, 0);
+			int x = lower_bound(all(lev[d]), l) - begin(lev[d]);
+			z[d].set(x, 0);
 			t.set(l, 0);
-			if (auto x = p[l]; ~x) {
-				--deg[x];
-				t.set(x, 1 + C(deg[x]));
-				z.set(nxt[x], -deg[x]);
+			if (~p[l]) {
+				--deg[p[l]];
+				t.set(p[l], 1 + C(deg[p[l]]));
 			}
 		}
 	}

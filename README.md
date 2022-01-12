@@ -13,10 +13,11 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1449 | [E1 - Cats on the Upgrade (easy version)](https://codeforces.com/contest/1625/problem/E1) | [GNU C++17](./codeforces/1625/E1.cpp) | `brute force` `data structures` `dfs and similar` `divide and conquer` `dp` `graphs` `trees` `*2500` | Jan/14/2022 16:14 | 
-1448 | [E2 - Cats on the Upgrade (hard version)](https://codeforces.com/contest/1625/problem/E2) | [GNU C++17](./codeforces/1625/E2.cpp) | `binary search` `data structures` `dfs and similar` `graphs` `trees` `*2800` | Jan/13/2022 00:39 | 
-1447 | [C - Road Optimization](https://codeforces.com/contest/1625/problem/C) | [GNU C++17](./codeforces/1625/C.cpp) | `data structures` `dp` `*1700` | Jan/12/2022 17:54 | 
-1446 | [B - Elementary Particles](https://codeforces.com/contest/1625/problem/B) | [GNU C++17](./codeforces/1625/B.cpp) | `brute force` `greedy` `sortings` `*1100` | Jan/12/2022 17:43 | 
+1450 | [E1 - Cats on the Upgrade (easy version)](https://codeforces.com/contest/1625/problem/E1) | [GNU C++17](./codeforces/1625/E1.cpp) | `brute force` `data structures` `dfs and similar` `divide and conquer` `dp` `graphs` `trees` `*2500` | Jan/14/2022 16:14 | 
+1449 | [E2 - Cats on the Upgrade (hard version)](https://codeforces.com/contest/1625/problem/E2) | [GNU C++17](./codeforces/1625/E2.cpp) | `binary search` `data structures` `dfs and similar` `graphs` `trees` `*2800` | Jan/13/2022 00:39 | 
+1448 | [C - Road Optimization](https://codeforces.com/contest/1625/problem/C) | [GNU C++17](./codeforces/1625/C.cpp) | `data structures` `dp` `*1700` | Jan/12/2022 17:54 | 
+1447 | [B - Elementary Particles](https://codeforces.com/contest/1625/problem/B) | [GNU C++17](./codeforces/1625/B.cpp) | `brute force` `greedy` `sortings` `*1100` | Jan/12/2022 17:43 | 
+1446 | [A - Ancient Civilization](https://codeforces.com/contest/1625/problem/A) | [GNU C++17](./codeforces/1625/A.cpp) | `bitmasks` `greedy` `math` `*800` | Jan/12/2022 17:38 | 
 1445 | [D - Treelabeling](https://codeforces.com/contest/1605/problem/D) | [GNU C++17](./codeforces/1605/D.cpp) | `bitmasks` `constructive algorithms` `dfs and similar` `games` `greedy` `implementation` `trees` `*2100` | Jan/04/2022 22:24 | 
 1444 | [E - Array Equalizer](https://codeforces.com/contest/1605/problem/E) | [GNU C++17](./codeforces/1605/E.cpp) | `binary search` `greedy` `implementation` `math` `number theory` `sortings` `two pointers` `*2400` | Jan/04/2022 21:46 | 
 1443 | [C - Dominant Character](https://codeforces.com/contest/1605/problem/C) | [GNU C++17](./codeforces/1605/C.cpp) | `brute force` `greedy` `implementation` `strings` `*1400` | Jan/04/2022 21:18 | 

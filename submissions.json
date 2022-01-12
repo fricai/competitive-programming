@@ -25313,6 +25313,24 @@
     ],
     "timestamp": "Jan/04/2022 22:24"
   },
+  "CF142469051": {
+    "contest_id": 1625,
+    "language": "GNU C++17",
+    "path": "codeforces/1625/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Ancient Civilization",
+    "problem_url": "https://codeforces.com/contest/1625/problem/A",
+    "submission_id": "CF142469051",
+    "submission_url": "https://codeforces.com/contest/1625/submission/142469051",
+    "tags": [
+      "bitmasks",
+      "greedy",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jan/12/2022 17:38"
+  },
   "CF142470866": {
     "contest_id": 1625,
     "language": "GNU C++17",

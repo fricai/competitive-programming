@@ -7839,6 +7839,22 @@
     ],
     "timestamp": "Dec/31/2021 15:25"
   },
+  "AC28540208": {
+    "contest_id": "abc235",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc235/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Multiply and Rotate",
+    "problem_url": "https://atcoder.jp/contests/abc235/tasks/abc235_d",
+    "submission_id": "AC28540208",
+    "submission_url": "https://atcoder.jp/contests/abc235/submissions/28540208",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jan/15/2022 17:43"
+  },
   "AC28544168": {
     "contest_id": "abc235",
     "language": "C++ (GCC 9.2.1)",

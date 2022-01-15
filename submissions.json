@@ -7839,6 +7839,22 @@
     ],
     "timestamp": "Dec/31/2021 15:25"
   },
+  "AC28544168": {
+    "contest_id": "abc235",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc235/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "MST + 1",
+    "problem_url": "https://atcoder.jp/contests/abc235/tasks/abc235_e",
+    "submission_id": "AC28544168",
+    "submission_url": "https://atcoder.jp/contests/abc235/submissions/28544168",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jan/15/2022 17:50"
+  },
   "AC28762278": {
     "contest_id": "arc133",
     "language": "C++ (GCC 9.2.1)",

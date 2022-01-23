@@ -35,7 +35,7 @@ int bpow(ll a, ll b) {
 
 int solve() {
 	int n, m, k; cin >> n >> m >> k;
-	vector<int> f(n);
+	vector<int> f(n + 1);
 	rep(i, 0, n) f[i] = C(n, i);
 	const int prod = bpow(inv2, n - 1);
 	rep(i, 0, n) f[i] = mul(prod, f[i]);

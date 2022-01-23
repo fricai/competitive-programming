@@ -43,11 +43,11 @@ int solve() {
 	dec(f[n], n + 2);
 	dec(g[n], 2);
 
-	rep(i, 0, n) inc(f[i + 1], f[i]);
+	partial_sum(all(f), begin(f), add);
 	f.insert(begin(f), 0);
 
-	rep(i, 0, n) inc(g[i + 1], g[i]);
-	rep(i, 0, n) inc(g[i + 1], g[i]);
+	partial_sum(all(g), begin(g), add);
+	partial_sum(all(g), begin(g), add);
 	g.insert(begin(g), {0, 0});
 
 	return mul(k, add(f[m], g[m]));

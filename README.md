@@ -13,7 +13,8 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1464 | [C - Row Column Sums](https://atcoder.jp/contests/arc133/tasks/arc133_c) | [C++ (GCC 9.2.1)](./atcoder/arc133/C.cpp) | `AtCoder` `*500` | Jan/24/2022 18:04 | 
+1465 | [C - Row Column Sums](https://atcoder.jp/contests/arc133/tasks/arc133_c) | [C++ (GCC 9.2.1)](./atcoder/arc133/C.cpp) | `AtCoder` `*500` | Jan/24/2022 18:04 | 
+1464 | [B - Dividing Subsequence](https://atcoder.jp/contests/arc133/tasks/arc133_b) | [C++ (GCC 9.2.1)](./atcoder/arc133/B.cpp) | `AtCoder` `*500` | Jan/23/2022 21:35 | 
 1463 | [C - Grid Xor](https://codeforces.com/contest/1628/problem/C) | [GNU C++17](./codeforces/1628/C.cpp) | `constructive algorithms` `greedy` `implementation` `interactive` `math` `*2300` | Jan/23/2022 19:40 | 
 1462 | [A - Meximum Array](https://codeforces.com/contest/1628/problem/A) | [GNU C++17](./codeforces/1628/A.cpp) | `binary search` `constructive algorithms` `greedy` `implementation` `math` `two pointers` `*1400` | Jan/23/2022 19:12 | 
 1461 | [B - Peculiar Movie Preferences](https://codeforces.com/contest/1628/problem/B) | [GNU C++17 (64)](./codeforces/1628/B.cpp) | `greedy` `strings` `*1700` | Jan/23/2022 17:56 | 

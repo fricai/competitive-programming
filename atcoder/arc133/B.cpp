@@ -2,6 +2,7 @@
 #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 
 #include <bits/stdc++.h>
+#include <atcoder/segtree>
 
 using namespace std;
 using ll = long long;
@@ -18,21 +19,9 @@ template<class T> bool uax(T& a, const T& b) { return a < b ? a = b, true : fals
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-
-template<class I> int lis(const vector<I>& S) {
-	if (S.empty()) return {};
-	vector<int> prev(sz(S));
-	using p = pair<I, int>;
-	vector<p> res;
-	rep(i, 0, sz(S)) {
-		// change 0 -> i for longest non-decreasing subsequence
-		auto it = lower_bound(all(res), p{S[i], 0});
-		if (it == res.end()) res.emplace_back(), it = res.end() - 1;
-		*it = {S[i], i};
-		prev[i] = it == res.begin() ? 0 : (it - 1)->second;
-	}
-	return sz(res);
-}
+int op(int a, int b) { return max(a, b); }
+int e() { return 0; }
+using st = atcoder::segtree<int, op, e>;
 
 signed main() {
 	ios::sync_with_stdio(false);
@@ -43,6 +32,11 @@ signed main() {
 	for (auto &x : p) cin >> x;
 	for (auto &x : q) cin >> x;
 
+	st t(n);
+	auto f = [&](int x) { return t.prod(0, x + 1); };
+	// range update [i, n) <=> change value of i
+	// get value at i <=> get max over [0, i]
+
 	vector<int> inv_q(n + 1);
 	rep(i, 0, n) inv_q[q[i]] = i;
 
@@ -50,14 +44,17 @@ signed main() {
 	for (int i = 1; i <= n; ++i)
 		for (int j = i; j <= n; j += i)
 			mul[i].push_back(inv_q[j]);
- 
+
 	for (auto &v : mul) sort(rall(v));
 
-	vector<int> c;
-	for (auto a : p)
-		for (auto j : mul[a])
-			c.push_back(j);
+	for (auto a : p) {
+		for (auto j : mul[a]) {
+			const int val = f(j - 1);
+			if (f(j) < 1 + val) {
+				t.set(j, 1 + val);
+			}
+		}
+	}
 
-	cout << lis(c) << '\n';
+	cout << t.all_prod() << '\n';
 }
-

@@ -36,12 +36,21 @@ int bpow(ll a, ll b) {
 int solve() {
 	int n, m, k; cin >> n >> m >> k;
 	vector<int> f(n + 1);
-	rep(i, 0, n) f[i] = C(n, i);
+	rep(i, 0, n + 1) f[i] = C(n, i);
 	const int prod = bpow(inv2, n - 1);
-	rep(i, 0, n) f[i] = mul(prod, f[i]);
-	rep(i, 1, n) inc(f[i], f[i - 1]);
-	rep(i, 1, n) inc(f[i], f[i - 1]);
-	return mul(k, f[m - 1]);
+	rep(i, 0, n + 1) f[i] = mul(prod, f[i]);
+	auto g = f; // g = a(x)^n atm
+	dec(f[n], n + 2);
+	dec(g[n], 2);
+
+	rep(i, 0, n) inc(f[i + 1], f[i]);
+	f.insert(begin(f), 0);
+
+	rep(i, 0, n) inc(g[i + 1], g[i]);
+	rep(i, 0, n) inc(g[i + 1], g[i]);
+	g.insert(begin(g), {0, 0});
+
+	return mul(k, add(f[m], g[m]));
 }
 
 signed main() {

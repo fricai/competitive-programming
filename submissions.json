@@ -7839,6 +7839,22 @@
     ],
     "timestamp": "Dec/31/2021 15:25"
   },
+  "AC28763188": {
+    "contest_id": "arc133",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc133/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Dividing Subsequence",
+    "problem_url": "https://atcoder.jp/contests/arc133/tasks/arc133_b",
+    "submission_id": "AC28763188",
+    "submission_url": "https://atcoder.jp/contests/arc133/submissions/28763188",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jan/23/2022 21:35"
+  },
   "AC28763196": {
     "contest_id": "arc133",
     "language": "C++ (GCC 9.2.1)",

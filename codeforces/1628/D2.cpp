@@ -37,9 +37,11 @@ int solve() {
 	int n, m, k; cin >> n >> m >> k;
 	vector<int> f(n);
 	rep(i, 0, n) f[i] = C(n, i);
+	const int prod = bpow(inv2, n - 1);
+	rep(i, 0, n) f[i] = mul(prod, f[i]);
 	rep(i, 1, n) inc(f[i], f[i - 1]);
 	rep(i, 1, n) inc(f[i], f[i - 1]);
-	return mul(k, mul(bpow(inv2, n - 1), f[m - 1]));
+	return mul(k, f[m - 1]);
 }
 
 signed main() {

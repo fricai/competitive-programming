@@ -25675,6 +25675,26 @@
     ],
     "timestamp": "Jan/14/2022 16:14"
   },
+  "CF143793544": {
+    "contest_id": 1628,
+    "language": "GNU C++17",
+    "path": "codeforces/1628/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Grid Xor",
+    "problem_url": "https://codeforces.com/contest/1628/problem/C",
+    "submission_id": "CF143793544",
+    "submission_url": "https://codeforces.com/contest/1628/submission/143793544",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "interactive",
+      "math",
+      "*2300"
+    ],
+    "timestamp": "Jan/23/2022 19:40"
+  },
   "CF47808038": {
     "contest_id": 755,
     "language": "GNU C++14",

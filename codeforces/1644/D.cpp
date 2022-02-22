@@ -26,14 +26,17 @@ int solve() {
 	cin >> n >> m >> k >> q;
 
 	vector<pair<int, int>> ops(q);
-	for (auto& [x, y] : ops) cin >> x >> y, --x, --y;
+	for (auto& [x, y] : ops)
+		cin >> x >> y, --x, --y;
 	reverse(all(ops));
 
 	int rowc = 0, colc = 0;
 	ll ans = 1;
 
 	for (auto [x, y] : ops) {
-		if (row[x] == 0 || col[y] == 0) ans = ans * k % mod;
+		if (row[x] == 0 || col[y] == 0) {
+			ans = ans * k % mod;
+		}
 		rowc -= row[x];
 		row[x] = 1;
 		rowc += row[x];
@@ -42,7 +45,8 @@ int solve() {
 		col[y] = 1;
 		colc += col[y];
 
-		if (rowc == n || colc == m) break;
+		if (rowc == n || colc == m)
+			break;
 	}
 	for (auto [x, y] : ops) row[x] = col[y] = 0;
 	return ans;
@@ -52,7 +56,6 @@ signed main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	int t;
-	cin >> t;
+	int t; cin >> t;
 	while (t--) cout << solve() << '\n';
 }

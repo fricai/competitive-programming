@@ -18,10 +18,12 @@ template <class T> bool uax(T& a, const T& b) { return a < b ? a = b, true : fal
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-constexpr int mod = 119 << 23 | 1, N = 2e5 + 10;
-int row[N], col[N];
+constexpr int mod = 119 << 23 | 1;
 
 int solve() {
+	static constexpr int N = 2e5 + 10;
+	static array<int, N> row{}, col{};
+
 	int n, m, k, q;
 	cin >> n >> m >> k >> q;
 

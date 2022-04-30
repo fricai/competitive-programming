@@ -26377,6 +26377,27 @@
     ],
     "timestamp": "Feb/22/2022 23:52"
   },
+  "CF155452248": {
+    "contest_id": 1673,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1673/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Anti-Theft Road Planning",
+    "problem_url": "https://codeforces.com/contest/1673/problem/F",
+    "submission_id": "CF155452248",
+    "submission_url": "https://codeforces.com/contest/1673/submission/155452248",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "divide and conquer",
+      "greedy",
+      "interactive",
+      "math",
+      "*2400"
+    ],
+    "timestamp": "May/01/2022 00:11"
+  },
   "CF155460706": {
     "contest_id": 280,
     "language": "GNU C++17 (64)",

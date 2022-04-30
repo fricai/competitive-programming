@@ -13,11 +13,12 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1489 | [C - Tokitsukaze and Two Colorful Tapes](https://codeforces.com/contest/1677/problem/C) | [GNU C++17 (64)](./codeforces/1677/C.cpp) | `constructive algorithms` `dfs and similar` `graphs` `greedy` `*1900` | May/15/2022 22:57 | 
-1488 | [B - Tokitsukaze and Meeting](https://codeforces.com/contest/1677/problem/B) | [GNU C++17 (64)](./codeforces/1677/B.cpp) | `data structures` `implementation` `math` `*1700` | May/15/2022 22:00 | 
-1487 | [A - Tokitsukaze and Strange Inequality](https://codeforces.com/contest/1677/problem/A) | [GNU C++17 (64)](./codeforces/1677/A.cpp) | `brute force` `data structures` `dp` `*1600` | May/15/2022 20:33 | 
-1486 | [C - Game on Tree](https://codeforces.com/contest/280/problem/C) | [GNU C++17 (64)](./codeforces/280/C.cpp) | `implementation` `math` `probabilities` `trees` `*2200` | May/01/2022 03:16 | 
-1485 | [F - Anti-Theft Road Planning](https://codeforces.com/contest/1673/problem/F) | [GNU C++17 (64)](./codeforces/1673/F.cpp) | `bitmasks` `constructive algorithms` `divide and conquer` `greedy` `interactive` `math` `*2400` | May/01/2022 00:11 | 
+1490 | [C - Tokitsukaze and Two Colorful Tapes](https://codeforces.com/contest/1677/problem/C) | [GNU C++17 (64)](./codeforces/1677/C.cpp) | `constructive algorithms` `dfs and similar` `graphs` `greedy` `*1900` | May/15/2022 22:57 | 
+1489 | [B - Tokitsukaze and Meeting](https://codeforces.com/contest/1677/problem/B) | [GNU C++17 (64)](./codeforces/1677/B.cpp) | `data structures` `implementation` `math` `*1700` | May/15/2022 22:00 | 
+1488 | [A - Tokitsukaze and Strange Inequality](https://codeforces.com/contest/1677/problem/A) | [GNU C++17 (64)](./codeforces/1677/A.cpp) | `brute force` `data structures` `dp` `*1600` | May/15/2022 20:33 | 
+1487 | [C - Game on Tree](https://codeforces.com/contest/280/problem/C) | [GNU C++17 (64)](./codeforces/280/C.cpp) | `implementation` `math` `probabilities` `trees` `*2200` | May/01/2022 03:16 | 
+1486 | [F - Anti-Theft Road Planning](https://codeforces.com/contest/1673/problem/F) | [GNU C++17 (64)](./codeforces/1673/F.cpp) | `bitmasks` `constructive algorithms` `divide and conquer` `greedy` `interactive` `math` `*2400` | May/01/2022 00:11 | 
+1485 | [B - A Perfectly Balanced String?](https://codeforces.com/contest/1673/problem/B) | [GNU C++17 (64)](./codeforces/1673/B.cpp) | `brute force` `greedy` `strings` `*1100` | Apr/30/2022 23:20 | 
 1484 | [D - Cross Coloring](https://codeforces.com/contest/1644/problem/D) | [GNU C++17](./codeforces/1644/D.cpp) | `data structures` `implementation` `math` `*1700` | Feb/22/2022 23:52 | 
 1483 | [A - Reverse](https://codeforces.com/contest/1638/problem/A) | [GNU C++17](./codeforces/1638/A.cpp) | `constructive algorithms` `greedy` `math` `*800` | Feb/15/2022 00:45 | 
 1482 | [D - Big Brush](https://codeforces.com/contest/1638/problem/D) | [GNU C++17](./codeforces/1638/D.cpp) | `constructive algorithms` `data structures` `greedy` `implementation` `*2000` | Feb/15/2022 00:44 | 

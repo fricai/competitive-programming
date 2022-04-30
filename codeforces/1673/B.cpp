@@ -26,11 +26,7 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 constexpr int A = 26;
 
-int dist(const string& s) {
-    bool f[A] = {};
-    for (auto c : s) f[c - 'a'] = true;
-    return count(all(f), true);
-}
+int dist(const string& s) { return sz(set<char>(all(s))); }
 
 bool solve() {
     string s;

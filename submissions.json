@@ -26377,6 +26377,25 @@
     ],
     "timestamp": "Feb/22/2022 23:52"
   },
+  "CF157333411": {
+    "contest_id": 1677,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1677/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Tokitsukaze and Two Colorful Tapes",
+    "problem_url": "https://codeforces.com/contest/1677/problem/C",
+    "submission_id": "CF157333411",
+    "submission_url": "https://codeforces.com/contest/1677/submission/157333411",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "graphs",
+      "greedy",
+      "*1900"
+    ],
+    "timestamp": "May/15/2022 22:57"
+  },
   "CF47808038": {
     "contest_id": 755,
     "language": "GNU C++14",

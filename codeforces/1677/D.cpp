@@ -26,6 +26,8 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 constexpr int mod = 119 << 23 | 1;
 
+int mul(ll x, int y) { return x * y % mod; }
+
 int solve() {
     int n, k;
     cin >> n >> k;
@@ -34,13 +36,11 @@ int solve() {
 
     rep(i, n - k, n) if (v[i] > 0) return 0;
 
-    ll ans = 1;
-#define F(x) ans = ans * (x + 1) % mod
-    rep(i, 0, k) F(i);
+    int ans = 1;
+    rep(i, 0, k) ans = mul(ans, i + 1);
     rep(i, k, n)
-        if (v[i - k] == -1) F(i);
-        else if (v[i - k] == 0) F(k);
-#undef F
+        if (v[i - k] == -1) ans = mul(ans, i + 1);
+        else if (v[i - k] == 0) ans = mul(ans, k + 1);
     return ans;
 }
 

@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1496 | [D - Tokitsukaze and Permutations](https://codeforces.com/contest/1677/problem/D) | [GNU C++17 (64)](./codeforces/1677/D.cpp) | `dp` `math` `*2500` | May/16/2022 00:30 | 
 1495 | [C - Tokitsukaze and Two Colorful Tapes](https://codeforces.com/contest/1677/problem/C) | [GNU C++17 (64)](./codeforces/1677/C.cpp) | `constructive algorithms` `dfs and similar` `graphs` `greedy` `*1900` | May/15/2022 22:57 | 
 1494 | [B - Tokitsukaze and Meeting](https://codeforces.com/contest/1677/problem/B) | [GNU C++17 (64)](./codeforces/1677/B.cpp) | `data structures` `implementation` `math` `*1700` | May/15/2022 22:00 | 
 1493 | [A - Tokitsukaze and Strange Inequality](https://codeforces.com/contest/1677/problem/A) | [GNU C++17 (64)](./codeforces/1677/A.cpp) | `brute force` `data structures` `dp` `*1600` | May/15/2022 20:33 | 

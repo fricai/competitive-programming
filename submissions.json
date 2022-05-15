@@ -26377,6 +26377,24 @@
     ],
     "timestamp": "Feb/22/2022 23:52"
   },
+  "CF157329380": {
+    "contest_id": 1677,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1677/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Tokitsukaze and Meeting",
+    "problem_url": "https://codeforces.com/contest/1677/problem/B",
+    "submission_id": "CF157329380",
+    "submission_url": "https://codeforces.com/contest/1677/submission/157329380",
+    "tags": [
+      "data structures",
+      "implementation",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "May/15/2022 22:00"
+  },
   "CF157332914": {
     "contest_id": 1677,
     "language": "GNU C++17 (64)",

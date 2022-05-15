@@ -102,15 +102,9 @@ ll solve() {
     atcoder::dsu g(n);
     rep(i, 0, n) g.merge(a[i] - 1, b[i] - 1);
 
-    int c = 0;
+    ll c = 0;
     rep(i, 0, n) if (g.leader(i) == i) c += g.size(i) / 2;
-
-    ll ans = 0;
-    for (int i = 0; i < c; ++i) {
-        ans -= i + 1;
-        ans += n - i;
-    }
-    return 2 * ans;
+    return 2 * c * (n - c);
 }
 
 signed main() {

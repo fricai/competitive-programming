@@ -103,7 +103,7 @@ ll solve() {
     rep(i, 0, n) g.merge(a[i] - 1, b[i] - 1);
 
     ll c = 0;
-    rep(i, 0, n) if (g.leader(i) == i) c += g.size(i) / 2;
+    for (const auto& x : g.groups()) c += sz(x) / 2;
     return 2 * c * (n - c);
 }
 

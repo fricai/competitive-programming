@@ -194,22 +194,15 @@ int solve() {
 
     auto hsh = [&](auto x) -> int { return lower_bound(all(cmp), x) - begin(cmp); };
 
-    atcoder::segtree<S, op, e> neg(sz(cmp)), zer(sz(cmp)), pos(sz(cmp));
-    neg.set(hsh(0), 0);
-    zer.set(hsh(0), 0);
-    pos.set(hsh(0), 0);
-
-    auto update = [&](auto& seg, int idx, auto val) -> void {
-        seg.set(idx, max(val, seg.get(idx)));
-    };
+    atcoder::segtree<S, op, e> st(sz(cmp));
+    st.set(hsh(0), 0);
 
     vector<int> dp(n + 1);
     for (int i = 1; i <= n; ++i) {
+        dp[i] = max((a[i - 1] == 0 ? 0 : -1) + dp[i - 1], i + st.prod(0, hsh(p[i])));
         const auto idx = hsh(p[i]);
-        dp[i] = max({pos.prod(0, idx) + i, zer.get(idx), neg.prod(idx + 1, sz(cmp)) - i});
-        update(neg, idx, dp[i] + i);
-        zer.set(idx, dp[i]);
-        update(pos, idx, dp[i] - i);
+        const auto v = st.get(idx);
+        st.set(idx, max(v, dp[i] - i));
     }
 
     return dp[n];

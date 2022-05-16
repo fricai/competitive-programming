@@ -26676,6 +26676,25 @@
     ],
     "timestamp": "May/16/2022 00:30"
   },
+  "CF157427873": {
+    "contest_id": 1667,
+    "language": "GNU C++17",
+    "path": "codeforces/1667/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Edge Elimination",
+    "problem_url": "https://codeforces.com/contest/1667/problem/D",
+    "submission_id": "CF157427873",
+    "submission_url": "https://codeforces.com/contest/1667/submission/157427873",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "dp",
+      "trees",
+      "*2900"
+    ],
+    "timestamp": "May/17/2022 01:44"
+  },
   "CF157428845": {
     "contest_id": 1667,
     "language": "GNU C++17",

@@ -13,6 +13,7 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1497 | [B - Optimal Partition](https://codeforces.com/contest/1667/problem/B) | [GNU C++17](./codeforces/1667/B.cpp) | `data structures` `dp` `*2100` | May/17/2022 02:06 | 
 1496 | [D - Tokitsukaze and Permutations](https://codeforces.com/contest/1677/problem/D) | [GNU C++17 (64)](./codeforces/1677/D.cpp) | `dp` `math` `*2500` | May/16/2022 00:30 | 
 1495 | [C - Tokitsukaze and Two Colorful Tapes](https://codeforces.com/contest/1677/problem/C) | [GNU C++17 (64)](./codeforces/1677/C.cpp) | `constructive algorithms` `dfs and similar` `graphs` `greedy` `*1900` | May/15/2022 22:57 | 
 1494 | [B - Tokitsukaze and Meeting](https://codeforces.com/contest/1677/problem/B) | [GNU C++17 (64)](./codeforces/1677/B.cpp) | `data structures` `implementation` `math` `*1700` | May/15/2022 22:00 | 

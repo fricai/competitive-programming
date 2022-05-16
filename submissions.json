@@ -26676,6 +26676,23 @@
     ],
     "timestamp": "May/16/2022 00:30"
   },
+  "CF157428845": {
+    "contest_id": 1667,
+    "language": "GNU C++17",
+    "path": "codeforces/1667/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Optimal Partition",
+    "problem_url": "https://codeforces.com/contest/1667/problem/B",
+    "submission_id": "CF157428845",
+    "submission_url": "https://codeforces.com/contest/1667/submission/157428845",
+    "tags": [
+      "data structures",
+      "dp",
+      "*2100"
+    ],
+    "timestamp": "May/17/2022 02:06"
+  },
   "CF47808038": {
     "contest_id": 755,
     "language": "GNU C++14",

@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32321048": {
+    "contest_id": "arc141",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc141/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Increasing Prefix XOR",
+    "problem_url": "https://atcoder.jp/contests/arc141/tasks/arc141_b",
+    "submission_id": "AC32321048",
+    "submission_url": "https://atcoder.jp/contests/arc141/submissions/32321048",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jun/08/2022 16:52"
+  },
   "AC32329544": {
     "contest_id": "arc141",
     "language": "C++ (GCC 9.2.1)",

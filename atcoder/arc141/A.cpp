@@ -31,14 +31,16 @@ ll solve() {
     ll n;
     cin >> n;
 
-    const int len = sz(to_string(n));
-  
-    ll ans = ten[len - 1] - 1;
-    for (int d = 1; d < len; ++d) {
-        if (len % d != 0) continue;
-        // each block has length d
-        const auto M = (ten[len] - 1) / (ten[d] - 1);
-        uax(ans, n - (n % M));
+    const int tot = sz(to_string(n));
+
+    ll ans = -1;
+    for (int len = max(2, tot - 1); len <= tot; ++len) {
+        for (int d = 1; d < len; ++d) {
+            if (len % d != 0) continue;
+            // each block has length d
+            const auto M = (ten[len] - 1) / (ten[d] - 1);
+            uax(ans, min(ten[d] - 1, n / M) * M);
+        }
     }
     assert(ans > 0);
     return ans;

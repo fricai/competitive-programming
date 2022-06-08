@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32320382": {
+    "contest_id": "arc141",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc141/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Periodic Number",
+    "problem_url": "https://atcoder.jp/contests/arc141/tasks/arc141_a",
+    "submission_id": "AC32320382",
+    "submission_url": "https://atcoder.jp/contests/arc141/submissions/32320382",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jun/08/2022 16:03"
+  },
   "AC32321048": {
     "contest_id": "arc141",
     "language": "C++ (GCC 9.2.1)",

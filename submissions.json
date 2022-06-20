@@ -27339,6 +27339,25 @@
     ],
     "timestamp": "May/17/2022 02:06"
   },
+  "CF161312467": {
+    "contest_id": 1700,
+    "language": "GNU C++17",
+    "path": "codeforces/1700/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "River Locks",
+    "problem_url": "https://codeforces.com/contest/1700/problem/D",
+    "submission_id": "CF161312467",
+    "submission_url": "https://codeforces.com/contest/1700/submission/161312467",
+    "tags": [
+      "binary search",
+      "dp",
+      "greedy",
+      "math",
+      "*1900"
+    ],
+    "timestamp": "Jun/20/2022 19:35"
+  },
   "CF161313458": {
     "contest_id": 1700,
     "language": "GNU C++17",

@@ -27339,6 +27339,24 @@
     ],
     "timestamp": "May/17/2022 02:06"
   },
+  "CF161400069": {
+    "contest_id": 883,
+    "language": "GNU C++17",
+    "path": "codeforces/883/K.cpp",
+    "platform": "Codeforces",
+    "problem_index": "K",
+    "problem_name": "Road Widening",
+    "problem_url": "https://codeforces.com/contest/883/problem/K",
+    "submission_id": "CF161400069",
+    "submission_url": "https://codeforces.com/contest/883/submission/161400069",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "*1800"
+    ],
+    "timestamp": "Jun/21/2022 19:45"
+  },
   "CF161407836": {
     "contest_id": 1436,
     "language": "GNU C++17",

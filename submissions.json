@@ -27339,6 +27339,26 @@
     ],
     "timestamp": "May/17/2022 02:06"
   },
+  "CF161453417": {
+    "contest_id": 761,
+    "language": "GNU C++17",
+    "path": "codeforces/761/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Dasha and Puzzle",
+    "problem_url": "https://codeforces.com/contest/761/problem/E",
+    "submission_id": "CF161453417",
+    "submission_url": "https://codeforces.com/contest/761/submission/161453417",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "graphs",
+      "greedy",
+      "trees",
+      "*2000"
+    ],
+    "timestamp": "Jun/22/2022 13:37"
+  },
   "CF161667548": {
     "contest_id": 757,
     "language": "GNU C++17",

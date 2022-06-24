@@ -27339,6 +27339,23 @@
     ],
     "timestamp": "May/17/2022 02:06"
   },
+  "CF161667548": {
+    "contest_id": 757,
+    "language": "GNU C++17",
+    "path": "codeforces/757/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Felicity's Big Secret Revealed",
+    "problem_url": "https://codeforces.com/contest/757/problem/D",
+    "submission_id": "CF161667548",
+    "submission_url": "https://codeforces.com/contest/757/submission/161667548",
+    "tags": [
+      "bitmasks",
+      "dp",
+      "*2200"
+    ],
+    "timestamp": "Jun/24/2022 23:31"
+  },
   "CF161732877": {
     "contest_id": 1696,
     "language": "GNU C++17",

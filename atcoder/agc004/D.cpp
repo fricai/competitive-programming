@@ -42,10 +42,11 @@ signed main() {
     auto dfs = [&](const auto& self, int u) -> void {
         for (auto v : g[u]) {
             self(self, v);
-            if (h[v] == k - (u != 0))
+            if ((u != 0 && h[v] == k - 1) || (u == 0 && h[v] == k)) {
                 ++ans;
-            else
-                uax(h[u], 1 + h[v]);
+            } else {
+                h[u] = max(h[u], 1 + h[v]);
+            }
         }
     };
     dfs(dfs, 0);

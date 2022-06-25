@@ -28,7 +28,7 @@ void solve() {
     int n;
     cin >> n;
 
-    vector eq(n, vector(n, vector(n, char(1))));
+    vector eq(n, vector(n, vector(n, true)));
     rep(i, 0, n) {
         rep(j, i + 1, n) {
             string s;
@@ -47,7 +47,7 @@ void solve() {
         rep(u, 0, n) for (auto v : g[u]) d[u][v] = 1;
         rep(w, 0, n) rep(u, 0, n) rep(v, 0, n) d[u][v] = min(d[u][v], d[u][w] + d[w][v]);
 
-        vector eq(n, vector(n, vector<char>(n)));
+        vector eq(n, vector(n, vector(n, false)));
         rep(i, 0, n) rep(j, 0, n) rep(k, 0, n) eq[i][j][k] = d[i][k] == d[j][k];
         return eq;
     };

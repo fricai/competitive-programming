@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32706240": {
+    "contest_id": "arc059",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc059/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Children and Candies",
+    "problem_url": "https://atcoder.jp/contests/arc059/tasks/arc059_c",
+    "submission_id": "AC32706240",
+    "submission_url": "https://atcoder.jp/contests/arc059/submissions/32706240",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Jun/25/2022 16:59"
+  },
   "AC32725343": {
     "contest_id": "agc004",
     "language": "C++ (GCC 9.2.1)",

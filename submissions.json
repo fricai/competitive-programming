@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32726236": {
+    "contest_id": "agc004",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/agc004/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Teleporter",
+    "problem_url": "https://atcoder.jp/contests/agc004/tasks/agc004_d",
+    "submission_id": "AC32726236",
+    "submission_url": "https://atcoder.jp/contests/agc004/submissions/32726236",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Jun/25/2022 18:02"
+  },
   "AC32772673": {
     "contest_id": "arc143",
     "language": "C++ (GCC 9.2.1)",

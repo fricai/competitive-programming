@@ -69,7 +69,8 @@ void solve() {
             g[0].push_back(u);
             dfs(dfs, u, 0);
         }
-        assert(vis[i]);
+
+        rep(u, 1, n) assert(vis[i]);
 
         int edges = 0;
         rep(u, 0, n) edges += sz(g[u]);

@@ -174,7 +174,7 @@ template <class S, S (*op)(S, S), S (*e)()> struct segtree {
 }  // namespace atcoder
 
 
-ll s, t;
+int s, t;
 
 constexpr ll inf = 1e18;
 struct mat {
@@ -186,7 +186,7 @@ struct mat {
     mat(double x) {
         a[0][0] = a[0][1] = a[0][2] = 0;
         a[1][0] = a[1][1] = x * t;
-        a[2][0] = x * s;
+        a[2][0] = x * (s + t);
 
         a[1][2] = -inf;
         a[2][1] = a[2][2] = -inf;
@@ -209,7 +209,6 @@ signed main() {
     cin >> s >> t;
     if (s > t) swap(s, t);
     // WLOG s <= t
-    s += t;
 
     vector<int> a(n);
     for (auto& x : a) cin >> x;
@@ -236,7 +235,7 @@ signed main() {
             const auto x = tr.prod(l, r);
             ll ans = 0;
             rep(i, 0, 3) rep(j, 0, 3) uax(ans, x.a[i][j]);
-            cout << double(ans) / (s * t) << '\n';
+            cout << double(ans) / (ll(t) * (s + t)) << '\n';
         }
     }
 }

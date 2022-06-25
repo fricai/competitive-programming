@@ -176,17 +176,17 @@ template <class S, S (*op)(S, S), S (*e)()> struct segtree {
 
 int s, t;
 
-constexpr ll inf = 1e18;
+constexpr double inf = 1e18;
 struct mat {
-    array<array<ll, 3>, 3> a;
+    array<array<double, 3>, 3> a;
     mat() {
         for (auto& v : a) fill(all(v), -inf);
         rep(i, 0, 3) a[i][i] = 0;
     }
     mat(double x) {
         a[0][0] = a[0][1] = a[0][2] = 0;
-        a[1][0] = a[1][1] = x * t;
-        a[2][0] = x * (s + t);
+        a[1][0] = a[1][1] = x / (s + t);
+        a[2][0] = x / t;
 
         a[1][2] = -inf;
         a[2][1] = a[2][2] = -inf;
@@ -213,8 +213,8 @@ signed main() {
     vector<int> a(n);
     for (auto& x : a) cin >> x;
 
-    atcoder::segtree<mat, op, e> tr(n);
-    rep(i, 0, n) tr.set(i, a[i]);
+    atcoder::segtree<mat, op, e> t(n);
+    rep(i, 0, n) t.set(i, a[i]);
 
     cout << fixed << setprecision(10);
     while (q--) {
@@ -226,16 +226,17 @@ signed main() {
             cin >> k;
             --k;
             cin >> a[k];
-            tr.set(k, a[k]);
+            t.set(k, a[k]);
         } else {
             int l, r;
             cin >> l >> r;
             --l;
 
-            const auto x = tr.prod(l, r);
-            ll ans = 0;
+            const auto x = t.prod(l, r);
+            double ans = 0;
+
             rep(i, 0, 3) rep(j, 0, 3) uax(ans, x.a[i][j]);
-            cout << double(ans) / (ll(t) * (s + t)) << '\n';
+            cout << ans << '\n';
         }
     }
 }

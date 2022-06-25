@@ -180,8 +180,7 @@ constexpr double inf = 1e18;
 struct mat {
     array<array<double, 3>, 3> a;
     mat() {
-        for (auto& v : a) fill(all(v), -inf);
-        rep(i, 0, 3) a[i][i] = 0;
+        for (auto& v : a) fill(all(v), 0);
     }
     mat(double x) {
         a[0][0] = a[0][1] = a[0][2] = 0;
@@ -235,7 +234,14 @@ signed main() {
             const auto x = t.prod(l, r);
             double ans = 0;
 
-            rep(i, 0, 3) rep(j, 0, 3) uax(ans, x.a[i][j]);
+            rep(i, 0, 3) {
+                rep(j, 0, 3) {
+                    uax(ans, x.a[i][j]);
+                    // cerr << x.a[i][j] << ' ';
+                }
+                // cerr << '\n';
+            }
+            // cerr << '\n';
             cout << ans << '\n';
         }
     }

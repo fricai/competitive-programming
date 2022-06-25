@@ -46,7 +46,7 @@ void solve() {
         rep(u, 0, n) d[u][u] = 0;
         rep(u, 0, n) for (auto v : g[u]) d[u][v] = 1;
         rep(w, 0, n) rep(u, 0, n) rep(v, 0, n) d[u][v] = min(d[u][v], d[u][w] + d[w][v]);
-        rep(u, 0, n) rep(v, 0, n) if (d[u][v] == inf) return vector<vector<vector<char>>>();
+
         vector eq(n, vector(n, vector<char>(n)));
         rep(i, 0, n) rep(j, 0, n) rep(k, 0, n) eq[i][j][k] = d[i][k] == d[j][k];
         return eq;
@@ -69,8 +69,7 @@ void solve() {
             g[0].push_back(u);
             dfs(dfs, u, 0);
         }
-
-        rep(u, 1, n) assert(vis[i]);
+        assert(vis[i]);
 
         int edges = 0;
         rep(u, 0, n) edges += sz(g[u]);

@@ -13,16 +13,17 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1508 | [F - Make Bipartite](https://atcoder.jp/contests/abc229/tasks/abc229_f) | [C++ (GCC 9.2.1)](./atcoder/abc229/F.cpp) | `AtCoder` `*500` | Jun/30/2022 00:38 | 
-1507 | [E - Tr/ee](https://atcoder.jp/contests/arc103/tasks/arc103_c) | [C++ (GCC 9.2.1)](./atcoder/arc103/E.cpp) | `AtCoder` `*700` | Jun/29/2022 13:50 | 
-1506 | [D - Skate](https://atcoder.jp/contests/arc112/tasks/arc112_d) | [C++ (GCC 9.2.1)](./atcoder/arc112/D.cpp) | `AtCoder` `*600` | Jun/28/2022 16:39 | 
-1505 | [G - Spanning Tree](https://atcoder.jp/contests/jsc2021/tasks/jsc2021_g) | [C++ (GCC 9.2.1)](./atcoder/jsc2021/G.cpp) | `AtCoder` `*600` | Jun/27/2022 20:07 | 
-1504 | [D - Yet Another Sorting Problem](https://atcoder.jp/contests/arc124/tasks/arc124_d) | [C++ (GCC 9.2.1)](./atcoder/arc124/D.cpp) | `AtCoder` `*700` | Jun/27/2022 19:26 | 
-1503 | [C - Three Circuits](https://atcoder.jp/contests/agc032/tasks/agc032_c) | [C++ (GCC 9.2.1)](./atcoder/agc032/C.cpp) | `AtCoder` `*800` | Jun/27/2022 18:35 | 
-1502 | [F - Small Products](https://atcoder.jp/contests/abc132/tasks/abc132_f) | [C++ (GCC 9.2.1)](./atcoder/abc132/F.cpp) | `AtCoder` `*600` | Jun/27/2022 17:50 | 
-1501 | [D - Modulo Operations](https://atcoder.jp/contests/exawizards2019/tasks/exawizards2019_d) | [C++ (GCC 9.2.1)](./atcoder/exawizards2019/D.cpp) | `AtCoder` `*600` | Jun/27/2022 13:52 | 
-1500 | [F - Xor Shift](https://atcoder.jp/contests/abc150/tasks/abc150_f) | [C++ (GCC 9.2.1)](./atcoder/abc150/F.cpp) | `AtCoder` `*600` | Jun/27/2022 02:43 | 
-1499 | [G - Sqrt](https://atcoder.jp/contests/abc243/tasks/abc243_g) | [C++ (GCC 9.2.1)](./atcoder/abc243/G.cpp) | `AtCoder` `*600` | Jun/27/2022 02:16 | 
+1509 | [F - Make Bipartite](https://atcoder.jp/contests/abc229/tasks/abc229_f) | [C++ (GCC 9.2.1)](./atcoder/abc229/F.cpp) | `AtCoder` `*500` | Jun/30/2022 00:38 | 
+1508 | [E - Tr/ee](https://atcoder.jp/contests/arc103/tasks/arc103_c) | [C++ (GCC 9.2.1)](./atcoder/arc103/E.cpp) | `AtCoder` `*700` | Jun/29/2022 13:50 | 
+1507 | [D - Skate](https://atcoder.jp/contests/arc112/tasks/arc112_d) | [C++ (GCC 9.2.1)](./atcoder/arc112/D.cpp) | `AtCoder` `*600` | Jun/28/2022 16:39 | 
+1506 | [G - Spanning Tree](https://atcoder.jp/contests/jsc2021/tasks/jsc2021_g) | [C++ (GCC 9.2.1)](./atcoder/jsc2021/G.cpp) | `AtCoder` `*600` | Jun/27/2022 20:07 | 
+1505 | [D - Yet Another Sorting Problem](https://atcoder.jp/contests/arc124/tasks/arc124_d) | [C++ (GCC 9.2.1)](./atcoder/arc124/D.cpp) | `AtCoder` `*700` | Jun/27/2022 19:26 | 
+1504 | [C - Three Circuits](https://atcoder.jp/contests/agc032/tasks/agc032_c) | [C++ (GCC 9.2.1)](./atcoder/agc032/C.cpp) | `AtCoder` `*800` | Jun/27/2022 18:35 | 
+1503 | [F - Small Products](https://atcoder.jp/contests/abc132/tasks/abc132_f) | [C++ (GCC 9.2.1)](./atcoder/abc132/F.cpp) | `AtCoder` `*600` | Jun/27/2022 17:50 | 
+1502 | [D - Modulo Operations](https://atcoder.jp/contests/exawizards2019/tasks/exawizards2019_d) | [C++ (GCC 9.2.1)](./atcoder/exawizards2019/D.cpp) | `AtCoder` `*600` | Jun/27/2022 13:52 | 
+1501 | [F - Xor Shift](https://atcoder.jp/contests/abc150/tasks/abc150_f) | [C++ (GCC 9.2.1)](./atcoder/abc150/F.cpp) | `AtCoder` `*600` | Jun/27/2022 02:43 | 
+1500 | [G - Sqrt](https://atcoder.jp/contests/abc243/tasks/abc243_g) | [C++ (GCC 9.2.1)](./atcoder/abc243/G.cpp) | `AtCoder` `*600` | Jun/27/2022 02:16 | 
+1499 | [E - + Graph](https://atcoder.jp/contests/soundhound2018-summer-qual/tasks/soundhound2018_summer_qual_e) | [C++ (GCC 9.2.1)](./atcoder/soundhound2018-summer-qual/E.cpp) | `AtCoder` `*600` | Jun/27/2022 01:15 | 
 1498 | [B - Optimal Partition](https://codeforces.com/contest/1667/problem/B) | [GNU C++17](./codeforces/1667/B.cpp) | `data structures` `dp` `*2100` | May/17/2022 02:06 | 
 1497 | [D - Edge Elimination](https://codeforces.com/contest/1667/problem/D) | [GNU C++17](./codeforces/1667/D.cpp) | `constructive algorithms` `dfs and similar` `dp` `trees` `*2900` | May/17/2022 01:44 | 
 1496 | [A - Make it Increasing](https://codeforces.com/contest/1667/problem/A) | [GNU C++17](./codeforces/1667/A.cpp) | `brute force` `greedy` `math` `*1300` | May/17/2022 00:05 | 

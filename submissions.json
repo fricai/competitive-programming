@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32786961": {
+    "contest_id": "abc243",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc243/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "Sqrt",
+    "problem_url": "https://atcoder.jp/contests/abc243/tasks/abc243_g",
+    "submission_id": "AC32786961",
+    "submission_url": "https://atcoder.jp/contests/abc243/submissions/32786961",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jun/27/2022 02:16"
+  },
   "AC32787065": {
     "contest_id": "abc150",
     "language": "C++ (GCC 9.2.1)",

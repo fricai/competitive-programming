@@ -57,5 +57,15 @@ signed main() {
         }
     }
 
-    cout << accumulate(all(g.back()), mint(0)).val() << '\n';
+    /*
+    rep(i, 0, n) {
+        rep(j, 0, i) cerr << g[i][j].val() << ' ';
+        cerr << '\n';
+    }
+    cerr << '\n';
+    */
+
+    mint ans = 0;
+    rep(j, 0, n) ans += g[n - 1][j];
+    cout << ans.val() << '\n';
 }

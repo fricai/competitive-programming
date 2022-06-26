@@ -24,13 +24,65 @@ bool uax(T& a, const T& b) {
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
+/*
+ll brute(int n) {
+    vector<int> v(n * n);
+    iota(all(v), 1);
+
+    ll ans = 0;
+    int iteration = 0, cnt = 0;
+    do {
+        vector<int> row(n, n * n), col(n, 0);
+        rep(i, 0, n) rep(j, 0, n) uin(row[i], v[n * i + j]);
+        rep(i, 0, n) rep(j, 0, n) uax(col[j], v[n * i + j]);
+
+        bool valid = true;
+        rep(i, 0, n) {
+            rep(j, 0, n) {
+                const auto x = v[n * i + j];
+                if (!(x > row[i] || x < col[j])) {
+                    valid = false;
+                    break;
+                }
+            }
+            if (!valid) break;
+        }
+        ans += valid;
+
+        sort(all(row));
+        if (valid) {
+            for (auto x : col) assert(!binary_search(all(row), x));
+
+            if (false) {
+                rep(i, 0, n) {
+                    rep(j, 0, n) { cerr << v[n * i + j] << ' '; }
+                    cerr << '\n';
+                }
+                cerr << '\n';
+                ++cnt;
+            }
+        } else {
+            int one = 0;
+            for (auto x : col) one += binary_search(all(row), x);
+            assert(one == 1);
+        }
+
+        if (iteration % 1000000 == 0) cerr << ans << '\n';
+        ++iteration;
+    } while (next_permutation(all(v)));
+    return ans;
+}
+*/
+
 #include <atcoder/modint>
 constexpr int mod = 998244353;
 using mint = atcoder::static_modint<mod>;
 
 constexpr int X = 500 * 500 + 10;
 mint f[X], fi[X];
-mint C(int n, int r) { return r < 0 || r > n ? mint(0) : f[n] * fi[r] * fi[n - r]; }
+mint C(int n, int r) {
+    return r < 0 || r > n ? mint(0) : f[n] * fi[r] * fi[n - r];
+}
 
 signed main() {
     ios::sync_with_stdio(false);
@@ -44,7 +96,9 @@ signed main() {
     int n;
     cin >> n;
 
-    mint ans = C(n * n, 2 * n - 1);
+    mint ans = 0;
+    for (int x = 1; x <= n * n; ++x)
+        ans += C(x - 1, n - 1) * C(n * n - x, n - 1);
     ans *= f[n - 1] * f[n - 1] * f[(n - 1) * (n - 1)] * n * n;
     ans = f[n * n] - ans;
     cout << ans.val() << '\n';

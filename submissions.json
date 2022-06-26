@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32777655": {
+    "contest_id": "arc143",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc143/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Counting Grids",
+    "problem_url": "https://atcoder.jp/contests/arc143/tasks/arc143_b",
+    "submission_id": "AC32777655",
+    "submission_url": "https://atcoder.jp/contests/arc143/submissions/32777655",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jun/26/2022 18:27"
+  },
   "AC32782729": {
     "contest_id": "arc143",
     "language": "C++ (GCC 9.2.1)",

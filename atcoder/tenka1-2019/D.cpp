@@ -43,12 +43,14 @@ signed main() {
     rep(i, 0, n) {
         for (int x = 0; x <= S; ++x) f[i + 1][x] = 2 * f[i][x];
         for (int x = a[i]; x <= S; ++x) f[i + 1][x] += f[i][x - a[i]];
-        g[i + 1] = g[i];
+        for (int x = 0; x <= S; ++x) g[i + 1][x] = g[i][x];
         for (int x = a[i]; x <= S; ++x) g[i + 1][x] += g[i][x - a[i]];
     }
 
-    cout << (mint(3).pow(n) - 3 * (accumulate(f[n].begin() + (S + 1) / 2, f[n].end(), mint(0)) -
-                                   (S % 2 == 0 ? g[n][S / 2] : mint(0))))
-                .val()
-         << '\n';
+    mint acc = 0;
+    for (int i = (S + 1) / 2; i <= S; ++i) acc += f[n][i];
+
+    if (S % 2 == 0) acc -= g[n][S / 2];
+
+    cout << (mint(3).pow(n) - 3 * acc).val() << '\n';
 }

@@ -29,7 +29,7 @@ ll f[N];
 
 ll sq(ll x) {
     ll z = sqrt(x);
-    while (z * z < x) ++z;
+    while (z * z <= x) ++z;
     while (z * z > x) --z;
     assert(z * z <= x && x < (z + 1) * (z + 1));
     return z;

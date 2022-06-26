@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32786587": {
+    "contest_id": "tenka1-2019",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/tenka1-2019/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Three Colors",
+    "problem_url": "https://atcoder.jp/contests/tenka1-2019/tasks/tenka1_2019_d",
+    "submission_id": "AC32786587",
+    "submission_url": "https://atcoder.jp/contests/tenka1-2019/submissions/32786587",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jun/27/2022 00:42"
+  },
   "AC32786604": {
     "contest_id": "tenka1-2019",
     "language": "C++ (GCC 9.2.1)",

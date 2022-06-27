@@ -40,11 +40,15 @@ signed main() {
     vals.erase(unique(all(vals)), end(vals));
 
     const int m = sz(vals);
+    assert(vals[0] == n);
+    assert(vals[m - 1] == 1);
     vals.push_back(0);
 
-    vector g(k, vector<mint>(m + 1));
+    vector g(k + 2, vector<mint>(m + 1));
 
-    rep(i, 0, m) g[0][i] = vals[i];
-    rep(l, 1, k) per(i, 0, m) g[l][i] = g[l][i + 1] + (vals[i] - vals[i + 1]) * g[l - 1][m - i - 1];
-    cout << g[k - 1][0].val() << '\n';
+    rep(i, 0, m) g[2][i] = vals[i];
+    for (int l = 3; l <= k + 1; ++l)
+        per(i, 0, m) g[l][i] = g[l][i + 1] + (vals[i] - vals[i + 1]) * g[l - 1][m - i - 1];
+
+    cout << g[k + 1][0].val() << '\n';
 }

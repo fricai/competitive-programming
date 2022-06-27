@@ -56,13 +56,13 @@ signed main() {
 
     mint res = 1;
     rep(i, 0, m - 1) {
-        res *= mat[i][i];
-        if (mat[i][i] == 0) break;
-        const auto inv_val = mat[i][i].inv();
-        mat[i] *= inv_val;
+        const auto val = mat[i][i];
+        res *= val;
+        if (val == 0) break;
+        mat[i] /= val;
         rep(j, i + 1, m - 1) {
-            const auto to_sub = mat[j][i] * mat[i];
-            mat[j] -= to_sub;
+            const auto mult = mat[j][i];
+            mat[j] -= mult * mat[i];
         }
     }
 

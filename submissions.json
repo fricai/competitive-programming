@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32801409": {
+    "contest_id": "arc124",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc124/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Yet Another Sorting Problem",
+    "problem_url": "https://atcoder.jp/contests/arc124/tasks/arc124_d",
+    "submission_id": "AC32801409",
+    "submission_url": "https://atcoder.jp/contests/arc124/submissions/32801409",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Jun/27/2022 19:26"
+  },
   "AC32802208": {
     "contest_id": "jsc2021",
     "language": "C++ (GCC 9.2.1)",

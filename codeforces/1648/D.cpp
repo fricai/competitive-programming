@@ -299,11 +299,13 @@ signed main() {
 
     rep(x, 0, n) {
         // dp[x] = max(max(max(f[y] | l <= y <= x), dp[l - 1]) - k | l <= x <= r)
+
         for (auto i : st_ev[x]) {
             auto [l, _, k] = I[i];
-            if (l != 0) active_ranges.insert({dp[l - 1] - k, i});
+            active_ranges.insert(pair((l == 0 ? -inf : dp[l - 1] - k), i));
             tr.set(i, f[x] - k);
         }
+
         int mn = st_ev[x].empty() ? m : st_ev[x][0];
         while (!st.empty() && st.top().first <= f[x]) {
             // increment a range
@@ -315,9 +317,10 @@ signed main() {
         if (mn != m) st.push({f[x], mn});
         if (!active_ranges.empty()) dp[x] = active_ranges.rbegin()->first;
         dp[x] = max(dp[x], tr.all_prod());
+
         for (auto i : ed_ev[x]) {
             auto [l, _, k] = I[i];
-            if (l != 0) active_ranges.erase({dp[l - 1] - k, i});
+            active_ranges.erase(pair((l == 0 ? -inf : dp[l - 1] - k), i));
             tr.set(i, -inf);
         }
     }

@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32802294": {
+    "contest_id": "jsc2021",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/jsc2021/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "Spanning Tree",
+    "problem_url": "https://atcoder.jp/contests/jsc2021/tasks/jsc2021_g",
+    "submission_id": "AC32802294",
+    "submission_url": "https://atcoder.jp/contests/jsc2021/submissions/32802294",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jun/27/2022 20:07"
+  },
   "AC32816403": {
     "contest_id": "arc112",
     "language": "C++ (GCC 9.2.1)",

@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32800260": {
+    "contest_id": "agc032",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/agc032/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Three Circuits",
+    "problem_url": "https://atcoder.jp/contests/agc032/tasks/agc032_c",
+    "submission_id": "AC32800260",
+    "submission_url": "https://atcoder.jp/contests/agc032/submissions/32800260",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Jun/27/2022 18:35"
+  },
   "AC32801409": {
     "contest_id": "arc124",
     "language": "C++ (GCC 9.2.1)",

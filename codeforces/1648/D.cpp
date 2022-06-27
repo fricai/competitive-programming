@@ -308,13 +308,11 @@ signed main() {
         while (!st.empty() && st.top().first <= f[x]) {
             // increment a range
             auto [prev_val, next_mn] = st.top();
-            if (next_mn < mn) {
-                tr.apply(next_mn, mn, f[x] - prev_val);
-                mn = next_mn;
-            }
+            tr.apply(next_mn, mn, f[x] - prev_val);
+            mn = next_mn;
             st.pop();
         }
-        st.push({f[x], mn});
+        if (mn != m) st.push({f[x], mn});
         if (!active_ranges.empty()) dp[x] = active_ranges.rbegin()->first;
         dp[x] = max(dp[x], tr.all_prod());
         for (auto i : ed_ev[x]) {

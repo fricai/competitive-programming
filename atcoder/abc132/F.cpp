@@ -50,12 +50,11 @@ signed main() {
         int j = 0;
         per(i, 0, m) {
             g[l][i] = g[l][i + 1];
-
-            // while (j < m && n / vals[i] < vals[j] + 1) {
-            const auto z = vals[j];
-            g[l][i] += (n / z - n / (z + 1)) * g[l - 1][j];
-            ++j;
-            //}
+            while (j < m && n / vals[i] < vals[j] + 1) {
+                const auto z = vals[j];
+                g[l][i] += (n / z - n / (z + 1)) * g[l - 1][j];
+                ++j;
+            }
         }
         assert(j == m);
     }

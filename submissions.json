@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32795490": {
+    "contest_id": "exawizards2019",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/exawizards2019/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Modulo Operations",
+    "problem_url": "https://atcoder.jp/contests/exawizards2019/tasks/exawizards2019_d",
+    "submission_id": "AC32795490",
+    "submission_url": "https://atcoder.jp/contests/exawizards2019/submissions/32795490",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jun/27/2022 13:52"
+  },
   "AC32799261": {
     "contest_id": "abc132",
     "language": "C++ (GCC 9.2.1)",

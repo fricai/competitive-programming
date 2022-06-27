@@ -42,13 +42,16 @@ signed main() {
     const int m = sz(vals);
     assert(vals[0] == n);
     assert(vals[m - 1] == 1);
-    vals.push_back(0);
 
     vector g(k + 2, vector<mint>(m + 1));
 
     rep(i, 0, m) g[2][i] = vals[i];
-    for (int l = 3; l <= k + 1; ++l)
-        per(i, 0, m) g[l][i] = g[l][i + 1] + (vals[i] - vals[i + 1]) * g[l - 1][m - i - 1];
+    for (int l = 3; l <= k + 1; ++l) {
+        per(i, 0, m) {
+            const auto z = vals[m - i - 1];
+            g[l][i] = g[l][i + 1] + (n / z - n / (z + 1)) * g[l - 1][m - i - 1];
+        }
+    }
 
     cout << g[k + 1][0].val() << '\n';
 }

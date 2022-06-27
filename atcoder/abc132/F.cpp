@@ -47,10 +47,17 @@ signed main() {
 
     rep(i, 0, m) g[2][i] = vals[i];
     for (int l = 3; l <= k + 1; ++l) {
+        int j = 0;
         per(i, 0, m) {
-            const auto z = vals[m - i - 1];
-            g[l][i] = g[l][i + 1] + (n / z - n / (z + 1)) * g[l - 1][m - i - 1];
+            g[l][i] = g[l][i + 1];
+
+            // while (j < m && n / vals[i] < vals[j] + 1) {
+            const auto z = vals[j];
+            g[l][i] += (n / z - n / (z + 1)) * g[l - 1][j];
+            ++j;
+            //}
         }
+        assert(j == m);
     }
 
     cout << g[k + 1][0].val() << '\n';

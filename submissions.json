@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32816403": {
+    "contest_id": "arc112",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc112/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Skate",
+    "problem_url": "https://atcoder.jp/contests/arc112/tasks/arc112_d",
+    "submission_id": "AC32816403",
+    "submission_url": "https://atcoder.jp/contests/arc112/submissions/32816403",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jun/28/2022 16:39"
+  },
   "AC32831229": {
     "contest_id": "arc103",
     "language": "C++ (GCC 9.2.1)",

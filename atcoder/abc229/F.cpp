@@ -24,7 +24,7 @@ bool uax(T& a, const T& b) {
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-constexpr int inf = 2e9 + 10;
+constexpr int inf = 1e9 + 10;
 
 signed main() {
     ios::sync_with_stdio(false);

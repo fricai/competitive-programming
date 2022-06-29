@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32831229": {
+    "contest_id": "arc103",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc103/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Tr/ee",
+    "problem_url": "https://atcoder.jp/contests/arc103/tasks/arc103_c",
+    "submission_id": "AC32831229",
+    "submission_url": "https://atcoder.jp/contests/arc103/submissions/32831229",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Jun/29/2022 13:50"
+  },
   "AC32840219": {
     "contest_id": "abc229",
     "language": "C++ (GCC 9.2.1)",

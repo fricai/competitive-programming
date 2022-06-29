@@ -8111,6 +8111,22 @@
     ],
     "timestamp": "Jan/29/2022 18:03"
   },
+  "AC32840219": {
+    "contest_id": "abc229",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc229/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Make Bipartite",
+    "problem_url": "https://atcoder.jp/contests/abc229/tasks/abc229_f",
+    "submission_id": "AC32840219",
+    "submission_url": "https://atcoder.jp/contests/abc229/submissions/32840219",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jun/30/2022 00:36"
+  },
   "AC32840222": {
     "contest_id": "abc229",
     "language": "C++ (GCC 9.2.1)",

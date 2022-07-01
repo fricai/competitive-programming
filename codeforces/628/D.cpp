@@ -48,12 +48,12 @@ signed main() {
 
     assert(sz(a) == sz(b));
 
-    vector dp(sz(a), vector(m, array{-1, -1, -1, -1}));
+    vector dp(sz(a), vector(m, array{array{-1, -1}, array{-1, -1}}));
 
     auto f = [&](const auto& g, int i, int val, bool tight_down, bool tight_up) -> int {
         if (i == sz(b)) return val == 0;
 
-        auto& res = dp[i][val][tight_down << 1 | tight_up];
+        auto& res = dp[i][val][tight_down][tight_up];
         if (res != -1) return res;
         res = 0;
         for (int nxt = 0; nxt < 10; ++nxt) {

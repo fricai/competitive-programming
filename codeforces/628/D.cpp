@@ -53,10 +53,10 @@ signed main() {
     auto f = [&](const auto& g, int i, int val, bool tight_down, bool tight_up) -> int {
         if (i == sz(b)) return val == 0;
 
-        auto& res{dp[i][val][tight_down << 1 | tight_up]};
+        auto& res = dp[i][val][tight_down << 1 | tight_up];
         if (res != -1) return res;
         res = 0;
-        for (int nxt{0}; nxt < 10; ++nxt) {
+        for (int nxt = 0; nxt < 10; ++nxt) {
             if ((i & 1) ^ (nxt == d)) continue;
             bool nxt_down = false, nxt_up = false;
             if (tight_down) {

@@ -57,7 +57,11 @@ signed main() {
         if (res != -1) return res;
         res = 0;
         for (int nxt = 0; nxt < 10; ++nxt) {
-            if ((i & 1) ^ (nxt == d)) continue;
+            if (i % 2 == 0) {
+                if (nxt == d) continue;
+            } else {
+                if (nxt != d) continue;
+            }
             bool nxt_down = false, nxt_up = false;
             if (tight_down) {
                 // matches with prefix of a

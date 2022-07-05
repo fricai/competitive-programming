@@ -56,7 +56,7 @@ signed main() {
     rep(i, 0, n) for (auto x : a[i].second) pos[x].push_back(i);
 
     vector<bitset<N>*> blocked(r, nullptr);
-    constexpr int B = N / 512;
+    constexpr int B = N / 128;
     rep(i, 0, r) if (sz(pos[i]) > B) {
         blocked[i] = new bitset<N>();
         for (auto x : pos[i]) blocked[i]->set(x);

@@ -76,7 +76,7 @@ signed main() {
         cin >> n >> k;
 
         int ans = 0;
-        for (int m = 0, high = (n + k - 1) / k; m <= high; ++m)
+        for (int m = 0, high = min(n, n / (k - 1) + 1); m <= n && m <= high; ++m)
             inc(ans, mul(C(n - (m - 1) * (k - 1), m), C_inv(n, m)));
         cout << ans << '\n';
     }

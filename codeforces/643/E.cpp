@@ -55,14 +55,14 @@ signed main() {
             dp.push_back(get_array<double, H>(1.0));
 
             {
-                array<array<double, H>, 2> old;
+                array<array<double, H>, H> old;
                 old[0] = dp[v];
                 dp[v][0] *= 0.5;
                 rep(i, 1, H) {
                     if (v == 0) break;
                     const int u = par[v];
-                    old[i & 1] = dp[u];
-                    rep(x, 1, H) dp[u][x] *= (1 + dp[v][x - 1]) / (1 + old[~i & 1][x - 1]);
+                    old[i] = dp[u];
+                    rep(x, 1, H) dp[u][x] *= (1 + dp[v][x - 1]) / (1 + old[i - 1][x - 1]);
                     v = u;
                 }
             }

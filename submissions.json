@@ -28049,6 +28049,25 @@
     ],
     "timestamp": "Jul/01/2022 15:26"
   },
+  "CF162916066": {
+    "contest_id": 643,
+    "language": "GNU C++17",
+    "path": "codeforces/643/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Bear and Destroying Subtrees",
+    "problem_url": "https://codeforces.com/contest/643/problem/E",
+    "submission_id": "CF162916066",
+    "submission_url": "https://codeforces.com/contest/643/submission/162916066",
+    "tags": [
+      "dp",
+      "math",
+      "probabilities",
+      "trees",
+      "*2700"
+    ],
+    "timestamp": "Jul/05/2022 21:53"
+  },
   "CF162935393": {
     "contest_id": 1641,
     "language": "GNU C++20 (64)",

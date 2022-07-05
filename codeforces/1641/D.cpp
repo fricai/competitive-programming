@@ -56,7 +56,7 @@ signed main() {
     rep(i, 0, n) for (auto x : a[i].second) pos[x].push_back(i);
 
     vector<bitset<N>*> blocked(r, nullptr);
-    const int B = N / 64;
+    const int B = 400;
     rep(i, 0, r) if (sz(pos[i]) > B) {
         blocked[i] = new bitset<N>();
         for (auto x : pos[i]) blocked[i]->set(x);

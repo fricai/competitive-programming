@@ -55,10 +55,10 @@ signed main() {
     vector<vector<int>> pos(r);
     rep(i, 0, n) for (auto x : a[i].second) pos[x].push_back(i);
 
-    vector<unique_ptr<bitset<N>>> blocked(r);
+    vector<bitset<N>*> blocked(r, nullptr);
     constexpr int B = N / 256;
     rep(i, 0, r) if (sz(pos[i]) > B) {
-        blocked[i] = make_unique<bitset<N>>();
+        blocked[i] = new bitset<N>();
         for (auto x : pos[i]) blocked[i]->set(x);
     }
 
@@ -67,7 +67,7 @@ signed main() {
         const auto& [w, v] = a[i];
         bitset<N> cur_blocked;
         for (auto x : v)
-            if (blocked[x])
+            if (blocked[x] != nullptr)
                 cur_blocked |= *blocked[x];
             else
                 for (auto j : pos[x]) cur_blocked.set(j);
@@ -76,7 +76,7 @@ signed main() {
         if (j < i) uin(ans, w + a[j].first);
 
         for (auto x : v)
-            if (blocked[x]) blocked[x]->set(i);
+            if (blocked[x] != nullptr) blocked[x]->set(i);
     }
     cout << (ans < inf ? ans : -1) << '\n';
 }

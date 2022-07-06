@@ -888,17 +888,39 @@ std::vector<long long> convolution_ll(const std::vector<long long>& a,
 using mint = atcoder::modint998244353;
 using poly = vector<mint>;
 
-constexpr int X = 1 << 19;
-poly get_fft(mint d) {
-    // degree-X FFT of (1 + d * x)
-    poly res(X, 0);
+constexpr int N = 6e5 + 10;
+const auto fac = []() {
+    array<mint, N> res;
     res[0] = 1;
-    res[1] = d;
-    atcoder::internal::butterfly(res);
+    rep(i, 1, N) res[i] = i * res[i - 1];
+    return res;
+}();
+const auto fac_inv = []() {
+    array<mint, N> res;
+    res[N - 1] = fac[N - 1].inv();
+    per(i, 1, N) res[i - 1] = i * res[i];
+    return res;
+}();
+const auto pw2 = []() {
+    array<mint, N> res;
+    res[0] = 1;
+    rep(i, 1, N) res[i] = res[i - 1] + res[i - 1];
+    return res;
+}();
+
+mint C(int n, int r) { return 0 <= r && r <= n ? fac[n] * fac_inv[r] * fac_inv[n - r] : 0; }
+
+poly get_binom(int d) {  // return (1 + x)^d
+    poly res(d + 1);
+    rep(i, 0, d + 1) res[i] = C(d, i);
     return res;
 }
-const auto one = get_fft(1);
-const auto two = get_fft(2);
+
+poly get_binom2(int d) {  // return (1 + 2x)^d
+    poly res(d + 1);
+    rep(i, 0, d + 1) res[i] = pw2[i] * C(d, i);
+    return res;
+}
 
 signed main() {
     ios::sync_with_stdio(false);
@@ -907,6 +929,7 @@ signed main() {
     int n, k;
     cin >> n >> k;
 
+    constexpr int X = 3e5 + 10;
     vector<int> f(X), b(k);
     rep(i, 0, n) {
         int x;
@@ -918,7 +941,7 @@ signed main() {
 
     sort(all(b));
 
-    vector<poly> res(k, poly(X));
+    vector<poly> res(k, {1});
     rep(i, 0, k) {
         int cnt[2] = {};
         rep(j, 0, b[i]) {
@@ -926,10 +949,7 @@ signed main() {
             if (f[j] >= 2) ++cnt[1];
         }
         // compute (1 + 2x)^cnt[0] * (1 + x)^(2 * cnt[1])
-        rep(j, 0, X) res[i][j] = two[j].pow(cnt[0]) * one[j].pow(2 * cnt[1]);
-        atcoder::internal::butterfly_inv(res[i]);
-        const auto iX = mint(X).inv();
-        rep(j, 0, X) res[i][j] *= iX;
+        res[i] = atcoder::convolution(get_binom(2 * cnt[1]), get_binom2(cnt[0]));
     }
 
     int q;
@@ -940,7 +960,7 @@ signed main() {
         mint ans = 0;
         rep(i, 0, k) {
             const int s = p / 2 - b[i] - 1;
-            if (0 <= s && s < X) ans += res[i][s];
+            if (0 <= s && s < sz(res[i])) ans += res[i][s];
         }
         cout << ans.val() << '\n';
     }

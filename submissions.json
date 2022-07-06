@@ -28049,6 +28049,27 @@
     ],
     "timestamp": "Jul/01/2022 15:26"
   },
+  "CF163023578": {
+    "contest_id": 1361,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1361/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Johnny and Megan's Necklace",
+    "problem_url": "https://codeforces.com/contest/1361/problem/C",
+    "submission_id": "CF163023578",
+    "submission_url": "https://codeforces.com/contest/1361/submission/163023578",
+    "tags": [
+      "binary search",
+      "bitmasks",
+      "constructive algorithms",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "*2500"
+    ],
+    "timestamp": "Jul/06/2022 21:49"
+  },
   "CF163031621": {
     "contest_id": 932,
     "language": "GNU C++20 (64)",

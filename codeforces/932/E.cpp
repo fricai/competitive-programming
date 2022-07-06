@@ -567,11 +567,10 @@ signed main() {
     // f(k, a, b) = a f(k - 1, a, b) + b f(k - 1, a + 1, b - 1),
     //  a + b is fixed to n
 
-    vector dp(2, vector<mint>(k + 2));
+    vector dp(k + 1, vector<mint>(k + 2));
     for (int i = 0; i <= k && i <= n; ++i) dp[0][i] = mint(2).pow(n - i);
 
     for (int i = 1; i <= k; ++i)
-        for (int a = 0; a <= k - i; ++a)
-            dp[i & 1][a] = a * dp[~i & 1][a] + (n - a) * dp[~i & 1][a + 1];
-    cout << dp[k & 1][0].val() << '\n';
+        for (int a = 0; a <= k - i; ++a) dp[i][a] = a * dp[i - 1][a] + (n - a) * dp[i - 1][a + 1];
+    cout << dp[k][0].val() << '\n';
 }

@@ -55,11 +55,12 @@ signed main() {
     int n;
     cin >> n;
 
-    vector<pair<int, int>> a(n);
+    vector<array<int, 2>> a(n);
     for (auto& [x, y] : a) cin >> x >> y, --x, --y;
 
     for (int b = 20; b >= 0; --b) {
         const int mask = (1 << b) - 1;
+
         vector<vector<pair<int, int>>> g(1 << b);
         {
             int idx = 0;
@@ -76,7 +77,7 @@ signed main() {
             }())
             continue;
 
-        const int root = a[0].first & mask;
+        const int root = a[0][0] & mask;
 
         int edges = 0;
         vector<bool> vis(1 << b);
@@ -91,24 +92,35 @@ signed main() {
         if (edges != 2 * n) continue;
 
         auto res = eulerWalk(g, n, root);
+        assert(res[0] == -1);
+
         res.erase(begin(res));
         assert(sz(res) == n);
 
-        cout << b << '\n';
+        vector<int> ans = {2 * res[0], 2 * res[0] + 1};
 
-        cout << 2 * res[0] + 1 << ' ' << 2 * res[0] + 2 << ' ';
-
-        int p = a[res[0]].second;
+        int p = a[res[0]][1];
         rep(i, 1, n) {
-            if ((p & mask) == (a[res[i]].first & mask)) {
-                cout << 2 * res[i] + 1 << ' ' << 2 * res[i] + 2 << ' ';
-                p = a[res[i]].second;
+            if ((p & mask) == (a[res[i]][0] & mask)) {
+                ans.push_back(2 * res[i]);
+                ans.push_back(2 * res[i] + 1);
+                p = a[res[i]][1];
             } else {
-                assert((p & mask) == (a[res[i]].second & mask));
-                cout << 2 * res[i] + 2 << ' ' << 2 * res[i] + 1 << ' ';
-                p = a[res[i]].first;
+                assert((p & mask) == (a[res[i]][1] & mask));
+                ans.push_back(2 * res[i] + 1);
+                ans.push_back(2 * res[i]);
+                p = a[res[i]][0];
             }
         }
+
+        rep(i, 0, n) {
+            const int x = ans[2 * i + 1];
+            const int y = ans[(2 * i + 2) % (2 * n)];
+            assert(((a[x >> 1][x & 1] ^ a[y >> 1][y & 1]) & mask) == 0);
+        }
+
+        cout << b << '\n';
+        for (auto x : ans) cout << x + 1 << ' ';
         cout << '\n';
         break;
     }

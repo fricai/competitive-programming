@@ -914,7 +914,10 @@ auto mul(poly a_low, const poly& b) {
     auto one = atcoder::convolution_ll(a_low, b);
     auto two = atcoder::convolution_ll(a_high, b);
     assert(sz(one) == sz(two));
-    rep(i, 0, sz(one)) one[i] = ((one[i] % mod) + ((two[i] % mod) << S)) % mod;
+    rep(i, 0, sz(one)) {
+        one[i] = (one[i] % mod) + ((two[i] % mod) << S);
+        if (one[i] >= mod) one[i] -= mod;
+    }
     return one;
 }
 
@@ -929,7 +932,10 @@ signed main() {
     for (int i = 0; i <= r; ++i) a[i] = fac_inv[i].val();
     ++a[0];
 
-    auto normalize = [r](poly& a) { a.resize(min(sz(a), r + 1)); };
+    auto normalize = [r](poly& a) {
+        a.resize(min(sz(a), r + 1));
+        for (auto& x : a) x %= mod;
+    };
 
     poly res{{1}};
     for (auto b = n; b > 0; b >>= 1) {

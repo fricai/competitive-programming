@@ -28049,6 +28049,25 @@
     ],
     "timestamp": "Jul/01/2022 15:26"
   },
+  "CF163008074": {
+    "contest_id": 1361,
+    "language": "GNU C++17",
+    "path": "codeforces/1361/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Johnny and Contribution",
+    "problem_url": "https://codeforces.com/contest/1361/problem/A",
+    "submission_id": "CF163008074",
+    "submission_url": "https://codeforces.com/contest/1361/submission/163008074",
+    "tags": [
+      "constructive algorithms",
+      "graphs",
+      "greedy",
+      "sortings",
+      "*1700"
+    ],
+    "timestamp": "Jul/06/2022 19:00"
+  },
   "CF163012034": {
     "contest_id": 1361,
     "language": "GNU C++20 (64)",

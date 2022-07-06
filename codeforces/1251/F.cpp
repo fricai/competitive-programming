@@ -926,9 +926,10 @@ signed main() {
             if (f[j] >= 2) ++cnt[1];
         }
         // compute (1 + 2x)^cnt[0] * (1 + x)^(2 * cnt[1])
-        const auto iX = mint(X).inv();
-        rep(j, 0, X) res[i][j] = two[j].pow(cnt[0]) * one[j].pow(2 * cnt[1]) * iX;
+        rep(j, 0, X) res[i][j] = two[j].pow(cnt[0]) * one[j].pow(2 * cnt[1]);
         atcoder::internal::butterfly_inv(res[i]);
+        const auto iX = mint(X).inv();
+        rep(j, 0, X) res[i][j] *= iX;
     }
 
     int q;

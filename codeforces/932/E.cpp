@@ -555,50 +555,23 @@ using is_dynamic_modint_t = std::enable_if_t<is_dynamic_modint<T>::value>;
 }  // namespace atcoder
 
 using mint = atcoder::modint1000000007;
-using poly = vector<mint>;
-
-constexpr int N = 5e3 + 10;
-const auto fac = []() {
-    array<mint, N> f;
-    f[0] = 1;
-    rep(i, 1, N) f[i] = i * f[i - 1];
-    return f;
-}();
-
-const auto fac_inv = []() {
-    array<mint, N> f;
-    f[N - 1] = fac[N - 1].inv();
-    per(i, 1, N) f[i - 1] = i * f[i];
-    return f;
-}();
-
-auto mul(const poly& a, const poly& b) {
-    poly c(sz(a) + sz(b) - 1);
-    rep(i, 0, sz(a)) rep(j, 0, sz(b)) c[i + j] += a[i] * b[j];
-    return c;
-}
 
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n, r;
-    cin >> n >> r;
+    int n, k;
+    cin >> n >> k;
 
-    poly a(r + 1);
-    for (int i = 0; i <= r; ++i) a[i] = fac_inv[i];
-    ++a[0];
+    // f(k, a, b) = (xD)^k(x^a (1 + x)^b) evaluated at x = 1
+    // f(k, a, b) = a f(k - 1, a, b) + b f(k - 1, a + 1, b - 1),
+    //  a + b is fixed to n
 
-    auto normalize = [r](poly& a) { a.resize(min(sz(a), r + 1)); };
+    vector dp(2, vector<mint>(k + 2));
+    for (int i = 0; i <= k && i <= n; ++i) dp[0][i] = mint(2).pow(n - i);
 
-    poly res{{1}};
-    for (auto b = n; b > 0; b >>= 1) {
-        if (b & 1) {
-            res = mul(res, a);
-            normalize(res);
-        }
-        a = mul(a, a);
-        normalize(a);
-    }
-    cout << (fac[r] * res[r]).val() << '\n';
+    for (int i = 1; i <= k; ++i)
+        for (int a = 0; a <= k - i; ++a)
+            dp[i & 1][a] = a * dp[~i & 1][a] + (n - a) * dp[~i & 1][a + 1];
+    cout << dp[k & 1][0].val() << '\n';
 }

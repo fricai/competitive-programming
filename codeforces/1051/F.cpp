@@ -158,6 +158,7 @@ auto dijkstra(int s, const vector<vector<pair<int, int>>>& g) {
             }
         }
     }
+    assert(all_of(all(d), [](auto x) { return x < inf; }));
     return d;
 }
 

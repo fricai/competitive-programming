@@ -184,6 +184,7 @@ signed main() {
         g[v].emplace_back(u, d);
         if (D.same(u, v)) {
             ex.push_back(u);
+            ex.push_back(v);
         } else {
             t.add_edge(u, v, d);
             D.merge(u, v);

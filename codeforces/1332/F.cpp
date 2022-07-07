@@ -581,13 +581,13 @@ signed main() {
         for (auto v : g[u]) {
             if (v == p) continue;
             self(self, v, u);
-            dp[u][2] *= dp[v][1] + dp[v][2];
-            dp[u][1] *= (dp[v][2] + dp[v][0]) + dp[v][2];
-            dp[u][0] *= dp[v][2];
+            dp[u][2] *= (dp[v][1]) + (dp[v][2] + dp[v][1]);
+            dp[u][1] *= (dp[v][2] + dp[v][1] + dp[v][0]) + (dp[v][2] + dp[v][1]);
+            dp[u][0] *= dp[v][1] + dp[v][2];
         }
-        dp[u][2] += dp[u][1] - dp[u][0];
+        dp[u][2] -= dp[u][0];
     };
     dfs(dfs, 0, -1);
 
-    cout << (dp[0][2] - 1).val() << '\n';
+    cout << (dp[0][2] + dp[0][1] - 1).val() << '\n';
 }

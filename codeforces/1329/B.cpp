@@ -33,29 +33,26 @@ int solve() {
 
     const int max_i = 31 ^ __builtin_clz(d);
 
-    vector dp(max_i + 2, vector(max_i + 1, 0));
+    vector dp(max_i + 2, vector(max_i + 1, 0ll));
     vector<ll> opt(max_i + 2);
 
     for (int msb = 0; msb <= max_i; ++msb) {
-        opt[msb] = (min(d + 1, 2 << msb) - (1 << msb)) % mod;
+        opt[msb] = min(d + 1, 2 << msb) - (1 << msb);
         dp[1][msb] = opt[msb];
         assert((1 << msb) <= d);
     }
 
     for (int len = 2; len <= max_i + 1; ++len) {
-        for (int msb = 1; msb <= max_i; ++msb) {
-            dp[len][msb] = dp[len - 1][msb - 1] + dp[len][msb - 1];
-            if (dp[len][msb] >= mod) dp[len][msb] -= mod;
+        for (int msb = 0; msb <= max_i; ++msb) {
+            for (int prev_msb = 0; prev_msb < msb; ++prev_msb) {
+                (dp[len][msb] += dp[len - 1][prev_msb] * opt[msb]) %= mod;
+            }
         }
-        for (int msb = 0; msb <= max_i; ++msb) dp[len][msb] = dp[len][msb] * opt[msb] % mod;
     }
 
     int ans = 0;
     for (int len = 1; len <= max_i + 1; ++len)
-        for (int msb = 0; msb <= max_i; ++msb) {
-            ans += dp[len][msb];
-            if (ans >= mod) ans -= mod;
-        }
+        for (int msb = 0; msb <= max_i; ++msb) ans = (ans + dp[len][msb]) % mod;
     return ans;
 }
 

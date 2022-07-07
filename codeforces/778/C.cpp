@@ -56,28 +56,31 @@ signed main() {
     };
     init_dfs(init_dfs, 0, -1);
 
-    auto parallel_dfs = [&](const auto& self, const vector<int>& nodes) -> int {
-        if (sz(nodes) <= 1) return 0;
-
-        int res = sz(nodes) - 1;
+    int contrib = 0;
+    auto parallel_dfs = [&](const auto& self, const vector<int>& nodes) -> void {
+        if (sz(nodes) <= 1) return;
+        contrib += sz(nodes) - 1;
         vector<int> nxt;
         rep(c, 0, A) {
             nxt.clear();
             for (auto u : nodes)
                 if (t[u][c] != -1) nxt.push_back(t[u][c]);
-            res += self(self, nxt);
+            self(self, nxt);
         }
-        return res;
     };
 
     vector<int> ans(n);
     {
         vector<int> nxt;
         rep(u, 0, n) {
+            contrib = 0;
             nxt.clear();
+
             for (auto v : t[u])
                 if (v != -1) nxt.push_back(v);
-            ans[dep[u]] += parallel_dfs(parallel_dfs, nxt) + (nxt.empty() ? 0 : 1);
+            parallel_dfs(parallel_dfs, nxt);
+
+            ans[dep[u]] += contrib + (nxt.empty() ? 0 : 1);
         }
     }
 

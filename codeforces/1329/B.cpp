@@ -32,11 +32,30 @@ int solve() {
     // dp[n][i] = number of sequences of length n with last element having MSB i
 
     const int max_i = 31 ^ __builtin_clz(d);
-    ll ans = 1;
-    for (int msb = 0; msb <= max_i; ++msb)
-        ans = ans * (min(d + 1, 2 << msb) - (1 << msb) + 1) % mod;
-    --ans;
-    if (ans < 0) ans += mod;
+
+    vector dp(max_i + 2, vector(max_i + 1, 0));
+    vector<ll> opt(max_i + 2);
+
+    for (int msb = 0; msb <= max_i; ++msb) {
+        opt[msb] = (min(d + 1, 2 << msb) - (1 << msb)) % mod;
+        dp[1][msb] = opt[msb];
+        assert((1 << msb) <= d);
+    }
+
+    for (int len = 2; len <= max_i + 1; ++len) {
+        for (int msb = 1; msb <= max_i; ++msb) {
+            dp[len][msb] = dp[len - 1][msb - 1] + dp[len][msb - 1];
+            if (dp[len][msb] >= mod) dp[len][msb] -= mod;
+        }
+        for (int msb = 0; msb <= max_i; ++msb) dp[len][msb] = dp[len][msb] * opt[msb] % mod;
+    }
+
+    int ans = 0;
+    for (int len = 1; len <= max_i + 1; ++len)
+        for (int msb = 0; msb <= max_i; ++msb) {
+            ans += dp[len][msb];
+            if (ans >= mod) ans -= mod;
+        }
     return ans;
 }
 

@@ -32,6 +32,26 @@ void solve() {
     a.insert(begin(a), 0);
 
     vector<int> ops;
+    auto do_op = [&](int i) -> void {
+        ops.push_back(i);
+        auto rec = [&](const auto& self, int v) -> void {
+            assert(a[v] != 0);
+            const int L = v << 1 | 0, R = v << 1 | 1;
+
+            if (R >= (1 << h) || (a[L] == 0 && a[R] == 0)) {
+                a[v] = 0;
+            } else {
+                if (a[L] > a[R]) {
+                    a[v] = a[L];
+                    self(self, L);
+                } else {
+                    a[v] = a[R];
+                    self(self, R);
+                }
+            }
+        };
+        rec(rec, i);
+    };
 
     auto get_path = [&](int i) -> vector<int> {
         vector<int> path;
@@ -39,7 +59,11 @@ void solve() {
             if (a[v] == 0) break;
             path.push_back(v);
             const int L = v << 1 | 0, R = v << 1 | 1;
-            v = ((R < (1 << h)) && (a[L] > a[R])) ? L : R;
+            if ((R < (1 << h)) && a[L] > a[R]) {
+                v = L;
+            } else {
+                v = R;
+            }
         }
         return path;
     };
@@ -47,12 +71,9 @@ void solve() {
     rep(i, 1, 1 << g) {
         const int d = 31 ^ __builtin_clz(i);
         while (true) {
-            const auto p = get_path(i);
+            auto p = get_path(i);
             if (sz(p) == g - d) break;
-            assert(p[0] == i);
-            rep(j, 1, sz(p)) a[p[j - 1]] = a[p[j]];
-            a[p.back()] = 0;
-            ops.push_back(i);
+            do_op(i);
         }
     }
 

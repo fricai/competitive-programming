@@ -28049,6 +28049,25 @@
     ],
     "timestamp": "Jul/01/2022 15:26"
   },
+  "CF163097282": {
+    "contest_id": 1329,
+    "language": "GNU C++17",
+    "path": "codeforces/1329/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Drazil Likes Heap",
+    "problem_url": "https://codeforces.com/contest/1329/problem/C",
+    "submission_id": "CF163097282",
+    "submission_url": "https://codeforces.com/contest/1329/submission/163097282",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "greedy",
+      "implementation",
+      "*2400"
+    ],
+    "timestamp": "Jul/07/2022 16:33"
+  },
   "CF163100790": {
     "contest_id": 1329,
     "language": "GNU C++17",

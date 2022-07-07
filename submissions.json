@@ -28049,6 +28049,27 @@
     ],
     "timestamp": "Jul/01/2022 15:26"
   },
+  "CF163147687": {
+    "contest_id": 778,
+    "language": "GNU C++17",
+    "path": "codeforces/778/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Peterson Polyglot",
+    "problem_url": "https://codeforces.com/contest/778/problem/C",
+    "submission_id": "CF163147687",
+    "submission_url": "https://codeforces.com/contest/778/submission/163147687",
+    "tags": [
+      "brute force",
+      "dfs and similar",
+      "dsu",
+      "hashing",
+      "strings",
+      "trees",
+      "*2500"
+    ],
+    "timestamp": "Jul/08/2022 02:19"
+  },
   "CF163149454": {
     "contest_id": 351,
     "language": "GNU C++17",

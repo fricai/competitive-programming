@@ -285,6 +285,58 @@ std::vector<int> z_algorithm(const std::string& s) {
 }  // namespace atcoder
 
 
+template <class Min>
+struct rmq {
+    static constexpr int b = 31;
+    static constexpr uint32_t all_mask = (1U << b) - 1;
+    int n;
+    std::vector<uint32_t> mask;
+    Min min;
+    std::vector<std::vector<int>> jmp;
+    static uint32_t lsb(uint32_t x) { return x & -x; }
+    static int msb_index(uint32_t x) { return 31 ^ __builtin_clz(x); }
+
+    rmq(int _n, Min _min) : n(_n), mask(n), min(_min) {
+        uint32_t curr_mask = 0;
+        for (int i = 0; i < n; i++) {
+            curr_mask = (curr_mask << 1) & all_mask;
+            while (curr_mask) {
+                uint32_t l = lsb(curr_mask);
+                if (min(i, i - msb_index(l)) == i)
+                    curr_mask ^= lsb(curr_mask);
+                else
+                    break;
+            }
+            curr_mask |= 1;
+            mask[i] = curr_mask;
+        }
+        auto f = [this](int i) { return small(b * i + b - 1); };
+        jmp = std::vector(1, std::vector<int>(n / b));
+        int t = 0;
+        std::generate(jmp[0].begin(), jmp[0].end(), [&f, &t] { return f(t++); });
+        for (int pw = 1, k = 1; pw * 2 <= n / b; pw *= 2, ++k) {
+            jmp.emplace_back(n / b - pw * 2 + 1);
+            for (int j = 0; j < (int)jmp[k].size(); ++j)
+                jmp[k][j] = min(jmp[k - 1][j], jmp[k - 1][j + pw]);
+        }
+    }
+    int query(int l, int r) const {
+        --r;
+        if (r - l + 1 <= b) return small(r, r - l + 1);
+        int ans = min(small(l + b - 1), small(r));
+        int x = l / b + 1, y = r / b;
+        if (x < y) {
+            int dep = msb_index(y - x);
+            ans = min(ans, min(jmp[dep][x], jmp[dep][y - (1 << dep)]));
+        }
+        return ans;
+    }
+    int small(int r, int size = b) const {
+        int dist_from_r = msb_index(mask[r] & ((1U << size) - 1));
+        return r - dist_from_r;
+    }
+};
+
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -293,12 +345,29 @@ signed main() {
     cin >> s;
 
     const int n = sz(s);
-    const auto z = atcoder::z_algorithm(s);
+    const auto sa = atcoder::suffix_array(s);
+    const auto rnk = [&]() {
+        int i = 0;
+        vector<int> rnk(sa.size());
+        for (auto x : sa) rnk[x] = i++;
+        return rnk;
+    }();
+    const auto consec_lcp = atcoder::lcp_array(s, sa);
+    const auto st = rmq(n - 1, [&](int i, int j) { return consec_lcp[i] < consec_lcp[j] ? i : j; });
+
+    auto lcp = [&](int i, int j) {
+        if (i == j) return n - i;
+        // lcp of strings s[i, n) and s[j, n)
+        i = rnk[i], j = rnk[j];
+        if (i > j) swap(i, j);
+        assert(0 <= i && j <= n - 1);
+        return consec_lcp[st.query(i, j)];
+    };
 
     vector<int> f(n + 1);
     vector<int> opt;
     per(i, 0, n) {
-        const int len = z[i];
+        const int len = lcp(0, i);
         ++f[len];
         if (i + len == n) opt.push_back(len);
     }

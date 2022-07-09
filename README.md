@@ -13,13 +13,14 @@ A repository to keep track of problems solved on the following platforms:
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1551 | [F - Imbalance Value of a Tree](https://codeforces.com/contest/915/problem/F) | [GNU C++20 (64)](./codeforces/915/F.cpp) | `data structures` `dsu` `graphs` `trees` `*2400` | Jul/10/2022 23:17 | 
-1550 | [D - Tree and Queries](https://codeforces.com/contest/375/problem/D) | [GNU C++17](./codeforces/375/D.cpp) | `data structures` `dfs and similar` `trees` `*2400` | Jul/10/2022 22:04 | 
-1549 | [G2 - Passable Paths (hard version)](https://codeforces.com/contest/1702/problem/G2) | [GNU C++17](./codeforces/1702/G2.cpp) | `dfs and similar` `sortings` `trees` | Jul/10/2022 21:34 | 
-1548 | [E - Complicated Computations](https://codeforces.com/contest/1436/problem/E) | [GNU C++17](./codeforces/1436/E.cpp) | `binary search` `data structures` `two pointers` `*2400` | Jul/10/2022 20:26 | 
-1547 | [H - Satanic Panic](https://codeforces.com/contest/1146/problem/H) | [GNU C++17](./codeforces/1146/H.cpp) | `dp` `geometry` `*2900` | Jul/10/2022 17:12 | 
-1546 | [E - New Year and Castle Construction](https://codeforces.com/contest/1284/problem/E) | [GNU C++17](./codeforces/1284/E.cpp) | `combinatorics` `geometry` `math` `sortings` `*2500` | Jul/10/2022 02:46 | 
-1545 | [G - Combostone](https://codeforces.com/contest/1090/problem/G) | [GNU C++17](./codeforces/1090/G.cpp) |  | Jul/10/2022 00:43 | 
+1552 | [F - Imbalance Value of a Tree](https://codeforces.com/contest/915/problem/F) | [GNU C++20 (64)](./codeforces/915/F.cpp) | `data structures` `dsu` `graphs` `trees` `*2400` | Jul/10/2022 23:17 | 
+1551 | [D - Tree and Queries](https://codeforces.com/contest/375/problem/D) | [GNU C++17](./codeforces/375/D.cpp) | `data structures` `dfs and similar` `trees` `*2400` | Jul/10/2022 22:04 | 
+1550 | [G2 - Passable Paths (hard version)](https://codeforces.com/contest/1702/problem/G2) | [GNU C++17](./codeforces/1702/G2.cpp) | `dfs and similar` `sortings` `trees` | Jul/10/2022 21:34 | 
+1549 | [E - Complicated Computations](https://codeforces.com/contest/1436/problem/E) | [GNU C++17](./codeforces/1436/E.cpp) | `binary search` `data structures` `two pointers` `*2400` | Jul/10/2022 20:26 | 
+1548 | [H - Satanic Panic](https://codeforces.com/contest/1146/problem/H) | [GNU C++17](./codeforces/1146/H.cpp) | `dp` `geometry` `*2900` | Jul/10/2022 17:12 | 
+1547 | [E - New Year and Castle Construction](https://codeforces.com/contest/1284/problem/E) | [GNU C++17](./codeforces/1284/E.cpp) | `combinatorics` `geometry` `math` `sortings` `*2500` | Jul/10/2022 02:46 | 
+1546 | [G - Combostone](https://codeforces.com/contest/1090/problem/G) | [GNU C++17](./codeforces/1090/G.cpp) |  | Jul/10/2022 00:43 | 
+1545 | [D - It's a bird! No, it's a plane! No, it's AaParsa!](https://codeforces.com/contest/1528/problem/D) | [GNU C++20 (64)](./codeforces/1528/D.cpp) | `constructive algorithms` `graphs` `shortest paths` `*2500` | Jul/09/2022 21:54 | 
 1544 | [D - Magic Numbers](https://codeforces.com/contest/628/problem/D) | [GNU C++17](./codeforces/628/D.cpp) | `dp` `*2200` | Jul/01/2022 15:26 | 
 1543 | [F - Make Bipartite](https://atcoder.jp/contests/abc229/tasks/abc229_f) | [C++ (GCC 9.2.1)](./atcoder/abc229/F.cpp) | `AtCoder` `*500` | Jun/30/2022 00:38 | 
 1542 | [E - Tr/ee](https://atcoder.jp/contests/arc103/tasks/arc103_c) | [C++ (GCC 9.2.1)](./atcoder/arc103/E.cpp) | `AtCoder` `*700` | Jun/29/2022 13:50 | 

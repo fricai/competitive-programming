@@ -41,7 +41,7 @@ struct H {
     bool operator==(H o) const { return get() == o.get(); }
     bool operator<(H o) const { return get() < o.get(); }
 };
-static const H C = (ll)1e11 + 3;  // (order ~ 3e9; random also ok)
+static const H C = rng();  // (order ~ 3e9; random also ok)
 
 constexpr int N = 1e5 + 10;
 const auto pw = []() {

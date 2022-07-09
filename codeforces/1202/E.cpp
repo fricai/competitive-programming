@@ -440,8 +440,8 @@ vector<int> get_occ(string t, vector<string> s) {
         }
         {
             const auto j =
-                find_first_false(0, i, [&](int j) { return consec_lcp[st.query(j, i)] < len; });
-            ds.update(j, i, +1);
+                find_last_true(0, i, [&](int j) { return consec_lcp[st.query(j, i)] < len; });
+            ds.update(j + 1, i, +1);
         }
         ptr += len + 1;
     }

@@ -287,7 +287,7 @@ struct S {
 S op(S a, S b) { return {a.hsh * pw[b.len] + b.hsh, a.len + b.len}; }
 S e() { return {0, 0}; }
 
-static const H A = 300;
+static const H A = (1ULL << 32);
 using F = H;
 S mapping(F f, S x) { return f < A ? S{f * pw_sum[x.len], x.len} : x; }
 F composition(F f, F g) { return f < A ? f : g; }
@@ -310,6 +310,18 @@ signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    constexpr int V = 10;
+    array<H, V> mp;
+    rep(i, 0, V) {
+        while (true) {
+            mp[i] = rng();
+            bool valid = true;
+            rep(j, 0, i) if (mp[i] == mp[j]) valid = false;
+            if (valid) break;
+        }
+        assert(mp[i] < A);
+    }
+
     int n, m, k;
     cin >> n >> m >> k;
 
@@ -317,7 +329,7 @@ signed main() {
     rep(i, 0, n) {
         char c;
         cin >> c;
-        t.set(i, {H(c), 1});
+        t.set(i, {mp[c - '0'], 1});
     }
 
     rep(i, 0, m + k) {
@@ -329,9 +341,9 @@ signed main() {
         --l;
 
         if (type == 1) {
-            char c;
+            int c;
             cin >> c;
-            t.apply(l, r, c);
+            t.apply(l, r, mp[c]);
         } else {
             int d;
             cin >> d;

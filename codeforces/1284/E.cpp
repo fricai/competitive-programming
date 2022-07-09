@@ -66,19 +66,15 @@ signed main() {
         });
 
         ll cur = 0;
-
-        {
-            int j = 0, del = 0;
+        for (int i = 0, j = 0, del = 0; i < n - 1; ++i) {
+            --del;
             auto inc = [&]() {
                 ++j, ++del;
                 if (j == n - 1) j = 0;
             };
-            for (int i = 0; i < n - 1; ++i) {
-                --del;
-                if (j == i) inc();
-                while (cross(q[i], q[j]) > 0) inc();
-                cur += C(del, 3);
-            }
+            if (j == i) inc();
+            while (cross(q[i], q[j]) > 0) inc();
+            cur += C(del, 3);
         }
 
         ans += quads - cur;

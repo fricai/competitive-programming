@@ -28049,6 +28049,24 @@
     ],
     "timestamp": "Jul/01/2022 15:26"
   },
+  "CF163395360": {
+    "contest_id": 1528,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1528/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "It's a bird! No, it's a plane! No, it's AaParsa!",
+    "problem_url": "https://codeforces.com/contest/1528/problem/D",
+    "submission_id": "CF163395360",
+    "submission_url": "https://codeforces.com/contest/1528/submission/163395360",
+    "tags": [
+      "constructive algorithms",
+      "graphs",
+      "shortest paths",
+      "*2500"
+    ],
+    "timestamp": "Jul/09/2022 21:54"
+  },
   "CF163405561": {
     "contest_id": 1090,
     "language": "GNU C++17",

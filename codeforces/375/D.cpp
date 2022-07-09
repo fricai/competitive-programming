@@ -79,11 +79,8 @@ signed main() {
         init(init, 0);
         assert(in[0] == 0 && out[0] == n);
     }
-    {
-        vector<int> tmp(n);
-        rep(u, 0, n) tmp[in[u]] = c[u];
-        c = move(tmp);
-    }
+    vector<int> inv(n);
+    rep(u, 0, n) inv[in[u]] = u;
 
     struct event {
         int l, r, k, idx;
@@ -111,8 +108,8 @@ signed main() {
     cnt[0] = distinct;
 
     int cur_l = 0, cur_r = -1;
-    auto add = [&](int x) -> void { ++cnt[++f[c[x]]]; };
-    auto remove = [&](int x) -> void { --cnt[f[c[x]]--]; };
+    auto add = [&](int x) -> void { ++cnt[++f[c[inv[x]]]]; };
+    auto remove = [&](int x) -> void { --cnt[f[c[inv[x]]]--]; };
 
     vector<int> ans(q);
 

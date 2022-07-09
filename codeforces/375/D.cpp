@@ -24,6 +24,24 @@ bool uax(T& a, const T& b) {
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
+int64_t hilbert_order(int x, int y) {
+    constexpr int logn = 17;
+    constexpr int maxn = 1 << logn;
+    int64_t d = 0;
+    for (int s = 1 << (logn - 1); s; s >>= 1) {
+        bool rx = x & s, ry = y & s;
+        d = d << 2 | ((rx * 3) ^ int(ry));
+        if (!ry) {
+            if (rx) {
+                x = maxn - x;
+                y = maxn - y;
+            }
+            swap(x, y);
+        }
+    }
+    return d;
+}
+
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -49,64 +67,64 @@ signed main() {
         g[v].push_back(u);
     }
 
-    vector<int> in(n, -1), siz(n, -1);
+    vector<int> in(n, -1), out(n, -1);
     {
         int timer = 0;
         auto init = [&](const auto& self, int u) -> void {
             in[u] = timer++;
             for (auto v : g[u])
                 if (in[v] < 0) self(self, v);
-            siz[u] = timer - in[u];
+            out[u] = timer;
         };
         init(init, 0);
-        assert(in[0] == 0 && siz[0] == n);
+        assert(in[0] == 0 && out[0] == n);
     }
-    vector<int> inv(n);
-    rep(u, 0, n) inv[in[u]] = u;
     {
         vector<int> tmp(n);
-        rep(i, 0, n) tmp[in[i]] = c[i];
+        rep(u, 0, n) tmp[in[u]] = c[u];
         c = move(tmp);
     }
 
-    vector<vector<pair<int, int>>> ev(n);
+    struct event {
+        int l, r, k, idx;
+        uint64_t ord;
+    };
 
-    rep(i, 0, q) {
-        int v, k;
-        cin >> v >> k;
-        --v;
-        ev[v].emplace_back(k, i);
+    vector<event> ev(q);
+    {
+        int i = 0;
+        for (auto& [l, r, k, idx, ord] : ev) {
+            int v;
+            cin >> v >> k;
+            --v;
+            l = in[v];
+            r = out[v] - 1;
+            idx = i++;
+            ord = hilbert_order(l, r);
+        }
     }
-    for (auto& vec : ev) vec.shrink_to_fit();
+
+    sort(all(ev), [&](const event& a, const event& b) { return a.ord < b.ord; });
+
+    const int distinct = *max_element(all(c)) + 1;
+    vector<int> f(distinct), cnt(n + 1);
+    cnt[0] = distinct;
+
+    int cur_l = ev[0].l, cur_r = cur_l - 1;
+    auto add = [&](int x) -> void { ++cnt[++f[c[x]]]; };
+    auto remove = [&](int x) -> void { --cnt[f[c[x]]--]; };
 
     vector<int> ans(q);
-    vector<map<int, int>> f(n), cnt(n);
 
-    per(i, 0, n) {
-        const int u = inv[i];
+    for (auto [l, r, k, idx, _] : ev) {
+        // [l, r]
+        while (cur_l > l) add(--cur_l);
+        while (cur_r < r) add(++cur_r);
 
-        int heaviest = -1;
-        for (auto v : g[u])
-            if (in[u] <= in[v] && (heaviest == -1 || siz[heaviest] < siz[v])) heaviest = v;
+        while (cur_l < l) remove(cur_l++);
+        while (cur_r > r) remove(cur_r--);
 
-        auto add = [&](int col) { ++cnt[u][++f[u][col]]; };
-
-        if (heaviest != -1) {
-            f[u] = move(f[heaviest]);
-            cnt[u] = move(cnt[heaviest]);
-
-            rep(j, in[u], in[heaviest]) add(c[j]);
-            const int lst = in[u] + siz[u];
-            rep(j, in[heaviest] + siz[heaviest], lst) add(c[j]);
-        } else {
-            add(c[i]);
-        }
-
-        for (auto [k, idx] : ev[u])
-            if (auto it = cnt[u].find(k); it != cnt[u].end())
-                ans[idx] = it->second;
-            else
-                ans[idx] = 0;
+        ans[idx] = k > n ? 0 : cnt[k];
     }
 
     for (auto x : ans) cout << x << '\n';

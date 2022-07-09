@@ -358,14 +358,6 @@ struct range_update_point_query {
             if (r & 1) t[--r] += del;
         }
     }
-    void push_all() {
-        rep(i, 1, n) {
-            t[i << 1 | 0] += t[i];
-            t[i << 1 | 1] += t[i];
-            t[i] = id;
-        }
-    }
-    T leaf(int p) { return t[p + n]; }
 };
 
 template <typename I, typename P, bool b>
@@ -447,9 +439,8 @@ vector<int> get_occ(string t, vector<string> s) {
     }
     assert(ptr == tot);
 
-    ds.push_all();
     vector<int> res(t.size());
-    rep(i, 0, sz(t)) res[i] = ds.leaf(rnk[i]);
+    rep(i, 0, sz(t)) res[i] = ds.get(rnk[i]);
 
     if constexpr (rev) reverse(all(res));
     return res;

@@ -77,7 +77,6 @@ node* erase(node* root, int x, int l = 0, int r = N) {
     // insert x into subtree at root
     //
     // assume that x does exist in there atm
-    assert(root);
     if (r - l == 1) {
         assert(l == x);
         return nullptr;

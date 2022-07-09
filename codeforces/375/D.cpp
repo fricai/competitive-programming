@@ -24,24 +24,6 @@ bool uax(T& a, const T& b) {
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-int64_t hilbert_order(int x, int y) {
-    constexpr int logn = 17;
-    constexpr int maxn = 1 << logn;
-    int64_t d = 0;
-    for (int s = 1 << (logn - 1); s; s >>= 1) {
-        bool rx = x & s, ry = y & s;
-        d = d << 2 | ((rx * 3) ^ int(ry));
-        if (!ry) {
-            if (rx) {
-                x = maxn - x;
-                y = maxn - y;
-            }
-            swap(x, y);
-        }
-    }
-    return d;
-}
-
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -84,24 +66,24 @@ signed main() {
 
     struct event {
         int l, r, k, idx;
-        uint64_t ord;
     };
 
     vector<event> ev(q);
     {
         int i = 0;
-        for (auto& [l, r, k, idx, ord] : ev) {
+        for (auto& [l, r, k, idx] : ev) {
             int v;
             cin >> v >> k;
             --v;
             l = in[v];
             r = out[v] - 1;
             idx = i++;
-            ord = hilbert_order(l, r);
         }
     }
 
-    sort(all(ev), [&](const event& a, const event& b) { return a.ord < b.ord; });
+    constexpr int B = 400;
+    sort(all(ev),
+         [&](const event& a, const event& b) { return pair(a.l / B, a.r) < pair(b.l / B, b.r); });
 
     const int distinct = *max_element(all(c)) + 1;
     vector<int> f(distinct), cnt(n + 1);
@@ -113,7 +95,7 @@ signed main() {
 
     vector<int> ans(q);
 
-    for (auto [l, r, k, idx, _] : ev) {
+    for (auto [l, r, k, idx] : ev) {
         // [l, r]
         while (cur_l > l) add(--cur_l);
         while (cur_r < r) add(++cur_r);

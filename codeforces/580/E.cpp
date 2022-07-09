@@ -341,12 +341,13 @@ signed main() {
             const int del = (r - l) / d;
             assert(l + d * del == r - mod);
 
-            const auto most = t.prod(l, r - mod).hsh;
-            const auto cycle = t.prod(l, l + d).hsh * f(pw[d], del);
-            const auto back = t.prod(r - mod, r).hsh;
-            const auto front = t.prod(l, l + mod).hsh;
+            const auto full = t.prod(l, r);
+            const auto most = S{t.prod(l, l + d).hsh * f(pw[d], del), d * del};
+            const auto back = t.prod(r - mod, r);
+            const auto front = t.prod(l, l + mod);
 
-            cout << (most == cycle && back == front ? "YES" : "NO") << '\n';
+            cout << (front.hsh == back.hsh && full.hsh == op(most, back).hsh ? "YES" : "NO")
+                 << '\n';
         }
     }
 }

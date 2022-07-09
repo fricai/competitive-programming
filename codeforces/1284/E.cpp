@@ -66,14 +66,15 @@ signed main() {
         });
 
         ll cur = 0;
-        for (int i = 0, j = 0, del = 0; i < n - 1; ++i) {
-            --del;
-            auto inc = [&]() {
-                ++j, ++del;
+        for (int i = 0, j = 0; i < n - 1; ++i) {
+            if (j == i) ++j;
+            if (j == n - 1) j = 0;
+            while (cross(q[i], q[j]) > 0) {
+                ++j;
                 if (j == n - 1) j = 0;
-            };
-            if (j == i) inc();
-            while (cross(q[i], q[j]) > 0) inc();
+            }
+            int del = j - i - 1;
+            if (del < 0) del += n - 1;
             cur += C(del, 3);
         }
 

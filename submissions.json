@@ -28049,6 +28049,25 @@
     ],
     "timestamp": "Jul/01/2022 15:26"
   },
+  "CF163410256": {
+    "contest_id": 1284,
+    "language": "GNU C++17",
+    "path": "codeforces/1284/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "New Year and Castle Construction",
+    "problem_url": "https://codeforces.com/contest/1284/problem/E",
+    "submission_id": "CF163410256",
+    "submission_url": "https://codeforces.com/contest/1284/submission/163410256",
+    "tags": [
+      "combinatorics",
+      "geometry",
+      "math",
+      "sortings",
+      "*2500"
+    ],
+    "timestamp": "Jul/10/2022 02:46"
+  },
   "CF163411616": {
     "contest_id": 375,
     "language": "GNU C++17",

@@ -110,7 +110,7 @@ signed main() {
     vector<int> f(distinct), cnt(n + 1);
     cnt[0] = distinct;
 
-    int cur_l = ev[0].l, cur_r = cur_l - 1;
+    int cur_l = 0, cur_r = -1;
     auto add = [&](int x) -> void { ++cnt[++f[c[x]]]; };
     auto remove = [&](int x) -> void { --cnt[f[c[x]]--]; };
 

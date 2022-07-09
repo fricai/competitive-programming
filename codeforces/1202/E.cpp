@@ -435,8 +435,8 @@ vector<int> get_occ(string t, vector<string> s) {
         const int len = sz(s[string_num]);
         {
             const auto j = find_first_false(
-                i, tot - 1, [&](int j) { return consec_lcp[st.query(i, j + 1)] >= len; });
-            ds.update(i, j + 1, +1);
+                i + 1, tot, [&](int j) { return consec_lcp[st.query(i, j)] >= len; });
+            ds.update(i, j, +1);
         }
         {
             const auto j =

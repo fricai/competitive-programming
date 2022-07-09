@@ -28049,6 +28049,19 @@
     ],
     "timestamp": "Jul/01/2022 15:26"
   },
+  "CF163405686": {
+    "contest_id": 1090,
+    "language": "GNU C++17",
+    "path": "codeforces/1090/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Combostone",
+    "problem_url": "https://codeforces.com/contest/1090/problem/G",
+    "submission_id": "CF163405686",
+    "submission_url": "https://codeforces.com/contest/1090/submission/163405686",
+    "tags": [],
+    "timestamp": "Jul/10/2022 00:43"
+  },
   "CF163408897": {
     "contest_id": 1284,
     "language": "GNU C++17",

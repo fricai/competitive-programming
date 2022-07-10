@@ -42,7 +42,7 @@ signed main() {
 
     const int col_cnt = *max_element(all(c)) + 1;
 
-    constexpr int MAG = 300;
+    constexpr int MAG = 400;
 
     vector<int> heavy;
     vector<bool> light(col_cnt);

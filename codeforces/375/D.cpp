@@ -61,7 +61,7 @@ signed main() {
 
     constexpr int B = 17;
     array<vector<int>, B> p;
-    vector<int> nxt(n, -1), in(n, -1);
+    vector<int> nxt(n, -1), inv(n), in(n, -1);
 
     {
         vector<vector<int>> g(n);
@@ -94,11 +94,15 @@ signed main() {
             }
         }
         // can forget g now
-    }
-    {
-        vector<int> tmp(n);
-        rep(i, 0, n) tmp[in[i]] = c[i];
-        c = move(tmp);
+
+        rep(u, 0, n) inv[in[u]] = u;
+
+        {
+            vector<int> tmp(n);
+            rep(i, 0, n) tmp[in[i]] = c[i];
+            c = move(tmp);
+        }
+        // can forget in now
     }
 
     vector<vector<pair<int, int>>> ev(n);
@@ -156,10 +160,7 @@ signed main() {
 
                 // increment all ancestors of u (including itself)
                 ++pref[cnt][u + 1];
-                if (prev_u != -1)
-                    --pref[cnt][lca(u, prev_u) + 1];
-                else
-                    --pref[cnt][0];
+                if (prev_u != -1) --pref[cnt][lca(u, prev_u) + 1];
                 prev_u = u;
             }
         }

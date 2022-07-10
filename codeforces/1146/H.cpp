@@ -112,24 +112,17 @@ signed main() {
     rep(i, 0, n) rep(j, 0, n) {
         if (i == j) continue;
         rep(k, 0, n) {
-            if (L[i][j][k] and L[j][k][i] and L[k][i][j]) {
-                if (vis[i][j][k] || vis[j][k][i] || vis[k][i][j])
-                    continue;
-                vis[i][j][k] = vis[j][k][i] = vis[k][i][j] = true;
-                const int cnt = (L[i][j] & L[j][k] & L[k][i]).count();
-                three += C(cnt, 2);
-            }
+            if (!L[i][j][k]) continue;
+            const int cnt = (L[i][j] & L[j][k] & L[k][i]).count();
+            three += C(cnt, 2);
         }
     }
 
-    /*
     assert(three % 3 == 0);
-    three /= 3;
-    */
     // sum = x_3 + x_4 + x_5
     // two = 2x_3 + x_4
     // three = 3 x_3
     //
     // x_5 = sum - (x_3 + x_4) = sum - (2 x_3 + x_4 - x_3) = sum - (two - three / 3)
-    cout << sum - two + three << '\n';
+    cout << sum - two + three / 3 << '\n';
 }

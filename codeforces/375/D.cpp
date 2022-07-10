@@ -95,7 +95,11 @@ struct SparseFenwick2D {
             auto it = t.find(x);
             if (it == t.end()) continue;
             auto& tx = it->second;
-            for (int y = j; y > 0; y -= y & (-y)) s += tx[y];
+            for (int y = j; y > 0; y -= y & (-y)) {
+                auto it1 = tx.find(y);
+                if (it1 == tx.end()) continue;
+                s += it1->second;
+            }
         }
         return s;
     }
@@ -104,6 +108,7 @@ struct SparseFenwick2D {
         // [1, m] -> [m, 1]
         // j2 -> m - j2 + 1
         i2 = n - i1 + 1;
+        i1 = 1;
         return query(i2, j2) - query(i2, j1 - 1);
     }
     void update(int i, int j, T v) {

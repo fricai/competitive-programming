@@ -24,102 +24,6 @@ bool uax(T& a, const T& b) {
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-#include "ext/pb_ds/assoc_container.hpp"
-#include "ext/pb_ds/tree_policy.hpp"
-
-namespace hashing {
-using ull = std::uint64_t;
-static const ull FIXED_RANDOM = std::chrono::steady_clock::now().time_since_epoch().count();
-
-template <class T, class D = void>
-struct custom_hash {};
-
-// https://www.boost.org/doc/libs/1_55_0/doc/html/hash/combine.html
-template <class T>
-inline void hash_combine(ull& seed, const T& v) {
-    custom_hash<T> hasher;
-    seed ^= hasher(v) + 0x9e3779b97f4a7c15 + (seed << 12) + (seed >> 4);
-};
-
-// http://xorshift.di.unimi.it/splitmix64.c
-template <class T>
-struct custom_hash<T, typename std::enable_if<std::is_integral<T>::value>::type> {
-    ull operator()(T v) const {
-        ull x = v + 0x9e3779b97f4a7c15 + FIXED_RANDOM;
-        x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
-        x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
-        return x ^ (x >> 31);
-    }
-};
-
-template <class T>
-struct custom_hash<T, std::void_t<decltype(std::begin(std::declval<T>()))>> {
-    ull operator()(const T& a) const {
-        ull value = FIXED_RANDOM;
-        for (auto& x : a) hash_combine(value, x);
-        return value;
-    }
-};
-
-template <class... T>
-struct custom_hash<std::tuple<T...>> {
-    ull operator()(const std::tuple<T...>& a) const {
-        ull value = FIXED_RANDOM;
-        std::apply([&value](T const&... args) { (hash_combine(value, args), ...); }, a);
-        return value;
-    }
-};
-
-template <class T, class U>
-struct custom_hash<std::pair<T, U>> {
-    ull operator()(const std::pair<T, U>& a) const {
-        ull value = FIXED_RANDOM;
-        hash_combine(value, a.first);
-        hash_combine(value, a.second);
-        return value;
-    }
-};
-
-};  // namespace hashing
-
-template <class T>
-struct SparseFenwick2D {
-    int n, m;
-    __gnu_pbds::gp_hash_table<int, __gnu_pbds::gp_hash_table<int, T, hashing::custom_hash<int>>,
-                              hashing::custom_hash<int>>
-        t;
-    SparseFenwick2D(int n, int m) : n(n), m(m) {}
-    T query(int i, int j) {
-        T s{};
-        for (int x = i; x > 0; x -= x & (-x)) {
-            auto it = t.find(x);
-            if (it == t.end()) continue;
-            auto& tx = it->second;
-            for (int y = j; y > 0; y -= y & (-y)) {
-                auto it1 = tx.find(y);
-                if (it1 == tx.end()) continue;
-                s += it1->second;
-            }
-        }
-        return s;
-    }
-    T query(int i1, int j1, int i2, int j2) {
-        assert(i2 == n);
-        // [1, m] -> [m, 1]
-        // j2 -> m - j2 + 1
-        i2 = n - i1 + 1;
-        i1 = 1;
-        return query(i2, j2) - query(i2, j1 - 1);
-    }
-    void update(int i, int j, T v) {
-        i = m - i + 1;
-        for (int x = i; x <= n; x += x & (-x)) {
-            auto& tx = t[x];
-            for (int y = j; y <= m; y += y & (-y)) tx[y] += v;
-        }
-    }
-};
-
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -137,6 +41,23 @@ signed main() {
     }
 
     const int col_cnt = *max_element(all(c)) + 1;
+
+    constexpr int MAG = 300;
+
+    vector<int> heavy;
+    vector<bool> light(col_cnt);
+    {
+        vector<int> tot_freq(col_cnt);
+        for (auto x : c) ++tot_freq[x];
+        rep(i, 0, col_cnt) {
+            assert(tot_freq[i] != 0);
+            if (tot_freq[i] < MAG)
+                light[i] = true;
+            else
+                heavy.push_back(i);
+        }
+        heavy.shrink_to_fit();
+    }
 
     constexpr int B = 17;
     array<vector<int>, B> p;
@@ -180,24 +101,41 @@ signed main() {
         c = move(tmp);
     }
 
-    SparseFenwick2D<int> t(n, n);
+    vector<vector<pair<int, int>>> ev(n);
+
+    rep(i, 0, q) {
+        int v, k;
+        cin >> v >> k;
+        v = in[v - 1];
+        ev[v].emplace_back(k, i);
+    }
+    for (auto& vec : ev) vec.shrink_to_fit();
+
+    vector<int> ans(q);
 
     {
-        auto is_ancestor = [&nxt](int i, int j) -> bool { return i <= j && j < nxt[i]; };
+        // light colours
+
+        auto is_ancestor = [&](int i, int j) -> bool { return i <= j && j < nxt[i]; };
 
         auto lca = [&](int u, int v) -> int {
             if (is_ancestor(u, v)) return u;
             if (is_ancestor(v, u)) return v;
             per(j, 0, B) if (!is_ancestor(p[j][u], v)) u = p[j][u];
+            assert(is_ancestor(p[0][u], v));
             return p[0][u];
         };
 
         vector<vector<int>> occ(col_cnt);
-        rep(i, 0, n) occ[c[i]].push_back(i);
+        rep(i, 0, n) if (light[c[i]]) occ[c[i]].push_back(i);
+
+        array<vector<int>, MAG> pref;
+        for (auto& v : pref) v.resize(n + 1);
 
         rep(col, 0, col_cnt) {
-            auto& vec = occ[col];
+            if (!light[col]) continue;
 
+            auto& vec = occ[col];
             const int m = sz(vec);
 
             sort(all(vec));
@@ -212,12 +150,16 @@ signed main() {
             int prev_u = -1;
             for (auto u : full) {
                 const int cnt = int(lower_bound(all(vec), nxt[u]) - lower_bound(all(vec), u));
+                assert(cnt < MAG);
                 // number of elements in vec in subtree of u
                 // (elements in vec < nxt[u]) - (elements in vec < u)
 
                 // increment all ancestors of u (including itself)
-                t.update(cnt, u + 1, +1);
-                if (prev_u != -1) t.update(cnt, lca(u, prev_u) + 1, -1);
+                ++pref[cnt][u + 1];
+                if (prev_u != -1)
+                    --pref[cnt][lca(u, prev_u) + 1];
+                else
+                    --pref[cnt][0];
                 prev_u = u;
             }
         }
@@ -225,16 +167,26 @@ signed main() {
 
         // now sum(pref[j][i...nxt[i])) gives us number of colours which occurred j times
         // so sum(pref[j...n)[i...nxt[i])) gives us number of occurred >= j times
+        per(i, 1, MAG) rep(u, 0, n + 1) pref[i - 1][u] += pref[i][u];
+        rep(i, 0, MAG) rep(u, 0, n) pref[i][u + 1] += pref[i][u];
+        rep(i, 0, n) {
+            for (auto [k, idx] : ev[i]) ans[idx] = k < MAG ? pref[k][nxt[i]] - pref[k][i] : 0;
+        }
     }
 
-    rep(i, 0, q) {
-        int v, k;
-        cin >> v >> k;
-        v = in[v - 1];
+    {
+        // heavy colours
+        const int m = heavy.size();
+        vector pref(m, vector(n + 1, 0));
+        rep(i, 0, m) rep(j, 0, n) pref[i][j + 1] += pref[i][j] + (c[j] == heavy[i]);
 
-        if (k > n)
-            cout << "0\n";
-        else
-            cout << t.query(k, v + 1, n, nxt[v]) << '\n';
+        per(i, 0, n) {
+            for (const auto& v : pref) {
+                const int del = v[nxt[i]] - v[i];
+                for (auto [k, idx] : ev[i]) ans[idx] += del >= k;
+            }
+        }
     }
+
+    for (auto x : ans) cout << x << '\n';
 }

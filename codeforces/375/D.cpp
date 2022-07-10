@@ -77,43 +77,36 @@ signed main() {
         --v;
         ev[v].emplace_back(k, i);
     }
-    for (auto& vec : ev) {
-        vec.shrink_to_fit();
-        sort(all(vec));
-    }
+    for (auto& vec : ev) vec.shrink_to_fit();
 
     vector<int> ans(q);
-    vector<map<int, int>> f(n);
-    vector<vector<int>> cnt(n);
+    vector<map<int, int>> f(n), cnt(n);
 
     per(i, 0, n) {
         const int u = inv[i];
 
         int heaviest = -1;
         for (auto v : g[u])
-            if (i < in[v] && (heaviest == -1 || siz[heaviest] < siz[v])) heaviest = v;
+            if (in[u] <= in[v] && (heaviest == -1 || siz[heaviest] < siz[v])) heaviest = v;
 
-        auto add = [&](int col) {
-            const auto idx = ++f[u][col] - 1;
-            assert(idx <= sz(cnt[u]));
-            if (idx == sz(cnt[u]))
-                cnt[u].push_back(1);
-            else
-                ++cnt[u][idx];
-        };
+        auto add = [&](int col) { ++cnt[u][++f[u][col]]; };
 
         if (heaviest != -1) {
             f[u] = move(f[heaviest]);
             cnt[u] = move(cnt[heaviest]);
 
             rep(j, in[u], in[heaviest]) add(c[j]);
-            const int lst = i + siz[u];
+            const int lst = in[u] + siz[u];
             rep(j, in[heaviest] + siz[heaviest], lst) add(c[j]);
         } else {
             add(c[i]);
         }
 
-        for (auto [k, idx] : ev[u]) ans[idx] = k <= sz(cnt[u]) ? cnt[u][k - 1] : 0;
+        for (auto [k, idx] : ev[u])
+            if (auto it = cnt[u].find(k); it != cnt[u].end())
+                ans[idx] = it->second;
+            else
+                ans[idx] = 0;
     }
 
     for (auto x : ans) cout << x << '\n';

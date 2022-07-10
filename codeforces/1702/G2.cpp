@@ -24,6 +24,68 @@ bool uax(T& a, const T& b) {
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
+template <class T>
+struct RMQ {
+    vector<vector<T>> jmp;
+    RMQ(const vector<T>& V) : jmp(1, V) {
+        for (int pw = 1, k = 1; pw * 2 <= sz(V); pw *= 2, ++k) {
+            jmp.emplace_back(sz(V) - pw * 2 + 1);
+            rep(j, 0, sz(jmp[k])) jmp[k][j] = min(jmp[k - 1][j], jmp[k - 1][j + pw]);
+        }
+    }
+    T query(int a, int b) {
+        assert(a < b);  // or return inf if a == b
+        int dep = 31 - __builtin_clz(b - a);
+        return min(jmp[dep][a], jmp[dep][b - (1 << dep)]);
+    }
+};
+
+struct LCA {
+    int T = 0;
+    vector<int> time, path, ret;
+    RMQ<int> rmq;
+
+    LCA(vector<vector<int>>& C) : time(sz(C)), rmq((dfs(C, 0, -1), ret)) {}
+
+    void dfs(vector<vector<int>>& C, int v, int par) {
+        time[v] = T++;
+        for (int y : C[v])
+            if (y != par) {
+                path.push_back(v), ret.push_back(time[v]);
+                dfs(C, y, v);
+            }
+    }
+
+    int lca(int a, int b) {
+        if (a == b) return a;
+        tie(a, b) = minmax(time[a], time[b]);
+        return path[rmq.query(a, b)];
+    }
+    // dist(a,b){return depth[a] + depth[b] - 2*depth[lca(a,b)];}
+};
+
+auto compressTree(LCA& lca, const vector<int>& subset) {
+    static vector<int> rev;
+    rev.resize(sz(lca.time));
+    vector<int> li = subset, &T = lca.time;
+    auto cmp = [&](int a, int b) { return T[a] < T[b]; };
+    sort(all(li), cmp);
+    int m = sz(li) - 1;
+    rep(i, 0, m) {
+        int a = li[i], b = li[i + 1];
+        li.push_back(lca.lca(a, b));
+    }
+    sort(all(li), cmp);
+    li.erase(unique(all(li)), li.end());
+    rep(i, 0, sz(li)) rev[li[i]] = i;
+    vector<pair<int, int>> ret;
+    rep(i, 0, sz(li) - 1) {
+        int a = li[i], b = li[i + 1];
+        ret.emplace_back(rev[lca.lca(a, b)], b);
+    }
+    return ret;
+}
+
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -31,56 +93,16 @@ signed main() {
     int n;
     cin >> n;
 
-    constexpr int B = 18;
-    array<vector<int>, B> p;
-    vector<int> nxt(n, -1), in(n, -1);
-
-    {
-        vector<vector<int>> g(n);
-        rep(e, 0, n - 1) {
-            int u, v;
-            cin >> u >> v;
-            --u, --v;
-            g[u].push_back(v);
-            g[v].push_back(u);
-        }
-
-        {
-            int timer = 0;
-            auto init = [&](const auto& self, int u) -> void {
-                in[u] = timer++;
-                for (auto v : g[u])
-                    if (in[v] < 0) {
-                        self(self, v);
-                        p[0][in[v]] = in[u];
-                    }
-                nxt[in[u]] = timer;
-            };
-            p[0].resize(n);
-            init(init, 0);
-            assert(in[0] == 0 && nxt[0] == n);
-
-            rep(j, 0, B - 1) {
-                p[j + 1].resize(n);
-                rep(u, 0, n) p[j + 1][u] = p[j][p[j][u]];
-            }
-        }
-        // can forget g now
-
-        // can forget in now
+    vector<vector<int>> g(n);
+    rep(e, 0, n - 1) {
+        int u, v;
+        cin >> u >> v;
+        --u, --v;
+        g[u].push_back(v);
+        g[v].push_back(u);
     }
 
-    auto is_ancestor = [&](int i, int j) -> bool { return i <= j && j < nxt[i]; };
-
-    auto lca = [&](int u, int v) -> int {
-        if (is_ancestor(u, v)) return u;
-        if (is_ancestor(v, u)) return v;
-        per(j, 0, B) if (!is_ancestor(p[j][u], v)) u = p[j][u];
-        assert(is_ancestor(p[0][u], v));
-        return p[0][u];
-    };
-
-    vector<int> rev(n);
+    auto lca = LCA(g);
 
     int q;
     cin >> q;
@@ -88,30 +110,23 @@ signed main() {
         int k;
         cin >> k;
         vector<int> vec(k);
-        for (auto& x : vec) cin >> x, x = in[x - 1];
+        for (auto& x : vec) cin >> x, --x;
 
         if (k == 1) {
             cout << "YES\n";
         } else {
-            sort(all(vec));
+            auto res = compressTree(lca, vec);
 
-            auto full = vec;
-            full.reserve(2 * k - 1);
-            rep(i, 1, k) full.push_back(lca(vec[i - 1], vec[i]));
+            const int r = sz(res);
+            vector<int> deg(r + 1);
+            rep(i, 0, r) {
+                ++deg[i + 1];
+                ++deg[res[i].first];
+            }
 
-            sort(all(full));
-            full.erase(unique(all(full)), end(full));
-            const int r = sz(full);
-            rep(i, 0, r) rev[full[i]] = i;
-
-            vector<int> deg(r, 0);
-            rep(i, 1, r) deg[rev[lca(full[i - 1], full[i])]]++;
-            --deg[0];
-
-            int leaves = count(all(deg), 0);
-
+            const int leaves = count(all(deg), 1);
             assert(leaves >= 2);
-            cout << (leaves <= 2 ? "YES" : "NO") << '\n';
+            cout << (leaves == 2 ? "YES" : "NO") << '\n';
         }
     }
 }

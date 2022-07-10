@@ -40,69 +40,33 @@ signed main() {
         for (auto& x : c) x = int(lower_bound(all(cmp), x) - begin(cmp));
     }
 
-    const int col_cnt = *max_element(all(c)) + 1;
-
-    constexpr int MAG = 400;
-
-    vector<int> heavy;
-    vector<bool> light(col_cnt);
-    {
-        vector<int> tot_freq(col_cnt);
-        for (auto x : c) ++tot_freq[x];
-        rep(i, 0, col_cnt) {
-            assert(tot_freq[i] != 0);
-            if (tot_freq[i] < MAG)
-                light[i] = true;
-            else
-                heavy.push_back(i);
-        }
-        heavy.shrink_to_fit();
+    vector<vector<int>> g(n);
+    rep(e, 0, n - 1) {
+        int u, v;
+        cin >> u >> v;
+        --u, --v;
+        g[u].push_back(v);
+        g[v].push_back(u);
     }
 
-    constexpr int B = 17;
-    array<vector<int>, B> p;
-    vector<int> nxt(n, -1), inv(n), in(n, -1);
-
+    vector<int> in(n, -1), siz(n, -1);
     {
-        vector<vector<int>> g(n);
-        rep(e, 0, n - 1) {
-            int u, v;
-            cin >> u >> v;
-            --u, --v;
-            g[u].push_back(v);
-            g[v].push_back(u);
-        }
-
-        {
-            int timer = 0;
-            auto init = [&](const auto& self, int u) -> void {
-                in[u] = timer++;
-                for (auto v : g[u])
-                    if (in[v] < 0) {
-                        self(self, v);
-                        p[0][in[v]] = in[u];
-                    }
-                nxt[in[u]] = timer;
-            };
-            p[0].resize(n);
-            init(init, 0);
-            assert(in[0] == 0 && nxt[0] == n);
-
-            rep(j, 0, B - 1) {
-                p[j + 1].resize(n);
-                rep(u, 0, n) p[j + 1][u] = p[j][p[j][u]];
-            }
-        }
-        // can forget g now
-
-        rep(u, 0, n) inv[in[u]] = u;
-
-        {
-            vector<int> tmp(n);
-            rep(i, 0, n) tmp[in[i]] = c[i];
-            c = move(tmp);
-        }
-        // can forget in now
+        int timer = 0;
+        auto init = [&](const auto& self, int u) -> void {
+            in[u] = timer++;
+            for (auto v : g[u])
+                if (in[v] < 0) self(self, v);
+            siz[u] = timer - in[u];
+        };
+        init(init, 0);
+        assert(in[0] == 0 && siz[0] == n);
+    }
+    vector<int> inv(n);
+    rep(u, 0, n) inv[in[u]] = u;
+    {
+        vector<int> tmp(n);
+        rep(i, 0, n) tmp[in[i]] = c[i];
+        c = move(tmp);
     }
 
     vector<vector<pair<int, int>>> ev(n);
@@ -110,83 +74,46 @@ signed main() {
     rep(i, 0, q) {
         int v, k;
         cin >> v >> k;
-        v = in[v - 1];
+        --v;
         ev[v].emplace_back(k, i);
     }
-    for (auto& vec : ev) vec.shrink_to_fit();
-
-    vector<int> ans(q);
-
-    {
-        // light colours
-
-        auto is_ancestor = [&](int i, int j) -> bool { return i <= j && j < nxt[i]; };
-
-        auto lca = [&](int u, int v) -> int {
-            if (is_ancestor(u, v)) return u;
-            if (is_ancestor(v, u)) return v;
-            per(j, 0, B) if (!is_ancestor(p[j][u], v)) u = p[j][u];
-            assert(is_ancestor(p[0][u], v));
-            return p[0][u];
-        };
-
-        vector<vector<int>> occ(col_cnt);
-        rep(i, 0, n) if (light[c[i]]) occ[c[i]].push_back(i);
-
-        array<vector<int>, MAG> pref;
-        for (auto& v : pref) v.resize(n + 1);
-
-        rep(col, 0, col_cnt) {
-            if (!light[col]) continue;
-
-            auto& vec = occ[col];
-            const int m = sz(vec);
-
-            sort(all(vec));
-
-            auto full = vec;
-            full.reserve(2 * m - 1);
-            rep(i, 0, m - 1) full.push_back(lca(vec[i], vec[i + 1]));
-
-            sort(all(full));
-            full.erase(unique(all(full)), end(full));
-
-            int prev_u = -1;
-            for (auto u : full) {
-                const int cnt = int(lower_bound(all(vec), nxt[u]) - lower_bound(all(vec), u));
-                assert(cnt < MAG);
-                // number of elements in vec in subtree of u
-                // (elements in vec < nxt[u]) - (elements in vec < u)
-
-                // increment all ancestors of u (including itself)
-                ++pref[cnt][u + 1];
-                if (prev_u != -1) --pref[cnt][lca(u, prev_u) + 1];
-                prev_u = u;
-            }
-        }
-        // pref[j][i] = number of colours which occur j times in the subtree of j
-
-        // now sum(pref[j][i...nxt[i])) gives us number of colours which occurred j times
-        // so sum(pref[j...n)[i...nxt[i])) gives us number of occurred >= j times
-        per(i, 1, MAG) rep(u, 0, n + 1) pref[i - 1][u] += pref[i][u];
-        rep(i, 0, MAG) rep(u, 0, n) pref[i][u + 1] += pref[i][u];
-        rep(i, 0, n) {
-            for (auto [k, idx] : ev[i]) ans[idx] = k < MAG ? pref[k][nxt[i]] - pref[k][i] : 0;
-        }
+    for (auto& vec : ev) {
+        vec.shrink_to_fit();
+        sort(all(vec));
     }
 
-    {
-        // heavy colours
-        const int m = heavy.size();
-        vector pref(m, vector(n + 1, 0));
-        rep(i, 0, m) rep(j, 0, n) pref[i][j + 1] += pref[i][j] + (c[j] == heavy[i]);
+    vector<int> ans(q);
+    vector<map<int, int>> f(n);
+    vector<vector<int>> cnt(n);
 
-        per(i, 0, n) {
-            for (const auto& v : pref) {
-                const int del = v[nxt[i]] - v[i];
-                for (auto [k, idx] : ev[i]) ans[idx] += del >= k;
-            }
+    per(i, 0, n) {
+        const int u = inv[i];
+
+        int heaviest = -1;
+        for (auto v : g[u])
+            if (i < in[v] && (heaviest == -1 || siz[heaviest] < siz[v])) heaviest = v;
+
+        auto add = [&](int col) {
+            const auto idx = ++f[u][col] - 1;
+            assert(idx <= sz(cnt[u]));
+            if (idx == sz(cnt[u]))
+                cnt[u].push_back(1);
+            else
+                ++cnt[u][idx];
+        };
+
+        if (heaviest != -1) {
+            f[u] = move(f[heaviest]);
+            cnt[u] = move(cnt[heaviest]);
+
+            rep(j, in[u], in[heaviest]) add(c[j]);
+            const int lst = i + siz[u];
+            rep(j, in[heaviest] + siz[heaviest], lst) add(c[j]);
+        } else {
+            add(c[i]);
         }
+
+        for (auto [k, idx] : ev[u]) ans[idx] = k <= sz(cnt[u]) ? cnt[u][k - 1] : 0;
     }
 
     for (auto x : ans) cout << x << '\n';

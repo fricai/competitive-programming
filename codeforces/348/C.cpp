@@ -65,13 +65,13 @@ signed main() {
     // bruh lmao this step was O(n|S|) wow op
     // was O(sum(|S_i|) + sum(sum(|S_{heavy[j]})))
     {
-        vector<vector<int>> in_heavy(n);
+        vector in_heavy(n, vector<uint8_t>(r));
         rep(i, 0, r) for (auto x : s[heavy[i]]) {
             heavy_sum[i] += a[x];
-            in_heavy[x].push_back(i);
+            in_heavy[x][i] = true;
         }
 
-        rep(i, 0, m) for (auto x : s[i]) for (auto j : in_heavy[x])++ g[i][j];
+        rep(i, 0, m) for (auto x : s[i]) rep(j, 0, r) g[i][j] += in_heavy[x][j];
     }
 
     vector<ll> lazy_heavy(r, 0);

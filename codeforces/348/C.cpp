@@ -34,7 +34,7 @@ signed main() {
     vector<ll> a(n);
     for (auto& x : a) cin >> x;
 
-    constexpr int MAG = 250;
+    constexpr int MAG = 100;
     // O(qr + q MAG + m MAG), r = |S| / MAG, |S| = sum(|S_i|)
     // O(q |S| / MAG + (q + m) MAG
     // => MAG = sqrt(q |S|/(q + m)) = sqrt(0.5 * 10^5) = ~223
@@ -71,7 +71,7 @@ signed main() {
             in_heavy[x].push_back(i);
         }
 
-        rep(i, 0, m) for (auto x : s[i]) for (auto j : in_heavy[x]) g[i][j]++;
+        rep(i, 0, m) for (auto x : s[i]) for (auto j : in_heavy[x])++ g[i][j];
     }
 
     vector<ll> lazy_heavy(r, 0);

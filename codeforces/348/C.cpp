@@ -34,7 +34,7 @@ signed main() {
     vector<ll> a(n);
     for (auto& x : a) cin >> x;
 
-    constexpr int MAG = 250;
+    constexpr int MAG = 1000;
     // O(qr + q MAG + m MAG), r = |S| / MAG, |S| = sum(|S_i|)
     // O(q |S| / MAG + (q + m) MAG
     // => MAG = sqrt(q |S|/(q + m)) = sqrt(0.5 * 10^5) = ~223
@@ -49,6 +49,7 @@ signed main() {
             cin >> k;
             x.resize(k);
             for (auto& y : x) cin >> y, --y;
+            sort(all(x));
 
             if (k >= MAG) {
                 heavy_idx[i] = sz(heavy);
@@ -60,18 +61,19 @@ signed main() {
 
     const int r = sz(heavy);
     vector<ll> heavy_sum(r, 0);
+    rep(i, 0, r) for (auto x : s[heavy[i]]) heavy_sum[i] += a[x];
 
     vector g(m, vector(r, 0));
-    // bruh lmao this step was O(n|S|) wow op
-    // was O(sum(|S_i|) + sum(sum(|S_{heavy[j]})))
     {
-        vector in_heavy(n, vector<uint8_t>(r));
-        rep(i, 0, r) for (auto x : s[heavy[i]]) {
-            heavy_sum[i] += a[x];
-            in_heavy[x][i] = true;
+        vector<int> buf;
+        buf.reserve(n);
+        rep(i, 0, m) {
+            rep(j, 0, r) {
+                buf.clear();
+                set_intersection(all(s[i]), all(s[heavy[j]]), back_inserter(buf));
+                g[i][j] = sz(buf);
+            }
         }
-
-        rep(i, 0, m) for (auto x : s[i]) rep(j, 0, r) g[i][j] += in_heavy[x][j];
     }
 
     vector<ll> lazy_heavy(r, 0);

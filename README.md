@@ -15,8 +15,8 @@ A repository to keep track of problems solved on the following platforms:
 |---| ----- | -------- | ---- | --------- |
 1578 | [G - Good Key, Bad Key](https://codeforces.com/contest/1703/problem/G) | [GNU C++17](./codeforces/1703/G.cpp) | `bitmasks` `brute force` `dp` `greedy` `math` | Jul/12/2022 21:21 | 
 1577 | [C - Subset Sums](https://codeforces.com/contest/348/problem/C) | [GNU C++17](./codeforces/348/C.cpp) | `brute force` `data structures` `*2500` | Jul/11/2022 13:55 | 
-1576 | [F - Imbalance Value of a Tree](https://codeforces.com/contest/915/problem/F) | [GNU C++20 (64)](./codeforces/915/F.cpp) | `data structures` `dsu` `graphs` `trees` `*2400` | Jul/10/2022 23:17 | 
-1575 | [D - Tree and Queries](https://codeforces.com/contest/375/problem/D) | [GNU C++17](./codeforces/375/D.cpp) | `data structures` `dfs and similar` `trees` `*2400` | Jul/10/2022 22:04 | 
+1576 | [D - Tree and Queries](https://codeforces.com/contest/375/problem/D) | [GNU C++17](./codeforces/375/D.cpp) | `data structures` `dfs and similar` `trees` `*2400` | Jul/11/2022 12:30 | 
+1575 | [F - Imbalance Value of a Tree](https://codeforces.com/contest/915/problem/F) | [GNU C++20 (64)](./codeforces/915/F.cpp) | `data structures` `dsu` `graphs` `trees` `*2400` | Jul/10/2022 23:17 | 
 1574 | [G2 - Passable Paths (hard version)](https://codeforces.com/contest/1702/problem/G2) | [GNU C++17](./codeforces/1702/G2.cpp) | `dfs and similar` `sortings` `trees` | Jul/10/2022 21:34 | 
 1573 | [E - Complicated Computations](https://codeforces.com/contest/1436/problem/E) | [GNU C++17](./codeforces/1436/E.cpp) | `binary search` `data structures` `two pointers` `*2400` | Jul/10/2022 20:26 | 
 1572 | [H - Satanic Panic](https://codeforces.com/contest/1146/problem/H) | [GNU C++17](./codeforces/1146/H.cpp) | `dp` `geometry` `*2900` | Jul/10/2022 17:12 | 

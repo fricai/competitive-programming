@@ -34,7 +34,7 @@ signed main() {
     vector<ll> a(n);
     for (auto& x : a) cin >> x;
 
-    constexpr int MAG = 500;
+    constexpr int MAG = 250;
     // O(qr + q MAG + m MAG), r = |S| / MAG, |S| = sum(|S_i|)
     // O(q |S| / MAG + (q + m) MAG
     // => MAG = sqrt(q |S|/(q + m)) = sqrt(0.5 * 10^5) = ~223

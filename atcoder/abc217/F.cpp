@@ -57,15 +57,19 @@ signed main() {
     }
     for (auto& v : g) sort(all(v));
 
-    vector dp(n + 1, vector<mint>(n, mint::raw(-1)));
-    rep(i, 0, n) dp[i + 1][i] = 1;
+    vector dp(n + 1, vector(n + 1, mint(0)));
+    vector vis(n + 1, vector(n + 1, false));
+    rep(i, 0, n) {
+        dp[i + 1][i] = 1;
+        vis[i + 1][i] = true;
+    }
     auto rec = [&](const auto& self, int l, int r) -> mint {
-        if (dp[l][r].val() < (uint32_t)mint::mod()) return dp[l][r];
+        if (vis[l][r]) return dp[l][r];
         const auto len = r - l + 1;
         assert(len >= 0);
         assert(len % 2 == 0);
 
-        dp[l][r] = 0;
+        vis[l][r] = true;
         for (auto o : g[l]) {
             if (o > r) break;
             const auto small = r - o;

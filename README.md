@@ -13,15 +13,16 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1586 | [E - Coins Respawn](https://atcoder.jp/contests/abc137/tasks/abc137_e) | [C++ (GCC 9.2.1)](./atcoder/abc137/E.cpp) | `AtCoder` `*500` | Oct/01/2022 22:00 | 
-1585 | [J - Segment Tree](https://atcoder.jp/contests/practice2/tasks/practice2_j) | [C++ (GCC 9.2.1)](./atcoder/practice2/J.cpp) | `AtCoder` `*100` | Sep/24/2022 01:06 | 
-1584 | [Ex - Odd Sum](https://atcoder.jp/contests/abc267/tasks/abc267_h) | [C++ (GCC 9.2.1)](./atcoder/abc267/Ex.cpp) | `AtCoder` `*600` | Sep/10/2022 16:49 | 
-1583 | [F - Exactly K Steps](https://atcoder.jp/contests/abc267/tasks/abc267_f) | [C++ (GCC 9.2.1)](./atcoder/abc267/F.cpp) | `AtCoder` `*500` | Sep/10/2022 16:21 | 
-1582 | [E - Erasing Vertices 2](https://atcoder.jp/contests/abc267/tasks/abc267_e) | [C++ (GCC 9.2.1)](./atcoder/abc267/E.cpp) | `AtCoder` `*500` | Sep/10/2022 15:52 | 
-1581 | [D - Index × A(Not Continuous ver.)](https://atcoder.jp/contests/abc267/tasks/abc267_d) | [C++ (GCC 9.2.1)](./atcoder/abc267/D.cpp) | `AtCoder` `*400` | Sep/10/2022 15:33 | 
-1580 | [C - Index × A(Continuous ver.)](https://atcoder.jp/contests/abc267/tasks/abc267_c) | [C++ (GCC 9.2.1)](./atcoder/abc267/C.cpp) | `AtCoder` `*300` | Sep/10/2022 15:24 | 
-1579 | [B - Split?](https://atcoder.jp/contests/abc267/tasks/abc267_b) | [C++ (GCC 9.2.1)](./atcoder/abc267/B.cpp) | `AtCoder` `*200` | Sep/10/2022 15:19 | 
-1578 | [A - Saturday](https://atcoder.jp/contests/abc267/tasks/abc267_a) | [C++ (GCC 9.2.1)](./atcoder/abc267/A.cpp) | `AtCoder` `*100` | Sep/10/2022 15:13 | 
+1587 | [E - Coins Respawn](https://atcoder.jp/contests/abc137/tasks/abc137_e) | [C++ (GCC 9.2.1)](./atcoder/abc137/E.cpp) | `AtCoder` `*500` | Oct/01/2022 22:00 | 
+1586 | [J - Segment Tree](https://atcoder.jp/contests/practice2/tasks/practice2_j) | [C++ (GCC 9.2.1)](./atcoder/practice2/J.cpp) | `AtCoder` `*100` | Sep/24/2022 01:06 | 
+1585 | [Ex - Odd Sum](https://atcoder.jp/contests/abc267/tasks/abc267_h) | [C++ (GCC 9.2.1)](./atcoder/abc267/Ex.cpp) | `AtCoder` `*600` | Sep/10/2022 16:49 | 
+1584 | [F - Exactly K Steps](https://atcoder.jp/contests/abc267/tasks/abc267_f) | [C++ (GCC 9.2.1)](./atcoder/abc267/F.cpp) | `AtCoder` `*500` | Sep/10/2022 16:21 | 
+1583 | [E - Erasing Vertices 2](https://atcoder.jp/contests/abc267/tasks/abc267_e) | [C++ (GCC 9.2.1)](./atcoder/abc267/E.cpp) | `AtCoder` `*500` | Sep/10/2022 15:52 | 
+1582 | [D - Index × A(Not Continuous ver.)](https://atcoder.jp/contests/abc267/tasks/abc267_d) | [C++ (GCC 9.2.1)](./atcoder/abc267/D.cpp) | `AtCoder` `*400` | Sep/10/2022 15:33 | 
+1581 | [C - Index × A(Continuous ver.)](https://atcoder.jp/contests/abc267/tasks/abc267_c) | [C++ (GCC 9.2.1)](./atcoder/abc267/C.cpp) | `AtCoder` `*300` | Sep/10/2022 15:24 | 
+1580 | [B - Split?](https://atcoder.jp/contests/abc267/tasks/abc267_b) | [C++ (GCC 9.2.1)](./atcoder/abc267/B.cpp) | `AtCoder` `*200` | Sep/10/2022 15:19 | 
+1579 | [A - Saturday](https://atcoder.jp/contests/abc267/tasks/abc267_a) | [C++ (GCC 9.2.1)](./atcoder/abc267/A.cpp) | `AtCoder` `*100` | Sep/10/2022 15:13 | 
+1578 | [Ex - Game on Graph](https://atcoder.jp/contests/abc261/tasks/abc261_h) | [C++ (GCC 9.2.1)](./atcoder/abc261/Ex.cpp) | `AtCoder` `*600` | Jul/31/2022 01:52 | 
 1577 | [G - Good Key, Bad Key](https://codeforces.com/contest/1703/problem/G) | [GNU C++17](./codeforces/1703/G.cpp) | `bitmasks` `brute force` `dp` `greedy` `math` | Jul/12/2022 21:21 | 
 1576 | [C - Subset Sums](https://codeforces.com/contest/348/problem/C) | [GNU C++17](./codeforces/348/C.cpp) | `brute force` `data structures` `*2500` | Jul/11/2022 13:55 | 
 1575 | [D - Tree and Queries](https://codeforces.com/contest/375/problem/D) | [GNU C++17](./codeforces/375/D.cpp) | `data structures` `dfs and similar` `trees` `*2400` | Jul/11/2022 12:30 | 

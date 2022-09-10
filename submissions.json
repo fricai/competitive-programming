@@ -8703,6 +8703,22 @@
     ],
     "timestamp": "Jun/30/2022 00:38"
   },
+  "AC34721764": {
+    "contest_id": "abc267",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc267/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Split?",
+    "problem_url": "https://atcoder.jp/contests/abc267/tasks/abc267_b",
+    "submission_id": "AC34721764",
+    "submission_url": "https://atcoder.jp/contests/abc267/submissions/34721764",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Sep/10/2022 15:19"
+  },
   "AC34721870": {
     "contest_id": "abc267",
     "language": "C++ (GCC 9.2.1)",

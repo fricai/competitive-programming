@@ -8703,6 +8703,22 @@
     ],
     "timestamp": "Jun/30/2022 00:38"
   },
+  "AC34723057": {
+    "contest_id": "abc267",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc267/Ex.cpp",
+    "platform": "AtCoder",
+    "problem_index": "Ex",
+    "problem_name": "Odd Sum",
+    "problem_url": "https://atcoder.jp/contests/abc267/tasks/abc267_h",
+    "submission_id": "AC34723057",
+    "submission_url": "https://atcoder.jp/contests/abc267/submissions/34723057",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Sep/10/2022 16:49"
+  },
   "AC35074973": {
     "contest_id": "practice2",
     "language": "C++ (GCC 9.2.1)",

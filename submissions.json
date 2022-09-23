@@ -8703,6 +8703,22 @@
     ],
     "timestamp": "Jun/30/2022 00:38"
   },
+  "AC35074973": {
+    "contest_id": "practice2",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/practice2/J.cpp",
+    "platform": "AtCoder",
+    "problem_index": "J",
+    "problem_name": "Segment Tree",
+    "problem_url": "https://atcoder.jp/contests/practice2/tasks/practice2_j",
+    "submission_id": "AC35074973",
+    "submission_url": "https://atcoder.jp/contests/practice2/submissions/35074973",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Sep/24/2022 01:06"
+  },
   "AC35327763": {
     "contest_id": "abc137",
     "language": "C++ (GCC 9.2.1)",

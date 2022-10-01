@@ -8703,6 +8703,22 @@
     ],
     "timestamp": "Jun/30/2022 00:38"
   },
+  "AC35327763": {
+    "contest_id": "abc137",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc137/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Coins Respawn",
+    "problem_url": "https://atcoder.jp/contests/abc137/tasks/abc137_e",
+    "submission_id": "AC35327763",
+    "submission_url": "https://atcoder.jp/contests/abc137/submissions/35327763",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Oct/01/2022 22:00"
+  },
   "AC6449907": {
     "contest_id": "abc134",
     "language": "Python3 (3.4.3)",

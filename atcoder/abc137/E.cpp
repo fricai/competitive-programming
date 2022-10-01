@@ -23,16 +23,18 @@ signed main() {
 
 	vector<long long> d(n, inf);
 	d[0] = 0;
-	bool x = 0;
 	for (int i = 0; i < 2 * n; ++i) {
 		for (int j = 0; j < m; ++j)
-			if (d[e[j].a] < inf)
-				if (d[e[j].b] > d[e[j].a] + e[j].cost) {
-					d[e[j].b] = max(-inf, d[e[j].a] + e[j].cost);
-					if (i >= n && e[j].b == n - 1) x = 1;
-				}
+            if (d[e[j].a] < inf) {
+                if (d[e[j].b] > d[e[j].a] + e[j].cost) {
+                    if (i < n)
+                        d[e[j].b] = max(-inf, d[e[j].a] + e[j].cost);
+                    else
+                        d[e[j].b] = -inf;
+                }
+        }
 	}
 
-	if (x || d[n - 1] == inf) cout <<  -1;
+	if (d[n - 1] == -inf) cout <<  -1;
 	else cout << max(0LL, -d[n - 1]);
 }
